@@ -133,6 +133,14 @@ TextMessage TTKitMessageTextMessage(const TTMessage* message) {
     return message->textmessage;
 }
 
+RemoteFile TTKitMessageRemoteFile(const TTMessage* message) {
+    return message->remotefile;
+}
+
+FileTransfer TTKitMessageFileTransfer(const TTMessage* message) {
+    return message->filetransfer;
+}
+
 TTBOOL TTKitMessageActiveFlag(const TTMessage* message) {
     return message->bActive;
 }
@@ -189,6 +197,28 @@ const TTCHAR* TTKitGetUserAccountString(TTKitUserAccountStringProperty property,
     switch (property) {
     case TTKitUserAccountStringInitialChannel:
         return userAccount->szInitChannel;
+    }
+    return "";
+}
+
+const TTCHAR* TTKitGetRemoteFileString(TTKitRemoteFileStringProperty property, const RemoteFile* remoteFile) {
+    switch (property) {
+    case TTKitRemoteFileStringFileName:
+        return remoteFile->szFileName;
+    case TTKitRemoteFileStringUsername:
+        return remoteFile->szUsername;
+    case TTKitRemoteFileStringUploadTime:
+        return remoteFile->szUploadTime;
+    }
+    return "";
+}
+
+const TTCHAR* TTKitGetFileTransferString(TTKitFileTransferStringProperty property, const FileTransfer* fileTransfer) {
+    switch (property) {
+    case TTKitFileTransferStringLocalFilePath:
+        return fileTransfer->szLocalFilePath;
+    case TTKitFileTransferStringRemoteFileName:
+        return fileTransfer->szRemoteFileName;
     }
     return "";
 }

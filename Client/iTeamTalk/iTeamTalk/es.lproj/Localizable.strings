@@ -1,8 +1,14 @@
+/* file list */
+"%@ downloaded" = "%@ descargado";
+
 /* log entry */
 "%@ joined channel" = "%@ se ha unido al canal";
 
 /* log entry */
 "%@ left channel" = "%@ Salió del canal";
+
+/* file list */
+"%@ uploaded" = "%@ subido";
 
 /* Web Login Controller */
 "%@, your username \"%@\" has been validated" = "%1$@, Tu nombre de usuario \"%2$@\" ha ha sido validado";
@@ -123,6 +129,12 @@
 /* Dialog message */
 "Cancel" = "Cancel";
 
+/* file list */
+"Cancels the download" = "Cancela la descarga";
+
+/* file list */
+"Cancels the upload" = "Cancela la subida";
+
 /* channel list
    server entry */
 "Channel" = "Canal";
@@ -187,6 +199,16 @@
 /* preferences */
 "Default Subscriptions" = "Suscripciones predeterminadas";
 
+/* file list
+   serverlist */
+"Delete" = "Eliminar";
+
+/* file list */
+"Delete \"%@\" from the channel?" = "¿Eliminar \"%@\" del canal?";
+
+/* file list */
+"Delete File" = "Eliminar archivo";
+
 /* serverlist */
 "Delete server from list" = "Quitar servidor de la lista";
 
@@ -202,6 +224,15 @@
 
 /* preferences */
 "Double tap to lock TX button" = "Pulsa dos veces para bloquear el botón TX";
+
+/* file list */
+"Downloaded" = "Descargado";
+
+/* file list */
+"Downloading, %d %%" = "Descargando, %d %%";
+
+/* file list */
+"Downloads the file" = "Descarga el archivo";
 
 /* codec detail */
 "DTX" = "DTX";
@@ -227,11 +258,23 @@
 /* preferences */
 "Exclusive Mode Toggled" = "Modo exclusivo activado";
 
+/* file list */
+"Failed to download file" = "No se pudo descargar el archivo";
+
 /* connect to a server */
 "Failed to setup encryption" = "Failed to setup encryption";
 
+/* file list */
+"Failed to transfer %@" = "Error al transferir %@";
+
+/* file list */
+"Failed to upload file" = "No se pudo subir el archivo";
+
 /* preferences */
 "Female" = "Female";
+
+/* file list */
+"Files" = "Archivos";
 
 /* codec detail */
 "Frame Size" = "Frame Size";
@@ -269,6 +312,9 @@
 
 /* Dialog message */
 "Join" = "Unirse";
+
+/* file list */
+"Join a channel to see its files" = "Únete a un canal para ver sus archivos";
 
 /* server entry */
 "Join Channel" = "Unirse";
@@ -376,6 +422,9 @@
 
 /* create channel */
 "No Audio Recording" = "Sin grabaciones de audio";
+
+/* file list */
+"No files in this channel" = "No hay archivos en este canal";
 
 /* create channel */
 "No Interruptions" = "Sin interrupciones";
@@ -544,6 +593,9 @@
 /* server entry */
 "Server Status" = "Server Status";
 
+/* file list */
+"Shares or opens the file" = "Comparte o abre el archivo";
+
 /* preferences */
 "Show in Server List" = "Show in Server List";
 
@@ -648,6 +700,15 @@
 
 /* serverlist */
 "Unofficial server" = "Unofficial server";
+
+/* file list */
+"Upload file" = "Subir archivo";
+
+/* file list */
+"Uploading" = "Subiendo";
+
+/* file list */
+"Uploading, %d %%" = "Subiendo, %d %%";
 
 /* preferences */
 "Use echo cancellation and automatic gain control" = "Usar cancelación de ruido y ganancia automática del micrófono";
