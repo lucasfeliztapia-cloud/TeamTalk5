@@ -86,6 +86,37 @@ public enum TeamTalkEncryptionStringProperty {
     }
 }
 
+public enum TeamTalkRemoteFileStringProperty {
+    case fileName
+    case username
+    case uploadTime
+
+    var cValue: TTKitRemoteFileStringProperty {
+        switch self {
+        case .fileName:
+            return TTKitRemoteFileStringFileName
+        case .username:
+            return TTKitRemoteFileStringUsername
+        case .uploadTime:
+            return TTKitRemoteFileStringUploadTime
+        }
+    }
+}
+
+public enum TeamTalkFileTransferStringProperty {
+    case localFilePath
+    case remoteFileName
+
+    var cValue: TTKitFileTransferStringProperty {
+        switch self {
+        case .localFilePath:
+            return TTKitFileTransferStringLocalFilePath
+        case .remoteFileName:
+            return TTKitFileTransferStringRemoteFileName
+        }
+    }
+}
+
 public enum TeamTalkMessagePayload {
     public static func channel(from message: TTMessage) -> Channel {
         var message = message
@@ -115,6 +146,16 @@ public enum TeamTalkMessagePayload {
     public static func textMessage(from message: TTMessage) -> TextMessage {
         var message = message
         return TTKitMessageTextMessage(&message)
+    }
+
+    public static func remoteFile(from message: TTMessage) -> RemoteFile {
+        var message = message
+        return TTKitMessageRemoteFile(&message)
+    }
+
+    public static func fileTransfer(from message: TTMessage) -> FileTransfer {
+        var message = message
+        return TTKitMessageFileTransfer(&message)
     }
 
     public static func isActive(_ message: TTMessage) -> Bool {
@@ -156,6 +197,16 @@ public enum TeamTalkString {
     public static func userAccount(_ property: TeamTalkUserAccountStringProperty, from userAccount: UserAccount) -> String {
         var userAccount = userAccount
         return String(cString: TTKitGetUserAccountString(property.cValue, &userAccount))
+    }
+
+    public static func remoteFile(_ property: TeamTalkRemoteFileStringProperty, from remoteFile: RemoteFile) -> String {
+        var remoteFile = remoteFile
+        return String(cString: TTKitGetRemoteFileString(property.cValue, &remoteFile))
+    }
+
+    public static func fileTransfer(_ property: TeamTalkFileTransferStringProperty, from fileTransfer: FileTransfer) -> String {
+        var fileTransfer = fileTransfer
+        return String(cString: TTKitGetFileTransferString(property.cValue, &fileTransfer))
     }
 
     public static func setChannel(_ property: TeamTalkChannelStringProperty, on channel: inout Channel, to string: String) {

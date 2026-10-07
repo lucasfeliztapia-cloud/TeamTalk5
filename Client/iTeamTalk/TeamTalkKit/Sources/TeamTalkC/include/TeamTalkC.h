@@ -30,6 +30,17 @@ typedef enum {
     TTKitEncryptionPrivateKeyFile
 } TTKitEncryptionStringProperty;
 
+typedef enum {
+    TTKitRemoteFileStringFileName,
+    TTKitRemoteFileStringUsername,
+    TTKitRemoteFileStringUploadTime
+} TTKitRemoteFileStringProperty;
+
+typedef enum {
+    TTKitFileTransferStringLocalFilePath,
+    TTKitFileTransferStringRemoteFileName
+} TTKitFileTransferStringProperty;
+
 AudioCodec TTKitMakeAudioCodec(Codec codec);
 OpusCodec TTKitMakeOpusCodec(void);
 SpeexCodec TTKitMakeSpeexCodec(void);
@@ -49,6 +60,8 @@ ServerProperties TTKitMessageServerProperties(const TTMessage* message);
 UserAccount TTKitMessageUserAccount(const TTMessage* message);
 ClientErrorMsg TTKitMessageClientError(const TTMessage* message);
 TextMessage TTKitMessageTextMessage(const TTMessage* message);
+RemoteFile TTKitMessageRemoteFile(const TTMessage* message);
+FileTransfer TTKitMessageFileTransfer(const TTMessage* message);
 TTBOOL TTKitMessageActiveFlag(const TTMessage* message);
 
 const TTCHAR* TTKitGetUserString(TTKitUserStringProperty property, const User* user);
@@ -57,6 +70,8 @@ const TTCHAR* TTKitGetTextMessageString(const TextMessage* message);
 const TTCHAR* TTKitGetServerPropertiesString(TTKitServerStringProperty property, const ServerProperties* serverProperties);
 const TTCHAR* TTKitGetClientErrorMessageString(const ClientErrorMsg* clientError);
 const TTCHAR* TTKitGetUserAccountString(TTKitUserAccountStringProperty property, const UserAccount* userAccount);
+const TTCHAR* TTKitGetRemoteFileString(TTKitRemoteFileStringProperty property, const RemoteFile* remoteFile);
+const TTCHAR* TTKitGetFileTransferString(TTKitFileTransferStringProperty property, const FileTransfer* fileTransfer);
 
 void TTKitSetChannelString(TTKitChannelStringProperty property, Channel* channel, const TTCHAR* string);
 void TTKitSetTextMessageString(TextMessage* message, const TTCHAR* string);

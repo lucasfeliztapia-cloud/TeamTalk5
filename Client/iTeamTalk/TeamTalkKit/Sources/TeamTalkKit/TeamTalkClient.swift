@@ -240,6 +240,48 @@ public final class TeamTalkClient {
     }
 
     @discardableResult
+    public func sendFile(channelID: Int32, localFilePath: String) -> Int32 {
+        TT_DoSendFile(instance, channelID, localFilePath)
+    }
+
+    @discardableResult
+    public func receiveFile(channelID: Int32, fileID: Int32, localFilePath: String) -> Int32 {
+        TT_DoRecvFile(instance, channelID, fileID, localFilePath)
+    }
+
+    @discardableResult
+    public func deleteFile(channelID: Int32, fileID: Int32) -> Int32 {
+        TT_DoDeleteFile(instance, channelID, fileID)
+    }
+
+    public func channelFiles(channelID: Int32) -> [RemoteFile] {
+        var count: Int32 = 0
+        guard TT_GetChannelFiles(instance, channelID, nil, &count) != 0, count > 0 else {
+            return []
+        }
+
+        var files = [RemoteFile](repeating: RemoteFile(), count: Int(count))
+        guard TT_GetChannelFiles(instance, channelID, &files, &count) != 0 else {
+            return []
+        }
+        return Array(files.prefix(Int(count)))
+    }
+
+    /// A completed transfer is removed from the client once it has been read here.
+    public func fileTransferInfo(transferID: Int32) -> FileTransfer? {
+        var transfer = FileTransfer()
+        guard TT_GetFileTransferInfo(instance, transferID, &transfer) != 0 else {
+            return nil
+        }
+        return transfer
+    }
+
+    @discardableResult
+    public func cancelFileTransfer(transferID: Int32) -> Bool {
+        TT_CancelFileTransfer(instance, transferID) != 0
+    }
+
+    @discardableResult
     public func setEncryptionContext(_ encryption: inout EncryptionContext) -> Bool {
         TT_SetEncryptionContext(instance, &encryption) != 0
     }

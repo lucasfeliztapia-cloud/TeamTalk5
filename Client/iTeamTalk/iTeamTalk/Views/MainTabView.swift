@@ -52,6 +52,15 @@ struct MainTabView: View {
             }
             .tag(1)
 
+            // Files tab
+            NavigationStack {
+                FileListView(model: model.fileListModel)
+            }
+            .tabItem {
+                Label("Files", systemImage: "folder")
+            }
+            .tag(3)
+
             // Preferences tab
             NavigationStack {
                 PreferencesView(model: model.preferencesModel)

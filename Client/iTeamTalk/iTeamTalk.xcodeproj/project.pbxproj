@@ -44,6 +44,7 @@
 		CC0003000000000000000001 /* AudioCodecModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000001 /* AudioCodecModel.swift */; };
 		CC0003000000000000000002 /* ChannelDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000002 /* ChannelDetailModel.swift */; };
 		CC0003000000000000000003 /* ChannelListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000003 /* ChannelListModel.swift */; };
+		CC000300000000000000000C /* FileListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC000200000000000000000C /* FileListModel.swift */; };
 		CC0003000000000000000004 /* MainTabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000004 /* MainTabModel.swift */; };
 		CC0003000000000000000005 /* PreferencesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000005 /* PreferencesModel.swift */; };
 		CC0003000000000000000006 /* ServerDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000006 /* ServerDetailModel.swift */; };
@@ -55,6 +56,7 @@
 		CC0005000000000000000001 /* AudioCodecView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000001 /* AudioCodecView.swift */; };
 		CC0005000000000000000002 /* ChannelDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000002 /* ChannelDetailView.swift */; };
 		CC0005000000000000000003 /* ChannelListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000003 /* ChannelListView.swift */; };
+		CC0005000000000000000011 /* FileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000011 /* FileListView.swift */; };
 		CC0005000000000000000004 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000004 /* MainTabView.swift */; };
 		CC0005000000000000000005 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000005 /* PreferencesView.swift */; };
 		CC0005000000000000000006 /* PublicServerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000006 /* PublicServerView.swift */; };
@@ -147,6 +149,7 @@
 		CC0002000000000000000001 /* AudioCodecModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCodecModel.swift; sourceTree = "<group>"; };
 		CC0002000000000000000002 /* ChannelDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelDetailModel.swift; sourceTree = "<group>"; };
 		CC0002000000000000000003 /* ChannelListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListModel.swift; sourceTree = "<group>"; };
+		CC000200000000000000000C /* FileListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileListModel.swift; sourceTree = "<group>"; };
 		CC0002000000000000000004 /* MainTabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabModel.swift; sourceTree = "<group>"; };
 		CC0002000000000000000005 /* PreferencesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesModel.swift; sourceTree = "<group>"; };
 		CC0002000000000000000006 /* ServerDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerDetailModel.swift; sourceTree = "<group>"; };
@@ -158,6 +161,7 @@
 		CC0004000000000000000001 /* AudioCodecView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCodecView.swift; sourceTree = "<group>"; };
 		CC0004000000000000000002 /* ChannelDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelDetailView.swift; sourceTree = "<group>"; };
 		CC0004000000000000000003 /* ChannelListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListView.swift; sourceTree = "<group>"; };
+		CC0004000000000000000011 /* FileListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileListView.swift; sourceTree = "<group>"; };
 		CC0004000000000000000004 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		CC0004000000000000000005 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		CC0004000000000000000006 /* PublicServerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicServerView.swift; sourceTree = "<group>"; };
@@ -303,6 +307,7 @@
 				CC0002000000000000000001 /* AudioCodecModel.swift */,
 				CC0002000000000000000002 /* ChannelDetailModel.swift */,
 				CC0002000000000000000003 /* ChannelListModel.swift */,
+				CC000200000000000000000C /* FileListModel.swift */,
 				CC0002000000000000000004 /* MainTabModel.swift */,
 				CC0002000000000000000005 /* PreferencesModel.swift */,
 				CC0002000000000000000006 /* ServerDetailModel.swift */,
@@ -321,6 +326,7 @@
 				CC0004000000000000000001 /* AudioCodecView.swift */,
 				CC0004000000000000000002 /* ChannelDetailView.swift */,
 				CC0004000000000000000003 /* ChannelListView.swift */,
+				CC0004000000000000000011 /* FileListView.swift */,
 				CC0004000000000000000004 /* MainTabView.swift */,
 				CC0004000000000000000005 /* PreferencesView.swift */,
 				CC0004000000000000000006 /* PublicServerView.swift */,
@@ -498,6 +504,7 @@
 				CC0003000000000000000001 /* AudioCodecModel.swift in Sources */,
 				CC0003000000000000000002 /* ChannelDetailModel.swift in Sources */,
 				CC0003000000000000000003 /* ChannelListModel.swift in Sources */,
+				CC000300000000000000000C /* FileListModel.swift in Sources */,
 				CC0003000000000000000004 /* MainTabModel.swift in Sources */,
 				CC0003000000000000000005 /* PreferencesModel.swift in Sources */,
 				CC0003000000000000000006 /* ServerDetailModel.swift in Sources */,
@@ -509,6 +516,7 @@
 				CC0005000000000000000001 /* AudioCodecView.swift in Sources */,
 				CC0005000000000000000002 /* ChannelDetailView.swift in Sources */,
 				CC0005000000000000000003 /* ChannelListView.swift in Sources */,
+				CC0005000000000000000011 /* FileListView.swift in Sources */,
 				CC0005000000000000000004 /* MainTabView.swift in Sources */,
 				CC0005000000000000000005 /* PreferencesView.swift in Sources */,
 				CC0005000000000000000006 /* PublicServerView.swift in Sources */,

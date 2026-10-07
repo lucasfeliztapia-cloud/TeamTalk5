@@ -31,6 +31,7 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
 
     let channelListModel: ChannelListModel
     let channelChatModel: TextMessageModel
+    let fileListModel: FileListModel
     let preferencesModel: PreferencesModel
 
     var server: Server
@@ -52,6 +53,7 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
             userid: 0,
             title: String(localized: "Messages", comment: "tab")
         )
+        fileListModel = FileListModel()
         preferencesModel = PreferencesModel()
         channelListModel.openTextMessages(channelChatModel)
     }
@@ -70,6 +72,7 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
         addToTTMessages(self)
         addToTTMessages(channelListModel)
         addToTTMessages(channelChatModel)
+        addToTTMessages(fileListModel)
         addToTTMessages(preferencesModel)
 
         setupSoundDevices()
