@@ -2,7 +2,8 @@ name: iTeamTalk IPA
 
 # Builds an unsigned iTeamTalk .ipa for on-device testing without a Mac.
 # The native library takes ~45 minutes to build, so it is cached and only
-# rebuilt when Library/ or Build/ change.
+# rebuilt when Library/ or Build/ change. It is built with FFmpeg, which the
+# default iOS build leaves out, so media files can be streamed to a channel.
 
 on:
   push:
@@ -32,17 +33,24 @@ jobs:
       uses: actions/cache/restore@v6
       with:
         path: native-lib
-        key: teamtalk-ios-arm64-v1-${{ hashFiles('Library/TeamTalkLib/**', 'Library/TeamTalk_DLL/**', 'Build/**') }}
+        key: teamtalk-ios-arm64-ffmpeg-v1-${{ hashFiles('Library/TeamTalkLib/**', 'Library/TeamTalk_DLL/**', 'Build/**') }}
 
     - name: Install dependencies
       if: steps.nativelib.outputs.cache-hit != 'true'
       working-directory: ${{github.workspace}}/Build
       run: make depend-mac
 
+    # FFmpeg goes first: it is what this build adds for iOS, so a failure
+    # shows up in minutes instead of after the rest of the toolchain
+    - name: Build FFmpeg
+      if: steps.nativelib.outputs.cache-hit != 'true'
+      working-directory: ${{github.workspace}}/Build
+      run: make IOS_FFMPEG=ON CMAKE_EXTRA="-G Ninja -DWEBRTC_FETCH_PATH=${{runner.workspace}}/webrtc -DCMAKE_OSX_ARCHITECTURES=arm64 -DCMAKE_OSX_SYSROOT=iphoneos -DTOOLCHAIN_INSTALL_PREFIX=${{runner.workspace}}/toolchain-arm64 -DCMAKE_INSTALL_PREFIX=${{runner.workspace}}/install-arm64" BUILDDIR=build-arm64 CMAKE_BUILD_EXTRA="--target ffmpeg-src" ios-build
+
     - name: Build TeamTalk library
       if: steps.nativelib.outputs.cache-hit != 'true'
       working-directory: ${{github.workspace}}/Build
-      run: make CMAKE_EXTRA="-G Ninja -DWEBRTC_FETCH_PATH=${{runner.workspace}}/webrtc -DCMAKE_OSX_ARCHITECTURES=arm64 -DCMAKE_OSX_SYSROOT=iphoneos -DTOOLCHAIN_INSTALL_PREFIX=${{runner.workspace}}/toolchain-arm64 -DCMAKE_INSTALL_PREFIX=${{runner.workspace}}/install-arm64" BUILDDIR=build-arm64 ios-build
+      run: make IOS_FFMPEG=ON CMAKE_EXTRA="-G Ninja -DWEBRTC_FETCH_PATH=${{runner.workspace}}/webrtc -DCMAKE_OSX_ARCHITECTURES=arm64 -DCMAKE_OSX_SYSROOT=iphoneos -DTOOLCHAIN_INSTALL_PREFIX=${{runner.workspace}}/toolchain-arm64 -DCMAKE_INSTALL_PREFIX=${{runner.workspace}}/install-arm64" BUILDDIR=build-arm64 ios-build
 
     - name: Install TeamTalk SDK
       if: steps.nativelib.outputs.cache-hit != 'true'
@@ -66,7 +74,7 @@ jobs:
           ${{runner.workspace}}/toolchain-arm64/ace/lib/libACE_INet_SSL.a \
           ${{runner.workspace}}/toolchain-arm64/openssl/lib/libcrypto.a \
           ${{runner.workspace}}/toolchain-arm64/openssl/lib/libssl.a \
-          ${{runner.workspace}}/toolchain-arm64/webrtc/obj/modules/audio_processing/libteamtalk.a
+          ${{runner.workspace}}/toolchain-arm64/webrtc/obj/modules/audio_processing/libteamtalk.a           ${{runner.workspace}}/toolchain-arm64/ffmpeg/lib/libavdevice.a           ${{runner.workspace}}/toolchain-arm64/ffmpeg/lib/libavfilter.a           ${{runner.workspace}}/toolchain-arm64/ffmpeg/lib/libavformat.a           ${{runner.workspace}}/toolchain-arm64/ffmpeg/lib/libavcodec.a           ${{runner.workspace}}/toolchain-arm64/ffmpeg/lib/libswresample.a           ${{runner.workspace}}/toolchain-arm64/ffmpeg/lib/libswscale.a           ${{runner.workspace}}/toolchain-arm64/ffmpeg/lib/libavutil.a
 
     # Saved here, not in a post step, so a failing app build keeps the library
     - name: Save native library

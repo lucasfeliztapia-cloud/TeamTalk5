@@ -1,6 +1,8 @@
 TEAMTALK_ROOT?=$(PWD)/..
 CONFIGTYPE?=release
 INSTALLDIR?=$(TEAMTALK_ROOT)/Build/install-$(CONFIGTYPE)-ios
+# FFmpeg is what streams media files to a channel. Off for iOS by default.
+IOS_FFMPEG?=OFF
 
 SHELL := /bin/bash
 
@@ -95,11 +97,11 @@ ios-build:
         -DBUILD_TEAMTALK_SERVER_SRVEXE=OFF \
         -DBUILD_TEAMTALK_SERVER_SRVEXEPRO=OFF \
         -DBUILD_TEAMTALK_DOCUMENTATION=OFF \
-        -DFEATURE_FFMPEG=OFF \
+        -DFEATURE_FFMPEG=$(IOS_FFMPEG) \
         -DFEATURE_OGG=OFF \
         -DFEATURE_OPUSTOOLS=OFF \
         -DTOOLCHAIN_CATCH2=OFF \
-        -DTOOLCHAIN_FFMPEG=OFF \
+        -DTOOLCHAIN_FFMPEG=$(IOS_FFMPEG) \
         -DTOOLCHAIN_OGG=OFF \
         -DTOOLCHAIN_PORTAUDIO=OFF \
         -DTOOLCHAIN_ZLIB=OFF" \
