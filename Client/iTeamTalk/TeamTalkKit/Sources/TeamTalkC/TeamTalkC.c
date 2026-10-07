@@ -109,6 +109,20 @@ void TTKitSetSpeexVBRCodec(AudioCodec* audioCodec, const SpeexVBRCodec* speexVBR
     audioCodec->speex_vbr = *speexVBRCodec;
 }
 
+VideoCodec TTKitMakeWebMVP8VideoCodec(INT32 targetBitrate) {
+    VideoCodec videoCodec = {0};
+    videoCodec.nCodec = WEBM_VP8_CODEC;
+    videoCodec.webm_vp8.nRcTargetBitrate = targetBitrate;
+    videoCodec.webm_vp8.nEncodeDeadline = WEBM_VPX_DL_REALTIME;
+    return videoCodec;
+}
+
+VideoCodec TTKitMakeNoVideoCodec(void) {
+    VideoCodec videoCodec = {0};
+    videoCodec.nCodec = NO_CODEC;
+    return videoCodec;
+}
+
 Channel TTKitMessageChannel(const TTMessage* message) {
     return message->channel;
 }
@@ -139,6 +153,10 @@ RemoteFile TTKitMessageRemoteFile(const TTMessage* message) {
 
 FileTransfer TTKitMessageFileTransfer(const TTMessage* message) {
     return message->filetransfer;
+}
+
+MediaFileInfo TTKitMessageMediaFileInfo(const TTMessage* message) {
+    return message->mediafileinfo;
 }
 
 TTBOOL TTKitMessageActiveFlag(const TTMessage* message) {

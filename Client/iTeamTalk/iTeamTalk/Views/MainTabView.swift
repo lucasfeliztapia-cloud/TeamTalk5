@@ -131,6 +131,7 @@ private struct ChannelsTabView: View {
     @ObservedObject var mainModel: MainTabModel
     @ObservedObject var model: ChannelListModel
     let close: () -> Void
+    @State private var showingMediaStream = false
 
     var body: some View {
         NavigationStack(path: $model.navigationPath) {
@@ -146,6 +147,14 @@ private struct ChannelsTabView: View {
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
+                            showingMediaStream = true
+                        } label: {
+                            Image(systemName: "play.rectangle")
+                                .accessibilityLabel("Stream media file")
+                        }
+                    }
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
                             model.showNewChannel()
                         } label: {
                             Image(systemName: "plus")
@@ -156,6 +165,12 @@ private struct ChannelsTabView: View {
                 .sheet(item: $model.channelDetailModel) { detailModel in
                     ChannelDetailSheetView(model: detailModel)
                         .presentationDragIndicator(.visible)
+                }
+                .sheet(isPresented: $showingMediaStream) {
+                    NavigationStack {
+                        MediaStreamView(model: mainModel.mediaStreamModel)
+                    }
+                    .presentationDragIndicator(.visible)
                 }
         }
     }

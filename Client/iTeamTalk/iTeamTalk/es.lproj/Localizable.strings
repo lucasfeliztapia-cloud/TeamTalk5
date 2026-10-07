@@ -7,6 +7,12 @@
 /* log entry */
 "%@ left channel" = "%@ Salió del canal";
 
+/* media stream */
+"%@ of %@" = "%@ de %@";
+
+/* media stream */
+"%@ ready, %@" = "%@ listo, %@";
+
 /* file list */
 "%@ uploaded" = "%@ subido";
 
@@ -95,6 +101,12 @@
 /* server entry */
 "Authentication" = "Autenticación";
 
+/* media stream */
+"Back 1 Minute" = "Retroceder 1 minuto";
+
+/* media stream */
+"Back 10 Seconds" = "Retroceder 10 segundos";
+
 /* channel list */
 "Ban user" = "Banear usuario";
 
@@ -161,6 +173,12 @@
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "Check only if this server has enabled BearWare.dk Web Login";
 
+/* media stream */
+"Choose a file" = "Elegir un archivo";
+
+/* media stream */
+"Close" = "Cerrar";
+
 /* log entry */
 "Command failed: %@" = "Command failed: %@";
 
@@ -180,6 +198,9 @@
 /* preferences
    tts event */
 "Connection lost" = "Conexión perdida";
+
+/* media stream */
+"Controls" = "Controles";
 
 /* server entry */
 "Copy" = "Copy";
@@ -237,6 +258,9 @@
 /* codec detail */
 "DTX" = "DTX";
 
+/* media stream */
+"Duration" = "Duración";
+
 /* channel list */
 "Edit properties" = "Editar propiedades";
 
@@ -255,6 +279,9 @@
    user detail */
 "Error" = "Error";
 
+/* media stream */
+"Error while streaming media file" = "Error durante la emisión del archivo";
+
 /* preferences */
 "Exclusive Mode Toggled" = "Modo exclusivo activado";
 
@@ -263,6 +290,9 @@
 
 /* connect to a server */
 "Failed to setup encryption" = "Failed to setup encryption";
+
+/* media stream */
+"Failed to stream media file" = "No se pudo emitir el archivo";
 
 /* file list */
 "Failed to transfer %@" = "Error al transferir %@";
@@ -273,8 +303,17 @@
 /* preferences */
 "Female" = "Female";
 
+/* media stream */
+"File" = "Archivo";
+
 /* file list */
 "Files" = "Archivos";
+
+/* media stream */
+"Forward 1 Minute" = "Avanzar 1 minuto";
+
+/* media stream */
+"Forward 10 Seconds" = "Avanzar 10 segundos";
 
 /* codec detail */
 "Frame Size" = "Frame Size";
@@ -315,6 +354,9 @@
 
 /* file list */
 "Join a channel to see its files" = "Únete a un canal para ver sus archivos";
+
+/* media stream */
+"Join a channel to stream a media file" = "Únete a un canal para emitir un archivo";
 
 /* server entry */
 "Join Channel" = "Unirse";
@@ -441,6 +483,9 @@
 /* default nickname */
 "Noname" = "Sinnombre";
 
+/* media stream */
+"Not streaming" = "Sin emitir";
+
 /* serverlist */
 "Official server" = "Official server";
 
@@ -466,6 +511,12 @@
 
 /* channel list */
 "Password protected" = "Protegido con contraseña";
+
+/* media stream */
+"Pause" = "Pausar";
+
+/* media stream */
+"Paused" = "En pausa";
 
 /* create channel */
 "Permanent Channel" = "Canal permanente";
@@ -509,11 +560,17 @@
 /* preferences */
 "Popularity" = "Popularidad";
 
+/* media stream */
+"Position" = "Posición";
+
 /* serverlist */
 "Preferences" = "Preferencias";
 
 /* Sound Input */
 "Preferred" = "Preferred";
+
+/* media stream */
+"Preparing file" = "Preparando el archivo";
 
 /* preferences */
 "Pressing Return-key sends text message" = "Pulsar la tecla intro envía el mensaje de texto";
@@ -560,6 +617,9 @@
 /* preferences */
 "Receive webcam streams by default" = "Recibir transmisiones de cámaras web por defecto";
 
+/* media stream */
+"Resume" = "Reanudar";
+
 /* preferences */
 "Return Sends Message" = "Intro envía el mensaje";
 
@@ -583,6 +643,9 @@
 
 /* channel list */
 "Send private message" = "Enviar mensaje privado";
+
+/* media stream */
+"Send Video" = "Enviar vídeo";
 
 /* preferences */
 "Server Connection Lost" = "Conexión al servidor perdida";
@@ -639,12 +702,33 @@
 /* codec detail */
 "Speex Variable Bitrate Codec" = "Codec Speex, calidad variable";
 
+/* media stream */
+"Start Streaming" = "Empezar a emitir";
+
 /* Text message view */
 "Status Event" = "Status Event";
 
 /* codec detail
    create channel */
 "Stereo" = "Estéreo";
+
+/* media stream */
+"Stop Streaming" = "Detener la emisión";
+
+/* media stream */
+"Stream Media File" = "Emitir archivo multimedia";
+
+/* media stream */
+"Stream media file" = "Emitir archivo multimedia";
+
+/* media stream */
+"Streaming" = "Emitiendo";
+
+/* media stream */
+"Streaming finished" = "Emisión terminada";
+
+/* media stream */
+"Streaming started" = "Emisión iniciada";
 
 /* user detail */
 "Subscriptions" = "Subscripciones";
@@ -663,6 +747,9 @@
 
 /* preferences */
 "The volume of the speaking voice is %.1f" = "El volumen de la voz es  %.1f";
+
+/* media stream */
+"This file cannot be streamed" = "Este archivo no se puede emitir";
 
 /* channel list */
 "Toggle to enable/disable transmission" = "Pulsa para activar o desactivar transmisión";
@@ -815,6 +902,9 @@
 
 /* Dialog message */
 "Yes" = "Sí";
+
+/* media stream */
+"You are not allowed to stream media files on this server" = "No tienes permiso para emitir archivos en este servidor";
 
 /* Dialog */
 "You have been kicked from channel" = "You have been kicked from channel";

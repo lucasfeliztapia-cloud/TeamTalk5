@@ -158,6 +158,11 @@ public enum TeamTalkMessagePayload {
         return TTKitMessageFileTransfer(&message)
     }
 
+    public static func mediaFileInfo(from message: TTMessage) -> MediaFileInfo {
+        var message = message
+        return TTKitMessageMediaFileInfo(&message)
+    }
+
     public static func isActive(_ message: TTMessage) -> Bool {
         var message = message
         return TTKitMessageActiveFlag(&message) != 0

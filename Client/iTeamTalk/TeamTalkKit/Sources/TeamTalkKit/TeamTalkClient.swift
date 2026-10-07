@@ -281,6 +281,40 @@ public final class TeamTalkClient {
         TT_CancelFileTransfer(instance, transferID) != 0
     }
 
+    /// Offset that leaves the position untouched when updating a stream.
+    public static let mediaPlaybackOffsetIgnore = UInt32.max
+
+    public static func mediaFileInfo(path: String) -> MediaFileInfo? {
+        var info = MediaFileInfo()
+        guard TT_GetMediaFileInfo(path, &info) != 0 else {
+            return nil
+        }
+        return info
+    }
+
+    @discardableResult
+    public func startStreamingMediaFile(path: String, offsetMSec: UInt32, paused: Bool, videoCodec: VideoCodec) -> Bool {
+        var playback = MediaFilePlayback()
+        playback.uOffsetMSec = offsetMSec
+        playback.bPaused = paused ? 1 : 0
+        var videoCodec = videoCodec
+        return TT_StartStreamingMediaFileToChannelEx(instance, path, &playback, &videoCodec) != 0
+    }
+
+    @discardableResult
+    public func updateStreamingMediaFile(offsetMSec: UInt32, paused: Bool, videoCodec: VideoCodec) -> Bool {
+        var playback = MediaFilePlayback()
+        playback.uOffsetMSec = offsetMSec
+        playback.bPaused = paused ? 1 : 0
+        var videoCodec = videoCodec
+        return TT_UpdateStreamingMediaFileToChannel(instance, &playback, &videoCodec) != 0
+    }
+
+    @discardableResult
+    public func stopStreamingMediaFile() -> Bool {
+        TT_StopStreamingMediaFileToChannel(instance) != 0
+    }
+
     @discardableResult
     public func setEncryptionContext(_ encryption: inout EncryptionContext) -> Bool {
         TT_SetEncryptionContext(instance, &encryption) != 0

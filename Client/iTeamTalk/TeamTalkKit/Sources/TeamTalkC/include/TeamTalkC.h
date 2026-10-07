@@ -54,6 +54,9 @@ void TTKitSetOpusCodec(AudioCodec* audioCodec, const OpusCodec* opusCodec);
 void TTKitSetSpeexCodec(AudioCodec* audioCodec, const SpeexCodec* speexCodec);
 void TTKitSetSpeexVBRCodec(AudioCodec* audioCodec, const SpeexVBRCodec* speexVBRCodec);
 
+VideoCodec TTKitMakeWebMVP8VideoCodec(INT32 targetBitrate);
+VideoCodec TTKitMakeNoVideoCodec(void);
+
 Channel TTKitMessageChannel(const TTMessage* message);
 User TTKitMessageUser(const TTMessage* message);
 ServerProperties TTKitMessageServerProperties(const TTMessage* message);
@@ -62,6 +65,7 @@ ClientErrorMsg TTKitMessageClientError(const TTMessage* message);
 TextMessage TTKitMessageTextMessage(const TTMessage* message);
 RemoteFile TTKitMessageRemoteFile(const TTMessage* message);
 FileTransfer TTKitMessageFileTransfer(const TTMessage* message);
+MediaFileInfo TTKitMessageMediaFileInfo(const TTMessage* message);
 TTBOOL TTKitMessageActiveFlag(const TTMessage* message);
 
 const TTCHAR* TTKitGetUserString(TTKitUserStringProperty property, const User* user);
