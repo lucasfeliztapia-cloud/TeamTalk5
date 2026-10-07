@@ -1,0 +1,117 @@
+name: iTeamTalk IPA
+
+# Builds an unsigned iTeamTalk .ipa for on-device testing without a Mac.
+# The native library takes ~45 minutes to build, so it is cached and only
+# rebuilt when Library/ or Build/ change.
+
+on:
+  push:
+    branches: [ "lucas/**" ]
+    paths:
+      - 'Library/TeamTalkLib/**'
+      - 'Library/TeamTalk_DLL/**'
+      - 'Build/**'
+      - 'Client/iTeamTalk/**'
+      - '.github/workflows/ios-ipa.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: ios-ipa-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ipa:
+    runs-on: macos-26
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v7
+
+    - name: Restore native library
+      id: nativelib
+      uses: actions/cache/restore@v6
+      with:
+        path: native-lib
+        key: teamtalk-ios-arm64-v1-${{ hashFiles('Library/TeamTalkLib/**', 'Library/TeamTalk_DLL/**', 'Build/**') }}
+
+    - name: Install dependencies
+      if: steps.nativelib.outputs.cache-hit != 'true'
+      working-directory: ${{github.workspace}}/Build
+      run: make depend-mac
+
+    - name: Build TeamTalk library
+      if: steps.nativelib.outputs.cache-hit != 'true'
+      working-directory: ${{github.workspace}}/Build
+      run: make CMAKE_EXTRA="-G Ninja -DWEBRTC_FETCH_PATH=${{runner.workspace}}/webrtc -DCMAKE_OSX_ARCHITECTURES=arm64 -DCMAKE_OSX_SYSROOT=iphoneos -DTOOLCHAIN_INSTALL_PREFIX=${{runner.workspace}}/toolchain-arm64 -DCMAKE_INSTALL_PREFIX=${{runner.workspace}}/install-arm64" BUILDDIR=build-arm64 ios-build
+
+    - name: Install TeamTalk SDK
+      if: steps.nativelib.outputs.cache-hit != 'true'
+      working-directory: ${{github.workspace}}/Build/build-arm64
+      run: cmake --build . --target install
+
+    - name: Create architecture-specific library
+      if: steps.nativelib.outputs.cache-hit != 'true'
+      working-directory: ${{github.workspace}}
+      run: |
+        mkdir -p native-lib
+        libtool -static -o native-lib/libTeamTalk5-arm64.a \
+          Library/TeamTalk_DLL/arm64/libTeamTalk5.a \
+          ${{runner.workspace}}/toolchain-arm64/speex/lib/libspeex.a \
+          ${{runner.workspace}}/toolchain-arm64/speexdsp/lib/libspeexdsp.a \
+          ${{runner.workspace}}/toolchain-arm64/opus/lib/libopus.a \
+          ${{runner.workspace}}/toolchain-arm64/libvpx/lib/libvpx.a \
+          ${{runner.workspace}}/toolchain-arm64/ace/lib/libACE.a \
+          ${{runner.workspace}}/toolchain-arm64/ace/lib/libACE_SSL.a \
+          ${{runner.workspace}}/toolchain-arm64/ace/lib/libACE_INet.a \
+          ${{runner.workspace}}/toolchain-arm64/ace/lib/libACE_INet_SSL.a \
+          ${{runner.workspace}}/toolchain-arm64/openssl/lib/libcrypto.a \
+          ${{runner.workspace}}/toolchain-arm64/openssl/lib/libssl.a \
+          ${{runner.workspace}}/toolchain-arm64/webrtc/obj/modules/audio_processing/libteamtalk.a
+
+    # Saved here, not in a post step, so a failing app build keeps the library
+    - name: Save native library
+      if: steps.nativelib.outputs.cache-hit != 'true'
+      uses: actions/cache/save@v6
+      with:
+        path: native-lib
+        key: ${{ steps.nativelib.outputs.cache-primary-key }}
+
+    - name: Place native library for Xcode
+      working-directory: ${{github.workspace}}
+      run: cp native-lib/libTeamTalk5-arm64.a Library/TeamTalk_DLL/libTeamTalk5.a
+
+    # A distinct name so the test build can be told apart from the App Store app
+    - name: Label test build
+      working-directory: ${{github.workspace}}
+      run: /usr/libexec/PlistBuddy -c "Set :CFBundleDisplayName 'TeamTalk Pruebas'" Client/iTeamTalk/iTeamTalk/Info.plist
+
+    - name: Build iTeamTalk client
+      working-directory: ${{github.workspace}}
+      run: |
+        xcodebuild -project Client/iTeamTalk/iTeamTalk.xcodeproj \
+          -scheme iTeamTalk \
+          -configuration Release \
+          -destination 'generic/platform=iOS' \
+          -derivedDataPath "${{runner.temp}}/DerivedData" \
+          CODE_SIGN_IDENTITY=- \
+          AD_HOC_CODE_SIGNING_ALLOWED=YES \
+          CODE_SIGN_STYLE=Automatic \
+          COMPILER_INDEX_STORE_ENABLE=NO \
+          CURRENT_PROJECT_VERSION=${{github.run_number}}
+
+    - name: Package IPA
+      working-directory: ${{github.workspace}}
+      run: |
+        APP="$(find "${{runner.temp}}/DerivedData/Build/Products" -maxdepth 2 -name '*.app' -type d | head -n 1)"
+        test -d "$APP"
+        mkdir -p "${{runner.temp}}/ipa/Payload"
+        cp -R "$APP" "${{runner.temp}}/ipa/Payload/"
+        cd "${{runner.temp}}/ipa"
+        zip -qry "${{github.workspace}}/iTeamTalk-pruebas-${{github.run_number}}.ipa" Payload
+        ls -lh "${{github.workspace}}"/*.ipa
+
+    - name: Upload IPA
+      uses: actions/upload-artifact@v7
+      with:
+        name: iTeamTalk-pruebas-${{github.run_number}}
+        path: ${{github.workspace}}/iTeamTalk-pruebas-${{github.run_number}}.ipa
