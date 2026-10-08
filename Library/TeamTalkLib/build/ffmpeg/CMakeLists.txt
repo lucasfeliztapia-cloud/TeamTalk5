@@ -231,6 +231,11 @@ elseif (${CMAKE_SYSTEM_NAME} MATCHES "iOS")
       # Minimal build
       --disable-autodetect
       --enable-zlib
+      # TLS, to stream from https addresses
+      --enable-openssl
+      --pkg-config-flags=--static
+      --extra-cflags=-I${OPENSSL_DIR}/include
+      --extra-ldflags=-L${OPENSSL_DIR}/lib
       # Compile options
       --disable-debug
       --enable-pic
@@ -272,7 +277,7 @@ elseif (${CMAKE_SYSTEM_NAME} MATCHES "iOS")
       UPDATE_COMMAND    ""
       PREFIX            ${TOOLCHAIN_BUILD_PREFIX}/ffmpeg
       INSTALL_DIR       ${TOOLCHAIN_INSTALL_PREFIX_FFMPEG}
-      CONFIGURE_COMMAND  <SOURCE_DIR>/configure --prefix=<INSTALL_DIR> ${FFMPEG_CFG_FLAGS}
+      CONFIGURE_COMMAND  export PKG_CONFIG_PATH=${OPENSSL_DIR}/lib/pkgconfig && <SOURCE_DIR>/configure --prefix=<INSTALL_DIR> ${FFMPEG_CFG_FLAGS}
       BUILD_COMMAND     make ${TOOLCHAIN_BUILD_MAKEJOBS}
       INSTALL_COMMAND   make ${TOOLCHAIN_BUILD_MAKEJOBS} install
       BUILD_BYPRODUCTS  <INSTALL_DIR>/lib/libavdevice.a
