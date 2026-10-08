@@ -72,6 +72,7 @@ final class FileListModel: ObservableObject {
     @Published var errorMessage: String?
     @Published var filePendingDeletion: ChannelFile?
     @Published var sharedFile: SharedFile?
+    @Published var previewFile: SharedFile?
 
     private var userRights: UInt32 = 0
     private var activeCommands = Set<INT32>()
@@ -79,6 +80,9 @@ final class FileListModel: ObservableObject {
     private var downloadCommands = [INT32: String]()
     private var downloadFingerprints = [String: String]()
     private var completedTransfers = Set<INT32>()
+    // while a command runs, the files that arrive are the ones already in the
+    // channel being joined, not news
+    private var commandInProgress = false
     private var progressTimer: Timer?
 
     private let uploadsDirectory = FileManager.default.temporaryDirectory
@@ -121,9 +125,44 @@ final class FileListModel: ObservableObject {
             return
         }
         if let url = localURL(for: file) {
-            sharedFile = SharedFile(url: url)
+            previewFile = SharedFile(url: url)
         } else {
             downloadFile(file)
+        }
+    }
+
+    func shareFile(_ file: ChannelFile) {
+        if let url = localURL(for: file) {
+            sharedFile = SharedFile(url: url)
+        }
+    }
+
+    /// A file the app already owns, like the copy handed over by the photo
+    /// picker. It is moved, not copied again.
+    func uploadOwnedFile(_ url: URL) {
+        guard channelID > 0 else {
+            try? FileManager.default.removeItem(at: url)
+            return
+        }
+
+        let directory = uploadsDirectory.appendingPathComponent(UUID().uuidString, isDirectory: true)
+        let copy = directory.appendingPathComponent(url.lastPathComponent)
+        do {
+            try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+            try FileManager.default.moveItem(at: url, to: copy)
+        } catch {
+            try? FileManager.default.removeItem(at: directory)
+            errorMessage = error.localizedDescription
+            return
+        }
+
+        let cmdid = TeamTalkClient.shared.sendFile(channelID: channelID, localFilePath: copy.path)
+        if cmdid > 0 {
+            activeCommands.insert(cmdid)
+            uploadCommands[cmdid] = copy
+        } else {
+            try? FileManager.default.removeItem(at: directory)
+            errorMessage = String(localized: "Failed to upload file", comment: "file list")
         }
     }
 
@@ -408,6 +447,9 @@ extension FileListModel: TeamTalkEvent {
         case CLIENTEVENT_CMD_FILE_NEW, CLIENTEVENT_CMD_FILE_REMOVE:
             if TeamTalkMessagePayload.remoteFile(from: m).nChannelID == channelID {
                 reloadFiles()
+                if !commandInProgress {
+                    playSound(m.nClientEvent == CLIENTEVENT_CMD_FILE_NEW ? .file_ADDED : .file_REMOVED)
+                }
             }
 
         case CLIENTEVENT_FILETRANSFER:
@@ -425,6 +467,7 @@ extension FileListModel: TeamTalkEvent {
             }
 
         case CLIENTEVENT_CMD_PROCESSING:
+            commandInProgress = TeamTalkMessagePayload.isActive(m)
             if !TeamTalkMessagePayload.isActive(m) {
                 activeCommands.remove(m.nSource)
                 uploadCommands.removeValue(forKey: m.nSource)

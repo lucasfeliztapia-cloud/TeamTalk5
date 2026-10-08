@@ -35,7 +35,9 @@ struct SoundEventsView: View {
         SoundEventRow(sound: .joined_CHAN, preferenceKey: PREF_SNDEVENT_JOINEDCHAN, defaultValue: true, title: "User Joins Channel", subtitle: "Play sound when a user joins the channel"),
         SoundEventRow(sound: .left_CHAN, preferenceKey: PREF_SNDEVENT_LEFTCHAN, defaultValue: true, title: "User Leaves Channel", subtitle: "Play sound when a user leaves the channel"),
         SoundEventRow(sound: .voxtriggered_ON, preferenceKey: PREF_SNDEVENT_VOXTRIGGER, defaultValue: true, title: "Voice Activation Triggered", subtitle: "Play sound when voice activation is triggered"),
-        SoundEventRow(sound: .transmit_ON, preferenceKey: PREF_SNDEVENT_TRANSMITREADY, defaultValue: true, title: "Exclusive Mode Toggled", subtitle: "Play sound when transmit ready in \"No Interruptions\" channel")
+        SoundEventRow(sound: .transmit_ON, preferenceKey: PREF_SNDEVENT_TRANSMITREADY, defaultValue: true, title: "Exclusive Mode Toggled", subtitle: "Play sound when transmit ready in \"No Interruptions\" channel"),
+        SoundEventRow(sound: .file_ADDED, preferenceKey: PREF_SNDEVENT_FILEADDED, defaultValue: true, title: "File Added", subtitle: "Play sound when a file is uploaded to the channel"),
+        SoundEventRow(sound: .file_REMOVED, preferenceKey: PREF_SNDEVENT_FILEREMOVED, defaultValue: true, title: "File Removed", subtitle: "Play sound when a file is removed from the channel")
     ]
 
     var body: some View {

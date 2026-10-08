@@ -21,13 +21,41 @@
  *
  */
 
+import PhotosUI
+import QuickLook
 import SwiftUI
 import UIKit
 import UniformTypeIdentifiers
 
+/// A photo or a video of the library, copied to a file the app can upload
+struct PickedMediaFile: Transferable {
+    let url: URL
+
+    static var transferRepresentation: some TransferRepresentation {
+        FileRepresentation(importedContentType: .movie) { received in
+            try PickedMediaFile(copying: received.file)
+        }
+        FileRepresentation(importedContentType: .image) { received in
+            try PickedMediaFile(copying: received.file)
+        }
+    }
+
+    /// The file handed over is only valid until the closure returns
+    init(copying file: URL) throws {
+        let directory = FileManager.default.temporaryDirectory
+            .appendingPathComponent("picked", isDirectory: true)
+            .appendingPathComponent(UUID().uuidString, isDirectory: true)
+        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+        url = directory.appendingPathComponent(file.lastPathComponent)
+        try FileManager.default.copyItem(at: file, to: url)
+    }
+}
+
 struct FileListView: View {
     @ObservedObject var model: FileListModel
     @State private var showingFileImporter = false
+    @State private var showingPhotoPicker = false
+    @State private var pickedPhotos = [PhotosPickerItem]()
 
     var body: some View {
         List {
@@ -60,12 +88,21 @@ struct FileListView: View {
         .navigationTitle("Files")
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
-                Button {
-                    showingFileImporter = true
+                Menu {
+                    Button {
+                        showingFileImporter = true
+                    } label: {
+                        Label("Choose Files", systemImage: "folder")
+                    }
+                    Button {
+                        showingPhotoPicker = true
+                    } label: {
+                        Label("Photos and Videos", systemImage: "photo.on.rectangle")
+                    }
                 } label: {
                     Image(systemName: "arrow.up.doc")
-                        .accessibilityLabel("Upload file")
                 }
+                .accessibilityLabel("Upload file")
                 .disabled(!model.canUpload)
             }
         }
@@ -81,8 +118,34 @@ struct FileListView: View {
                 model.errorMessage = error.localizedDescription
             }
         }
+        .photosPicker(
+            isPresented: $showingPhotoPicker,
+            selection: $pickedPhotos,
+            maxSelectionCount: 10,
+            matching: .any(of: [.images, .videos])
+        )
+        .onChange(of: pickedPhotos) { items in
+            guard !items.isEmpty else { return }
+            pickedPhotos = []
+            Task {
+                for item in items {
+                    let picked = try? await item.loadTransferable(type: PickedMediaFile.self)
+                    await MainActor.run {
+                        if let picked {
+                            model.uploadOwnedFile(picked.url)
+                        } else {
+                            model.errorMessage = String(localized: "Failed to upload file", comment: "file list")
+                        }
+                    }
+                }
+            }
+        }
         .sheet(item: $model.sharedFile) { shared in
             ActivityView(items: [shared.url])
+        }
+        .sheet(item: $model.previewFile) { preview in
+            QuickLookView(url: preview.url)
+                .ignoresSafeArea()
         }
         .alert("Error", isPresented: Binding(
             get: { model.errorMessage != nil },
@@ -140,7 +203,7 @@ struct FileListView: View {
                     .foregroundStyle(.secondary)
                     .accessibilityHidden(true)
             } else if isDownloaded {
-                Image(systemName: "square.and.arrow.up")
+                Image(systemName: "eye")
                     .foregroundStyle(.tint)
                     .accessibilityHidden(true)
             } else if model.canDownload {
@@ -168,6 +231,16 @@ struct FileListView: View {
             }
             .tint(.red)
         }
+        .swipeActions(edge: .leading) {
+            if isDownloaded {
+                Button {
+                    model.shareFile(file)
+                } label: {
+                    Label("Share", systemImage: "square.and.arrow.up")
+                }
+                .tint(.blue)
+            }
+        }
     }
 
     private func statusText(download: FileTransferProgress?, isDownloaded: Bool) -> String {
@@ -185,7 +258,7 @@ struct FileListView: View {
             return String(localized: "Cancels the download", comment: "file list")
         }
         if isDownloaded {
-            return String(localized: "Shares or opens the file", comment: "file list")
+            return String(localized: "Opens the file", comment: "file list")
         }
         if model.canDownload {
             return String(localized: "Downloads the file", comment: "file list")
@@ -219,6 +292,39 @@ private struct UploadRow: View {
         .accessibilityHint(String(localized: "Cancels the upload", comment: "file list"))
         .contentShape(Rectangle())
         .onTapGesture(perform: cancel)
+    }
+}
+
+/// The system preview: plays audio and video and shows documents and images
+struct QuickLookView: UIViewControllerRepresentable {
+    let url: URL
+
+    func makeCoordinator() -> Coordinator {
+        Coordinator(url: url)
+    }
+
+    func makeUIViewController(context: Context) -> UINavigationController {
+        let preview = QLPreviewController()
+        preview.dataSource = context.coordinator
+        return UINavigationController(rootViewController: preview)
+    }
+
+    func updateUIViewController(_ uiViewController: UINavigationController, context: Context) {}
+
+    final class Coordinator: NSObject, QLPreviewControllerDataSource {
+        let url: URL
+
+        init(url: URL) {
+            self.url = url
+        }
+
+        func numberOfPreviewItems(in controller: QLPreviewController) -> Int {
+            1
+        }
+
+        func previewController(_ controller: QLPreviewController, previewItemAt index: Int) -> QLPreviewItem {
+            url as NSURL
+        }
     }
 }
 

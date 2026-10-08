@@ -27,6 +27,8 @@ struct TextMessageView: View {
     @ObservedObject var model: TextMessageModel
     @ObservedObject private var appearance = AppearanceModel.shared
     @FocusState private var isComposing: Bool
+    @State private var showingBroadcast = false
+    @State private var broadcastText = ""
 
     var body: some View {
         VStack(spacing: 0) {
@@ -89,6 +91,30 @@ struct TextMessageView: View {
             .background(.bar)
         }
         .navigationTitle(model.title)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                if model.canBroadcast {
+                    Button {
+                        showingBroadcast = true
+                    } label: {
+                        Image(systemName: "megaphone")
+                    }
+                    .accessibilityLabel("Send broadcast message")
+                }
+            }
+        }
+        .alert("Broadcast Message", isPresented: $showingBroadcast) {
+            TextField("Message", text: $broadcastText)
+            Button("Send") {
+                model.sendBroadcast(broadcastText)
+                broadcastText = ""
+            }
+            Button("Cancel", role: .cancel) {
+                broadcastText = ""
+            }
+        } message: {
+            Text("It is sent to every user of the server")
+        }
         .onDisappear {
             model.clearUnreadMessages()
         }

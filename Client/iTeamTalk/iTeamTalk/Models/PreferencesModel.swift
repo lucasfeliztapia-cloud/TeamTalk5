@@ -89,6 +89,8 @@ let PREF_SNDEVENT_VOXTRIGGER = "snd_vox_triggered_preference"
 let PREF_SNDEVENT_TRANSMITREADY = "snd_transmitready_preference"
 let PREF_SNDEVENT_LOGGEDIN = "snd_loggedin_preference"
 let PREF_SNDEVENT_LOGGEDOUT = "snd_loggedout_preference"
+let PREF_SNDEVENT_FILEADDED = "snd_fileadded_preference"
+let PREF_SNDEVENT_FILEREMOVED = "snd_fileremoved_preference"
 
 let PREF_SUB_USERMSG = "sub_usertextmsg_preference"
 let PREF_SUB_CHANMSG = "sub_chantextmsg_preference"

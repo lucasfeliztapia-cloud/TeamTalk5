@@ -111,6 +111,10 @@ public final class TeamTalkClient {
         TT_GetMyUserRights(instance)
     }
 
+    public var myUserType: UInt32 {
+        TT_GetMyUserType(instance)
+    }
+
     public var rootChannelID: Int32 {
         TT_GetRootChannelID(instance)
     }

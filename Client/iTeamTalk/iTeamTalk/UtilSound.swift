@@ -59,7 +59,9 @@ enum Sounds : Int {
          transmit_ON = 11,
          transmit_OFF = 12,
          logged_IN = 13,
-         logged_OUT = 14
+         logged_OUT = 14,
+         file_ADDED = 15,
+         file_REMOVED = 16
 }
 
 var player : AVAudioPlayer?
@@ -138,6 +140,16 @@ func getSoundFile(_ s: Sounds) -> String? {
         if settings.object(forKey: PREF_SNDEVENT_LOGGEDOUT) != nil &&
             settings.bool(forKey: PREF_SNDEVENT_LOGGEDOUT) {
             return "logged_off"
+        }
+    case .file_ADDED :
+        if settings.object(forKey: PREF_SNDEVENT_FILEADDED) == nil ||
+            settings.bool(forKey: PREF_SNDEVENT_FILEADDED) {
+            return "file_added"
+        }
+    case .file_REMOVED :
+        if settings.object(forKey: PREF_SNDEVENT_FILEREMOVED) == nil ||
+            settings.bool(forKey: PREF_SNDEVENT_FILEREMOVED) {
+            return "file_removed"
         }
     }
 
@@ -302,7 +314,8 @@ func playSound(_ s: Sounds) {
         return
     }
     
-    if let resPath = Bundle.main.path(forResource: filename, ofType: "mp3") {
+    if let resPath = Bundle.main.path(forResource: filename, ofType: "mp3")
+        ?? Bundle.main.path(forResource: filename, ofType: "wav") {
         
         let url = URL(fileURLWithPath: resPath)
         

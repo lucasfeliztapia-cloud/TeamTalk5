@@ -27,6 +27,8 @@
 		254B7A7B1B99E77000BE0DEF /* libTeamTalk5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 254B7A7A1B99E77000BE0DEF /* libTeamTalk5.a */; };
 		254B7A852F90210000CD0A01 /* TeamTalkKit in Frameworks */ = {isa = PBXBuildFile; productRef = 254B7A862F90210000CD0A01 /* TeamTalkKit */; };
 		254C084B1C345E3700C98566 /* newuser.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 254C08491C345E3700C98566 /* newuser.mp3 */; };
+		DD0000000000000000000202 /* file_removed.wav in Resources */ = {isa = PBXBuildFile; fileRef = DD0000000000000000000102 /* file_removed.wav */; };
+		DD0000000000000000000201 /* file_added.wav in Resources */ = {isa = PBXBuildFile; fileRef = DD0000000000000000000101 /* file_added.wav */; };
 		254C084C1C345E3700C98566 /* removeuser.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 254C084A1C345E3700C98566 /* removeuser.mp3 */; };
 		2597EF84275EA20300FCEE28 /* UtilSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2597EF83275EA20300FCEE28 /* UtilSound.swift */; };
 		2597EF86275EA29D00FCEE28 /* UtilTTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2597EF85275EA29D00FCEE28 /* UtilTTS.swift */; };
@@ -152,6 +154,8 @@
 		254BE12324DED8F300244D0C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		254BE12424DED8F500244D0C /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		254C08491C345E3700C98566 /* newuser.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = newuser.mp3; sourceTree = "<group>"; };
+		DD0000000000000000000102 /* file_removed.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = file_removed.wav; sourceTree = "<group>"; };
+		DD0000000000000000000101 /* file_added.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = file_added.wav; sourceTree = "<group>"; };
 		254C084A1C345E3700C98566 /* removeuser.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = removeuser.mp3; sourceTree = "<group>"; };
 		256328191C41A9F20055373F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2597EF83275EA20300FCEE28 /* UtilSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilSound.swift; sourceTree = "<group>"; };
@@ -344,6 +348,8 @@
 				25062439263E6A9700F3DA3A /* logged_off.mp3 */,
 				25062438263E6A9700F3DA3A /* logged_on.mp3 */,
 				254C08491C345E3700C98566 /* newuser.mp3 */,
+				DD0000000000000000000102 /* file_removed.wav */,
+				DD0000000000000000000101 /* file_added.wav */,
 				25AA206D1BEBCA0A0089AD54 /* off.mp3 */,
 				25E4DC2D1BF7347200EC5A8C /* on.mp3 */,
 				254C084A1C345E3700C98566 /* removeuser.mp3 */,
@@ -562,6 +568,8 @@
 				25E4DC341BF7360D00EC5A8C /* user_message.mp3 in Resources */,
 				251997F81EBA5FE7003C94B1 /* voiceact_off.mp3 in Resources */,
 				254C084B1C345E3700C98566 /* newuser.mp3 in Resources */,
+				DD0000000000000000000202 /* file_removed.wav in Resources */,
+				DD0000000000000000000201 /* file_added.wav in Resources */,
 				251997F61EBA5FDE003C94B1 /* txqueue_stop.mp3 in Resources */,
 				254C084C1C345E3700C98566 /* removeuser.mp3 in Resources */,
 				25D205E522ACCD260009F286 /* broadcast_message.mp3 in Resources */,

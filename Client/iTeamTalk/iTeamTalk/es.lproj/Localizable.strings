@@ -218,6 +218,9 @@
 /* text message type */
 "Broadcast message" = "Difundir mensaje";
 
+/* text message */
+"Broadcast Message" = "Mensaje de difusión";
+
 /* preferences
    user detail */
 "Broadcast Messages" = "Mensajes de difusión";
@@ -268,6 +271,9 @@
 
 /* appearance */
 "Choose colors, text size and font" = "Elige los colores, el tamaño del texto y la fuente";
+
+/* file list */
+"Choose Files" = "Elegir archivos";
 
 /* diagnostics */
 "Clear Log" = "Vaciar el registro";
@@ -486,6 +492,12 @@
 /* media stream */
 "File" = "Archivo";
 
+/* sound events */
+"File Added" = "Archivo añadido";
+
+/* sound events */
+"File Removed" = "Archivo retirado";
+
 /* file list */
 "Files" = "Archivos";
 
@@ -540,6 +552,9 @@
 
 /* appearance */
 "Interface Color" = "Color de la interfaz";
+
+/* text message */
+"It is sent to every user of the server" = "Se envía a todos los usuarios del servidor";
 
 /* Dialog message */
 "Join" = "Unirse";
@@ -759,6 +774,9 @@
 /* text message */
 "Open Link" = "Abrir enlace";
 
+/* file list */
+"Opens the file" = "Abre el archivo";
+
 /* codec detail */
 "OPUS Codec" = "Códec OPUS";
 
@@ -787,6 +805,15 @@
 
 /* create channel */
 "Permanent Channel" = "Canal permanente";
+
+/* file list */
+"Photos and Videos" = "Fotos y vídeos";
+
+/* sound events */
+"Play sound when a file is removed from the channel" = "Reproducir un sonido cuando se retira un archivo del canal";
+
+/* sound events */
+"Play sound when a file is uploaded to the channel" = "Reproducir un sonido cuando se sube un archivo al canal";
 
 /* preferences */
 "Play sound when a user joins the channel" = "Reproducir sonido cuando un usuario se una al canal";
@@ -951,6 +978,9 @@
 "Select users" = "Seleccionar usuarios";
 
 /* text message */
+"Send broadcast message" = "Enviar mensaje de difusión";
+
+/* text message */
 "Send empty message to close keyboard" = "Envía un mensaje en blanco para cerrar el teclado";
 
 /* channel list */
@@ -979,6 +1009,9 @@
 
 /* server entry */
 "Server Status" = "Server Status";
+
+/* file list */
+"Share" = "Compartir";
 
 /* diagnostics */
 "Share Log" = "Compartir el registro";

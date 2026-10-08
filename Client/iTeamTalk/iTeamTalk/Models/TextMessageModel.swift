@@ -45,6 +45,24 @@ final class TextMessageModel: ObservableObject {
 
     var showLogMessages: Bool { userid == 0 }
 
+    /// Broadcast messages go to every user of the server: administrators and
+    /// accounts with that right only. Offered from the channel chat.
+    var canBroadcast: Bool {
+        guard userid == 0, TeamTalkClient.shared.isAuthorized else { return false }
+        return (TeamTalkClient.shared.myUserType & USERTYPE_ADMIN.rawValue) != 0 ||
+            (TeamTalkClient.shared.myUserRights & USERRIGHT_TEXTMESSAGE_BROADCAST.rawValue) != 0
+    }
+
+    func sendBroadcast(_ content: String) {
+        let content = content.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !content.isEmpty else { return }
+
+        var msg = TextMessage()
+        msg.nFromUserID = TeamTalkClient.shared.myUserID
+        msg.nMsgType = MSGTYPE_BROADCAST
+        TeamTalkClient.shared.sendTextMessage(msg, content: content)
+    }
+
     func appendEventMessage(_ message: MyTextMessage) {
         if messages[curMessageSection] == nil ||
             messages[curMessageSection]?.last?.fromuserid != message.fromuserid ||
