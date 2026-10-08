@@ -219,12 +219,15 @@ final class MicrophoneKeepAlive {
 
     private var recorder: AVAudioRecorder?
     private var limit: Timer?
+    // tells a delayed stop that the connection was lost again meanwhile
+    private var stopToken = 0
 
     var isRunning: Bool {
         recorder != nil
     }
 
     func start() {
+        stopToken += 1
         guard recorder == nil else { return }
 
         // nothing is kept, it records to nowhere
@@ -259,8 +262,11 @@ final class MicrophoneKeepAlive {
         guard recorder != nil else { return }
 
         if delay > 0 {
+            stopToken += 1
+            let token = stopToken
             DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
-                self?.stop()
+                guard let self, self.stopToken == token else { return }
+                self.stop()
             }
             return
         }

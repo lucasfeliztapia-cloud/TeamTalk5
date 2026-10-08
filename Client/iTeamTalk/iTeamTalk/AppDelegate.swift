@@ -39,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // nothing is connected yet, whatever the controls remember from the last run
         SharedStore.resetConnection()
+        logDiagnostic("App group for the widget and the controls: \(SharedStore.defaults == nil ? "NOT available" : "available")")
         
         // Default values are not set in Settings bundle, so we need to load them manually
         let defaults = UserDefaults.standard
