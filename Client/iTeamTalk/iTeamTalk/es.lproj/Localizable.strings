@@ -1,6 +1,12 @@
 /* connection quality */
 "%.1f %% (%lld of %lld)" = "%.1f %% (%lld de %lld)";
 
+/* media stream */
+"%@ added to the playlist" = "%@ añadido a la lista";
+
+/* media stream */
+"%@ cannot be streamed" = "%@ no se puede emitir";
+
 /* file list */
 "%@ downloaded" = "%@ descargado";
 
@@ -31,6 +37,9 @@
 /* diagnostics */
 "%d entries" = "%d entradas";
 
+/* media stream */
+"%d files added to the playlist" = "%d archivos añadidos a la lista";
+
 /* connection quality */
 "%d ms" = "%d ms";
 
@@ -48,6 +57,9 @@
 
 /* channel list */
 "1 user selected" = "1 usuario seleccionado";
+
+/* media stream */
+"100 % leaves the file as it is. The preview plays on this device only, with this volume and from the chosen position." = "El 100 % deja el archivo como está. La preescucha suena solo en este dispositivo, con este volumen y desde la posición elegida.";
 
 /* codec detail */
 "12 KHz" = "12 KHz";
@@ -95,11 +107,23 @@
 /* channel list */
 "Active" = "Active";
 
+/* media stream */
+"Add" = "Añadir";
+
+/* media stream */
+"Add Files" = "Añadir archivos";
+
 /* serverlist */
 "Add new server entry" = "Añadir nuevo servidor";
 
 /* serverlist */
 "Add to Favorites" = "Añadir a favoritos";
+
+/* media stream */
+"Add Web Address" = "Añadir dirección web";
+
+/* media stream */
+"Address of a web radio or of an audio or video file" = "Dirección de una radio web o de un archivo de audio o vídeo";
 
 /* preferences */
 "Announce content of text message" = "Anunciar mensaje de texto";
@@ -328,6 +352,9 @@
 /* main-tab */
 "Create new channel" = "Crear nuevo canal";
 
+/* media stream */
+"Current File" = "El archivo actual";
+
 /* connection quality */
 "Data" = "Datos";
 
@@ -396,6 +423,9 @@
 /* server entry */
 "Encrypted" = "Encriptado";
 
+/* media stream */
+"Enter a web address that starts with http or https" = "Escribe una dirección web que empiece por http o https";
+
 /* serverlist */
 "Enter Join Code" = "Enter Join Code";
 
@@ -432,6 +462,9 @@
 /* file list */
 "Failed to download file" = "No se pudo descargar el archivo";
 
+/* media stream */
+"Failed to play the file" = "No se pudo reproducir el archivo";
+
 /* connect to a server */
 "Failed to setup encryption" = "Failed to setup encryption";
 
@@ -455,6 +488,9 @@
 
 /* file list */
 "Files" = "Archivos";
+
+/* media stream */
+"Files stay in the list until you remove them. When one ends, the next one starts." = "Los archivos se quedan en la lista hasta que los quites. Cuando uno termina, empieza el siguiente.";
 
 /* appearance */
 "Font" = "Fuente";
@@ -562,6 +598,9 @@
 /* appearance */
 "Listening" = "Escuchando";
 
+/* media stream */
+"Live" = "En directo";
+
 /* serverlist */
 "Local server" = "Local server";
 
@@ -650,6 +689,9 @@
 /* Dialog message */
 "New Server" = "Nuevo servidor";
 
+/* media stream */
+"Next File" = "Archivo siguiente";
+
 /* preferences */
 "Nickname" = "nickname";
 
@@ -698,6 +740,9 @@
 
 /* live activity */
 "Not transmitting" = "Sin transmitir";
+
+/* media stream */
+"Off" = "Desactivada";
 
 /* serverlist */
 "Official server" = "Official server";
@@ -776,6 +821,9 @@
 /* preferences */
 "Play sound when voice transmission is toggled" = "Reproducir sonido cuando se activa la transmisión de voz";
 
+/* media stream */
+"Playlist" = "Lista de reproducción";
+
 /* preferences */
 "Pop up text message when new messages are received" = "Mostrar ventana emergente cuando se reciban mensajes nuevos";
 
@@ -799,6 +847,9 @@
 
 /* appearance */
 "Preview" = "Vista previa";
+
+/* media stream */
+"Previous File" = "Archivo anterior";
 
 /* text message type */
 "Private message" = "Mensaje privado";
@@ -859,6 +910,9 @@
 
 /* serverlist */
 "Remove from Favorites" = "Quitar de favoritos";
+
+/* media stream */
+"Repeat" = "Repetir";
 
 /* appearance */
 "Restore Default Appearance" = "Restaurar la apariencia predeterminada";
@@ -965,6 +1019,9 @@
 /* preferences */
 "Sort Channels" = "Órden de los canales";
 
+/* media stream */
+"Sound" = "Sonido";
+
 /* preferences
    text to speech */
 "Sound Events" = "Eventos de sonido";
@@ -1019,6 +1076,9 @@
 "Stop Microphone Test" = "Detener la prueba de micrófono";
 
 /* media stream */
+"Stop Preview" = "Detener la preescucha";
+
+/* media stream */
 "Stop Streaming" = "Detener la emisión";
 
 /* media stream */
@@ -1029,6 +1089,9 @@
 
 /* media stream */
 "Streaming" = "Emitiendo";
+
+/* media stream */
+"Streaming %@" = "Emitiendo %@";
 
 /* media stream */
 "Streaming finished" = "Emisión terminada";
@@ -1092,6 +1155,9 @@
 
 /* media stream */
 "This file cannot be streamed" = "Este archivo no se puede emitir";
+
+/* media stream */
+"This web address cannot be streamed" = "Esta dirección web no se puede emitir";
 
 /* connection quality */
 "Time a packet takes to reach the server and come back. Below 100 ms a conversation feels immediate." = "Tiempo que tarda un paquete en llegar al servidor y volver. Por debajo de 100 ms la conversación se siente inmediata.";
@@ -1247,8 +1313,20 @@
 /* codec detail */
 "VoIP" = "Voz";
 
+/* media stream */
+"Volume" = "Volumen";
+
 /* user detail */
 "Volume Controls" = "Controles de volumen";
+
+/* media stream */
+"Web Address" = "Dirección web";
+
+/* media stream */
+"Web address, %@" = "Dirección web, %@";
+
+/* media stream */
+"Web address, live" = "Dirección web, en directo";
 
 /* Web Login controller */
 "Web Login ID" = "ID de inicio de sesión";
@@ -1259,6 +1337,9 @@
 
 /* diagnostics */
 "What the app has been doing, to share when something fails" = "Lo que ha ido haciendo la app, para compartirlo cuando algo falla";
+
+/* media stream */
+"Whole List" = "Toda la lista";
 
 /* Dialog message */
 "Yes" = "Sí";

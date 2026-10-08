@@ -86,6 +86,19 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
         LiveActivityActions.toggleDeafen = { [weak self] in
             self?.channelListModel.toggleDeafen()
         }
+        LiveActivityActions.toggleStreamPause = { [weak self] in
+            self?.mediaStreamModel.togglePause()
+        }
+        LiveActivityActions.stopStream = { [weak self] in
+            self?.mediaStreamModel.stop()
+        }
+        // without the position, which changes every second while streaming
+        mediaStreamModel.$state.map { _ in () }
+            .merge(with: mediaStreamModel.$currentID.map { _ in () })
+            .sink { [weak self] _ in
+                self?.scheduleLiveActivityUpdate()
+            }
+            .store(in: &cancellables)
         channelListModel.$isTransmitting
             .merge(with: channelListModel.$isDeafened)
             .sink { [weak self] _ in
@@ -151,6 +164,8 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
         cancellables.removeAll()
         LiveActivityActions.toggleTransmission = nil
         LiveActivityActions.toggleDeafen = nil
+        LiveActivityActions.toggleStreamPause = nil
+        LiveActivityActions.stopStream = nil
         LiveActivityController.end()
         polltimer?.invalidate()
         reconnecttimer?.invalidate()
@@ -340,7 +355,9 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
             isTransmitting: transmitting,
             isDeafened: deafened,
             talkColor: AppearanceModel.hex(of: transmitting ? appearance.talkActiveColor : appearance.talkIdleColor),
-            speakersColor: AppearanceModel.hex(of: deafened ? appearance.speakersMutedColor : appearance.speakersOnColor)
+            speakersColor: AppearanceModel.hex(of: deafened ? appearance.speakersMutedColor : appearance.speakersOnColor),
+            streamName: mediaStreamModel.isStreaming ? mediaStreamModel.fileName : "",
+            isStreamPaused: mediaStreamModel.state == .paused
         ))
     }
 

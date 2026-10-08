@@ -357,22 +357,46 @@ public final class TeamTalkClient {
         return info
     }
 
-    @discardableResult
-    public func startStreamingMediaFile(path: String, offsetMSec: UInt32, paused: Bool, videoCodec: VideoCodec) -> Bool {
+    /// `gainLevel` goes from SOUND_GAIN_MIN to SOUND_GAIN_MAX, SOUND_GAIN_DEFAULT leaves the audio as it is.
+    private func makePlayback(offsetMSec: UInt32, paused: Bool, gainLevel: Int32) -> MediaFilePlayback {
         var playback = MediaFilePlayback()
         playback.uOffsetMSec = offsetMSec
         playback.bPaused = paused ? 1 : 0
+        playback.audioPreprocessor = TeamTalkAudioPreprocessor.makeTeamTalkPreprocessor()
+        playback.audioPreprocessor.ttpreprocessor.nGainLevel = gainLevel
+        return playback
+    }
+
+    @discardableResult
+    public func startStreamingMediaFile(path: String, offsetMSec: UInt32, paused: Bool, gainLevel: Int32, videoCodec: VideoCodec) -> Bool {
+        var playback = makePlayback(offsetMSec: offsetMSec, paused: paused, gainLevel: gainLevel)
         var videoCodec = videoCodec
         return TT_StartStreamingMediaFileToChannelEx(instance, path, &playback, &videoCodec) != 0
     }
 
     @discardableResult
-    public func updateStreamingMediaFile(offsetMSec: UInt32, paused: Bool, videoCodec: VideoCodec) -> Bool {
-        var playback = MediaFilePlayback()
-        playback.uOffsetMSec = offsetMSec
-        playback.bPaused = paused ? 1 : 0
+    public func updateStreamingMediaFile(offsetMSec: UInt32, paused: Bool, gainLevel: Int32, videoCodec: VideoCodec) -> Bool {
+        var playback = makePlayback(offsetMSec: offsetMSec, paused: paused, gainLevel: gainLevel)
         var videoCodec = videoCodec
         return TT_UpdateStreamingMediaFileToChannel(instance, &playback, &videoCodec) != 0
+    }
+
+    /// Plays a media file on this device only. Returns the session, greater
+    /// than zero, to update and stop it with.
+    public func initLocalPlayback(path: String, offsetMSec: UInt32, paused: Bool, gainLevel: Int32) -> Int32 {
+        var playback = makePlayback(offsetMSec: offsetMSec, paused: paused, gainLevel: gainLevel)
+        return TT_InitLocalPlayback(instance, path, &playback)
+    }
+
+    @discardableResult
+    public func updateLocalPlayback(session: Int32, offsetMSec: UInt32, paused: Bool, gainLevel: Int32) -> Bool {
+        var playback = makePlayback(offsetMSec: offsetMSec, paused: paused, gainLevel: gainLevel)
+        return TT_UpdateLocalPlayback(instance, session, &playback) != 0
+    }
+
+    @discardableResult
+    public func stopLocalPlayback(session: Int32) -> Bool {
+        TT_StopLocalPlayback(instance, session) != 0
     }
 
     @discardableResult

@@ -32,6 +32,8 @@ struct LiveActivityStatus: Equatable {
     var isDeafened: Bool
     var talkColor: String
     var speakersColor: String
+    var streamName: String
+    var isStreamPaused: Bool
 }
 
 /// The Live Activity of the current connection. Needs iOS 17 for its buttons;
@@ -99,7 +101,10 @@ private final class LiveActivityManager {
             transmitOffText: String(localized: "Not transmitting", comment: "live activity"),
             speakersLabel: String(localized: "Speakers", comment: "channel list"),
             speakersOnText: String(localized: "On", comment: "channel list"),
-            speakersMutedText: String(localized: "Muted", comment: "channel list")
+            speakersMutedText: String(localized: "Muted", comment: "channel list"),
+            streamPauseLabel: String(localized: "Pause", comment: "media stream"),
+            streamResumeLabel: String(localized: "Resume", comment: "media stream"),
+            streamStopLabel: String(localized: "Stop Streaming", comment: "media stream")
         )
 
         do {
@@ -131,7 +136,9 @@ private final class LiveActivityManager {
             isTransmitting: status.isTransmitting,
             isDeafened: status.isDeafened,
             talkColor: status.talkColor,
-            speakersColor: status.speakersColor
+            speakersColor: status.speakersColor,
+            streamName: status.streamName,
+            isStreamPaused: status.isStreamPaused
         )
     }
 }

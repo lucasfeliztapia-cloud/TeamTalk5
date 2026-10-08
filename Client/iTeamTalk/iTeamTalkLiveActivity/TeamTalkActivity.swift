@@ -40,6 +40,10 @@ struct TeamTalkActivityAttributes: ActivityAttributes {
         // "RRGGBB" of the button in its current state, chosen in the app
         var talkColor: String
         var speakersColor: String
+
+        // the media file being streamed, empty when there is none
+        var streamName: String
+        var isStreamPaused: Bool
     }
 
     var serverName: String
@@ -52,6 +56,9 @@ struct TeamTalkActivityAttributes: ActivityAttributes {
     var speakersLabel: String
     var speakersOnText: String
     var speakersMutedText: String
+    var streamPauseLabel: String
+    var streamResumeLabel: String
+    var streamStopLabel: String
 }
 
 /// A color the app hands over as "RRGGBB", and black or white to draw on it.
@@ -84,6 +91,32 @@ struct ActivityColor {
 enum LiveActivityActions {
     static var toggleTransmission: (() -> Void)?
     static var toggleDeafen: (() -> Void)?
+    static var toggleStreamPause: (() -> Void)?
+    static var stopStream: (() -> Void)?
+}
+
+@available(iOS 17.0, *)
+struct ToggleStreamPauseIntent: LiveActivityIntent {
+    static var title: LocalizedStringResource = "Pause or Resume Streaming"
+
+    func perform() async throws -> some IntentResult {
+        await MainActor.run {
+            LiveActivityActions.toggleStreamPause?()
+        }
+        return .result()
+    }
+}
+
+@available(iOS 17.0, *)
+struct StopStreamIntent: LiveActivityIntent {
+    static var title: LocalizedStringResource = "Stop Streaming"
+
+    func perform() async throws -> some IntentResult {
+        await MainActor.run {
+            LiveActivityActions.stopStream?()
+        }
+        return .result()
+    }
 }
 
 @available(iOS 17.0, *)

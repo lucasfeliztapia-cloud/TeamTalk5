@@ -39,6 +39,9 @@ struct TeamTalkLiveActivity: Widget {
             VStack(alignment: .leading, spacing: 10) {
                 ActivityHeader(attributes: context.attributes, state: context.state)
                 ActivityControls(attributes: context.attributes, state: context.state)
+                if !context.state.streamName.isEmpty {
+                    StreamControls(attributes: context.attributes, state: context.state)
+                }
             }
             .padding()
         } dynamicIsland: { context in
@@ -47,7 +50,12 @@ struct TeamTalkLiveActivity: Widget {
                     ActivityHeader(attributes: context.attributes, state: context.state)
                 }
                 DynamicIslandExpandedRegion(.bottom) {
-                    ActivityControls(attributes: context.attributes, state: context.state)
+                    VStack(spacing: 8) {
+                        ActivityControls(attributes: context.attributes, state: context.state)
+                        if !context.state.streamName.isEmpty {
+                            StreamControls(attributes: context.attributes, state: context.state)
+                        }
+                    }
                 }
             } compactLeading: {
                 Image(systemName: "person.wave.2.fill")
@@ -118,6 +126,35 @@ private struct ActivityControls: View {
             .accessibilityValue(state.isDeafened ? attributes.speakersMutedText : attributes.speakersOnText)
         }
         .disabled(!state.isConnected)
+    }
+}
+
+/// The media file being streamed, with pause and stop
+private struct StreamControls: View {
+    let attributes: TeamTalkActivityAttributes
+    let state: TeamTalkActivityAttributes.ContentState
+
+    var body: some View {
+        HStack(spacing: 12) {
+            Image(systemName: "music.note")
+                .accessibilityHidden(true)
+            Text(state.streamName)
+                .font(.subheadline)
+                .lineLimit(1)
+            Spacer(minLength: 0)
+            Button(intent: ToggleStreamPauseIntent()) {
+                Image(systemName: state.isStreamPaused ? "play.fill" : "pause.fill")
+                    .frame(width: 44, height: 30)
+            }
+            .buttonStyle(.bordered)
+            .accessibilityLabel(state.isStreamPaused ? attributes.streamResumeLabel : attributes.streamPauseLabel)
+            Button(intent: StopStreamIntent()) {
+                Image(systemName: "stop.fill")
+                    .frame(width: 44, height: 30)
+            }
+            .buttonStyle(.bordered)
+            .accessibilityLabel(attributes.streamStopLabel)
+        }
     }
 }
 
