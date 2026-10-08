@@ -82,6 +82,9 @@
    create channel */
 "8 KHz" = "8 KHz";
 
+/* appearance */
+"A theme changes the colors above. You can adjust them afterwards." = "Un tema cambia los colores de arriba. Después puedes ajustarlos.";
+
 /* serverlist */
 "Access preferences" = "Preferencias de acceso";
 
@@ -128,6 +131,12 @@
 /* all users */
 "All Users" = "Todos los usuarios";
 
+/* appearance */
+"Always Dark" = "Siempre oscuro";
+
+/* appearance */
+"Always Light" = "Siempre claro";
+
 /* preferences */
 "Announce content of text message" = "Anunciar mensaje de texto";
 
@@ -158,6 +167,12 @@
 /* codec detail */
 "Application" = "Aplicación";
 
+/* appearance */
+"Apply High Contrast Theme" = "Aplicar tema de alto contraste";
+
+/* appearance */
+"Apply Pure Dark Theme" = "Aplicar tema oscuro puro";
+
 /* preferences */
 "Ascending" = "Ascendente";
 
@@ -187,6 +202,12 @@
 
 /* media stream */
 "Back 10 Seconds" = "Retroceder 10 segundos";
+
+/* backup */
+"Backup" = "Copia de seguridad";
+
+/* backup */
+"Backup restored. Close the app and open it again to apply every setting." = "Copia restaurada. Cierra la app y vuelve a abrirla para aplicar todos los ajustes.";
 
 /* channel list */
 "Ban" = "Banear";
@@ -323,6 +344,9 @@
 /* appearance */
 "Colors and Text" = "Colores y texto";
 
+/* keyboard shortcuts */
+"Command" = "Comando";
+
 /* log entry */
 "Command failed: %@" = "Command failed: %@";
 
@@ -360,6 +384,9 @@
 
 /* connection quality */
 "Connection Quality" = "Calidad de la conexión";
+
+/* keyboard shortcuts */
+"Control" = "Control";
 
 /* media stream */
 "Controls" = "Controles";
@@ -487,6 +514,15 @@
 "Expanded" = "Expandido";
 
 /* appearance */
+"Export Appearance" = "Exportar apariencia";
+
+/* backup */
+"Export Settings and Servers" = "Exportar ajustes y servidores";
+
+/* appearance */
+"Exports the colors, the text and the theme to a file that someone else can import." = "Exporta los colores, el texto y el tema a un archivo que otra persona puede importar.";
+
+/* appearance */
 "Extra Extra Extra Large" = "Enorme";
 
 /* appearance */
@@ -577,6 +613,12 @@
 /* server entry */
 "Host address" = "Dirección";
 
+/* appearance */
+"Import Appearance" = "Importar apariencia";
+
+/* backup */
+"Import Backup" = "Importar copia de seguridad";
+
 /* channel list */
 "Inactive" = "Inactive";
 
@@ -585,6 +627,12 @@
 
 /* appearance */
 "Interface Color" = "Color de la interfaz";
+
+/* Sound Devices */
+"iOS Voice Processing" = "Procesamiento de voz de iOS";
+
+/* Sound Devices */
+"iOS voice processing cancels echo, reduces noise and levels the volume. WebRTC reduces noise and levels the volume but does not cancel echo, so use it with headphones." = "El procesamiento de voz de iOS cancela el eco, reduce el ruido y nivela el volumen. WebRTC reduce el ruido y nivela el volumen pero no cancela el eco, así que úsalo con auriculares.";
 
 /* ban list */
 "IP address: %@" = "Dirección IP: %@";
@@ -622,6 +670,15 @@
 /* log entry */
 "Joined %@" = "Se ha unido a %@";
 
+/* keyboard shortcuts */
+"Key" = "Tecla";
+
+/* keyboard shortcuts */
+"Keyboard Shortcuts" = "Atajos de teclado";
+
+/* preferences */
+"Keys of an external keyboard to talk and to mute" = "Teclas de un teclado externo para hablar y silenciar";
+
 /* channel list */
 "Kick" = "Expulsar";
 
@@ -642,6 +699,9 @@
 
 /* connection quality */
 "Latency and packet loss" = "Latencia y pérdida de paquetes";
+
+/* appearance */
+"Light or Dark" = "Claro u oscuro";
 
 /* preferences */
 "Limit length of names in channel list to %d characters" = "Limitar longitud máxima de nombres de usuario a %d caracteres";
@@ -699,6 +759,9 @@
 /* Sound Devices */
 "Microphone Test" = "Prueba de micrófono";
 
+/* keyboard shortcuts */
+"Modifier" = "Modificador";
+
 /* codec detail
    create channel */
 "Mono" = "Mono";
@@ -729,6 +792,9 @@
 
 /* user detail */
 "Mute Media File" = "Silenciar archivo multimedia";
+
+/* keyboard shortcuts */
+"Mute or Unmute Speakers" = "Silenciar o activar los altavoces";
 
 /* user detail */
 "Mute Voice" = "Silenciar voz";
@@ -780,6 +846,9 @@
 /* create channel */
 "No Interruptions" = "Sin interrupciones";
 
+/* keyboard shortcuts */
+"No Modifier" = "Sin modificador";
+
 /* channel list */
 "No password" = "Sin contraseña";
 
@@ -794,6 +863,9 @@
 
 /* default nickname */
 "Noname" = "Sinnombre";
+
+/* keyboard shortcuts and voice cleanup */
+"None" = "Ninguna";
 
 /* live activity */
 "Not in a channel" = "Sin canal";
@@ -828,6 +900,9 @@
 /* file list */
 "Opens the file" = "Abre el archivo";
 
+/* keyboard shortcuts */
+"Option" = "Opción";
+
 /* codec detail */
 "OPUS Codec" = "Códec OPUS";
 
@@ -850,6 +925,9 @@
 
 /* media stream */
 "Pause" = "Pausar";
+
+/* keyboard shortcuts */
+"Pause or Resume Streaming" = "Pausar o reanudar la emisión";
 
 /* media stream */
 "Paused" = "En pausa";
@@ -998,8 +1076,14 @@
 /* appearance */
 "Restore Default Appearance" = "Restaurar la apariencia predeterminada";
 
+/* keyboard shortcuts */
+"Restore Default Shortcuts" = "Restablecer los atajos por defecto";
+
 /* media stream */
 "Resume" = "Reanudar";
+
+/* keyboard shortcuts */
+"Return" = "Intro";
 
 /* preferences */
 "Return Sends Message" = "Intro envía el mensaje";
@@ -1012,6 +1096,9 @@
 
 /* appearance */
 "Rounded" = "Redondeada";
+
+/* appearance */
+"Same as the System" = "Igual que el sistema";
 
 /* codec detail */
 "Sample Rate" = "Velocidad de muestreo";
@@ -1079,6 +1166,12 @@
 /* file list */
 "Shares or opens the file" = "Comparte o abre el archivo";
 
+/* keyboard shortcuts */
+"Shift" = "Mayúsculas";
+
+/* keyboard shortcuts */
+"Shortcuts work with an external keyboard while connected to a server. A key without a modifier does nothing while you are typing a message." = "Los atajos funcionan con un teclado externo mientras estás conectado a un servidor. Una tecla sin modificador no hace nada mientras escribes un mensaje.";
+
 /* preferences */
 "Show in Server List" = "Show in Server List";
 
@@ -1119,6 +1212,9 @@
 /* preferences */
 "Sound System" = "Sistema de sonido";
 
+/* keyboard shortcuts */
+"Space" = "Espacio";
+
 /* channel list */
 "Speaker" = "Altavoz";
 
@@ -1142,6 +1238,12 @@
 
 /* codec detail */
 "Speex Variable Bitrate Codec" = "Codec Speex, calidad variable";
+
+/* text to speech events */
+"Spoken By" = "Quién lo dice";
+
+/* text to speech events, accessibility */
+"Spoken by, %@" = "Quién lo dice, %@";
 
 /* appearance */
 "Standard" = "Estándar";
@@ -1210,6 +1312,9 @@
 /* server entry */
 "TCP Port" = "Puerto TCP";
 
+/* text to speech events */
+"TeamTalk Voice" = "La voz de TeamTalk";
+
 /* Sound Devices */
 "Test Microphone" = "Probar el micrófono";
 
@@ -1228,6 +1333,9 @@
 /* preferences */
 "Text To Speech Events" = "Eventos de texto a voz";
 
+/* backup */
+"The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "La copia contiene todos los ajustes y la lista de servidores, con sus contraseñas. Guarda el archivo en un lugar seguro.";
+
 /* diagnostics */
 "The log is empty" = "El registro está vacío";
 
@@ -1243,8 +1351,17 @@
 /* preferences */
 "The volume of the speaking voice is %.1f" = "El volumen de la voz es  %.1f";
 
+/* appearance */
+"Themes" = "Temas";
+
 /* media stream */
 "This file cannot be streamed" = "Este archivo no se puede emitir";
+
+/* backup */
+"This file is not a TeamTalk backup" = "Este archivo no es una copia de seguridad de TeamTalk";
+
+/* appearance */
+"This file is not an appearance exported from TeamTalk" = "Este archivo no es una apariencia exportada desde TeamTalk";
 
 /* transmit control */
 "This is a classroom channel: only what is turned on here can be transmitted." = "Este es un canal de tipo aula: solo se puede transmitir lo que esté activado aquí.";
@@ -1257,6 +1374,9 @@
 
 /* channel list */
 "Toggle to enable/disable transmission" = "Pulsa para activar o desactivar transmisión";
+
+/* keyboard shortcuts */
+"Toggle Transmission" = "Activar o desactivar la transmisión";
 
 /* preferences */
 "Toggle voice transmission using headset" = "Conmutar transmisión de voz usando los auriculares";
@@ -1391,6 +1511,9 @@
 /* preferences */
 "Voice Activation Triggered" = "Activación por voz conmutada";
 
+/* Sound Devices */
+"Voice Cleanup" = "Limpieza de voz";
+
 /* connection quality */
 "Voice Latency (UDP)" = "Latencia de la voz (UDP)";
 
@@ -1405,6 +1528,12 @@
 
 /* user detail */
 "Voice Volume" = "Volumen de voz";
+
+/* text to speech events */
+"VoiceOver" = "VoiceOver";
+
+/* text to speech events */
+"VoiceOver speaks an announcement with its own voice and shows it in braille. With VoiceOver off, the voice of TeamTalk speaks them all." = "VoiceOver dice el aviso con su propia voz y lo muestra en la línea braille. Con VoiceOver apagado, todos los dice la voz de TeamTalk.";
 
 /* codec detail */
 "VoIP" = "Voz";
@@ -1430,6 +1559,9 @@
 /* preferences
    user detail */
 "WebCam" = "Cámara web";
+
+/* Sound Devices */
+"WebRTC" = "WebRTC";
 
 /* diagnostics */
 "What the app has been doing, to share when something fails" = "Lo que ha ido haciendo la app, para compartirlo cuando algo falla";

@@ -32,6 +32,7 @@ let PREF_APPEARANCE_TALKACTIVECOLOR = "appearance_talkactivecolor_preference"
 let PREF_APPEARANCE_SPEAKERSONCOLOR = "appearance_speakersoncolor_preference"
 let PREF_APPEARANCE_SPEAKERSMUTEDCOLOR = "appearance_speakersmutedcolor_preference"
 let PREF_APPEARANCE_TEXTSIZE = "appearance_textsize_preference"
+let PREF_APPEARANCE_COLORSCHEME = "appearance_colorscheme_preference"
 let PREF_APPEARANCE_FONTDESIGN = "appearance_fontdesign_preference"
 
 enum AppearanceFontDesign: Int, CaseIterable, Identifiable {
@@ -154,6 +155,22 @@ final class AppearanceModel: ObservableObject {
         didSet { UserDefaults.standard.set(fontDesign.rawValue, forKey: PREF_APPEARANCE_FONTDESIGN) }
     }
 
+    /// 0 follows the system, 1 is always light and 2 always dark
+    @Published var colorSchemeIndex: Int {
+        didSet { UserDefaults.standard.set(colorSchemeIndex, forKey: PREF_APPEARANCE_COLORSCHEME) }
+    }
+
+    var colorScheme: ColorScheme? {
+        switch colorSchemeIndex {
+        case 1:
+            return .light
+        case 2:
+            return .dark
+        default:
+            return nil
+        }
+    }
+
     private init() {
         let defaults = UserDefaults.standard
         receivedColor = Self.load(forKey: PREF_APPEARANCE_RECEIVEDCOLOR) ?? Self.defaultReceivedColor
@@ -165,6 +182,7 @@ final class AppearanceModel: ObservableObject {
         speakersMutedColor = Self.load(forKey: PREF_APPEARANCE_SPEAKERSMUTEDCOLOR) ?? Self.defaultSpeakersMutedColor
         textSizeIndex = defaults.integer(forKey: PREF_APPEARANCE_TEXTSIZE)
         fontDesign = AppearanceFontDesign(rawValue: defaults.integer(forKey: PREF_APPEARANCE_FONTDESIGN)) ?? .standard
+        colorSchemeIndex = max(0, min(2, defaults.integer(forKey: PREF_APPEARANCE_COLORSCHEME)))
     }
 
     func restoreDefaults() {
@@ -177,6 +195,7 @@ final class AppearanceModel: ObservableObject {
         speakersMutedColor = Self.defaultSpeakersMutedColor
         textSizeIndex = 0
         fontDesign = .standard
+        colorSchemeIndex = 0
 
         // the defaults follow the light and dark theme, a stored color would not
         let defaults = UserDefaults.standard
@@ -185,6 +204,99 @@ final class AppearanceModel: ObservableObject {
                     PREF_APPEARANCE_SPEAKERSONCOLOR, PREF_APPEARANCE_SPEAKERSMUTEDCOLOR] {
             defaults.removeObject(forKey: key)
         }
+    }
+
+    // MARK: - Themes
+
+    /// Black and white wherever possible, and saturated colors for the states
+    func applyHighContrastTheme() {
+        receivedColor = Self.color(hex: "000000")
+        sentColor = Self.color(hex: "FFFFFF")
+        interfaceColor = nil
+        talkIdleColor = Self.color(hex: "006400")
+        talkActiveColor = Self.color(hex: "B00000")
+        speakersOnColor = Self.color(hex: "FFFFFF")
+        speakersMutedColor = Self.color(hex: "000000")
+    }
+
+    /// Dark whatever the system says, with dim colors that do not glare at night
+    func applyPureDarkTheme() {
+        colorSchemeIndex = 2
+        receivedColor = Self.color(hex: "1C1C1E")
+        sentColor = Self.color(hex: "0A3D62")
+        interfaceColor = Self.color(hex: "0A84FF")
+        talkIdleColor = Self.color(hex: "14532D")
+        talkActiveColor = Self.color(hex: "7F1D1D")
+        speakersOnColor = Self.color(hex: "2C2C2E")
+        speakersMutedColor = Self.color(hex: "000000")
+    }
+
+    // MARK: - Sharing the appearance
+
+    private static let exportFormat = "TeamTalk appearance"
+
+    /// The appearance as a small file to hand to someone else
+    func exportFile() -> URL? {
+        let settings: [String: Any] = [
+            "format": Self.exportFormat,
+            "version": 1,
+            "receivedColor": Self.hex(of: receivedColor),
+            "sentColor": Self.hex(of: sentColor),
+            "interfaceColor": interfaceColor.map { Self.hex(of: $0) } ?? "",
+            "talkIdleColor": Self.hex(of: talkIdleColor),
+            "talkActiveColor": Self.hex(of: talkActiveColor),
+            "speakersOnColor": Self.hex(of: speakersOnColor),
+            "speakersMutedColor": Self.hex(of: speakersMutedColor),
+            "textSize": textSizeIndex,
+            "font": fontDesign.rawValue,
+            "colorScheme": colorSchemeIndex
+        ]
+
+        let url = FileManager.default.temporaryDirectory.appendingPathComponent("TeamTalk appearance.json")
+        guard let data = try? JSONSerialization.data(withJSONObject: settings, options: [.prettyPrinted, .sortedKeys]),
+              (try? data.write(to: url, options: .atomic)) != nil else {
+            return nil
+        }
+        return url
+    }
+
+    /// False if the file is not an appearance exported by this app
+    func importFile(_ url: URL) -> Bool {
+        let scoped = url.startAccessingSecurityScopedResource()
+        defer {
+            if scoped {
+                url.stopAccessingSecurityScopedResource()
+            }
+        }
+
+        guard let data = try? Data(contentsOf: url),
+              let settings = (try? JSONSerialization.jsonObject(with: data)) as? [String: Any],
+              settings["format"] as? String == Self.exportFormat else {
+            return false
+        }
+
+        func color(_ key: String, default fallback: Color) -> Color {
+            guard let hex = settings[key] as? String, hex.count == 6, UInt32(hex, radix: 16) != nil else {
+                return fallback
+            }
+            return Self.color(hex: hex)
+        }
+
+        receivedColor = color("receivedColor", default: Self.defaultReceivedColor)
+        sentColor = color("sentColor", default: Self.defaultSentColor)
+        if let hex = settings["interfaceColor"] as? String, hex.count == 6, UInt32(hex, radix: 16) != nil {
+            interfaceColor = Self.color(hex: hex)
+        } else {
+            interfaceColor = nil
+        }
+        talkIdleColor = color("talkIdleColor", default: Self.defaultTalkIdleColor)
+        talkActiveColor = color("talkActiveColor", default: Self.defaultTalkActiveColor)
+        speakersOnColor = color("speakersOnColor", default: Self.defaultSpeakersOnColor)
+        speakersMutedColor = color("speakersMutedColor", default: Self.defaultSpeakersMutedColor)
+        textSizeIndex = max(0, min(DynamicTypeSize.allCases.count, settings["textSize"] as? Int ?? 0))
+        fontDesign = AppearanceFontDesign(rawValue: settings["font"] as? Int ?? 0) ?? .standard
+        colorSchemeIndex = max(0, min(2, settings["colorScheme"] as? Int ?? 0))
+        return true
     }
 
     func swapTalkColors() {
@@ -259,9 +371,15 @@ final class AppearanceModel: ObservableObject {
 
     private static func load(forKey key: String) -> Color? {
         guard let hex = UserDefaults.standard.string(forKey: key), hex.count == 6,
-              let value = UInt32(hex, radix: 16) else {
+              UInt32(hex, radix: 16) != nil else {
             return nil
         }
+        return color(hex: hex)
+    }
+
+    /// From "RRGGBB". Black if it is not one.
+    static func color(hex: String) -> Color {
+        let value = UInt32(hex, radix: 16) ?? 0
         return Color(red: Double((value >> 16) & 0xFF) / 255,
                      green: Double((value >> 8) & 0xFF) / 255,
                      blue: Double(value & 0xFF) / 255)

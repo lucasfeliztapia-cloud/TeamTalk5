@@ -22,9 +22,13 @@
  */
 
 import SwiftUI
+import UniformTypeIdentifiers
 
 struct AppearanceView: View {
     @ObservedObject private var appearance = AppearanceModel.shared
+    @State private var sharedFile: SharedFile?
+    @State private var showingImporter = false
+    @State private var importFailed = false
 
     var body: some View {
         Form {
@@ -94,6 +98,35 @@ struct AppearanceView: View {
             }
 
             Section {
+                Picker("Light or Dark", selection: $appearance.colorSchemeIndex) {
+                    Text("Same as the System").tag(0)
+                    Text("Always Light").tag(1)
+                    Text("Always Dark").tag(2)
+                }
+                Button("Apply High Contrast Theme", action: appearance.applyHighContrastTheme)
+                Button("Apply Pure Dark Theme", action: appearance.applyPureDarkTheme)
+            } header: {
+                Text("Themes")
+            } footer: {
+                Text("A theme changes the colors above. You can adjust them afterwards.")
+            }
+
+            Section {
+                Button("Export Appearance") {
+                    if let url = appearance.exportFile() {
+                        sharedFile = SharedFile(url: url)
+                    }
+                }
+                Button("Import Appearance") {
+                    showingImporter = true
+                }
+            } header: {
+                Text("Share")
+            } footer: {
+                Text("Exports the colors, the text and the theme to a file that someone else can import.")
+            }
+
+            Section {
                 Button(action: appearance.restoreDefaults) {
                     Text("Restore Default Appearance")
                         .frame(maxWidth: .infinity, alignment: .center)
@@ -101,6 +134,19 @@ struct AppearanceView: View {
             }
         }
         .navigationTitle("Appearance")
+        .sheet(item: $sharedFile) { shared in
+            ActivityView(items: [shared.url])
+        }
+        .fileImporter(isPresented: $showingImporter, allowedContentTypes: [.json, .data]) { result in
+            if case .success(let url) = result {
+                importFailed = !appearance.importFile(url)
+            }
+        }
+        .alert("Error", isPresented: $importFailed) {
+            Button("OK", role: .cancel) { }
+        } message: {
+            Text("This file is not an appearance exported from TeamTalk")
+        }
     }
 
     /// The Talk button in its two states, side by side

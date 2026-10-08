@@ -36,10 +36,14 @@ struct TextToSpeechEventsView: View {
 
     var body: some View {
         Form {
-            Section("Announcements") {
+            Section {
                 ForEach(rows) { row in
                     TextToSpeechEventToggle(row: row)
                 }
+            } header: {
+                Text("Announcements")
+            } footer: {
+                Text("VoiceOver speaks an announcement with its own voice and shows it in braille. With VoiceOver off, the voice of TeamTalk speaks them all.")
             }
         }
         .navigationTitle("Text To Speech Events")
@@ -49,10 +53,12 @@ struct TextToSpeechEventsView: View {
 private struct TextToSpeechEventToggle: View {
     let row: TextToSpeechEventRow
     @AppStorage private var isOn: Bool
+    @AppStorage private var ownVoice: Bool
 
     init(row: TextToSpeechEventRow) {
         self.row = row
         _isOn = AppStorage(wrappedValue: row.defaultValue, row.preferenceKey)
+        _ownVoice = AppStorage(wrappedValue: false, row.preferenceKey + PREF_TTSEVENT_OWNVOICE_SUFFIX)
     }
 
     var body: some View {
@@ -63,6 +69,13 @@ private struct TextToSpeechEventToggle: View {
                     .font(.footnote)
                     .foregroundStyle(.secondary)
             }
+        }
+        if isOn {
+            Picker("Spoken By", selection: $ownVoice) {
+                Text("VoiceOver").tag(false)
+                Text("TeamTalk Voice").tag(true)
+            }
+            .accessibilityLabel(Text("Spoken by, \(Text(row.title))"))
         }
     }
 }

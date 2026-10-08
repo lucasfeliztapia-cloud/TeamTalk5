@@ -858,13 +858,29 @@ final class ChannelListModel: ObservableObject {
     // MARK: - Audio config
 
     func updateAudioConfig() {
-        if mychannel.audiocfg.bEnableAGC == TRUE {
-            TeamTalkClient.shared.setSoundInputGainLevel(INT32(SOUND_GAIN_DEFAULT.rawValue))
+        let channelGain = mychannel.audiocfg.bEnableAGC == TRUE
+        let cleanup = UserDefaults.standard.bool(forKey: PREF_WEBRTC_VOICECLEANUP)
+
+        if channelGain || cleanup {
             var ap = TeamTalkAudioPreprocessor.makeWebRTCPreprocessor()
-            let gain = Float(mychannel.audiocfg.nGainLevel) / Float(TeamTalkAudioPreprocessor.channelAudioConfigMax)
-            ap.webrtc.gaincontroller2.fixeddigital.fGainDB = WEBRTC_GAINCONTROLLER2_FIXEDGAIN_MAX * gain
-            ap.webrtc.gaincontroller2.bEnable = TRUE
-            TeamTalkClient.shared.setSoundInputPreprocess(&ap)
+            if cleanup {
+                // noise suppression, and gain that follows the voice from no fixed boost
+                ap.webrtc.noisesuppression.bEnable = TRUE
+                ap.webrtc.gaincontroller2.bEnable = TRUE
+                ap.webrtc.gaincontroller2.fixeddigital.fGainDB = 0
+            }
+            if channelGain {
+                // the level the channel asks for takes over
+                TeamTalkClient.shared.setSoundInputGainLevel(INT32(SOUND_GAIN_DEFAULT.rawValue))
+                let gain = Float(mychannel.audiocfg.nGainLevel) / Float(TeamTalkAudioPreprocessor.channelAudioConfigMax)
+                ap.webrtc.gaincontroller2.fixeddigital.fGainDB = WEBRTC_GAINCONTROLLER2_FIXEDGAIN_MAX * gain
+                ap.webrtc.gaincontroller2.bEnable = TRUE
+            } else {
+                let vol = UserDefaults.standard.integer(forKey: PREF_MICROPHONE_GAIN)
+                TeamTalkClient.shared.setSoundInputGainLevel(INT32(refVolume(Double(vol))))
+            }
+            let applied = TeamTalkClient.shared.setSoundInputPreprocess(&ap)
+            logDiagnostic("Audio config: WebRTC preprocessor, cleanup=\(cleanup) channelGain=\(channelGain) applied=\(applied)")
         } else {
             var ap = TeamTalkAudioPreprocessor.makeTeamTalkPreprocessor()
             TeamTalkClient.shared.setSoundInputPreprocess(&ap)
@@ -960,7 +976,7 @@ extension ChannelListModel: TeamTalkEvent {
                 if TeamTalkClient.shared.myUserID != user.nUserID {
                     let defaults = UserDefaults.standard
                     if defaults.object(forKey: PREF_TTSEVENT_USERLOGIN) != nil && defaults.bool(forKey: PREF_TTSEVENT_USERLOGIN) {
-                        newUtterance(getDisplayName(user) + " " + String(localized: "has logged on", comment: "TTS EVENT"))
+                        newUtterance(getDisplayName(user) + " " + String(localized: "has logged on", comment: "TTS EVENT"), event: PREF_TTSEVENT_USERLOGIN)
                     }
                 }
             }
@@ -974,7 +990,7 @@ extension ChannelListModel: TeamTalkEvent {
                 if TeamTalkClient.shared.myUserID != user.nUserID {
                     let defaults = UserDefaults.standard
                     if defaults.object(forKey: PREF_TTSEVENT_USERLOGOUT) != nil && defaults.bool(forKey: PREF_TTSEVENT_USERLOGOUT) {
-                        newUtterance(getDisplayName(user) + " " + String(localized: "has logged out", comment: "TTS EVENT"))
+                        newUtterance(getDisplayName(user) + " " + String(localized: "has logged out", comment: "TTS EVENT"), event: PREF_TTSEVENT_USERLOGOUT)
                     }
                 }
             }
@@ -999,7 +1015,7 @@ extension ChannelListModel: TeamTalkEvent {
                 playSound(.joined_CHAN)
                 let defaults = UserDefaults.standard
                 if defaults.object(forKey: PREF_TTSEVENT_JOINEDCHAN) == nil || defaults.bool(forKey: PREF_TTSEVENT_JOINEDCHAN) {
-                    newUtterance(getDisplayName(user) + " " + String(localized: "has joined the channel", comment: "TTS EVENT"))
+                    newUtterance(getDisplayName(user) + " " + String(localized: "has joined the channel", comment: "TTS EVENT"), event: PREF_TTSEVENT_JOINEDCHAN)
                 }
             }
             if currentCmdId == 0 { refreshChannelList() }
@@ -1024,7 +1040,7 @@ extension ChannelListModel: TeamTalkEvent {
                 playSound(.left_CHAN)
                 let defaults = UserDefaults.standard
                 if defaults.object(forKey: PREF_TTSEVENT_LEFTCHAN) == nil || defaults.bool(forKey: PREF_TTSEVENT_LEFTCHAN) {
-                    newUtterance(getDisplayName(user) + " " + String(localized: "has left the channel", comment: "TTS EVENT"))
+                    newUtterance(getDisplayName(user) + " " + String(localized: "has left the channel", comment: "TTS EVENT"), event: PREF_TTSEVENT_LEFTCHAN)
                 }
             }
             if currentCmdId == 0 { refreshChannelList() }

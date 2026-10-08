@@ -24,9 +24,13 @@
 import AVFoundation
 import SwiftUI
 import TeamTalkKit
+import UniformTypeIdentifiers
 
 struct PreferencesView: View {
     @ObservedObject var model: PreferencesModel
+    @State private var backupFile: SharedFile?
+    @State private var showingBackupImporter = false
+    @State private var backupMessage: String?
 
     var body: some View {
         Form {
@@ -38,10 +42,28 @@ struct PreferencesView: View {
             ttsSection
             connectionSection
             subscriptionsSection
+            backupSection
             diagnosticsSection
             versionSection
         }
         .navigationTitle("Preferences")
+        .sheet(item: $backupFile) { shared in
+            ActivityView(items: [shared.url])
+        }
+        .fileImporter(isPresented: $showingBackupImporter, allowedContentTypes: [.data]) { result in
+            guard case .success(let url) = result else { return }
+            backupMessage = SettingsBackup.importFile(url)
+                ? String(localized: "Backup restored. Close the app and open it again to apply every setting.", comment: "backup")
+                : String(localized: "This file is not a TeamTalk backup", comment: "backup")
+        }
+        .alert("Backup", isPresented: Binding(
+            get: { backupMessage != nil },
+            set: { if !$0 { backupMessage = nil } }
+        )) {
+            Button("OK", role: .cancel) { }
+        } message: {
+            Text(backupMessage ?? "")
+        }
     }
 
     private var generalSection: some View {
@@ -140,6 +162,16 @@ struct PreferencesView: View {
                 VStack(alignment: .leading, spacing: 2) {
                     Text("Return Sends Message")
                     Text("Pressing Return-key sends text message")
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                }
+            }
+            NavigationLink {
+                KeyboardShortcutsView()
+            } label: {
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Keyboard Shortcuts")
+                    Text("Keys of an external keyboard to talk and to mute")
                         .font(.footnote)
                         .foregroundStyle(.secondary)
                 }
@@ -359,6 +391,23 @@ struct PreferencesView: View {
                         .foregroundStyle(.secondary)
                 }
             }
+        }
+    }
+
+    private var backupSection: some View {
+        Section {
+            Button("Export Settings and Servers") {
+                if let url = SettingsBackup.exportFile() {
+                    backupFile = SharedFile(url: url)
+                }
+            }
+            Button("Import Backup") {
+                showingBackupImporter = true
+            }
+        } header: {
+            Text("Backup")
+        } footer: {
+            Text("The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe.")
         }
     }
 

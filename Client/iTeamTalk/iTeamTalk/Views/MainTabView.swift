@@ -76,6 +76,11 @@ struct MainTabView: View {
         .accessibilityAction(.magicTap) {
             model.channelListModel.txBtnAccessibilityAction()
         }
+        .background {
+            KeyboardShortcutButtons { action in
+                model.performKeyboardAction(action)
+            }
+        }
         .onAppear {
             model.setup()
             model.onVisibleAppear()

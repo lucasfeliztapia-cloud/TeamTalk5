@@ -11,6 +11,7 @@ struct iTeamTalkApp: App {
             ServerListView(model: serverListModel)
                 .tint(appearance.interfaceColor)
                 .dynamicTypeSize(appearance.dynamicTypeRange)
+                .preferredColorScheme(appearance.colorScheme)
                 .modifier(FontDesignModifier(design: appearance.fontDesign.design))
         }
     }

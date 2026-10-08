@@ -45,6 +45,7 @@
 		598F236865BD42938957BDE2 /* iTeamTalkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F4B78C0EB54A24B439A96D /* iTeamTalkApp.swift */; };
 		CC000300000000000000000E /* AppearanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC000200000000000000000E /* AppearanceModel.swift */; };
 		CC0003000000000000000001 /* AudioCodecModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000001 /* AudioCodecModel.swift */; };
+		CC0003000000000000000011 /* BackupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000011 /* BackupModel.swift */; };
 		CC0003000000000000000002 /* ChannelDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000002 /* ChannelDetailModel.swift */; };
 		CC0003000000000000000003 /* ChannelListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000003 /* ChannelListModel.swift */; };
 		CC0003000000000000000010 /* DiagnosticLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000010 /* DiagnosticLog.swift */; };
@@ -68,6 +69,7 @@
 		CC0005000000000000000016 /* ConnectionQualityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000016 /* ConnectionQualityView.swift */; };
 		CC0005000000000000000014 /* DiagnosticLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000014 /* DiagnosticLogView.swift */; };
 		CC0005000000000000000011 /* FileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000011 /* FileListView.swift */; };
+		CC0005000000000000000018 /* KeyboardShortcutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000018 /* KeyboardShortcutsView.swift */; };
 		CC0005000000000000000004 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000004 /* MainTabView.swift */; };
 		CC0005000000000000000012 /* MediaStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000012 /* MediaStreamView.swift */; };
 		CC0005000000000000000005 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000005 /* PreferencesView.swift */; };
@@ -187,6 +189,7 @@
 		C4F4B78C0EB54A24B439A96D /* iTeamTalkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTeamTalkApp.swift; sourceTree = "<group>"; };
 		CC000200000000000000000E /* AppearanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceModel.swift; sourceTree = "<group>"; };
 		CC0002000000000000000001 /* AudioCodecModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCodecModel.swift; sourceTree = "<group>"; };
+		CC0002000000000000000011 /* BackupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupModel.swift; sourceTree = "<group>"; };
 		CC0002000000000000000002 /* ChannelDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelDetailModel.swift; sourceTree = "<group>"; };
 		CC0002000000000000000003 /* ChannelListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListModel.swift; sourceTree = "<group>"; };
 		CC0002000000000000000010 /* DiagnosticLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticLog.swift; sourceTree = "<group>"; };
@@ -210,6 +213,7 @@
 		CC0004000000000000000016 /* ConnectionQualityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionQualityView.swift; sourceTree = "<group>"; };
 		CC0004000000000000000014 /* DiagnosticLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticLogView.swift; sourceTree = "<group>"; };
 		CC0004000000000000000011 /* FileListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileListView.swift; sourceTree = "<group>"; };
+		CC0004000000000000000018 /* KeyboardShortcutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardShortcutsView.swift; sourceTree = "<group>"; };
 		CC0004000000000000000004 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		CC0004000000000000000012 /* MediaStreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaStreamView.swift; sourceTree = "<group>"; };
 		CC0004000000000000000005 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
@@ -370,6 +374,7 @@
 			children = (
 				CC000200000000000000000E /* AppearanceModel.swift */,
 				CC0002000000000000000001 /* AudioCodecModel.swift */,
+				CC0002000000000000000011 /* BackupModel.swift */,
 				CC0002000000000000000002 /* ChannelDetailModel.swift */,
 				CC0002000000000000000003 /* ChannelListModel.swift */,
 				CC0002000000000000000010 /* DiagnosticLog.swift */,
@@ -400,6 +405,7 @@
 				CC0004000000000000000016 /* ConnectionQualityView.swift */,
 				CC0004000000000000000014 /* DiagnosticLogView.swift */,
 				CC0004000000000000000011 /* FileListView.swift */,
+				CC0004000000000000000018 /* KeyboardShortcutsView.swift */,
 				CC0004000000000000000004 /* MainTabView.swift */,
 				CC0004000000000000000012 /* MediaStreamView.swift */,
 				CC0004000000000000000005 /* PreferencesView.swift */,
@@ -620,6 +626,7 @@
 				598F236865BD42938957BDE2 /* iTeamTalkApp.swift in Sources */,
 				CC000300000000000000000E /* AppearanceModel.swift in Sources */,
 				CC0003000000000000000001 /* AudioCodecModel.swift in Sources */,
+				CC0003000000000000000011 /* BackupModel.swift in Sources */,
 				CC0003000000000000000002 /* ChannelDetailModel.swift in Sources */,
 				CC0003000000000000000003 /* ChannelListModel.swift in Sources */,
 				CC0003000000000000000010 /* DiagnosticLog.swift in Sources */,
@@ -643,6 +650,7 @@
 				CC0005000000000000000016 /* ConnectionQualityView.swift in Sources */,
 				CC0005000000000000000014 /* DiagnosticLogView.swift in Sources */,
 				CC0005000000000000000011 /* FileListView.swift in Sources */,
+				CC0005000000000000000018 /* KeyboardShortcutsView.swift in Sources */,
 				CC0005000000000000000004 /* MainTabView.swift in Sources */,
 				CC0005000000000000000012 /* MediaStreamView.swift in Sources */,
 				CC0005000000000000000005 /* PreferencesView.swift in Sources */,

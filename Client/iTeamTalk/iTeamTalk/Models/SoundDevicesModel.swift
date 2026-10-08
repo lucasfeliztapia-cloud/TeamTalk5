@@ -25,6 +25,11 @@ import AVFoundation
 import SwiftUI
 import TeamTalkKit
 
+extension Notification.Name {
+    /// The sound input has to be set up again
+    static let iTeamTalkAudioConfigChanged = Notification.Name("iTeamTalkAudioConfigChanged")
+}
+
 final class SoundDevicesModel: ObservableObject {
     struct ToggleRow: Identifiable {
         let id: String
@@ -51,12 +56,6 @@ final class SoundDevicesModel: ObservableObject {
             title: String(localized: "Speaker Output", comment: "preferences"),
             subtitle: String(localized: "Use iPhone's speaker instead of earpiece", comment: "preferences"),
             preferenceKey: PREF_SPEAKER_OUTPUT
-        ),
-        ToggleRow(
-            id: PREF_VOICEPROCESSINGIO,
-            title: String(localized: "Voice Preprocessing", comment: "preferences"),
-            subtitle: String(localized: "Use echo cancellation and automatic gain control", comment: "Sound Devices"),
-            preferenceKey: PREF_VOICEPROCESSINGIO
         ),
         ToggleRow(
             id: PREF_BLUETOOTH_A2DP,
@@ -106,6 +105,27 @@ final class SoundDevicesModel: ObservableObject {
             TeamTalkClient.closeSoundLoopbackTest(loopbackTest)
             setupSoundDevices()
         }
+    }
+
+    // MARK: - Voice cleanup
+
+    /// 0 none, 1 the voice processing of iOS, 2 the noise suppression and
+    /// automatic gain of WebRTC
+    var voiceCleanup: Int {
+        _ = revision
+        if preferenceValue(forKey: PREF_VOICEPROCESSINGIO) {
+            return 1
+        }
+        return preferenceValue(forKey: PREF_WEBRTC_VOICECLEANUP) ? 2 : 0
+    }
+
+    func setVoiceCleanup(_ value: Int) {
+        UserDefaults.standard.set(value == 1, forKey: PREF_VOICEPROCESSINGIO)
+        UserDefaults.standard.set(value == 2, forKey: PREF_WEBRTC_VOICECLEANUP)
+        logDiagnostic("Voice cleanup set to \(value) (0 none, 1 iOS, 2 WebRTC)")
+        setupSoundDevices()
+        NotificationCenter.default.post(name: .iTeamTalkAudioConfigChanged, object: nil)
+        reload()
     }
 
     // MARK: - Microphone test

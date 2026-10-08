@@ -156,6 +156,11 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
             name: AVAudioSession.interruptionNotification,
             object: nil
         )
+        center.addObserver(
+            self, selector: #selector(audioConfigChanged(_:)),
+            name: .iTeamTalkAudioConfigChanged,
+            object: nil
+        )
 
         connectToServer()
     }
@@ -260,6 +265,27 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
     }
 
     @objc private func proximityChanged(_ notification: Notification) {}
+
+    @objc private func audioConfigChanged(_ notification: Notification) {
+        if channelListModel.mychannel.nChannelID > 0 {
+            channelListModel.updateAudioConfig()
+        }
+    }
+
+    // MARK: - Keyboard
+
+    func performKeyboardAction(_ action: KeyboardAction) {
+        switch action {
+        case .transmit:
+            channelListModel.txBtnAccessibilityAction()
+        case .speakers:
+            channelListModel.toggleDeafen()
+        case .streamPause:
+            mediaStreamModel.togglePause()
+        case .streamStop:
+            mediaStreamModel.stop()
+        }
+    }
 
     @objc private func audioRouteChange(_ notification: Notification) {
         guard let reasonValue = notification.userInfo?[AVAudioSessionRouteChangeReasonKey] as? UInt,
@@ -405,7 +431,7 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
             playSound(.srv_LOST)
             if UserDefaults.standard.object(forKey: PREF_TTSEVENT_CONLOST) == nil ||
                 UserDefaults.standard.bool(forKey: PREF_TTSEVENT_CONLOST) {
-                newUtterance(String(localized: "Connection lost", comment: "tts event"))
+                newUtterance(String(localized: "Connection lost", comment: "tts event"), event: PREF_TTSEVENT_CONLOST)
             }
             startReconnectTimer()
 

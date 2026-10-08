@@ -45,6 +45,21 @@ struct SoundDevicesView: View {
             }
 
             Section {
+                Picker("Voice Cleanup", selection: Binding(
+                    get: { model.voiceCleanup },
+                    set: { model.setVoiceCleanup($0) }
+                )) {
+                    Text("None").tag(0)
+                    Text("iOS Voice Processing").tag(1)
+                    Text("WebRTC").tag(2)
+                }
+            } header: {
+                Text("Voice Cleanup")
+            } footer: {
+                Text("iOS voice processing cancels echo, reduces noise and levels the volume. WebRTC reduces noise and levels the volume but does not cancel echo, so use it with headphones.")
+            }
+
+            Section {
                 Button(action: model.toggleMicrophoneTest) {
                     Group {
                         if model.isTestingMicrophone {

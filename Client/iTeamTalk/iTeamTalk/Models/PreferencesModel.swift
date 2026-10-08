@@ -76,6 +76,7 @@ let PREF_VOICEACTIVATION = "voiceactivationlevel_preference"
 let PREF_MEDIAFILE_VOLUME = "mediafile_volume_preference"
 let PREF_HEADSET_TXTOGGLE = "headset_tx_preference"
 let PREF_VOICEPROCESSINGIO = "voiceprocessing_preference"
+let PREF_WEBRTC_VOICECLEANUP = "webrtc_voicecleanup_preference"
 let PREF_SNDINPUT_PORT = "sndinput_port_preference"
 
 let PREF_SNDEVENT_SERVERLOST = "snd_srvlost_preference"

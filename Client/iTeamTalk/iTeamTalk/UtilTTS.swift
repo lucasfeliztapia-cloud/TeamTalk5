@@ -32,10 +32,17 @@ var myUtterance = AVSpeechUtterance(string: "")
 
 let DEFAULT_TTS_VOL : Float = 0.5
 
-func newUtterance(_ utterance: String) {
+/// Added to the preference of an event: true makes the app's own voice speak
+/// it even while VoiceOver is on.
+let PREF_TTSEVENT_OWNVOICE_SUFFIX = "_ownvoice"
+
+/// `event` is the preference of the event being spoken. VoiceOver speaks it,
+/// and shows it in braille, unless that event is set to the app's own voice.
+func newUtterance(_ utterance: String, event: String? = nil) {
     let settings = UserDefaults.standard
     myUtterance = AVSpeechUtterance(string: utterance)
-    if UIAccessibility.isVoiceOverRunning && UIApplication.shared.applicationState == .active{
+    let ownVoice = event.map { settings.bool(forKey: $0 + PREF_TTSEVENT_OWNVOICE_SUFFIX) } ?? false
+    if !ownVoice && UIAccessibility.isVoiceOverRunning && UIApplication.shared.applicationState == .active{
         UIAccessibility.post(notification: UIAccessibility.Notification.announcement, argument: utterance)
         return
     }
@@ -64,11 +71,11 @@ func speakTextMessage(_ msgtype: TextMsgType, mymsg: MyTextMessage) {
     if tts_priv {
         let ttsmsg = String(format: String(localized: "Private text message from %@. %@", comment: "TTS EVENT"),
             limitText(mymsg.nickname), mymsg.message)
-        newUtterance(ttsmsg)
+        newUtterance(ttsmsg, event: PREF_TTSEVENT_TEXTMSG)
     }
     if tts_chan {
         let ttsmsg = String(format: String(localized: "Channel message from %@. %@", comment: "TTS EVENT"),
             limitText(mymsg.nickname), mymsg.message)
-        newUtterance(ttsmsg)
+        newUtterance(ttsmsg, event: PREF_TTSEVENT_CHANTEXTMSG)
     }
 }
