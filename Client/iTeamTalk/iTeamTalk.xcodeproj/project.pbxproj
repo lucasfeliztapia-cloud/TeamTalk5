@@ -50,6 +50,7 @@
 		CC0003000000000000000003 /* ChannelListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000003 /* ChannelListModel.swift */; };
 		CC0003000000000000000010 /* DiagnosticLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000010 /* DiagnosticLog.swift */; };
 		CC000300000000000000000C /* FileListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC000200000000000000000C /* FileListModel.swift */; };
+		CC0003000000000000000012 /* IncomingFileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000012 /* IncomingFileModel.swift */; };
 		CC000300000000000000000F /* LiveActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC000200000000000000000F /* LiveActivityModel.swift */; };
 		CC0003000000000000000004 /* MainTabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000004 /* MainTabModel.swift */; };
 		CC000300000000000000000D /* MediaStreamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC000200000000000000000D /* MediaStreamModel.swift */; };
@@ -86,6 +87,8 @@
 		DD0000000000000000000020 /* TeamTalkLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0000000000000000000002 /* TeamTalkLiveActivity.swift */; };
 		DD0000000000000000000021 /* TeamTalkActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0000000000000000000003 /* TeamTalkActivity.swift */; };
 		DD0000000000000000000022 /* TeamTalkActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0000000000000000000003 /* TeamTalkActivity.swift */; };
+		DD0000000000000000000023 /* TeamTalkWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0000000000000000000005 /* TeamTalkWidgets.swift */; };
+		DD0000000000000000000063 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DD0000000000000000000060 /* Localizable.strings */; };
 		DD0000000000000000000024 /* iTeamTalkLiveActivity.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DD0000000000000000000001 /* iTeamTalkLiveActivity.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -194,6 +197,7 @@
 		CC0002000000000000000003 /* ChannelListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListModel.swift; sourceTree = "<group>"; };
 		CC0002000000000000000010 /* DiagnosticLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticLog.swift; sourceTree = "<group>"; };
 		CC000200000000000000000C /* FileListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileListModel.swift; sourceTree = "<group>"; };
+		CC0002000000000000000012 /* IncomingFileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingFileModel.swift; sourceTree = "<group>"; };
 		CC000200000000000000000F /* LiveActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityModel.swift; sourceTree = "<group>"; };
 		CC0002000000000000000004 /* MainTabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabModel.swift; sourceTree = "<group>"; };
 		CC000200000000000000000D /* MediaStreamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaStreamModel.swift; sourceTree = "<group>"; };
@@ -231,6 +235,9 @@
 		DD0000000000000000000002 /* TeamTalkLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTalkLiveActivity.swift; sourceTree = "<group>"; };
 		DD0000000000000000000003 /* TeamTalkActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTalkActivity.swift; sourceTree = "<group>"; };
 		DD0000000000000000000004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD0000000000000000000005 /* TeamTalkWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTalkWidgets.swift; sourceTree = "<group>"; };
+		DD0000000000000000000061 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD0000000000000000000062 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -379,6 +386,7 @@
 				CC0002000000000000000003 /* ChannelListModel.swift */,
 				CC0002000000000000000010 /* DiagnosticLog.swift */,
 				CC000200000000000000000C /* FileListModel.swift */,
+				CC0002000000000000000012 /* IncomingFileModel.swift */,
 				CC000200000000000000000F /* LiveActivityModel.swift */,
 				CC0002000000000000000004 /* MainTabModel.swift */,
 				CC000200000000000000000D /* MediaStreamModel.swift */,
@@ -428,6 +436,8 @@
 			children = (
 				DD0000000000000000000002 /* TeamTalkLiveActivity.swift */,
 				DD0000000000000000000003 /* TeamTalkActivity.swift */,
+				DD0000000000000000000005 /* TeamTalkWidgets.swift */,
+				DD0000000000000000000060 /* Localizable.strings */,
 				DD0000000000000000000004 /* Info.plist */,
 			);
 			path = iTeamTalkLiveActivity;
@@ -604,6 +614,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD0000000000000000000063 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,6 +642,7 @@
 				CC0003000000000000000003 /* ChannelListModel.swift in Sources */,
 				CC0003000000000000000010 /* DiagnosticLog.swift in Sources */,
 				CC000300000000000000000C /* FileListModel.swift in Sources */,
+				CC0003000000000000000012 /* IncomingFileModel.swift in Sources */,
 				CC000300000000000000000F /* LiveActivityModel.swift in Sources */,
 				CC0003000000000000000004 /* MainTabModel.swift in Sources */,
 				CC000300000000000000000D /* MediaStreamModel.swift in Sources */,
@@ -681,6 +693,7 @@
 			files = (
 				DD0000000000000000000020 /* TeamTalkLiveActivity.swift in Sources */,
 				DD0000000000000000000021 /* TeamTalkActivity.swift in Sources */,
+				DD0000000000000000000023 /* TeamTalkWidgets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -739,6 +752,15 @@
 				25BE20F8292E1356004397FC /* ms */,
 				25ED594A2A82C48F009A038E /* vi */,
 				254139A02F16ECF6004A3901 /* uk */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		DD0000000000000000000060 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DD0000000000000000000061 /* en */,
+				DD0000000000000000000062 /* es */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

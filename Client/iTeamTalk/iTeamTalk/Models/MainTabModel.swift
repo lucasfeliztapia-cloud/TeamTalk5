@@ -27,6 +27,7 @@ import OSLog
 import SwiftUI
 import TeamTalkKit
 import UIKit
+import WidgetKit
 
 final class MainTabModel: ObservableObject, TeamTalkEvent {
 
@@ -40,6 +41,14 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
     var cmdid: INT32 = 0
 
     @Published var alertMessage: String?
+
+    /// A file from another app, offered once there is a channel to send it to
+    @Published var incomingFile: SharedFile?
+    private var offeredFileID: UUID?
+    private var hintedFileID: UUID?
+
+    private var soundDevicesFailed = false
+    private var lastSoundRecovery = Date.distantPast
     @Published var fatalAlertMessage: String?   // dismisses the view when OK tapped
     @Published var showSaveAlert = false
 
@@ -92,6 +101,22 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
         LiveActivityActions.stopStream = { [weak self] in
             self?.mediaStreamModel.stop()
         }
+        LiveActivityActions.setTransmission = { [weak self] enable in
+            guard let self, TeamTalkClient.shared.isVoiceTransmitting != enable else { return }
+            self.channelListModel.enableVoiceTx(enable)
+            // the control reads the new state as soon as this returns
+            self.updateLiveActivity()
+        }
+        LiveActivityActions.setSpeakers = { [weak self] on in
+            guard let self, TeamTalkClient.shared.isSoundOutputMuted == on else { return }
+            self.channelListModel.toggleDeafen()
+            self.updateLiveActivity()
+        }
+        IncomingFileModel.shared.$pending
+            .sink { [weak self] _ in
+                self?.scheduleLiveActivityUpdate()
+            }
+            .store(in: &cancellables)
         // without the position, which changes every second while streaming
         mediaStreamModel.$state.map { _ in () }
             .merge(with: mediaStreamModel.$currentID.map { _ in () })
@@ -161,6 +186,11 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
             name: .iTeamTalkAudioConfigChanged,
             object: nil
         )
+        center.addObserver(
+            self, selector: #selector(appDidBecomeActive(_:)),
+            name: UIApplication.didBecomeActiveNotification,
+            object: nil
+        )
 
         connectToServer()
     }
@@ -171,7 +201,11 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
         LiveActivityActions.toggleDeafen = nil
         LiveActivityActions.toggleStreamPause = nil
         LiveActivityActions.stopStream = nil
+        LiveActivityActions.setTransmission = nil
+        LiveActivityActions.setSpeakers = nil
         LiveActivityController.end()
+        publishSharedState(connected: false, transmitting: false, deafened: false)
+        MicrophoneKeepAlive.shared.stop()
         polltimer?.invalidate()
         reconnecttimer?.invalidate()
         removeAllTTMessageHandlers()
@@ -333,6 +367,98 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
         }
     }
 
+    // MARK: - Controls in Control Center
+
+    /// What the controls show. They read it from the group the app shares
+    /// with its widgets, when the app was signed with one.
+    private func publishSharedState(connected: Bool, transmitting: Bool, deafened: Bool) {
+        guard let shared = SharedStore.defaults else { return }
+        guard shared.bool(forKey: SharedStore.connectedKey) != connected ||
+              shared.bool(forKey: SharedStore.transmittingKey) != transmitting ||
+              shared.bool(forKey: SharedStore.deafenedKey) != deafened else { return }
+
+        shared.set(connected, forKey: SharedStore.connectedKey)
+        shared.set(transmitting, forKey: SharedStore.transmittingKey)
+        shared.set(deafened, forKey: SharedStore.deafenedKey)
+
+        if #available(iOS 18.0, *) {
+            ControlCenter.shared.reloadControls(ofKind: SharedStore.transmitControlKind)
+            ControlCenter.shared.reloadControls(ofKind: SharedStore.speakersControlKind)
+        }
+    }
+
+    // MARK: - Sound devices after a reconnect
+
+    /// When the connection is lost and found again with the app in the
+    /// background, iOS can refuse to start the microphone. The app was left
+    /// connected but unable to transmit until disconnecting by hand (#1974).
+    private func watchSoundDevices(_ m: TTMessage) {
+        switch m.nClientEvent {
+        case CLIENTEVENT_CON_LOST:
+            if channelListModel.mychannel.nChannelID > 0 {
+                // holds the microphone until the channel takes it back
+                MicrophoneKeepAlive.shared.start()
+            }
+        case CLIENTEVENT_CMD_USER_JOINED:
+            if MicrophoneKeepAlive.shared.isRunning,
+               TeamTalkMessagePayload.user(from: m).nUserID == TeamTalkClient.shared.myUserID {
+                MicrophoneKeepAlive.shared.stop(after: 3)
+            }
+        case CLIENTEVENT_INTERNAL_ERROR:
+            let error = TeamTalkMessagePayload.clientError(from: m).nErrorNo
+            if error == INT32(INTERR_SNDINPUT_FAILURE.rawValue) || error == INT32(INTERR_SNDOUTPUT_FAILURE.rawValue) {
+                soundDevicesFailed = true
+                recoverSoundDevices()
+            }
+        default:
+            break
+        }
+    }
+
+    /// Opens the sound devices again. iOS only allows it with the app in
+    /// front, so in the background it waits until the app comes back.
+    private func recoverSoundDevices() {
+        guard soundDevicesFailed, UIApplication.shared.applicationState == .active,
+              Date().timeIntervalSince(lastSoundRecovery) > 10 else { return }
+        soundDevicesFailed = false
+        lastSoundRecovery = Date()
+        logDiagnostic("Sound devices failed, setting them up again")
+        setupSoundDevices()
+    }
+
+    @objc private func appDidBecomeActive(_ notification: Notification) {
+        recoverSoundDevices()
+    }
+
+    // MARK: - Files from other apps
+
+    /// Offers the file another app handed over, once there is a channel for it
+    private func offerIncomingFile() {
+        guard didSetup, let pending = IncomingFileModel.shared.pending else { return }
+
+        if channelListModel.mychannel.nChannelID > 0 {
+            guard pending.id != offeredFileID else { return }
+            offeredFileID = pending.id
+            incomingFile = pending
+        } else if TeamTalkClient.shared.isAuthorized, pending.id != hintedFileID {
+            // said once, the file is offered when a channel is joined
+            hintedFileID = pending.id
+            announceForAccessibility(String(format: String(localized: "Join a channel to send %@", comment: "incoming file"),
+                                            pending.url.lastPathComponent))
+        }
+    }
+
+    func uploadIncomingFile(_ file: SharedFile) {
+        IncomingFileModel.shared.clear()
+        fileListModel.uploadOwnedFile(file.url)
+    }
+
+    func streamIncomingFile(_ file: SharedFile) {
+        IncomingFileModel.shared.clear()
+        mediaStreamModel.addFiles([file.url])
+        announceForAccessibility(String(localized: "Added to the streaming playlist", comment: "incoming file"))
+    }
+
     // MARK: - Live Activity
 
     /// The other models handle each event after this one and @Published tells
@@ -344,6 +470,7 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
             guard let self else { return }
             self.liveActivityUpdatePending = false
             self.updateLiveActivity()
+            self.offerIncomingFile()
         }
     }
 
@@ -374,6 +501,7 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
         let transmitting = TeamTalkClient.shared.isVoiceTransmitting
         let deafened = TeamTalkClient.shared.isSoundOutputMuted
 
+        publishSharedState(connected: connected, transmitting: transmitting, deafened: deafened)
         LiveActivityController.update(LiveActivityStatus(
             serverName: serverName,
             statusText: statusText,
@@ -390,6 +518,7 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
     func handleTTMessage(_ m: TTMessage) {
         scheduleLiveActivityUpdate()
         logEvent(m)
+        watchSoundDevices(m)
 
         switch m.nClientEvent {
 

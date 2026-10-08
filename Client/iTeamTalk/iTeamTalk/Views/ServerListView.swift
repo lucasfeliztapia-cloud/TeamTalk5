@@ -164,6 +164,16 @@ struct ServerListView: View {
             } message: {
                 Text(model.errorMessage ?? "")
             }
+            .alert("Send to TeamTalk",
+                isPresented: Binding(
+                    get: { model.infoMessage != nil },
+                    set: { if !$0 { model.infoMessage = nil } }
+                )
+            ) {
+                Button("OK", role: .cancel) {}
+            } message: {
+                Text(model.infoMessage ?? "")
+            }
             .alert("Delete Server",
                 isPresented: Binding(
                     get: { model.serverPendingDeletion != nil },

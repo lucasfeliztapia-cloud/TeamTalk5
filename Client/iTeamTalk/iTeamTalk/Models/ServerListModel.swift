@@ -21,8 +21,10 @@
  *
  */
 
+import Combine
 import SwiftUI
 import UIKit
+import WidgetKit
 
 enum ServerType {
     case LOCAL,
@@ -236,12 +238,27 @@ final class ServerListModel: ObservableObject {
     @Published var favorites = Set(UserDefaults.standard.stringArray(forKey: "FavoriteServers") ?? [])
     @Published var sharedFile: SharedFile?
 
+    // What to do with a file another app sent while nothing is connected
+    @Published var infoMessage: String?
+
+    private var favoritesObserver: AnyCancellable?
+    private var lastOpenedURL: URL?
+    private var lastOpenedDate = Date.distantPast
+    private var pendingSavedServer: Server?
+
     var nextappupdate = Date()
 
     // once per launch, not every time the list comes back after disconnecting
     private static var didConnectOnStartup = false
 
-    init() {}
+    init() {
+        // the widget follows the favorites, whichever way they change
+        favoritesObserver = $servers.combineLatest($favorites)
+            .debounce(for: .milliseconds(300), scheduler: RunLoop.main)
+            .sink { [weak self] servers, favorites in
+                self?.publishFavorites(servers: servers, favorites: favorites)
+            }
+    }
 
     // MARK: - Search and favorites
 
@@ -261,6 +278,28 @@ final class ServerListModel: ObservableObject {
             favorites.insert(key)
         }
         UserDefaults.standard.set(Array(favorites), forKey: "FavoriteServers")
+    }
+
+    /// Hands the favorite servers to the widget: names and addresses, never accounts
+    private func publishFavorites(servers: [Server], favorites: Set<String>) {
+        guard SharedStore.defaults != nil else { return }
+
+        let previous = SharedStore.favorites
+        var shared = [SharedFavorite]()
+        var known = Set<String>()
+        for server in servers where favorites.contains(favoriteKey(server)) && !known.contains(favoriteKey(server)) {
+            known.insert(favoriteKey(server))
+            shared.append(SharedFavorite(name: server.name.isEmpty ? server.ipaddr : server.name,
+                                         host: server.ipaddr, tcpPort: server.tcpport,
+                                         udpPort: server.udpport, encrypted: server.encrypted))
+        }
+        // a favorite of the public list stays while that list has not been downloaded
+        shared += previous.filter { favorites.contains($0.id) && !known.contains($0.id) }
+
+        if shared != previous {
+            SharedStore.favorites = shared
+            WidgetCenter.shared.reloadTimelines(ofKind: SharedStore.favoritesWidgetKind)
+        }
     }
 
     /// The servers that match the search, favorites first
@@ -366,24 +405,87 @@ final class ServerListModel: ObservableObject {
     // MARK: - URL handling
 
     func openUrl(_ url: URL) {
+        // the app delegate and the scene can both hand over the same URL
+        if url == lastOpenedURL, Date().timeIntervalSince(lastOpenedDate) < 2 {
+            return
+        }
+        lastOpenedURL = url
+        lastOpenedDate = Date()
+
         var server = Server()
 
         if url.isFileURL {
+            if url.pathExtension.lowercased() != "tt" {
+                // a file another app sent, to upload or stream to a channel
+                if IncomingFileModel.shared.receive(url), activeMainTabModel == nil {
+                    infoMessage = String(format: String(localized: "Connect to a server and join a channel to send %@", comment: "incoming file"),
+                                         url.lastPathComponent)
+                }
+                return
+            }
+
+            // a file opened in place is only readable while its security scope is held
+            let scoped = url.startAccessingSecurityScopedResource()
             let serverparser = ServerParser()
             if let parser = XMLParser(contentsOf: url) {
                 parser.delegate = serverparser
                 parser.parse()
+            }
+            if scoped {
+                url.stopAccessingSecurityScopedResource()
             }
             for s in serverparser.servers {
                 server = s
             }
         } else if url.absoluteString.starts(with: AppInfo.TTLINK_PREFIX) {
             server = parseTeamTalkURL(url)
+
+            // from the widget: the server of the list with this address, with its account
+            if url.absoluteString.range(of: "[&?]saved=1", options: .regularExpression) != nil {
+                if let saved = savedServer(matching: server) {
+                    server = saved
+                } else {
+                    // it may be in the public list, which is still being downloaded
+                    pendingSavedServer = server
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [weak self] in
+                        self?.openPendingSavedServer()
+                    }
+                    return
+                }
+            }
         }
 
         if !server.ipaddr.isEmpty {
-            navigationPath.removeAll()
+            openServer(server)
+        }
+    }
+
+    private func savedServer(matching server: Server) -> Server? {
+        (servers + loadLocalServers()).first { $0.ipaddr == server.ipaddr && $0.tcpport == server.tcpport }
+    }
+
+    private func openPendingSavedServer() {
+        guard let pending = pendingSavedServer else { return }
+        pendingSavedServer = nil
+        openServer(savedServer(matching: pending) ?? pending)
+    }
+
+    /// Connects to a server asked for from outside the app
+    private func openServer(_ server: Server) {
+        // and not to the last server as well, when this arrives while the app starts
+        ServerListModel.didConnectOnStartup = true
+
+        guard let active = activeMainTabModel else {
             connect(to: server)
+            return
+        }
+        if active.server.ipaddr == server.ipaddr && active.server.tcpport == server.tcpport {
+            return
+        }
+        // the current connection has to be gone before the next one starts
+        closeActiveServer()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) { [weak self] in
+            self?.connect(to: server)
         }
     }
 
@@ -485,6 +587,9 @@ final class ServerListModel: ObservableObject {
         parser.parse()
         for s in serverparser.servers {
             servers.append(s)
+        }
+        if let pending = pendingSavedServer, savedServer(matching: pending) != nil {
+            openPendingSavedServer()
         }
     }
 

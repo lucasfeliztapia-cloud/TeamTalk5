@@ -1,0 +1,59 @@
+/* favorite servers widget */
+"Connect to %@" = "Conectar con %@";
+
+/* favorite servers widget */
+"Connect to one of your favorite servers with a tap." = "Conecta con uno de tus servidores favoritos de un toque.";
+
+/* favorite servers widget */
+"Favorite Servers" = "Servidores favoritos";
+
+/* favorite servers widget */
+"Mark a server as favorite in TeamTalk" = "Marca un servidor como favorito en TeamTalk";
+
+/* speakers control */
+"Muted" = "Silenciados";
+
+/* speakers control */
+"Mutes everyone and brings them back while connected to a server." = "Silencia a todos y vuelve a oírlos mientras estás conectado a un servidor.";
+
+/* transmit control */
+"Not transmitting" = "Sin transmitir";
+
+/* speakers control */
+"On" = "Activados";
+
+/* favorite servers widget */
+"Open TeamTalk to see your favorite servers" = "Abre TeamTalk para ver tus servidores favoritos";
+
+/* intent */
+"Pause or Resume Streaming" = "Pausar o reanudar la emisión";
+
+/* intent */
+"Speakers" = "Altavoces";
+
+/* intent */
+"Speakers On" = "Altavoces activados";
+
+/* intent */
+"Stop Streaming" = "Detener la emisión";
+
+/* transmit control */
+"Talk in TeamTalk" = "Hablar en TeamTalk";
+
+/* speakers control */
+"TeamTalk Speakers" = "Altavoces de TeamTalk";
+
+/* intent */
+"Toggle Speakers" = "Silenciar o activar los altavoces";
+
+/* intent */
+"Toggle Transmission" = "Activar o desactivar la transmisión";
+
+/* intent */
+"Transmission" = "Transmisión";
+
+/* transmit control */
+"Transmitting" = "Transmitiendo";
+
+/* transmit control */
+"Turns your transmission on and off while connected to a server." = "Activa y desactiva tu transmisión mientras estás conectado a un servidor.";

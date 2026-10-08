@@ -36,6 +36,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Our one and only TT client instance
         TeamTalkClient.shared.start(licenseName: REGISTRATION_NAME, licenseKey: REGISTRATION_KEY)
+
+        // nothing is connected yet, whatever the controls remember from the last run
+        SharedStore.resetConnection()
         
         // Default values are not set in Settings bundle, so we need to load them manually
         let defaults = UserDefaults.standard

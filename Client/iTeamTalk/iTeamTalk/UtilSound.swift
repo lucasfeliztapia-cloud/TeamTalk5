@@ -210,6 +210,69 @@ func closeSoundDevices() {
     TeamTalkClient.shared.closeSoundDevices()
 }
 
+/// Keeps the microphone in use while a lost connection is being recovered.
+/// Once recording has stopped iOS refuses to start it again from the
+/// background, and the app would come back connected but unable to transmit.
+final class MicrophoneKeepAlive {
+
+    static let shared = MicrophoneKeepAlive()
+
+    private var recorder: AVAudioRecorder?
+    private var limit: Timer?
+
+    var isRunning: Bool {
+        recorder != nil
+    }
+
+    func start() {
+        guard recorder == nil else { return }
+
+        // nothing is kept, it records to nowhere
+        let settings: [String: Any] = [
+            AVFormatIDKey: Int(kAudioFormatLinearPCM),
+            AVSampleRateKey: 16000,
+            AVNumberOfChannelsKey: 1,
+            AVLinearPCMBitDepthKey: 16,
+            AVLinearPCMIsFloatKey: false,
+            AVLinearPCMIsBigEndianKey: false
+        ]
+        do {
+            let recorder = try AVAudioRecorder(url: URL(fileURLWithPath: "/dev/null"), settings: settings)
+            guard recorder.record() else {
+                logDiagnostic("Microphone keep-alive: FAILED to start")
+                return
+            }
+            self.recorder = recorder
+            logDiagnostic("Microphone keep-alive started")
+        } catch {
+            logDiagnostic("Microphone keep-alive: FAILED with \(error)")
+            return
+        }
+
+        // not forever: without a network it would hold the microphone for nothing
+        limit = Timer.scheduledTimer(withTimeInterval: 600, repeats: false) { [weak self] _ in
+            self?.stop()
+        }
+    }
+
+    func stop(after delay: TimeInterval = 0) {
+        guard recorder != nil else { return }
+
+        if delay > 0 {
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self] in
+                self?.stop()
+            }
+            return
+        }
+
+        limit?.invalidate()
+        limit = nil
+        recorder?.stop()
+        recorder = nil
+        logDiagnostic("Microphone keep-alive stopped")
+    }
+}
+
 func setupSoundDevices() {
     
     do {

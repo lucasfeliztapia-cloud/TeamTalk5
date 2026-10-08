@@ -81,6 +81,29 @@ struct MainTabView: View {
                 model.performKeyboardAction(action)
             }
         }
+        .confirmationDialog(
+            Text("Send to TeamTalk"),
+            isPresented: Binding(
+                get: { model.incomingFile != nil },
+                set: { if !$0 { model.incomingFile = nil } }
+            ),
+            titleVisibility: .visible,
+            presenting: model.incomingFile
+        ) { file in
+            if model.fileListModel.canUpload {
+                Button("Upload to Channel") {
+                    model.uploadIncomingFile(file)
+                }
+            }
+            if model.mediaStreamModel.canStreamAudio || model.mediaStreamModel.canStreamVideo {
+                Button("Add to Streaming Playlist") {
+                    model.streamIncomingFile(file)
+                }
+            }
+            Button("Cancel", role: .cancel) {}
+        } message: { file in
+            Text(verbatim: file.url.lastPathComponent)
+        }
         .onAppear {
             model.setup()
             model.onVisibleAppear()

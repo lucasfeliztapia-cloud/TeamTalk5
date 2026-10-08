@@ -13,6 +13,10 @@ struct iTeamTalkApp: App {
                 .dynamicTypeSize(appearance.dynamicTypeRange)
                 .preferredColorScheme(appearance.colorScheme)
                 .modifier(FontDesignModifier(design: appearance.fontDesign.design))
+                // links, server files and files sent from other apps
+                .onOpenURL { url in
+                    serverListModel.openUrl(url)
+                }
         }
     }
 }

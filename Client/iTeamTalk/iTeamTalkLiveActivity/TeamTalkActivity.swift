@@ -93,6 +93,86 @@ enum LiveActivityActions {
     static var toggleDeafen: (() -> Void)?
     static var toggleStreamPause: (() -> Void)?
     static var stopStream: (() -> Void)?
+
+    // from the controls, which say the state they want
+    static var setTransmission: ((Bool) -> Void)?
+    static var setSpeakers: ((Bool) -> Void)?
+}
+
+/// What the app shares with its widgets and controls. They all belong to an
+/// app group named after the app: "group." and its bundle identifier.
+enum SharedStore {
+
+    static let connectedKey = "connected"
+    static let transmittingKey = "transmitting"
+    static let deafenedKey = "deafened"
+    static let favoritesKey = "favorites"
+
+    static let favoritesWidgetKind = "dk.bearware.iTeamTalk.favorites"
+    static let transmitControlKind = "dk.bearware.iTeamTalk.transmit"
+    static let speakersControlKind = "dk.bearware.iTeamTalk.speakers"
+
+    /// nil when the app was signed without its app group
+    static let defaults: UserDefaults? = {
+        var bundle = Bundle.main
+        if bundle.bundleURL.pathExtension == "appex" {
+            // an extension lives in PlugIns, inside the app
+            let app = bundle.bundleURL.deletingLastPathComponent().deletingLastPathComponent()
+            guard let appBundle = Bundle(url: app) else { return nil }
+            bundle = appBundle
+        }
+        guard let identifier = bundle.bundleIdentifier else { return nil }
+
+        let group = "group." + identifier
+        guard FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: group) != nil else {
+            return nil
+        }
+        return UserDefaults(suiteName: group)
+    }()
+
+    static var favorites: [SharedFavorite] {
+        get {
+            guard let data = defaults?.data(forKey: favoritesKey) else { return [] }
+            return (try? JSONDecoder().decode([SharedFavorite].self, from: data)) ?? []
+        }
+        set {
+            defaults?.set(try? JSONEncoder().encode(newValue), forKey: favoritesKey)
+        }
+    }
+
+    /// Nothing is connected when the app starts
+    static func resetConnection() {
+        defaults?.set(false, forKey: connectedKey)
+        defaults?.set(false, forKey: transmittingKey)
+        defaults?.set(false, forKey: deafenedKey)
+    }
+}
+
+/// A favorite server as the widget shows it: its name and address, never its account.
+struct SharedFavorite: Codable, Hashable, Identifiable {
+    var name: String
+    var host: String
+    var tcpPort: Int
+    var udpPort: Int
+    var encrypted: Bool
+
+    var id: String {
+        "\(host):\(tcpPort)"
+    }
+
+    /// Opens the app, which connects with the server it has saved for this address
+    var url: URL? {
+        var components = URLComponents()
+        components.scheme = "tt"
+        components.host = host
+        components.queryItems = [
+            URLQueryItem(name: "tcpport", value: String(tcpPort)),
+            URLQueryItem(name: "udpport", value: String(udpPort)),
+            URLQueryItem(name: "encrypted", value: encrypted ? "1" : "0"),
+            URLQueryItem(name: "saved", value: "1")
+        ]
+        return components.url
+    }
 }
 
 @available(iOS 17.0, *)
@@ -138,6 +218,40 @@ struct ToggleDeafenIntent: LiveActivityIntent {
     func perform() async throws -> some IntentResult {
         await MainActor.run {
             LiveActivityActions.toggleDeafen?()
+        }
+        return .result()
+    }
+}
+
+/// From a control: transmission on or off
+@available(iOS 18.0, *)
+struct SetTransmissionIntent: SetValueIntent, LiveActivityIntent {
+    static var title: LocalizedStringResource = "Transmission"
+
+    @Parameter(title: "Transmitting")
+    var value: Bool
+
+    func perform() async throws -> some IntentResult {
+        let enable = value
+        await MainActor.run {
+            LiveActivityActions.setTransmission?(enable)
+        }
+        return .result()
+    }
+}
+
+/// From a control: speakers on, or everyone muted
+@available(iOS 18.0, *)
+struct SetSpeakersIntent: SetValueIntent, LiveActivityIntent {
+    static var title: LocalizedStringResource = "Speakers"
+
+    @Parameter(title: "Speakers On")
+    var value: Bool
+
+    func perform() async throws -> some IntentResult {
+        let on = value
+        await MainActor.run {
+            LiveActivityActions.setSpeakers?(on)
         }
         return .result()
     }

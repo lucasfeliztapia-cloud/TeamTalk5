@@ -1,0 +1,59 @@
+/* favorite servers widget */
+"Connect to %@" = "Connect to %@";
+
+/* favorite servers widget */
+"Connect to one of your favorite servers with a tap." = "Connect to one of your favorite servers with a tap.";
+
+/* favorite servers widget */
+"Favorite Servers" = "Favorite Servers";
+
+/* favorite servers widget */
+"Mark a server as favorite in TeamTalk" = "Mark a server as favorite in TeamTalk";
+
+/* speakers control */
+"Muted" = "Muted";
+
+/* speakers control */
+"Mutes everyone and brings them back while connected to a server." = "Mutes everyone and brings them back while connected to a server.";
+
+/* transmit control */
+"Not transmitting" = "Not transmitting";
+
+/* speakers control */
+"On" = "On";
+
+/* favorite servers widget */
+"Open TeamTalk to see your favorite servers" = "Open TeamTalk to see your favorite servers";
+
+/* intent */
+"Pause or Resume Streaming" = "Pause or Resume Streaming";
+
+/* intent */
+"Speakers" = "Speakers";
+
+/* intent */
+"Speakers On" = "Speakers On";
+
+/* intent */
+"Stop Streaming" = "Stop Streaming";
+
+/* transmit control */
+"Talk in TeamTalk" = "Talk in TeamTalk";
+
+/* speakers control */
+"TeamTalk Speakers" = "TeamTalk Speakers";
+
+/* intent */
+"Toggle Speakers" = "Toggle Speakers";
+
+/* intent */
+"Toggle Transmission" = "Toggle Transmission";
+
+/* intent */
+"Transmission" = "Transmission";
+
+/* transmit control */
+"Transmitting" = "Transmitting";
+
+/* transmit control */
+"Turns your transmission on and off while connected to a server." = "Turns your transmission on and off while connected to a server.";

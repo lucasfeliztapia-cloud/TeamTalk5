@@ -30,6 +30,11 @@ import WidgetKit
 struct TeamTalkLiveActivityBundle: WidgetBundle {
     var body: some Widget {
         TeamTalkLiveActivity()
+        FavoriteServersWidget()
+        if #available(iOS 18.0, *) {
+            TransmitControl()
+            SpeakersControl()
+        }
     }
 }
 

@@ -122,8 +122,14 @@
 /* serverlist */
 "Add to Favorites" = "Añadir a favoritos";
 
+/* incoming file */
+"Add to Streaming Playlist" = "Añadir a la lista de emisión";
+
 /* media stream */
 "Add Web Address" = "Añadir dirección web";
+
+/* incoming file */
+"Added to the streaming playlist" = "Añadido a la lista de emisión";
 
 /* media stream */
 "Address of a web radio or of an audio or video file" = "Dirección de una radio web o de un archivo de audio o vídeo";
@@ -361,6 +367,9 @@
 
 /* preferences */
 "Connect on Startup" = "Conectar al abrir";
+
+/* incoming file */
+"Connect to a server and join a channel to send %@" = "Conéctate a un servidor y entra en un canal para enviar %@";
 
 /* connection quality */
 "Connect to a server to see the quality of the connection" = "Conéctate a un servidor para ver la calidad de la conexión";
@@ -645,6 +654,9 @@
 
 /* file list */
 "Join a channel to see its files" = "Únete a un canal para ver sus archivos";
+
+/* incoming file */
+"Join a channel to send %@" = "Entra en un canal para enviar %@";
 
 /* media stream */
 "Join a channel to stream a media file" = "Únete a un canal para emitir un archivo";
@@ -1130,6 +1142,9 @@
 /* channel list */
 "Send private message" = "Enviar mensaje privado";
 
+/* incoming file */
+"Send to TeamTalk" = "Enviar a TeamTalk";
+
 /* media stream */
 "Send Video" = "Enviar vídeo";
 
@@ -1226,6 +1241,9 @@
 
 /* appearance */
 "Speakers Button" = "Botón de altavoces";
+
+/* intent */
+"Speakers On" = "Altavoces activados";
 
 /* preferences */
 "Speech Rate" = "Velocidad de voz";
@@ -1417,6 +1435,9 @@
 
 /* file list */
 "Upload file" = "Subir archivo";
+
+/* incoming file */
+"Upload to Channel" = "Subir al canal";
 
 /* file list */
 "Uploading" = "Subiendo";
