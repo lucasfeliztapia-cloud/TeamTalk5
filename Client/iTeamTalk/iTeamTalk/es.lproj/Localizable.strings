@@ -134,6 +134,9 @@
 /* media stream */
 "Address of a web radio or of an audio or video file" = "Dirección de una radio web o de un archivo de audio o vídeo";
 
+/* channel list */
+"All" = "Todos";
+
 /* all users */
 "All Users" = "Todos los usuarios";
 
@@ -310,6 +313,9 @@
 
 /* ban list */
 "Channel: %@" = "Canal: %@";
+
+/* channel list */
+"Channels" = "Canales";
 
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "Check only if this server has enabled BearWare.dk Web Login";
@@ -613,6 +619,9 @@
    user detail */
 "General" = "General";
 
+/* channel list */
+"Go to Their Channel" = "Ir a su canal";
+
 /* TTS EVENT */
 "has joined the channel" = "se ha unido al canal";
 
@@ -792,6 +801,9 @@
 /* appearance */
 "Message Text Size" = "Tamaño del texto de los mensajes";
 
+/* tab */
+"Messages" = "Mensajes";
+
 /* diagnostics */
 "Microphone" = "Micrófono";
 
@@ -893,6 +905,9 @@
 
 /* channel list */
 "No password" = "Sin contraseña";
+
+/* channel list */
+"No results" = "Sin resultados";
 
 /* serverlist */
 "No server found" = "No server found";
@@ -1171,6 +1186,9 @@
 
 /* channel picker */
 "Search channels" = "Buscar canales";
+
+/* channel list */
+"Search channels and users" = "Buscar canales y usuarios";
 
 /* serverlist */
 "Search servers" = "Buscar servidores";
@@ -1572,6 +1590,9 @@
 
 /* Web Login Controller */
 "Username or password incorrect" = "Nombre de usuario o contraseña incorrecta";
+
+/* channel list */
+"Users" = "Usuarios";
 
 /* server entry */
 "Users Online" = "Users Online";

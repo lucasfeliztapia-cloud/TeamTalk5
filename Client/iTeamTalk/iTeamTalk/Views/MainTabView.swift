@@ -36,7 +36,7 @@ struct MainTabView: View {
                     model.channelListModel.txBtnAccessibilityAction()
                 }*/
             .tabItem {
-                Label("Channels", image: "channels")
+                Label("Channels", systemImage: "folder")
             }
             .tag(0)
 
@@ -48,7 +48,7 @@ struct MainTabView: View {
                     }*/
             }
             .tabItem {
-                Label("Messages", image: "messages")
+                Label("Messages", systemImage: "envelope")
             }
             .tag(1)
 
@@ -57,7 +57,7 @@ struct MainTabView: View {
                 FileListView(model: model.fileListModel)
             }
             .tabItem {
-                Label("Files", image: "files")
+                Label("Files", systemImage: "doc")
             }
             .tag(3)
 
@@ -69,7 +69,7 @@ struct MainTabView: View {
                     }*/
             }
             .tabItem {
-                Label("Preferences", image: "setup")
+                Label("Preferences", systemImage: "wrench.and.screwdriver")
             }
             .tag(2)
         }
@@ -192,6 +192,7 @@ private struct ChannelsTabView: View {
                             model.toggleSelecting()
                         } label: {
                             Image(systemName: model.isSelecting ? "checklist.checked" : "checklist")
+                                .foregroundStyle(.tint)
                         }
                         // on the button, not on the image: VoiceOver was reading the
                         // name of the symbol, "selected", in front of the label
@@ -202,6 +203,7 @@ private struct ChannelsTabView: View {
                             showingMediaStream = true
                         } label: {
                             Image(systemName: "play.rectangle")
+                                .foregroundStyle(.tint)
                                 .accessibilityLabel("Stream media file")
                         }
                     }
@@ -210,6 +212,7 @@ private struct ChannelsTabView: View {
                             model.showNewChannel()
                         } label: {
                             Image(systemName: "plus")
+                                .foregroundStyle(.tint)
                                 .accessibilityLabel("Create new channel")
                         }
                     }
@@ -218,6 +221,7 @@ private struct ChannelsTabView: View {
                             showingMoreMenu = true
                         } label: {
                             Image(systemName: "ellipsis.circle")
+                                .foregroundStyle(.tint)
                         }
                         .accessibilityLabel("More")
                     }

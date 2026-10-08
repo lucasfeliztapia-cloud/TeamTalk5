@@ -75,7 +75,12 @@ struct ChannelListContainerView: View {
             .background(Color(uiColor: .systemBackground))
         }
         .navigationTitle(model.navigationTitle)
-        .searchable(text: $model.searchText, prompt: "Search channels")
+        .searchable(text: $model.searchText, prompt: "Search channels and users")
+        .searchScopes($model.searchScope) {
+            Text("All").tag(ChannelSearchScope.all)
+            Text("Channels").tag(ChannelSearchScope.channels)
+            Text("Users").tag(ChannelSearchScope.users)
+        }
         .sheet(item: $model.moveRequest) { request in
             ChannelPickerView(channels: model.channelNodes(), confirmTitle: "Move") { channelID in
                 model.moveUsers(request.userIDs, to: channelID)
@@ -133,7 +138,7 @@ private extension ChannelListContainerView {
                 Label("Earpiece or Headset", systemImage: "ear").tag(false)
             }
         } label: {
-            Image(systemName: model.speakerOutput ? "speaker.wave.3.fill" : "ear")
+            Image(systemName: "airplayaudio")
                 .font(.title3)
                 .frame(width: 56, height: 50)
                 .background(.bar, ignoresSafeAreaEdges: [])
@@ -208,6 +213,12 @@ struct ChannelListView: View {
                         .frame(maxWidth: .infinity, alignment: .center)
                 }
 
+            case .header(let title):
+                Text(title)
+                    .font(.footnote.weight(.semibold))
+                    .foregroundStyle(.secondary)
+                    .accessibilityAddTraits(.isHeader)
+
             case .user(let user):
                 let details = model.userDetails(user)
                 let isMoveSelected = model.isMoveUserSelected(userid: user.nUserID)
@@ -260,7 +271,8 @@ struct ChannelListView: View {
                 // Activating a combined row presses the button inside it, which
                 // opens the private messages. Stated here so that selecting wins.
                 .accessibilityAction {
-                    if model.isSelecting {
+                    // a search result goes to where the user is
+                    if model.isSelecting || model.isSearching {
                         model.selectRow(.user(user))
                     } else {
                         model.showTextMessages(userid: user.nUserID)
@@ -275,6 +287,9 @@ struct ChannelListView: View {
                 }
                 .accessibilityAction(named: "Show user details") {
                     model.showUserDetail(userid: user.nUserID)
+                }
+                .accessibilityAction(named: "Go to Their Channel") {
+                    model.goToChannel(id: user.nChannelID)
                 }
                 .accessibilityAction(named: "Message this user") {
                     model.showTextMessages(userid: user.nUserID)
@@ -328,7 +343,7 @@ struct ChannelListView: View {
                 // opens the properties of the channel. While selecting users the
                 // channel is entered instead, to reach the users in it.
                 .accessibilityAction {
-                    if model.isSelecting {
+                    if model.isSelecting || model.isSearching {
                         model.selectRow(.channel(channel))
                     } else {
                         model.showChannelDetail(channelID: channel.nChannelID)
@@ -354,6 +369,13 @@ struct ChannelListView: View {
     /// The actions VoiceOver offers on a user, for people who use the screen.
     @ViewBuilder
     private func userMenu(_ user: User) -> some View {
+        if user.nChannelID > 0 && user.nChannelID != model.curchannel.nChannelID {
+            Button {
+                model.goToChannel(id: user.nChannelID)
+            } label: {
+                Label("Go to Their Channel", systemImage: "arrow.turn.down.right")
+            }
+        }
         Button {
             model.showTextMessages(userid: user.nUserID)
         } label: {

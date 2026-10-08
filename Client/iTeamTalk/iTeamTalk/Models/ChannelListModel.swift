@@ -49,14 +49,24 @@ enum ChannelListDestination: Hashable {
 
 // MARK: - Row model
 
+/// What the search of the channel list looks through
+enum ChannelSearchScope: Int, CaseIterable {
+    case all
+    case channels
+    case users
+}
+
 enum ChannelListRow: Identifiable {
     case join
     case user(User)
     case channel(Channel)
+    // a title among the results of a search
+    case header(String)
 
     var id: String {
         switch self {
         case .join: return "join"
+        case .header(let title): return "header-\(title)"
         case .user(let user): return "user-\(user.nUserID)"
         case .channel(let channel): return "channel-\(channel.nChannelID)"
         }
@@ -109,6 +119,13 @@ final class ChannelListModel: ObservableObject {
     // MARK: Published search and sound output state
     @Published var searchText = "" {
         didSet { refreshChannelList() }
+    }
+    @Published var searchScope = ChannelSearchScope.all {
+        didSet {
+            if isSearching {
+                refreshChannelList()
+            }
+        }
     }
     @Published var speakerOutput = UserDefaults.standard.bool(forKey: PREF_SPEAKER_OUTPUT)
 
@@ -204,19 +221,7 @@ final class ChannelListModel: ObservableObject {
 
     private func displayRows() -> [ChannelListRow] {
         if isSearching {
-            // every channel of the server whose name matches, wherever it is
-            let query = searchText.trimmingCharacters(in: .whitespaces)
-            return channels.values
-                .filter {
-                    $0.nParentID != 0 &&
-                        TeamTalkString.channel(.name, from: $0)
-                            .range(of: query, options: [.caseInsensitive, .diacriticInsensitive]) != nil
-                }
-                .sorted {
-                    TeamTalkString.channel(.name, from: $0)
-                        .caseInsensitiveCompare(TeamTalkString.channel(.name, from: $1)) == .orderedAscending
-                }
-                .map { .channel($0) }
+            return searchRows()
         }
 
         let showJoin = curchannel.nChannelID != mychannel.nChannelID && curchannel.nChannelID > 0
@@ -227,6 +232,57 @@ final class ChannelListModel: ObservableObject {
             result.append(.channel(parent))
         }
         for channel in displayChans { result.append(.channel(channel)) }
+        return result
+    }
+
+    /// The channels and users of the whole server whose name contains the text,
+    /// wherever they are. Part of a name is enough, and the names that begin
+    /// with the text come first.
+    private func searchRows() -> [ChannelListRow] {
+        let query = searchText.trimmingCharacters(in: .whitespaces)
+
+        func matchRank(_ name: String) -> Int? {
+            guard let range = name.range(of: query, options: [.caseInsensitive, .diacriticInsensitive]) else {
+                return nil
+            }
+            return range.lowerBound == name.startIndex ? 0 : 1
+        }
+
+        var result = [ChannelListRow]()
+
+        if searchScope != .users {
+            let found = channels.values
+                .filter { $0.nParentID != 0 }
+                .compactMap { channel -> (rank: Int, name: String, channel: Channel)? in
+                    let name = TeamTalkString.channel(.name, from: channel)
+                    guard let rank = matchRank(name) else { return nil }
+                    return (rank, name.lowercased(), channel)
+                }
+                .sorted { ($0.rank, $0.name) < ($1.rank, $1.name) }
+            if !found.isEmpty && searchScope == .all {
+                result.append(.header(String(localized: "Channels", comment: "channel list")))
+            }
+            result += found.map { .channel($0.channel) }
+        }
+
+        if searchScope != .channels {
+            let found = users.values
+                .compactMap { user -> (rank: Int, name: String, user: User)? in
+                    let name = getDisplayName(user)
+                    let ranks = [matchRank(name), matchRank(TeamTalkString.user(.username, from: user))].compactMap { $0 }
+                    guard let rank = ranks.min() else { return nil }
+                    return (rank, name.lowercased(), user)
+                }
+                .sorted { ($0.rank, $0.name) < ($1.rank, $1.name) }
+            if !found.isEmpty && searchScope == .all {
+                result.append(.header(String(localized: "Users", comment: "channel list")))
+            }
+            result += found.map { .user($0.user) }
+        }
+
+        if result.isEmpty {
+            result.append(.header(String(localized: "No results", comment: "channel list")))
+        }
         return result
     }
 
@@ -255,7 +311,8 @@ final class ChannelListModel: ObservableObject {
             : "message_blue"
         return ChannelUserDetails(
             title: getDisplayName(user),
-            subtitle: TeamTalkString.user(.statusMessage, from: user),
+            // among the results of a search, what matters is where the user is
+            subtitle: isSearching ? channelText(for: user) : TeamTalkString.user(.statusMessage, from: user),
             iconName: iconName,
             iconAccessibilityLabel: iconAccessibilityLabel,
             messageIconName: messageIcon
@@ -325,9 +382,14 @@ final class ChannelListModel: ObservableObject {
         switch row {
         case .join:
             joinCurrentChannel()
+        case .header:
+            break
         case .user(let user):
             if isSelecting {
                 moveUser(userid: user.nUserID)
+            } else if isSearching && user.nChannelID > 0 {
+                // a search result: show where the user is
+                goToChannel(id: user.nChannelID)
             } else {
                 showUserDetail(userid: user.nUserID)
             }
