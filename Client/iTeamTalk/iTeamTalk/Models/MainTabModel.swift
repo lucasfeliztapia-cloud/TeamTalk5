@@ -79,6 +79,7 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
         addToTTMessages(preferencesModel)
 
         setupSoundDevices()
+        channelListModel.isDeafened = TeamTalkClient.shared.isSoundOutputMuted
 
         let defaults = UserDefaults.standard
         if defaults.object(forKey: PREF_MASTER_VOLUME) != nil {

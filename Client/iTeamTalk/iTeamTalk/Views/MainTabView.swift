@@ -147,6 +147,19 @@ private struct ChannelsTabView: View {
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
+                            model.toggleSelecting()
+                        } label: {
+                            if model.isSelecting {
+                                Image(systemName: "checkmark.circle.fill")
+                                    .accessibilityLabel("Done selecting")
+                            } else {
+                                Image(systemName: "checkmark.circle")
+                                    .accessibilityLabel("Select users")
+                            }
+                        }
+                    }
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
                             showingMediaStream = true
                         } label: {
                             Image(systemName: "play.rectangle")

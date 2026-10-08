@@ -22,8 +22,14 @@
 /* preferences */
 "%d %% - Default" = "%d %% - predeterminado";
 
+/* channel list */
+"%d users selected" = "%d usuarios seleccionados";
+
 /* codec detail */
 "(Active)" = "(Activo)";
+
+/* channel list */
+"1 user selected" = "1 usuario seleccionado";
 
 /* codec detail */
 "12 KHz" = "12 KHz";
@@ -48,6 +54,21 @@
 
 /* serverlist */
 "Access preferences" = "Preferencias de acceso";
+
+/* appearance */
+"Accessibility 1" = "Accesibilidad 1";
+
+/* appearance */
+"Accessibility 2" = "Accesibilidad 2";
+
+/* appearance */
+"Accessibility 3" = "Accesibilidad 3";
+
+/* appearance */
+"Accessibility 4" = "Accesibilidad 4";
+
+/* appearance */
+"Accessibility 5" = "Accesibilidad 5";
 
 /* server entry
    user detail */
@@ -83,6 +104,9 @@
 /* preferences */
 "App Version" = "Versión de la aplicación";
 
+/* appearance */
+"Appearance" = "Apariencia";
+
 /* codec detail */
 "Application" = "Aplicación";
 
@@ -106,6 +130,15 @@
 
 /* media stream */
 "Back 10 Seconds" = "Retroceder 10 segundos";
+
+/* channel list */
+"Ban" = "Banear";
+
+/* channel list */
+"Ban %@?" = "¿Banear a %@?";
+
+/* channel list */
+"Ban %d users?" = "¿Banear a %d usuarios?";
 
 /* channel list */
 "Ban user" = "Banear usuario";
@@ -176,14 +209,26 @@
 /* media stream */
 "Choose a file" = "Elegir un archivo";
 
+/* appearance */
+"Choose colors, text size and font" = "Elige los colores, el tamaño del texto y la fuente";
+
 /* media stream */
 "Close" = "Cerrar";
+
+/* appearance */
+"Color of buttons, switches and the selected tab." = "Color de los botones, los interruptores y la pestaña seleccionada.";
+
+/* appearance */
+"Colors and Text" = "Colores y texto";
 
 /* log entry */
 "Command failed: %@" = "Command failed: %@";
 
 /* create channel */
 "Commands" = "Comandos";
+
+/* channel list */
+"Confirm" = "Confirmar";
 
 /* serverlist */
 "Connect to server" = "Conectar al servidor";
@@ -241,6 +286,9 @@
 "Display" = "Mostrar";
 
 /* channel list */
+"Done selecting" = "Terminar la selección";
+
+/* channel list */
 "Double tap and hold to transmit. Triple tap fast to lock transmission." = "Toca dos veces y mantén presionado para transmitir. Toca tres veces rápidamente para bloquear la transmisión.";
 
 /* preferences */
@@ -285,6 +333,18 @@
 /* preferences */
 "Exclusive Mode Toggled" = "Modo exclusivo activado";
 
+/* appearance */
+"Extra Extra Extra Large" = "Enorme";
+
+/* appearance */
+"Extra Extra Large" = "Extragrande";
+
+/* appearance */
+"Extra Large" = "Muy grande";
+
+/* appearance */
+"Extra Small" = "Muy pequeño";
+
 /* file list */
 "Failed to download file" = "No se pudo descargar el archivo";
 
@@ -308,6 +368,9 @@
 
 /* file list */
 "Files" = "Archivos";
+
+/* appearance */
+"Font" = "Fuente";
 
 /* media stream */
 "Forward 1 Minute" = "Avanzar 1 minuto";
@@ -349,6 +412,12 @@
 /* channel list */
 "Inactive" = "Inactive";
 
+/* appearance */
+"Interface" = "Interfaz";
+
+/* appearance */
+"Interface Color" = "Color de la interfaz";
+
 /* Dialog message */
 "Join" = "Unirse";
 
@@ -377,7 +446,19 @@
 "Joined %@" = "Se ha unido a %@";
 
 /* channel list */
+"Kick" = "Expulsar";
+
+/* channel list */
+"Kick %@?" = "¿Expulsar a %@?";
+
+/* channel list */
+"Kick %d users?" = "¿Expulsar a %d usuarios?";
+
+/* channel list */
 "Kick user" = "Expulsar usuario";
+
+/* appearance */
+"Large" = "Grande";
 
 /* preferences */
 "Limit length of names in channel list to %d characters" = "Limitar longitud máxima de nombres de usuario a %d caracteres";
@@ -411,6 +492,9 @@
 /* preferences */
 "Media file vs. voice volume" = "Archivo multimedia vs. volumen de voz";
 
+/* appearance */
+"Medium" = "Mediano";
+
 /* server entry */
 "Message of the Day" = "Message of the Day";
 
@@ -420,6 +504,15 @@
 /* codec detail
    create channel */
 "Mono" = "Mono";
+
+/* appearance */
+"Monospaced" = "Monoespaciada";
+
+/* channel list */
+"Move" = "Mover";
+
+/* channel list */
+"Move to Channel" = "Mover al canal";
 
 /* channel list */
 "Move user" = "Mover usuario";
@@ -438,6 +531,12 @@
 
 /* user detail */
 "Mute Voice" = "Silenciar voz";
+
+/* channel list */
+"Muted" = "Silenciados";
+
+/* channel list */
+"Mutes or unmutes everything you hear from the server" = "Silencia o reactiva todo lo que oyes del servidor";
 
 /* create channel
    server entry */
@@ -477,6 +576,9 @@
 /* serverlist */
 "No server found" = "No server found";
 
+/* channel list */
+"No users selected" = "Ningún usuario seleccionado";
+
 /* create channel */
 "No Voice Activation" = "Sin activación por voz";
 
@@ -494,6 +596,9 @@
    message dialog
    user detail */
 "OK" = "Aceptar";
+
+/* channel list */
+"On" = "Activados";
 
 /* codec detail */
 "OPUS Codec" = "Códec OPUS";
@@ -575,8 +680,14 @@
 /* preferences */
 "Pressing Return-key sends text message" = "Pulsar la tecla intro envía el mensaje de texto";
 
+/* appearance */
+"Preview" = "Vista previa";
+
 /* text message type */
 "Private message" = "Mensaje privado";
+
+/* channel list */
+"Private Message" = "Mensaje privado";
 
 /* preferences */
 "Private Text Message" = "Mensaje privado";
@@ -617,6 +728,15 @@
 /* preferences */
 "Receive webcam streams by default" = "Recibir transmisiones de cámaras web por defecto";
 
+/* appearance */
+"Received message" = "Mensaje recibido";
+
+/* appearance */
+"Received Messages" = "Mensajes recibidos";
+
+/* appearance */
+"Restore Default Appearance" = "Restaurar la apariencia predeterminada";
+
 /* media stream */
 "Resume" = "Reanudar";
 
@@ -629,6 +749,9 @@
 /* log entry */
 "root channel" = "Canal raíz";
 
+/* appearance */
+"Rounded" = "Redondeada";
+
 /* codec detail */
 "Sample Rate" = "Velocidad de muestreo";
 
@@ -638,6 +761,9 @@
 /* Dialog message */
 "Save server to server list?" = "¿Guardar servidor?";
 
+/* channel list */
+"Select users" = "Seleccionar usuarios";
+
 /* text message */
 "Send empty message to close keyboard" = "Envía un mensaje en blanco para cerrar el teclado";
 
@@ -646,6 +772,15 @@
 
 /* media stream */
 "Send Video" = "Enviar vídeo";
+
+/* appearance */
+"Sent message" = "Mensaje enviado";
+
+/* appearance */
+"Sent Messages" = "Mensajes enviados";
+
+/* appearance */
+"Serif" = "Con serifa";
 
 /* preferences */
 "Server Connection Lost" = "Conexión al servidor perdida";
@@ -677,6 +812,12 @@
 /* channel list */
 "Silent" = "Silencio";
 
+/* appearance */
+"Size and font apply to the whole app." = "El tamaño y la fuente se aplican a toda la app.";
+
+/* appearance */
+"Small" = "Pequeño";
+
 /* preferences */
 "Sort Channels" = "Órden de los canales";
 
@@ -690,6 +831,9 @@
 /* preferences */
 "Speaker Output" = "Salida de audio";
 
+/* channel list */
+"Speakers" = "Altavoces";
+
 /* preferences */
 "Speech Rate" = "Velocidad de voz";
 
@@ -701,6 +845,9 @@
 
 /* codec detail */
 "Speex Variable Bitrate Codec" = "Codec Speex, calidad variable";
+
+/* appearance */
+"Standard" = "Estándar";
 
 /* media stream */
 "Start Streaming" = "Empezar a emitir";
@@ -733,17 +880,32 @@
 /* user detail */
 "Subscriptions" = "Subscripciones";
 
+/* appearance */
+"System Size" = "El del sistema";
+
 /* channel list */
 "Talking" = "Hablando";
 
 /* server entry */
 "TCP Port" = "Puerto TCP";
 
+/* appearance */
+"Text" = "Texto";
+
+/* appearance */
+"Text Messages" = "Mensajes de texto";
+
+/* appearance */
+"Text Size" = "Tamaño del texto";
+
 /* preferences */
 "Text To Speech Events" = "Eventos de texto a voz";
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "La velocidad de la voz es %.1f";
+
+/* appearance */
+"The text of a message is shown in black or white, whichever is easier to read on its color." = "El texto de cada mensaje se muestra en negro o en blanco, según cuál se lea mejor sobre su color.";
 
 /* preferences */
 "The volume of the speaking voice is %.1f" = "El volumen de la voz es  %.1f";
@@ -805,6 +967,9 @@
 
 /* channel list */
 "User" = "Usuario";
+
+/* channel list */
+"User Details" = "Detalles del usuario";
 
 /* channel list */
 "User female" = "User female";

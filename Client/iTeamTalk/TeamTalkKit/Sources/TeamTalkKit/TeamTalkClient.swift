@@ -26,6 +26,7 @@ public struct TeamTalkClientFlags: OptionSet {
     public static let transmittingVoice = TeamTalkClientFlags(rawValue: CLIENT_TX_VOICE.rawValue)
     public static let voiceActivated = TeamTalkClientFlags(rawValue: CLIENT_SNDINPUT_VOICEACTIVATED.rawValue)
     public static let voiceActive = TeamTalkClientFlags(rawValue: CLIENT_SNDINPUT_VOICEACTIVE.rawValue)
+    public static let soundOutputMuted = TeamTalkClientFlags(rawValue: CLIENT_SNDOUTPUT_MUTE.rawValue)
 }
 
 public struct TeamTalkEncryptionConfiguration {
@@ -92,6 +93,10 @@ public final class TeamTalkClient {
 
     public var isVoiceTransmitting: Bool {
         isTransmitting(STREAMTYPE_VOICE)
+    }
+
+    public var isSoundOutputMuted: Bool {
+        flags.contains(.soundOutputMuted)
     }
 
     public var myUserID: Int32 {
@@ -424,6 +429,11 @@ public final class TeamTalkClient {
 
     public func setSoundOutputVolume(_ volume: Int32) {
         TT_SetSoundOutputVolume(instance, volume)
+    }
+
+    @discardableResult
+    public func setSoundOutputMute(_ muted: Bool) -> Bool {
+        TT_SetSoundOutputMute(instance, muted ? 1 : 0) != 0
     }
 
     public func closeSoundDevices() {

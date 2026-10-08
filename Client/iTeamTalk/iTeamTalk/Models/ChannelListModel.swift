@@ -63,6 +63,29 @@ enum ChannelListRow: Identifiable {
     }
 }
 
+// MARK: - Requests presented by the channel list
+
+struct MoveRequest: Identifiable {
+    let id = UUID()
+    let userIDs: [INT32]
+}
+
+struct ModerationRequest: Identifiable {
+    enum Action {
+        case kick
+        case ban
+    }
+
+    let id = UUID()
+    let action: Action
+    let userIDs: [INT32]
+}
+
+struct ChannelChoice: Identifiable {
+    let id: INT32
+    let path: String
+}
+
 // MARK: - Channel List Model
 
 final class ChannelListModel: ObservableObject {
@@ -76,6 +99,12 @@ final class ChannelListModel: ObservableObject {
     // MARK: Published navigation state
     @Published var navigationPath: [ChannelListDestination] = []
     @Published var channelDetailModel: ChannelDetailModel?
+
+    // MARK: Published sound and selection state
+    @Published var isDeafened = false
+    @Published var isSelecting = false
+    @Published var moveRequest: MoveRequest?
+    @Published var moderationRequest: ModerationRequest?
 
     // MARK: Published alert state
     @Published var showingJoinPasswordAlert = false
@@ -260,7 +289,11 @@ final class ChannelListModel: ObservableObject {
         case .join:
             joinCurrentChannel()
         case .user(let user):
-            showUserDetail(userid: user.nUserID)
+            if isSelecting {
+                moveUser(userid: user.nUserID)
+            } else {
+                showUserDetail(userid: user.nUserID)
+            }
         case .channel(let channel):
             curchannel = channel
             refreshChannelList()
@@ -397,6 +430,126 @@ final class ChannelListModel: ObservableObject {
                 moveusers.count
             )
         }
+    }
+
+    // MARK: - Deafen
+
+    func toggleDeafen() {
+        let muted = !TeamTalkClient.shared.isSoundOutputMuted
+        if TeamTalkClient.shared.setSoundOutputMute(muted) {
+            isDeafened = muted
+        }
+    }
+
+    // MARK: - Selection
+
+    var canMoveUsers: Bool {
+        (myuseraccount.uUserRights & USERRIGHT_MOVE_USERS.rawValue) != 0
+    }
+
+    func canKickUser(_ user: User) -> Bool {
+        (myuseraccount.uUserRights & USERRIGHT_KICK_USERS.rawValue) != 0 ||
+            TeamTalkClient.shared.isChannelOperator(channelID: user.nChannelID)
+    }
+
+    func canBanUser(_ user: User) -> Bool {
+        (myuseraccount.uUserRights & USERRIGHT_BAN_USERS.rawValue) != 0 ||
+            TeamTalkClient.shared.isChannelOperator(channelID: user.nChannelID)
+    }
+
+    var selectedUserIDs: [INT32] {
+        moveusers.filter { users[$0] != nil }.sorted()
+    }
+
+    var selectionSummary: String {
+        let count = selectedUserIDs.count
+        switch count {
+        case 0:
+            return String(localized: "No users selected", comment: "channel list")
+        case 1:
+            return String(localized: "1 user selected", comment: "channel list")
+        default:
+            return String(format: String(localized: "%d users selected", comment: "channel list"), count)
+        }
+    }
+
+    func toggleSelecting() {
+        isSelecting.toggle()
+        if !isSelecting {
+            moveusers.removeAll()
+        }
+        refreshChannelList()
+    }
+
+    func requestMove(userIDs: [INT32]) {
+        guard !userIDs.isEmpty else { return }
+        moveRequest = MoveRequest(userIDs: userIDs)
+    }
+
+    /// Every channel of the server, the root first, for choosing where to move users.
+    func channelChoices() -> [ChannelChoice] {
+        let root = channels.values.filter { $0.nParentID == 0 }
+        let others = channels.values.filter { $0.nParentID != 0 }
+        let choices = others
+            .map { ChannelChoice(id: $0.nChannelID, path: channelPath($0)) }
+            .sorted { $0.path.caseInsensitiveCompare($1.path) == .orderedAscending }
+        return root.map { ChannelChoice(id: $0.nChannelID, path: channelPath($0)) } + choices
+    }
+
+    private func channelPath(_ channel: Channel) -> String {
+        if channel.nParentID == 0 {
+            return TeamTalkString.serverProperties(.name, from: srvprop)
+        }
+
+        var names = [String]()
+        var current: Channel? = channel
+        while let next = current, next.nParentID != 0 {
+            names.insert(TeamTalkString.channel(.name, from: next), at: 0)
+            current = channels[next.nParentID]
+        }
+        return names.joined(separator: " / ")
+    }
+
+    func moveUsers(_ userIDs: [INT32], to channelID: INT32) {
+        for userid in userIDs {
+            cmdid = TeamTalkClient.shared.moveUser(id: userid, toChannelID: channelID)
+            activeCommands[cmdid] = .moveCmd
+        }
+        moveusers.subtract(userIDs)
+        refreshChannelList()
+    }
+
+    func requestModeration(_ action: ModerationRequest.Action, userIDs: [INT32]) {
+        guard !userIDs.isEmpty else { return }
+        moderationRequest = ModerationRequest(action: action, userIDs: userIDs)
+    }
+
+    func moderationMessage(_ request: ModerationRequest) -> String {
+        if request.userIDs.count == 1, let user = users[request.userIDs[0]] {
+            let format = request.action == .ban
+                ? String(localized: "Ban %@?", comment: "channel list")
+                : String(localized: "Kick %@?", comment: "channel list")
+            return String(format: format, getDisplayName(user))
+        }
+
+        let format = request.action == .ban
+            ? String(localized: "Ban %d users?", comment: "channel list")
+            : String(localized: "Kick %d users?", comment: "channel list")
+        return String(format: format, request.userIDs.count)
+    }
+
+    func confirmModeration(_ request: ModerationRequest) {
+        for userid in request.userIDs {
+            guard let user = users[userid] else { continue }
+            if request.action == .ban {
+                cmdid = TeamTalkClient.shared.banUser(id: userid, fromChannelID: user.nChannelID)
+                activeCommands[cmdid] = .banCmd
+            }
+            cmdid = TeamTalkClient.shared.kickUser(id: userid, fromChannelID: user.nChannelID)
+            activeCommands[cmdid] = .kickCmd
+        }
+        moveusers.subtract(request.userIDs)
+        refreshChannelList()
     }
 
     // MARK: - Navigation

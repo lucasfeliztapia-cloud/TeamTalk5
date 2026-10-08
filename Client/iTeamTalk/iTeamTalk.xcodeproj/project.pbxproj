@@ -41,6 +41,7 @@
 		25E4DC341BF7360D00EC5A8C /* user_message.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 25E4DC311BF7360D00EC5A8C /* user_message.mp3 */; };
 		25FFC2DB25ABA07E000334DC /* UtilTT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FFC2DA25ABA07E000334DC /* UtilTT.swift */; };
 		598F236865BD42938957BDE2 /* iTeamTalkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F4B78C0EB54A24B439A96D /* iTeamTalkApp.swift */; };
+		CC000300000000000000000E /* AppearanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC000200000000000000000E /* AppearanceModel.swift */; };
 		CC0003000000000000000001 /* AudioCodecModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000001 /* AudioCodecModel.swift */; };
 		CC0003000000000000000002 /* ChannelDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000002 /* ChannelDetailModel.swift */; };
 		CC0003000000000000000003 /* ChannelListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000003 /* ChannelListModel.swift */; };
@@ -54,6 +55,7 @@
 		CC0003000000000000000009 /* TextMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000009 /* TextMessageModel.swift */; };
 		CC000300000000000000000A /* UserDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC000200000000000000000A /* UserDetailModel.swift */; };
 		CC000300000000000000000B /* WebLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC000200000000000000000B /* WebLoginModel.swift */; };
+		CC0005000000000000000013 /* AppearanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000013 /* AppearanceView.swift */; };
 		CC0005000000000000000001 /* AudioCodecView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000001 /* AudioCodecView.swift */; };
 		CC0005000000000000000002 /* ChannelDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000002 /* ChannelDetailView.swift */; };
 		CC0005000000000000000003 /* ChannelListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000003 /* ChannelListView.swift */; };
@@ -148,6 +150,7 @@
 		25ED9FE6265AD5A700127B0E /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		25FFC2DA25ABA07E000334DC /* UtilTT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilTT.swift; sourceTree = "<group>"; };
 		C4F4B78C0EB54A24B439A96D /* iTeamTalkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTeamTalkApp.swift; sourceTree = "<group>"; };
+		CC000200000000000000000E /* AppearanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceModel.swift; sourceTree = "<group>"; };
 		CC0002000000000000000001 /* AudioCodecModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCodecModel.swift; sourceTree = "<group>"; };
 		CC0002000000000000000002 /* ChannelDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelDetailModel.swift; sourceTree = "<group>"; };
 		CC0002000000000000000003 /* ChannelListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListModel.swift; sourceTree = "<group>"; };
@@ -161,6 +164,7 @@
 		CC0002000000000000000009 /* TextMessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMessageModel.swift; sourceTree = "<group>"; };
 		CC000200000000000000000A /* UserDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailModel.swift; sourceTree = "<group>"; };
 		CC000200000000000000000B /* WebLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebLoginModel.swift; sourceTree = "<group>"; };
+		CC0004000000000000000013 /* AppearanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceView.swift; sourceTree = "<group>"; };
 		CC0004000000000000000001 /* AudioCodecView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCodecView.swift; sourceTree = "<group>"; };
 		CC0004000000000000000002 /* ChannelDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelDetailView.swift; sourceTree = "<group>"; };
 		CC0004000000000000000003 /* ChannelListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListView.swift; sourceTree = "<group>"; };
@@ -308,6 +312,7 @@
 		CC000001000000000000000001 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CC000200000000000000000E /* AppearanceModel.swift */,
 				CC0002000000000000000001 /* AudioCodecModel.swift */,
 				CC0002000000000000000002 /* ChannelDetailModel.swift */,
 				CC0002000000000000000003 /* ChannelListModel.swift */,
@@ -328,6 +333,7 @@
 		CC000001000000000000000002 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CC0004000000000000000013 /* AppearanceView.swift */,
 				CC0004000000000000000001 /* AudioCodecView.swift */,
 				CC0004000000000000000002 /* ChannelDetailView.swift */,
 				CC0004000000000000000003 /* ChannelListView.swift */,
@@ -507,6 +513,7 @@
 				2597EF86275EA29D00FCEE28 /* UtilTTS.swift in Sources */,
 				254B7A4D1B98BAA300BE0DEF /* AppDelegate.swift in Sources */,
 				598F236865BD42938957BDE2 /* iTeamTalkApp.swift in Sources */,
+				CC000300000000000000000E /* AppearanceModel.swift in Sources */,
 				CC0003000000000000000001 /* AudioCodecModel.swift in Sources */,
 				CC0003000000000000000002 /* ChannelDetailModel.swift in Sources */,
 				CC0003000000000000000003 /* ChannelListModel.swift in Sources */,
@@ -520,6 +527,7 @@
 				CC0003000000000000000009 /* TextMessageModel.swift in Sources */,
 				CC000300000000000000000A /* UserDetailModel.swift in Sources */,
 				CC000300000000000000000B /* WebLoginModel.swift in Sources */,
+				CC0005000000000000000013 /* AppearanceView.swift in Sources */,
 				CC0005000000000000000001 /* AudioCodecView.swift in Sources */,
 				CC0005000000000000000002 /* ChannelDetailView.swift in Sources */,
 				CC0005000000000000000003 /* ChannelListView.swift in Sources */,

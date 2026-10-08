@@ -32,6 +32,7 @@ struct PreferencesView: View {
         Form {
             generalSection
             displaySection
+            appearanceSection
             soundSection
             soundEventsSection
             ttsSection
@@ -176,6 +177,21 @@ struct PreferencesView: View {
                     .pickerStyle(.segmented)
                 }
                 PreferenceSubtitle("Order of channels in Channel List")
+            }
+        }
+    }
+
+    private var appearanceSection: some View {
+        Section("Appearance") {
+            NavigationLink {
+                AppearanceView()
+            } label: {
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Colors and Text")
+                    Text("Choose colors, text size and font")
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                }
             }
         }
     }

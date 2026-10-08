@@ -22,6 +22,7 @@
  */
 
 import SwiftUI
+import TeamTalkKit
 
 // MARK: - Container view
 
@@ -32,6 +33,10 @@ struct ChannelListContainerView: View {
     var body: some View {
         VStack(spacing: 0) {
             ChannelListView(model: model)
+            if model.isSelecting {
+                selectionBar
+            }
+            HStack(spacing: 0) {
             Text("Talk")
                 .frame(maxWidth: .infinity)
                 .frame(height: 50)
@@ -61,8 +66,35 @@ struct ChannelListContainerView: View {
             .accessibilityAction(.magicTap) {
                 model.txBtnAccessibilityAction()
             }
+            deafenButton
+            }
         }
         .navigationTitle(model.navigationTitle)
+        .sheet(item: $model.moveRequest) { request in
+            ChannelPickerView(channels: model.channelChoices()) { channelID in
+                model.moveUsers(request.userIDs, to: channelID)
+            }
+        }
+        .alert("Confirm",
+            isPresented: Binding(
+                get: { model.moderationRequest != nil },
+                set: { if !$0 { model.moderationRequest = nil } }
+            ),
+            presenting: model.moderationRequest
+        ) { request in
+            if request.action == .ban {
+                Button("Ban", role: .destructive) {
+                    model.confirmModeration(request)
+                }
+            } else {
+                Button("Kick", role: .destructive) {
+                    model.confirmModeration(request)
+                }
+            }
+            Button("Cancel", role: .cancel) {}
+        } message: { request in
+            Text(model.moderationMessage(request))
+        }
         .alert("Enter Password", isPresented: $model.showingJoinPasswordAlert) {
             SecureField("Password", text: $model.joinPassword)
             Button("Join") { model.confirmJoinWithPassword() }
@@ -77,6 +109,102 @@ struct ChannelListContainerView: View {
             Button("OK", role: .cancel) { }
         } message: {
             Text(model.errorMessage ?? "")
+        }
+    }
+}
+
+private extension ChannelListContainerView {
+
+    /// White with a black speaker while listening, black with a white speaker
+    /// while all incoming audio is muted.
+    var deafenButton: some View {
+        Button(action: model.toggleDeafen) {
+            Image(systemName: model.isDeafened ? "speaker.slash.fill" : "speaker.wave.2.fill")
+                .font(.title3)
+                .foregroundStyle(model.isDeafened ? Color.white : Color.black)
+                .frame(width: 64, height: 50)
+                .background(model.isDeafened ? Color.black : Color.white)
+                .overlay(Rectangle().stroke(Color.gray, lineWidth: 1))
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel("Speakers")
+        .accessibilityValue(model.isDeafened ? Text("Muted") : Text("On"))
+        .accessibilityHint("Mutes or unmutes everything you hear from the server")
+    }
+
+    var selectionBar: some View {
+        let selected = model.selectedUserIDs
+
+        return HStack(spacing: 16) {
+            Text(model.selectionSummary)
+                .font(.footnote)
+                .foregroundStyle(.secondary)
+                .lineLimit(1)
+            Spacer(minLength: 8)
+            Button("Move") {
+                model.requestMove(userIDs: selected)
+            }
+            .disabled(selected.isEmpty || !model.canMoveUsers)
+            Button("Kick") {
+                model.requestModeration(.kick, userIDs: selected)
+            }
+            .disabled(selected.isEmpty)
+            Button("Ban") {
+                model.requestModeration(.ban, userIDs: selected)
+            }
+            .disabled(selected.isEmpty)
+        }
+        .padding(.horizontal, 12)
+        .frame(height: 44)
+        .background(.bar)
+    }
+}
+
+// MARK: - Channel picker
+
+struct ChannelPickerView: View {
+    let channels: [ChannelChoice]
+    let move: (INT32) -> Void
+
+    @Environment(\.dismiss) private var dismiss
+    @State private var selection: INT32?
+
+    var body: some View {
+        NavigationStack {
+            List(channels) { channel in
+                Button {
+                    selection = channel.id
+                } label: {
+                    HStack(spacing: 10) {
+                        Text(channel.path)
+                            .foregroundStyle(.primary)
+                        Spacer(minLength: 12)
+                        if selection == channel.id {
+                            Image(systemName: "checkmark")
+                                .foregroundStyle(.tint)
+                                .accessibilityHidden(true)
+                        }
+                    }
+                }
+                .accessibilityAddTraits(selection == channel.id ? .isSelected : [])
+            }
+            .navigationTitle("Move to Channel")
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Cancel", role: .cancel) {
+                        dismiss()
+                    }
+                }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Move") {
+                        if let selection {
+                            move(selection)
+                        }
+                        dismiss()
+                    }
+                    .disabled(selection == nil)
+                }
+            }
         }
     }
 }
@@ -99,6 +227,13 @@ struct ChannelListView: View {
                 let details = model.userDetails(user)
                 let isMoveSelected = model.isMoveUserSelected(userid: user.nUserID)
                 HStack(spacing: 10) {
+                    if model.isSelecting {
+                        Image(systemName: isMoveSelected ? "checkmark.circle.fill" : "circle")
+                            .font(.title3)
+                            .foregroundStyle(isMoveSelected ? Color.accentColor : Color.secondary)
+                            .accessibilityHidden(true)
+                    }
+
                     Image(details.iconName)
                         .resizable()
                         .frame(width: 36, height: 36)
@@ -118,7 +253,7 @@ struct ChannelListView: View {
 
                     Spacer(minLength: 12)
 
-                    if isMoveSelected {
+                    if isMoveSelected && !model.isSelecting {
                         Image(systemName: "checkmark.circle.fill")
                             .foregroundStyle(.green)
                     }
@@ -134,12 +269,16 @@ struct ChannelListView: View {
                     .accessibilityLabel("Text Messaging")
                 }
                 .accessibilityElement(children: .combine)
+                .accessibilityAddTraits(isMoveSelected ? .isSelected : [])
                 .contentShape(Rectangle())
                 .onTapGesture {
                     model.selectRow(.user(user))
                 }
+                .contextMenu {
+                    userMenu(user)
+                }
                 .accessibilityAction(named: "Show user details") {
-                    model.selectRow(.user(user))
+                    model.showUserDetail(userid: user.nUserID)
                 }
                 .accessibilityAction(named: "Message this user") {
                     model.showTextMessages(userid: user.nUserID)
@@ -200,6 +339,47 @@ struct ChannelListView: View {
                 .accessibilityAction(named: "Join channel") {
                     model.joinChannelFromAccessibility(channelID: channel.nChannelID)
                 }
+            }
+        }
+    }
+
+    /// The actions VoiceOver offers on a user, for people who use the screen.
+    @ViewBuilder
+    private func userMenu(_ user: User) -> some View {
+        Button {
+            model.showTextMessages(userid: user.nUserID)
+        } label: {
+            Label("Private Message", systemImage: "message")
+        }
+        Button {
+            model.showUserDetail(userid: user.nUserID)
+        } label: {
+            Label("User Details", systemImage: "person.crop.circle")
+        }
+        Button {
+            model.muteUser(userid: user.nUserID)
+        } label: {
+            Label("Mute", systemImage: "speaker.slash")
+        }
+        if model.canMoveUsers {
+            Button {
+                model.requestMove(userIDs: [user.nUserID])
+            } label: {
+                Label("Move", systemImage: "arrow.right.circle")
+            }
+        }
+        if model.canKickUser(user) {
+            Button(role: .destructive) {
+                model.requestModeration(.kick, userIDs: [user.nUserID])
+            } label: {
+                Label("Kick", systemImage: "person.fill.xmark")
+            }
+        }
+        if model.canBanUser(user) {
+            Button(role: .destructive) {
+                model.requestModeration(.ban, userIDs: [user.nUserID])
+            } label: {
+                Label("Ban", systemImage: "nosign")
             }
         }
     }

@@ -25,6 +25,7 @@ import SwiftUI
 
 struct TextMessageView: View {
     @ObservedObject var model: TextMessageModel
+    @ObservedObject private var appearance = AppearanceModel.shared
     @FocusState private var isComposing: Bool
 
     var body: some View {
@@ -35,9 +36,10 @@ struct TextMessageView: View {
                         Section(section.title) {
                             ForEach(section.messages.indices, id: \.self) { index in
                                 let message = section.messages[index]
-                                MessageRow(message: message)
+                                let background = appearance.backgroundColor(for: message.msgtype)
+                                MessageRow(message: message, background: background)
                                     .listRowInsets(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
-                                    .listRowBackground(message.backgroundColor)
+                                    .listRowBackground(background)
                             }
                         }
                     }
@@ -110,20 +112,25 @@ struct TextMessageView: View {
 
 private struct MessageRow: View {
     let message: MyTextMessage
+    let background: Color
 
     var body: some View {
+        // not the theme's text color: the background stays the same in dark mode
+        let textColor = AppearanceModel.textColor(on: background)
+
         VStack(alignment: .leading, spacing: 6) {
             Text(headerText)
                 .font(.footnote.weight(.semibold))
-                .foregroundStyle(.secondary)
+                .foregroundStyle(textColor.opacity(0.75))
             Text(message.message)
                 .font(.body)
+                .foregroundStyle(textColor)
                 .textSelection(.enabled)
                 .fixedSize(horizontal: false, vertical: true)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.vertical, 6)
-        .background(message.backgroundColor)
+        .background(background)
         .accessibilityElement(children: .combine)
         .accessibilityHint(accessibilityHint)
     }
@@ -159,20 +166,5 @@ private struct MessageRow: View {
         formatter.locale = Locale.current
         formatter.dateFormat = "HH:mm:ss"
         return formatter.string(from: message.date)
-    }
-}
-
-private extension MyTextMessage {
-    var backgroundColor: Color {
-        switch msgtype {
-        case .PRIV_IM, .CHAN_IM:
-            return Color(red: 1.0, green: 0.627, blue: 0.882)
-        case .PRIV_IM_MYSELF, .CHAN_IM_MYSELF:
-            return Color(red: 0.54, green: 0.82, blue: 0.94)
-        case .BCAST:
-            return Color(red: 0.831, green: 0.376, blue: 1.0)
-        case .LOGMSG:
-            return Color(red: 0.86, green: 0.86, blue: 0.86)
-        }
     }
 }
