@@ -1,0 +1,59 @@
+/* favorite servers widget */
+"Connect to %@" = "Verbind met %@";
+
+/* favorite servers widget */
+"Connect to one of your favorite servers with a tap." = "Verbind met één tik met een van je favoriete servers.";
+
+/* favorite servers widget */
+"Favorite Servers" = "Favoriete servers";
+
+/* favorite servers widget */
+"Mark a server as favorite in TeamTalk" = "Markeer een server als favoriet in TeamTalk";
+
+/* channel list */
+"Muted" = "Gedempt";
+
+/* speakers control */
+"Mutes everyone and brings them back while connected to a server." = "Dempt iedereen en schakelt ze weer in terwijl je met een server bent verbonden.";
+
+/* live activity */
+"Not transmitting" = "Zendt niet uit";
+
+/* channel list */
+"On" = "Aan";
+
+/* favorite servers widget */
+"Open TeamTalk to see your favorite servers" = "Open TeamTalk om je favoriete servers te zien";
+
+/* keyboard shortcuts */
+"Pause or Resume Streaming" = "Stream pauzeren of hervatten";
+
+/* channel list */
+"Speakers" = "Luidsprekers";
+
+/* intent */
+"Speakers On" = "Luidsprekers aan";
+
+/* media stream */
+"Stop Streaming" = "Stream stoppen";
+
+/* transmit control */
+"Talk in TeamTalk" = "Spreken in TeamTalk";
+
+/* speakers control */
+"TeamTalk Speakers" = "TeamTalk-luidsprekers";
+
+/* intent */
+"Toggle Speakers" = "Luidsprekers in- of uitschakelen";
+
+/* keyboard shortcuts */
+"Toggle Transmission" = "Uitzenden in- of uitschakelen";
+
+/* live activity */
+"Transmission" = "Uitzending";
+
+/* transmit control */
+"Transmitting" = "Transmitting";
+
+/* transmit control */
+"Turns your transmission on and off while connected to a server." = "Schakelt je uitzending in en uit terwijl je met een server bent verbonden.";

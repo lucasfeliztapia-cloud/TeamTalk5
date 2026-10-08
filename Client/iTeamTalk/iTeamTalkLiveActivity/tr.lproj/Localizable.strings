@@ -1,0 +1,59 @@
+/* favorite servers widget */
+"Connect to %@" = "%@ sunucusuna bağlan";
+
+/* favorite servers widget */
+"Connect to one of your favorite servers with a tap." = "Sık kullandığınız sunuculardan birine tek dokunuşla bağlanın.";
+
+/* favorite servers widget */
+"Favorite Servers" = "Sık Kullanılan Sunucular";
+
+/* favorite servers widget */
+"Mark a server as favorite in TeamTalk" = "TeamTalk'ta bir sunucuyu sık kullanılan olarak işaretleyin";
+
+/* channel list */
+"Muted" = "Sessiz";
+
+/* speakers control */
+"Mutes everyone and brings them back while connected to a server." = "Bir sunucuya bağlıyken herkesin sesini kapatır ve geri açar.";
+
+/* live activity */
+"Not transmitting" = "Yayın yapmıyor";
+
+/* channel list */
+"On" = "Açık";
+
+/* favorite servers widget */
+"Open TeamTalk to see your favorite servers" = "Sık kullandığınız sunucuları görmek için TeamTalk'ı açın";
+
+/* keyboard shortcuts */
+"Pause or Resume Streaming" = "Yayını Duraklat veya Sürdür";
+
+/* channel list */
+"Speakers" = "Hoparlörler";
+
+/* intent */
+"Speakers On" = "Hoparlörler Açık";
+
+/* media stream */
+"Stop Streaming" = "Yayını Durdur";
+
+/* transmit control */
+"Talk in TeamTalk" = "TeamTalk'ta Konuş";
+
+/* speakers control */
+"TeamTalk Speakers" = "TeamTalk Hoparlörleri";
+
+/* intent */
+"Toggle Speakers" = "Hoparlörleri Aç veya Kapat";
+
+/* keyboard shortcuts */
+"Toggle Transmission" = "Yayını Aç veya Kapat";
+
+/* live activity */
+"Transmission" = "Yayın";
+
+/* transmit control */
+"Transmitting" = "İletiyor";
+
+/* transmit control */
+"Turns your transmission on and off while connected to a server." = "Bir sunucuya bağlıyken yayınınızı açar ve kapatır.";

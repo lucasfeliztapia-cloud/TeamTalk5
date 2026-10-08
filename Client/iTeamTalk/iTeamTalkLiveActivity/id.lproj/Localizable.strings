@@ -1,0 +1,59 @@
+/* favorite servers widget */
+"Connect to %@" = "Hubungkan ke %@";
+
+/* favorite servers widget */
+"Connect to one of your favorite servers with a tap." = "Hubungkan ke salah satu server favorit Anda dengan satu ketukan.";
+
+/* favorite servers widget */
+"Favorite Servers" = "Server Favorit";
+
+/* favorite servers widget */
+"Mark a server as favorite in TeamTalk" = "Tandai server sebagai favorit di TeamTalk";
+
+/* channel list */
+"Muted" = "Dibisukan";
+
+/* speakers control */
+"Mutes everyone and brings them back while connected to a server." = "Membisukan semua orang dan membunyikannya lagi selama terhubung ke server.";
+
+/* live activity */
+"Not transmitting" = "Tidak mengirim";
+
+/* channel list */
+"On" = "Nyala";
+
+/* favorite servers widget */
+"Open TeamTalk to see your favorite servers" = "Buka TeamTalk untuk melihat server favorit Anda";
+
+/* keyboard shortcuts */
+"Pause or Resume Streaming" = "Jeda atau Lanjutkan Siaran";
+
+/* channel list */
+"Speakers" = "Speaker";
+
+/* intent */
+"Speakers On" = "Speaker Nyala";
+
+/* media stream */
+"Stop Streaming" = "Hentikan Siaran";
+
+/* transmit control */
+"Talk in TeamTalk" = "Bicara di TeamTalk";
+
+/* speakers control */
+"TeamTalk Speakers" = "Speaker TeamTalk";
+
+/* intent */
+"Toggle Speakers" = "Nyalakan atau Bisukan Speaker";
+
+/* keyboard shortcuts */
+"Toggle Transmission" = "Nyalakan atau Matikan Pengiriman";
+
+/* live activity */
+"Transmission" = "Pengiriman";
+
+/* transmit control */
+"Transmitting" = "Transmitting mikrofon, aktif";
+
+/* transmit control */
+"Turns your transmission on and off while connected to a server." = "Menyalakan dan mematikan pengiriman Anda selama terhubung ke server.";

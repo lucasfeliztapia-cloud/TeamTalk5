@@ -1,0 +1,59 @@
+/* favorite servers widget */
+"Connect to %@" = "Під'єднатися до %@";
+
+/* favorite servers widget */
+"Connect to one of your favorite servers with a tap." = "Під'єднуйтеся до одного з вибраних серверів одним дотиком.";
+
+/* favorite servers widget */
+"Favorite Servers" = "Вибрані сервери";
+
+/* favorite servers widget */
+"Mark a server as favorite in TeamTalk" = "Позначте сервер як вибраний у TeamTalk";
+
+/* channel list */
+"Muted" = "Звук вимкнено";
+
+/* speakers control */
+"Mutes everyone and brings them back while connected to a server." = "Вимикає звук усіх і вмикає знову, поки ви під'єднані до сервера.";
+
+/* live activity */
+"Not transmitting" = "Не передає";
+
+/* channel list */
+"On" = "Увімкнено";
+
+/* favorite servers widget */
+"Open TeamTalk to see your favorite servers" = "Відкрийте TeamTalk, щоб побачити вибрані сервери";
+
+/* keyboard shortcuts */
+"Pause or Resume Streaming" = "Призупинити або продовжити трансляцію";
+
+/* channel list */
+"Speakers" = "Динаміки";
+
+/* intent */
+"Speakers On" = "Динаміки ввімкнено";
+
+/* media stream */
+"Stop Streaming" = "Зупинити трансляцію";
+
+/* transmit control */
+"Talk in TeamTalk" = "Говорити в TeamTalk";
+
+/* speakers control */
+"TeamTalk Speakers" = "Динаміки TeamTalk";
+
+/* intent */
+"Toggle Speakers" = "Увімкнути або вимкнути динаміки";
+
+/* keyboard shortcuts */
+"Toggle Transmission" = "Увімкнути або вимкнути передавання";
+
+/* live activity */
+"Transmission" = "Передавання";
+
+/* transmit control */
+"Transmitting" = "Передача";
+
+/* transmit control */
+"Turns your transmission on and off while connected to a server." = "Вмикає і вимикає ваше передавання, поки ви під'єднані до сервера.";

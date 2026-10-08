@@ -1,0 +1,59 @@
+/* favorite servers widget */
+"Connect to %@" = "الاتصال بـ %@";
+
+/* favorite servers widget */
+"Connect to one of your favorite servers with a tap." = "اتصل بأحد خوادمك المفضلة بنقرة واحدة.";
+
+/* favorite servers widget */
+"Favorite Servers" = "الخوادم المفضلة";
+
+/* favorite servers widget */
+"Mark a server as favorite in TeamTalk" = "ضع علامة مفضل على خادم في TeamTalk";
+
+/* channel list */
+"Muted" = "مكتوم";
+
+/* speakers control */
+"Mutes everyone and brings them back while connected to a server." = "يكتم الجميع ويعيدهم أثناء الاتصال بخادم.";
+
+/* live activity */
+"Not transmitting" = "لا يرسل";
+
+/* channel list */
+"On" = "تشغيل";
+
+/* favorite servers widget */
+"Open TeamTalk to see your favorite servers" = "افتح TeamTalk لرؤية خوادمك المفضلة";
+
+/* keyboard shortcuts */
+"Pause or Resume Streaming" = "إيقاف البث مؤقتًا أو استئنافه";
+
+/* channel list */
+"Speakers" = "السماعات";
+
+/* intent */
+"Speakers On" = "السماعات مشغّلة";
+
+/* media stream */
+"Stop Streaming" = "إيقاف البث";
+
+/* transmit control */
+"Talk in TeamTalk" = "التحدث في TeamTalk";
+
+/* speakers control */
+"TeamTalk Speakers" = "سماعات TeamTalk";
+
+/* intent */
+"Toggle Speakers" = "تشغيل السماعات أو كتمها";
+
+/* keyboard shortcuts */
+"Toggle Transmission" = "تشغيل الإرسال أو إيقافه";
+
+/* live activity */
+"Transmission" = "الإرسال";
+
+/* transmit control */
+"Transmitting" = "يتم النقل";
+
+/* transmit control */
+"Turns your transmission on and off while connected to a server." = "يشغّل إرسالك ويوقفه أثناء الاتصال بخادم.";

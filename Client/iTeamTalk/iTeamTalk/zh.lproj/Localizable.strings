@@ -1,8 +1,38 @@
+/* connection quality */
+"%.1f %% (%lld of %lld)" = "%.1f %%（%lld / %lld）";
+
+/* media stream */
+"%@ added to the playlist" = "%@ 已添加到播放列表";
+
+/* media stream */
+"%@ cannot be streamed" = "无法流式传输 %@";
+
+/* channel list */
+"%@ deselected" = "已取消选择 %@";
+
+/* file list */
+"%@ downloaded" = "%@ 已下载";
+
 /* log entry */
 "%@ joined channel" = "%@ 加入频道";
 
 /* log entry */
 "%@ left channel" = "%@ 离开频道";
+
+/* media stream */
+"%@ of %@" = "%@ / %@";
+
+/* media stream */
+"%@ ready, %@" = "%@ 已就绪，%@";
+
+/* channel list */
+"%@ selected" = "已选择 %@";
+
+/* file list */
+"%@ uploaded" = "%@ 已上传";
+
+/* live activity */
+"%@, %d users" = "%@，%d 位用户";
 
 /* Web Login Controller */
 "%@, your username \"%@\" has been validated" = "%@，您的用户名“%@”已通过验证";
@@ -10,8 +40,62 @@
 /* preferences */
 "%d %% - Default" = "%d %% - 默认";
 
+/* user accounts */
+"%d accounts" = "%d 个账户";
+
+/* user accounts */
+"%d accounts changed and %d could not be changed." = "已更改 %d 个账户，%d 个无法更改。";
+
+/* user accounts */
+"%d accounts changed. It applies to each user the next time they log in." = "已更改 %d 个账户。每位用户下次登录时生效。";
+
+/* diagnostics */
+"%d entries" = "%d 条记录";
+
+/* media stream */
+"%d files added to the playlist" = "已将 %d 个文件添加到播放列表";
+
+/* connection quality */
+"%d ms" = "%d 毫秒";
+
+/* user accounts */
+"%d permissions chosen" = "已选择 %d 项权限";
+
+/* user accounts */
+"%d permissions will be given to the %d accounts of the server that are not administrators." = "将有 %d 项权限授予服务器上非管理员的 %d 个账户。";
+
+/* user accounts */
+"%d permissions will be removed from the %d accounts of the server that are not administrators." = "将有 %d 项权限从服务器上非管理员的 %d 个账户移除。";
+
+/* channel picker */
+"%d users" = "%d 位用户";
+
+/* channel list */
+"%d users selected" = "已选择 %d 位用户";
+
+/* channel list */
+"%d users selected to move here" = "已选择 %d 位用户移动到此处";
+
+/* audio codec */
+"%lld KB/s" = "%lld KB/s";
+
+/* audio codec */
+"%lld ms" = "%lld 毫秒";
+
 /* codec detail */
 "(Active)" = "（使用中）";
+
+/* channel picker */
+"1 user" = "1 位用户";
+
+/* channel list */
+"1 user selected" = "已选择 1 位用户";
+
+/* channel list */
+"1 user selected to move here" = "已选择 1 位用户移动到此处";
+
+/* media stream */
+"100 % leaves the file as it is. The preview plays on this device only, with this volume and from the chosen position." = "100 % 保持文件原样。预听仅在此设备上播放，使用此音量并从所选位置开始。";
 
 /* codec detail */
 "12 KHz" = "12 kHz";
@@ -34,8 +118,29 @@
    create channel */
 "8 KHz" = "8 kHz";
 
+/* user accounts */
+"A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "权限更改在用户下次登录时生效。已连接的用户在此之前保留旧权限。";
+
+/* appearance */
+"A theme changes the colors above. You can adjust them afterwards." = "主题会更改上面的颜色。之后你可以再调整。";
+
 /* serverlist */
 "Access preferences" = "打开首选项";
+
+/* appearance */
+"Accessibility 1" = "辅助功能 1";
+
+/* appearance */
+"Accessibility 2" = "辅助功能 2";
+
+/* appearance */
+"Accessibility 3" = "辅助功能 3";
+
+/* appearance */
+"Accessibility 4" = "辅助功能 4";
+
+/* appearance */
+"Accessibility 5" = "辅助功能 5";
 
 /* server entry
    user detail */
@@ -44,8 +149,50 @@
 /* channel list */
 "Active" = "已激活";
 
+/* media stream */
+"Add" = "添加";
+
+/* media stream */
+"Add Files" = "添加文件";
+
 /* serverlist */
 "Add new server entry" = "添加新服务器";
+
+/* serverlist */
+"Add to Favorites" = "添加到收藏";
+
+/* incoming file */
+"Add to Streaming Playlist" = "添加到流式传输播放列表";
+
+/* media stream */
+"Add Web Address" = "添加网址";
+
+/* incoming file */
+"Added to the streaming playlist" = "已添加到流式传输播放列表";
+
+/* media stream */
+"Address of a web radio or of an audio or video file" = "网络电台或音频、视频文件的地址";
+
+/* user accounts */
+"Administrator" = "管理员";
+
+/* channel list */
+"All" = "全部";
+
+/* all users */
+"All Users" = "所有用户";
+
+/* diagnostics */
+"Allowed" = "已允许";
+
+/* appearance */
+"Always Dark" = "始终深色";
+
+/* appearance */
+"Always Light" = "始终浅色";
+
+/* user accounts */
+"An administrator has every permission, whatever is set here." = "无论此处如何设置，管理员都拥有全部权限。";
 
 /* preferences */
 "Announce content of text message" = "播报消息内容";
@@ -68,11 +215,23 @@
 /* text to speech */
 "Announcements" = "播报";
 
+/* user accounts */
+"Anonymous users" = "匿名用户";
+
 /* preferences */
 "App Version" = "App 版本";
 
+/* appearance */
+"Appearance" = "外观";
+
 /* codec detail */
 "Application" = "应用场景";
+
+/* appearance */
+"Apply High Contrast Theme" = "应用高对比度主题";
+
+/* appearance */
+"Apply Pure Dark Theme" = "应用纯黑主题";
 
 /* preferences */
 "Ascending" = "升序";
@@ -83,6 +242,9 @@
 /* create channel */
 "Audio Codec" = "音频编解码器";
 
+/* channel list */
+"Audio Output" = "音频输出";
+
 /* Web Login Controller */
 "Authenticate" = "验证";
 
@@ -90,8 +252,50 @@
    Web Login controller */
 "Authentication" = "身份验证";
 
+/* preferences */
+"Available" = "在线";
+
+/* preferences */
+"Away" = "离开";
+
+/* media stream */
+"Back 1 Minute" = "后退 1 分钟";
+
+/* media stream */
+"Back 10 Seconds" = "后退 10 秒";
+
+/* backup */
+"Backup" = "备份";
+
+/* backup */
+"Backup restored. Close the app and open it again to apply every setting." = "备份已恢复。请关闭 App 并重新打开以应用所有设置。";
+
+/* channel list */
+"Ban" = "封禁";
+
+/* channel list */
+"Ban %@?" = "封禁 %@？";
+
+/* channel list */
+"Ban %d users?" = "封禁 %d 位用户？";
+
+/* ban list */
+"Ban removed" = "已解除封禁";
+
 /* channel list */
 "Ban user" = "封禁用户";
+
+/* user accounts */
+"Ban users" = "封禁用户";
+
+/* ban list */
+"Banned by %@" = "封禁者：%@";
+
+/* ban list */
+"Banned on %@" = "封禁时间：%@";
+
+/* ban list */
+"Banned Users" = "已封禁的用户";
 
 /* server entry */
 "BearWare.dk Web Login" = "BearWare.dk Web 登录";
@@ -111,8 +315,14 @@
 /* Sound Devices */
 "Bluetooth playback should use Advanced Audio Distribution Profile" = "蓝牙播放使用高级音频分发协议（A2DP）";
 
+/* all users */
+"Bring to My Channel" = "带到我的频道";
+
 /* text message type */
 "Broadcast message" = "广播消息";
+
+/* text message */
+"Broadcast Message" = "广播消息";
 
 /* preferences
    user detail */
@@ -124,9 +334,27 @@
 /* Dialog message */
 "Cancel" = "取消";
 
+/* file list */
+"Cancels the download" = "取消下载";
+
+/* file list */
+"Cancels the upload" = "取消上传";
+
+/* user accounts */
+"Change the Permissions of Every Account" = "更改所有账户的权限";
+
+/* user accounts */
+"Change the properties of the server" = "更改服务器属性";
+
+/* user accounts */
+"Changing accounts, %d of %d" = "正在更改账户，%d / %d";
+
 /* channel list
    server entry */
 "Channel" = "频道";
+
+/* View Title */
+"Channel Detail" = "频道详情";
 
 /* text message type */
 "Channel message" = "频道消息";
@@ -147,20 +375,107 @@
 /* channel list */
 "Channel. %d users" = "频道，%d 个用户";
 
+/* ban list */
+"Channel: %@" = "频道：%@";
+
+/* channel list */
+"Channels" = "频道";
+
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "仅当此服务器启用了 BearWare.dk Web 登录时勾选";
+
+/* diagnostics */
+"Checks" = "检查";
+
+/* media stream */
+"Choose a file" = "选取文件";
+
+/* channel picker */
+"Choose Channel" = "选取频道";
+
+/* appearance */
+"Choose colors, text size and font" = "选取颜色、文字大小和字体";
+
+/* preferences */
+"Choose events to playback" = "选取要播报的事件";
+
+/* file list */
+"Choose Files" = "选取文件";
+
+/* preferences */
+"Choose input and output devices" = "选取输入和输出设备";
+
+/* user accounts */
+"Choose one or more permissions and then what to do with them. Administrator accounts are not changed." = "选取一项或多项权限，然后选择如何处理。管理员账户不会更改。";
+
+/* preferences */
+"Choose sounds events to play" = "选取要播放的提示音事件";
+
+/* all users */
+"Choosing a user shows the channel they are in. If the server does not let your account see all users, only those of your channel are listed." = "选取用户会显示其所在的频道。如果服务器不允许你的账户查看所有用户，则只列出你频道中的用户。";
+
+/* channel detail */
+"Classroom" = "课堂";
+
+/* diagnostics */
+"Clear Log" = "清除日志";
+
+/* media stream */
+"Close" = "关闭";
+
+/* channel picker */
+"Collapsed" = "已折叠";
+
+/* appearance */
+"Color of buttons, switches and the selected tab." = "按钮、开关和所选标签页的颜色。";
+
+/* appearance */
+"Color of the Speakers button in each state. Its icon is shown in black or white, whichever is easier to read." = "扬声器按钮在各状态下的颜色。图标以黑色或白色显示，以更易辨认者为准。";
+
+/* appearance */
+"Color of the Talk button in each state. Its text is shown in black or white, whichever is easier to read." = "讲话按钮在各状态下的颜色。文字以黑色或白色显示，以更易辨认者为准。";
+
+/* appearance */
+"Colors and Text" = "颜色与文字";
+
+/* appearance */
+"Colors of the More menu of the channel list. Until you choose them it follows the theme: dark with light text in dark mode, and the other way round in light mode." = "频道列表中“更多”菜单的颜色。在你选取之前它跟随主题：深色模式下为深色配浅色文字，浅色模式下相反。";
+
+/* keyboard shortcuts */
+"Command" = "Command";
 
 /* log entry */
 "Command failed: %@" = "命令失败：%@";
 
+/* connection quality */
+"Command Latency (TCP)" = "命令延迟 (TCP)";
+
 /* create channel */
 "Commands" = "命令";
+
+/* channel list */
+"Confirm" = "确认";
+
+/* server list */
+"Connect" = "连接";
+
+/* preferences */
+"Connect on Startup" = "启动时连接";
+
+/* incoming file */
+"Connect to a server and join a channel to send %@" = "连接服务器并加入频道以发送 %@";
+
+/* connection quality */
+"Connect to a server to see the quality of the connection" = "连接服务器以查看连接质量";
 
 /* serverlist */
 "Connect to server" = "连接到服务器";
 
 /* connect to a server */
 "Connect to Server" = "连接到服务器";
+
+/* preferences */
+"Connect to the last server and channel when the app opens" = "打开 App 时连接上次的服务器和频道";
 
 /* preferences
    server entry */
@@ -170,11 +485,38 @@
    tts event */
 "Connection lost" = "连接已断开";
 
+/* connection quality */
+"Connection Quality" = "连接质量";
+
+/* keyboard shortcuts */
+"Control" = "Control";
+
+/* user accounts */
+"Control a shared desktop" = "控制共享的桌面";
+
+/* media stream */
+"Controls" = "控制";
+
+/* text message */
+"Copied" = "已拷贝";
+
 /* server entry */
 "Copy" = "复制";
 
 /* server entry */
+"Copy Join Code" = "拷贝加入码";
+
+/* serverlist */
+"Copy Link" = "拷贝链接";
+
+/* connection quality */
+"Counted over the voice received from the users of your channel since you joined it. Above 2 % voices start to break up." = "根据你加入后从频道用户收到的语音统计。超过 2 % 时语音开始断续。";
+
+/* server entry */
 "Country" = "国家";
+
+/* user accounts */
+"Create and change permanent channels" = "创建和更改永久频道";
 
 /* View Title */
 "Create Channel" = "创建频道";
@@ -182,21 +524,72 @@
 /* main-tab */
 "Create new channel" = "创建新频道";
 
+/* user accounts */
+"Create temporary channels" = "创建临时频道";
+
+/* web login */
+"Create Web Login" = "创建网页登录";
+
+/* media stream */
+"Current File" = "当前文件";
+
+/* connection quality */
+"Data" = "数据";
+
 /* Sound Input */
 "Default" = "默认";
 
 /* preferences */
 "Default Subscriptions" = "默认订阅";
 
+/* user accounts */
+"Default user" = "普通用户";
+
+/* file list serverlist */
+"Delete" = "删除";
+
+/* file list */
+"Delete \"%@\" from the channel?" = "从频道中删除“%@”？";
+
+/* server list */
+"Delete \"%@\" from the server list?" = "从服务器列表中删除“%@”？";
+
+/* channel detail */
+"Delete Channel" = "删除频道";
+
+/* file list */
+"Delete File" = "删除文件";
+
+/* server list */
+"Delete Server" = "删除服务器";
+
 /* serverlist */
 "Delete server from list" = "从列表中删除服务器";
+
+/* channel list */
+"Deselect user" = "取消选择用户";
 
 /* preferences
    user detail */
 "Desktop" = "桌面";
 
+/* diagnostics */
+"Diagnostic Log" = "诊断日志";
+
+/* diagnostics */
+"Diagnostics" = "诊断";
+
+/* preferences */
+"Disabled" = "已停用";
+
+/* channel list */
+"Disconnect" = "断开连接";
+
 /* preferences */
 "Display" = "显示";
+
+/* channel list */
+"Done selecting" = "完成选择";
 
 /* channel list */
 "Double tap and hold to transmit. Triple tap fast to lock transmission." = "双击并按住进行传输。快速三击以锁定传输。";
@@ -204,14 +597,41 @@
 /* preferences */
 "Double tap to lock TX button" = "双击锁定传输";
 
+/* user accounts */
+"Download files" = "下载文件";
+
+/* file list */
+"Downloaded" = "已下载";
+
+/* file list */
+"Downloading, %d %%" = "正在下载，%d %%";
+
+/* file list */
+"Downloads the file" = "下载该文件";
+
 /* codec detail */
 "DTX" = "不连续传输";
+
+/* media stream */
+"Duration" = "时长";
+
+/* user accounts */
+"Each change is saved at once and applies the next time this user logs in." = "每项更改会立即保存，并在该用户下次登录时生效。";
+
+/* channel list */
+"Earpiece or Headset" = "听筒或耳机";
+
+/* channel list */
+"Edit" = "编辑";
 
 /* channel list */
 "Edit properties" = "编辑属性";
 
 /* server entry */
 "Encrypted" = "加密";
+
+/* media stream */
+"Enter a web address that starts with http or https" = "请输入以 http 或 https 开头的网址";
 
 /* serverlist */
 "Enter Join Code" = "输入加入码";
@@ -225,14 +645,104 @@
    user detail */
 "Error" = "错误";
 
+/* media stream */
+"Error while streaming media file" = "流式传输媒体文件时出错";
+
+/* user accounts */
+"Every Account" = "所有账户";
+
+/* user accounts */
+"Every account was already like that. Nothing has been changed." = "所有账户已是如此。未做任何更改。";
+
+/* transmit control */
+"Everyone" = "所有人";
+
+/* transmit control */
+"Everyone can transmit in this channel except what is turned off here." = "此频道中所有人都可以发送，此处关闭的除外。";
+
 /* preferences */
 "Exclusive Mode Toggled" = "发言权切换";
+
+/* channel list */
+"Expand" = "展开";
+
+/* channel picker */
+"Expanded" = "已展开";
+
+/* appearance */
+"Export Appearance" = "导出外观";
+
+/* backup */
+"Export Settings and Servers" = "导出设置和服务器";
+
+/* appearance */
+"Exports the colors, the text and the theme to a file that someone else can import." = "将颜色、文字和主题导出到文件，供他人导入。";
+
+/* appearance */
+"Extra Extra Extra Large" = "超超超大";
+
+/* appearance */
+"Extra Extra Large" = "超超大";
+
+/* appearance */
+"Extra Large" = "超大";
+
+/* appearance */
+"Extra Small" = "超小";
+
+/* file list */
+"Failed to download file" = "下载文件失败";
+
+/* media stream */
+"Failed to play the file" = "播放文件失败";
 
 /* connect to a server */
 "Failed to setup encryption" = "设置加密失败";
 
+/* media stream */
+"Failed to stream media file" = "流式传输媒体文件失败";
+
+/* file list */
+"Failed to transfer %@" = "传输 %@ 失败";
+
+/* file list */
+"Failed to upload file" = "上传文件失败";
+
+/* serverlist */
+"Favorite" = "收藏";
+
 /* preferences */
 "Female" = "女";
+
+/* media stream */
+"File" = "文件";
+
+/* sound events */
+"File Added" = "文件已添加";
+
+/* sound events */
+"File Removed" = "文件已移除";
+
+/* file list */
+"Files" = "文件";
+
+/* media stream */
+"Files stay in the list until you remove them. When one ends, the next one starts." = "文件会留在列表中，直到你将其移除。一个结束后，下一个开始。";
+
+/* preferences */
+"Filter Server List" = "过滤服务器列表";
+
+/* appearance */
+"Font" = "字体";
+
+/* appearance */
+"Font of Server Events" = "服务器事件的字体";
+
+/* media stream */
+"Forward 1 Minute" = "前进 1 分钟";
+
+/* media stream */
+"Forward 10 Seconds" = "前进 10 秒";
 
 /* codec detail */
 "Frame Size" = "帧大小";
@@ -243,6 +753,12 @@
 /* preferences
    user detail */
 "General" = "常规";
+
+/* user accounts */
+"Give to Every Account" = "授予所有账户";
+
+/* channel list */
+"Go to Their Channel" = "前往其频道";
 
 /* TTS EVENT */
 "has joined the channel" = "加入了频道";
@@ -265,11 +781,47 @@
 /* server entry */
 "Host address" = "主机地址";
 
+/* appearance */
+"Import Appearance" = "导入外观";
+
+/* backup */
+"Import Backup" = "导入备份";
+
 /* channel list */
 "Inactive" = "未激活";
 
+/* appearance */
+"Interface" = "界面";
+
+/* appearance */
+"Interface Color" = "界面颜色";
+
+/* Sound Devices */
+"iOS Voice Processing" = "iOS 语音处理";
+
+/* Sound Devices */
+"iOS voice processing cancels echo, reduces noise and levels the volume. WebRTC reduces noise and levels the volume but does not cancel echo, so use it with headphones." = "iOS 语音处理可消除回声、降低噪声并均衡音量。WebRTC 可降低噪声并均衡音量，但不消除回声，因此请配合耳机使用。";
+
+/* ban list */
+"IP address: %@" = "IP 地址：%@";
+
+/* user accounts */
+"It applies to each user the next time they log in." = "每位用户下次登录时生效。";
+
+/* text message */
+"It is sent to every user of the server" = "将发送给服务器上的所有用户";
+
 /* Dialog message */
 "Join" = "加入";
+
+/* file list */
+"Join a channel to see its files" = "加入频道以查看其文件";
+
+/* incoming file */
+"Join a channel to send %@" = "加入频道以发送 %@";
+
+/* media stream */
+"Join a channel to stream a media file" = "加入频道以流式传输媒体文件";
 
 /* server entry */
 "Join Channel" = "加入频道";
@@ -286,23 +838,92 @@
 /* preferences */
 "Join root channel after login" = "登录后加入根频道";
 
+/* all users */
+"Join Their Channel" = "加入其频道";
+
+/* channel list */
+"Join this channel" = "加入此频道";
+
 /* log entry */
 "Joined %@" = "已加入 %@";
+
+/* keyboard shortcuts */
+"Key" = "按键";
+
+/* keyboard shortcuts */
+"Keyboard Shortcuts" = "键盘快捷键";
+
+/* preferences */
+"Keys of an external keyboard to talk and to mute" = "用外接键盘的按键讲话和静音";
+
+/* channel list */
+"Kick" = "踢出";
+
+/* channel list */
+"Kick %@?" = "踢出 %@？";
+
+/* channel list */
+"Kick %d users?" = "踢出 %d 位用户？";
+
+/* user detail */
+"Kick and Ban User" = "踢出并封禁用户";
 
 /* channel list */
 "Kick user" = "踢出用户";
 
+/* user detail */
+"Kick User" = "踢出用户";
+
+/* user accounts */
+"Kick users off the server" = "将用户踢出服务器";
+
+/* appearance */
+"Large" = "大";
+
+/* connection quality */
+"Latency" = "延迟";
+
+/* connection quality */
+"Latency and packet loss" = "延迟和丢包";
+
+/* appearance */
+"Light or Dark" = "浅色或深色";
+
 /* preferences */
 "Limit length of names in channel list to %d characters" = "将频道列表中的名称长度限制为 %d 个字符";
 
+/* preferences */
+"Limit types of servers to show" = "限制显示的服务器类型";
+
+/* serverlist */
+"Link copied" = "链接已拷贝";
+
+/* appearance */
+"Listening" = "正在收听";
+
+/* media stream */
+"Live" = "直播";
+
+/* diagnostics */
+"Live Activities" = "实时活动";
+
 /* serverlist */
 "Local server" = "本地服务器";
+
+/* user accounts */
+"Log in from several devices at once" = "同时从多台设备登录";
 
 /* text message type */
 "Log message" = "日志消息";
 
 /* log entry */
 "Logged on to server" = "已登录服务器";
+
+/* preferences */
+"Login ID from BearWare.dk" = "BearWare.dk 的登录 ID";
+
+/* user accounts */
+"Make other users channel operator" = "将其他用户设为频道管理员";
 
 /* preferences */
 "Male" = "男";
@@ -324,18 +945,72 @@
 /* preferences */
 "Media file vs. voice volume" = "媒体文件与语音音量比例";
 
+/* transmit control */
+"Media Files" = "媒体文件";
+
+/* appearance */
+"Medium" = "中";
+
+/* appearance */
+"Menu Background" = "菜单背景";
+
+/* appearance */
+"Menu Text" = "菜单文字";
+
+/* appearance */
+"Menus" = "菜单";
+
+/* text messages */
+"Message" = "消息";
+
 /* server entry */
 "Message of the Day" = "每日公告";
 
+/* appearance */
+"Message Text Size" = "消息文字大小";
+
+/* channel list */
+"Message this user" = "给此用户发消息";
+
+/* tab */
+"Messages" = "消息";
+
+/* diagnostics */
+"Microphone" = "麦克风";
+
 /* preferences */
 "Microphone Gain" = "麦克风增益";
+
+/* Sound Devices */
+"Microphone Test" = "麦克风测试";
+
+/* user accounts */
+"Moderation" = "管理";
+
+/* keyboard shortcuts */
+"Modifier" = "修饰键";
 
 /* codec detail
    create channel */
 "Mono" = "单声道";
 
+/* appearance */
+"Monospaced" = "等宽";
+
+/* channel list */
+"More" = "更多";
+
+/* channel list */
+"Move" = "移动";
+
+/* channel list */
+"Move to Channel" = "移动到频道";
+
 /* channel list */
 "Move user" = "移动用户";
+
+/* user accounts */
+"Move users between channels" = "在频道之间移动用户";
 
 /* channel list */
 "Move users here" = "移动用户至此";
@@ -349,8 +1024,17 @@
 /* user detail */
 "Mute Media File" = "静音媒体文件";
 
+/* keyboard shortcuts */
+"Mute or Unmute Speakers" = "将扬声器静音或取消静音";
+
 /* user detail */
 "Mute Voice" = "静音语音";
+
+/* channel list */
+"Muted" = "已静音";
+
+/* channel list */
+"Mutes or unmutes everything you hear from the server" = "将你从服务器听到的一切静音或取消静音";
 
 /* create channel
    server entry */
@@ -359,14 +1043,23 @@
 /* preferences */
 "Name displayed in channel list" = "显示在频道列表中的名称";
 
+/* preferences */
+"Neutral" = "中性";
+
 /* Dialog message */
 "New Server" = "新服务器";
+
+/* media stream */
+"Next File" = "下一个文件";
 
 /* preferences */
 "Nickname" = "昵称";
 
 /* server entry */
 "Nickname (optional)" = "昵称（可选）";
+
+/* user accounts */
+"Nickname locked, cannot be changed" = "昵称已锁定，无法更改";
 
 /* Dialog message */
 "No" = "否";
@@ -378,20 +1071,71 @@
 /* create channel */
 "No Audio Recording" = "禁止录音";
 
+/* ban list */
+"No banned users" = "没有已封禁的用户";
+
+/* connection quality */
+"No data" = "无数据";
+
+/* file list */
+"No files in this channel" = "此频道中没有文件";
+
 /* create channel */
 "No Interruptions" = "禁止插话";
+
+/* keyboard shortcuts */
+"No Modifier" = "无修饰键";
 
 /* channel list */
 "No password" = "无密码";
 
+/* channel list */
+"No results" = "无结果";
+
 /* serverlist */
 "No server found" = "未找到服务器";
+
+/* user accounts */
+"No user accounts" = "没有用户账户";
+
+/* channel list */
+"No users selected" = "未选择用户";
+
+/* channel list */
+"No users selected to move" = "未选择要移动的用户";
 
 /* create channel */
 "No Voice Activation" = "禁止语音激活";
 
 /* default nickname */
 "Noname" = "无名氏";
+
+/* keyboard shortcuts and voice cleanup */
+"None" = "无";
+
+/* diagnostics */
+"Not allowed. Nobody can hear you until you turn it on in Settings, under TeamTalk." = "未允许。在“设置”的 TeamTalk 下打开之前，没有人能听到你。";
+
+/* diagnostics */
+"Not asked yet. iOS asks the first time you join a channel." = "尚未询问。你首次加入频道时 iOS 会询问。";
+
+/* diagnostics */
+"Not available with this installation. The widget cannot show your servers and the controls do not show their state." = "此安装方式下不可用。小组件无法显示你的服务器，控制项也不显示其状态。";
+
+/* live activity */
+"Not in a channel" = "不在频道中";
+
+/* diagnostics */
+"Not installed. The app was installed without its extension, so there are no Live Activities, widget or controls. Install it again with a tool that keeps the extensions." = "未安装。App 安装时未包含其扩展，因此没有实时活动、小组件和控制项。请使用保留扩展的工具重新安装。";
+
+/* media stream */
+"Not streaming" = "未在流式传输";
+
+/* live activity */
+"Not transmitting" = "未在发送";
+
+/* media stream */
+"Off" = "关";
 
 /* serverlist */
 "Official server" = "官方服务器";
@@ -403,11 +1147,35 @@
    Web Login Controller */
 "OK" = "好";
 
+/* channel list */
+"On" = "开";
+
+/* channel detail */
+"Only the users you allow can transmit" = "只有你允许的用户可以发送";
+
+/* text message */
+"Open Link" = "打开链接";
+
+/* diagnostics */
+"Open Settings" = "打开设置";
+
+/* file list */
+"Opens the file" = "打开该文件";
+
+/* keyboard shortcuts */
+"Option" = "Option";
+
 /* codec detail */
 "OPUS Codec" = "OPUS 编解码器";
 
 /* preferences */
 "Order of channels in Channel List" = "频道列表中的频道顺序";
+
+/* user accounts */
+"Other" = "其他";
+
+/* connection quality */
+"Packet Loss" = "丢包";
 
 /* channel list */
 "Parent channel" = "上级频道";
@@ -421,8 +1189,26 @@
 /* channel list */
 "Password protected" = "密码保护";
 
+/* media stream */
+"Pause" = "暂停";
+
+/* keyboard shortcuts */
+"Pause or Resume Streaming" = "暂停或继续流式传输";
+
+/* media stream */
+"Paused" = "已暂停";
+
 /* create channel */
 "Permanent Channel" = "永久频道";
+
+/* file list */
+"Photos and Videos" = "照片和视频";
+
+/* sound events */
+"Play sound when a file is removed from the channel" = "文件从频道移除时播放声音";
+
+/* sound events */
+"Play sound when a file is uploaded to the channel" = "文件上传到频道时播放声音";
 
 /* preferences */
 "Play sound when a user joins the channel" = "用户加入频道时播放声音";
@@ -457,11 +1243,17 @@
 /* preferences */
 "Play sound when voice transmission is toggled" = "切换语音传输时播放声音";
 
+/* media stream */
+"Playlist" = "播放列表";
+
 /* preferences */
 "Pop up text message when new messages are received" = "收到新消息时弹出显示";
 
 /* preferences */
 "Popularity" = "热度";
+
+/* media stream */
+"Position" = "位置";
 
 /* serverlist */
 "Preferences" = "首选项";
@@ -469,11 +1261,23 @@
 /* Sound Input */
 "Preferred" = "首选";
 
+/* media stream */
+"Preparing file" = "正在准备文件";
+
 /* preferences */
 "Pressing Return-key sends text message" = "按回车键发送消息";
 
+/* appearance */
+"Preview" = "预览";
+
+/* media stream */
+"Previous File" = "上一个文件";
+
 /* text message type */
 "Private message" = "私信";
+
+/* channel list */
+"Private Message" = "私信";
 
 /* preferences */
 "Private Text Message" = "私信";
@@ -487,11 +1291,17 @@
 /* serverlist */
 "Public server" = "公共服务器";
 
+/* channel list */
+"Push to Talk" = "按住讲话";
+
 /* preferences */
 "Push To Talk Lock" = "锁定按键说话";
 
 /* codec detail */
 "Quality" = "质量";
+
+/* preferences */
+"Question" = "提问";
 
 /* preferences */
 "Receive broadcast messages by default" = "默认接收广播消息";
@@ -514,6 +1324,45 @@
 /* preferences */
 "Receive webcam streams by default" = "默认接收视频流";
 
+/* connection quality */
+"Received" = "已接收";
+
+/* appearance */
+"Received message" = "收到的消息";
+
+/* appearance */
+"Received Messages" = "收到的消息";
+
+/* user accounts */
+"Record voice in every channel" = "在所有频道录制语音";
+
+/* ban list */
+"Remove Ban" = "解除封禁";
+
+/* user accounts */
+"Remove from Every Account" = "从所有账户移除";
+
+/* serverlist */
+"Remove from Favorites" = "从收藏中移除";
+
+/* media stream */
+"Repeat" = "重复";
+
+/* web login */
+"Reset Web Login" = "重置网页登录";
+
+/* appearance */
+"Restore Default Appearance" = "恢复默认外观";
+
+/* keyboard shortcuts */
+"Restore Default Shortcuts" = "恢复默认快捷键";
+
+/* media stream */
+"Resume" = "继续";
+
+/* keyboard shortcuts */
+"Return" = "Return";
+
 /* preferences */
 "Return Sends Message" = "回车发送消息";
 
@@ -523,14 +1372,71 @@
 /* log entry */
 "root channel" = "根频道";
 
+/* appearance */
+"Rounded" = "圆体";
+
+/* appearance */
+"Same as the App" = "与 App 相同";
+
+/* appearance */
+"Same as the System" = "与系统相同";
+
 /* codec detail */
 "Sample Rate" = "采样率";
+
+/* channel detail */
+"Save" = "保存";
 
 /* Dialog message */
 "Save Server" = "保存服务器";
 
+/* server entry */
+"Save server" = "保存服务器";
+
 /* Dialog message */
 "Save server to server list?" = "是否将服务器保存到服务器列表？";
+
+/* user accounts */
+"Search accounts" = "搜索账户";
+
+/* channel picker */
+"Search channels" = "搜索频道";
+
+/* channel list */
+"Search channels and users" = "搜索频道和用户";
+
+/* serverlist */
+"Search servers" = "搜索服务器";
+
+/* all users */
+"Search users" = "搜索用户";
+
+/* user accounts */
+"See hidden channels" = "查看隐藏的频道";
+
+/* user accounts */
+"See the users of every channel" = "查看所有频道的用户";
+
+/* preferences */
+"Select the text-to-speech voice to use" = "选择要使用的文本转语音声音";
+
+/* channel list */
+"Select users" = "选择用户";
+
+/* speech */
+"Selected" = "已选择";
+
+/* text messages */
+"Send" = "发送";
+
+/* text message */
+"Send broadcast message" = "发送广播消息";
+
+/* user accounts */
+"Send broadcast messages" = "发送广播消息";
+
+/* user accounts */
+"Send channel messages" = "发送频道消息";
 
 /* text message */
 "Send empty message to close keyboard" = "发送空消息以关闭键盘";
@@ -538,8 +1444,38 @@
 /* channel list */
 "Send private message" = "发送私信";
 
+/* user accounts */
+"Send private messages" = "发送私信";
+
+/* incoming file */
+"Send to TeamTalk" = "发送到 TeamTalk";
+
+/* media stream */
+"Send Video" = "发送视频";
+
+/* connection quality */
+"Sent" = "已发送";
+
+/* appearance */
+"Sent message" = "发出的消息";
+
+/* appearance */
+"Sent Messages" = "发出的消息";
+
+/* appearance */
+"Serif" = "衬线";
+
 /* preferences */
 "Server Connection Lost" = "服务器连接断开";
+
+/* server entry */
+"Server Entry" = "服务器条目";
+
+/* appearance */
+"Server event" = "服务器事件";
+
+/* appearance */
+"Server Events" = "服务器事件";
 
 /* server entry */
 "Server List Entry" = "服务器列表条目";
@@ -548,13 +1484,52 @@
 "Server Status" = "服务器状态";
 
 /* preferences */
+"Setup Announcements" = "设置播报";
+
+/* preferences */
+"Setup Sound Devices" = "设置声音设备";
+
+/* preferences */
+"Setup Sound Events" = "设置提示音";
+
+/* file list */
+"Share" = "共享";
+
+/* diagnostics */
+"Share Log" = "共享日志";
+
+/* serverlist */
+"Share Server" = "共享服务器";
+
+/* user accounts */
+"Share the desktop" = "共享桌面";
+
+/* file list */
+"Shares or opens the file" = "共享或打开该文件";
+
+/* keyboard shortcuts */
+"Shift" = "Shift";
+
+/* keyboard shortcuts */
+"Shortcuts work with an external keyboard while connected to a server. A key without a modifier does nothing while you are typing a message." = "连接到服务器时，快捷键可配合外接键盘使用。不带修饰键的按键在你输入消息时不起作用。";
+
+/* preferences */
 "Show in Server List" = "在服务器列表中显示";
 
 /* preferences */
 "Show male or female icon" = "显示男性或女性图标";
 
+/* server entry */
+"Show password" = "显示密码";
+
+/* server list */
+"Show server details" = "显示服务器详情";
+
 /* preferences */
 "Show Text Messages Instantly" = "立即显示消息";
+
+/* channel list */
+"Show user details" = "显示用户详情";
 
 /* preferences */
 "Show Usernames" = "显示用户名";
@@ -562,11 +1537,23 @@
 /* preferences */
 "Show usernames instead of nicknames" = "显示用户名而非昵称";
 
+/* preferences */
+"Shown to the other users of the server" = "向服务器上的其他用户显示";
+
 /* channel list */
 "Silent" = "未说话";
 
+/* appearance */
+"Size and font apply to the whole app." = "大小和字体应用于整个 App。";
+
+/* appearance */
+"Small" = "小";
+
 /* preferences */
 "Sort Channels" = "频道排序";
+
+/* media stream */
+"Sound" = "声音";
 
 /* preferences
    text to speech */
@@ -575,8 +1562,26 @@
 /* preferences */
 "Sound System" = "声音系统";
 
+/* keyboard shortcuts */
+"Space" = "空格";
+
+/* channel list */
+"Speaker" = "扬声器";
+
 /* preferences */
 "Speaker Output" = "扬声器输出";
+
+/* channel list */
+"Speakers" = "扬声器";
+
+/* appearance */
+"Speakers Button" = "扬声器按钮";
+
+/* intent */
+"Speakers On" = "扬声器已打开";
+
+/* preferences */
+"Speech" = "语音";
 
 /* preferences */
 "Speech Rate" = "语速";
@@ -590,15 +1595,84 @@
 /* codec detail */
 "Speex Variable Bitrate Codec" = "Speex 可变比特率编解码器";
 
+/* text to speech events */
+"Spoken By" = "播报方式";
+
+/* text to speech events, accessibility */
+"Spoken by, %@" = "播报方式，%@";
+
+/* appearance */
+"Standard" = "标准";
+
+/* media stream */
+"Start Streaming" = "开始流式传输";
+
+/* preferences */
+"Status" = "状态";
+
 /* Text message view */
 "Status Event" = "状态事件";
+
+/* user accounts */
+"Status locked, cannot be changed" = "状态已锁定，无法更改";
+
+/* preferences */
+"Status Message" = "状态消息";
 
 /* codec detail
    create channel */
 "Stereo" = "立体声";
 
+/* Sound Devices */
+"Stop Microphone Test" = "停止麦克风测试";
+
+/* media stream */
+"Stop Preview" = "停止预听";
+
+/* media stream */
+"Stop Streaming" = "停止流式传输";
+
+/* user accounts */
+"Stream audio files" = "流式传输音频文件";
+
+/* media stream */
+"Stream Media File" = "流式传输媒体文件";
+
+/* media stream */
+"Stream media file" = "流式传输媒体文件";
+
+/* user accounts */
+"Stream video files" = "流式传输视频文件";
+
+/* media stream */
+"Streaming" = "流式传输";
+
+/* media stream */
+"Streaming %@" = "正在流式传输 %@";
+
+/* media stream */
+"Streaming finished" = "流式传输已结束";
+
+/* media stream */
+"Streaming started" = "流式传输已开始";
+
 /* user detail */
 "Subscriptions" = "订阅";
+
+/* appearance */
+"Swap Speakers Button Colors" = "交换扬声器按钮的颜色";
+
+/* appearance */
+"Swap Talk Button Colors" = "交换讲话按钮的颜色";
+
+/* appearance */
+"System Size" = "系统大小";
+
+/* channel list */
+"Talk" = "讲话";
+
+/* appearance */
+"Talk Button" = "讲话按钮";
 
 /* channel list */
 "Talking" = "正在说话";
@@ -606,17 +1680,98 @@
 /* server entry */
 "TCP Port" = "TCP 端口";
 
+/* channel list */
+"TeamTalk has no access to the microphone. Turn it on in Settings, under TeamTalk, and try again." = "TeamTalk 无权访问麦克风。请在“设置”的 TeamTalk 下打开，然后重试。";
+
+/* server list */
+"TeamTalk Servers" = "TeamTalk 服务器";
+
+/* text to speech events */
+"TeamTalk Voice" = "TeamTalk 语音";
+
+/* Sound Devices */
+"Test Microphone" = "测试麦克风";
+
+/* appearance */
+"Text" = "文字";
+
+/* appearance */
+"Text Messages" = "文字消息";
+
+/* channel list */
+"Text Messaging" = "文字消息";
+
+/* appearance */
+"Text of the Messages" = "消息的文字";
+
+/* preferences */
+"Text shown next to your name" = "显示在你名字旁边的文字";
+
+/* appearance */
+"Text Size" = "文字大小";
+
 /* preferences */
 "Text To Speech Events" = "文字转语音事件";
+
+/* speech */
+"Text-to-Speech Voice" = "文本转语音声音";
+
+/* user accounts */
+"The account could not be saved" = "无法保存该账户";
+
+/* backup */
+"The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "备份包含所有设置和服务器列表及其密码。请将文件妥善保管。";
+
+/* diagnostics */
+"The log is empty" = "日志为空";
+
+/* diagnostics */
+"The log records what the app does: connection, sound devices, transfers and errors. It holds no passwords and nothing of what is said or written." = "日志记录 App 的操作：连接、声音设备、传输和错误。它不包含密码，也不包含任何说出或写下的内容。";
+
+/* appearance */
+"The messages can have a text size of their own, and the server events a font of their own." = "消息可以有自己的文字大小，服务器事件可以有自己的字体。";
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "朗读语速为 %.1f";
 
+/* appearance */
+"The text of a message is shown in black or white, whichever is easier to read on its color." = "消息的文字以黑色或白色显示，以在其颜色上更易辨认者为准。";
+
+/* appearance */
+"The text of a message is shown in black or white, whichever is easier to read on its color. Server events are what happens on the server, like someone joining or leaving the channel." = "消息的文字以黑色或白色显示，以在其颜色上更易辨认者为准。服务器事件是服务器上发生的事情，例如有人加入或离开频道。";
+
 /* preferences */
 "The volume of the speaking voice is %.1f" = "朗读音量为 %.1f";
 
+/* appearance */
+"Themes" = "主题";
+
+/* diagnostics */
+"They need iOS 17 or later" = "需要 iOS 17 或更高版本";
+
+/* media stream */
+"This file cannot be streamed" = "无法流式传输此文件";
+
+/* backup */
+"This file is not a TeamTalk backup" = "此文件不是 TeamTalk 备份";
+
+/* appearance */
+"This file is not an appearance exported from TeamTalk" = "此文件不是从 TeamTalk 导出的外观";
+
+/* transmit control */
+"This is a classroom channel: only what is turned on here can be transmitted." = "这是课堂频道：只有此处打开的内容可以发送。";
+
+/* media stream */
+"This web address cannot be streamed" = "无法流式传输此网址";
+
+/* connection quality */
+"Time a packet takes to reach the server and come back. Below 100 ms a conversation feels immediate." = "数据包到达服务器并返回所需的时间。低于 100 毫秒时对话感觉是即时的。";
+
 /* channel list */
 "Toggle to enable/disable transmission" = "切换以启用/禁用传输";
+
+/* keyboard shortcuts */
+"Toggle Transmission" = "开关发送";
 
 /* preferences */
 "Toggle voice transmission using headset" = "使用耳机按键切换语音传输";
@@ -627,17 +1782,29 @@
 /* preferences */
 "Translator" = "翻译者";
 
+/* live activity */
+"Transmission" = "发送";
+
 /* channel list */
 "Transmit inactive" = "语音未传输";
 
 /* codec detail */
 "Transmit Interval" = "传输间隔";
 
+/* user accounts */
+"Transmit video" = "发送视频";
+
+/* user accounts */
+"Transmit voice" = "发送语音";
+
 /* channel list */
 "Transmitting" = "语音传输中";
 
 /* preferences */
 "Turn off screen when holding phone near ear" = "将手机靠近耳朵时关闭屏幕";
+
+/* diagnostics */
+"Turned off. Turn on Live Activities in Settings, under TeamTalk." = "已关闭。请在“设置”的 TeamTalk 下打开实时活动。";
 
 /* serverlist */
 "Type Join Code" = "输入加入码";
@@ -652,17 +1819,56 @@
 /* serverlist */
 "Unofficial server" = "非官方服务器";
 
+/* file list */
+"Upload file" = "上传文件";
+
+/* user accounts */
+"Upload files" = "上传文件";
+
+/* incoming file */
+"Upload to Channel" = "上传到频道";
+
+/* file list */
+"Uploading" = "正在上传";
+
+/* file list */
+"Uploading, %d %%" = "正在上传，%d %%";
+
 /* preferences */
 "Use echo cancellation and automatic gain control" = "使用回声消除和自动增益控制";
 
 /* preferences */
 "Use iPhone's speaker instead of earpiece" = "使用 iPhone 的扬声器代替听筒";
 
+/* audio codec */
+"Use No Audio" = "不使用音频";
+
+/* audio codec */
+"Use OPUS Codec" = "使用 OPUS 编解码器";
+
+/* audio codec */
+"Use Speex Codec" = "使用 Speex 编解码器";
+
+/* audio codec */
+"Use Speex VBR Codec" = "使用 Speex VBR 编解码器";
+
+/* appearance */
+"Use the Colors of the Theme" = "使用主题的颜色";
+
 /* channel list */
 "User" = "用户";
 
+/* user accounts */
+"User Accounts" = "用户账户";
+
+/* channel list */
+"User Details" = "用户详情";
+
 /* channel list */
 "User female" = "女性用户";
+
+/* user detail */
+"User ID" = "用户 ID";
 
 /* preferences */
 "User Joins Channel" = "用户加入频道";
@@ -692,6 +1898,9 @@
    user detail */
 "User Messages" = "私信";
 
+/* ban list */
+"User name: %@" = "用户名：%@";
+
 /* server entry
       user detail
    Web Login Controller */
@@ -699,6 +1908,9 @@
 
 /* Web Login Controller */
 "Username or password incorrect" = "用户名或密码不正确";
+
+/* channel list */
+"Users" = "用户";
 
 /* server entry */
 "Users Online" = "在线用户";
@@ -734,6 +1946,15 @@
 /* preferences */
 "Voice Activation Triggered" = "语音激活已触发";
 
+/* Sound Devices */
+"Voice Cleanup" = "语音净化";
+
+/* connection quality */
+"Voice Latency (UDP)" = "语音延迟 (UDP)";
+
+/* connection quality */
+"Voice Packets Lost" = "丢失的语音包";
+
 /* preferences */
 "Voice Preprocessing" = "语音预处理";
 
@@ -743,11 +1964,29 @@
 /* user detail */
 "Voice Volume" = "语音音量";
 
+/* text to speech events */
+"VoiceOver" = "VoiceOver";
+
+/* text to speech events */
+"VoiceOver speaks an announcement with its own voice and shows it in braille. With VoiceOver off, the voice of TeamTalk speaks them all." = "VoiceOver 用自己的声音朗读播报并以盲文显示。VoiceOver 关闭时，全部由 TeamTalk 语音朗读。";
+
 /* codec detail */
 "VoIP" = "语音通话";
 
+/* media stream */
+"Volume" = "音量";
+
 /* user detail */
 "Volume Controls" = "音量控制";
+
+/* media stream */
+"Web Address" = "网址";
+
+/* media stream */
+"Web address, %@" = "网址，%@";
+
+/* media stream */
+"Web address, live" = "网址，直播";
 
 /* Web Login controller */
 "Web Login ID" = "Web 登录 ID";
@@ -756,8 +1995,29 @@
    user detail */
 "WebCam" = "摄像头";
 
+/* Sound Devices */
+"WebRTC" = "WebRTC";
+
+/* diagnostics */
+"What the app has been doing, to share when something fails" = "App 的运行记录，出问题时可以共享";
+
+/* diagnostics */
+"What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "App 需要 iPhone 提供的条件。如果这里有不正常的地方，应首先解决。";
+
+/* transmit control */
+"Who Can Transmit" = "谁可以发送";
+
+/* media stream */
+"Whole List" = "整个列表";
+
+/* diagnostics */
+"Widget and Controls" = "小组件和控制项";
+
 /* Dialog message */
 "Yes" = "是";
+
+/* media stream */
+"You are not allowed to stream media files on this server" = "你无权在此服务器上流式传输媒体文件";
 
 /* Dialog */
 "You have been kicked from channel" = "您已被踢出频道";
@@ -773,3 +2033,9 @@
 
 /* speech */
 "You have selected %@" = "您已选择 %@";
+
+/* Sound Devices */
+"You will hear your own microphone. Use headphones, or the speaker will be picked up again. Only available while you are not in a channel." = "你会听到自己的麦克风。请使用耳机，否则扬声器的声音会被再次拾取。仅在你不在频道中时可用。";
+
+/* channel picker */
+"Your channel" = "你的频道";

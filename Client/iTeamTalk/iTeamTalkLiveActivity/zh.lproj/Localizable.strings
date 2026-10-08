@@ -1,0 +1,59 @@
+/* favorite servers widget */
+"Connect to %@" = "连接到 %@";
+
+/* favorite servers widget */
+"Connect to one of your favorite servers with a tap." = "轻点一下即可连接到你收藏的服务器。";
+
+/* favorite servers widget */
+"Favorite Servers" = "收藏的服务器";
+
+/* favorite servers widget */
+"Mark a server as favorite in TeamTalk" = "在 TeamTalk 中将服务器标记为收藏";
+
+/* channel list */
+"Muted" = "已静音";
+
+/* speakers control */
+"Mutes everyone and brings them back while connected to a server." = "连接到服务器时，将所有人静音或取消静音。";
+
+/* live activity */
+"Not transmitting" = "未在发送";
+
+/* channel list */
+"On" = "开";
+
+/* favorite servers widget */
+"Open TeamTalk to see your favorite servers" = "打开 TeamTalk 以查看你收藏的服务器";
+
+/* keyboard shortcuts */
+"Pause or Resume Streaming" = "暂停或继续流式传输";
+
+/* channel list */
+"Speakers" = "扬声器";
+
+/* intent */
+"Speakers On" = "扬声器已打开";
+
+/* media stream */
+"Stop Streaming" = "停止流式传输";
+
+/* transmit control */
+"Talk in TeamTalk" = "在 TeamTalk 中讲话";
+
+/* speakers control */
+"TeamTalk Speakers" = "TeamTalk 扬声器";
+
+/* intent */
+"Toggle Speakers" = "开关扬声器";
+
+/* keyboard shortcuts */
+"Toggle Transmission" = "开关发送";
+
+/* live activity */
+"Transmission" = "发送";
+
+/* transmit control */
+"Transmitting" = "语音传输中";
+
+/* transmit control */
+"Turns your transmission on and off while connected to a server." = "连接到服务器时，打开或关闭你的发送。";

@@ -1,8 +1,38 @@
+/* connection quality */
+"%.1f %% (%lld of %lld)" = "%.1f %% (%lld з %lld)";
+
+/* media stream */
+"%@ added to the playlist" = "%@ додано до плейлиста";
+
+/* media stream */
+"%@ cannot be streamed" = "%@ не можна транслювати";
+
+/* channel list */
+"%@ deselected" = "%@: виділення знято";
+
+/* file list */
+"%@ downloaded" = "%@ завантажено";
+
 /* log entry */
 "%@ joined channel" = "%@ тепер у каналі";
 
 /* log entry */
 "%@ left channel" = "%@ поза каналом";
+
+/* media stream */
+"%@ of %@" = "%@ з %@";
+
+/* media stream */
+"%@ ready, %@" = "%@ готовий, %@";
+
+/* channel list */
+"%@ selected" = "%@: вибрано";
+
+/* file list */
+"%@ uploaded" = "%@ надіслано";
+
+/* live activity */
+"%@, %d users" = "%@, користувачів: %d";
 
 /* Web Login Controller */
 "%@, your username \"%@\" has been validated" = "%1$@, ваш логін «%2$@» підтверджено";
@@ -10,8 +40,62 @@
 /* preferences */
 "%d %% - Default" = "%d %% — Типово";
 
+/* user accounts */
+"%d accounts" = "Облікових записів: %d";
+
+/* user accounts */
+"%d accounts changed and %d could not be changed." = "Змінено облікових записів: %d, не вдалося змінити: %d.";
+
+/* user accounts */
+"%d accounts changed. It applies to each user the next time they log in." = "Змінено облікових записів: %d. Для кожного користувача це почне діяти з наступного входу.";
+
+/* diagnostics */
+"%d entries" = "Записів: %d";
+
+/* media stream */
+"%d files added to the playlist" = "Додано файлів до плейлиста: %d";
+
+/* connection quality */
+"%d ms" = "%d мс";
+
+/* user accounts */
+"%d permissions chosen" = "Вибрано прав: %d";
+
+/* user accounts */
+"%d permissions will be given to the %d accounts of the server that are not administrators." = "Права (%d) буде надано %d обліковим записам сервера, які не є адміністраторами.";
+
+/* user accounts */
+"%d permissions will be removed from the %d accounts of the server that are not administrators." = "Права (%d) буде відкликано в %d облікових записів сервера, які не є адміністраторами.";
+
+/* channel picker */
+"%d users" = "Користувачів: %d";
+
+/* channel list */
+"%d users selected" = "Вибрано користувачів: %d";
+
+/* channel list */
+"%d users selected to move here" = "Вибрано користувачів для переміщення сюди: %d";
+
+/* audio codec */
+"%lld KB/s" = "%lld КБ/с";
+
+/* audio codec */
+"%lld ms" = "%lld мс";
+
 /* codec detail */
 "(Active)" = "(Активно)";
+
+/* channel picker */
+"1 user" = "1 користувач";
+
+/* channel list */
+"1 user selected" = "Вибрано 1 користувача";
+
+/* channel list */
+"1 user selected to move here" = "1 користувача вибрано для переміщення сюди";
+
+/* media stream */
+"100 % leaves the file as it is. The preview plays on this device only, with this volume and from the chosen position." = "100 % залишає файл як є. Попереднє прослуховування звучить лише на цьому пристрої, з цією гучністю і з вибраної позиції.";
 
 /* codec detail */
 "12 KHz" = "12 кГц";
@@ -34,8 +118,29 @@
    create channel */
 "8 KHz" = "8 кГц";
 
+/* user accounts */
+"A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "Зміна прав починає діяти з наступного входу користувача. Хто під'єднаний, до того часу зберігає старі.";
+
+/* appearance */
+"A theme changes the colors above. You can adjust them afterwards." = "Тема змінює кольори вище. Потім їх можна налаштувати.";
+
 /* serverlist */
 "Access preferences" = "Доступ до налаштувань";
+
+/* appearance */
+"Accessibility 1" = "Доступність 1";
+
+/* appearance */
+"Accessibility 2" = "Доступність 2";
+
+/* appearance */
+"Accessibility 3" = "Доступність 3";
+
+/* appearance */
+"Accessibility 4" = "Доступність 4";
+
+/* appearance */
+"Accessibility 5" = "Доступність 5";
 
 /* server entry
    user detail */
@@ -44,8 +149,50 @@
 /* channel list */
 "Active" = "Активний";
 
+/* media stream */
+"Add" = "Додати";
+
+/* media stream */
+"Add Files" = "Додати файли";
+
 /* serverlist */
 "Add new server entry" = "Додати сервер";
+
+/* serverlist */
+"Add to Favorites" = "Додати до вибраного";
+
+/* incoming file */
+"Add to Streaming Playlist" = "Додати до плейлиста трансляції";
+
+/* media stream */
+"Add Web Address" = "Додати вебадресу";
+
+/* incoming file */
+"Added to the streaming playlist" = "Додано до плейлиста трансляції";
+
+/* media stream */
+"Address of a web radio or of an audio or video file" = "Адреса вебрадіо або аудіо- чи відеофайлу";
+
+/* user accounts */
+"Administrator" = "Адміністратор";
+
+/* channel list */
+"All" = "Усе";
+
+/* all users */
+"All Users" = "Усі користувачі";
+
+/* diagnostics */
+"Allowed" = "Дозволено";
+
+/* appearance */
+"Always Dark" = "Завжди темна";
+
+/* appearance */
+"Always Light" = "Завжди світла";
+
+/* user accounts */
+"An administrator has every permission, whatever is set here." = "Адміністратор має всі права, хоч би що тут було задано.";
 
 /* preferences */
 "Announce content of text message" = "Оголошувати повідомлення";
@@ -68,11 +215,23 @@
 /* text to speech */
 "Announcements" = "Оголошення";
 
+/* user accounts */
+"Anonymous users" = "Анонімні користувачі";
+
 /* preferences */
 "App Version" = "Версія програми";
 
+/* appearance */
+"Appearance" = "Оформлення";
+
 /* codec detail */
 "Application" = "Призначення";
+
+/* appearance */
+"Apply High Contrast Theme" = "Застосувати тему «Високий контраст»";
+
+/* appearance */
+"Apply Pure Dark Theme" = "Застосувати тему «Чистий чорний»";
 
 /* preferences */
 "Ascending" = "За зростанням";
@@ -83,14 +242,59 @@
 /* create channel */
 "Audio Codec" = "Аудіокодек";
 
+/* channel list */
+"Audio Output" = "Аудіовихід";
+
 /* Web Login Controller */
 "Authenticate" = "Автентифікація";
 
 /* server entry */
 "Authentication" = "Автентифікація";
 
+/* preferences */
+"Available" = "Доступний";
+
+/* preferences */
+"Away" = "Відійшов";
+
+/* media stream */
+"Back 1 Minute" = "Назад на 1 хвилину";
+
+/* media stream */
+"Back 10 Seconds" = "Назад на 10 секунд";
+
+/* backup */
+"Backup" = "Резервна копія";
+
+/* backup */
+"Backup restored. Close the app and open it again to apply every setting." = "Резервну копію відновлено. Закрийте застосунок і відкрийте знову, щоб застосувати всі налаштування.";
+
+/* channel list */
+"Ban" = "Заблокувати";
+
+/* channel list */
+"Ban %@?" = "Заблокувати %@?";
+
+/* channel list */
+"Ban %d users?" = "Заблокувати користувачів: %d?";
+
+/* ban list */
+"Ban removed" = "Блокування знято";
+
 /* channel list */
 "Ban user" = "Заблокувати користувача";
+
+/* user accounts */
+"Ban users" = "Блокувати користувачів";
+
+/* ban list */
+"Banned by %@" = "Заблокував: %@";
+
+/* ban list */
+"Banned on %@" = "Заблоковано: %@";
+
+/* ban list */
+"Banned Users" = "Заблоковані користувачі";
 
 /* server entry */
 "BearWare.dk Web Login" = "Вебакаунт BearWare.dk";
@@ -110,8 +314,14 @@
 /* Sound Devices */
 "Bluetooth playback should use Advanced Audio Distribution Profile" = "Використовувати розширений профіль розподілу звуку для Bluetooth";
 
+/* all users */
+"Bring to My Channel" = "Перемістити до мого каналу";
+
 /* text message type */
 "Broadcast message" = "Загальне повідомлення";
+
+/* text message */
+"Broadcast Message" = "Загальне повідомлення";
 
 /* preferences
    user detail */
@@ -123,9 +333,27 @@
 /* Dialog message */
 "Cancel" = "Скасувати";
 
+/* file list */
+"Cancels the download" = "Скасовує завантаження";
+
+/* file list */
+"Cancels the upload" = "Скасовує надсилання";
+
+/* user accounts */
+"Change the Permissions of Every Account" = "Змінити права всіх облікових записів";
+
+/* user accounts */
+"Change the properties of the server" = "Змінювати властивості сервера";
+
+/* user accounts */
+"Changing accounts, %d of %d" = "Зміна облікових записів, %d з %d";
+
 /* channel list
    server entry */
 "Channel" = "Канал";
+
+/* View Title */
+"Channel Detail" = "Відомості про канал";
 
 /* text message type */
 "Channel message" = "Повідомлення каналу";
@@ -146,20 +374,107 @@
 /* channel list */
 "Channel. %d users" = "Канал. %d користувачів";
 
+/* ban list */
+"Channel: %@" = "Канал: %@";
+
+/* channel list */
+"Channels" = "Канали";
+
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "Вибирайте, лише якщо на сервері увімкнено вебавтентифікацію BearWare.dk";
+
+/* diagnostics */
+"Checks" = "Перевірки";
+
+/* media stream */
+"Choose a file" = "Виберіть файл";
+
+/* channel picker */
+"Choose Channel" = "Вибрати канал";
+
+/* appearance */
+"Choose colors, text size and font" = "Виберіть кольори, розмір тексту і шрифт";
+
+/* preferences */
+"Choose events to playback" = "Виберіть події для озвучення";
+
+/* file list */
+"Choose Files" = "Вибрати файли";
+
+/* preferences */
+"Choose input and output devices" = "Виберіть пристрої введення і виведення";
+
+/* user accounts */
+"Choose one or more permissions and then what to do with them. Administrator accounts are not changed." = "Виберіть одне або кілька прав, а потім що з ними зробити. Облікові записи адміністраторів не змінюються.";
+
+/* preferences */
+"Choose sounds events to play" = "Виберіть звукові події для відтворення";
+
+/* all users */
+"Choosing a user shows the channel they are in. If the server does not let your account see all users, only those of your channel are listed." = "Вибір користувача показує канал, у якому він перебуває. Якщо сервер не дозволяє вашому обліковому запису бачити всіх користувачів, показано лише користувачів вашого каналу.";
+
+/* channel detail */
+"Classroom" = "Клас";
+
+/* diagnostics */
+"Clear Log" = "Очистити журнал";
+
+/* media stream */
+"Close" = "Закрити";
+
+/* channel picker */
+"Collapsed" = "Згорнуто";
+
+/* appearance */
+"Color of buttons, switches and the selected tab." = "Колір кнопок, перемикачів і вибраної вкладки.";
+
+/* appearance */
+"Color of the Speakers button in each state. Its icon is shown in black or white, whichever is easier to read." = "Колір кнопки динаміків у кожному стані. Її значок показано чорним або білим, залежно від того, що легше читати.";
+
+/* appearance */
+"Color of the Talk button in each state. Its text is shown in black or white, whichever is easier to read." = "Колір кнопки «Говорити» в кожному стані. Її текст показано чорним або білим, залежно від того, що легше читати.";
+
+/* appearance */
+"Colors and Text" = "Кольори і текст";
+
+/* appearance */
+"Colors of the More menu of the channel list. Until you choose them it follows the theme: dark with light text in dark mode, and the other way round in light mode." = "Кольори меню «Ще» у списку каналів. Поки ви їх не вибрали, воно наслідує тему: темне зі світлим текстом у темному режимі і навпаки у світлому.";
+
+/* keyboard shortcuts */
+"Command" = "Command";
 
 /* log entry */
 "Command failed: %@" = "Помилка команди: %@";
 
+/* connection quality */
+"Command Latency (TCP)" = "Затримка команд (TCP)";
+
 /* create channel */
 "Commands" = "Команди";
+
+/* channel list */
+"Confirm" = "Підтвердити";
+
+/* server list */
+"Connect" = "Під'єднатися";
+
+/* preferences */
+"Connect on Startup" = "Під'єднуватися під час запуску";
+
+/* incoming file */
+"Connect to a server and join a channel to send %@" = "Під'єднайтеся до сервера і приєднайтеся до каналу, щоб надіслати %@";
+
+/* connection quality */
+"Connect to a server to see the quality of the connection" = "Під'єднайтеся до сервера, щоб побачити якість з'єднання";
 
 /* serverlist */
 "Connect to server" = "Підключитися до сервера";
 
 /* connect to a server */
 "Connect to Server" = "Підключення до сервера";
+
+/* preferences */
+"Connect to the last server and channel when the app opens" = "Під'єднуватися до останнього сервера і каналу, коли застосунок відкривається";
 
 /* preferences
    server entry */
@@ -169,11 +484,38 @@
    tts event */
 "Connection lost" = "Зв’язок втрачено";
 
+/* connection quality */
+"Connection Quality" = "Якість з'єднання";
+
+/* keyboard shortcuts */
+"Control" = "Control";
+
+/* user accounts */
+"Control a shared desktop" = "Керувати спільним робочим столом";
+
+/* media stream */
+"Controls" = "Елементи керування";
+
+/* text message */
+"Copied" = "Скопійовано";
+
 /* server entry */
 "Copy" = "Copy";
 
 /* server entry */
+"Copy Join Code" = "Скопіювати код приєднання";
+
+/* serverlist */
+"Copy Link" = "Скопіювати посилання";
+
+/* connection quality */
+"Counted over the voice received from the users of your channel since you joined it. Above 2 % voices start to break up." = "Рахується за голосом, отриманим від користувачів вашого каналу відтоді, як ви приєдналися. Понад 2 % голоси починають перериватися.";
+
+/* server entry */
 "Country" = "Країна";
+
+/* user accounts */
+"Create and change permanent channels" = "Створювати і змінювати постійні канали";
 
 /* View Title */
 "Create Channel" = "Створити канал";
@@ -181,21 +523,72 @@
 /* main-tab */
 "Create new channel" = "Створити новий канал";
 
+/* user accounts */
+"Create temporary channels" = "Створювати тимчасові канали";
+
+/* web login */
+"Create Web Login" = "Створити вебвхід";
+
+/* media stream */
+"Current File" = "Поточний файл";
+
+/* connection quality */
+"Data" = "Дані";
+
 /* Sound Input */
 "Default" = "Типово";
 
 /* preferences */
 "Default Subscriptions" = "Типові підписки";
 
+/* user accounts */
+"Default user" = "Звичайний користувач";
+
+/* file list serverlist */
+"Delete" = "Видалити";
+
+/* file list */
+"Delete \"%@\" from the channel?" = "Видалити «%@» з каналу?";
+
+/* server list */
+"Delete \"%@\" from the server list?" = "Видалити «%@» зі списку серверів?";
+
+/* channel detail */
+"Delete Channel" = "Видалити канал";
+
+/* file list */
+"Delete File" = "Видалити файл";
+
+/* server list */
+"Delete Server" = "Видалити сервер";
+
 /* serverlist */
 "Delete server from list" = "Видалити сервер зі списку";
+
+/* channel list */
+"Deselect user" = "Зняти виділення з користувача";
 
 /* preferences
    user detail */
 "Desktop" = "Робочий стіл";
 
+/* diagnostics */
+"Diagnostic Log" = "Журнал діагностики";
+
+/* diagnostics */
+"Diagnostics" = "Діагностика";
+
+/* preferences */
+"Disabled" = "Вимкнено";
+
+/* channel list */
+"Disconnect" = "Від'єднатися";
+
 /* preferences */
 "Display" = "Дисплей";
+
+/* channel list */
+"Done selecting" = "Завершити вибір";
 
 /* channel list */
 "Double tap and hold to transmit. Triple tap fast to lock transmission." = "Двічі торкніться й утримуйте для передачі. Торкніться тричі для її фіксації.";
@@ -203,14 +596,41 @@
 /* preferences */
 "Double tap to lock TX button" = "Фіксувати кнопку «Говорити» подвійним дотиком";
 
+/* user accounts */
+"Download files" = "Завантажувати файли";
+
+/* file list */
+"Downloaded" = "Завантажено";
+
+/* file list */
+"Downloading, %d %%" = "Завантаження, %d %%";
+
+/* file list */
+"Downloads the file" = "Завантажує файл";
+
 /* codec detail */
 "DTX" = "DTX";
+
+/* media stream */
+"Duration" = "Тривалість";
+
+/* user accounts */
+"Each change is saved at once and applies the next time this user logs in." = "Кожна зміна зберігається одразу і починає діяти з наступного входу цього користувача.";
+
+/* channel list */
+"Earpiece or Headset" = "Розмовний динамік або гарнітура";
+
+/* channel list */
+"Edit" = "Змінити";
 
 /* channel list */
 "Edit properties" = "Редагувати властивості";
 
 /* server entry */
 "Encrypted" = "Зашифровано";
+
+/* media stream */
+"Enter a web address that starts with http or https" = "Введіть вебадресу, що починається з http або https";
 
 /* serverlist */
 "Enter Join Code" = "Enter Join Code";
@@ -224,14 +644,104 @@
    user detail */
 "Error" = "Помилка";
 
+/* media stream */
+"Error while streaming media file" = "Помилка під час трансляції медіафайлу";
+
+/* user accounts */
+"Every Account" = "Усі облікові записи";
+
+/* user accounts */
+"Every account was already like that. Nothing has been changed." = "Усі облікові записи вже були такими. Нічого не змінено.";
+
+/* transmit control */
+"Everyone" = "Усі";
+
+/* transmit control */
+"Everyone can transmit in this channel except what is turned off here." = "У цьому каналі передавати можуть усі, крім того, що тут вимкнено.";
+
 /* preferences */
 "Exclusive Mode Toggled" = "Зміна режиму без переривань";
+
+/* channel list */
+"Expand" = "Розгорнути";
+
+/* channel picker */
+"Expanded" = "Розгорнуто";
+
+/* appearance */
+"Export Appearance" = "Експортувати оформлення";
+
+/* backup */
+"Export Settings and Servers" = "Експортувати налаштування і сервери";
+
+/* appearance */
+"Exports the colors, the text and the theme to a file that someone else can import." = "Експортує кольори, текст і тему у файл, який може імпортувати хтось інший.";
+
+/* appearance */
+"Extra Extra Extra Large" = "Дуже-дуже-дуже великий";
+
+/* appearance */
+"Extra Extra Large" = "Дуже-дуже великий";
+
+/* appearance */
+"Extra Large" = "Дуже великий";
+
+/* appearance */
+"Extra Small" = "Дуже малий";
+
+/* file list */
+"Failed to download file" = "Не вдалося завантажити файл";
+
+/* media stream */
+"Failed to play the file" = "Не вдалося відтворити файл";
 
 /* connect to a server */
 "Failed to setup encryption" = "Не вдалося налаштувати шифрування";
 
+/* media stream */
+"Failed to stream media file" = "Не вдалося транслювати медіафайл";
+
+/* file list */
+"Failed to transfer %@" = "Не вдалося передати %@";
+
+/* file list */
+"Failed to upload file" = "Не вдалося надіслати файл";
+
+/* serverlist */
+"Favorite" = "Вибраний";
+
 /* preferences */
 "Female" = "Жіноча";
+
+/* media stream */
+"File" = "Файл";
+
+/* sound events */
+"File Added" = "Файл додано";
+
+/* sound events */
+"File Removed" = "Файл вилучено";
+
+/* file list */
+"Files" = "Файли";
+
+/* media stream */
+"Files stay in the list until you remove them. When one ends, the next one starts." = "Файли лишаються у списку, доки ви їх не вилучите. Коли один закінчується, починається наступний.";
+
+/* preferences */
+"Filter Server List" = "Фільтр списку серверів";
+
+/* appearance */
+"Font" = "Шрифт";
+
+/* appearance */
+"Font of Server Events" = "Шрифт подій сервера";
+
+/* media stream */
+"Forward 1 Minute" = "Уперед на 1 хвилину";
+
+/* media stream */
+"Forward 10 Seconds" = "Уперед на 10 секунд";
 
 /* codec detail */
 "Frame Size" = "Розмір кадру";
@@ -242,6 +752,12 @@
 /* preferences
    user detail */
 "General" = "Загальне";
+
+/* user accounts */
+"Give to Every Account" = "Надати всім обліковим записам";
+
+/* channel list */
+"Go to Their Channel" = "Перейти до його каналу";
 
 /* TTS EVENT */
 "has joined the channel" = "тепер у каналі";
@@ -264,11 +780,47 @@
 /* server entry */
 "Host address" = "Адреса хоста";
 
+/* appearance */
+"Import Appearance" = "Імпортувати оформлення";
+
+/* backup */
+"Import Backup" = "Імпортувати резервну копію";
+
 /* channel list */
 "Inactive" = "Неактивно";
 
+/* appearance */
+"Interface" = "Інтерфейс";
+
+/* appearance */
+"Interface Color" = "Колір інтерфейсу";
+
+/* Sound Devices */
+"iOS Voice Processing" = "Обробка голосу iOS";
+
+/* Sound Devices */
+"iOS voice processing cancels echo, reduces noise and levels the volume. WebRTC reduces noise and levels the volume but does not cancel echo, so use it with headphones." = "Обробка голосу iOS прибирає луну, зменшує шум і вирівнює гучність. WebRTC зменшує шум і вирівнює гучність, але не прибирає луну, тож користуйтеся ним із навушниками.";
+
+/* ban list */
+"IP address: %@" = "IP-адреса: %@";
+
+/* user accounts */
+"It applies to each user the next time they log in." = "Для кожного користувача це почне діяти з наступного входу.";
+
+/* text message */
+"It is sent to every user of the server" = "Його надсилають усім користувачам сервера";
+
 /* Dialog message */
 "Join" = "Приєднатися";
+
+/* file list */
+"Join a channel to see its files" = "Приєднайтеся до каналу, щоб побачити його файли";
+
+/* incoming file */
+"Join a channel to send %@" = "Приєднайтеся до каналу, щоб надіслати %@";
+
+/* media stream */
+"Join a channel to stream a media file" = "Приєднайтеся до каналу, щоб транслювати медіафайл";
 
 /* server entry */
 "Join Channel" = "Приєднатися до каналу";
@@ -285,23 +837,92 @@
 /* preferences */
 "Join root channel after login" = "Приєднуватися до кореневого каналу після авторизації";
 
+/* all users */
+"Join Their Channel" = "Приєднатися до його каналу";
+
+/* channel list */
+"Join this channel" = "Приєднатися до цього каналу";
+
 /* log entry */
 "Joined %@" = "Приєднано до %@";
+
+/* keyboard shortcuts */
+"Key" = "Клавіша";
+
+/* keyboard shortcuts */
+"Keyboard Shortcuts" = "Сполучення клавіш";
+
+/* preferences */
+"Keys of an external keyboard to talk and to mute" = "Клавіші зовнішньої клавіатури, щоб говорити і вимикати звук";
+
+/* channel list */
+"Kick" = "Вигнати";
+
+/* channel list */
+"Kick %@?" = "Вигнати %@?";
+
+/* channel list */
+"Kick %d users?" = "Вигнати користувачів: %d?";
+
+/* user detail */
+"Kick and Ban User" = "Вигнати і заблокувати користувача";
 
 /* channel list */
 "Kick user" = "Вигнати користувача";
 
+/* user detail */
+"Kick User" = "Вигнати користувача";
+
+/* user accounts */
+"Kick users off the server" = "Виганяти користувачів із сервера";
+
+/* appearance */
+"Large" = "Великий";
+
+/* connection quality */
+"Latency" = "Затримка";
+
+/* connection quality */
+"Latency and packet loss" = "Затримка і втрата пакетів";
+
+/* appearance */
+"Light or Dark" = "Світла чи темна";
+
 /* preferences */
 "Limit length of names in channel list to %d characters" = "Обмежити довжину імен у списку каналів до %d символів";
 
+/* preferences */
+"Limit types of servers to show" = "Обмежити типи серверів, які показуються";
+
+/* serverlist */
+"Link copied" = "Посилання скопійовано";
+
+/* appearance */
+"Listening" = "Слухаю";
+
+/* media stream */
+"Live" = "Наживо";
+
+/* diagnostics */
+"Live Activities" = "Активності наживо";
+
 /* serverlist */
 "Local server" = "Локальний сервер";
+
+/* user accounts */
+"Log in from several devices at once" = "Входити з кількох пристроїв одночасно";
 
 /* text message type */
 "Log message" = "Лог повідомлення";
 
 /* log entry */
 "Logged on to server" = "Вхід на сервер";
+
+/* preferences */
+"Login ID from BearWare.dk" = "Логін із BearWare.dk";
+
+/* user accounts */
+"Make other users channel operator" = "Призначати інших користувачів операторами каналу";
 
 /* preferences */
 "Male" = "Чоловіча";
@@ -323,18 +944,72 @@
 /* preferences */
 "Media file vs. voice volume" = "Гучність медіафайла відносно голосу";
 
+/* transmit control */
+"Media Files" = "Медіафайли";
+
+/* appearance */
+"Medium" = "Середній";
+
+/* appearance */
+"Menu Background" = "Тло меню";
+
+/* appearance */
+"Menu Text" = "Текст меню";
+
+/* appearance */
+"Menus" = "Меню";
+
+/* text messages */
+"Message" = "Повідомлення";
+
 /* server entry */
 "Message of the Day" = "Повідомлення дня";
 
+/* appearance */
+"Message Text Size" = "Розмір тексту повідомлень";
+
+/* channel list */
+"Message this user" = "Написати цьому користувачеві";
+
+/* tab */
+"Messages" = "Повідомлення";
+
+/* diagnostics */
+"Microphone" = "Мікрофон";
+
 /* preferences */
 "Microphone Gain" = "Підсилення мікрофона";
+
+/* Sound Devices */
+"Microphone Test" = "Перевірка мікрофона";
+
+/* user accounts */
+"Moderation" = "Модерація";
+
+/* keyboard shortcuts */
+"Modifier" = "Модифікатор";
 
 /* codec detail
    create channel */
 "Mono" = "Моно";
 
+/* appearance */
+"Monospaced" = "Моноширинний";
+
+/* channel list */
+"More" = "Ще";
+
+/* channel list */
+"Move" = "Перемістити";
+
+/* channel list */
+"Move to Channel" = "Перемістити до каналу";
+
 /* channel list */
 "Move user" = "Перемістити користувача";
+
+/* user accounts */
+"Move users between channels" = "Переміщати користувачів між каналами";
 
 /* channel list */
 "Move users here" = "Перемістити користувачів сюди";
@@ -348,8 +1023,17 @@
 /* user detail */
 "Mute Media File" = "Вимкнути звук медіафайла";
 
+/* keyboard shortcuts */
+"Mute or Unmute Speakers" = "Вимкнути або ввімкнути динаміки";
+
 /* user detail */
 "Mute Voice" = "Вимкнути голос";
+
+/* channel list */
+"Muted" = "Звук вимкнено";
+
+/* channel list */
+"Mutes or unmutes everything you hear from the server" = "Вимикає або вмикає все, що ви чуєте із сервера";
 
 /* create channel
    server entry */
@@ -358,14 +1042,23 @@
 /* preferences */
 "Name displayed in channel list" = "Ім’я, що відображається у списку каналів";
 
+/* preferences */
+"Neutral" = "Нейтральний";
+
 /* Dialog message */
 "New Server" = "Новий сервер";
+
+/* media stream */
+"Next File" = "Наступний файл";
 
 /* preferences */
 "Nickname" = "Псевдонім";
 
 /* server entry */
 "Nickname (optional)" = "Псевдонім (необов’язково)";
+
+/* user accounts */
+"Nickname locked, cannot be changed" = "Псевдонім заблоковано, змінити не можна";
 
 /* Dialog message */
 "No" = "Ні";
@@ -377,20 +1070,71 @@
 /* create channel */
 "No Audio Recording" = "Запис звуку заборонено";
 
+/* ban list */
+"No banned users" = "Немає заблокованих користувачів";
+
+/* connection quality */
+"No data" = "Немає даних";
+
+/* file list */
+"No files in this channel" = "У цьому каналі немає файлів";
+
 /* create channel */
 "No Interruptions" = "Без переривань";
+
+/* keyboard shortcuts */
+"No Modifier" = "Без модифікатора";
 
 /* channel list */
 "No password" = "Без пароля";
 
+/* channel list */
+"No results" = "Нічого не знайдено";
+
 /* serverlist */
 "No server found" = "No server found";
+
+/* user accounts */
+"No user accounts" = "Немає облікових записів";
+
+/* channel list */
+"No users selected" = "Користувачів не вибрано";
+
+/* channel list */
+"No users selected to move" = "Не вибрано користувачів для переміщення";
 
 /* create channel */
 "No Voice Activation" = "Без активації голосом";
 
 /* default nickname */
 "Noname" = "Без імені";
+
+/* keyboard shortcuts and voice cleanup */
+"None" = "Немає";
+
+/* diagnostics */
+"Not allowed. Nobody can hear you until you turn it on in Settings, under TeamTalk." = "Не дозволено. Вас ніхто не почує, доки ви не ввімкнете його в Параметрах, у розділі TeamTalk.";
+
+/* diagnostics */
+"Not asked yet. iOS asks the first time you join a channel." = "Ще не запитувалося. iOS запитає, коли ви вперше приєднаєтеся до каналу.";
+
+/* diagnostics */
+"Not available with this installation. The widget cannot show your servers and the controls do not show their state." = "Недоступно в цій інсталяції. Віджет не може показати ваші сервери, а елементи керування не показують свій стан.";
+
+/* live activity */
+"Not in a channel" = "Не в каналі";
+
+/* diagnostics */
+"Not installed. The app was installed without its extension, so there are no Live Activities, widget or controls. Install it again with a tool that keeps the extensions." = "Не встановлено. Застосунок встановлено без розширення, тому немає активностей наживо, віджета й елементів керування. Встановіть його знову інструментом, який зберігає розширення.";
+
+/* media stream */
+"Not streaming" = "Трансляції немає";
+
+/* live activity */
+"Not transmitting" = "Не передає";
+
+/* media stream */
+"Off" = "Вимк.";
 
 /* serverlist */
 "Official server" = "Офіційний сервер";
@@ -401,11 +1145,35 @@
    user detail */
 "OK" = "ОК";
 
+/* channel list */
+"On" = "Увімкнено";
+
+/* channel detail */
+"Only the users you allow can transmit" = "Передавати можуть лише користувачі, яким ви дозволили";
+
+/* text message */
+"Open Link" = "Відкрити посилання";
+
+/* diagnostics */
+"Open Settings" = "Відкрити Параметри";
+
+/* file list */
+"Opens the file" = "Відкриває файл";
+
+/* keyboard shortcuts */
+"Option" = "Option";
+
 /* codec detail */
 "OPUS Codec" = "Кодек OPUS";
 
 /* preferences */
 "Order of channels in Channel List" = "Порядок каналів у списку";
+
+/* user accounts */
+"Other" = "Інше";
+
+/* connection quality */
+"Packet Loss" = "Втрата пакетів";
 
 /* channel list */
 "Parent channel" = "Головний канал";
@@ -418,8 +1186,26 @@
 /* channel list */
 "Password protected" = "Захищено паролем";
 
+/* media stream */
+"Pause" = "Пауза";
+
+/* keyboard shortcuts */
+"Pause or Resume Streaming" = "Призупинити або продовжити трансляцію";
+
+/* media stream */
+"Paused" = "На паузі";
+
 /* create channel */
 "Permanent Channel" = "Постійний канал";
+
+/* file list */
+"Photos and Videos" = "Фото і відео";
+
+/* sound events */
+"Play sound when a file is removed from the channel" = "Відтворювати звук, коли файл вилучають із каналу";
+
+/* sound events */
+"Play sound when a file is uploaded to the channel" = "Відтворювати звук, коли файл надсилають до каналу";
 
 /* preferences */
 "Play sound when a user joins the channel" = "Звук при вході користувача до каналу";
@@ -454,11 +1240,17 @@
 /* preferences */
 "Play sound when voice transmission is toggled" = "Звук при увімкненні/вимкненні передачі голосу";
 
+/* media stream */
+"Playlist" = "Плейлист";
+
 /* preferences */
 "Pop up text message when new messages are received" = "Спливаюче вікно при отриманні повідомлень";
 
 /* preferences */
 "Popularity" = "За популярністю";
+
+/* media stream */
+"Position" = "Позиція";
 
 /* serverlist */
 "Preferences" = "Налаштування";
@@ -466,11 +1258,23 @@
 /* Sound Input */
 "Preferred" = "Бажаний";
 
+/* media stream */
+"Preparing file" = "Підготовка файлу";
+
 /* preferences */
 "Pressing Return-key sends text message" = "Надсилати повідомлення клавішею Enter";
 
+/* appearance */
+"Preview" = "Перегляд";
+
+/* media stream */
+"Previous File" = "Попередній файл";
+
 /* text message type */
 "Private message" = "Приватне повідомлення";
+
+/* channel list */
+"Private Message" = "Приватне повідомлення";
 
 /* preferences */
 "Private Text Message" = "Приватне текстове повідомлення";
@@ -484,11 +1288,17 @@
 /* serverlist */
 "Public server" = "Публічний сервер";
 
+/* channel list */
+"Push to Talk" = "Натисни і говори";
+
 /* preferences */
 "Push To Talk Lock" = "Фіксація кнопки «Говорити»";
 
 /* codec detail */
 "Quality" = "Якість";
+
+/* preferences */
+"Question" = "Запитання";
 
 /* preferences */
 "Receive broadcast messages by default" = "Отримувати загальні повідомлення";
@@ -511,6 +1321,45 @@
 /* preferences */
 "Receive webcam streams by default" = "Отримувати трансляції з вебкамер";
 
+/* connection quality */
+"Received" = "Отримано";
+
+/* appearance */
+"Received message" = "Отримане повідомлення";
+
+/* appearance */
+"Received Messages" = "Отримані повідомлення";
+
+/* user accounts */
+"Record voice in every channel" = "Записувати голос у всіх каналах";
+
+/* ban list */
+"Remove Ban" = "Зняти блокування";
+
+/* user accounts */
+"Remove from Every Account" = "Відкликати в усіх облікових записів";
+
+/* serverlist */
+"Remove from Favorites" = "Вилучити з вибраного";
+
+/* media stream */
+"Repeat" = "Повтор";
+
+/* web login */
+"Reset Web Login" = "Скинути вебвхід";
+
+/* appearance */
+"Restore Default Appearance" = "Відновити типове оформлення";
+
+/* keyboard shortcuts */
+"Restore Default Shortcuts" = "Відновити типові сполучення клавіш";
+
+/* media stream */
+"Resume" = "Продовжити";
+
+/* keyboard shortcuts */
+"Return" = "Введення";
+
 /* preferences */
 "Return Sends Message" = "Enter надсилає повідомлення";
 
@@ -520,14 +1369,71 @@
 /* log entry */
 "root channel" = "кореневий канал";
 
+/* appearance */
+"Rounded" = "Заокруглений";
+
+/* appearance */
+"Same as the App" = "Як у застосунку";
+
+/* appearance */
+"Same as the System" = "Як у системі";
+
 /* codec detail */
 "Sample Rate" = "Частота дискретизації";
+
+/* channel detail */
+"Save" = "Зберегти";
 
 /* Dialog message */
 "Save Server" = "Зберегти сервер";
 
+/* server entry */
+"Save server" = "Зберегти сервер";
+
 /* Dialog message */
 "Save server to server list?" = "Зберегти сервер у списку?";
+
+/* user accounts */
+"Search accounts" = "Пошук облікових записів";
+
+/* channel picker */
+"Search channels" = "Пошук каналів";
+
+/* channel list */
+"Search channels and users" = "Пошук каналів і користувачів";
+
+/* serverlist */
+"Search servers" = "Пошук серверів";
+
+/* all users */
+"Search users" = "Пошук користувачів";
+
+/* user accounts */
+"See hidden channels" = "Бачити приховані канали";
+
+/* user accounts */
+"See the users of every channel" = "Бачити користувачів усіх каналів";
+
+/* preferences */
+"Select the text-to-speech voice to use" = "Виберіть голос синтезу мовлення";
+
+/* channel list */
+"Select users" = "Вибрати користувачів";
+
+/* speech */
+"Selected" = "Вибрано";
+
+/* text messages */
+"Send" = "Надіслати";
+
+/* text message */
+"Send broadcast message" = "Надіслати загальне повідомлення";
+
+/* user accounts */
+"Send broadcast messages" = "Надсилати загальні повідомлення";
+
+/* user accounts */
+"Send channel messages" = "Надсилати повідомлення до каналу";
 
 /* text message */
 "Send empty message to close keyboard" = "Надішліть порожнє повідомлення, щоб згорнути клавіатуру";
@@ -535,8 +1441,38 @@
 /* channel list */
 "Send private message" = "Надіслати приватне повідомлення";
 
+/* user accounts */
+"Send private messages" = "Надсилати приватні повідомлення";
+
+/* incoming file */
+"Send to TeamTalk" = "Надіслати до TeamTalk";
+
+/* media stream */
+"Send Video" = "Надсилати відео";
+
+/* connection quality */
+"Sent" = "Надіслано";
+
+/* appearance */
+"Sent message" = "Надіслане повідомлення";
+
+/* appearance */
+"Sent Messages" = "Надіслані повідомлення";
+
+/* appearance */
+"Serif" = "Із зарубками";
+
 /* preferences */
 "Server Connection Lost" = "Зв’язок із сервером втрачено";
+
+/* server entry */
+"Server Entry" = "Запис сервера";
+
+/* appearance */
+"Server event" = "Подія сервера";
+
+/* appearance */
+"Server Events" = "Події сервера";
 
 /* server entry */
 "Server List Entry" = "Запис у списку серверів";
@@ -545,13 +1481,52 @@
 "Server Status" = "Статус сервера";
 
 /* preferences */
+"Setup Announcements" = "Налаштувати оголошення";
+
+/* preferences */
+"Setup Sound Devices" = "Налаштувати звукові пристрої";
+
+/* preferences */
+"Setup Sound Events" = "Налаштувати звукові події";
+
+/* file list */
+"Share" = "Поділитися";
+
+/* diagnostics */
+"Share Log" = "Поділитися журналом";
+
+/* serverlist */
+"Share Server" = "Поділитися сервером";
+
+/* user accounts */
+"Share the desktop" = "Показувати робочий стіл";
+
+/* file list */
+"Shares or opens the file" = "Відкриває файл або дає змогу ним поділитися";
+
+/* keyboard shortcuts */
+"Shift" = "Shift";
+
+/* keyboard shortcuts */
+"Shortcuts work with an external keyboard while connected to a server. A key without a modifier does nothing while you are typing a message." = "Сполучення клавіш працюють із зовнішньою клавіатурою, поки ви під'єднані до сервера. Клавіша без модифікатора нічого не робить, поки ви набираєте повідомлення.";
+
+/* preferences */
 "Show in Server List" = "Показувати у списку серверів";
 
 /* preferences */
 "Show male or female icon" = "Показувати значки статі";
 
+/* server entry */
+"Show password" = "Показати пароль";
+
+/* server list */
+"Show server details" = "Показати відомості про сервер";
+
 /* preferences */
 "Show Text Messages Instantly" = "Показувати повідомлення миттєво";
+
+/* channel list */
+"Show user details" = "Показати відомості про користувача";
 
 /* preferences */
 "Show Usernames" = "Показувати логіни";
@@ -559,11 +1534,23 @@
 /* preferences */
 "Show usernames instead of nicknames" = "Показувати логіни замість псевдонімів";
 
+/* preferences */
+"Shown to the other users of the server" = "Показується іншим користувачам сервера";
+
 /* channel list */
 "Silent" = "Мовчить";
 
+/* appearance */
+"Size and font apply to the whole app." = "Розмір і шрифт застосовуються до всього застосунку.";
+
+/* appearance */
+"Small" = "Малий";
+
 /* preferences */
 "Sort Channels" = "Сортування каналів";
+
+/* media stream */
+"Sound" = "Звук";
 
 /* preferences
    text to speech */
@@ -572,8 +1559,26 @@
 /* preferences */
 "Sound System" = "Звукова система";
 
+/* keyboard shortcuts */
+"Space" = "Пробіл";
+
+/* channel list */
+"Speaker" = "Динамік";
+
 /* preferences */
 "Speaker Output" = "Вихід на динамік";
+
+/* channel list */
+"Speakers" = "Динаміки";
+
+/* appearance */
+"Speakers Button" = "Кнопка динаміків";
+
+/* intent */
+"Speakers On" = "Динаміки ввімкнено";
+
+/* preferences */
+"Speech" = "Мовлення";
 
 /* preferences */
 "Speech Rate" = "Швидкість мовлення";
@@ -587,15 +1592,84 @@
 /* codec detail */
 "Speex Variable Bitrate Codec" = "Кодек Speex із змінним бітрейтом";
 
+/* text to speech events */
+"Spoken By" = "Хто вимовляє";
+
+/* text to speech events, accessibility */
+"Spoken by, %@" = "Хто вимовляє, %@";
+
+/* appearance */
+"Standard" = "Стандартний";
+
+/* media stream */
+"Start Streaming" = "Почати трансляцію";
+
+/* preferences */
+"Status" = "Статус";
+
 /* Text message view */
 "Status Event" = "Статус події";
+
+/* user accounts */
+"Status locked, cannot be changed" = "Статус заблоковано, змінити не можна";
+
+/* preferences */
+"Status Message" = "Статусне повідомлення";
 
 /* codec detail
    create channel */
 "Stereo" = "Стерео";
 
+/* Sound Devices */
+"Stop Microphone Test" = "Зупинити перевірку мікрофона";
+
+/* media stream */
+"Stop Preview" = "Зупинити попереднє прослуховування";
+
+/* media stream */
+"Stop Streaming" = "Зупинити трансляцію";
+
+/* user accounts */
+"Stream audio files" = "Транслювати аудіофайли";
+
+/* media stream */
+"Stream Media File" = "Транслювати медіафайл";
+
+/* media stream */
+"Stream media file" = "Транслювати медіафайл";
+
+/* user accounts */
+"Stream video files" = "Транслювати відеофайли";
+
+/* media stream */
+"Streaming" = "Трансляція";
+
+/* media stream */
+"Streaming %@" = "Трансляція: %@";
+
+/* media stream */
+"Streaming finished" = "Трансляцію завершено";
+
+/* media stream */
+"Streaming started" = "Трансляцію розпочато";
+
 /* user detail */
 "Subscriptions" = "Підписки";
+
+/* appearance */
+"Swap Speakers Button Colors" = "Поміняти місцями кольори кнопки динаміків";
+
+/* appearance */
+"Swap Talk Button Colors" = "Поміняти місцями кольори кнопки «Говорити»";
+
+/* appearance */
+"System Size" = "Системний розмір";
+
+/* channel list */
+"Talk" = "Говорити";
+
+/* appearance */
+"Talk Button" = "Кнопка «Говорити»";
 
 /* channel list */
 "Talking" = "Говорить";
@@ -603,17 +1677,98 @@
 /* server entry */
 "TCP Port" = "TCP-порт";
 
+/* channel list */
+"TeamTalk has no access to the microphone. Turn it on in Settings, under TeamTalk, and try again." = "TeamTalk не має доступу до мікрофона. Увімкніть його в Параметрах, у розділі TeamTalk, і спробуйте знову.";
+
+/* server list */
+"TeamTalk Servers" = "Сервери TeamTalk";
+
+/* text to speech events */
+"TeamTalk Voice" = "Голос TeamTalk";
+
+/* Sound Devices */
+"Test Microphone" = "Перевірити мікрофон";
+
+/* appearance */
+"Text" = "Текст";
+
+/* appearance */
+"Text Messages" = "Текстові повідомлення";
+
+/* channel list */
+"Text Messaging" = "Текстові повідомлення";
+
+/* appearance */
+"Text of the Messages" = "Текст повідомлень";
+
+/* preferences */
+"Text shown next to your name" = "Текст, який показується поруч із вашим іменем";
+
+/* appearance */
+"Text Size" = "Розмір тексту";
+
 /* preferences */
 "Text To Speech Events" = "Мовленнєві події";
+
+/* speech */
+"Text-to-Speech Voice" = "Голос синтезу мовлення";
+
+/* user accounts */
+"The account could not be saved" = "Не вдалося зберегти обліковий запис";
+
+/* backup */
+"The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "Резервна копія містить усі налаштування і список серверів разом із паролями. Зберігайте файл у надійному місці.";
+
+/* diagnostics */
+"The log is empty" = "Журнал порожній";
+
+/* diagnostics */
+"The log records what the app does: connection, sound devices, transfers and errors. It holds no passwords and nothing of what is said or written." = "Журнал записує, що робить застосунок: з'єднання, звукові пристрої, передавання і помилки. У ньому немає паролів і нічого з того, що говориться чи пишеться.";
+
+/* appearance */
+"The messages can have a text size of their own, and the server events a font of their own." = "Повідомлення можуть мати власний розмір тексту, а події сервера власний шрифт.";
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "Швидкість мовлення %.1f";
 
+/* appearance */
+"The text of a message is shown in black or white, whichever is easier to read on its color." = "Текст повідомлення показано чорним або білим, залежно від того, що легше читати на його кольорі.";
+
+/* appearance */
+"The text of a message is shown in black or white, whichever is easier to read on its color. Server events are what happens on the server, like someone joining or leaving the channel." = "Текст повідомлення показано чорним або білим, залежно від того, що легше читати на його кольорі. Події сервера — це те, що відбувається на сервері, наприклад коли хтось приєднується до каналу або залишає його.";
+
 /* preferences */
 "The volume of the speaking voice is %.1f" = "Гучність мовлення %.1f";
 
+/* appearance */
+"Themes" = "Теми";
+
+/* diagnostics */
+"They need iOS 17 or later" = "Потрібна iOS 17 або новіша";
+
+/* media stream */
+"This file cannot be streamed" = "Цей файл не можна транслювати";
+
+/* backup */
+"This file is not a TeamTalk backup" = "Цей файл не є резервною копією TeamTalk";
+
+/* appearance */
+"This file is not an appearance exported from TeamTalk" = "Цей файл не є оформленням, експортованим із TeamTalk";
+
+/* transmit control */
+"This is a classroom channel: only what is turned on here can be transmitted." = "Це канал-клас: передавати можна лише те, що тут увімкнено.";
+
+/* media stream */
+"This web address cannot be streamed" = "Цю вебадресу не можна транслювати";
+
+/* connection quality */
+"Time a packet takes to reach the server and come back. Below 100 ms a conversation feels immediate." = "Час, за який пакет доходить до сервера і повертається. Нижче 100 мс розмова здається миттєвою.";
+
 /* channel list */
 "Toggle to enable/disable transmission" = "Перемикач для увімкнення або вимкнення передачі голосу";
+
+/* keyboard shortcuts */
+"Toggle Transmission" = "Увімкнути або вимкнути передавання";
 
 /* preferences */
 "Toggle voice transmission using headset" = "Перемикання передачі голосу за допомогою гарнітури";
@@ -624,17 +1779,29 @@
 /* preferences */
 "Translator" = "Перекладач";
 
+/* live activity */
+"Transmission" = "Передавання";
+
 /* channel list */
 "Transmit inactive" = "Передача голосу неактивна";
 
 /* codec detail */
 "Transmit Interval" = "Інтервал передачі";
 
+/* user accounts */
+"Transmit video" = "Передавати відео";
+
+/* user accounts */
+"Transmit voice" = "Передавати голос";
+
 /* channel list */
 "Transmitting" = "Передача";
 
 /* preferences */
 "Turn off screen when holding phone near ear" = "Вимикати екран, коли телефон біля вуха";
+
+/* diagnostics */
+"Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Вимкнено. Увімкніть активності наживо в Параметрах, у розділі TeamTalk.";
 
 /* serverlist */
 "Type Join Code" = "Type Join Code";
@@ -649,17 +1816,56 @@
 /* serverlist */
 "Unofficial server" = "Неофіційний сервер";
 
+/* file list */
+"Upload file" = "Надіслати файл";
+
+/* user accounts */
+"Upload files" = "Надсилати файли";
+
+/* incoming file */
+"Upload to Channel" = "Надіслати до каналу";
+
+/* file list */
+"Uploading" = "Надсилання";
+
+/* file list */
+"Uploading, %d %%" = "Надсилання, %d %%";
+
 /* preferences */
 "Use echo cancellation and automatic gain control" = "Використовувати усунення еха та автоматичне регулювання підсилення";
 
 /* preferences */
 "Use iPhone's speaker instead of earpiece" = "Використовувати зовнішній динамік замість розмовного";
 
+/* audio codec */
+"Use No Audio" = "Не використовувати звук";
+
+/* audio codec */
+"Use OPUS Codec" = "Використовувати кодек OPUS";
+
+/* audio codec */
+"Use Speex Codec" = "Використовувати кодек Speex";
+
+/* audio codec */
+"Use Speex VBR Codec" = "Використовувати кодек Speex VBR";
+
+/* appearance */
+"Use the Colors of the Theme" = "Використовувати кольори теми";
+
 /* channel list */
 "User" = "Користувач";
 
+/* user accounts */
+"User Accounts" = "Облікові записи";
+
+/* channel list */
+"User Details" = "Відомості про користувача";
+
 /* channel list */
 "User female" = "Користувачка";
+
+/* user detail */
+"User ID" = "ID користувача";
 
 /* preferences */
 "User Joins Channel" = "Користувач приєднується до каналу";
@@ -689,12 +1895,18 @@
    user detail */
 "User Messages" = "Повідомлення користувача";
 
+/* ban list */
+"User name: %@" = "Логін: %@";
+
 /* server entry
    user detail */
 "Username" = "Логін";
 
 /* Web Login Controller */
 "Username or password incorrect" = "Неправильний логін або пароль";
+
+/* channel list */
+"Users" = "Користувачі";
 
 /* server entry */
 "Users Online" = "Користувачі онлайн";
@@ -730,6 +1942,15 @@
 /* preferences */
 "Voice Activation Triggered" = "Спрацювання активації голосом";
 
+/* Sound Devices */
+"Voice Cleanup" = "Очищення голосу";
+
+/* connection quality */
+"Voice Latency (UDP)" = "Затримка голосу (UDP)";
+
+/* connection quality */
+"Voice Packets Lost" = "Втрачено голосових пакетів";
+
 /* preferences */
 "Voice Preprocessing" = "Попередня обробка голосу";
 
@@ -739,11 +1960,29 @@
 /* user detail */
 "Voice Volume" = "Гучність голосу";
 
+/* text to speech events */
+"VoiceOver" = "VoiceOver";
+
+/* text to speech events */
+"VoiceOver speaks an announcement with its own voice and shows it in braille. With VoiceOver off, the voice of TeamTalk speaks them all." = "VoiceOver вимовляє оголошення власним голосом і показує його шрифтом Брайля. Коли VoiceOver вимкнено, усі оголошення вимовляє голос TeamTalk.";
+
 /* codec detail */
 "VoIP" = "VoIP";
 
+/* media stream */
+"Volume" = "Гучність";
+
 /* user detail */
 "Volume Controls" = "Керування гучністю";
+
+/* media stream */
+"Web Address" = "Вебадреса";
+
+/* media stream */
+"Web address, %@" = "Вебадреса, %@";
+
+/* media stream */
+"Web address, live" = "Вебадреса, наживо";
 
 /* Web Login controller */
 "Web Login ID" = "Вебакаунт";
@@ -752,8 +1991,29 @@
    user detail */
 "WebCam" = "Вебкамера";
 
+/* Sound Devices */
+"WebRTC" = "WebRTC";
+
+/* diagnostics */
+"What the app has been doing, to share when something fails" = "Що робив застосунок: щоб поділитися, коли щось не працює";
+
+/* diagnostics */
+"What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Що застосунку потрібно від iPhone. Якщо тут щось не так, це перше, що слід виправити.";
+
+/* transmit control */
+"Who Can Transmit" = "Хто може передавати";
+
+/* media stream */
+"Whole List" = "Увесь список";
+
+/* diagnostics */
+"Widget and Controls" = "Віджет і елементи керування";
+
 /* Dialog message */
 "Yes" = "Так";
+
+/* media stream */
+"You are not allowed to stream media files on this server" = "Вам не дозволено транслювати медіафайли на цьому сервері";
 
 /* Dialog */
 "You have been kicked from channel" = "Вас вигнали з каналу";
@@ -769,3 +2029,9 @@
 
 /* speech */
 "You have selected %@" = "Ви вибрали %@";
+
+/* Sound Devices */
+"You will hear your own microphone. Use headphones, or the speaker will be picked up again. Only available while you are not in a channel." = "Ви почуєте власний мікрофон. Користуйтеся навушниками, інакше динамік захоплюватиметься знову. Доступно лише поки ви не в каналі.";
+
+/* channel picker */
+"Your channel" = "Ваш канал";

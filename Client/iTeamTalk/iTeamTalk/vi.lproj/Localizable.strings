@@ -1,8 +1,38 @@
+/* connection quality */
+"%.1f %% (%lld of %lld)" = "%.1f %% (%lld trên %lld)";
+
+/* media stream */
+"%@ added to the playlist" = "Đã thêm %@ vào danh sách phát";
+
+/* media stream */
+"%@ cannot be streamed" = "Không thể phát trực tuyến %@";
+
+/* channel list */
+"%@ deselected" = "Đã bỏ chọn %@";
+
+/* file list */
+"%@ downloaded" = "Đã tải xuống %@";
+
 /* log entry */
 "%@ joined channel" = "%@ đã tham gia kênh";
 
 /* log entry */
 "%@ left channel" = "%@ đã rời khỏi kênh";
+
+/* media stream */
+"%@ of %@" = "%@ trên %@";
+
+/* media stream */
+"%@ ready, %@" = "%@ sẵn sàng, %@";
+
+/* channel list */
+"%@ selected" = "Đã chọn %@";
+
+/* file list */
+"%@ uploaded" = "Đã tải lên %@";
+
+/* live activity */
+"%@, %d users" = "%@, %d người dùng";
 
 /* Web Login Controller */
 "%@, your username \"%@\" has been validated" = "%@, tên người dùng của bạn \"%@\" đã được xác nhận";
@@ -10,8 +40,62 @@
 /* preferences */
 "%d %% - Default" = "%d %% - Mặc định";
 
+/* user accounts */
+"%d accounts" = "%d tài khoản";
+
+/* user accounts */
+"%d accounts changed and %d could not be changed." = "Đã thay đổi %d tài khoản và không thể thay đổi %d tài khoản.";
+
+/* user accounts */
+"%d accounts changed. It applies to each user the next time they log in." = "Đã thay đổi %d tài khoản. Có hiệu lực với mỗi người dùng từ lần đăng nhập tiếp theo.";
+
+/* diagnostics */
+"%d entries" = "%d mục";
+
+/* media stream */
+"%d files added to the playlist" = "Đã thêm %d tệp vào danh sách phát";
+
+/* connection quality */
+"%d ms" = "%d ms";
+
+/* user accounts */
+"%d permissions chosen" = "Đã chọn %d quyền";
+
+/* user accounts */
+"%d permissions will be given to the %d accounts of the server that are not administrators." = "%d quyền sẽ được cấp cho %d tài khoản của máy chủ không phải quản trị viên.";
+
+/* user accounts */
+"%d permissions will be removed from the %d accounts of the server that are not administrators." = "%d quyền sẽ bị thu hồi khỏi %d tài khoản của máy chủ không phải quản trị viên.";
+
+/* channel picker */
+"%d users" = "%d người dùng";
+
+/* channel list */
+"%d users selected" = "Đã chọn %d người dùng";
+
+/* channel list */
+"%d users selected to move here" = "Đã chọn %d người dùng để di chuyển đến đây";
+
+/* audio codec */
+"%lld KB/s" = "%lld KB/s";
+
+/* audio codec */
+"%lld ms" = "%lld ms";
+
 /* codec detail */
 "(Active)" = "(Kích hoạt)";
+
+/* channel picker */
+"1 user" = "1 người dùng";
+
+/* channel list */
+"1 user selected" = "Đã chọn 1 người dùng";
+
+/* channel list */
+"1 user selected to move here" = "Đã chọn 1 người dùng để di chuyển đến đây";
+
+/* media stream */
+"100 % leaves the file as it is. The preview plays on this device only, with this volume and from the chosen position." = "100 % giữ nguyên tệp. Bản nghe thử chỉ phát trên thiết bị này, với âm lượng này và từ vị trí đã chọn.";
 
 /* codec detail */
 "12 KHz" = "12 KHz";
@@ -34,8 +118,29 @@
    create channel */
 "8 KHz" = "8 KHz";
 
+/* user accounts */
+"A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "Thay đổi quyền có hiệu lực từ lần đăng nhập tiếp theo của người dùng. Ai đang kết nối vẫn giữ quyền cũ cho đến lúc đó.";
+
+/* appearance */
+"A theme changes the colors above. You can adjust them afterwards." = "Chủ đề thay đổi các màu ở trên. Bạn có thể điều chỉnh chúng sau đó.";
+
 /* serverlist */
 "Access preferences" = "Tùy chọn truy cập";
+
+/* appearance */
+"Accessibility 1" = "Trợ năng 1";
+
+/* appearance */
+"Accessibility 2" = "Trợ năng 2";
+
+/* appearance */
+"Accessibility 3" = "Trợ năng 3";
+
+/* appearance */
+"Accessibility 4" = "Trợ năng 4";
+
+/* appearance */
+"Accessibility 5" = "Trợ năng 5";
 
 /* server entry
    user detail */
@@ -45,8 +150,50 @@
    Sound Devices */
 "Active" = "Kích hoạt";
 
+/* media stream */
+"Add" = "Thêm";
+
+/* media stream */
+"Add Files" = "Thêm tệp";
+
 /* serverlist */
 "Add new server entry" = "Thêm máy chủ";
+
+/* serverlist */
+"Add to Favorites" = "Thêm vào mục ưa thích";
+
+/* incoming file */
+"Add to Streaming Playlist" = "Thêm vào danh sách phát trực tuyến";
+
+/* media stream */
+"Add Web Address" = "Thêm địa chỉ web";
+
+/* incoming file */
+"Added to the streaming playlist" = "Đã thêm vào danh sách phát trực tuyến";
+
+/* media stream */
+"Address of a web radio or of an audio or video file" = "Địa chỉ của đài phát thanh web hoặc của tệp âm thanh hay video";
+
+/* user accounts */
+"Administrator" = "Quản trị viên";
+
+/* channel list */
+"All" = "Tất cả";
+
+/* all users */
+"All Users" = "Tất cả người dùng";
+
+/* diagnostics */
+"Allowed" = "Được phép";
+
+/* appearance */
+"Always Dark" = "Luôn tối";
+
+/* appearance */
+"Always Light" = "Luôn sáng";
+
+/* user accounts */
+"An administrator has every permission, whatever is set here." = "Quản trị viên có mọi quyền, bất kể ở đây đặt gì.";
 
 /* preferences */
 "Announce content of text message" = "Thông báo nội dung tin nhắn";
@@ -69,11 +216,23 @@
 /* text to speech */
 "Announcements" = "thông báo";
 
+/* user accounts */
+"Anonymous users" = "Người dùng ẩn danh";
+
 /* preferences */
 "App Version" = "Phiên bản ứng dụng";
 
+/* appearance */
+"Appearance" = "Giao diện";
+
 /* codec detail */
 "Application" = "Application";
+
+/* appearance */
+"Apply High Contrast Theme" = "Áp dụng chủ đề tương phản cao";
+
+/* appearance */
+"Apply Pure Dark Theme" = "Áp dụng chủ đề đen thuần";
 
 /* preferences */
 "Ascending" = "Tăng dần";
@@ -84,6 +243,9 @@
 /* create channel */
 "Audio Codec" = "Audio Codec";
 
+/* channel list */
+"Audio Output" = "Đầu ra âm thanh";
+
 /* Web Login Controller */
 "Authenticate" = "Xác thực";
 
@@ -91,8 +253,50 @@
    Web Login controller */
 "Authentication" = "Xác thực";
 
+/* preferences */
+"Available" = "Sẵn sàng";
+
+/* preferences */
+"Away" = "Vắng mặt";
+
+/* media stream */
+"Back 1 Minute" = "Lùi 1 phút";
+
+/* media stream */
+"Back 10 Seconds" = "Lùi 10 giây";
+
+/* backup */
+"Backup" = "Sao lưu";
+
+/* backup */
+"Backup restored. Close the app and open it again to apply every setting." = "Đã khôi phục bản sao lưu. Hãy đóng ứng dụng và mở lại để áp dụng mọi cài đặt.";
+
+/* channel list */
+"Ban" = "Chặn";
+
+/* channel list */
+"Ban %@?" = "Chặn %@?";
+
+/* channel list */
+"Ban %d users?" = "Chặn %d người dùng?";
+
+/* ban list */
+"Ban removed" = "Đã gỡ chặn";
+
 /* channel list */
 "Ban user" = "Chặn người dùng";
+
+/* user accounts */
+"Ban users" = "Chặn người dùng";
+
+/* ban list */
+"Banned by %@" = "Bị chặn bởi %@";
+
+/* ban list */
+"Banned on %@" = "Bị chặn vào %@";
+
+/* ban list */
+"Banned Users" = "Người dùng bị chặn";
 
 /* server entry */
 "BearWare.dk Web Login" = "Đăng nhập web BearWare.dk";
@@ -112,8 +316,14 @@
 /* Sound Devices */
 "Bluetooth playback should use Advanced Audio Distribution Profile" = "Chế độ Bluetooth nên sử dụng Cấu hình Phân phối Âm thanh Nâng cao";
 
+/* all users */
+"Bring to My Channel" = "Đưa vào kênh của tôi";
+
 /* text message type */
 "Broadcast message" = "Tin nhắn thông báo";
+
+/* text message */
+"Broadcast Message" = "Tin nhắn thông báo";
 
 /* preferences
    user detail */
@@ -125,9 +335,27 @@
 /* Dialog message */
 "Cancel" = "Hủy";
 
+/* file list */
+"Cancels the download" = "Hủy tải xuống";
+
+/* file list */
+"Cancels the upload" = "Hủy tải lên";
+
+/* user accounts */
+"Change the Permissions of Every Account" = "Thay đổi quyền của mọi tài khoản";
+
+/* user accounts */
+"Change the properties of the server" = "Thay đổi thuộc tính của máy chủ";
+
+/* user accounts */
+"Changing accounts, %d of %d" = "Đang thay đổi tài khoản, %d trên %d";
+
 /* channel list
    server entry */
 "Channel" = "Kênh";
+
+/* View Title */
+"Channel Detail" = "Chi tiết kênh";
 
 /* text message type */
 "Channel message" = "Tin nhắn kênh";
@@ -148,20 +376,107 @@
 /* channel list */
 "Channel. %d users" = "Kênh. %d người dùng";
 
+/* ban list */
+"Channel: %@" = "Kênh: %@";
+
+/* channel list */
+"Channels" = "Kênh";
+
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "Chỉ kiểm tra nếu máy chủ này đã bật Đăng nhập web BearWare.dk";
+
+/* diagnostics */
+"Checks" = "Kiểm tra";
+
+/* media stream */
+"Choose a file" = "Chọn một tệp";
+
+/* channel picker */
+"Choose Channel" = "Chọn kênh";
+
+/* appearance */
+"Choose colors, text size and font" = "Chọn màu, cỡ chữ và phông chữ";
+
+/* preferences */
+"Choose events to playback" = "Chọn sự kiện sẽ được đọc";
+
+/* file list */
+"Choose Files" = "Chọn tệp";
+
+/* preferences */
+"Choose input and output devices" = "Chọn thiết bị đầu vào và đầu ra";
+
+/* user accounts */
+"Choose one or more permissions and then what to do with them. Administrator accounts are not changed." = "Chọn một hoặc nhiều quyền rồi chọn việc cần làm với chúng. Tài khoản quản trị viên không bị thay đổi.";
+
+/* preferences */
+"Choose sounds events to play" = "Chọn âm thanh sự kiện sẽ được phát";
+
+/* all users */
+"Choosing a user shows the channel they are in. If the server does not let your account see all users, only those of your channel are listed." = "Chọn một người dùng sẽ hiển thị kênh mà họ đang ở. Nếu máy chủ không cho tài khoản của bạn thấy mọi người dùng, chỉ những người trong kênh của bạn được liệt kê.";
+
+/* channel detail */
+"Classroom" = "Lớp học";
+
+/* diagnostics */
+"Clear Log" = "Xóa nhật ký";
+
+/* media stream */
+"Close" = "Đóng";
+
+/* channel picker */
+"Collapsed" = "Đã thu gọn";
+
+/* appearance */
+"Color of buttons, switches and the selected tab." = "Màu của nút, công tắc và tab được chọn.";
+
+/* appearance */
+"Color of the Speakers button in each state. Its icon is shown in black or white, whichever is easier to read." = "Màu của nút Loa ở mỗi trạng thái. Biểu tượng hiển thị màu đen hoặc trắng, tùy màu nào dễ đọc hơn.";
+
+/* appearance */
+"Color of the Talk button in each state. Its text is shown in black or white, whichever is easier to read." = "Màu của nút Nói ở mỗi trạng thái. Chữ hiển thị màu đen hoặc trắng, tùy màu nào dễ đọc hơn.";
+
+/* appearance */
+"Colors and Text" = "Màu và văn bản";
+
+/* appearance */
+"Colors of the More menu of the channel list. Until you choose them it follows the theme: dark with light text in dark mode, and the other way round in light mode." = "Màu của menu Thêm trong danh sách kênh. Khi bạn chưa chọn, menu theo chủ đề: tối với chữ sáng ở chế độ tối, và ngược lại ở chế độ sáng.";
+
+/* keyboard shortcuts */
+"Command" = "Command";
 
 /* log entry */
 "Command failed: %@" = "Lệnh không hợp lệ: %@";
 
+/* connection quality */
+"Command Latency (TCP)" = "Độ trễ lệnh (TCP)";
+
 /* create channel */
 "Commands" = "Lệnh";
+
+/* channel list */
+"Confirm" = "Xác nhận";
+
+/* server list */
+"Connect" = "Kết nối";
+
+/* preferences */
+"Connect on Startup" = "Kết nối khi khởi động";
+
+/* incoming file */
+"Connect to a server and join a channel to send %@" = "Kết nối với máy chủ và tham gia một kênh để gửi %@";
+
+/* connection quality */
+"Connect to a server to see the quality of the connection" = "Kết nối với máy chủ để xem chất lượng kết nối";
 
 /* connect to a server */
 "Connect to Server" = "Kết nối với máy chủ";
 
 /* serverlist */
 "Connect to server" = "Kết nối với máy chủ";
+
+/* preferences */
+"Connect to the last server and channel when the app opens" = "Kết nối với máy chủ và kênh gần nhất khi mở ứng dụng";
 
 /* preferences
    server entry */
@@ -171,11 +486,38 @@
    tts event */
 "Connection lost" = "Mất kết nối";
 
+/* connection quality */
+"Connection Quality" = "Chất lượng kết nối";
+
+/* keyboard shortcuts */
+"Control" = "Control";
+
+/* user accounts */
+"Control a shared desktop" = "Điều khiển màn hình được chia sẻ";
+
+/* media stream */
+"Controls" = "Điều khiển";
+
+/* text message */
+"Copied" = "Đã sao chép";
+
 /* server entry */
 "Copy" = "Copy";
 
 /* server entry */
+"Copy Join Code" = "Sao chép mã tham gia";
+
+/* serverlist */
+"Copy Link" = "Sao chép liên kết";
+
+/* connection quality */
+"Counted over the voice received from the users of your channel since you joined it. Above 2 % voices start to break up." = "Tính trên giọng nói nhận được từ người dùng trong kênh của bạn kể từ khi bạn tham gia. Trên 2 % giọng nói bắt đầu bị ngắt quãng.";
+
+/* server entry */
 "Country" = "Quốc gia";
+
+/* user accounts */
+"Create and change permanent channels" = "Tạo và thay đổi kênh cố định";
 
 /* View Title */
 "Create Channel" = "Tạo kênh";
@@ -183,21 +525,72 @@
 /* main-tab */
 "Create new channel" = "Tạo kênh mới";
 
+/* user accounts */
+"Create temporary channels" = "Tạo kênh tạm thời";
+
+/* web login */
+"Create Web Login" = "Tạo đăng nhập web";
+
+/* media stream */
+"Current File" = "Tệp hiện tại";
+
+/* connection quality */
+"Data" = "Dữ liệu";
+
 /* Sound Devices */
 "Default" = "Mặc định";
 
 /* preferences */
 "Default Subscriptions" = "Đăng ký mặc định";
 
+/* user accounts */
+"Default user" = "Người dùng thường";
+
+/* file list serverlist */
+"Delete" = "Xóa";
+
+/* file list */
+"Delete \"%@\" from the channel?" = "Xóa \"%@\" khỏi kênh?";
+
+/* server list */
+"Delete \"%@\" from the server list?" = "Xóa \"%@\" khỏi danh sách máy chủ?";
+
+/* channel detail */
+"Delete Channel" = "Xóa kênh";
+
+/* file list */
+"Delete File" = "Xóa tệp";
+
+/* server list */
+"Delete Server" = "Xóa máy chủ";
+
 /* serverlist */
 "Delete server from list" = "Xóa máy chủ khỏi danh sách";
+
+/* channel list */
+"Deselect user" = "Bỏ chọn người dùng";
 
 /* preferences
    user detail */
 "Desktop" = "Màn hình";
 
+/* diagnostics */
+"Diagnostic Log" = "Nhật ký chẩn đoán";
+
+/* diagnostics */
+"Diagnostics" = "Chẩn đoán";
+
+/* preferences */
+"Disabled" = "Đã tắt";
+
+/* channel list */
+"Disconnect" = "Ngắt kết nối";
+
 /* preferences */
 "Display" = "Hiển thị";
+
+/* channel list */
+"Done selecting" = "Chọn xong";
 
 /* channel list */
 "Double tap and hold to transmit. Triple tap fast to lock transmission." = "Nhấn đúp và giữ để truyền. Nhấn nhanh ba lần để khóa truyền.";
@@ -205,14 +598,41 @@
 /* preferences */
 "Double tap to lock TX button" = "Nhấn đúp để khóa nút TX";
 
+/* user accounts */
+"Download files" = "Tải tệp xuống";
+
+/* file list */
+"Downloaded" = "Đã tải xuống";
+
+/* file list */
+"Downloading, %d %%" = "Đang tải xuống, %d %%";
+
+/* file list */
+"Downloads the file" = "Tải tệp xuống";
+
 /* codec detail */
 "DTX" = "DTX";
+
+/* media stream */
+"Duration" = "Thời lượng";
+
+/* user accounts */
+"Each change is saved at once and applies the next time this user logs in." = "Mỗi thay đổi được lưu ngay và có hiệu lực từ lần đăng nhập tiếp theo của người dùng này.";
+
+/* channel list */
+"Earpiece or Headset" = "Loa trong hoặc tai nghe";
+
+/* channel list */
+"Edit" = "Sửa";
 
 /* channel list */
 "Edit properties" = "Chỉnh sửa thông tin";
 
 /* server entry */
 "Encrypted" = "Mã hóa";
+
+/* media stream */
+"Enter a web address that starts with http or https" = "Nhập một địa chỉ web bắt đầu bằng http hoặc https";
 
 /* serverlist */
 "Enter Join Code" = "Enter Join Code";
@@ -226,14 +646,104 @@
    user detail */
 "Error" = "Lỗi";
 
+/* media stream */
+"Error while streaming media file" = "Lỗi khi phát trực tuyến tệp phương tiện";
+
+/* user accounts */
+"Every Account" = "Mọi tài khoản";
+
+/* user accounts */
+"Every account was already like that. Nothing has been changed." = "Mọi tài khoản đã như vậy rồi. Không có gì thay đổi.";
+
+/* transmit control */
+"Everyone" = "Mọi người";
+
+/* transmit control */
+"Everyone can transmit in this channel except what is turned off here." = "Mọi người đều có thể truyền trong kênh này, trừ những gì bị tắt ở đây.";
+
 /* preferences */
 "Exclusive Mode Toggled" = "Chế độ độc quyền được chuyển đổi";
+
+/* channel list */
+"Expand" = "Mở rộng";
+
+/* channel picker */
+"Expanded" = "Đã mở rộng";
+
+/* appearance */
+"Export Appearance" = "Xuất giao diện";
+
+/* backup */
+"Export Settings and Servers" = "Xuất cài đặt và máy chủ";
+
+/* appearance */
+"Exports the colors, the text and the theme to a file that someone else can import." = "Xuất màu, văn bản và chủ đề ra một tệp mà người khác có thể nhập.";
+
+/* appearance */
+"Extra Extra Extra Large" = "Cực cực cực lớn";
+
+/* appearance */
+"Extra Extra Large" = "Cực cực lớn";
+
+/* appearance */
+"Extra Large" = "Cực lớn";
+
+/* appearance */
+"Extra Small" = "Cực nhỏ";
+
+/* file list */
+"Failed to download file" = "Không tải được tệp xuống";
+
+/* media stream */
+"Failed to play the file" = "Không phát được tệp";
 
 /* connect to a server */
 "Failed to setup encryption" = "Không thể thiết lập mã hóa";
 
+/* media stream */
+"Failed to stream media file" = "Không phát trực tuyến được tệp phương tiện";
+
+/* file list */
+"Failed to transfer %@" = "Không truyền được %@";
+
+/* file list */
+"Failed to upload file" = "Không tải được tệp lên";
+
+/* serverlist */
+"Favorite" = "Ưa thích";
+
 /* preferences */
 "Female" = "Nữ";
+
+/* media stream */
+"File" = "Tệp";
+
+/* sound events */
+"File Added" = "Đã thêm tệp";
+
+/* sound events */
+"File Removed" = "Đã gỡ tệp";
+
+/* file list */
+"Files" = "Tệp";
+
+/* media stream */
+"Files stay in the list until you remove them. When one ends, the next one starts." = "Các tệp ở lại trong danh sách cho đến khi bạn gỡ chúng. Khi một tệp kết thúc, tệp tiếp theo bắt đầu.";
+
+/* preferences */
+"Filter Server List" = "Lọc danh sách máy chủ";
+
+/* appearance */
+"Font" = "Phông chữ";
+
+/* appearance */
+"Font of Server Events" = "Phông chữ của sự kiện máy chủ";
+
+/* media stream */
+"Forward 1 Minute" = "Tới 1 phút";
+
+/* media stream */
+"Forward 10 Seconds" = "Tới 10 giây";
 
 /* codec detail */
 "Frame Size" = "Kích thước khung hình";
@@ -245,6 +755,12 @@
    Sound Devices
    user detail */
 "General" = "Chung";
+
+/* user accounts */
+"Give to Every Account" = "Cấp cho mọi tài khoản";
+
+/* channel list */
+"Go to Their Channel" = "Đến kênh của họ";
 
 /* TTS EVENT */
 "has joined the channel" = "đã tham gia kênh";
@@ -267,11 +783,47 @@
 /* server entry */
 "Host address" = "Địa chỉ máy chủ";
 
+/* appearance */
+"Import Appearance" = "Nhập giao diện";
+
+/* backup */
+"Import Backup" = "Nhập bản sao lưu";
+
 /* channel list */
 "Inactive" = "Không hoạt động";
 
+/* appearance */
+"Interface" = "Giao diện người dùng";
+
+/* appearance */
+"Interface Color" = "Màu giao diện";
+
+/* Sound Devices */
+"iOS Voice Processing" = "Xử lý giọng nói của iOS";
+
+/* Sound Devices */
+"iOS voice processing cancels echo, reduces noise and levels the volume. WebRTC reduces noise and levels the volume but does not cancel echo, so use it with headphones." = "Xử lý giọng nói của iOS khử tiếng vọng, giảm nhiễu và cân bằng âm lượng. WebRTC giảm nhiễu và cân bằng âm lượng nhưng không khử tiếng vọng, vì vậy hãy dùng với tai nghe.";
+
+/* ban list */
+"IP address: %@" = "Địa chỉ IP: %@";
+
+/* user accounts */
+"It applies to each user the next time they log in." = "Có hiệu lực với mỗi người dùng từ lần đăng nhập tiếp theo.";
+
+/* text message */
+"It is sent to every user of the server" = "Tin được gửi đến mọi người dùng của máy chủ";
+
 /* Dialog message */
 "Join" = "Tham gia";
+
+/* file list */
+"Join a channel to see its files" = "Tham gia một kênh để xem các tệp của kênh";
+
+/* incoming file */
+"Join a channel to send %@" = "Tham gia một kênh để gửi %@";
+
+/* media stream */
+"Join a channel to stream a media file" = "Tham gia một kênh để phát trực tuyến tệp phương tiện";
 
 /* channel list */
 "Join channel" = "Tham gia kênh";
@@ -288,23 +840,92 @@
 /* preferences */
 "Join root channel after login" = "Tham gia kênh gốc sau khi đăng nhập";
 
+/* all users */
+"Join Their Channel" = "Tham gia kênh của họ";
+
+/* channel list */
+"Join this channel" = "Tham gia kênh này";
+
 /* log entry */
 "Joined %@" = "Đã tham gia %@";
+
+/* keyboard shortcuts */
+"Key" = "Phím";
+
+/* keyboard shortcuts */
+"Keyboard Shortcuts" = "Phím tắt";
+
+/* preferences */
+"Keys of an external keyboard to talk and to mute" = "Phím của bàn phím ngoài để nói và tắt tiếng";
+
+/* channel list */
+"Kick" = "Kick";
+
+/* channel list */
+"Kick %@?" = "Kick %@?";
+
+/* channel list */
+"Kick %d users?" = "Kick %d người dùng?";
+
+/* user detail */
+"Kick and Ban User" = "Kick và chặn người dùng";
 
 /* channel list */
 "Kick user" = "Kick người dùng";
 
+/* user detail */
+"Kick User" = "Kick người dùng";
+
+/* user accounts */
+"Kick users off the server" = "Kick người dùng khỏi máy chủ";
+
+/* appearance */
+"Large" = "Lớn";
+
+/* connection quality */
+"Latency" = "Độ trễ";
+
+/* connection quality */
+"Latency and packet loss" = "Độ trễ và mất gói";
+
+/* appearance */
+"Light or Dark" = "Sáng hoặc tối";
+
 /* preferences */
 "Limit length of names in channel list to %d characters" = "Giới hạn độ dài tên trong danh sách kênh ở mức %d ký tự";
 
+/* preferences */
+"Limit types of servers to show" = "Giới hạn loại máy chủ được hiển thị";
+
+/* serverlist */
+"Link copied" = "Đã sao chép liên kết";
+
+/* appearance */
+"Listening" = "Đang nghe";
+
+/* media stream */
+"Live" = "Trực tiếp";
+
+/* diagnostics */
+"Live Activities" = "Hoạt động trực tiếp";
+
 /* serverlist */
 "Local server" = "Máy chủ cục bộ";
+
+/* user accounts */
+"Log in from several devices at once" = "Đăng nhập từ nhiều thiết bị cùng lúc";
 
 /* text message type */
 "Log message" = "Log message";
 
 /* log entry */
 "Logged on to server" = "Đã đăng nhập vào máy chủ";
+
+/* preferences */
+"Login ID from BearWare.dk" = "ID đăng nhập từ BearWare.dk";
+
+/* user accounts */
+"Make other users channel operator" = "Cho người dùng khác làm người điều hành kênh";
 
 /* preferences */
 "Male" = "Nam";
@@ -326,18 +947,72 @@
 /* preferences */
 "Media file vs. voice volume" = "Âm lượng tệp phương tiện vs âm lượng giọng nói";
 
+/* transmit control */
+"Media Files" = "Tệp phương tiện";
+
+/* appearance */
+"Medium" = "Vừa";
+
+/* appearance */
+"Menu Background" = "Nền menu";
+
+/* appearance */
+"Menu Text" = "Chữ menu";
+
+/* appearance */
+"Menus" = "Menu";
+
+/* text messages */
+"Message" = "Tin nhắn";
+
 /* server entry */
 "Message of the Day" = "Tin nhắn trong ngày";
 
+/* appearance */
+"Message Text Size" = "Cỡ chữ tin nhắn";
+
+/* channel list */
+"Message this user" = "Nhắn tin cho người dùng này";
+
+/* tab */
+"Messages" = "Tin nhắn";
+
+/* diagnostics */
+"Microphone" = "Micrô";
+
 /* preferences */
 "Microphone Gain" = "Âm lượng Microphone";
+
+/* Sound Devices */
+"Microphone Test" = "Kiểm tra micrô";
+
+/* user accounts */
+"Moderation" = "Kiểm duyệt";
+
+/* keyboard shortcuts */
+"Modifier" = "Phím bổ trợ";
 
 /* codec detail
    create channel */
 "Mono" = "Mono";
 
+/* appearance */
+"Monospaced" = "Đơn cách";
+
+/* channel list */
+"More" = "Thêm";
+
+/* channel list */
+"Move" = "Di chuyển";
+
+/* channel list */
+"Move to Channel" = "Di chuyển đến kênh";
+
 /* channel list */
 "Move user" = "Di chuyển người dùng";
+
+/* user accounts */
+"Move users between channels" = "Di chuyển người dùng giữa các kênh";
 
 /* channel list */
 "Move users here" = "Di chuyển người dùng đến đây";
@@ -351,8 +1026,17 @@
 /* user detail */
 "Mute Media File" = "Tắt tiếng tệp phương tiện";
 
+/* keyboard shortcuts */
+"Mute or Unmute Speakers" = "Tắt hoặc bật tiếng loa";
+
 /* user detail */
 "Mute Voice" = "Tắt tiếng giọng nói";
+
+/* channel list */
+"Muted" = "Đã tắt tiếng";
+
+/* channel list */
+"Mutes or unmutes everything you hear from the server" = "Tắt hoặc bật tiếng mọi thứ bạn nghe từ máy chủ";
 
 /* create channel
    server entry */
@@ -361,14 +1045,23 @@
 /* preferences */
 "Name displayed in channel list" = "Tên hiển thị trong danh sách kênh";
 
+/* preferences */
+"Neutral" = "Trung tính";
+
 /* Dialog message */
 "New Server" = "Máy chủ mới";
+
+/* media stream */
+"Next File" = "Tệp tiếp theo";
 
 /* preferences */
 "Nickname" = "Tên hiển thị";
 
 /* server entry */
 "Nickname (optional)" = "Tên hiển thị (tùy chọn)";
+
+/* user accounts */
+"Nickname locked, cannot be changed" = "Tên hiển thị bị khóa, không thể thay đổi";
 
 /* Dialog message */
 "No" = "Không";
@@ -380,20 +1073,71 @@
 /* create channel */
 "No Audio Recording" = "Không ghi âm";
 
+/* ban list */
+"No banned users" = "Không có người dùng bị chặn";
+
+/* connection quality */
+"No data" = "Không có dữ liệu";
+
+/* file list */
+"No files in this channel" = "Không có tệp trong kênh này";
+
 /* create channel */
 "No Interruptions" = "không bị gián đoạn";
+
+/* keyboard shortcuts */
+"No Modifier" = "Không có phím bổ trợ";
 
 /* channel list */
 "No password" = "Không mật khẩu";
 
+/* channel list */
+"No results" = "Không có kết quả";
+
 /* serverlist */
 "No server found" = "No server found";
+
+/* user accounts */
+"No user accounts" = "Không có tài khoản người dùng";
+
+/* channel list */
+"No users selected" = "Chưa chọn người dùng nào";
+
+/* channel list */
+"No users selected to move" = "Chưa chọn người dùng nào để di chuyển";
 
 /* create channel */
 "No Voice Activation" = "Không kích hoạt bằng giọng nói";
 
 /* default nickname */
 "Noname" = "Không tên";
+
+/* keyboard shortcuts and voice cleanup */
+"None" = "Không";
+
+/* diagnostics */
+"Not allowed. Nobody can hear you until you turn it on in Settings, under TeamTalk." = "Không được phép. Không ai nghe được bạn cho đến khi bạn bật nó trong Cài đặt, mục TeamTalk.";
+
+/* diagnostics */
+"Not asked yet. iOS asks the first time you join a channel." = "Chưa được hỏi. iOS sẽ hỏi khi bạn tham gia kênh lần đầu.";
+
+/* diagnostics */
+"Not available with this installation. The widget cannot show your servers and the controls do not show their state." = "Không khả dụng với bản cài đặt này. Tiện ích không thể hiển thị máy chủ của bạn và các điều khiển không hiển thị trạng thái.";
+
+/* live activity */
+"Not in a channel" = "Không ở trong kênh";
+
+/* diagnostics */
+"Not installed. The app was installed without its extension, so there are no Live Activities, widget or controls. Install it again with a tool that keeps the extensions." = "Chưa được cài đặt. Ứng dụng được cài mà không có phần mở rộng, nên không có Hoạt động trực tiếp, tiện ích hay điều khiển. Hãy cài lại bằng công cụ giữ lại các phần mở rộng.";
+
+/* media stream */
+"Not streaming" = "Không phát trực tuyến";
+
+/* live activity */
+"Not transmitting" = "Không truyền";
+
+/* media stream */
+"Off" = "Tắt";
 
 /* serverlist */
 "Official server" = "Máy chủ chính thức";
@@ -405,11 +1149,35 @@
    Web Login Controller */
 "OK" = "OK";
 
+/* channel list */
+"On" = "Bật";
+
+/* channel detail */
+"Only the users you allow can transmit" = "Chỉ những người dùng bạn cho phép mới có thể truyền";
+
+/* text message */
+"Open Link" = "Mở liên kết";
+
+/* diagnostics */
+"Open Settings" = "Mở Cài đặt";
+
+/* file list */
+"Opens the file" = "Mở tệp";
+
+/* keyboard shortcuts */
+"Option" = "Option";
+
 /* codec detail */
 "OPUS Codec" = "OPUS Codec";
 
 /* preferences */
 "Order of channels in Channel List" = "Thứ tự các kênh trong Danh sách kênh";
+
+/* user accounts */
+"Other" = "Khác";
+
+/* connection quality */
+"Packet Loss" = "Mất gói";
 
 /* channel list */
 "Parent channel" = "Kênh gốc";
@@ -423,8 +1191,26 @@
 /* channel list */
 "Password protected" = "Được bảo vệ bằng mật khẩu";
 
+/* media stream */
+"Pause" = "Tạm dừng";
+
+/* keyboard shortcuts */
+"Pause or Resume Streaming" = "Tạm dừng hoặc tiếp tục phát trực tuyến";
+
+/* media stream */
+"Paused" = "Đã tạm dừng";
+
 /* create channel */
 "Permanent Channel" = "Kênh vĩnh viễn";
+
+/* file list */
+"Photos and Videos" = "Ảnh và video";
+
+/* sound events */
+"Play sound when a file is removed from the channel" = "Phát âm thanh khi một tệp bị gỡ khỏi kênh";
+
+/* sound events */
+"Play sound when a file is uploaded to the channel" = "Phát âm thanh khi một tệp được tải lên kênh";
 
 /* preferences */
 "Play sound when a user joins the channel" = "Phát âm thanh khi người dùng tham gia kênh";
@@ -459,11 +1245,17 @@
 /* preferences */
 "Play sound when voice transmission is toggled" = "Phát âm thanh khi bật chức năng truyền giọng nói";
 
+/* media stream */
+"Playlist" = "Danh sách phát";
+
 /* preferences */
 "Pop up text message when new messages are received" = "Thông báo bật lên khi nhận được tin nhắn mới";
 
 /* preferences */
 "Popularity" = "Popularity";
+
+/* media stream */
+"Position" = "Vị trí";
 
 /* serverlist */
 "Preferences" = "Tùy chọn";
@@ -471,11 +1263,23 @@
 /* Sound Devices */
 "Preferred" = "Preferred";
 
+/* media stream */
+"Preparing file" = "Đang chuẩn bị tệp";
+
 /* preferences */
 "Pressing Return-key sends text message" = "Nhấn phím xuống dòng sẽ gửi tin nhắn";
 
+/* appearance */
+"Preview" = "Xem trước";
+
+/* media stream */
+"Previous File" = "Tệp trước";
+
 /* text message type */
 "Private message" = "Tin nhắn riêng";
+
+/* channel list */
+"Private Message" = "Tin nhắn riêng";
 
 /* preferences */
 "Private Text Message" = "Tin nhắn riêng";
@@ -489,11 +1293,17 @@
 /* serverlist */
 "Public server" = "Máy chủ công cộng";
 
+/* channel list */
+"Push to Talk" = "Nhấn để nói";
+
 /* preferences */
 "Push To Talk Lock" = "Khóa Nhấn Để Nói";
 
 /* codec detail */
 "Quality" = "Chất lượng";
+
+/* preferences */
+"Question" = "Câu hỏi";
 
 /* preferences */
 "Receive broadcast messages by default" = "Nhận tin nhắn thông báo theo mặc định";
@@ -516,6 +1326,45 @@
 /* preferences */
 "Receive webcam streams by default" = "Nhận luồng webcam theo mặc định";
 
+/* connection quality */
+"Received" = "Đã nhận";
+
+/* appearance */
+"Received message" = "Tin nhắn đã nhận";
+
+/* appearance */
+"Received Messages" = "Tin nhắn đã nhận";
+
+/* user accounts */
+"Record voice in every channel" = "Ghi âm giọng nói trong mọi kênh";
+
+/* ban list */
+"Remove Ban" = "Gỡ chặn";
+
+/* user accounts */
+"Remove from Every Account" = "Thu hồi khỏi mọi tài khoản";
+
+/* serverlist */
+"Remove from Favorites" = "Xóa khỏi mục ưa thích";
+
+/* media stream */
+"Repeat" = "Lặp lại";
+
+/* web login */
+"Reset Web Login" = "Đặt lại đăng nhập web";
+
+/* appearance */
+"Restore Default Appearance" = "Khôi phục giao diện mặc định";
+
+/* keyboard shortcuts */
+"Restore Default Shortcuts" = "Khôi phục phím tắt mặc định";
+
+/* media stream */
+"Resume" = "Tiếp tục";
+
+/* keyboard shortcuts */
+"Return" = "Return";
+
 /* preferences */
 "Return Sends Message" = "Xuống dòng Gửi tin nhắn";
 
@@ -525,14 +1374,71 @@
 /* log entry */
 "root channel" = "kênh gốc";
 
+/* appearance */
+"Rounded" = "Bo tròn";
+
+/* appearance */
+"Same as the App" = "Giống ứng dụng";
+
+/* appearance */
+"Same as the System" = "Giống hệ thống";
+
 /* codec detail */
 "Sample Rate" = "Sample Rate";
+
+/* channel detail */
+"Save" = "Lưu";
 
 /* Dialog message */
 "Save Server" = "Lưu máy chủ";
 
+/* server entry */
+"Save server" = "Lưu máy chủ";
+
 /* Dialog message */
 "Save server to server list?" = "Lưu máy chủ vào danh sách máy chủ?";
+
+/* user accounts */
+"Search accounts" = "Tìm tài khoản";
+
+/* channel picker */
+"Search channels" = "Tìm kênh";
+
+/* channel list */
+"Search channels and users" = "Tìm kênh và người dùng";
+
+/* serverlist */
+"Search servers" = "Tìm máy chủ";
+
+/* all users */
+"Search users" = "Tìm người dùng";
+
+/* user accounts */
+"See hidden channels" = "Xem các kênh ẩn";
+
+/* user accounts */
+"See the users of every channel" = "Xem người dùng của mọi kênh";
+
+/* preferences */
+"Select the text-to-speech voice to use" = "Chọn giọng đọc văn bản sẽ dùng";
+
+/* channel list */
+"Select users" = "Chọn người dùng";
+
+/* speech */
+"Selected" = "Đã chọn";
+
+/* text messages */
+"Send" = "Gửi";
+
+/* text message */
+"Send broadcast message" = "Gửi tin nhắn thông báo";
+
+/* user accounts */
+"Send broadcast messages" = "Gửi tin nhắn thông báo";
+
+/* user accounts */
+"Send channel messages" = "Gửi tin nhắn kênh";
 
 /* text message */
 "Send empty message to close keyboard" = "Gửi tin nhắn trống để đóng bàn phím";
@@ -540,8 +1446,38 @@
 /* channel list */
 "Send private message" = "Gửi tin nhắn riêng";
 
+/* user accounts */
+"Send private messages" = "Gửi tin nhắn riêng";
+
+/* incoming file */
+"Send to TeamTalk" = "Gửi đến TeamTalk";
+
+/* media stream */
+"Send Video" = "Gửi video";
+
+/* connection quality */
+"Sent" = "Đã gửi";
+
+/* appearance */
+"Sent message" = "Tin nhắn đã gửi";
+
+/* appearance */
+"Sent Messages" = "Tin nhắn đã gửi";
+
+/* appearance */
+"Serif" = "Có chân";
+
 /* preferences */
 "Server Connection Lost" = "Mất kết nối với máy chủ";
+
+/* server entry */
+"Server Entry" = "Mục máy chủ";
+
+/* appearance */
+"Server event" = "Sự kiện máy chủ";
+
+/* appearance */
+"Server Events" = "Sự kiện máy chủ";
 
 /* server entry */
 "Server List Entry" = "Danh sách máy chủ";
@@ -550,13 +1486,52 @@
 "Server Status" = "Trạng thái máy chủ";
 
 /* preferences */
+"Setup Announcements" = "Thiết lập thông báo bằng giọng nói";
+
+/* preferences */
+"Setup Sound Devices" = "Thiết lập thiết bị âm thanh";
+
+/* preferences */
+"Setup Sound Events" = "Thiết lập sự kiện âm thanh";
+
+/* file list */
+"Share" = "Chia sẻ";
+
+/* diagnostics */
+"Share Log" = "Chia sẻ nhật ký";
+
+/* serverlist */
+"Share Server" = "Chia sẻ máy chủ";
+
+/* user accounts */
+"Share the desktop" = "Chia sẻ màn hình";
+
+/* file list */
+"Shares or opens the file" = "Chia sẻ hoặc mở tệp";
+
+/* keyboard shortcuts */
+"Shift" = "Shift";
+
+/* keyboard shortcuts */
+"Shortcuts work with an external keyboard while connected to a server. A key without a modifier does nothing while you are typing a message." = "Phím tắt hoạt động với bàn phím ngoài khi đang kết nối với máy chủ. Phím không có phím bổ trợ sẽ không làm gì khi bạn đang gõ tin nhắn.";
+
+/* preferences */
 "Show in Server List" = "Hiển thị trong Danh sách máy chủ";
 
 /* preferences */
 "Show male or female icon" = "Hiển thị biểu tượng nam hoặc nữ";
 
+/* server entry */
+"Show password" = "Hiện mật khẩu";
+
+/* server list */
+"Show server details" = "Hiện chi tiết máy chủ";
+
 /* preferences */
 "Show Text Messages Instantly" = "Hiển thị tin nhắn ngay lập tức";
+
+/* channel list */
+"Show user details" = "Hiện chi tiết người dùng";
 
 /* preferences */
 "Show Usernames" = "Hiển thị tên người dùng";
@@ -564,11 +1539,23 @@
 /* preferences */
 "Show usernames instead of nicknames" = "Hiển thị tên người dùng thay vì tên hiển thị";
 
+/* preferences */
+"Shown to the other users of the server" = "Hiển thị cho những người dùng khác của máy chủ";
+
 /* channel list */
 "Silent" = "Im lặng";
 
+/* appearance */
+"Size and font apply to the whole app." = "Cỡ chữ và phông chữ áp dụng cho toàn bộ ứng dụng.";
+
+/* appearance */
+"Small" = "Nhỏ";
+
 /* preferences */
 "Sort Channels" = "Sắp xếp kênh";
+
+/* media stream */
+"Sound" = "Âm thanh";
 
 /* preferences
    text to speech */
@@ -577,8 +1564,26 @@
 /* preferences */
 "Sound System" = "Hệ thống âm thanh";
 
+/* keyboard shortcuts */
+"Space" = "Dấu cách";
+
+/* channel list */
+"Speaker" = "Loa";
+
 /* preferences */
 "Speaker Output" = "Đầu ra loa";
+
+/* channel list */
+"Speakers" = "Loa";
+
+/* appearance */
+"Speakers Button" = "Nút Loa";
+
+/* intent */
+"Speakers On" = "Loa đang bật";
+
+/* preferences */
+"Speech" = "Giọng đọc";
 
 /* preferences */
 "Speech Rate" = "Tốc độ nói";
@@ -592,16 +1597,85 @@
 /* codec detail */
 "Speex Variable Bitrate Codec" = "Speex Variable Bitrate Codec";
 
+/* text to speech events */
+"Spoken By" = "Đọc bởi";
+
+/* text to speech events, accessibility */
+"Spoken by, %@" = "Đọc bởi, %@";
+
+/* appearance */
+"Standard" = "Chuẩn";
+
+/* media stream */
+"Start Streaming" = "Bắt đầu phát trực tuyến";
+
+/* preferences */
+"Status" = "Trạng thái";
+
 /* Text message view */
 "Status Event" = "Trạng thái Sự kiện";
+
+/* user accounts */
+"Status locked, cannot be changed" = "Trạng thái bị khóa, không thể thay đổi";
+
+/* preferences */
+"Status Message" = "Tin nhắn trạng thái";
 
 /* codec detail
    create channel
    Sound Devices */
 "Stereo" = "Stereo";
 
+/* Sound Devices */
+"Stop Microphone Test" = "Dừng kiểm tra micrô";
+
+/* media stream */
+"Stop Preview" = "Dừng nghe thử";
+
+/* media stream */
+"Stop Streaming" = "Dừng phát trực tuyến";
+
+/* user accounts */
+"Stream audio files" = "Phát trực tuyến tệp âm thanh";
+
+/* media stream */
+"Stream Media File" = "Phát trực tuyến tệp phương tiện";
+
+/* media stream */
+"Stream media file" = "Phát trực tuyến tệp phương tiện";
+
+/* user accounts */
+"Stream video files" = "Phát trực tuyến tệp video";
+
+/* media stream */
+"Streaming" = "Phát trực tuyến";
+
+/* media stream */
+"Streaming %@" = "Đang phát trực tuyến %@";
+
+/* media stream */
+"Streaming finished" = "Đã phát trực tuyến xong";
+
+/* media stream */
+"Streaming started" = "Đã bắt đầu phát trực tuyến";
+
 /* user detail */
 "Subscriptions" = "đăng ký";
+
+/* appearance */
+"Swap Speakers Button Colors" = "Đổi màu của nút Loa";
+
+/* appearance */
+"Swap Talk Button Colors" = "Đổi màu của nút Nói";
+
+/* appearance */
+"System Size" = "Cỡ của hệ thống";
+
+/* channel list */
+"Talk" = "Nói";
+
+/* appearance */
+"Talk Button" = "Nút Nói";
 
 /* channel list */
 "Talking" = "Đang nói";
@@ -609,17 +1683,98 @@
 /* server entry */
 "TCP Port" = "Cổng TCP";
 
+/* channel list */
+"TeamTalk has no access to the microphone. Turn it on in Settings, under TeamTalk, and try again." = "TeamTalk không có quyền truy cập micrô. Hãy bật trong Cài đặt, mục TeamTalk, rồi thử lại.";
+
+/* server list */
+"TeamTalk Servers" = "Máy chủ TeamTalk";
+
+/* text to speech events */
+"TeamTalk Voice" = "Giọng của TeamTalk";
+
+/* Sound Devices */
+"Test Microphone" = "Kiểm tra micrô";
+
+/* appearance */
+"Text" = "Văn bản";
+
+/* appearance */
+"Text Messages" = "Tin nhắn văn bản";
+
+/* channel list */
+"Text Messaging" = "Tin nhắn văn bản";
+
+/* appearance */
+"Text of the Messages" = "Văn bản của tin nhắn";
+
+/* preferences */
+"Text shown next to your name" = "Văn bản hiển thị cạnh tên của bạn";
+
+/* appearance */
+"Text Size" = "Cỡ chữ";
+
 /* preferences */
 "Text To Speech Events" = "Sự kiện thông báo bằng giọng nói";
+
+/* speech */
+"Text-to-Speech Voice" = "Giọng đọc văn bản";
+
+/* user accounts */
+"The account could not be saved" = "Không thể lưu tài khoản";
+
+/* backup */
+"The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "Bản sao lưu chứa mọi cài đặt và danh sách máy chủ, kèm mật khẩu. Hãy giữ tệp ở nơi an toàn.";
+
+/* diagnostics */
+"The log is empty" = "Nhật ký trống";
+
+/* diagnostics */
+"The log records what the app does: connection, sound devices, transfers and errors. It holds no passwords and nothing of what is said or written." = "Nhật ký ghi lại những gì ứng dụng làm: kết nối, thiết bị âm thanh, truyền tệp và lỗi. Nó không chứa mật khẩu hay bất cứ điều gì được nói hoặc viết.";
+
+/* appearance */
+"The messages can have a text size of their own, and the server events a font of their own." = "Tin nhắn có thể có cỡ chữ riêng, và sự kiện máy chủ có phông chữ riêng.";
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "Tốc độ của giọng nói là %.1f";
 
+/* appearance */
+"The text of a message is shown in black or white, whichever is easier to read on its color." = "Chữ của tin nhắn hiển thị màu đen hoặc trắng, tùy màu nào dễ đọc hơn trên màu nền của nó.";
+
+/* appearance */
+"The text of a message is shown in black or white, whichever is easier to read on its color. Server events are what happens on the server, like someone joining or leaving the channel." = "Chữ của tin nhắn hiển thị màu đen hoặc trắng, tùy màu nào dễ đọc hơn trên màu nền của nó. Sự kiện máy chủ là những gì xảy ra trên máy chủ, như ai đó tham gia hoặc rời kênh.";
+
 /* preferences */
 "The volume of the speaking voice is %.1f" = "Âm lượng của giọng nói là %.1f";
 
+/* appearance */
+"Themes" = "Chủ đề";
+
+/* diagnostics */
+"They need iOS 17 or later" = "Cần iOS 17 trở lên";
+
+/* media stream */
+"This file cannot be streamed" = "Không thể phát trực tuyến tệp này";
+
+/* backup */
+"This file is not a TeamTalk backup" = "Tệp này không phải bản sao lưu TeamTalk";
+
+/* appearance */
+"This file is not an appearance exported from TeamTalk" = "Tệp này không phải giao diện được xuất từ TeamTalk";
+
+/* transmit control */
+"This is a classroom channel: only what is turned on here can be transmitted." = "Đây là kênh lớp học: chỉ những gì được bật ở đây mới có thể truyền.";
+
+/* media stream */
+"This web address cannot be streamed" = "Không thể phát trực tuyến địa chỉ web này";
+
+/* connection quality */
+"Time a packet takes to reach the server and come back. Below 100 ms a conversation feels immediate." = "Thời gian một gói tin đến máy chủ và quay lại. Dưới 100 ms cuộc trò chuyện có cảm giác tức thì.";
+
 /* channel list */
 "Toggle to enable/disable transmission" = "Chuyển đổi bật/tắt truyền";
+
+/* keyboard shortcuts */
+"Toggle Transmission" = "Bật hoặc tắt truyền";
 
 /* preferences */
 "Toggle voice transmission using headset" = "Chuyển đổi truyền giọng nói bằng nút tai nghe";
@@ -630,17 +1785,29 @@
 /* preferences */
 "Translator" = "Người dịch";
 
+/* live activity */
+"Transmission" = "Truyền";
+
 /* channel list */
 "Transmit inactive" = "Truyền không hoạt động";
 
 /* codec detail */
 "Transmit Interval" = "Khoảng thời gian truyền";
 
+/* user accounts */
+"Transmit video" = "Truyền video";
+
+/* user accounts */
+"Transmit voice" = "Truyền giọng nói";
+
 /* channel list */
 "Transmitting" = "truyền";
 
 /* preferences */
 "Turn off screen when holding phone near ear" = "Tắt màn hình khi để điện thoại gần tai";
+
+/* diagnostics */
+"Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Đã tắt. Hãy bật Hoạt động trực tiếp trong Cài đặt, mục TeamTalk.";
 
 /* serverlist */
 "Type Join Code" = "Type Join Code";
@@ -655,17 +1822,56 @@
 /* serverlist */
 "Unofficial server" = "máy chủ không chính thức";
 
+/* file list */
+"Upload file" = "Tải tệp lên";
+
+/* user accounts */
+"Upload files" = "Tải tệp lên";
+
+/* incoming file */
+"Upload to Channel" = "Tải lên kênh";
+
+/* file list */
+"Uploading" = "Đang tải lên";
+
+/* file list */
+"Uploading, %d %%" = "Đang tải lên, %d %%";
+
 /* Sound Devices */
 "Use echo cancellation and automatic gain control" = "Sử dụng loại bỏ tiếng vang và điều khiển khuếch đại tự động";
 
 /* preferences */
 "Use iPhone's speaker instead of earpiece" = "Sử dụng loa của iPhone thay vì tai nghe";
 
+/* audio codec */
+"Use No Audio" = "Không dùng âm thanh";
+
+/* audio codec */
+"Use OPUS Codec" = "Dùng codec OPUS";
+
+/* audio codec */
+"Use Speex Codec" = "Dùng codec Speex";
+
+/* audio codec */
+"Use Speex VBR Codec" = "Dùng codec Speex VBR";
+
+/* appearance */
+"Use the Colors of the Theme" = "Dùng màu của chủ đề";
+
 /* channel list */
 "User" = "Người dùng";
 
+/* user accounts */
+"User Accounts" = "Tài khoản người dùng";
+
+/* channel list */
+"User Details" = "Chi tiết người dùng";
+
 /* channel list */
 "User female" = "người dùng nữ";
+
+/* user detail */
+"User ID" = "ID người dùng";
 
 /* preferences */
 "User Joins Channel" = "Người dùng tham gia kênh";
@@ -695,6 +1901,9 @@
    user detail */
 "User Messages" = "Tin nhắn của người dùng";
 
+/* ban list */
+"User name: %@" = "Tên người dùng: %@";
+
 /* server entry
    user detail
    Web Login Controller */
@@ -702,6 +1911,9 @@
 
 /* Web Login Controller */
 "Username or password incorrect" = "Tên người dùng hoặc mật khẩu không chính xác";
+
+/* channel list */
+"Users" = "Người dùng";
 
 /* server entry */
 "Users Online" = "Người dùng trực tuyến";
@@ -737,6 +1949,15 @@
 /* preferences */
 "Voice Activation Triggered" = "Kích hoạt bằng giọng nói được kích hoạt";
 
+/* Sound Devices */
+"Voice Cleanup" = "Làm sạch giọng nói";
+
+/* connection quality */
+"Voice Latency (UDP)" = "Độ trễ giọng nói (UDP)";
+
+/* connection quality */
+"Voice Packets Lost" = "Gói giọng nói bị mất";
+
 /* preferences */
 "Voice Preprocessing" = "Xử lý giọng nói";
 
@@ -746,11 +1967,29 @@
 /* user detail */
 "Voice Volume" = "Âm lượng giọng nói";
 
+/* text to speech events */
+"VoiceOver" = "VoiceOver";
+
+/* text to speech events */
+"VoiceOver speaks an announcement with its own voice and shows it in braille. With VoiceOver off, the voice of TeamTalk speaks them all." = "VoiceOver đọc thông báo bằng giọng của chính nó và hiển thị trên chữ nổi. Khi VoiceOver tắt, giọng của TeamTalk đọc tất cả.";
+
 /* codec detail */
 "VoIP" = "VoIP";
 
+/* media stream */
+"Volume" = "Âm lượng";
+
 /* user detail */
 "Volume Controls" = "Điều khiển âm lượng";
+
+/* media stream */
+"Web Address" = "Địa chỉ web";
+
+/* media stream */
+"Web address, %@" = "Địa chỉ web, %@";
+
+/* media stream */
+"Web address, live" = "Địa chỉ web, trực tiếp";
 
 /* Web Login controller */
 "Web Login ID" = "ID đăng nhập web";
@@ -759,8 +1998,29 @@
    user detail */
 "WebCam" = "WebCam";
 
+/* Sound Devices */
+"WebRTC" = "WebRTC";
+
+/* diagnostics */
+"What the app has been doing, to share when something fails" = "Những gì ứng dụng đã làm, để chia sẻ khi có sự cố";
+
+/* diagnostics */
+"What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Những gì ứng dụng cần từ iPhone. Nếu có gì ở đây không ổn, đó là điều đầu tiên cần sửa.";
+
+/* transmit control */
+"Who Can Transmit" = "Ai được truyền";
+
+/* media stream */
+"Whole List" = "Cả danh sách";
+
+/* diagnostics */
+"Widget and Controls" = "Tiện ích và điều khiển";
+
 /* Dialog message */
 "Yes" = "Có";
+
+/* media stream */
+"You are not allowed to stream media files on this server" = "Bạn không được phép phát trực tuyến tệp phương tiện trên máy chủ này";
 
 /* Dialog */
 "You have been kicked from channel" = "Bạn đã bị kick khỏi kênh";
@@ -776,3 +2036,9 @@
 
 /* speech */
 "You have selected %@" = "Bạn đã chọn %@";
+
+/* Sound Devices */
+"You will hear your own microphone. Use headphones, or the speaker will be picked up again. Only available while you are not in a channel." = "Bạn sẽ nghe thấy micrô của chính mình. Hãy dùng tai nghe, nếu không tiếng loa sẽ bị thu lại. Chỉ khả dụng khi bạn không ở trong kênh.";
+
+/* channel picker */
+"Your channel" = "Kênh của bạn";

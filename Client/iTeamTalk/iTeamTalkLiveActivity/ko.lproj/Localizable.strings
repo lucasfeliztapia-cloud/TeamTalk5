@@ -1,0 +1,59 @@
+/* favorite servers widget */
+"Connect to %@" = "%@에 연결";
+
+/* favorite servers widget */
+"Connect to one of your favorite servers with a tap." = "즐겨찾는 서버 중 하나에 한 번의 탭으로 연결하십시오.";
+
+/* favorite servers widget */
+"Favorite Servers" = "즐겨찾는 서버";
+
+/* favorite servers widget */
+"Mark a server as favorite in TeamTalk" = "TeamTalk에서 서버를 즐겨찾기로 표시하십시오";
+
+/* channel list */
+"Muted" = "음소거됨";
+
+/* speakers control */
+"Mutes everyone and brings them back while connected to a server." = "서버에 연결되어 있는 동안 모두를 음소거하고 다시 켭니다.";
+
+/* live activity */
+"Not transmitting" = "전송 안 함";
+
+/* channel list */
+"On" = "켬";
+
+/* favorite servers widget */
+"Open TeamTalk to see your favorite servers" = "즐겨찾는 서버를 보려면 TeamTalk를 여십시오";
+
+/* keyboard shortcuts */
+"Pause or Resume Streaming" = "스트리밍 일시 정지 또는 재개";
+
+/* channel list */
+"Speakers" = "스피커";
+
+/* intent */
+"Speakers On" = "스피커 켬";
+
+/* media stream */
+"Stop Streaming" = "스트리밍 중단";
+
+/* transmit control */
+"Talk in TeamTalk" = "TeamTalk에서 말하기";
+
+/* speakers control */
+"TeamTalk Speakers" = "TeamTalk 스피커";
+
+/* intent */
+"Toggle Speakers" = "스피커 켜기 또는 음소거";
+
+/* keyboard shortcuts */
+"Toggle Transmission" = "전송 켜기 또는 끄기";
+
+/* live activity */
+"Transmission" = "전송";
+
+/* transmit control */
+"Transmitting" = "말하기: 켬";
+
+/* transmit control */
+"Turns your transmission on and off while connected to a server." = "서버에 연결되어 있는 동안 전송을 켜고 끕니다.";

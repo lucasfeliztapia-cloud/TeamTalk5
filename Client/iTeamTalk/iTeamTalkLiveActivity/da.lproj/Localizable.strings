@@ -1,0 +1,59 @@
+/* favorite servers widget */
+"Connect to %@" = "Forbind til %@";
+
+/* favorite servers widget */
+"Connect to one of your favorite servers with a tap." = "Forbind til en af dine favoritservere med et tryk.";
+
+/* favorite servers widget */
+"Favorite Servers" = "Favoritservere";
+
+/* favorite servers widget */
+"Mark a server as favorite in TeamTalk" = "Marker en server som favorit i TeamTalk";
+
+/* channel list */
+"Muted" = "Lyd fra";
+
+/* speakers control */
+"Mutes everyone and brings them back while connected to a server." = "Slår lyden fra alle fra og til igen, mens du er forbundet til en server.";
+
+/* live activity */
+"Not transmitting" = "Sender ikke";
+
+/* channel list */
+"On" = "Til";
+
+/* favorite servers widget */
+"Open TeamTalk to see your favorite servers" = "Åbn TeamTalk for at se dine favoritservere";
+
+/* keyboard shortcuts */
+"Pause or Resume Streaming" = "Sæt streaming på pause, eller fortsæt";
+
+/* channel list */
+"Speakers" = "Højttalere";
+
+/* intent */
+"Speakers On" = "Højttalere til";
+
+/* media stream */
+"Stop Streaming" = "Stop streaming";
+
+/* transmit control */
+"Talk in TeamTalk" = "Tal i TeamTalk";
+
+/* speakers control */
+"TeamTalk Speakers" = "TeamTalk-højttalere";
+
+/* intent */
+"Toggle Speakers" = "Slå højttalere til eller fra";
+
+/* keyboard shortcuts */
+"Toggle Transmission" = "Slå afsendelse til eller fra";
+
+/* live activity */
+"Transmission" = "Afsendelse";
+
+/* transmit control */
+"Transmitting" = "Transmitterer";
+
+/* transmit control */
+"Turns your transmission on and off while connected to a server." = "Slår din afsendelse til og fra, mens du er forbundet til en server.";

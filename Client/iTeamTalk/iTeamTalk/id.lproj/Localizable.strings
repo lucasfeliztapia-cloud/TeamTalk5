@@ -1,8 +1,38 @@
+/* connection quality */
+"%.1f %% (%lld of %lld)" = "%.1f %% (%lld dari %lld)";
+
+/* media stream */
+"%@ added to the playlist" = "%@ ditambahkan ke daftar putar";
+
+/* media stream */
+"%@ cannot be streamed" = "%@ tidak dapat disiarkan";
+
+/* channel list */
+"%@ deselected" = "%@ batal dipilih";
+
+/* file list */
+"%@ downloaded" = "%@ diunduh";
+
 /* log entry */
 "%@ joined channel" = "%@ bergabung saluran";
 
 /* log entry */
 "%@ left channel" = "%@ meninggalkan saluran";
+
+/* media stream */
+"%@ of %@" = "%@ dari %@";
+
+/* media stream */
+"%@ ready, %@" = "%@ siap, %@";
+
+/* channel list */
+"%@ selected" = "%@ dipilih";
+
+/* file list */
+"%@ uploaded" = "%@ diunggah";
+
+/* live activity */
+"%@, %d users" = "%@, %d pengguna";
 
 /* Web Login Controller */
 "%@, your username \"%@\" has been validated" = "%@, nama pengguna Anda \"%@\" telah divalidasi";
@@ -10,8 +40,62 @@
 /* preferences */
 "%d %% - Default" = "%d %% - Default";
 
+/* user accounts */
+"%d accounts" = "%d akun";
+
+/* user accounts */
+"%d accounts changed and %d could not be changed." = "%d akun diubah dan %d tidak dapat diubah.";
+
+/* user accounts */
+"%d accounts changed. It applies to each user the next time they log in." = "%d akun diubah. Berlaku untuk tiap pengguna saat masuk berikutnya.";
+
+/* diagnostics */
+"%d entries" = "%d entri";
+
+/* media stream */
+"%d files added to the playlist" = "%d file ditambahkan ke daftar putar";
+
+/* connection quality */
+"%d ms" = "%d ms";
+
+/* user accounts */
+"%d permissions chosen" = "%d izin dipilih";
+
+/* user accounts */
+"%d permissions will be given to the %d accounts of the server that are not administrators." = "%d izin akan diberikan ke %d akun server yang bukan administrator.";
+
+/* user accounts */
+"%d permissions will be removed from the %d accounts of the server that are not administrators." = "%d izin akan dicabut dari %d akun server yang bukan administrator.";
+
+/* channel picker */
+"%d users" = "%d pengguna";
+
+/* channel list */
+"%d users selected" = "%d pengguna dipilih";
+
+/* channel list */
+"%d users selected to move here" = "%d pengguna dipilih untuk dipindahkan ke sini";
+
+/* audio codec */
+"%lld KB/s" = "%lld KB/s";
+
+/* audio codec */
+"%lld ms" = "%lld ms";
+
 /* codec detail */
 "(Active)" = "(Aktif)";
+
+/* channel picker */
+"1 user" = "1 pengguna";
+
+/* channel list */
+"1 user selected" = "1 pengguna dipilih";
+
+/* channel list */
+"1 user selected to move here" = "1 pengguna dipilih untuk dipindahkan ke sini";
+
+/* media stream */
+"100 % leaves the file as it is. The preview plays on this device only, with this volume and from the chosen position." = "100 % membiarkan file apa adanya. Pratinjau hanya diputar di perangkat ini, dengan volume ini dan dari posisi yang dipilih.";
 
 /* codec detail */
 "12 KHz" = "12 KHz";
@@ -34,8 +118,29 @@
    create channel */
 "8 KHz" = "8 KHz";
 
+/* user accounts */
+"A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "Perubahan izin berlaku saat pengguna masuk berikutnya. Yang sedang terhubung tetap memakai izin lama sampai saat itu.";
+
+/* appearance */
+"A theme changes the colors above. You can adjust them afterwards." = "Tema mengubah warna di atas. Anda dapat menyesuaikannya setelah itu.";
+
 /* serverlist */
 "Access preferences" = "Akses Ke Pengaturan";
+
+/* appearance */
+"Accessibility 1" = "Aksesibilitas 1";
+
+/* appearance */
+"Accessibility 2" = "Aksesibilitas 2";
+
+/* appearance */
+"Accessibility 3" = "Aksesibilitas 3";
+
+/* appearance */
+"Accessibility 4" = "Aksesibilitas 4";
+
+/* appearance */
+"Accessibility 5" = "Aksesibilitas 5";
 
 /* server entry
    user detail */
@@ -44,8 +149,50 @@
 /* channel list */
 "Active" = "Aktif";
 
+/* media stream */
+"Add" = "Tambah";
+
+/* media stream */
+"Add Files" = "Tambah File";
+
 /* serverlist */
 "Add new server entry" = "Tambahkan entri server baru";
+
+/* serverlist */
+"Add to Favorites" = "Tambahkan ke Favorit";
+
+/* incoming file */
+"Add to Streaming Playlist" = "Tambahkan ke Daftar Siaran";
+
+/* media stream */
+"Add Web Address" = "Tambah Alamat Web";
+
+/* incoming file */
+"Added to the streaming playlist" = "Ditambahkan ke daftar siaran";
+
+/* media stream */
+"Address of a web radio or of an audio or video file" = "Alamat radio web atau file audio atau video";
+
+/* user accounts */
+"Administrator" = "Administrator";
+
+/* channel list */
+"All" = "Semua";
+
+/* all users */
+"All Users" = "Semua Pengguna";
+
+/* diagnostics */
+"Allowed" = "Diizinkan";
+
+/* appearance */
+"Always Dark" = "Selalu Gelap";
+
+/* appearance */
+"Always Light" = "Selalu Terang";
+
+/* user accounts */
+"An administrator has every permission, whatever is set here." = "Administrator memiliki semua izin, apa pun yang diatur di sini.";
 
 /* preferences */
 "Announce content of text message" = "Umumkan isi pesan teks";
@@ -68,11 +215,23 @@
 /* text to speech */
 "Announcements" = "Pemberitahuan";
 
+/* user accounts */
+"Anonymous users" = "Pengguna anonim";
+
 /* preferences */
 "App Version" = "Versi Aplikasi";
 
+/* appearance */
+"Appearance" = "Tampilan";
+
 /* codec detail */
 "Application" = "Aplikasi";
+
+/* appearance */
+"Apply High Contrast Theme" = "Terapkan Tema Kontras Tinggi";
+
+/* appearance */
+"Apply Pure Dark Theme" = "Terapkan Tema Hitam Pekat";
 
 /* preferences */
 "Ascending" = "Urutkan dari a ke z";
@@ -83,6 +242,9 @@
 /* create channel */
 "Audio Codec" = "Audio Codec";
 
+/* channel list */
+"Audio Output" = "Keluaran Audio";
+
 /* Web Login Controller */
 "Authenticate" = "Otentikasi";
 
@@ -90,8 +252,50 @@
    Web Login controller */
 "Authentication" = "Otentikasi";
 
+/* preferences */
+"Available" = "Tersedia";
+
+/* preferences */
+"Away" = "Pergi";
+
+/* media stream */
+"Back 1 Minute" = "Mundur 1 Menit";
+
+/* media stream */
+"Back 10 Seconds" = "Mundur 10 Detik";
+
+/* backup */
+"Backup" = "Cadangan";
+
+/* backup */
+"Backup restored. Close the app and open it again to apply every setting." = "Cadangan dipulihkan. Tutup app dan buka lagi untuk menerapkan semua pengaturan.";
+
+/* channel list */
+"Ban" = "Cekal";
+
+/* channel list */
+"Ban %@?" = "Cekal %@?";
+
+/* channel list */
+"Ban %d users?" = "Cekal %d pengguna?";
+
+/* ban list */
+"Ban removed" = "Cekal dicabut";
+
 /* channel list */
 "Ban user" = "Cekal pengguna";
+
+/* user accounts */
+"Ban users" = "Mencekal pengguna";
+
+/* ban list */
+"Banned by %@" = "Dicekal oleh %@";
+
+/* ban list */
+"Banned on %@" = "Dicekal pada %@";
+
+/* ban list */
+"Banned Users" = "Pengguna Dicekal";
 
 /* server entry */
 "BearWare.dk Web Login" = "BearWare.dk Web Login";
@@ -111,8 +315,14 @@
 /* Sound Devices */
 "Bluetooth playback should use Advanced Audio Distribution Profile" = "Bluetooth playback should use Advanced Audio Distribution Profile";
 
+/* all users */
+"Bring to My Channel" = "Bawa ke Saluran Saya";
+
 /* text message type */
 "Broadcast message" = "Pesan broadcast";
+
+/* text message */
+"Broadcast Message" = "Pesan Broadcast";
 
 /* preferences
    user detail */
@@ -124,9 +334,27 @@
 /* Dialog message */
 "Cancel" = "Batal";
 
+/* file list */
+"Cancels the download" = "Membatalkan unduhan";
+
+/* file list */
+"Cancels the upload" = "Membatalkan unggahan";
+
+/* user accounts */
+"Change the Permissions of Every Account" = "Ubah Izin Semua Akun";
+
+/* user accounts */
+"Change the properties of the server" = "Mengubah properti server";
+
+/* user accounts */
+"Changing accounts, %d of %d" = "Mengubah akun, %d dari %d";
+
 /* channel list
    server entry */
 "Channel" = "Saluran";
+
+/* View Title */
+"Channel Detail" = "Detail Saluran";
 
 /* text message type */
 "Channel message" = "Pesan saluran";
@@ -147,20 +375,107 @@
 /* channel list */
 "Channel. %d users" = "Saluran. %d pengguna";
 
+/* ban list */
+"Channel: %@" = "Saluran: %@";
+
+/* channel list */
+"Channels" = "Saluran";
+
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "beri tanda centang hanya jika server ini telah mengaktifkan BearWare.dk Web Login";
+
+/* diagnostics */
+"Checks" = "Pemeriksaan";
+
+/* media stream */
+"Choose a file" = "Pilih file";
+
+/* channel picker */
+"Choose Channel" = "Pilih Saluran";
+
+/* appearance */
+"Choose colors, text size and font" = "Pilih warna, ukuran teks, dan font";
+
+/* preferences */
+"Choose events to playback" = "Pilih peristiwa yang dibacakan";
+
+/* file list */
+"Choose Files" = "Pilih File";
+
+/* preferences */
+"Choose input and output devices" = "Pilih perangkat masukan dan keluaran";
+
+/* user accounts */
+"Choose one or more permissions and then what to do with them. Administrator accounts are not changed." = "Pilih satu atau beberapa izin, lalu apa yang dilakukan dengannya. Akun administrator tidak diubah.";
+
+/* preferences */
+"Choose sounds events to play" = "Pilih suara peristiwa yang diputar";
+
+/* all users */
+"Choosing a user shows the channel they are in. If the server does not let your account see all users, only those of your channel are listed." = "Memilih pengguna menampilkan saluran tempat ia berada. Jika server tidak mengizinkan akun Anda melihat semua pengguna, hanya pengguna di saluran Anda yang ditampilkan.";
+
+/* channel detail */
+"Classroom" = "Ruang Kelas";
+
+/* diagnostics */
+"Clear Log" = "Bersihkan Log";
+
+/* media stream */
+"Close" = "Tutup";
+
+/* channel picker */
+"Collapsed" = "Diciutkan";
+
+/* appearance */
+"Color of buttons, switches and the selected tab." = "Warna tombol, sakelar, dan tab yang dipilih.";
+
+/* appearance */
+"Color of the Speakers button in each state. Its icon is shown in black or white, whichever is easier to read." = "Warna tombol Speaker di tiap keadaan. Ikonnya ditampilkan hitam atau putih, mana yang lebih mudah dibaca.";
+
+/* appearance */
+"Color of the Talk button in each state. Its text is shown in black or white, whichever is easier to read." = "Warna tombol Bicara di tiap keadaan. Teksnya ditampilkan hitam atau putih, mana yang lebih mudah dibaca.";
+
+/* appearance */
+"Colors and Text" = "Warna dan Teks";
+
+/* appearance */
+"Colors of the More menu of the channel list. Until you choose them it follows the theme: dark with light text in dark mode, and the other way round in light mode." = "Warna menu Lainnya di daftar saluran. Selama belum Anda pilih, menu mengikuti tema: gelap dengan teks terang di mode gelap, dan sebaliknya di mode terang.";
+
+/* keyboard shortcuts */
+"Command" = "Command";
 
 /* log entry */
 "Command failed: %@" = "Command failed: %@";
 
+/* connection quality */
+"Command Latency (TCP)" = "Latensi Perintah (TCP)";
+
 /* create channel */
 "Commands" = "Perintah";
+
+/* channel list */
+"Confirm" = "Konfirmasi";
+
+/* server list */
+"Connect" = "Hubungkan";
+
+/* preferences */
+"Connect on Startup" = "Hubungkan Saat Mulai";
+
+/* incoming file */
+"Connect to a server and join a channel to send %@" = "Hubungkan ke server dan gabung ke saluran untuk mengirim %@";
+
+/* connection quality */
+"Connect to a server to see the quality of the connection" = "Hubungkan ke server untuk melihat kualitas koneksi";
 
 /* serverlist */
 "Connect to server" = "Hubungkan ke server";
 
 /* connect to a server */
 "Connect to Server" = "Connect to Server";
+
+/* preferences */
+"Connect to the last server and channel when the app opens" = "Hubungkan ke server dan saluran terakhir saat app dibuka";
 
 /* preferences
    server entry */
@@ -170,11 +485,38 @@
    tts event */
 "Connection lost" = "Kehilangan koneksi";
 
+/* connection quality */
+"Connection Quality" = "Kualitas Koneksi";
+
+/* keyboard shortcuts */
+"Control" = "Control";
+
+/* user accounts */
+"Control a shared desktop" = "Mengendalikan desktop yang dibagikan";
+
+/* media stream */
+"Controls" = "Kontrol";
+
+/* text message */
+"Copied" = "Disalin";
+
 /* server entry */
 "Copy" = "Copy";
 
 /* server entry */
+"Copy Join Code" = "Salin Kode Gabung";
+
+/* serverlist */
+"Copy Link" = "Salin Tautan";
+
+/* connection quality */
+"Counted over the voice received from the users of your channel since you joined it. Above 2 % voices start to break up." = "Dihitung dari suara yang diterima dari pengguna saluran Anda sejak Anda bergabung. Di atas 2 % suara mulai terputus-putus.";
+
+/* server entry */
 "Country" = "Negara";
+
+/* user accounts */
+"Create and change permanent channels" = "Membuat dan mengubah saluran permanen";
 
 /* View Title */
 "Create Channel" = "Buat Saluran";
@@ -182,21 +524,72 @@
 /* main-tab */
 "Create new channel" = "Buat saluran baru";
 
+/* user accounts */
+"Create temporary channels" = "Membuat saluran sementara";
+
+/* web login */
+"Create Web Login" = "Buat Login Web";
+
+/* media stream */
+"Current File" = "File Saat Ini";
+
+/* connection quality */
+"Data" = "Data";
+
 /* Sound Input */
 "Default" = "Default";
 
 /* preferences */
 "Default Subscriptions" = "Langganan Default";
 
+/* user accounts */
+"Default user" = "Pengguna biasa";
+
+/* file list serverlist */
+"Delete" = "Hapus";
+
+/* file list */
+"Delete \"%@\" from the channel?" = "Hapus \"%@\" dari saluran?";
+
+/* server list */
+"Delete \"%@\" from the server list?" = "Hapus \"%@\" dari daftar server?";
+
+/* channel detail */
+"Delete Channel" = "Hapus Saluran";
+
+/* file list */
+"Delete File" = "Hapus File";
+
+/* server list */
+"Delete Server" = "Hapus Server";
+
 /* serverlist */
 "Delete server from list" = "Hapus server dari daftar";
+
+/* channel list */
+"Deselect user" = "Batalkan pilihan pengguna";
 
 /* preferences
    user detail */
 "Desktop" = "Desktop";
 
+/* diagnostics */
+"Diagnostic Log" = "Log Diagnostik";
+
+/* diagnostics */
+"Diagnostics" = "Diagnostik";
+
+/* preferences */
+"Disabled" = "Nonaktif";
+
+/* channel list */
+"Disconnect" = "Putuskan";
+
 /* preferences */
 "Display" = "Tampilan";
+
+/* channel list */
+"Done selecting" = "Selesai memilih";
 
 /* channel list */
 "Double tap and hold to transmit. Triple tap fast to lock transmission." = "Ketuk dua kali dan tahan untuk berbicara. Ketuk tiga kali dengan cepat untuk mengunci mikrofon Anda.";
@@ -204,14 +597,41 @@
 /* preferences */
 "Double tap to lock TX button" = "Ketuk dua kali untuk mengunci Tombol Transmisi";
 
+/* user accounts */
+"Download files" = "Mengunduh file";
+
+/* file list */
+"Downloaded" = "Diunduh";
+
+/* file list */
+"Downloading, %d %%" = "Mengunduh, %d %%";
+
+/* file list */
+"Downloads the file" = "Mengunduh file";
+
 /* codec detail */
 "DTX" = "DTX";
+
+/* media stream */
+"Duration" = "Durasi";
+
+/* user accounts */
+"Each change is saved at once and applies the next time this user logs in." = "Tiap perubahan langsung disimpan dan berlaku saat pengguna ini masuk berikutnya.";
+
+/* channel list */
+"Earpiece or Headset" = "Earpiece atau Headset";
+
+/* channel list */
+"Edit" = "Edit";
 
 /* channel list */
 "Edit properties" = "Edit properti";
 
 /* server entry */
 "Encrypted" = "Dienkripsi";
+
+/* media stream */
+"Enter a web address that starts with http or https" = "Masukkan alamat web yang diawali http atau https";
 
 /* serverlist */
 "Enter Join Code" = "Enter Join Code";
@@ -225,14 +645,104 @@
    user detail */
 "Error" = "Kesalahan";
 
+/* media stream */
+"Error while streaming media file" = "Kesalahan saat menyiarkan file media";
+
+/* user accounts */
+"Every Account" = "Semua Akun";
+
+/* user accounts */
+"Every account was already like that. Nothing has been changed." = "Semua akun sudah seperti itu. Tidak ada yang diubah.";
+
+/* transmit control */
+"Everyone" = "Semua Orang";
+
+/* transmit control */
+"Everyone can transmit in this channel except what is turned off here." = "Semua orang dapat mengirim di saluran ini, kecuali yang dimatikan di sini.";
+
 /* preferences */
 "Exclusive Mode Toggled" = "Ubah Modus Eksklusif";
+
+/* channel list */
+"Expand" = "Bentangkan";
+
+/* channel picker */
+"Expanded" = "Dibentangkan";
+
+/* appearance */
+"Export Appearance" = "Ekspor Tampilan";
+
+/* backup */
+"Export Settings and Servers" = "Ekspor Pengaturan dan Server";
+
+/* appearance */
+"Exports the colors, the text and the theme to a file that someone else can import." = "Mengekspor warna, teks, dan tema ke file yang dapat diimpor orang lain.";
+
+/* appearance */
+"Extra Extra Extra Large" = "Ekstra Ekstra Ekstra Besar";
+
+/* appearance */
+"Extra Extra Large" = "Ekstra Ekstra Besar";
+
+/* appearance */
+"Extra Large" = "Ekstra Besar";
+
+/* appearance */
+"Extra Small" = "Ekstra Kecil";
+
+/* file list */
+"Failed to download file" = "Gagal mengunduh file";
+
+/* media stream */
+"Failed to play the file" = "Gagal memutar file";
 
 /* connect to a server */
 "Failed to setup encryption" = "Failed to setup encryption";
 
+/* media stream */
+"Failed to stream media file" = "Gagal menyiarkan file media";
+
+/* file list */
+"Failed to transfer %@" = "Gagal mentransfer %@";
+
+/* file list */
+"Failed to upload file" = "Gagal mengunggah file";
+
+/* serverlist */
+"Favorite" = "Favorit";
+
 /* preferences */
 "Female" = "Wanita";
+
+/* media stream */
+"File" = "File";
+
+/* sound events */
+"File Added" = "File Ditambahkan";
+
+/* sound events */
+"File Removed" = "File Dihapus";
+
+/* file list */
+"Files" = "File";
+
+/* media stream */
+"Files stay in the list until you remove them. When one ends, the next one starts." = "File tetap di daftar sampai Anda menghapusnya. Saat satu selesai, berikutnya dimulai.";
+
+/* preferences */
+"Filter Server List" = "Saring Daftar Server";
+
+/* appearance */
+"Font" = "Font";
+
+/* appearance */
+"Font of Server Events" = "Font Peristiwa Server";
+
+/* media stream */
+"Forward 1 Minute" = "Maju 1 Menit";
+
+/* media stream */
+"Forward 10 Seconds" = "Maju 10 Detik";
 
 /* codec detail */
 "Frame Size" = "Frame Size";
@@ -243,6 +753,12 @@
 /* preferences
    user detail */
 "General" = "Umum";
+
+/* user accounts */
+"Give to Every Account" = "Berikan ke Semua Akun";
+
+/* channel list */
+"Go to Their Channel" = "Buka Salurannya";
 
 /* TTS EVENT */
 "has joined the channel" = "telah bergabung dengan saluran";
@@ -265,11 +781,47 @@
 /* server entry */
 "Host address" = "Alamat IP atau Alamat host";
 
+/* appearance */
+"Import Appearance" = "Impor Tampilan";
+
+/* backup */
+"Import Backup" = "Impor Cadangan";
+
 /* channel list */
 "Inactive" = "Tidak aktif";
 
+/* appearance */
+"Interface" = "Antarmuka";
+
+/* appearance */
+"Interface Color" = "Warna Antarmuka";
+
+/* Sound Devices */
+"iOS Voice Processing" = "Pemrosesan Suara iOS";
+
+/* Sound Devices */
+"iOS voice processing cancels echo, reduces noise and levels the volume. WebRTC reduces noise and levels the volume but does not cancel echo, so use it with headphones." = "Pemrosesan suara iOS menghilangkan gema, mengurangi derau, dan meratakan volume. WebRTC mengurangi derau dan meratakan volume tetapi tidak menghilangkan gema, jadi gunakan dengan headphone.";
+
+/* ban list */
+"IP address: %@" = "Alamat IP: %@";
+
+/* user accounts */
+"It applies to each user the next time they log in." = "Berlaku untuk tiap pengguna saat masuk berikutnya.";
+
+/* text message */
+"It is sent to every user of the server" = "Dikirim ke semua pengguna server";
+
 /* Dialog message */
 "Join" = "Gabung";
+
+/* file list */
+"Join a channel to see its files" = "Gabung ke saluran untuk melihat filenya";
+
+/* incoming file */
+"Join a channel to send %@" = "Gabung ke saluran untuk mengirim %@";
+
+/* media stream */
+"Join a channel to stream a media file" = "Gabung ke saluran untuk menyiarkan file media";
 
 /* server entry */
 "Join Channel" = "Bergabung Dengan Saluran";
@@ -286,23 +838,92 @@
 /* preferences */
 "Join root channel after login" = "Bergabung dengan saluran utama setelah terhubung ke server";
 
+/* all users */
+"Join Their Channel" = "Gabung ke Salurannya";
+
+/* channel list */
+"Join this channel" = "Gabung ke saluran ini";
+
 /* log entry */
 "Joined %@" = "Bergabung %@";
+
+/* keyboard shortcuts */
+"Key" = "Tombol";
+
+/* keyboard shortcuts */
+"Keyboard Shortcuts" = "Pintasan Papan Ketik";
+
+/* preferences */
+"Keys of an external keyboard to talk and to mute" = "Tombol papan ketik eksternal untuk bicara dan membisukan";
+
+/* channel list */
+"Kick" = "Keluarkan";
+
+/* channel list */
+"Kick %@?" = "Keluarkan %@?";
+
+/* channel list */
+"Kick %d users?" = "Keluarkan %d pengguna?";
+
+/* user detail */
+"Kick and Ban User" = "Keluarkan dan Cekal Pengguna";
 
 /* channel list */
 "Kick user" = "Keluarkan Pengguna";
 
+/* user detail */
+"Kick User" = "Keluarkan Pengguna";
+
+/* user accounts */
+"Kick users off the server" = "Mengeluarkan pengguna dari server";
+
+/* appearance */
+"Large" = "Besar";
+
+/* connection quality */
+"Latency" = "Latensi";
+
+/* connection quality */
+"Latency and packet loss" = "Latensi dan kehilangan paket";
+
+/* appearance */
+"Light or Dark" = "Terang atau Gelap";
+
 /* preferences */
 "Limit length of names in channel list to %d characters" = "Batasi panjang nama dalam daftar saluran ke %d characters";
 
+/* preferences */
+"Limit types of servers to show" = "Batasi jenis server yang ditampilkan";
+
+/* serverlist */
+"Link copied" = "Tautan disalin";
+
+/* appearance */
+"Listening" = "Mendengarkan";
+
+/* media stream */
+"Live" = "Langsung";
+
+/* diagnostics */
+"Live Activities" = "Aktivitas Langsung";
+
 /* serverlist */
 "Local server" = "Server lokal";
+
+/* user accounts */
+"Log in from several devices at once" = "Masuk dari beberapa perangkat sekaligus";
 
 /* text message type */
 "Log message" = "Log Pesan";
 
 /* log entry */
 "Logged on to server" = "masuk ke server";
+
+/* preferences */
+"Login ID from BearWare.dk" = "ID login dari BearWare.dk";
+
+/* user accounts */
+"Make other users channel operator" = "Menjadikan pengguna lain operator saluran";
 
 /* preferences */
 "Male" = "Pria";
@@ -324,18 +945,72 @@
 /* preferences */
 "Media file vs. voice volume" = "File Media  vs. volume suara";
 
+/* transmit control */
+"Media Files" = "File Media";
+
+/* appearance */
+"Medium" = "Sedang";
+
+/* appearance */
+"Menu Background" = "Latar Menu";
+
+/* appearance */
+"Menu Text" = "Teks Menu";
+
+/* appearance */
+"Menus" = "Menu";
+
+/* text messages */
+"Message" = "Pesan";
+
 /* server entry */
 "Message of the Day" = "Pesan saat Ini";
 
+/* appearance */
+"Message Text Size" = "Ukuran Teks Pesan";
+
+/* channel list */
+"Message this user" = "Kirim pesan ke pengguna ini";
+
+/* tab */
+"Messages" = "Pesan";
+
+/* diagnostics */
+"Microphone" = "Mikrofon";
+
 /* preferences */
 "Microphone Gain" = "Volume Mikrofon";
+
+/* Sound Devices */
+"Microphone Test" = "Tes Mikrofon";
+
+/* user accounts */
+"Moderation" = "Moderasi";
+
+/* keyboard shortcuts */
+"Modifier" = "Pengubah";
 
 /* codec detail
    create channel */
 "Mono" = "Mono";
 
+/* appearance */
+"Monospaced" = "Lebar Tetap";
+
+/* channel list */
+"More" = "Lainnya";
+
+/* channel list */
+"Move" = "Pindahkan";
+
+/* channel list */
+"Move to Channel" = "Pindahkan ke Saluran";
+
 /* channel list */
 "Move user" = "Pindahkan pengguna";
+
+/* user accounts */
+"Move users between channels" = "Memindahkan pengguna antarsaluran";
 
 /* channel list */
 "Move users here" = "Pindahkan pengguna ke sini";
@@ -349,8 +1024,17 @@
 /* user detail */
 "Mute Media File" = "Bisukan file Media";
 
+/* keyboard shortcuts */
+"Mute or Unmute Speakers" = "Bisukan atau Bunyikan Speaker";
+
 /* user detail */
 "Mute Voice" = "Bisukan Suara";
+
+/* channel list */
+"Muted" = "Dibisukan";
+
+/* channel list */
+"Mutes or unmutes everything you hear from the server" = "Membisukan atau membunyikan semua yang Anda dengar dari server";
 
 /* create channel
    server entry */
@@ -359,14 +1043,23 @@
 /* preferences */
 "Name displayed in channel list" = "Nama ditampilkan dalam daftar saluran";
 
+/* preferences */
+"Neutral" = "Netral";
+
 /* Dialog message */
 "New Server" = "Server Baru";
+
+/* media stream */
+"Next File" = "File Berikutnya";
 
 /* preferences */
 "Nickname" = "Nama panggilan";
 
 /* server entry */
 "Nickname (optional)" = "Nama panggilan (tidak wajib)";
+
+/* user accounts */
+"Nickname locked, cannot be changed" = "Nama panggilan dikunci, tidak dapat diubah";
 
 /* Dialog message */
 "No" = "Tidak";
@@ -378,20 +1071,71 @@
 /* create channel */
 "No Audio Recording" = "Tanpa perekaman Audio";
 
+/* ban list */
+"No banned users" = "Tidak ada pengguna dicekal";
+
+/* connection quality */
+"No data" = "Tidak ada data";
+
+/* file list */
+"No files in this channel" = "Tidak ada file di saluran ini";
+
 /* create channel */
 "No Interruptions" = "Tanpa Interupsi";
+
+/* keyboard shortcuts */
+"No Modifier" = "Tanpa Pengubah";
 
 /* channel list */
 "No password" = "Tanpa kata sandi";
 
+/* channel list */
+"No results" = "Tidak ada hasil";
+
 /* serverlist */
 "No server found" = "No server found";
+
+/* user accounts */
+"No user accounts" = "Tidak ada akun pengguna";
+
+/* channel list */
+"No users selected" = "Tidak ada pengguna dipilih";
+
+/* channel list */
+"No users selected to move" = "Tidak ada pengguna dipilih untuk dipindahkan";
 
 /* create channel */
 "No Voice Activation" = "Tanpa Aktivasi Suara";
 
 /* default nickname */
 "Noname" = "TanpaNama";
+
+/* keyboard shortcuts and voice cleanup */
+"None" = "Tidak Ada";
+
+/* diagnostics */
+"Not allowed. Nobody can hear you until you turn it on in Settings, under TeamTalk." = "Tidak diizinkan. Tidak ada yang dapat mendengar Anda sampai Anda menyalakannya di Pengaturan, di bawah TeamTalk.";
+
+/* diagnostics */
+"Not asked yet. iOS asks the first time you join a channel." = "Belum ditanyakan. iOS menanyakannya saat Anda pertama kali bergabung ke saluran.";
+
+/* diagnostics */
+"Not available with this installation. The widget cannot show your servers and the controls do not show their state." = "Tidak tersedia dengan instalasi ini. Widget tidak dapat menampilkan server Anda dan kontrol tidak menampilkan keadaannya.";
+
+/* live activity */
+"Not in a channel" = "Tidak di saluran";
+
+/* diagnostics */
+"Not installed. The app was installed without its extension, so there are no Live Activities, widget or controls. Install it again with a tool that keeps the extensions." = "Tidak terinstal. App diinstal tanpa ekstensinya, jadi tidak ada Aktivitas Langsung, widget, atau kontrol. Instal lagi dengan alat yang mempertahankan ekstensi.";
+
+/* media stream */
+"Not streaming" = "Tidak menyiarkan";
+
+/* live activity */
+"Not transmitting" = "Tidak mengirim";
+
+/* media stream */
+"Off" = "Mati";
 
 /* serverlist */
 "Official server" = "Server resmi";
@@ -403,11 +1147,35 @@
    Web Login Controller */
 "OK" = "OK";
 
+/* channel list */
+"On" = "Nyala";
+
+/* channel detail */
+"Only the users you allow can transmit" = "Hanya pengguna yang Anda izinkan yang dapat mengirim";
+
+/* text message */
+"Open Link" = "Buka Tautan";
+
+/* diagnostics */
+"Open Settings" = "Buka Pengaturan";
+
+/* file list */
+"Opens the file" = "Membuka file";
+
+/* keyboard shortcuts */
+"Option" = "Option";
+
 /* codec detail */
 "OPUS Codec" = "OPUS Codec";
 
 /* preferences */
 "Order of channels in Channel List" = "Urutan saluran dalam daftar saluran";
+
+/* user accounts */
+"Other" = "Lainnya";
+
+/* connection quality */
+"Packet Loss" = "Kehilangan Paket";
 
 /* channel list */
 "Parent channel" = "Saluran Induk";
@@ -421,8 +1189,26 @@
 /* channel list */
 "Password protected" = "Dilindungi kata sandi";
 
+/* media stream */
+"Pause" = "Jeda";
+
+/* keyboard shortcuts */
+"Pause or Resume Streaming" = "Jeda atau Lanjutkan Siaran";
+
+/* media stream */
+"Paused" = "Dijeda";
+
 /* create channel */
 "Permanent Channel" = "Saluran Permanen";
+
+/* file list */
+"Photos and Videos" = "Foto dan Video";
+
+/* sound events */
+"Play sound when a file is removed from the channel" = "Putar suara saat file dihapus dari saluran";
+
+/* sound events */
+"Play sound when a file is uploaded to the channel" = "Putar suara saat file diunggah ke saluran";
 
 /* preferences */
 "Play sound when a user joins the channel" = "Mainkan suara ketika Pengguna bergabung dengan saluran";
@@ -457,11 +1243,17 @@
 /* preferences */
 "Play sound when voice transmission is toggled" = "Mainkan suara saat transmisi suara diaktifkan";
 
+/* media stream */
+"Playlist" = "Daftar Putar";
+
 /* preferences */
 "Pop up text message when new messages are received" = "Ketika menerima pesan baru, tampilkan dalam jendela Pop up";
 
 /* preferences */
 "Popularity" = "Popularitas";
+
+/* media stream */
+"Position" = "Posisi";
 
 /* serverlist */
 "Preferences" = "Pengaturan";
@@ -469,11 +1261,23 @@
 /* Sound Input */
 "Preferred" = "Preferred";
 
+/* media stream */
+"Preparing file" = "Menyiapkan file";
+
 /* preferences */
 "Pressing Return-key sends text message" = "Menekan tombol enter akan mengirim pesan teks";
 
+/* appearance */
+"Preview" = "Pratinjau";
+
+/* media stream */
+"Previous File" = "File Sebelumnya";
+
 /* text message type */
 "Private message" = "Pesan pribadi";
+
+/* channel list */
+"Private Message" = "Pesan Pribadi";
 
 /* preferences */
 "Private Text Message" = "Pesan Teks Pribadi";
@@ -487,11 +1291,17 @@
 /* serverlist */
 "Public server" = "Server publik";
 
+/* channel list */
+"Push to Talk" = "Tekan untuk Bicara";
+
 /* preferences */
 "Push To Talk Lock" = "Kunci Push To Talk";
 
 /* codec detail */
 "Quality" = "Kualitas";
+
+/* preferences */
+"Question" = "Pertanyaan";
 
 /* preferences */
 "Receive broadcast messages by default" = "Terima pesan broadcast secara default";
@@ -514,6 +1324,45 @@
 /* preferences */
 "Receive webcam streams by default" = "Terima stream webcam secara default";
 
+/* connection quality */
+"Received" = "Diterima";
+
+/* appearance */
+"Received message" = "Pesan diterima";
+
+/* appearance */
+"Received Messages" = "Pesan Diterima";
+
+/* user accounts */
+"Record voice in every channel" = "Merekam suara di semua saluran";
+
+/* ban list */
+"Remove Ban" = "Cabut Cekal";
+
+/* user accounts */
+"Remove from Every Account" = "Cabut dari Semua Akun";
+
+/* serverlist */
+"Remove from Favorites" = "Hapus dari Favorit";
+
+/* media stream */
+"Repeat" = "Ulangi";
+
+/* web login */
+"Reset Web Login" = "Atur Ulang Login Web";
+
+/* appearance */
+"Restore Default Appearance" = "Pulihkan Tampilan Bawaan";
+
+/* keyboard shortcuts */
+"Restore Default Shortcuts" = "Pulihkan Pintasan Bawaan";
+
+/* media stream */
+"Resume" = "Lanjutkan";
+
+/* keyboard shortcuts */
+"Return" = "Return";
+
 /* preferences */
 "Return Sends Message" = "Kembali untuk mengirim pesan";
 
@@ -523,14 +1372,71 @@
 /* log entry */
 "root channel" = "Saluran utama";
 
+/* appearance */
+"Rounded" = "Bundar";
+
+/* appearance */
+"Same as the App" = "Sama dengan App";
+
+/* appearance */
+"Same as the System" = "Sama dengan Sistem";
+
 /* codec detail */
 "Sample Rate" = "Sample Rate";
+
+/* channel detail */
+"Save" = "Simpan";
 
 /* Dialog message */
 "Save Server" = "Simpan Server";
 
+/* server entry */
+"Save server" = "Simpan server";
+
 /* Dialog message */
 "Save server to server list?" = "Simpan server ke Daftar server?";
+
+/* user accounts */
+"Search accounts" = "Cari akun";
+
+/* channel picker */
+"Search channels" = "Cari saluran";
+
+/* channel list */
+"Search channels and users" = "Cari saluran dan pengguna";
+
+/* serverlist */
+"Search servers" = "Cari server";
+
+/* all users */
+"Search users" = "Cari pengguna";
+
+/* user accounts */
+"See hidden channels" = "Melihat saluran tersembunyi";
+
+/* user accounts */
+"See the users of every channel" = "Melihat pengguna di semua saluran";
+
+/* preferences */
+"Select the text-to-speech voice to use" = "Pilih suara teks-ke-ucapan yang digunakan";
+
+/* channel list */
+"Select users" = "Pilih pengguna";
+
+/* speech */
+"Selected" = "Dipilih";
+
+/* text messages */
+"Send" = "Kirim";
+
+/* text message */
+"Send broadcast message" = "Kirim pesan broadcast";
+
+/* user accounts */
+"Send broadcast messages" = "Mengirim pesan broadcast";
+
+/* user accounts */
+"Send channel messages" = "Mengirim pesan saluran";
 
 /* text message */
 "Send empty message to close keyboard" = "Kirim pesan kosong untuk menutup keyboard";
@@ -538,8 +1444,38 @@
 /* channel list */
 "Send private message" = "Kirim pesan pribadi";
 
+/* user accounts */
+"Send private messages" = "Mengirim pesan pribadi";
+
+/* incoming file */
+"Send to TeamTalk" = "Kirim ke TeamTalk";
+
+/* media stream */
+"Send Video" = "Kirim Video";
+
+/* connection quality */
+"Sent" = "Terkirim";
+
+/* appearance */
+"Sent message" = "Pesan terkirim";
+
+/* appearance */
+"Sent Messages" = "Pesan Terkirim";
+
+/* appearance */
+"Serif" = "Serif";
+
 /* preferences */
 "Server Connection Lost" = "Koneksi Server Terputus";
+
+/* server entry */
+"Server Entry" = "Entri Server";
+
+/* appearance */
+"Server event" = "Peristiwa server";
+
+/* appearance */
+"Server Events" = "Peristiwa Server";
 
 /* server entry */
 "Server List Entry" = "Entri Daftar Server";
@@ -548,13 +1484,52 @@
 "Server Status" = "Server Status";
 
 /* preferences */
+"Setup Announcements" = "Atur Pemberitahuan Suara";
+
+/* preferences */
+"Setup Sound Devices" = "Atur Perangkat Suara";
+
+/* preferences */
+"Setup Sound Events" = "Atur Suara Pemberitahuan";
+
+/* file list */
+"Share" = "Bagikan";
+
+/* diagnostics */
+"Share Log" = "Bagikan Log";
+
+/* serverlist */
+"Share Server" = "Bagikan Server";
+
+/* user accounts */
+"Share the desktop" = "Membagikan desktop";
+
+/* file list */
+"Shares or opens the file" = "Membagikan atau membuka file";
+
+/* keyboard shortcuts */
+"Shift" = "Shift";
+
+/* keyboard shortcuts */
+"Shortcuts work with an external keyboard while connected to a server. A key without a modifier does nothing while you are typing a message." = "Pintasan berfungsi dengan papan ketik eksternal selama terhubung ke server. Tombol tanpa pengubah tidak melakukan apa pun saat Anda mengetik pesan.";
+
+/* preferences */
 "Show in Server List" = "Tampilkan dalam daftar Server";
 
 /* preferences */
 "Show male or female icon" = "Tampilkan Ikon pria atau wanita";
 
+/* server entry */
+"Show password" = "Tampilkan kata sandi";
+
+/* server list */
+"Show server details" = "Tampilkan detail server";
+
 /* preferences */
 "Show Text Messages Instantly" = "Tampilkan Pesan Teks Seketika";
+
+/* channel list */
+"Show user details" = "Tampilkan detail pengguna";
 
 /* preferences */
 "Show Usernames" = "Tampilkan Nama Pengguna";
@@ -562,11 +1537,23 @@
 /* preferences */
 "Show usernames instead of nicknames" = "Hanya tampilkan nama pengguna, bukan Nama panggilan";
 
+/* preferences */
+"Shown to the other users of the server" = "Ditampilkan kepada pengguna lain di server";
+
 /* channel list */
 "Silent" = "Tidak berbicara";
 
+/* appearance */
+"Size and font apply to the whole app." = "Ukuran dan font berlaku untuk seluruh app.";
+
+/* appearance */
+"Small" = "Kecil";
+
 /* preferences */
 "Sort Channels" = "Urutkan Saluran";
+
+/* media stream */
+"Sound" = "Suara";
 
 /* preferences
    text to speech */
@@ -575,8 +1562,26 @@
 /* preferences */
 "Sound System" = "Sistem Suara";
 
+/* keyboard shortcuts */
+"Space" = "Spasi";
+
+/* channel list */
+"Speaker" = "Speaker";
+
 /* preferences */
 "Speaker Output" = "Speaker Output";
+
+/* channel list */
+"Speakers" = "Speaker";
+
+/* appearance */
+"Speakers Button" = "Tombol Speaker";
+
+/* intent */
+"Speakers On" = "Speaker Nyala";
+
+/* preferences */
+"Speech" = "Ucapan";
 
 /* preferences */
 "Speech Rate" = "Kecepatan ucapan";
@@ -590,15 +1595,84 @@
 /* codec detail */
 "Speex Variable Bitrate Codec" = "Speex Variable Bitrate Codec";
 
+/* text to speech events */
+"Spoken By" = "Diucapkan Oleh";
+
+/* text to speech events, accessibility */
+"Spoken by, %@" = "Diucapkan oleh, %@";
+
+/* appearance */
+"Standard" = "Standar";
+
+/* media stream */
+"Start Streaming" = "Mulai Siaran";
+
+/* preferences */
+"Status" = "Status";
+
 /* Text message view */
 "Status Event" = "Event Status";
+
+/* user accounts */
+"Status locked, cannot be changed" = "Status dikunci, tidak dapat diubah";
+
+/* preferences */
+"Status Message" = "Pesan Status";
 
 /* codec detail
    create channel */
 "Stereo" = "Stereo";
 
+/* Sound Devices */
+"Stop Microphone Test" = "Hentikan Tes Mikrofon";
+
+/* media stream */
+"Stop Preview" = "Hentikan Pratinjau";
+
+/* media stream */
+"Stop Streaming" = "Hentikan Siaran";
+
+/* user accounts */
+"Stream audio files" = "Menyiarkan file audio";
+
+/* media stream */
+"Stream Media File" = "Siarkan File Media";
+
+/* media stream */
+"Stream media file" = "Siarkan file media";
+
+/* user accounts */
+"Stream video files" = "Menyiarkan file video";
+
+/* media stream */
+"Streaming" = "Siaran";
+
+/* media stream */
+"Streaming %@" = "Menyiarkan %@";
+
+/* media stream */
+"Streaming finished" = "Siaran selesai";
+
+/* media stream */
+"Streaming started" = "Siaran dimulai";
+
 /* user detail */
 "Subscriptions" = "Langganan";
+
+/* appearance */
+"Swap Speakers Button Colors" = "Tukar Warna Tombol Speaker";
+
+/* appearance */
+"Swap Talk Button Colors" = "Tukar Warna Tombol Bicara";
+
+/* appearance */
+"System Size" = "Ukuran Sistem";
+
+/* channel list */
+"Talk" = "Bicara";
+
+/* appearance */
+"Talk Button" = "Tombol Bicara";
 
 /* channel list */
 "Talking" = "Sedang berbicara";
@@ -606,17 +1680,98 @@
 /* server entry */
 "TCP Port" = "TCP Port";
 
+/* channel list */
+"TeamTalk has no access to the microphone. Turn it on in Settings, under TeamTalk, and try again." = "TeamTalk tidak memiliki akses ke mikrofon. Nyalakan di Pengaturan, di bawah TeamTalk, lalu coba lagi.";
+
+/* server list */
+"TeamTalk Servers" = "Server TeamTalk";
+
+/* text to speech events */
+"TeamTalk Voice" = "Suara TeamTalk";
+
+/* Sound Devices */
+"Test Microphone" = "Tes Mikrofon";
+
+/* appearance */
+"Text" = "Teks";
+
+/* appearance */
+"Text Messages" = "Pesan Teks";
+
+/* channel list */
+"Text Messaging" = "Pesan Teks";
+
+/* appearance */
+"Text of the Messages" = "Teks Pesan";
+
+/* preferences */
+"Text shown next to your name" = "Teks yang ditampilkan di samping nama Anda";
+
+/* appearance */
+"Text Size" = "Ukuran Teks";
+
 /* preferences */
 "Text To Speech Events" = "Pemberitahuan Teks Ke Ucapan";
+
+/* speech */
+"Text-to-Speech Voice" = "Suara Teks-ke-Ucapan";
+
+/* user accounts */
+"The account could not be saved" = "Akun tidak dapat disimpan";
+
+/* backup */
+"The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "Cadangan berisi semua pengaturan dan daftar server beserta kata sandinya. Simpan file di tempat yang aman.";
+
+/* diagnostics */
+"The log is empty" = "Log kosong";
+
+/* diagnostics */
+"The log records what the app does: connection, sound devices, transfers and errors. It holds no passwords and nothing of what is said or written." = "Log mencatat apa yang dilakukan app: koneksi, perangkat suara, transfer, dan kesalahan. Log tidak berisi kata sandi dan apa pun yang diucapkan atau ditulis.";
+
+/* appearance */
+"The messages can have a text size of their own, and the server events a font of their own." = "Pesan dapat memiliki ukuran teks sendiri, dan peristiwa server font sendiri.";
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "tingkat kecepatan suara Teks Ke Ucapan adalah %.1f";
 
+/* appearance */
+"The text of a message is shown in black or white, whichever is easier to read on its color." = "Teks pesan ditampilkan hitam atau putih, mana yang lebih mudah dibaca di atas warnanya.";
+
+/* appearance */
+"The text of a message is shown in black or white, whichever is easier to read on its color. Server events are what happens on the server, like someone joining or leaving the channel." = "Teks pesan ditampilkan hitam atau putih, mana yang lebih mudah dibaca di atas warnanya. Peristiwa server adalah apa yang terjadi di server, seperti seseorang bergabung ke atau meninggalkan saluran.";
+
 /* preferences */
 "The volume of the speaking voice is %.1f" = "Volume suara Teks Ke Ucapan adalah %.1f";
 
+/* appearance */
+"Themes" = "Tema";
+
+/* diagnostics */
+"They need iOS 17 or later" = "Memerlukan iOS 17 atau lebih baru";
+
+/* media stream */
+"This file cannot be streamed" = "File ini tidak dapat disiarkan";
+
+/* backup */
+"This file is not a TeamTalk backup" = "File ini bukan cadangan TeamTalk";
+
+/* appearance */
+"This file is not an appearance exported from TeamTalk" = "File ini bukan tampilan yang diekspor dari TeamTalk";
+
+/* transmit control */
+"This is a classroom channel: only what is turned on here can be transmitted." = "Ini saluran ruang kelas: hanya yang dinyalakan di sini yang dapat dikirim.";
+
+/* media stream */
+"This web address cannot be streamed" = "Alamat web ini tidak dapat disiarkan";
+
+/* connection quality */
+"Time a packet takes to reach the server and come back. Below 100 ms a conversation feels immediate." = "Waktu yang diperlukan paket untuk mencapai server dan kembali. Di bawah 100 ms percakapan terasa langsung.";
+
 /* channel list */
 "Toggle to enable/disable transmission" = "Beralih untuk mengaktifkan / menonaktifkan transmisi";
+
+/* keyboard shortcuts */
+"Toggle Transmission" = "Nyalakan atau Matikan Pengiriman";
 
 /* preferences */
 "Toggle voice transmission using headset" = "Beralih transmisi suara menggunakan headset";
@@ -627,17 +1782,29 @@
 /* preferences */
 "Translator" = "Penerjemah";
 
+/* live activity */
+"Transmission" = "Pengiriman";
+
 /* channel list */
 "Transmit inactive" = "Transmit Mikrofon tidak aktif";
 
 /* codec detail */
 "Transmit Interval" = "Transmisi Interval";
 
+/* user accounts */
+"Transmit video" = "Mengirim video";
+
+/* user accounts */
+"Transmit voice" = "Mengirim suara";
+
 /* channel list */
 "Transmitting" = "Transmitting mikrofon, aktif";
 
 /* preferences */
 "Turn off screen when holding phone near ear" = "Matikan layar saat ponsel di dekat telinga";
+
+/* diagnostics */
+"Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Dimatikan. Nyalakan Aktivitas Langsung di Pengaturan, di bawah TeamTalk.";
 
 /* serverlist */
 "Type Join Code" = "Type Join Code";
@@ -652,17 +1819,56 @@
 /* serverlist */
 "Unofficial server" = "Server tidak resmi";
 
+/* file list */
+"Upload file" = "Unggah file";
+
+/* user accounts */
+"Upload files" = "Mengunggah file";
+
+/* incoming file */
+"Upload to Channel" = "Unggah ke Saluran";
+
+/* file list */
+"Uploading" = "Mengunggah";
+
+/* file list */
+"Uploading, %d %%" = "Mengunggah, %d %%";
+
 /* preferences */
 "Use echo cancellation and automatic gain control" = "Gunakan echo cancellation dan  gain control otomatis";
 
 /* preferences */
 "Use iPhone's speaker instead of earpiece" = "Merubah pengunaan earpiece ke speaker iPhone";
 
+/* audio codec */
+"Use No Audio" = "Jangan Gunakan Audio";
+
+/* audio codec */
+"Use OPUS Codec" = "Gunakan Codec OPUS";
+
+/* audio codec */
+"Use Speex Codec" = "Gunakan Codec Speex";
+
+/* audio codec */
+"Use Speex VBR Codec" = "Gunakan Codec Speex VBR";
+
+/* appearance */
+"Use the Colors of the Theme" = "Gunakan Warna Tema";
+
 /* channel list */
 "User" = "Pengguna";
 
+/* user accounts */
+"User Accounts" = "Akun Pengguna";
+
+/* channel list */
+"User Details" = "Detail Pengguna";
+
 /* channel list */
 "User female" = "Pengguna wanita";
+
+/* user detail */
+"User ID" = "ID Pengguna";
 
 /* preferences */
 "User Joins Channel" = "Pengguna Bergabung Dengan Saluran";
@@ -692,6 +1898,9 @@
    user detail */
 "User Messages" = "Pesan Pengguna";
 
+/* ban list */
+"User name: %@" = "Nama pengguna: %@";
+
 /* server entry
    user detail
    Web Login Controller */
@@ -699,6 +1908,9 @@
 
 /* Web Login Controller */
 "Username or password incorrect" = "Nama pengguna atau kata sandi salah";
+
+/* channel list */
+"Users" = "Pengguna";
 
 /* server entry */
 "Users Online" = "Pengguna Online";
@@ -734,6 +1946,15 @@
 /* preferences */
 "Voice Activation Triggered" = "Pemicu Aktivasi Suara";
 
+/* Sound Devices */
+"Voice Cleanup" = "Pembersihan Suara";
+
+/* connection quality */
+"Voice Latency (UDP)" = "Latensi Suara (UDP)";
+
+/* connection quality */
+"Voice Packets Lost" = "Paket Suara Hilang";
+
 /* preferences */
 "Voice Preprocessing" = "Suara Preprocessing";
 
@@ -743,11 +1964,29 @@
 /* user detail */
 "Voice Volume" = "Volume Suara";
 
+/* text to speech events */
+"VoiceOver" = "VoiceOver";
+
+/* text to speech events */
+"VoiceOver speaks an announcement with its own voice and shows it in braille. With VoiceOver off, the voice of TeamTalk speaks them all." = "VoiceOver mengucapkan pemberitahuan dengan suaranya sendiri dan menampilkannya dalam braille. Saat VoiceOver mati, suara TeamTalk mengucapkan semuanya.";
+
 /* codec detail */
 "VoIP" = "VoIP";
 
+/* media stream */
+"Volume" = "Volume";
+
 /* user detail */
 "Volume Controls" = "Kontrol Volume";
+
+/* media stream */
+"Web Address" = "Alamat Web";
+
+/* media stream */
+"Web address, %@" = "Alamat web, %@";
+
+/* media stream */
+"Web address, live" = "Alamat web, langsung";
 
 /* Web Login controller */
 "Web Login ID" = "Web Login ID";
@@ -756,8 +1995,29 @@
    user detail */
 "WebCam" = "WebCam";
 
+/* Sound Devices */
+"WebRTC" = "WebRTC";
+
+/* diagnostics */
+"What the app has been doing, to share when something fails" = "Apa yang telah dilakukan app, untuk dibagikan saat ada yang gagal";
+
+/* diagnostics */
+"What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Apa yang app perlukan dari iPhone. Jika ada yang tidak beres di sini, itulah yang pertama harus diperbaiki.";
+
+/* transmit control */
+"Who Can Transmit" = "Siapa yang Dapat Mengirim";
+
+/* media stream */
+"Whole List" = "Seluruh Daftar";
+
+/* diagnostics */
+"Widget and Controls" = "Widget dan Kontrol";
+
 /* Dialog message */
 "Yes" = "Ya";
+
+/* media stream */
+"You are not allowed to stream media files on this server" = "Anda tidak diizinkan menyiarkan file media di server ini";
 
 /* Dialog */
 "You have been kicked from channel" = "Anda telah dikeluarkan dari saluran";
@@ -773,3 +2033,9 @@
 
 /* speech */
 "You have selected %@" = "Anda telah memilih %@";
+
+/* Sound Devices */
+"You will hear your own microphone. Use headphones, or the speaker will be picked up again. Only available while you are not in a channel." = "Anda akan mendengar mikrofon Anda sendiri. Gunakan headphone, atau suara speaker akan tertangkap lagi. Hanya tersedia saat Anda tidak berada di saluran.";
+
+/* channel picker */
+"Your channel" = "Saluran Anda";

@@ -1,8 +1,38 @@
+/* connection quality */
+"%.1f %% (%lld of %lld)" = "%.1f %% (%lld من %lld)";
+
+/* media stream */
+"%@ added to the playlist" = "تمت إضافة %@ إلى قائمة التشغيل";
+
+/* media stream */
+"%@ cannot be streamed" = "تعذر بث %@";
+
+/* channel list */
+"%@ deselected" = "تم إلغاء تحديد %@";
+
+/* file list */
+"%@ downloaded" = "تم تنزيل %@";
+
 /* log entry */
 "%@ joined channel" = "%@ إنضم للقناة";
 
 /* log entry */
 "%@ left channel" = "%@ غادرَ القناة";
+
+/* media stream */
+"%@ of %@" = "%@ من %@";
+
+/* media stream */
+"%@ ready, %@" = "%@ جاهز، %@";
+
+/* channel list */
+"%@ selected" = "تم تحديد %@";
+
+/* file list */
+"%@ uploaded" = "تم رفع %@";
+
+/* live activity */
+"%@, %d users" = "%@، %d مستخدم";
 
 /* Web Login Controller */
 "%@, your username \"%@\" has been validated" = "%1$@, اسم المستخدم الخاص بك \"%2$@\" تم التحقق منه";
@@ -10,8 +40,62 @@
 /* preferences */
 "%d %% - Default" = "%d %% - افتراضي";
 
+/* user accounts */
+"%d accounts" = "%d حساب";
+
+/* user accounts */
+"%d accounts changed and %d could not be changed." = "تم تغيير %d حساب وتعذر تغيير %d.";
+
+/* user accounts */
+"%d accounts changed. It applies to each user the next time they log in." = "تم تغيير %d حساب. يسري على كل مستخدم عند تسجيل دخوله التالي.";
+
+/* diagnostics */
+"%d entries" = "%d إدخال";
+
+/* media stream */
+"%d files added to the playlist" = "تمت إضافة %d ملف إلى قائمة التشغيل";
+
+/* connection quality */
+"%d ms" = "%d مللي ثانية";
+
+/* user accounts */
+"%d permissions chosen" = "تم اختيار %d صلاحية";
+
+/* user accounts */
+"%d permissions will be given to the %d accounts of the server that are not administrators." = "ستُمنح %d صلاحية لـ %d حساب على الخادم ليست حسابات مدير.";
+
+/* user accounts */
+"%d permissions will be removed from the %d accounts of the server that are not administrators." = "ستُسحب %d صلاحية من %d حساب على الخادم ليست حسابات مدير.";
+
+/* channel picker */
+"%d users" = "%d مستخدم";
+
+/* channel list */
+"%d users selected" = "تم تحديد %d مستخدم";
+
+/* channel list */
+"%d users selected to move here" = "تم تحديد %d مستخدم لنقلهم إلى هنا";
+
+/* audio codec */
+"%lld KB/s" = "%lld كيلوبايت/ث";
+
+/* audio codec */
+"%lld ms" = "%lld مللي ثانية";
+
 /* codec detail */
 "(Active)" = "(نشط)";
+
+/* channel picker */
+"1 user" = "مستخدم واحد";
+
+/* channel list */
+"1 user selected" = "تم تحديد مستخدم واحد";
+
+/* channel list */
+"1 user selected to move here" = "تم تحديد مستخدم واحد لنقله إلى هنا";
+
+/* media stream */
+"100 % leaves the file as it is. The preview plays on this device only, with this volume and from the chosen position." = "100 % تترك الملف كما هو. تُشغَّل المعاينة على هذا الجهاز فقط، بهذا المستوى ومن الموضع المختار.";
 
 /* codec detail */
 "12 KHz" = "12 كيلوهرتز";
@@ -34,8 +118,29 @@
    create channel */
 "8 KHz" = "8 كيلوهرتز";
 
+/* user accounts */
+"A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "يسري تغيير الصلاحيات عند تسجيل الدخول التالي للمستخدم. من هو متصل الآن يحتفظ بالقديمة حتى ذلك الحين.";
+
+/* appearance */
+"A theme changes the colors above. You can adjust them afterwards." = "السمة تغيّر الألوان أعلاه. يمكنك تعديلها بعد ذلك.";
+
 /* serverlist */
 "Access preferences" = "الوصول إلى التفضيلات ";
+
+/* appearance */
+"Accessibility 1" = "تسهيلات الاستخدام 1";
+
+/* appearance */
+"Accessibility 2" = "تسهيلات الاستخدام 2";
+
+/* appearance */
+"Accessibility 3" = "تسهيلات الاستخدام 3";
+
+/* appearance */
+"Accessibility 4" = "تسهيلات الاستخدام 4";
+
+/* appearance */
+"Accessibility 5" = "تسهيلات الاستخدام 5";
 
 /* server entry
    user detail */
@@ -44,8 +149,50 @@
 /* channel list */
 "Active" = "نشط";
 
+/* media stream */
+"Add" = "إضافة";
+
+/* media stream */
+"Add Files" = "إضافة ملفات";
+
 /* serverlist */
 "Add new server entry" = "إضافة بيانات خادم جديد";
+
+/* serverlist */
+"Add to Favorites" = "إضافة إلى المفضلة";
+
+/* incoming file */
+"Add to Streaming Playlist" = "إضافة إلى قائمة البث";
+
+/* media stream */
+"Add Web Address" = "إضافة عنوان ويب";
+
+/* incoming file */
+"Added to the streaming playlist" = "تمت الإضافة إلى قائمة البث";
+
+/* media stream */
+"Address of a web radio or of an audio or video file" = "عنوان إذاعة ويب أو ملف صوت أو فيديو";
+
+/* user accounts */
+"Administrator" = "مدير";
+
+/* channel list */
+"All" = "الكل";
+
+/* all users */
+"All Users" = "كل المستخدمين";
+
+/* diagnostics */
+"Allowed" = "مسموح";
+
+/* appearance */
+"Always Dark" = "داكن دائمًا";
+
+/* appearance */
+"Always Light" = "فاتح دائمًا";
+
+/* user accounts */
+"An administrator has every permission, whatever is set here." = "للمدير كل الصلاحيات مهما كان المضبوط هنا.";
 
 /* preferences */
 "Announce content of text message" = "الإعلان عن محتوى الرسالة النصية";
@@ -68,11 +215,23 @@
 /* text to speech */
 "Announcements" = "الإعلانات";
 
+/* user accounts */
+"Anonymous users" = "مستخدمون مجهولون";
+
 /* preferences */
 "App Version" = "إصدار التطبيق";
 
+/* appearance */
+"Appearance" = "المظهر";
+
 /* codec detail */
 "Application" = "الوضعية";
+
+/* appearance */
+"Apply High Contrast Theme" = "تطبيق سمة التباين العالي";
+
+/* appearance */
+"Apply Pure Dark Theme" = "تطبيق السمة السوداء الخالصة";
 
 /* preferences */
 "Ascending" = "زيادة";
@@ -83,14 +242,59 @@
 /* create channel */
 "Audio Codec" = "ترميز الصوت";
 
+/* channel list */
+"Audio Output" = "مخرج الصوت";
+
 /* Web Login Controller */
 "Authenticate" = "المصادقة";
 
 /* server entry */
 "Authentication" = "المصادقة";
 
+/* preferences */
+"Available" = "متاح";
+
+/* preferences */
+"Away" = "بعيد";
+
+/* media stream */
+"Back 1 Minute" = "رجوع دقيقة واحدة";
+
+/* media stream */
+"Back 10 Seconds" = "رجوع 10 ثوانٍ";
+
+/* backup */
+"Backup" = "نسخة احتياطية";
+
+/* backup */
+"Backup restored. Close the app and open it again to apply every setting." = "تمت استعادة النسخة الاحتياطية. أغلق التطبيق وافتحه من جديد لتطبيق كل الإعدادات.";
+
+/* channel list */
+"Ban" = "حظر";
+
+/* channel list */
+"Ban %@?" = "حظر %@؟";
+
+/* channel list */
+"Ban %d users?" = "حظر %d مستخدم؟";
+
+/* ban list */
+"Ban removed" = "تم رفع الحظر";
+
 /* channel list */
 "Ban user" = "حظر المستخدم";
+
+/* user accounts */
+"Ban users" = "حظر المستخدمين";
+
+/* ban list */
+"Banned by %@" = "حظره %@";
+
+/* ban list */
+"Banned on %@" = "تاريخ الحظر: %@";
+
+/* ban list */
+"Banned Users" = "المستخدمون المحظورون";
 
 /* server entry */
 "BearWare.dk Web Login" = "تسجيل الدخول عبر BearWare.dk";
@@ -110,8 +314,14 @@
 /* Sound Devices */
 "Bluetooth playback should use Advanced Audio Distribution Profile" = "يجب أن يستخدم تشغيل Bluetooth ملف تعريف توزيع الصوت المتقدم";
 
+/* all users */
+"Bring to My Channel" = "إحضار إلى قناتي";
+
 /* text message type */
 "Broadcast message" = "رسالة عامة";
+
+/* text message */
+"Broadcast Message" = "رسالة عامة";
 
 /* preferences
    user detail */
@@ -123,9 +333,27 @@
 /* Dialog message */
 "Cancel" = "الغاء";
 
+/* file list */
+"Cancels the download" = "يلغي التنزيل";
+
+/* file list */
+"Cancels the upload" = "يلغي الرفع";
+
+/* user accounts */
+"Change the Permissions of Every Account" = "تغيير صلاحيات كل الحسابات";
+
+/* user accounts */
+"Change the properties of the server" = "تغيير خصائص الخادم";
+
+/* user accounts */
+"Changing accounts, %d of %d" = "جارٍ تغيير الحسابات، %d من %d";
+
 /* channel list
    server entry */
 "Channel" = "قناة";
+
+/* View Title */
+"Channel Detail" = "تفاصيل القناة";
 
 /* text message type */
 "Channel message" = "رسالة القناة";
@@ -146,20 +374,107 @@
 /* channel list */
 "Channel. %d users" = "قناة. %d من المستخدمين";
 
+/* ban list */
+"Channel: %@" = "القناة: %@";
+
+/* channel list */
+"Channels" = "القنوات";
+
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "حدد فقط إذا قام هذا الخادم بتمكين تسجيل الدخول إلى BearWare.dk";
+
+/* diagnostics */
+"Checks" = "الفحوصات";
+
+/* media stream */
+"Choose a file" = "اختر ملفًا";
+
+/* channel picker */
+"Choose Channel" = "اختيار قناة";
+
+/* appearance */
+"Choose colors, text size and font" = "اختر الألوان وحجم النص والخط";
+
+/* preferences */
+"Choose events to playback" = "اختر الأحداث التي تُعلن";
+
+/* file list */
+"Choose Files" = "اختيار ملفات";
+
+/* preferences */
+"Choose input and output devices" = "اختر أجهزة الإدخال والإخراج";
+
+/* user accounts */
+"Choose one or more permissions and then what to do with them. Administrator accounts are not changed." = "اختر صلاحية واحدة أو أكثر ثم ما تريد فعله بها. حسابات المدير لا تتغير.";
+
+/* preferences */
+"Choose sounds events to play" = "اختر أصوات الأحداث التي تُشغَّل";
+
+/* all users */
+"Choosing a user shows the channel they are in. If the server does not let your account see all users, only those of your channel are listed." = "اختيار مستخدم يعرض القناة التي هو فيها. إذا لم يسمح الخادم لحسابك برؤية كل المستخدمين، يُعرض مستخدمو قناتك فقط.";
+
+/* channel detail */
+"Classroom" = "فصل دراسي";
+
+/* diagnostics */
+"Clear Log" = "مسح السجل";
+
+/* media stream */
+"Close" = "إغلاق";
+
+/* channel picker */
+"Collapsed" = "مطوي";
+
+/* appearance */
+"Color of buttons, switches and the selected tab." = "لون الأزرار والمفاتيح وعلامة التبويب المحددة.";
+
+/* appearance */
+"Color of the Speakers button in each state. Its icon is shown in black or white, whichever is easier to read." = "لون زر السماعات في كل حالة. تظهر أيقونته بالأسود أو الأبيض، أيهما أسهل قراءة.";
+
+/* appearance */
+"Color of the Talk button in each state. Its text is shown in black or white, whichever is easier to read." = "لون زر التحدث في كل حالة. يظهر نصه بالأسود أو الأبيض، أيهما أسهل قراءة.";
+
+/* appearance */
+"Colors and Text" = "الألوان والنص";
+
+/* appearance */
+"Colors of the More menu of the channel list. Until you choose them it follows the theme: dark with light text in dark mode, and the other way round in light mode." = "ألوان قائمة المزيد في قائمة القنوات. إلى أن تختارها تتبع السمة: داكنة بنص فاتح في الوضع الداكن، والعكس في الوضع الفاتح.";
+
+/* keyboard shortcuts */
+"Command" = "Command";
 
 /* log entry */
 "Command failed: %@" = "فشل الأمر: %@";
 
+/* connection quality */
+"Command Latency (TCP)" = "تأخر الأوامر (TCP)";
+
 /* create channel */
 "Commands" = "الأوامر";
+
+/* channel list */
+"Confirm" = "تأكيد";
+
+/* server list */
+"Connect" = "اتصال";
+
+/* preferences */
+"Connect on Startup" = "الاتصال عند بدء التشغيل";
+
+/* incoming file */
+"Connect to a server and join a channel to send %@" = "اتصل بخادم وانضم إلى قناة لإرسال %@";
+
+/* connection quality */
+"Connect to a server to see the quality of the connection" = "اتصل بخادم لرؤية جودة الاتصال";
 
 /* serverlist */
 "Connect to server" = "الاتصال بالخادم";
 
 /* connect to a server */
 "Connect to Server" = "الاتصال بالخادم";
+
+/* preferences */
+"Connect to the last server and channel when the app opens" = "الاتصال بآخر خادم وقناة عند فتح التطبيق";
 
 /* preferences
    server entry */
@@ -169,11 +484,38 @@
    tts event */
 "Connection lost" = "تم فقد الاتصال";
 
+/* connection quality */
+"Connection Quality" = "جودة الاتصال";
+
+/* keyboard shortcuts */
+"Control" = "Control";
+
+/* user accounts */
+"Control a shared desktop" = "التحكم بسطح مكتب مشترك";
+
+/* media stream */
+"Controls" = "عناصر التحكم";
+
+/* text message */
+"Copied" = "تم النسخ";
+
 /* server entry */
 "Copy" = "Copy";
 
 /* server entry */
+"Copy Join Code" = "نسخ رمز الانضمام";
+
+/* serverlist */
+"Copy Link" = "نسخ الرابط";
+
+/* connection quality */
+"Counted over the voice received from the users of your channel since you joined it. Above 2 % voices start to break up." = "يُحسب على الصوت المستلم من مستخدمي قناتك منذ انضمامك. فوق 2 % تبدأ الأصوات بالتقطع.";
+
+/* server entry */
 "Country" = "الدولة";
+
+/* user accounts */
+"Create and change permanent channels" = "إنشاء القنوات الدائمة وتغييرها";
 
 /* View Title */
 "Create Channel" = "أنشئ قناة";
@@ -181,21 +523,72 @@
 /* main-tab */
 "Create new channel" = "إنشاء قناة جديدة";
 
+/* user accounts */
+"Create temporary channels" = "إنشاء قنوات مؤقتة";
+
+/* web login */
+"Create Web Login" = "إنشاء تسجيل دخول ويب";
+
+/* media stream */
+"Current File" = "الملف الحالي";
+
+/* connection quality */
+"Data" = "البيانات";
+
 /* Sound Input */
 "Default" = "افتراضي";
 
 /* preferences */
 "Default Subscriptions" = "الاشتراكات الافتراضية";
 
+/* user accounts */
+"Default user" = "مستخدم عادي";
+
+/* file list serverlist */
+"Delete" = "حذف";
+
+/* file list */
+"Delete \"%@\" from the channel?" = "حذف \"%@\" من القناة؟";
+
+/* server list */
+"Delete \"%@\" from the server list?" = "حذف \"%@\" من قائمة الخوادم؟";
+
+/* channel detail */
+"Delete Channel" = "حذف القناة";
+
+/* file list */
+"Delete File" = "حذف الملف";
+
+/* server list */
+"Delete Server" = "حذف الخادم";
+
 /* serverlist */
 "Delete server from list" = "حذف الخادم من القائمة";
+
+/* channel list */
+"Deselect user" = "إلغاء تحديد المستخدم";
 
 /* preferences
    user detail */
 "Desktop" = "سطح المكتب";
 
+/* diagnostics */
+"Diagnostic Log" = "سجل التشخيص";
+
+/* diagnostics */
+"Diagnostics" = "التشخيص";
+
+/* preferences */
+"Disabled" = "معطل";
+
+/* channel list */
+"Disconnect" = "قطع الاتصال";
+
 /* preferences */
 "Display" = "عرض";
+
+/* channel list */
+"Done selecting" = "إنهاء التحديد";
 
 /* channel list */
 "Double tap and hold to transmit. Triple tap fast to lock transmission." = "إنقر نقراً مزدوجا ثم ثبت إصبعك لفتح الإرسال , إنقر ثلاث نقرات بشكل سريع   لإقفال الإرسال";
@@ -203,14 +596,41 @@
 /* preferences */
 "Double tap to lock TX button" = "انقر نقرًا مزدوجًا لقفل الميكروفون";
 
+/* user accounts */
+"Download files" = "تنزيل الملفات";
+
+/* file list */
+"Downloaded" = "تم التنزيل";
+
+/* file list */
+"Downloading, %d %%" = "جارٍ التنزيل، %d %%";
+
+/* file list */
+"Downloads the file" = "ينزّل الملف";
+
 /* codec detail */
 "DTX" = "DTX";
+
+/* media stream */
+"Duration" = "المدة";
+
+/* user accounts */
+"Each change is saved at once and applies the next time this user logs in." = "يُحفظ كل تغيير فورًا ويسري عند تسجيل الدخول التالي لهذا المستخدم.";
+
+/* channel list */
+"Earpiece or Headset" = "سماعة الأذن أو سماعة الرأس";
+
+/* channel list */
+"Edit" = "تعديل";
 
 /* channel list */
 "Edit properties" = "تحرير الخصائص";
 
 /* server entry */
 "Encrypted" = "مشفر";
+
+/* media stream */
+"Enter a web address that starts with http or https" = "أدخل عنوان ويب يبدأ بـ http أو https";
 
 /* serverlist */
 "Enter Join Code" = "Enter Join Code";
@@ -224,14 +644,104 @@
    user detail */
 "Error" = "خطأ";
 
+/* media stream */
+"Error while streaming media file" = "خطأ أثناء بث ملف الوسائط";
+
+/* user accounts */
+"Every Account" = "كل الحسابات";
+
+/* user accounts */
+"Every account was already like that. Nothing has been changed." = "كل الحسابات كانت كذلك أصلًا. لم يتغير شيء.";
+
+/* transmit control */
+"Everyone" = "الجميع";
+
+/* transmit control */
+"Everyone can transmit in this channel except what is turned off here." = "يمكن للجميع الإرسال في هذه القناة، ما عدا ما هو معطل هنا.";
+
 /* preferences */
 "Exclusive Mode Toggled" = "تبديل الوضع الحصري";
+
+/* channel list */
+"Expand" = "توسيع";
+
+/* channel picker */
+"Expanded" = "موسّع";
+
+/* appearance */
+"Export Appearance" = "تصدير المظهر";
+
+/* backup */
+"Export Settings and Servers" = "تصدير الإعدادات والخوادم";
+
+/* appearance */
+"Exports the colors, the text and the theme to a file that someone else can import." = "يصدّر الألوان والنص والسمة إلى ملف يمكن لشخص آخر استيراده.";
+
+/* appearance */
+"Extra Extra Extra Large" = "كبير جدًا جدًا جدًا";
+
+/* appearance */
+"Extra Extra Large" = "كبير جدًا جدًا";
+
+/* appearance */
+"Extra Large" = "كبير جدًا";
+
+/* appearance */
+"Extra Small" = "صغير جدًا";
+
+/* file list */
+"Failed to download file" = "فشل تنزيل الملف";
+
+/* media stream */
+"Failed to play the file" = "فشل تشغيل الملف";
 
 /* connect to a server */
 "Failed to setup encryption" = "فشل في إعداد التشفير";
 
+/* media stream */
+"Failed to stream media file" = "فشل بث ملف الوسائط";
+
+/* file list */
+"Failed to transfer %@" = "فشل نقل %@";
+
+/* file list */
+"Failed to upload file" = "فشل رفع الملف";
+
+/* serverlist */
+"Favorite" = "مفضل";
+
 /* preferences */
 "Female" = "أنثى";
+
+/* media stream */
+"File" = "ملف";
+
+/* sound events */
+"File Added" = "تمت إضافة ملف";
+
+/* sound events */
+"File Removed" = "تمت إزالة ملف";
+
+/* file list */
+"Files" = "الملفات";
+
+/* media stream */
+"Files stay in the list until you remove them. When one ends, the next one starts." = "تبقى الملفات في القائمة حتى تزيلها. عندما ينتهي ملف يبدأ التالي.";
+
+/* preferences */
+"Filter Server List" = "تصفية قائمة الخوادم";
+
+/* appearance */
+"Font" = "الخط";
+
+/* appearance */
+"Font of Server Events" = "خط أحداث الخادم";
+
+/* media stream */
+"Forward 1 Minute" = "تقديم دقيقة واحدة";
+
+/* media stream */
+"Forward 10 Seconds" = "تقديم 10 ثوانٍ";
 
 /* codec detail */
 "Frame Size" = "Frame Size";
@@ -242,6 +752,12 @@
 /* preferences
    user detail */
 "General" = "عام";
+
+/* user accounts */
+"Give to Every Account" = "منح لكل الحسابات";
+
+/* channel list */
+"Go to Their Channel" = "الذهاب إلى قناته";
 
 /* TTS EVENT */
 "has joined the channel" = "إنضم للقناة";
@@ -264,11 +780,47 @@
 /* server entry */
 "Host address" = "عنوان المضيف";
 
+/* appearance */
+"Import Appearance" = "استيراد مظهر";
+
+/* backup */
+"Import Backup" = "استيراد نسخة احتياطية";
+
 /* channel list */
 "Inactive" = "غير نشط";
 
+/* appearance */
+"Interface" = "الواجهة";
+
+/* appearance */
+"Interface Color" = "لون الواجهة";
+
+/* Sound Devices */
+"iOS Voice Processing" = "معالجة الصوت في iOS";
+
+/* Sound Devices */
+"iOS voice processing cancels echo, reduces noise and levels the volume. WebRTC reduces noise and levels the volume but does not cancel echo, so use it with headphones." = "معالجة الصوت في iOS تلغي الصدى وتقلل الضجيج وتوازن مستوى الصوت. WebRTC يقلل الضجيج ويوازن مستوى الصوت لكنه لا يلغي الصدى، فاستخدمه مع سماعات الرأس.";
+
+/* ban list */
+"IP address: %@" = "عنوان IP: %@";
+
+/* user accounts */
+"It applies to each user the next time they log in." = "يسري على كل مستخدم عند تسجيل دخوله التالي.";
+
+/* text message */
+"It is sent to every user of the server" = "تُرسل إلى كل مستخدمي الخادم";
+
 /* Dialog message */
 "Join" = "إنضم";
+
+/* file list */
+"Join a channel to see its files" = "انضم إلى قناة لرؤية ملفاتها";
+
+/* incoming file */
+"Join a channel to send %@" = "انضم إلى قناة لإرسال %@";
+
+/* media stream */
+"Join a channel to stream a media file" = "انضم إلى قناة لبث ملف وسائط";
 
 /* server entry */
 "Join Channel" = "الانضمام إلى القناة";
@@ -285,23 +837,92 @@
 /* preferences */
 "Join root channel after login" = "الانضمام إلى القناة الرئيسية بعد تسجيل الدخول";
 
+/* all users */
+"Join Their Channel" = "الانضمام إلى قناته";
+
+/* channel list */
+"Join this channel" = "الانضمام إلى هذه القناة";
+
 /* log entry */
 "Joined %@" = "انضم %@";
+
+/* keyboard shortcuts */
+"Key" = "المفتاح";
+
+/* keyboard shortcuts */
+"Keyboard Shortcuts" = "اختصارات لوحة المفاتيح";
+
+/* preferences */
+"Keys of an external keyboard to talk and to mute" = "مفاتيح لوحة مفاتيح خارجية للتحدث وكتم الصوت";
+
+/* channel list */
+"Kick" = "طرد";
+
+/* channel list */
+"Kick %@?" = "طرد %@؟";
+
+/* channel list */
+"Kick %d users?" = "طرد %d مستخدم؟";
+
+/* user detail */
+"Kick and Ban User" = "طرد المستخدم وحظره";
 
 /* channel list */
 "Kick user" = "طرد المستخدم";
 
+/* user detail */
+"Kick User" = "طرد المستخدم";
+
+/* user accounts */
+"Kick users off the server" = "طرد المستخدمين من الخادم";
+
+/* appearance */
+"Large" = "كبير";
+
+/* connection quality */
+"Latency" = "التأخر";
+
+/* connection quality */
+"Latency and packet loss" = "التأخر وفقدان الحزم";
+
+/* appearance */
+"Light or Dark" = "فاتح أو داكن";
+
 /* preferences */
 "Limit length of names in channel list to %d characters" = "حد  طول الأسماء في قائمة القنوات إلى %d أحرف";
 
+/* preferences */
+"Limit types of servers to show" = "تحديد أنواع الخوادم المعروضة";
+
+/* serverlist */
+"Link copied" = "تم نسخ الرابط";
+
+/* appearance */
+"Listening" = "يستمع";
+
+/* media stream */
+"Live" = "مباشر";
+
+/* diagnostics */
+"Live Activities" = "الأنشطة المباشرة";
+
 /* serverlist */
 "Local server" = "خادم محلي";
+
+/* user accounts */
+"Log in from several devices at once" = "تسجيل الدخول من عدة أجهزة في وقت واحد";
 
 /* text message type */
 "Log message" = "سجل الرسالة";
 
 /* log entry */
 "Logged on to server" = "سجل دخول إلى الخادم";
+
+/* preferences */
+"Login ID from BearWare.dk" = "معرّف الدخول من BearWare.dk";
+
+/* user accounts */
+"Make other users channel operator" = "جعل مستخدمين آخرين مشغّلي قناة";
 
 /* preferences */
 "Male" = "ذكر";
@@ -323,18 +944,72 @@
 /* preferences */
 "Media file vs. voice volume" = "ملف الوسائط مقابل حجم الصوت";
 
+/* transmit control */
+"Media Files" = "ملفات الوسائط";
+
+/* appearance */
+"Medium" = "متوسط";
+
+/* appearance */
+"Menu Background" = "خلفية القائمة";
+
+/* appearance */
+"Menu Text" = "نص القائمة";
+
+/* appearance */
+"Menus" = "القوائم";
+
+/* text messages */
+"Message" = "رسالة";
+
 /* server entry */
 "Message of the Day" = "رسالة اليوم";
 
+/* appearance */
+"Message Text Size" = "حجم نص الرسائل";
+
+/* channel list */
+"Message this user" = "مراسلة هذا المستخدم";
+
+/* tab */
+"Messages" = "الرسائل";
+
+/* diagnostics */
+"Microphone" = "الميكروفون";
+
 /* preferences */
 "Microphone Gain" = "مستوى صوت الميكروفون";
+
+/* Sound Devices */
+"Microphone Test" = "اختبار الميكروفون";
+
+/* user accounts */
+"Moderation" = "الإشراف";
+
+/* keyboard shortcuts */
+"Modifier" = "مفتاح التعديل";
 
 /* codec detail
    create channel */
 "Mono" = "Mono";
 
+/* appearance */
+"Monospaced" = "ثابت العرض";
+
+/* channel list */
+"More" = "المزيد";
+
+/* channel list */
+"Move" = "نقل";
+
+/* channel list */
+"Move to Channel" = "نقل إلى قناة";
+
 /* channel list */
 "Move user" = "نقل المستخدم";
+
+/* user accounts */
+"Move users between channels" = "نقل المستخدمين بين القنوات";
 
 /* channel list */
 "Move users here" = "نقل المستخدمين هنا";
@@ -348,8 +1023,17 @@
 /* user detail */
 "Mute Media File" = "كتم ملف الوسائط";
 
+/* keyboard shortcuts */
+"Mute or Unmute Speakers" = "كتم السماعات أو إلغاء كتمها";
+
 /* user detail */
 "Mute Voice" = "كتم الصوت";
+
+/* channel list */
+"Muted" = "مكتوم";
+
+/* channel list */
+"Mutes or unmutes everything you hear from the server" = "يكتم كل ما تسمعه من الخادم أو يلغي كتمه";
 
 /* create channel
    server entry */
@@ -358,14 +1042,23 @@
 /* preferences */
 "Name displayed in channel list" = "الاسم سيكون معروضاً في قائمة القنوات";
 
+/* preferences */
+"Neutral" = "محايد";
+
 /* Dialog message */
 "New Server" = "خادم جديد";
+
+/* media stream */
+"Next File" = "الملف التالي";
 
 /* preferences */
 "Nickname" = "الاسم المستعار";
 
 /* server entry */
 "Nickname (optional)" = "الاسم المستعار (اختياري)";
+
+/* user accounts */
+"Nickname locked, cannot be changed" = "الاسم المستعار مقفل، لا يمكن تغييره";
 
 /* Dialog message */
 "No" = "لا";
@@ -377,20 +1070,71 @@
 /* create channel */
 "No Audio Recording" = "لا يمكن تسجيل الصوت";
 
+/* ban list */
+"No banned users" = "لا يوجد مستخدمون محظورون";
+
+/* connection quality */
+"No data" = "لا توجد بيانات";
+
+/* file list */
+"No files in this channel" = "لا توجد ملفات في هذه القناة";
+
 /* create channel */
 "No Interruptions" = "من دون إنقطاعات";
+
+/* keyboard shortcuts */
+"No Modifier" = "بلا مفتاح تعديل";
 
 /* channel list */
 "No password" = "لا توجد كلمة مرور";
 
+/* channel list */
+"No results" = "لا توجد نتائج";
+
 /* serverlist */
 "No server found" = "No server found";
+
+/* user accounts */
+"No user accounts" = "لا توجد حسابات مستخدمين";
+
+/* channel list */
+"No users selected" = "لم يُحدَّد أي مستخدم";
+
+/* channel list */
+"No users selected to move" = "لم يُحدَّد أي مستخدم للنقل";
 
 /* create channel */
 "No Voice Activation" = "تعطيل وضع التنشيط الصوتي";
 
 /* default nickname */
 "Noname" = "بدون اسم";
+
+/* keyboard shortcuts and voice cleanup */
+"None" = "لا شيء";
+
+/* diagnostics */
+"Not allowed. Nobody can hear you until you turn it on in Settings, under TeamTalk." = "غير مسموح. لن يسمعك أحد حتى تفعّله في الإعدادات، ضمن TeamTalk.";
+
+/* diagnostics */
+"Not asked yet. iOS asks the first time you join a channel." = "لم يُسأل بعد. يسأل iOS أول مرة تنضم فيها إلى قناة.";
+
+/* diagnostics */
+"Not available with this installation. The widget cannot show your servers and the controls do not show their state." = "غير متاح مع هذا التثبيت. لا تستطيع الأداة عرض خوادمك وعناصر التحكم لا تعرض حالتها.";
+
+/* live activity */
+"Not in a channel" = "ليس في قناة";
+
+/* diagnostics */
+"Not installed. The app was installed without its extension, so there are no Live Activities, widget or controls. Install it again with a tool that keeps the extensions." = "غير مثبتة. ثُبّت التطبيق بدون ملحقه، فلا توجد أنشطة مباشرة ولا أداة ولا عناصر تحكم. ثبّته من جديد بأداة تحتفظ بالملحقات.";
+
+/* media stream */
+"Not streaming" = "لا يوجد بث";
+
+/* live activity */
+"Not transmitting" = "لا يرسل";
+
+/* media stream */
+"Off" = "إيقاف";
 
 /* serverlist */
 "Official server" = "خادم رسمي";
@@ -401,11 +1145,35 @@
    user detail */
 "OK" = "حسناً";
 
+/* channel list */
+"On" = "تشغيل";
+
+/* channel detail */
+"Only the users you allow can transmit" = "يمكن الإرسال فقط للمستخدمين الذين تسمح لهم";
+
+/* text message */
+"Open Link" = "فتح الرابط";
+
+/* diagnostics */
+"Open Settings" = "فتح الإعدادات";
+
+/* file list */
+"Opens the file" = "يفتح الملف";
+
+/* keyboard shortcuts */
+"Option" = "Option";
+
 /* codec detail */
 "OPUS Codec" = "ترميز OPUS";
 
 /* preferences */
 "Order of channels in Channel List" = "ترتيب القنوات في قائمة القنوات";
+
+/* user accounts */
+"Other" = "أخرى";
+
+/* connection quality */
+"Packet Loss" = "فقدان الحزم";
 
 /* channel list */
 "Parent channel" = "الرجوع لقناة ";
@@ -418,8 +1186,26 @@
 /* channel list */
 "Password protected" = "محمية بكلمة مرور";
 
+/* media stream */
+"Pause" = "إيقاف مؤقت";
+
+/* keyboard shortcuts */
+"Pause or Resume Streaming" = "إيقاف البث مؤقتًا أو استئنافه";
+
+/* media stream */
+"Paused" = "متوقف مؤقتًا";
+
 /* create channel */
 "Permanent Channel" = "قناة دائمة";
+
+/* file list */
+"Photos and Videos" = "الصور والفيديو";
+
+/* sound events */
+"Play sound when a file is removed from the channel" = "تشغيل صوت عند إزالة ملف من القناة";
+
+/* sound events */
+"Play sound when a file is uploaded to the channel" = "تشغيل صوت عند رفع ملف إلى القناة";
 
 /* preferences */
 "Play sound when a user joins the channel" = "تشغيل صوت  عندما ينضم مستخدم إلى القناة";
@@ -454,11 +1240,17 @@
 /* preferences */
 "Play sound when voice transmission is toggled" = "إصدار تنبيه عندما تقوم بتبديل الصوت (أخذ الميكروفون)";
 
+/* media stream */
+"Playlist" = "قائمة التشغيل";
+
 /* preferences */
 "Pop up text message when new messages are received" = "إنبثاق نافذةاً عندما تتلقى رسالة نصية";
 
 /* preferences */
 "Popularity" = "شعبية";
+
+/* media stream */
+"Position" = "الموضع";
 
 /* serverlist */
 "Preferences" = "الاعدادات";
@@ -466,11 +1258,23 @@
 /* Sound Input */
 "Preferred" = "مُفَضَّل";
 
+/* media stream */
+"Preparing file" = "جارٍ تجهيز الملف";
+
 /* preferences */
 "Pressing Return-key sends text message" = "يؤدي الضغط على رجوع (Return) في لوحة المفاتيح, لإرسال رسالة نصية";
 
+/* appearance */
+"Preview" = "معاينة";
+
+/* media stream */
+"Previous File" = "الملف السابق";
+
 /* text message type */
 "Private message" = "رسالة خاصة";
+
+/* channel list */
+"Private Message" = "رسالة خاصة";
 
 /* preferences */
 "Private Text Message" = "رسالة خاصة";
@@ -484,11 +1288,17 @@
 /* serverlist */
 "Public server" = "خادم عام";
 
+/* channel list */
+"Push to Talk" = "اضغط للتحدث";
+
 /* preferences */
 "Push To Talk Lock" = "قفل إضغط وتحدث";
 
 /* codec detail */
 "Quality" = "الجودة";
+
+/* preferences */
+"Question" = "سؤال";
 
 /* preferences */
 "Receive broadcast messages by default" = "تلقي الرسائل العامة بشكل افتراضي";
@@ -511,6 +1321,45 @@
 /* preferences */
 "Receive webcam streams by default" = "تلقي  بث  كاميرا الويب بشكل افتراضي";
 
+/* connection quality */
+"Received" = "مستلم";
+
+/* appearance */
+"Received message" = "رسالة مستلمة";
+
+/* appearance */
+"Received Messages" = "الرسائل المستلمة";
+
+/* user accounts */
+"Record voice in every channel" = "تسجيل الصوت في كل القنوات";
+
+/* ban list */
+"Remove Ban" = "رفع الحظر";
+
+/* user accounts */
+"Remove from Every Account" = "سحب من كل الحسابات";
+
+/* serverlist */
+"Remove from Favorites" = "إزالة من المفضلة";
+
+/* media stream */
+"Repeat" = "تكرار";
+
+/* web login */
+"Reset Web Login" = "إعادة تعيين تسجيل دخول الويب";
+
+/* appearance */
+"Restore Default Appearance" = "استعادة المظهر الافتراضي";
+
+/* keyboard shortcuts */
+"Restore Default Shortcuts" = "استعادة الاختصارات الافتراضية";
+
+/* media stream */
+"Resume" = "استئناف";
+
+/* keyboard shortcuts */
+"Return" = "Return";
+
 /* preferences */
 "Return Sends Message" = "الرجوع (return) يرسل رسالة";
 
@@ -520,14 +1369,71 @@
 /* log entry */
 "root channel" = "القناة الرئيسية";
 
+/* appearance */
+"Rounded" = "مستدير";
+
+/* appearance */
+"Same as the App" = "مثل التطبيق";
+
+/* appearance */
+"Same as the System" = "مثل النظام";
+
 /* codec detail */
 "Sample Rate" = "Sample Rate";
+
+/* channel detail */
+"Save" = "حفظ";
 
 /* Dialog message */
 "Save Server" = "حفظ الخادم";
 
+/* server entry */
+"Save server" = "حفظ الخادم";
+
 /* Dialog message */
 "Save server to server list?" = "هل تريد حفظ الخادم في قائمة الخوادم?";
+
+/* user accounts */
+"Search accounts" = "البحث في الحسابات";
+
+/* channel picker */
+"Search channels" = "البحث في القنوات";
+
+/* channel list */
+"Search channels and users" = "البحث في القنوات والمستخدمين";
+
+/* serverlist */
+"Search servers" = "البحث في الخوادم";
+
+/* all users */
+"Search users" = "البحث في المستخدمين";
+
+/* user accounts */
+"See hidden channels" = "رؤية القنوات المخفية";
+
+/* user accounts */
+"See the users of every channel" = "رؤية مستخدمي كل القنوات";
+
+/* preferences */
+"Select the text-to-speech voice to use" = "اختر صوت تحويل النص إلى كلام";
+
+/* channel list */
+"Select users" = "تحديد مستخدمين";
+
+/* speech */
+"Selected" = "محدد";
+
+/* text messages */
+"Send" = "إرسال";
+
+/* text message */
+"Send broadcast message" = "إرسال رسالة عامة";
+
+/* user accounts */
+"Send broadcast messages" = "إرسال رسائل عامة";
+
+/* user accounts */
+"Send channel messages" = "إرسال رسائل القناة";
 
 /* text message */
 "Send empty message to close keyboard" = "إرسال رسالة فارغة لإغلاق لوحة المفاتيح";
@@ -535,8 +1441,38 @@
 /* channel list */
 "Send private message" = "إرسال رسالة خاصة";
 
+/* user accounts */
+"Send private messages" = "إرسال رسائل خاصة";
+
+/* incoming file */
+"Send to TeamTalk" = "إرسال إلى TeamTalk";
+
+/* media stream */
+"Send Video" = "إرسال الفيديو";
+
+/* connection quality */
+"Sent" = "مرسل";
+
+/* appearance */
+"Sent message" = "رسالة مرسلة";
+
+/* appearance */
+"Sent Messages" = "الرسائل المرسلة";
+
+/* appearance */
+"Serif" = "مذيّل";
+
 /* preferences */
 "Server Connection Lost" = "فقدان الاتصال بالخادم";
+
+/* server entry */
+"Server Entry" = "بيانات الخادم";
+
+/* appearance */
+"Server event" = "حدث خادم";
+
+/* appearance */
+"Server Events" = "أحداث الخادم";
 
 /* server entry */
 "Server List Entry" = "قائمة الخوادم";
@@ -545,13 +1481,52 @@
 "Server Status" = "حالة الخادم";
 
 /* preferences */
+"Setup Announcements" = "إعداد الإعلانات";
+
+/* preferences */
+"Setup Sound Devices" = "إعداد أجهزة الصوت";
+
+/* preferences */
+"Setup Sound Events" = "إعداد صوت الاحداث";
+
+/* file list */
+"Share" = "مشاركة";
+
+/* diagnostics */
+"Share Log" = "مشاركة السجل";
+
+/* serverlist */
+"Share Server" = "مشاركة الخادم";
+
+/* user accounts */
+"Share the desktop" = "مشاركة سطح المكتب";
+
+/* file list */
+"Shares or opens the file" = "يشارك الملف أو يفتحه";
+
+/* keyboard shortcuts */
+"Shift" = "Shift";
+
+/* keyboard shortcuts */
+"Shortcuts work with an external keyboard while connected to a server. A key without a modifier does nothing while you are typing a message." = "تعمل الاختصارات مع لوحة مفاتيح خارجية أثناء الاتصال بخادم. المفتاح بلا مفتاح تعديل لا يفعل شيئًا أثناء كتابة رسالة.";
+
+/* preferences */
 "Show in Server List" = "إظهار في قائمة الخوادم";
 
 /* preferences */
 "Show male or female icon" = "إظهار رمز ذكر أو أنثى";
 
+/* server entry */
+"Show password" = "إظهار كلمة المرور";
+
+/* server list */
+"Show server details" = "إظهار تفاصيل الخادم";
+
 /* preferences */
 "Show Text Messages Instantly" = "عرض الرسائل النصية على الفور";
+
+/* channel list */
+"Show user details" = "إظهار تفاصيل المستخدم";
 
 /* preferences */
 "Show Usernames" = "عرض أسماء المستخدمين";
@@ -559,11 +1534,23 @@
 /* preferences */
 "Show usernames instead of nicknames" = "عرض أسماء المستخدمين بدلا من الأسماء المستعارة";
 
+/* preferences */
+"Shown to the other users of the server" = "يظهر لبقية مستخدمي الخادم";
+
 /* channel list */
 "Silent" = "صامت";
 
+/* appearance */
+"Size and font apply to the whole app." = "الحجم والخط يسريان على التطبيق كله.";
+
+/* appearance */
+"Small" = "صغير";
+
 /* preferences */
 "Sort Channels" = "فرز القنوات";
+
+/* media stream */
+"Sound" = "الصوت";
 
 /* preferences
    text to speech */
@@ -572,8 +1559,26 @@
 /* preferences */
 "Sound System" = "نظام الصوت";
 
+/* keyboard shortcuts */
+"Space" = "مسافة";
+
+/* channel list */
+"Speaker" = "مكبر الصوت";
+
 /* preferences */
 "Speaker Output" = "السماعة الخارجية";
+
+/* channel list */
+"Speakers" = "السماعات";
+
+/* appearance */
+"Speakers Button" = "زر السماعات";
+
+/* intent */
+"Speakers On" = "السماعات مشغّلة";
+
+/* preferences */
+"Speech" = "الكلام";
 
 /* preferences */
 "Speech Rate" = "سرعة الكلام";
@@ -587,15 +1592,84 @@
 /* codec detail */
 "Speex Variable Bitrate Codec" = "Speex Variable Bitrate Codec";
 
+/* text to speech events */
+"Spoken By" = "ينطقه";
+
+/* text to speech events, accessibility */
+"Spoken by, %@" = "ينطقه، %@";
+
+/* appearance */
+"Standard" = "قياسي";
+
+/* media stream */
+"Start Streaming" = "بدء البث";
+
+/* preferences */
+"Status" = "الحالة";
+
 /* Text message view */
 "Status Event" = "حدث الحالة";
+
+/* user accounts */
+"Status locked, cannot be changed" = "الحالة مقفلة، لا يمكن تغييرها";
+
+/* preferences */
+"Status Message" = "رسالة الحالة";
 
 /* codec detail
    create channel */
 "Stereo" = "Stereo";
 
+/* Sound Devices */
+"Stop Microphone Test" = "إيقاف اختبار الميكروفون";
+
+/* media stream */
+"Stop Preview" = "إيقاف المعاينة";
+
+/* media stream */
+"Stop Streaming" = "إيقاف البث";
+
+/* user accounts */
+"Stream audio files" = "بث ملفات الصوت";
+
+/* media stream */
+"Stream Media File" = "بث ملف وسائط";
+
+/* media stream */
+"Stream media file" = "بث ملف وسائط";
+
+/* user accounts */
+"Stream video files" = "بث ملفات الفيديو";
+
+/* media stream */
+"Streaming" = "البث";
+
+/* media stream */
+"Streaming %@" = "جارٍ بث %@";
+
+/* media stream */
+"Streaming finished" = "انتهى البث";
+
+/* media stream */
+"Streaming started" = "بدأ البث";
+
 /* user detail */
 "Subscriptions" = "الإشتراكات";
+
+/* appearance */
+"Swap Speakers Button Colors" = "تبديل ألوان زر السماعات";
+
+/* appearance */
+"Swap Talk Button Colors" = "تبديل ألوان زر التحدث";
+
+/* appearance */
+"System Size" = "حجم النظام";
+
+/* channel list */
+"Talk" = "تحدث";
+
+/* appearance */
+"Talk Button" = "زر التحدث";
 
 /* channel list */
 "Talking" = "يتحدث";
@@ -603,17 +1677,98 @@
 /* server entry */
 "TCP Port" = "منفذ TCP";
 
+/* channel list */
+"TeamTalk has no access to the microphone. Turn it on in Settings, under TeamTalk, and try again." = "لا يملك TeamTalk صلاحية الوصول إلى الميكروفون. فعّلها في الإعدادات، ضمن TeamTalk، ثم حاول من جديد.";
+
+/* server list */
+"TeamTalk Servers" = "خوادم TeamTalk";
+
+/* text to speech events */
+"TeamTalk Voice" = "صوت TeamTalk";
+
+/* Sound Devices */
+"Test Microphone" = "اختبار الميكروفون";
+
+/* appearance */
+"Text" = "النص";
+
+/* appearance */
+"Text Messages" = "الرسائل النصية";
+
+/* channel list */
+"Text Messaging" = "الرسائل النصية";
+
+/* appearance */
+"Text of the Messages" = "نص الرسائل";
+
+/* preferences */
+"Text shown next to your name" = "النص الظاهر بجانب اسمك";
+
+/* appearance */
+"Text Size" = "حجم النص";
+
 /* preferences */
 "Text To Speech Events" = "أحداث تحويل النص إلى كلام";
+
+/* speech */
+"Text-to-Speech Voice" = "صوت تحويل النص إلى كلام";
+
+/* user accounts */
+"The account could not be saved" = "تعذر حفظ الحساب";
+
+/* backup */
+"The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "تحتوي النسخة الاحتياطية على كل الإعدادات وقائمة الخوادم مع كلمات مرورها. احتفظ بالملف في مكان آمن.";
+
+/* diagnostics */
+"The log is empty" = "السجل فارغ";
+
+/* diagnostics */
+"The log records what the app does: connection, sound devices, transfers and errors. It holds no passwords and nothing of what is said or written." = "يسجّل السجل ما يفعله التطبيق: الاتصال وأجهزة الصوت وعمليات النقل والأخطاء. لا يحتوي على كلمات مرور ولا على شيء مما يقال أو يكتب.";
+
+/* appearance */
+"The messages can have a text size of their own, and the server events a font of their own." = "يمكن أن يكون للرسائل حجم نص خاص بها، ولأحداث الخادم خط خاص بها.";
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "سرعة الكلام للصوت المتحدث هي %.1f";
 
+/* appearance */
+"The text of a message is shown in black or white, whichever is easier to read on its color." = "يظهر نص الرسالة بالأسود أو الأبيض، أيهما أسهل قراءة على لونها.";
+
+/* appearance */
+"The text of a message is shown in black or white, whichever is easier to read on its color. Server events are what happens on the server, like someone joining or leaving the channel." = "يظهر نص الرسالة بالأسود أو الأبيض، أيهما أسهل قراءة على لونها. أحداث الخادم هي ما يجري على الخادم، مثل انضمام أحدهم إلى القناة أو مغادرته لها.";
+
 /* preferences */
 "The volume of the speaking voice is %.1f" = "مستوى صوت المتحدث هو %.1f";
 
+/* appearance */
+"Themes" = "السمات";
+
+/* diagnostics */
+"They need iOS 17 or later" = "تتطلب iOS 17 أو أحدث";
+
+/* media stream */
+"This file cannot be streamed" = "لا يمكن بث هذا الملف";
+
+/* backup */
+"This file is not a TeamTalk backup" = "هذا الملف ليس نسخة احتياطية من TeamTalk";
+
+/* appearance */
+"This file is not an appearance exported from TeamTalk" = "هذا الملف ليس مظهرًا مصدَّرًا من TeamTalk";
+
+/* transmit control */
+"This is a classroom channel: only what is turned on here can be transmitted." = "هذه قناة فصل دراسي: لا يُرسل إلا ما هو مفعّل هنا.";
+
+/* media stream */
+"This web address cannot be streamed" = "لا يمكن بث عنوان الويب هذا";
+
+/* connection quality */
+"Time a packet takes to reach the server and come back. Below 100 ms a conversation feels immediate." = "الزمن الذي تستغرقه حزمة للوصول إلى الخادم والعودة. تحت 100 مللي ثانية يبدو الحوار فوريًا.";
+
 /* channel list */
 "Toggle to enable/disable transmission" = "تبديل لتمكين او  تعطيل الإرسال";
+
+/* keyboard shortcuts */
+"Toggle Transmission" = "تشغيل الإرسال أو إيقافه";
 
 /* preferences */
 "Toggle voice transmission using headset" = "تبديل ارسال الصوت باستخدام سماعة الرأس";
@@ -624,17 +1779,29 @@
 /* preferences */
 "Translator" = "المترجم";
 
+/* live activity */
+"Transmission" = "الإرسال";
+
 /* channel list */
 "Transmit inactive" = "الميكروفون معطل";
 
 /* codec detail */
 "Transmit Interval" = "الفاصل الزمني للإرسال";
 
+/* user accounts */
+"Transmit video" = "إرسال الفيديو";
+
+/* user accounts */
+"Transmit voice" = "إرسال الصوت";
+
 /* channel list */
 "Transmitting" = "يتم النقل";
 
 /* preferences */
 "Turn off screen when holding phone near ear" = "إيقاف الشاشة عندَ  تقريب الهاتف بالقرب من الأذن ";
+
+/* diagnostics */
+"Turned off. Turn on Live Activities in Settings, under TeamTalk." = "معطلة. فعّل الأنشطة المباشرة في الإعدادات، ضمن TeamTalk.";
 
 /* serverlist */
 "Type Join Code" = "Type Join Code";
@@ -649,17 +1816,56 @@
 /* serverlist */
 "Unofficial server" = "خادم غير رسمي";
 
+/* file list */
+"Upload file" = "رفع ملف";
+
+/* user accounts */
+"Upload files" = "رفع الملفات";
+
+/* incoming file */
+"Upload to Channel" = "رفع إلى القناة";
+
+/* file list */
+"Uploading" = "جارٍ الرفع";
+
+/* file list */
+"Uploading, %d %%" = "جارٍ الرفع، %d %%";
+
 /* preferences */
 "Use echo cancellation and automatic gain control" = "استخدام إلغاء الصدى والتحكم بالميكروفون بشكل تلقائي";
 
 /* preferences */
 "Use iPhone's speaker instead of earpiece" = "استخدم سماعة ال Iphone  بدلا من سماعة الأذن";
 
+/* audio codec */
+"Use No Audio" = "عدم استخدام الصوت";
+
+/* audio codec */
+"Use OPUS Codec" = "استخدام ترميز OPUS";
+
+/* audio codec */
+"Use Speex Codec" = "استخدام ترميز Speex";
+
+/* audio codec */
+"Use Speex VBR Codec" = "استخدام ترميز Speex VBR";
+
+/* appearance */
+"Use the Colors of the Theme" = "استخدام ألوان السمة";
+
 /* channel list */
 "User" = "المستخدم";
 
+/* user accounts */
+"User Accounts" = "حسابات المستخدمين";
+
+/* channel list */
+"User Details" = "تفاصيل المستخدم";
+
 /* channel list */
 "User female" = "أنثى";
+
+/* user detail */
+"User ID" = "معرّف المستخدم";
 
 /* preferences */
 "User Joins Channel" = "ينضم المستخدم إلى القناة";
@@ -689,12 +1895,18 @@
    user detail */
 "User Messages" = "رسائل المستخدم";
 
+/* ban list */
+"User name: %@" = "اسم المستخدم: %@";
+
 /* server entry
    user detail */
 "Username" = "اسم المستخدم";
 
 /* Web Login Controller */
 "Username or password incorrect" = "خطأ في أسم المستخدم أو كلمة المرور";
+
+/* channel list */
+"Users" = "المستخدمون";
 
 /* server entry */
 "Users Online" = "مستخدمين متصلين";
@@ -730,6 +1942,15 @@
 /* preferences */
 "Voice Activation Triggered" = "تفعيل التنشيط الصوتي";
 
+/* Sound Devices */
+"Voice Cleanup" = "تنقية الصوت";
+
+/* connection quality */
+"Voice Latency (UDP)" = "تأخر الصوت (UDP)";
+
+/* connection quality */
+"Voice Packets Lost" = "حزم الصوت المفقودة";
+
 /* preferences */
 "Voice Preprocessing" = "معالجة الصوت";
 
@@ -739,11 +1960,29 @@
 /* user detail */
 "Voice Volume" = "مستوى الصوت";
 
+/* text to speech events */
+"VoiceOver" = "VoiceOver";
+
+/* text to speech events */
+"VoiceOver speaks an announcement with its own voice and shows it in braille. With VoiceOver off, the voice of TeamTalk speaks them all." = "ينطق VoiceOver الإعلان بصوته ويعرضه بطريقة برايل. عند إيقاف VoiceOver ينطقها كلها صوت TeamTalk.";
+
 /* codec detail */
 "VoIP" = "VoIP (الصوت عبر بروتوكول الإنترنت)";
 
+/* media stream */
+"Volume" = "مستوى الصوت";
+
 /* user detail */
 "Volume Controls" = "عناصر التحكم في مستوى الصوت";
+
+/* media stream */
+"Web Address" = "عنوان ويب";
+
+/* media stream */
+"Web address, %@" = "عنوان ويب، %@";
+
+/* media stream */
+"Web address, live" = "عنوان ويب، مباشر";
 
 /* Web Login controller */
 "Web Login ID" = "معرف تسجيل الدخول";
@@ -752,8 +1991,29 @@
    user detail */
 "WebCam" = "كاميرا الويب";
 
+/* Sound Devices */
+"WebRTC" = "WebRTC";
+
+/* diagnostics */
+"What the app has been doing, to share when something fails" = "ما كان يفعله التطبيق، للمشاركة عند حدوث خلل";
+
+/* diagnostics */
+"What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "ما يحتاجه التطبيق من الـ iPhone. إذا كان هنا شيء غير صحيح فهو أول ما يجب إصلاحه.";
+
+/* transmit control */
+"Who Can Transmit" = "من يمكنه الإرسال";
+
+/* media stream */
+"Whole List" = "القائمة كلها";
+
+/* diagnostics */
+"Widget and Controls" = "الأداة وعناصر التحكم";
+
 /* Dialog message */
 "Yes" = "نعم";
+
+/* media stream */
+"You are not allowed to stream media files on this server" = "غير مسموح لك ببث ملفات الوسائط على هذا الخادم";
 
 /* Dialog */
 "You have been kicked from channel" = "تم طردك من القناة";
@@ -769,3 +2029,9 @@
 
 /* speech */
 "You have selected %@" = " لقد اخترت %@";
+
+/* Sound Devices */
+"You will hear your own microphone. Use headphones, or the speaker will be picked up again. Only available while you are not in a channel." = "ستسمع ميكروفونك. استخدم سماعات الرأس، وإلا التقط الميكروفون صوت السماعة من جديد. متاح فقط عندما لا تكون في قناة.";
+
+/* channel picker */
+"Your channel" = "قناتك";

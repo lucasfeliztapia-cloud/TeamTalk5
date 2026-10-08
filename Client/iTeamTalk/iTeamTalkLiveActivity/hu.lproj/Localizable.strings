@@ -1,0 +1,59 @@
+/* favorite servers widget */
+"Connect to %@" = "Csatlakozás ide: %@";
+
+/* favorite servers widget */
+"Connect to one of your favorite servers with a tap." = "Csatlakozz egy koppintással az egyik kedvenc kiszolgálódhoz.";
+
+/* favorite servers widget */
+"Favorite Servers" = "Kedvenc kiszolgálók";
+
+/* favorite servers widget */
+"Mark a server as favorite in TeamTalk" = "Jelölj meg egy kiszolgálót kedvencként a TeamTalkban";
+
+/* channel list */
+"Muted" = "Némítva";
+
+/* speakers control */
+"Mutes everyone and brings them back while connected to a server." = "Mindenkit elnémít, majd visszakapcsol, amíg csatlakozva vagy egy kiszolgálóhoz.";
+
+/* live activity */
+"Not transmitting" = "Nem ad";
+
+/* channel list */
+"On" = "Be";
+
+/* favorite servers widget */
+"Open TeamTalk to see your favorite servers" = "Nyisd meg a TeamTalkot a kedvenc kiszolgálóid megtekintéséhez";
+
+/* keyboard shortcuts */
+"Pause or Resume Streaming" = "Közvetítés szüneteltetése vagy folytatása";
+
+/* channel list */
+"Speakers" = "Hangszórók";
+
+/* intent */
+"Speakers On" = "Hangszórók bekapcsolva";
+
+/* media stream */
+"Stop Streaming" = "Közvetítés leállítása";
+
+/* transmit control */
+"Talk in TeamTalk" = "Beszéd a TeamTalkban";
+
+/* speakers control */
+"TeamTalk Speakers" = "TeamTalk-hangszórók";
+
+/* intent */
+"Toggle Speakers" = "Hangszórók be- vagy kikapcsolása";
+
+/* keyboard shortcuts */
+"Toggle Transmission" = "Adás be- vagy kikapcsolása";
+
+/* live activity */
+"Transmission" = "Adás";
+
+/* transmit control */
+"Transmitting" = "Transmitting";
+
+/* transmit control */
+"Turns your transmission on and off while connected to a server." = "Be- és kikapcsolja az adásodat, amíg csatlakozva vagy egy kiszolgálóhoz.";

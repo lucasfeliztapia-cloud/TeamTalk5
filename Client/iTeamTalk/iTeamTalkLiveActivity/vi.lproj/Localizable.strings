@@ -1,0 +1,59 @@
+/* favorite servers widget */
+"Connect to %@" = "Kết nối với %@";
+
+/* favorite servers widget */
+"Connect to one of your favorite servers with a tap." = "Kết nối với một trong các máy chủ ưa thích của bạn chỉ bằng một lần chạm.";
+
+/* favorite servers widget */
+"Favorite Servers" = "Máy chủ ưa thích";
+
+/* favorite servers widget */
+"Mark a server as favorite in TeamTalk" = "Đánh dấu một máy chủ là ưa thích trong TeamTalk";
+
+/* channel list */
+"Muted" = "Đã tắt tiếng";
+
+/* speakers control */
+"Mutes everyone and brings them back while connected to a server." = "Tắt tiếng mọi người và bật lại khi đang kết nối với máy chủ.";
+
+/* live activity */
+"Not transmitting" = "Không truyền";
+
+/* channel list */
+"On" = "Bật";
+
+/* favorite servers widget */
+"Open TeamTalk to see your favorite servers" = "Mở TeamTalk để xem các máy chủ ưa thích của bạn";
+
+/* keyboard shortcuts */
+"Pause or Resume Streaming" = "Tạm dừng hoặc tiếp tục phát trực tuyến";
+
+/* channel list */
+"Speakers" = "Loa";
+
+/* intent */
+"Speakers On" = "Loa đang bật";
+
+/* media stream */
+"Stop Streaming" = "Dừng phát trực tuyến";
+
+/* transmit control */
+"Talk in TeamTalk" = "Nói trong TeamTalk";
+
+/* speakers control */
+"TeamTalk Speakers" = "Loa của TeamTalk";
+
+/* intent */
+"Toggle Speakers" = "Bật hoặc tắt tiếng loa";
+
+/* keyboard shortcuts */
+"Toggle Transmission" = "Bật hoặc tắt truyền";
+
+/* live activity */
+"Transmission" = "Truyền";
+
+/* transmit control */
+"Transmitting" = "truyền";
+
+/* transmit control */
+"Turns your transmission on and off while connected to a server." = "Bật và tắt việc truyền của bạn khi đang kết nối với máy chủ.";

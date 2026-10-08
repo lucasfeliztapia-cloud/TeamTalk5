@@ -240,6 +240,23 @@
 		DD0000000000000000000005 /* TeamTalkWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTalkWidgets.swift; sourceTree = "<group>"; };
 		DD0000000000000000000061 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DD0000000000000000000062 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD0000000000000000000064 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD0000000000000000000065 /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD0000000000000000000066 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD0000000000000000000067 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD0000000000000000000068 /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD0000000000000000000069 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD000000000000000000006A /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD000000000000000000006B /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD000000000000000000006C /* ms */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ms; path = ms.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD000000000000000000006D /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD000000000000000000006E /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD000000000000000000006F /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		DD0000000000000000000070 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD0000000000000000000071 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD0000000000000000000072 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD0000000000000000000073 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DD0000000000000000000074 /* zh */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = zh; path = zh.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -765,6 +782,23 @@
 			children = (
 				DD0000000000000000000061 /* en */,
 				DD0000000000000000000062 /* es */,
+				DD0000000000000000000064 /* ar */,
+				DD0000000000000000000065 /* da */,
+				DD0000000000000000000066 /* de */,
+				DD0000000000000000000067 /* fr */,
+				DD0000000000000000000068 /* hu */,
+				DD0000000000000000000069 /* id */,
+				DD000000000000000000006A /* it */,
+				DD000000000000000000006B /* ko */,
+				DD000000000000000000006C /* ms */,
+				DD000000000000000000006D /* nl */,
+				DD000000000000000000006E /* pl */,
+				DD000000000000000000006F /* pt-BR */,
+				DD0000000000000000000070 /* ru */,
+				DD0000000000000000000071 /* tr */,
+				DD0000000000000000000072 /* uk */,
+				DD0000000000000000000073 /* vi */,
+				DD0000000000000000000074 /* zh */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

@@ -1,8 +1,38 @@
+/* connection quality */
+"%.1f %% (%lld of %lld)" = "%.1f %% (%lld / %lld)";
+
+/* media stream */
+"%@ added to the playlist" = "%@ oynatma listesine eklendi";
+
+/* media stream */
+"%@ cannot be streamed" = "%@ yayınlanamıyor";
+
+/* channel list */
+"%@ deselected" = "%@ seçimi kaldırıldı";
+
+/* file list */
+"%@ downloaded" = "%@ indirildi";
+
 /* log entry */
 "%@ joined channel" = "%@ kanala katıldı";
 
 /* log entry */
 "%@ left channel" = "%@ kanaldan ayrıldı";
+
+/* media stream */
+"%@ of %@" = "%@ / %@";
+
+/* media stream */
+"%@ ready, %@" = "%@ hazır, %@";
+
+/* channel list */
+"%@ selected" = "%@ seçildi";
+
+/* file list */
+"%@ uploaded" = "%@ yüklendi";
+
+/* live activity */
+"%@, %d users" = "%@, %d kullanıcı";
 
 /* Web Login Controller */
 "%@, your username \"%@\" has been validated" = "%@, \"%@\" kullanıcı adınız onaylandı";
@@ -10,8 +40,62 @@
 /* preferences */
 "%d %% - Default" = "%d %% - Varsayılan";
 
+/* user accounts */
+"%d accounts" = "%d hesap";
+
+/* user accounts */
+"%d accounts changed and %d could not be changed." = "%d hesap değiştirildi, %d hesap değiştirilemedi.";
+
+/* user accounts */
+"%d accounts changed. It applies to each user the next time they log in." = "%d hesap değiştirildi. Her kullanıcı için bir sonraki oturum açışında geçerli olur.";
+
+/* diagnostics */
+"%d entries" = "%d kayıt";
+
+/* media stream */
+"%d files added to the playlist" = "%d dosya oynatma listesine eklendi";
+
+/* connection quality */
+"%d ms" = "%d ms";
+
+/* user accounts */
+"%d permissions chosen" = "%d izin seçildi";
+
+/* user accounts */
+"%d permissions will be given to the %d accounts of the server that are not administrators." = "%d izin, sunucunun yönetici olmayan %d hesabına verilecek.";
+
+/* user accounts */
+"%d permissions will be removed from the %d accounts of the server that are not administrators." = "%d izin, sunucunun yönetici olmayan %d hesabından kaldırılacak.";
+
+/* channel picker */
+"%d users" = "%d kullanıcı";
+
+/* channel list */
+"%d users selected" = "%d kullanıcı seçildi";
+
+/* channel list */
+"%d users selected to move here" = "%d kullanıcı buraya taşınmak üzere seçildi";
+
+/* audio codec */
+"%lld KB/s" = "%lld KB/s";
+
+/* audio codec */
+"%lld ms" = "%lld ms";
+
 /* codec detail */
 "(Active)" = "(Etkin)";
+
+/* channel picker */
+"1 user" = "1 kullanıcı";
+
+/* channel list */
+"1 user selected" = "1 kullanıcı seçildi";
+
+/* channel list */
+"1 user selected to move here" = "1 kullanıcı buraya taşınmak üzere seçildi";
+
+/* media stream */
+"100 % leaves the file as it is. The preview plays on this device only, with this volume and from the chosen position." = "100 % dosyayı olduğu gibi bırakır. Önizleme yalnızca bu aygıtta, bu ses düzeyiyle ve seçilen konumdan çalar.";
 
 /* codec detail */
 "12 KHz" = "12 KHz";
@@ -34,8 +118,29 @@
    create channel */
 "8 KHz" = "8 KHz";
 
+/* user accounts */
+"A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "İzin değişikliği, kullanıcının bir sonraki oturum açışında geçerli olur. Bağlı olanlar o zamana kadar eskilerini korur.";
+
+/* appearance */
+"A theme changes the colors above. You can adjust them afterwards." = "Tema yukarıdaki renkleri değiştirir. Sonra bunları ayarlayabilirsiniz.";
+
 /* serverlist */
 "Access preferences" = "Erişim tercihleri";
+
+/* appearance */
+"Accessibility 1" = "Erişilebilirlik 1";
+
+/* appearance */
+"Accessibility 2" = "Erişilebilirlik 2";
+
+/* appearance */
+"Accessibility 3" = "Erişilebilirlik 3";
+
+/* appearance */
+"Accessibility 4" = "Erişilebilirlik 4";
+
+/* appearance */
+"Accessibility 5" = "Erişilebilirlik 5";
 
 /* server entry
    user detail */
@@ -44,8 +149,50 @@
 /* channel list */
 "Active" = "Etkin";
 
+/* media stream */
+"Add" = "Ekle";
+
+/* media stream */
+"Add Files" = "Dosya Ekle";
+
 /* serverlist */
 "Add new server entry" = "Yeni sunucu girişi ekle";
+
+/* serverlist */
+"Add to Favorites" = "Sık Kullanılanlara Ekle";
+
+/* incoming file */
+"Add to Streaming Playlist" = "Yayın Listesine Ekle";
+
+/* media stream */
+"Add Web Address" = "Web Adresi Ekle";
+
+/* incoming file */
+"Added to the streaming playlist" = "Yayın listesine eklendi";
+
+/* media stream */
+"Address of a web radio or of an audio or video file" = "Bir web radyosunun ya da bir ses veya video dosyasının adresi";
+
+/* user accounts */
+"Administrator" = "Yönetici";
+
+/* channel list */
+"All" = "Tümü";
+
+/* all users */
+"All Users" = "Tüm Kullanıcılar";
+
+/* diagnostics */
+"Allowed" = "İzin verildi";
+
+/* appearance */
+"Always Dark" = "Her Zaman Koyu";
+
+/* appearance */
+"Always Light" = "Her Zaman Açık";
+
+/* user accounts */
+"An administrator has every permission, whatever is set here." = "Burada ne ayarlanırsa ayarlansın, yöneticinin her izni vardır.";
 
 /* preferences */
 "Announce content of text message" = "Metin iletisinin içeriğini duyur";
@@ -68,11 +215,23 @@
 /* text to speech */
 "Announcements" = "Duyurular";
 
+/* user accounts */
+"Anonymous users" = "Anonim kullanıcılar";
+
 /* preferences */
 "App Version" = "Uygulama Sürümü";
 
+/* appearance */
+"Appearance" = "Görünüm";
+
 /* codec detail */
 "Application" = "Uygulama";
+
+/* appearance */
+"Apply High Contrast Theme" = "Yüksek Karşıtlık Temasını Uygula";
+
+/* appearance */
+"Apply Pure Dark Theme" = "Saf Siyah Temayı Uygula";
 
 /* preferences */
 "Ascending" = "Artan";
@@ -83,6 +242,9 @@
 /* create channel */
 "Audio Codec" = "Ses Kodlayıcı/Çözücüsü";
 
+/* channel list */
+"Audio Output" = "Ses Çıkışı";
+
 /* Web Login Controller */
 "Authenticate" = "Kimliğini Doğrula";
 
@@ -90,8 +252,50 @@
    Web Login controller */
 "Authentication" = "Kimlik Doğrulama";
 
+/* preferences */
+"Available" = "Uygun";
+
+/* preferences */
+"Away" = "Uzakta";
+
+/* media stream */
+"Back 1 Minute" = "1 Dakika Geri";
+
+/* media stream */
+"Back 10 Seconds" = "10 Saniye Geri";
+
+/* backup */
+"Backup" = "Yedek";
+
+/* backup */
+"Backup restored. Close the app and open it again to apply every setting." = "Yedek geri yüklendi. Tüm ayarların uygulanması için uygulamayı kapatıp yeniden açın.";
+
+/* channel list */
+"Ban" = "Yasakla";
+
+/* channel list */
+"Ban %@?" = "%@ yasaklansın mı?";
+
+/* channel list */
+"Ban %d users?" = "%d kullanıcı yasaklansın mı?";
+
+/* ban list */
+"Ban removed" = "Yasak kaldırıldı";
+
 /* channel list */
 "Ban user" = "Kullanıcıyı yasakla";
+
+/* user accounts */
+"Ban users" = "Kullanıcıları yasaklama";
+
+/* ban list */
+"Banned by %@" = "Yasaklayan: %@";
+
+/* ban list */
+"Banned on %@" = "Yasaklanma tarihi: %@";
+
+/* ban list */
+"Banned Users" = "Yasaklı Kullanıcılar";
 
 /* server entry */
 "BearWare.dk Web Login" = "BearWare.dk Web Oturumu";
@@ -111,8 +315,14 @@
 /* Sound Devices */
 "Bluetooth playback should use Advanced Audio Distribution Profile" = "Bluetooth playback should use Advanced Audio Distribution Profile";
 
+/* all users */
+"Bring to My Channel" = "Kanalıma Getir";
+
 /* text message type */
 "Broadcast message" = "Yayınlanan ileti";
+
+/* text message */
+"Broadcast Message" = "Yayınlanan İleti";
 
 /* preferences
    user detail */
@@ -124,9 +334,27 @@
 /* Dialog message */
 "Cancel" = "İptal";
 
+/* file list */
+"Cancels the download" = "İndirmeyi iptal eder";
+
+/* file list */
+"Cancels the upload" = "Yüklemeyi iptal eder";
+
+/* user accounts */
+"Change the Permissions of Every Account" = "Tüm Hesapların İzinlerini Değiştir";
+
+/* user accounts */
+"Change the properties of the server" = "Sunucunun özelliklerini değiştirme";
+
+/* user accounts */
+"Changing accounts, %d of %d" = "Hesaplar değiştiriliyor, %d / %d";
+
 /* channel list
    server entry */
 "Channel" = "Kanal";
+
+/* View Title */
+"Channel Detail" = "Kanal Ayrıntıları";
 
 /* text message type */
 "Channel message" = "Kanal iletisi";
@@ -147,20 +375,107 @@
 /* channel list */
 "Channel. %d users" = "Kanal. %d kullanıcı";
 
+/* ban list */
+"Channel: %@" = "Kanal: %@";
+
+/* channel list */
+"Channels" = "Kanallar";
+
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "Yalnızca bu sunucu BearWare.dk Web Oturumu'nu etkinleştirdiyse işaretleyin";
+
+/* diagnostics */
+"Checks" = "Denetimler";
+
+/* media stream */
+"Choose a file" = "Dosya seçin";
+
+/* channel picker */
+"Choose Channel" = "Kanal Seç";
+
+/* appearance */
+"Choose colors, text size and font" = "Renkleri, metin boyutunu ve yazı tipini seçin";
+
+/* preferences */
+"Choose events to playback" = "Duyurulacak olayları seçin";
+
+/* file list */
+"Choose Files" = "Dosya Seç";
+
+/* preferences */
+"Choose input and output devices" = "Giriş ve çıkış aygıtlarını seçin";
+
+/* user accounts */
+"Choose one or more permissions and then what to do with them. Administrator accounts are not changed." = "Bir veya daha fazla izin seçin, ardından bunlarla ne yapılacağını belirleyin. Yönetici hesapları değiştirilmez.";
+
+/* preferences */
+"Choose sounds events to play" = "Çalınacak ses olaylarını seçin";
+
+/* all users */
+"Choosing a user shows the channel they are in. If the server does not let your account see all users, only those of your channel are listed." = "Bir kullanıcı seçildiğinde bulunduğu kanal gösterilir. Sunucu hesabınızın tüm kullanıcıları görmesine izin vermiyorsa yalnızca kanalınızdakiler listelenir.";
+
+/* channel detail */
+"Classroom" = "Sınıf";
+
+/* diagnostics */
+"Clear Log" = "Günlüğü Temizle";
+
+/* media stream */
+"Close" = "Kapat";
+
+/* channel picker */
+"Collapsed" = "Daraltıldı";
+
+/* appearance */
+"Color of buttons, switches and the selected tab." = "Düğmelerin, anahtarların ve seçili sekmenin rengi.";
+
+/* appearance */
+"Color of the Speakers button in each state. Its icon is shown in black or white, whichever is easier to read." = "Hoparlör düğmesinin her durumdaki rengi. Simgesi, hangisi daha kolay okunuyorsa siyah veya beyaz gösterilir.";
+
+/* appearance */
+"Color of the Talk button in each state. Its text is shown in black or white, whichever is easier to read." = "Konuş düğmesinin her durumdaki rengi. Metni, hangisi daha kolay okunuyorsa siyah veya beyaz gösterilir.";
+
+/* appearance */
+"Colors and Text" = "Renkler ve Metin";
+
+/* appearance */
+"Colors of the More menu of the channel list. Until you choose them it follows the theme: dark with light text in dark mode, and the other way round in light mode." = "Kanal listesindeki Daha Fazla menüsünün renkleri. Siz seçene kadar temayı izler: koyu modda açık metinli koyu, açık modda tam tersi.";
+
+/* keyboard shortcuts */
+"Command" = "Komut";
 
 /* log entry */
 "Command failed: %@" = "Command failed: %@";
 
+/* connection quality */
+"Command Latency (TCP)" = "Komut Gecikmesi (TCP)";
+
 /* create channel */
 "Commands" = "Komutlar";
+
+/* channel list */
+"Confirm" = "Onayla";
+
+/* server list */
+"Connect" = "Bağlan";
+
+/* preferences */
+"Connect on Startup" = "Başlangıçta Bağlan";
+
+/* incoming file */
+"Connect to a server and join a channel to send %@" = "%@ göndermek için bir sunucuya bağlanıp bir kanala katılın";
+
+/* connection quality */
+"Connect to a server to see the quality of the connection" = "Bağlantı kalitesini görmek için bir sunucuya bağlanın";
 
 /* serverlist */
 "Connect to server" = "Sunucuya bağlan";
 
 /* connect to a server */
 "Connect to Server" = "Connect to Server";
+
+/* preferences */
+"Connect to the last server and channel when the app opens" = "Uygulama açıldığında son sunucuya ve kanala bağlan";
 
 /* preferences
    server entry */
@@ -170,11 +485,38 @@
    tts event */
 "Connection lost" = "Bağlantı kaybı";
 
+/* connection quality */
+"Connection Quality" = "Bağlantı Kalitesi";
+
+/* keyboard shortcuts */
+"Control" = "Kontrol";
+
+/* user accounts */
+"Control a shared desktop" = "Paylaşılan bir masaüstünü denetleme";
+
+/* media stream */
+"Controls" = "Denetimler";
+
+/* text message */
+"Copied" = "Kopyalandı";
+
 /* server entry */
 "Copy" = "Copy";
 
 /* server entry */
+"Copy Join Code" = "Katılma Kodunu Kopyala";
+
+/* serverlist */
+"Copy Link" = "Bağlantıyı Kopyala";
+
+/* connection quality */
+"Counted over the voice received from the users of your channel since you joined it. Above 2 % voices start to break up." = "Katıldığınızdan beri kanalınızdaki kullanıcılardan alınan ses üzerinden hesaplanır. 2 % üzerinde sesler kesilmeye başlar.";
+
+/* server entry */
 "Country" = "Country";
+
+/* user accounts */
+"Create and change permanent channels" = "Kalıcı kanal oluşturma ve değiştirme";
 
 /* View Title */
 "Create Channel" = "Kanal Oluştur";
@@ -182,21 +524,72 @@
 /* main-tab */
 "Create new channel" = "Yeni kanal oluştur";
 
+/* user accounts */
+"Create temporary channels" = "Geçici kanal oluşturma";
+
+/* web login */
+"Create Web Login" = "Web Oturumu Oluştur";
+
+/* media stream */
+"Current File" = "Geçerli Dosya";
+
+/* connection quality */
+"Data" = "Veri";
+
 /* Sound Input */
 "Default" = "Default";
 
 /* preferences */
 "Default Subscriptions" = "Varsayılan Abonelikler";
 
+/* user accounts */
+"Default user" = "Normal kullanıcı";
+
+/* file list serverlist */
+"Delete" = "Sil";
+
+/* file list */
+"Delete \"%@\" from the channel?" = "\"%@\" kanaldan silinsin mi?";
+
+/* server list */
+"Delete \"%@\" from the server list?" = "\"%@\" sunucu listesinden silinsin mi?";
+
+/* channel detail */
+"Delete Channel" = "Kanalı Sil";
+
+/* file list */
+"Delete File" = "Dosyayı Sil";
+
+/* server list */
+"Delete Server" = "Sunucuyu Sil";
+
 /* serverlist */
 "Delete server from list" = "Sunucuyu listeden sil";
+
+/* channel list */
+"Deselect user" = "Kullanıcının seçimini kaldır";
 
 /* preferences
    user detail */
 "Desktop" = "Masaüstü";
 
+/* diagnostics */
+"Diagnostic Log" = "Tanılama Günlüğü";
+
+/* diagnostics */
+"Diagnostics" = "Tanılama";
+
+/* preferences */
+"Disabled" = "Devre dışı";
+
+/* channel list */
+"Disconnect" = "Bağlantıyı Kes";
+
 /* preferences */
 "Display" = "Görüntü";
+
+/* channel list */
+"Done selecting" = "Seçimi bitir";
 
 /* channel list */
 "Double tap and hold to transmit. Triple tap fast to lock transmission." = "İletmek için çift dokunun ve basılı tutun. İletimi kilitlemek için hızlıca üç kez dokunun.";
@@ -204,14 +597,41 @@
 /* preferences */
 "Double tap to lock TX button" = "İlet düğmesini kilitlemek için çift dokun";
 
+/* user accounts */
+"Download files" = "Dosya indirme";
+
+/* file list */
+"Downloaded" = "İndirildi";
+
+/* file list */
+"Downloading, %d %%" = "İndiriliyor, %d %%";
+
+/* file list */
+"Downloads the file" = "Dosyayı indirir";
+
 /* codec detail */
 "DTX" = "DTX";
+
+/* media stream */
+"Duration" = "Süre";
+
+/* user accounts */
+"Each change is saved at once and applies the next time this user logs in." = "Her değişiklik hemen kaydedilir ve bu kullanıcının bir sonraki oturum açışında geçerli olur.";
+
+/* channel list */
+"Earpiece or Headset" = "Ahize veya Kulaklık";
+
+/* channel list */
+"Edit" = "Düzenle";
 
 /* channel list */
 "Edit properties" = "Özellikleri düzenle";
 
 /* server entry */
 "Encrypted" = "Şifreli";
+
+/* media stream */
+"Enter a web address that starts with http or https" = "http veya https ile başlayan bir web adresi girin";
 
 /* serverlist */
 "Enter Join Code" = "Enter Join Code";
@@ -225,14 +645,104 @@
    user detail */
 "Error" = "Hata";
 
+/* media stream */
+"Error while streaming media file" = "Ortam dosyası yayınlanırken hata oluştu";
+
+/* user accounts */
+"Every Account" = "Tüm Hesaplar";
+
+/* user accounts */
+"Every account was already like that. Nothing has been changed." = "Tüm hesaplar zaten böyleydi. Hiçbir şey değiştirilmedi.";
+
+/* transmit control */
+"Everyone" = "Herkes";
+
+/* transmit control */
+"Everyone can transmit in this channel except what is turned off here." = "Burada kapatılanlar dışında bu kanalda herkes yayın yapabilir.";
+
 /* preferences */
 "Exclusive Mode Toggled" = "Özel Kip Değişikliği";
+
+/* channel list */
+"Expand" = "Genişlet";
+
+/* channel picker */
+"Expanded" = "Genişletildi";
+
+/* appearance */
+"Export Appearance" = "Görünümü Dışa Aktar";
+
+/* backup */
+"Export Settings and Servers" = "Ayarları ve Sunucuları Dışa Aktar";
+
+/* appearance */
+"Exports the colors, the text and the theme to a file that someone else can import." = "Renkleri, metni ve temayı başka birinin içe aktarabileceği bir dosyaya aktarır.";
+
+/* appearance */
+"Extra Extra Extra Large" = "Çok Çok Çok Büyük";
+
+/* appearance */
+"Extra Extra Large" = "Çok Çok Büyük";
+
+/* appearance */
+"Extra Large" = "Çok Büyük";
+
+/* appearance */
+"Extra Small" = "Çok Küçük";
+
+/* file list */
+"Failed to download file" = "Dosya indirilemedi";
+
+/* media stream */
+"Failed to play the file" = "Dosya çalınamadı";
 
 /* connect to a server */
 "Failed to setup encryption" = "Failed to setup encryption";
 
+/* media stream */
+"Failed to stream media file" = "Ortam dosyası yayınlanamadı";
+
+/* file list */
+"Failed to transfer %@" = "%@ aktarılamadı";
+
+/* file list */
+"Failed to upload file" = "Dosya yüklenemedi";
+
+/* serverlist */
+"Favorite" = "Sık Kullanılan";
+
 /* preferences */
 "Female" = "Kadın";
+
+/* media stream */
+"File" = "Dosya";
+
+/* sound events */
+"File Added" = "Dosya Eklendi";
+
+/* sound events */
+"File Removed" = "Dosya Kaldırıldı";
+
+/* file list */
+"Files" = "Dosyalar";
+
+/* media stream */
+"Files stay in the list until you remove them. When one ends, the next one starts." = "Dosyalar siz kaldırana kadar listede kalır. Biri bitince sonraki başlar.";
+
+/* preferences */
+"Filter Server List" = "Sunucu Listesini Süz";
+
+/* appearance */
+"Font" = "Yazı Tipi";
+
+/* appearance */
+"Font of Server Events" = "Sunucu Olaylarının Yazı Tipi";
+
+/* media stream */
+"Forward 1 Minute" = "1 Dakika İleri";
+
+/* media stream */
+"Forward 10 Seconds" = "10 Saniye İleri";
 
 /* codec detail */
 "Frame Size" = "Çerçeve Boyutu";
@@ -243,6 +753,12 @@
 /* preferences
    user detail */
 "General" = "Genel";
+
+/* user accounts */
+"Give to Every Account" = "Tüm Hesaplara Ver";
+
+/* channel list */
+"Go to Their Channel" = "Kanalına Git";
 
 /* TTS EVENT */
 "has joined the channel" = "kanala katıldı";
@@ -265,11 +781,47 @@
 /* server entry */
 "Host address" = "Ana bilgisayar adresi";
 
+/* appearance */
+"Import Appearance" = "Görünümü İçe Aktar";
+
+/* backup */
+"Import Backup" = "Yedeği İçe Aktar";
+
 /* channel list */
 "Inactive" = "Etkisiz";
 
+/* appearance */
+"Interface" = "Arayüz";
+
+/* appearance */
+"Interface Color" = "Arayüz Rengi";
+
+/* Sound Devices */
+"iOS Voice Processing" = "iOS Ses İşleme";
+
+/* Sound Devices */
+"iOS voice processing cancels echo, reduces noise and levels the volume. WebRTC reduces noise and levels the volume but does not cancel echo, so use it with headphones." = "iOS ses işleme yankıyı giderir, gürültüyü azaltır ve ses düzeyini dengeler. WebRTC gürültüyü azaltır ve ses düzeyini dengeler ama yankıyı gidermez, bu yüzden kulaklıkla kullanın.";
+
+/* ban list */
+"IP address: %@" = "IP adresi: %@";
+
+/* user accounts */
+"It applies to each user the next time they log in." = "Her kullanıcı için bir sonraki oturum açışında geçerli olur.";
+
+/* text message */
+"It is sent to every user of the server" = "Sunucudaki tüm kullanıcılara gönderilir";
+
 /* Dialog message */
 "Join" = "Katıl";
+
+/* file list */
+"Join a channel to see its files" = "Dosyalarını görmek için bir kanala katılın";
+
+/* incoming file */
+"Join a channel to send %@" = "%@ göndermek için bir kanala katılın";
+
+/* media stream */
+"Join a channel to stream a media file" = "Ortam dosyası yayınlamak için bir kanala katılın";
 
 /* server entry */
 "Join Channel" = "Kanala Katıl";
@@ -286,23 +838,92 @@
 /* preferences */
 "Join root channel after login" = "Oturum açıldıktan sonra kök kanala katıl";
 
+/* all users */
+"Join Their Channel" = "Kanalına Katıl";
+
+/* channel list */
+"Join this channel" = "Bu kanala katıl";
+
 /* log entry */
 "Joined %@" = "Katılınan %@";
+
+/* keyboard shortcuts */
+"Key" = "Tuş";
+
+/* keyboard shortcuts */
+"Keyboard Shortcuts" = "Klavye Kestirmeleri";
+
+/* preferences */
+"Keys of an external keyboard to talk and to mute" = "Konuşmak ve sesi kapatmak için harici klavye tuşları";
+
+/* channel list */
+"Kick" = "Uzaklaştır";
+
+/* channel list */
+"Kick %@?" = "%@ uzaklaştırılsın mı?";
+
+/* channel list */
+"Kick %d users?" = "%d kullanıcı uzaklaştırılsın mı?";
+
+/* user detail */
+"Kick and Ban User" = "Kullanıcıyı Uzaklaştır ve Yasakla";
 
 /* channel list */
 "Kick user" = "Kullanıcıyı uzaklaştır";
 
+/* user detail */
+"Kick User" = "Kullanıcıyı Uzaklaştır";
+
+/* user accounts */
+"Kick users off the server" = "Kullanıcıları sunucudan uzaklaştırma";
+
+/* appearance */
+"Large" = "Büyük";
+
+/* connection quality */
+"Latency" = "Gecikme";
+
+/* connection quality */
+"Latency and packet loss" = "Gecikme ve paket kaybı";
+
+/* appearance */
+"Light or Dark" = "Açık veya Koyu";
+
 /* preferences */
 "Limit length of names in channel list to %d characters" = "Adların kanal listesindeki uzunluk sınırı %d karakter";
 
+/* preferences */
+"Limit types of servers to show" = "Gösterilecek sunucu türlerini sınırla";
+
+/* serverlist */
+"Link copied" = "Bağlantı kopyalandı";
+
+/* appearance */
+"Listening" = "Dinliyor";
+
+/* media stream */
+"Live" = "Canlı";
+
+/* diagnostics */
+"Live Activities" = "Canlı Etkinlikler";
+
 /* serverlist */
 "Local server" = "Local server";
+
+/* user accounts */
+"Log in from several devices at once" = "Aynı anda birden çok aygıttan oturum açma";
 
 /* text message type */
 "Log message" = "Günlük iletisi";
 
 /* log entry */
 "Logged on to server" = "Sunucuda oturum açıldı";
+
+/* preferences */
+"Login ID from BearWare.dk" = "BearWare.dk oturum açma kimliği";
+
+/* user accounts */
+"Make other users channel operator" = "Diğer kullanıcıları kanal operatörü yapma";
 
 /* preferences */
 "Male" = "Erkek";
@@ -324,18 +945,72 @@
 /* preferences */
 "Media file vs. voice volume" = "Ortam dosyası-ses düzeyi oranı";
 
+/* transmit control */
+"Media Files" = "Ortam Dosyaları";
+
+/* appearance */
+"Medium" = "Orta";
+
+/* appearance */
+"Menu Background" = "Menü Arka Planı";
+
+/* appearance */
+"Menu Text" = "Menü Metni";
+
+/* appearance */
+"Menus" = "Menüler";
+
+/* text messages */
+"Message" = "İleti";
+
 /* server entry */
 "Message of the Day" = "Message of the Day";
 
+/* appearance */
+"Message Text Size" = "İleti Metin Boyutu";
+
+/* channel list */
+"Message this user" = "Bu kullanıcıya ileti gönder";
+
+/* tab */
+"Messages" = "İletiler";
+
+/* diagnostics */
+"Microphone" = "Mikrofon";
+
 /* preferences */
 "Microphone Gain" = "Mikrofon Kazancı";
+
+/* Sound Devices */
+"Microphone Test" = "Mikrofon Testi";
+
+/* user accounts */
+"Moderation" = "Yönetim";
+
+/* keyboard shortcuts */
+"Modifier" = "Niteleyici";
 
 /* codec detail
    create channel */
 "Mono" = "Mono";
 
+/* appearance */
+"Monospaced" = "Eş Aralıklı";
+
+/* channel list */
+"More" = "Daha Fazla";
+
+/* channel list */
+"Move" = "Taşı";
+
+/* channel list */
+"Move to Channel" = "Kanala Taşı";
+
 /* channel list */
 "Move user" = "Kullanıcıyı taşı";
+
+/* user accounts */
+"Move users between channels" = "Kullanıcıları kanallar arasında taşıma";
 
 /* channel list */
 "Move users here" = "Kullanıcıları buraya taşı";
@@ -349,8 +1024,17 @@
 /* user detail */
 "Mute Media File" = "Ortam Dosyasını Sessize Al";
 
+/* keyboard shortcuts */
+"Mute or Unmute Speakers" = "Hoparlörlerin Sesini Kapat veya Aç";
+
 /* user detail */
 "Mute Voice" = "Sesi Sessize Al";
+
+/* channel list */
+"Muted" = "Sessiz";
+
+/* channel list */
+"Mutes or unmutes everything you hear from the server" = "Sunucudan duyduğunuz her şeyin sesini kapatır veya açar";
 
 /* create channel
    server entry */
@@ -359,14 +1043,23 @@
 /* preferences */
 "Name displayed in channel list" = "Kanal listesinde görüntülenen ad";
 
+/* preferences */
+"Neutral" = "Nötr";
+
 /* Dialog message */
 "New Server" = "Yeni Sunucu";
+
+/* media stream */
+"Next File" = "Sonraki Dosya";
 
 /* preferences */
 "Nickname" = "Rumuz";
 
 /* server entry */
 "Nickname (optional)" = "Nickname (optional)";
+
+/* user accounts */
+"Nickname locked, cannot be changed" = "Rumuz kilitli, değiştirilemez";
 
 /* Dialog message */
 "No" = "Hayır";
@@ -378,20 +1071,71 @@
 /* create channel */
 "No Audio Recording" = "Ses Kaydı Yok";
 
+/* ban list */
+"No banned users" = "Yasaklı kullanıcı yok";
+
+/* connection quality */
+"No data" = "Veri yok";
+
+/* file list */
+"No files in this channel" = "Bu kanalda dosya yok";
+
 /* create channel */
 "No Interruptions" = "Söz Kesintisi Yok";
+
+/* keyboard shortcuts */
+"No Modifier" = "Niteleyici Yok";
 
 /* channel list */
 "No password" = "Parola yok";
 
+/* channel list */
+"No results" = "Sonuç yok";
+
 /* serverlist */
 "No server found" = "No server found";
+
+/* user accounts */
+"No user accounts" = "Kullanıcı hesabı yok";
+
+/* channel list */
+"No users selected" = "Kullanıcı seçilmedi";
+
+/* channel list */
+"No users selected to move" = "Taşınacak kullanıcı seçilmedi";
 
 /* create channel */
 "No Voice Activation" = "Ses Etkinleştirme Yok";
 
 /* default nickname */
 "Noname" = "Ad Yok";
+
+/* keyboard shortcuts and voice cleanup */
+"None" = "Yok";
+
+/* diagnostics */
+"Not allowed. Nobody can hear you until you turn it on in Settings, under TeamTalk." = "İzin verilmedi. Ayarlar'da TeamTalk altında açana kadar kimse sizi duyamaz.";
+
+/* diagnostics */
+"Not asked yet. iOS asks the first time you join a channel." = "Henüz sorulmadı. iOS, bir kanala ilk katıldığınızda sorar.";
+
+/* diagnostics */
+"Not available with this installation. The widget cannot show your servers and the controls do not show their state." = "Bu kurulumda kullanılamaz. Araç takımı sunucularınızı gösteremez ve denetimler durumlarını göstermez.";
+
+/* live activity */
+"Not in a channel" = "Bir kanalda değil";
+
+/* diagnostics */
+"Not installed. The app was installed without its extension, so there are no Live Activities, widget or controls. Install it again with a tool that keeps the extensions." = "Yüklü değil. Uygulama uzantısı olmadan yüklenmiş, bu yüzden Canlı Etkinlikler, araç takımı ve denetimler yok. Uzantıları koruyan bir araçla yeniden yükleyin.";
+
+/* media stream */
+"Not streaming" = "Yayın yok";
+
+/* live activity */
+"Not transmitting" = "Yayın yapmıyor";
+
+/* media stream */
+"Off" = "Kapalı";
 
 /* serverlist */
 "Official server" = "Official server";
@@ -403,11 +1147,35 @@
    Web Login Controller */
 "OK" = "Tamam";
 
+/* channel list */
+"On" = "Açık";
+
+/* channel detail */
+"Only the users you allow can transmit" = "Yalnızca izin verdiğiniz kullanıcılar yayın yapabilir";
+
+/* text message */
+"Open Link" = "Bağlantıyı Aç";
+
+/* diagnostics */
+"Open Settings" = "Ayarlar'ı Aç";
+
+/* file list */
+"Opens the file" = "Dosyayı açar";
+
+/* keyboard shortcuts */
+"Option" = "Option";
+
 /* codec detail */
 "OPUS Codec" = "OPUS Kodlayıcı/Çözücüsü";
 
 /* preferences */
 "Order of channels in Channel List" = "Kanalların Kanal Listesi'ndeki sırası";
+
+/* user accounts */
+"Other" = "Diğer";
+
+/* connection quality */
+"Packet Loss" = "Paket Kaybı";
 
 /* channel list */
 "Parent channel" = "Üst kanal";
@@ -421,8 +1189,26 @@
 /* channel list */
 "Password protected" = "Parola korumalı";
 
+/* media stream */
+"Pause" = "Duraklat";
+
+/* keyboard shortcuts */
+"Pause or Resume Streaming" = "Yayını Duraklat veya Sürdür";
+
+/* media stream */
+"Paused" = "Duraklatıldı";
+
 /* create channel */
 "Permanent Channel" = "Kalıcı Kanal";
+
+/* file list */
+"Photos and Videos" = "Fotoğraflar ve Videolar";
+
+/* sound events */
+"Play sound when a file is removed from the channel" = "Kanaldan bir dosya kaldırıldığında ses çal";
+
+/* sound events */
+"Play sound when a file is uploaded to the channel" = "Kanala bir dosya yüklendiğinde ses çal";
 
 /* preferences */
 "Play sound when a user joins the channel" = "Bir kullanıcı kanala katıldığında ses oynat";
@@ -457,11 +1243,17 @@
 /* preferences */
 "Play sound when voice transmission is toggled" = "Ses iletimi değiştiğinde ses oynat";
 
+/* media stream */
+"Playlist" = "Oynatma Listesi";
+
 /* preferences */
 "Pop up text message when new messages are received" = "Yeni iletiler alındığında metin iletisi penceresi aç";
 
 /* preferences */
 "Popularity" = "Yaygınlık";
+
+/* media stream */
+"Position" = "Konum";
 
 /* serverlist */
 "Preferences" = "Tercihler";
@@ -469,11 +1261,23 @@
 /* Sound Input */
 "Preferred" = "Preferred";
 
+/* media stream */
+"Preparing file" = "Dosya hazırlanıyor";
+
 /* preferences */
 "Pressing Return-key sends text message" = "Return tuşuna basmak metin iletisini göndersin";
 
+/* appearance */
+"Preview" = "Önizleme";
+
+/* media stream */
+"Previous File" = "Önceki Dosya";
+
 /* text message type */
 "Private message" = "Özel ileti";
+
+/* channel list */
+"Private Message" = "Özel İleti";
 
 /* preferences */
 "Private Text Message" = "Özel Metin İletisi";
@@ -487,11 +1291,17 @@
 /* serverlist */
 "Public server" = "Kamu sunucusu";
 
+/* channel list */
+"Push to Talk" = "Bas Konuş";
+
 /* preferences */
 "Push To Talk Lock" = "Bas Konuş Kilidi";
 
 /* codec detail */
 "Quality" = "Kalite";
+
+/* preferences */
+"Question" = "Soru";
 
 /* preferences */
 "Receive broadcast messages by default" = "Varsayılan olarak yayınlanan iletileri al";
@@ -514,6 +1324,45 @@
 /* preferences */
 "Receive webcam streams by default" = "Varsayılan olarak web kamerası akışlarını al";
 
+/* connection quality */
+"Received" = "Alındı";
+
+/* appearance */
+"Received message" = "Alınan ileti";
+
+/* appearance */
+"Received Messages" = "Alınan İletiler";
+
+/* user accounts */
+"Record voice in every channel" = "Tüm kanallarda ses kaydetme";
+
+/* ban list */
+"Remove Ban" = "Yasağı Kaldır";
+
+/* user accounts */
+"Remove from Every Account" = "Tüm Hesaplardan Kaldır";
+
+/* serverlist */
+"Remove from Favorites" = "Sık Kullanılanlardan Kaldır";
+
+/* media stream */
+"Repeat" = "Yinele";
+
+/* web login */
+"Reset Web Login" = "Web Oturumunu Sıfırla";
+
+/* appearance */
+"Restore Default Appearance" = "Saptanmış Görünümü Geri Yükle";
+
+/* keyboard shortcuts */
+"Restore Default Shortcuts" = "Saptanmış Kestirmeleri Geri Yükle";
+
+/* media stream */
+"Resume" = "Sürdür";
+
+/* keyboard shortcuts */
+"Return" = "Return";
+
 /* preferences */
 "Return Sends Message" = "Return İletiyi Göndersin";
 
@@ -523,14 +1372,71 @@
 /* log entry */
 "root channel" = "kök kanal";
 
+/* appearance */
+"Rounded" = "Yuvarlak";
+
+/* appearance */
+"Same as the App" = "Uygulamayla Aynı";
+
+/* appearance */
+"Same as the System" = "Sistemle Aynı";
+
 /* codec detail */
 "Sample Rate" = "Örnekleme Hızı";
+
+/* channel detail */
+"Save" = "Kaydet";
 
 /* Dialog message */
 "Save Server" = "Sunucuyu Kaydet";
 
+/* server entry */
+"Save server" = "Sunucuyu kaydet";
+
 /* Dialog message */
 "Save server to server list?" = "Sunucu, sunucu listesine kaydedilsin mi?";
+
+/* user accounts */
+"Search accounts" = "Hesap ara";
+
+/* channel picker */
+"Search channels" = "Kanal ara";
+
+/* channel list */
+"Search channels and users" = "Kanal ve kullanıcı ara";
+
+/* serverlist */
+"Search servers" = "Sunucu ara";
+
+/* all users */
+"Search users" = "Kullanıcı ara";
+
+/* user accounts */
+"See hidden channels" = "Gizli kanalları görme";
+
+/* user accounts */
+"See the users of every channel" = "Tüm kanalların kullanıcılarını görme";
+
+/* preferences */
+"Select the text-to-speech voice to use" = "Kullanılacak metin okuma sesini seçin";
+
+/* channel list */
+"Select users" = "Kullanıcı seç";
+
+/* speech */
+"Selected" = "Seçili";
+
+/* text messages */
+"Send" = "Gönder";
+
+/* text message */
+"Send broadcast message" = "Yayınlanan ileti gönder";
+
+/* user accounts */
+"Send broadcast messages" = "Yayınlanan ileti gönderme";
+
+/* user accounts */
+"Send channel messages" = "Kanal iletisi gönderme";
 
 /* text message */
 "Send empty message to close keyboard" = "Klavyeyi kapatmak için boş ileti gönderin";
@@ -538,8 +1444,38 @@
 /* channel list */
 "Send private message" = "Özel ileti gönder";
 
+/* user accounts */
+"Send private messages" = "Özel ileti gönderme";
+
+/* incoming file */
+"Send to TeamTalk" = "TeamTalk'a Gönder";
+
+/* media stream */
+"Send Video" = "Video Gönder";
+
+/* connection quality */
+"Sent" = "Gönderildi";
+
+/* appearance */
+"Sent message" = "Gönderilen ileti";
+
+/* appearance */
+"Sent Messages" = "Gönderilen İletiler";
+
+/* appearance */
+"Serif" = "Serif";
+
 /* preferences */
 "Server Connection Lost" = "Sunucu Bağlantısı Kaybı";
+
+/* server entry */
+"Server Entry" = "Sunucu Kaydı";
+
+/* appearance */
+"Server event" = "Sunucu olayı";
+
+/* appearance */
+"Server Events" = "Sunucu Olayları";
 
 /* server entry */
 "Server List Entry" = "Sunucu Listesi Girişi";
@@ -548,13 +1484,52 @@
 "Server Status" = "Server Status";
 
 /* preferences */
+"Setup Announcements" = "Duyuruları Ayarla";
+
+/* preferences */
+"Setup Sound Devices" = "Ses Aygıtlarını Ayarla";
+
+/* preferences */
+"Setup Sound Events" = "Ses Olaylarını Ayarla";
+
+/* file list */
+"Share" = "Paylaş";
+
+/* diagnostics */
+"Share Log" = "Günlüğü Paylaş";
+
+/* serverlist */
+"Share Server" = "Sunucuyu Paylaş";
+
+/* user accounts */
+"Share the desktop" = "Masaüstünü paylaşma";
+
+/* file list */
+"Shares or opens the file" = "Dosyayı paylaşır veya açar";
+
+/* keyboard shortcuts */
+"Shift" = "Shift";
+
+/* keyboard shortcuts */
+"Shortcuts work with an external keyboard while connected to a server. A key without a modifier does nothing while you are typing a message." = "Kestirmeler, bir sunucuya bağlıyken harici klavyeyle çalışır. Niteleyicisiz bir tuş, ileti yazarken hiçbir şey yapmaz.";
+
+/* preferences */
 "Show in Server List" = "Show in Server List";
 
 /* preferences */
 "Show male or female icon" = "Erkek ya da kadın simgesi göster";
 
+/* server entry */
+"Show password" = "Parolayı göster";
+
+/* server list */
+"Show server details" = "Sunucu ayrıntılarını göster";
+
 /* preferences */
 "Show Text Messages Instantly" = "Metin İletilerini Anında Göster";
+
+/* channel list */
+"Show user details" = "Kullanıcı ayrıntılarını göster";
 
 /* preferences */
 "Show Usernames" = "Kullanıcı Adlarını Göster";
@@ -562,11 +1537,23 @@
 /* preferences */
 "Show usernames instead of nicknames" = "Rumuzların yerine kullanıcı adlarını göster";
 
+/* preferences */
+"Shown to the other users of the server" = "Sunucudaki diğer kullanıcılara gösterilir";
+
 /* channel list */
 "Silent" = "Sessiz";
 
+/* appearance */
+"Size and font apply to the whole app." = "Boyut ve yazı tipi tüm uygulamada geçerlidir.";
+
+/* appearance */
+"Small" = "Küçük";
+
 /* preferences */
 "Sort Channels" = "Kanalları Sırala";
+
+/* media stream */
+"Sound" = "Ses";
 
 /* preferences
    text to speech */
@@ -575,8 +1562,26 @@
 /* preferences */
 "Sound System" = "Ses Sistemi";
 
+/* keyboard shortcuts */
+"Space" = "Boşluk";
+
+/* channel list */
+"Speaker" = "Hoparlör";
+
 /* preferences */
 "Speaker Output" = "Hoparlör Çıkışı";
+
+/* channel list */
+"Speakers" = "Hoparlörler";
+
+/* appearance */
+"Speakers Button" = "Hoparlör Düğmesi";
+
+/* intent */
+"Speakers On" = "Hoparlörler Açık";
+
+/* preferences */
+"Speech" = "Konuşma";
 
 /* preferences */
 "Speech Rate" = "Konuşma Hızı";
@@ -590,15 +1595,84 @@
 /* codec detail */
 "Speex Variable Bitrate Codec" = "Speex Değişken Bit Hızı Kodlayıcı/Çözücüsü";
 
+/* text to speech events */
+"Spoken By" = "Seslendiren";
+
+/* text to speech events, accessibility */
+"Spoken by, %@" = "Seslendiren, %@";
+
+/* appearance */
+"Standard" = "Standart";
+
+/* media stream */
+"Start Streaming" = "Yayını Başlat";
+
+/* preferences */
+"Status" = "Durum";
+
 /* Text message view */
 "Status Event" = "Durum Olayı";
+
+/* user accounts */
+"Status locked, cannot be changed" = "Durum kilitli, değiştirilemez";
+
+/* preferences */
+"Status Message" = "Durum İletisi";
 
 /* codec detail
    create channel */
 "Stereo" = "Stereo";
 
+/* Sound Devices */
+"Stop Microphone Test" = "Mikrofon Testini Durdur";
+
+/* media stream */
+"Stop Preview" = "Önizlemeyi Durdur";
+
+/* media stream */
+"Stop Streaming" = "Yayını Durdur";
+
+/* user accounts */
+"Stream audio files" = "Ses dosyası yayınlama";
+
+/* media stream */
+"Stream Media File" = "Ortam Dosyası Yayınla";
+
+/* media stream */
+"Stream media file" = "Ortam dosyası yayınla";
+
+/* user accounts */
+"Stream video files" = "Video dosyası yayınlama";
+
+/* media stream */
+"Streaming" = "Yayın";
+
+/* media stream */
+"Streaming %@" = "%@ yayınlanıyor";
+
+/* media stream */
+"Streaming finished" = "Yayın bitti";
+
+/* media stream */
+"Streaming started" = "Yayın başladı";
+
 /* user detail */
 "Subscriptions" = "Abonelikler";
+
+/* appearance */
+"Swap Speakers Button Colors" = "Hoparlör Düğmesinin Renklerini Değiştir";
+
+/* appearance */
+"Swap Talk Button Colors" = "Konuş Düğmesinin Renklerini Değiştir";
+
+/* appearance */
+"System Size" = "Sistem Boyutu";
+
+/* channel list */
+"Talk" = "Konuş";
+
+/* appearance */
+"Talk Button" = "Konuş Düğmesi";
 
 /* channel list */
 "Talking" = "Konuşuyor";
@@ -606,17 +1680,98 @@
 /* server entry */
 "TCP Port" = "TCP Bağlantı Noktası";
 
+/* channel list */
+"TeamTalk has no access to the microphone. Turn it on in Settings, under TeamTalk, and try again." = "TeamTalk'ın mikrofona erişimi yok. Ayarlar'da TeamTalk altında açın ve yeniden deneyin.";
+
+/* server list */
+"TeamTalk Servers" = "TeamTalk Sunucuları";
+
+/* text to speech events */
+"TeamTalk Voice" = "TeamTalk Sesi";
+
+/* Sound Devices */
+"Test Microphone" = "Mikrofonu Test Et";
+
+/* appearance */
+"Text" = "Metin";
+
+/* appearance */
+"Text Messages" = "Metin İletileri";
+
+/* channel list */
+"Text Messaging" = "Metin İletileri";
+
+/* appearance */
+"Text of the Messages" = "İletilerin Metni";
+
+/* preferences */
+"Text shown next to your name" = "Adınızın yanında gösterilen metin";
+
+/* appearance */
+"Text Size" = "Metin Boyutu";
+
 /* preferences */
 "Text To Speech Events" = "Metin Okuma Olayları";
+
+/* speech */
+"Text-to-Speech Voice" = "Metin Okuma Sesi";
+
+/* user accounts */
+"The account could not be saved" = "Hesap kaydedilemedi";
+
+/* backup */
+"The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "Yedek, tüm ayarları ve parolalarıyla birlikte sunucu listesini içerir. Dosyayı güvenli bir yerde saklayın.";
+
+/* diagnostics */
+"The log is empty" = "Günlük boş";
+
+/* diagnostics */
+"The log records what the app does: connection, sound devices, transfers and errors. It holds no passwords and nothing of what is said or written." = "Günlük, uygulamanın ne yaptığını kaydeder: bağlantı, ses aygıtları, aktarımlar ve hatalar. Parola ya da söylenen veya yazılan hiçbir şeyi içermez.";
+
+/* appearance */
+"The messages can have a text size of their own, and the server events a font of their own." = "İletilerin kendi metin boyutu, sunucu olaylarının da kendi yazı tipi olabilir.";
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "Konuşma sesinin hızı %.1f";
 
+/* appearance */
+"The text of a message is shown in black or white, whichever is easier to read on its color." = "Bir iletinin metni, renginin üzerinde hangisi daha kolay okunuyorsa siyah veya beyaz gösterilir.";
+
+/* appearance */
+"The text of a message is shown in black or white, whichever is easier to read on its color. Server events are what happens on the server, like someone joining or leaving the channel." = "Bir iletinin metni, renginin üzerinde hangisi daha kolay okunuyorsa siyah veya beyaz gösterilir. Sunucu olayları, birinin kanala katılması veya ayrılması gibi sunucuda olup bitenlerdir.";
+
 /* preferences */
 "The volume of the speaking voice is %.1f" = "Konuşma sesinin düzeyi %.1f";
 
+/* appearance */
+"Themes" = "Temalar";
+
+/* diagnostics */
+"They need iOS 17 or later" = "iOS 17 veya sonrası gerekir";
+
+/* media stream */
+"This file cannot be streamed" = "Bu dosya yayınlanamıyor";
+
+/* backup */
+"This file is not a TeamTalk backup" = "Bu dosya bir TeamTalk yedeği değil";
+
+/* appearance */
+"This file is not an appearance exported from TeamTalk" = "Bu dosya TeamTalk'tan dışa aktarılmış bir görünüm değil";
+
+/* transmit control */
+"This is a classroom channel: only what is turned on here can be transmitted." = "Bu bir sınıf kanalı: yalnızca burada açılanlar yayınlanabilir.";
+
+/* media stream */
+"This web address cannot be streamed" = "Bu web adresi yayınlanamıyor";
+
+/* connection quality */
+"Time a packet takes to reach the server and come back. Below 100 ms a conversation feels immediate." = "Bir paketin sunucuya ulaşıp geri gelmesi için geçen süre. 100 ms altında konuşma anlık hissedilir.";
+
 /* channel list */
 "Toggle to enable/disable transmission" = "İletimi etkinleştirmek/etkisizleştirmek için değiştir";
+
+/* keyboard shortcuts */
+"Toggle Transmission" = "Yayını Aç veya Kapat";
 
 /* preferences */
 "Toggle voice transmission using headset" = "Kulaklık kullanarak ses iletimini değiştir";
@@ -627,17 +1782,29 @@
 /* preferences */
 "Translator" = "Çeviren";
 
+/* live activity */
+"Transmission" = "Yayın";
+
 /* channel list */
 "Transmit inactive" = "İletim etkisiz";
 
 /* codec detail */
 "Transmit Interval" = "İletim Aralığı";
 
+/* user accounts */
+"Transmit video" = "Video yayınlama";
+
+/* user accounts */
+"Transmit voice" = "Ses yayınlama";
+
 /* channel list */
 "Transmitting" = "İletiyor";
 
 /* preferences */
 "Turn off screen when holding phone near ear" = "Telefon kulağa yakın tutulduğunda ekranı kapat";
+
+/* diagnostics */
+"Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Kapalı. Ayarlar'da TeamTalk altında Canlı Etkinlikler'i açın.";
 
 /* serverlist */
 "Type Join Code" = "Type Join Code";
@@ -652,17 +1819,56 @@
 /* serverlist */
 "Unofficial server" = "Unofficial server";
 
+/* file list */
+"Upload file" = "Dosya yükle";
+
+/* user accounts */
+"Upload files" = "Dosya yükleme";
+
+/* incoming file */
+"Upload to Channel" = "Kanala Yükle";
+
+/* file list */
+"Uploading" = "Yükleniyor";
+
+/* file list */
+"Uploading, %d %%" = "Yükleniyor, %d %%";
+
 /* preferences */
 "Use echo cancellation and automatic gain control" = "Yankı iptali ve otomatik kazanç denetimi kullan";
 
 /* preferences */
 "Use iPhone's speaker instead of earpiece" = "Ahizenin yerine iPhone'un hoparlörünü kullan";
 
+/* audio codec */
+"Use No Audio" = "Ses Kullanma";
+
+/* audio codec */
+"Use OPUS Codec" = "OPUS Kodeğini Kullan";
+
+/* audio codec */
+"Use Speex Codec" = "Speex Kodeğini Kullan";
+
+/* audio codec */
+"Use Speex VBR Codec" = "Speex VBR Kodeğini Kullan";
+
+/* appearance */
+"Use the Colors of the Theme" = "Temanın Renklerini Kullan";
+
 /* channel list */
 "User" = "Kullanıcı";
 
+/* user accounts */
+"User Accounts" = "Kullanıcı Hesapları";
+
+/* channel list */
+"User Details" = "Kullanıcı Ayrıntıları";
+
 /* channel list */
 "User female" = "Kullanıcı kadın";
+
+/* user detail */
+"User ID" = "Kullanıcı Kimliği";
 
 /* preferences */
 "User Joins Channel" = "Kullanıcının Kanala Katılması";
@@ -692,6 +1898,9 @@
    user detail */
 "User Messages" = "Kullanıcı İletileri";
 
+/* ban list */
+"User name: %@" = "Kullanıcı adı: %@";
+
 /* server entry
    user detail
    Web Login Controller */
@@ -699,6 +1908,9 @@
 
 /* Web Login Controller */
 "Username or password incorrect" = "Kullanıcı adı ya da parola yanlış";
+
+/* channel list */
+"Users" = "Kullanıcılar";
 
 /* server entry */
 "Users Online" = "Users Online";
@@ -734,6 +1946,15 @@
 /* preferences */
 "Voice Activation Triggered" = "Ses Etkinleştirmenin Tetiklenmesi";
 
+/* Sound Devices */
+"Voice Cleanup" = "Ses Temizleme";
+
+/* connection quality */
+"Voice Latency (UDP)" = "Ses Gecikmesi (UDP)";
+
+/* connection quality */
+"Voice Packets Lost" = "Kaybolan Ses Paketleri";
+
 /* preferences */
 "Voice Preprocessing" = "Ses Önişleme";
 
@@ -743,11 +1964,29 @@
 /* user detail */
 "Voice Volume" = "Ses Düzeyi";
 
+/* text to speech events */
+"VoiceOver" = "VoiceOver";
+
+/* text to speech events */
+"VoiceOver speaks an announcement with its own voice and shows it in braille. With VoiceOver off, the voice of TeamTalk speaks them all." = "VoiceOver bir duyuruyu kendi sesiyle okur ve Braille olarak gösterir. VoiceOver kapalıyken hepsini TeamTalk sesi okur.";
+
 /* codec detail */
 "VoIP" = "VoIP";
 
+/* media stream */
+"Volume" = "Ses Düzeyi";
+
 /* user detail */
 "Volume Controls" = "Düzey Denetimleri";
+
+/* media stream */
+"Web Address" = "Web Adresi";
+
+/* media stream */
+"Web address, %@" = "Web adresi, %@";
+
+/* media stream */
+"Web address, live" = "Web adresi, canlı";
 
 /* Web Login controller */
 "Web Login ID" = "Web Oturumu Kimliği";
@@ -756,8 +1995,29 @@
    user detail */
 "WebCam" = "Web Kamerası";
 
+/* Sound Devices */
+"WebRTC" = "WebRTC";
+
+/* diagnostics */
+"What the app has been doing, to share when something fails" = "Uygulamanın yaptıkları, bir şey ters gittiğinde paylaşmak için";
+
+/* diagnostics */
+"What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Uygulamanın iPhone'dan gereksinim duydukları. Burada bir şey doğru değilse düzeltilecek ilk şey odur.";
+
+/* transmit control */
+"Who Can Transmit" = "Kimler Yayın Yapabilir";
+
+/* media stream */
+"Whole List" = "Tüm Liste";
+
+/* diagnostics */
+"Widget and Controls" = "Araç Takımı ve Denetimler";
+
 /* Dialog message */
 "Yes" = "Evet";
+
+/* media stream */
+"You are not allowed to stream media files on this server" = "Bu sunucuda ortam dosyası yayınlama izniniz yok";
 
 /* Dialog */
 "You have been kicked from channel" = "Kanaldan uzaklaştırıldınız";
@@ -773,3 +2033,9 @@
 
 /* speech */
 "You have selected %@" = "Seçtiğiniz: %@";
+
+/* Sound Devices */
+"You will hear your own microphone. Use headphones, or the speaker will be picked up again. Only available while you are not in a channel." = "Kendi mikrofonunuzu duyacaksınız. Kulaklık kullanın, yoksa hoparlörün sesi yeniden alınır. Yalnızca bir kanalda değilken kullanılabilir.";
+
+/* channel picker */
+"Your channel" = "Kanalınız";
