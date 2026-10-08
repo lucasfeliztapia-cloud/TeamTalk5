@@ -155,8 +155,10 @@ struct MainTabView: View {
 
 // MARK: - Channels tab
 
-/// The screens opened from the More menu of the channel list
+/// The More menu of the channel list and the screens opened from it. They
+/// share one sheet: choosing a screen in the menu replaces the menu with it.
 private enum ChannelSheet: Int, Identifiable {
+    case menu
     case allUsers
     case transmission
     case bans
@@ -172,9 +174,7 @@ private struct ChannelsTabView: View {
     @ObservedObject var model: ChannelListModel
     let close: () -> Void
     @State private var showingMediaStream = false
-    @State private var showingMoreMenu = false
     @State private var channelSheet: ChannelSheet?
-    @State private var pendingSheet: ChannelSheet?
 
     var body: some View {
         NavigationStack(path: $model.navigationPath) {
@@ -219,7 +219,8 @@ private struct ChannelsTabView: View {
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
-                            showingMoreMenu = true
+                            logDiagnostic("More menu: opened")
+                            channelSheet = .menu
                         } label: {
                             Image(systemName: "ellipsis.circle")
                                 .foregroundStyle(.tint)
@@ -227,18 +228,14 @@ private struct ChannelsTabView: View {
                         .accessibilityLabel("More")
                     }
                 }
-                .sheet(isPresented: $showingMoreMenu, onDismiss: {
-                    // one sheet at a time: the chosen screen opens once the menu is gone
-                    channelSheet = pendingSheet
-                    pendingSheet = nil
-                }) {
-                    MoreMenuView(model: model) { sheet in
-                        pendingSheet = sheet
-                        showingMoreMenu = false
-                    }
-                }
                 .sheet(item: $channelSheet) { sheet in
                     switch sheet {
+                    case .menu:
+                        // a new item makes the system close this sheet and open the next
+                        MoreMenuView(model: model) { chosen in
+                            logDiagnostic("More menu: chose screen \(chosen.rawValue)")
+                            channelSheet = chosen
+                        }
                     case .allUsers:
                         AllUsersView(model: model)
                     case .transmission:
@@ -283,6 +280,9 @@ private struct MoreMenuView: View {
     @ObservedObject private var appearance = AppearanceModel.shared
     let choose: (ChannelSheet) -> Void
     @Environment(\.dismiss) private var dismiss
+    // VoiceOver lands on the first option. The title says "More", the same as
+    // the button just pressed, and hearing it again sounds as if nothing opened.
+    @AccessibilityFocusState private var isFirstOptionFocused: Bool
 
     var body: some View {
         VStack(spacing: 0) {
@@ -295,6 +295,7 @@ private struct MoreMenuView: View {
 
             List {
                 row("All Users", systemImage: "person.3", sheet: .allUsers)
+                    .accessibilityFocused($isFirstOptionFocused)
                 if model.canControlTransmission {
                     row("Who Can Transmit", systemImage: "mic.badge.plus", sheet: .transmission)
                 }
@@ -317,8 +318,14 @@ private struct MoreMenuView: View {
             .scrollContentBackground(.hidden)
         }
         .background(appearance.resolvedMenuBackground)
-        .presentationDetents([.medium])
+        .presentationDetents([.medium, .large])
         .presentationDragIndicator(.visible)
+        .onAppear {
+            logDiagnostic("More menu: on screen")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+                isFirstOptionFocused = true
+            }
+        }
     }
 
     private func row(_ title: LocalizedStringKey, systemImage: String, sheet: ChannelSheet) -> some View {

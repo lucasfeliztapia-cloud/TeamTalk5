@@ -859,6 +859,7 @@ final class ChannelListModel: ObservableObject {
         }
 
         TeamTalkClient.shared.enableVoiceTransmission(enable)
+        logDiagnostic(enable ? "TX on" : "TX off")
         playSound(enable ? .tx_ON : .tx_OFF)
         updateTX()
 

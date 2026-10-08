@@ -196,6 +196,7 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
     }
 
     func teardown() {
+        logDiagnostic("Session closed")
         cancellables.removeAll()
         LiveActivityActions.toggleTransmission = nil
         LiveActivityActions.toggleDeafen = nil
