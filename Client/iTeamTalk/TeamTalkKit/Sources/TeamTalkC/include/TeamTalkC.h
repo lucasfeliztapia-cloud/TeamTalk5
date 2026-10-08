@@ -41,6 +41,15 @@ typedef enum {
     TTKitFileTransferStringRemoteFileName
 } TTKitFileTransferStringProperty;
 
+typedef enum {
+    TTKitBannedUserStringIPAddress,
+    TTKitBannedUserStringChannelPath,
+    TTKitBannedUserStringBanTime,
+    TTKitBannedUserStringNickname,
+    TTKitBannedUserStringUsername,
+    TTKitBannedUserStringOwner
+} TTKitBannedUserStringProperty;
+
 AudioCodec TTKitMakeAudioCodec(Codec codec);
 OpusCodec TTKitMakeOpusCodec(void);
 SpeexCodec TTKitMakeSpeexCodec(void);
@@ -66,6 +75,7 @@ TextMessage TTKitMessageTextMessage(const TTMessage* message);
 RemoteFile TTKitMessageRemoteFile(const TTMessage* message);
 FileTransfer TTKitMessageFileTransfer(const TTMessage* message);
 MediaFileInfo TTKitMessageMediaFileInfo(const TTMessage* message);
+BannedUser TTKitMessageBannedUser(const TTMessage* message);
 TTBOOL TTKitMessageActiveFlag(const TTMessage* message);
 
 const TTCHAR* TTKitGetUserString(TTKitUserStringProperty property, const User* user);
@@ -76,6 +86,12 @@ const TTCHAR* TTKitGetClientErrorMessageString(const ClientErrorMsg* clientError
 const TTCHAR* TTKitGetUserAccountString(TTKitUserAccountStringProperty property, const UserAccount* userAccount);
 const TTCHAR* TTKitGetRemoteFileString(TTKitRemoteFileStringProperty property, const RemoteFile* remoteFile);
 const TTCHAR* TTKitGetFileTransferString(TTKitFileTransferStringProperty property, const FileTransfer* fileTransfer);
+const TTCHAR* TTKitGetBannedUserString(TTKitBannedUserStringProperty property, const BannedUser* bannedUser);
+
+/* The stream types listed for a user in the transmitUsers of a channel, or none. */
+StreamTypes TTKitGetTransmitTypes(const Channel* channel, INT32 userID);
+/* Lists a user with those stream types, or takes the user off the list if none. */
+void TTKitSetTransmitTypes(Channel* channel, INT32 userID, StreamTypes streamTypes);
 
 void TTKitSetChannelString(TTKitChannelStringProperty property, Channel* channel, const TTCHAR* string);
 void TTKitSetTextMessageString(TextMessage* message, const TTCHAR* string);

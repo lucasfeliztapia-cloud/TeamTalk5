@@ -45,6 +45,14 @@ struct ChannelDetailView: View {
                 Toggle("No Voice Activation", isOn: $model.hasNoVoiceActivation)
                 Toggle("No Audio Recording", isOn: $model.hasNoAudioRecording)
                 Toggle("Hidden Channel", isOn: $model.isHidden)
+                Toggle(isOn: $model.isClassroom) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text("Classroom")
+                        Text("Only the users you allow can transmit")
+                            .font(.footnote)
+                            .foregroundStyle(.secondary)
+                    }
+                }
             }
 
             if model.isExistingChannel {

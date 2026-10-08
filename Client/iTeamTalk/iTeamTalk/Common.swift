@@ -127,7 +127,7 @@ var unreadmessages = Set<INT32>()
 
 // types of responses
 enum Command {
-    case loginCmd, joinCmd, moveCmd, kickCmd, banCmd
+    case loginCmd, joinCmd, moveCmd, kickCmd, banCmd, updateCmd
 }
 
 let MAX_TEXTMESSAGES = 100

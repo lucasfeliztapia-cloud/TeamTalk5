@@ -38,6 +38,7 @@ final class ChannelDetailModel: ObservableObject {
     @Published var hasNoVoiceActivation: Bool
     @Published var hasNoAudioRecording: Bool
     @Published var isHidden: Bool
+    @Published var isClassroom: Bool
     @Published var codecDescription: String
     @Published var errorMessage: String?
     @Published var shouldDismiss = false
@@ -60,6 +61,7 @@ final class ChannelDetailModel: ObservableObject {
         hasNoVoiceActivation = (channel.uChannelType & CHANNEL_NO_VOICEACTIVATION.rawValue) != 0
         hasNoAudioRecording = (channel.uChannelType & CHANNEL_NO_RECORDING.rawValue) != 0
         isHidden = (channel.uChannelType & CHANNEL_HIDDEN.rawValue) != 0
+        isClassroom = (channel.uChannelType & CHANNEL_CLASSROOM.rawValue) != 0
         codecDescription = Self.codecDescription(for: channel.audiocodec)
     }
 
@@ -163,6 +165,7 @@ final class ChannelDetailModel: ObservableObject {
         updateChannelType(&channel, flag: CHANNEL_NO_VOICEACTIVATION.rawValue, enabled: hasNoVoiceActivation)
         updateChannelType(&channel, flag: CHANNEL_NO_RECORDING.rawValue, enabled: hasNoAudioRecording)
         updateChannelType(&channel, flag: CHANNEL_HIDDEN.rawValue, enabled: isHidden)
+        updateChannelType(&channel, flag: CHANNEL_CLASSROOM.rawValue, enabled: isClassroom)
     }
 
     private func updateChannelType(_ channel: inout Channel, flag: UInt32, enabled: Bool) {

@@ -230,6 +230,18 @@ public final class TeamTalkClient {
         TT_DoBanUser(instance, userID, channelID)
     }
 
+    /// The bans of the server arrive one by one as CLIENTEVENT_CMD_BANNEDUSER
+    @discardableResult
+    public func listBans(channelID: Int32 = 0, index: Int32 = 0, count: Int32 = 1000) -> Int32 {
+        TT_DoListBans(instance, channelID, index, count)
+    }
+
+    @discardableResult
+    public func unban(_ bannedUser: BannedUser) -> Int32 {
+        var bannedUser = bannedUser
+        return TT_DoUnBanUserEx(instance, &bannedUser)
+    }
+
     @discardableResult
     public func moveUser(id userID: Int32, toChannelID channelID: Int32) -> Int32 {
         TT_DoMoveUser(instance, userID, channelID)

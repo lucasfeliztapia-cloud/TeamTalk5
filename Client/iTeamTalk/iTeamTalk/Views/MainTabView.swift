@@ -127,11 +127,23 @@ struct MainTabView: View {
 
 // MARK: - Channels tab
 
+/// The screens opened from the More menu of the channel list
+private enum ChannelSheet: Int, Identifiable {
+    case allUsers
+    case transmission
+    case bans
+
+    var id: Int {
+        rawValue
+    }
+}
+
 private struct ChannelsTabView: View {
     @ObservedObject var mainModel: MainTabModel
     @ObservedObject var model: ChannelListModel
     let close: () -> Void
     @State private var showingMediaStream = false
+    @State private var channelSheet: ChannelSheet?
 
     var body: some View {
         NavigationStack(path: $model.navigationPath) {
@@ -170,6 +182,42 @@ private struct ChannelsTabView: View {
                             Image(systemName: "plus")
                                 .accessibilityLabel("Create new channel")
                         }
+                    }
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Menu {
+                            Button {
+                                channelSheet = .allUsers
+                            } label: {
+                                Label("All Users", systemImage: "person.3")
+                            }
+                            if model.canControlTransmission {
+                                Button {
+                                    channelSheet = .transmission
+                                } label: {
+                                    Label("Who Can Transmit", systemImage: "mic.badge.plus")
+                                }
+                            }
+                            if model.canBanUsers {
+                                Button {
+                                    channelSheet = .bans
+                                } label: {
+                                    Label("Banned Users", systemImage: "nosign")
+                                }
+                            }
+                        } label: {
+                            Image(systemName: "ellipsis.circle")
+                        }
+                        .accessibilityLabel("More")
+                    }
+                }
+                .sheet(item: $channelSheet) { sheet in
+                    switch sheet {
+                    case .allUsers:
+                        AllUsersView(model: model)
+                    case .transmission:
+                        TransmitControlView(model: model)
+                    case .bans:
+                        BanListView()
                     }
                 }
                 .sheet(item: $model.channelDetailModel) { detailModel in

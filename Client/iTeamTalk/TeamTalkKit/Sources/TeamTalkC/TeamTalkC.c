@@ -159,6 +159,79 @@ MediaFileInfo TTKitMessageMediaFileInfo(const TTMessage* message) {
     return message->mediafileinfo;
 }
 
+BannedUser TTKitMessageBannedUser(const TTMessage* message) {
+    return message->banneduser;
+}
+
+const TTCHAR* TTKitGetBannedUserString(TTKitBannedUserStringProperty property, const BannedUser* bannedUser) {
+    switch (property) {
+    case TTKitBannedUserStringIPAddress:
+        return bannedUser->szIPAddress;
+    case TTKitBannedUserStringChannelPath:
+        return bannedUser->szChannelPath;
+    case TTKitBannedUserStringBanTime:
+        return bannedUser->szBanTime;
+    case TTKitBannedUserStringNickname:
+        return bannedUser->szNickname;
+    case TTKitBannedUserStringUsername:
+        return bannedUser->szUsername;
+    case TTKitBannedUserStringOwner:
+        return bannedUser->szOwner;
+    }
+    return "";
+}
+
+StreamTypes TTKitGetTransmitTypes(const Channel* channel, INT32 userID) {
+    for (int i = 0; i < TT_TRANSMITUSERS_MAX; ++i) {
+        INT32 listed = channel->transmitUsers[i][TT_TRANSMITUSERS_USERID_INDEX];
+        if (listed == 0) {
+            break;
+        }
+        if (listed == userID) {
+            return (StreamTypes)channel->transmitUsers[i][TT_TRANSMITUSERS_STREAMTYPE_INDEX];
+        }
+    }
+    return STREAMTYPE_NONE;
+}
+
+void TTKitSetTransmitTypes(Channel* channel, INT32 userID, StreamTypes streamTypes) {
+    /* the list ends at the first user ID 0 */
+    int count = 0;
+    int index = -1;
+    while (count < TT_TRANSMITUSERS_MAX && channel->transmitUsers[count][TT_TRANSMITUSERS_USERID_INDEX] != 0) {
+        if (channel->transmitUsers[count][TT_TRANSMITUSERS_USERID_INDEX] == userID) {
+            index = count;
+        }
+        ++count;
+    }
+
+    if (streamTypes == STREAMTYPE_NONE) {
+        if (index < 0) {
+            return;
+        }
+        for (int i = index; i + 1 < count; ++i) {
+            channel->transmitUsers[i][TT_TRANSMITUSERS_USERID_INDEX] = channel->transmitUsers[i + 1][TT_TRANSMITUSERS_USERID_INDEX];
+            channel->transmitUsers[i][TT_TRANSMITUSERS_STREAMTYPE_INDEX] = channel->transmitUsers[i + 1][TT_TRANSMITUSERS_STREAMTYPE_INDEX];
+        }
+        channel->transmitUsers[count - 1][TT_TRANSMITUSERS_USERID_INDEX] = 0;
+        channel->transmitUsers[count - 1][TT_TRANSMITUSERS_STREAMTYPE_INDEX] = STREAMTYPE_NONE;
+        return;
+    }
+
+    if (index < 0) {
+        if (count >= TT_TRANSMITUSERS_MAX) {
+            return;
+        }
+        index = count;
+        if (count + 1 < TT_TRANSMITUSERS_MAX) {
+            channel->transmitUsers[count + 1][TT_TRANSMITUSERS_USERID_INDEX] = 0;
+            channel->transmitUsers[count + 1][TT_TRANSMITUSERS_STREAMTYPE_INDEX] = STREAMTYPE_NONE;
+        }
+    }
+    channel->transmitUsers[index][TT_TRANSMITUSERS_USERID_INDEX] = userID;
+    channel->transmitUsers[index][TT_TRANSMITUSERS_STREAMTYPE_INDEX] = (INT32)streamTypes;
+}
+
 TTBOOL TTKitMessageActiveFlag(const TTMessage* message) {
     return message->bActive;
 }

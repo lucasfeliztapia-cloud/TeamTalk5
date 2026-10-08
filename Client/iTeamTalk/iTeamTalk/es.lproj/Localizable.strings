@@ -125,6 +125,9 @@
 /* media stream */
 "Address of a web radio or of an audio or video file" = "Dirección de una radio web o de un archivo de audio o vídeo";
 
+/* all users */
+"All Users" = "Todos los usuarios";
+
 /* preferences */
 "Announce content of text message" = "Anunciar mensaje de texto";
 
@@ -194,8 +197,20 @@
 /* channel list */
 "Ban %d users?" = "¿Banear a %d usuarios?";
 
+/* ban list */
+"Ban removed" = "Baneo retirado";
+
 /* channel list */
 "Ban user" = "Banear usuario";
+
+/* ban list */
+"Banned by %@" = "Baneado por %@";
+
+/* ban list */
+"Banned on %@" = "Baneado el %@";
+
+/* ban list */
+"Banned Users" = "Usuarios baneados";
 
 /* server entry */
 "BearWare.dk Web Login" = "BearWare.dk Web Login";
@@ -214,6 +229,9 @@
 
 /* Sound Devices */
 "Bluetooth playback should use Advanced Audio Distribution Profile" = "Bluetooth playback should use Advanced Audio Distribution Profile";
+
+/* all users */
+"Bring to My Channel" = "Traer a mi canal";
 
 /* text message type */
 "Broadcast message" = "Difundir mensaje";
@@ -260,6 +278,9 @@
 /* channel list */
 "Channel. %d users" = "Canal. %d usuarios";
 
+/* ban list */
+"Channel: %@" = "Canal: %@";
+
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "Check only if this server has enabled BearWare.dk Web Login";
 
@@ -274,6 +295,12 @@
 
 /* file list */
 "Choose Files" = "Elegir archivos";
+
+/* all users */
+"Choosing a user shows the channel they are in. If the server does not let your account see all users, only those of your channel are listed." = "Al elegir un usuario se muestra el canal donde está. Si el servidor no deja a tu cuenta ver a todos los usuarios, solo salen los de tu canal.";
+
+/* channel detail */
+"Classroom" = "Aula";
 
 /* diagnostics */
 "Clear Log" = "Vaciar el registro";
@@ -447,6 +474,12 @@
 /* media stream */
 "Error while streaming media file" = "Error durante la emisión del archivo";
 
+/* transmit control */
+"Everyone" = "Todos";
+
+/* transmit control */
+"Everyone can transmit in this channel except what is turned off here." = "En este canal todos pueden transmitir, salvo lo que esté desactivado aquí.";
+
 /* preferences */
 "Exclusive Mode Toggled" = "Modo exclusivo activado";
 
@@ -553,6 +586,9 @@
 /* appearance */
 "Interface Color" = "Color de la interfaz";
 
+/* ban list */
+"IP address: %@" = "Dirección IP: %@";
+
 /* text message */
 "It is sent to every user of the server" = "Se envía a todos los usuarios del servidor";
 
@@ -579,6 +615,9 @@
 
 /* preferences */
 "Join root channel after login" = "Unirse al canal raíz después de conectarse";
+
+/* all users */
+"Join Their Channel" = "Ir a su canal";
 
 /* log entry */
 "Joined %@" = "Se ha unido a %@";
@@ -645,6 +684,9 @@
 /* preferences */
 "Media file vs. voice volume" = "Archivo multimedia vs. volumen de voz";
 
+/* transmit control */
+"Media Files" = "Archivos multimedia";
+
 /* appearance */
 "Medium" = "Mediano";
 
@@ -663,6 +705,9 @@
 
 /* appearance */
 "Monospaced" = "Monoespaciada";
+
+/* channel list */
+"More" = "Más";
 
 /* channel list */
 "Move" = "Mover";
@@ -723,6 +768,9 @@
 /* create channel */
 "No Audio Recording" = "Sin grabaciones de audio";
 
+/* ban list */
+"No banned users" = "No hay usuarios baneados";
+
 /* connection quality */
 "No data" = "Sin datos";
 
@@ -770,6 +818,9 @@
 
 /* channel list */
 "On" = "Activados";
+
+/* channel detail */
+"Only the users you allow can transmit" = "Solo pueden transmitir los usuarios que tú permitas";
 
 /* text message */
 "Open Link" = "Abrir enlace";
@@ -935,6 +986,9 @@
 /* appearance */
 "Received Messages" = "Mensajes recibidos";
 
+/* ban list */
+"Remove Ban" = "Quitar el baneo";
+
 /* serverlist */
 "Remove from Favorites" = "Quitar de favoritos";
 
@@ -973,6 +1027,9 @@
 
 /* serverlist */
 "Search servers" = "Buscar servidores";
+
+/* all users */
+"Search users" = "Buscar usuarios";
 
 /* channel list */
 "Select users" = "Seleccionar usuarios";
@@ -1189,6 +1246,9 @@
 /* media stream */
 "This file cannot be streamed" = "Este archivo no se puede emitir";
 
+/* transmit control */
+"This is a classroom channel: only what is turned on here can be transmitted." = "Este es un canal de tipo aula: solo se puede transmitir lo que esté activado aquí.";
+
 /* media stream */
 "This web address cannot be streamed" = "Esta dirección web no se puede emitir";
 
@@ -1287,6 +1347,9 @@
    user detail */
 "User Messages" = "Mensajes del usuario";
 
+/* ban list */
+"User name: %@" = "Usuario: %@";
+
 /* server entry
    user detail */
 "Username" = "Nombre de usuario";
@@ -1370,6 +1433,9 @@
 
 /* diagnostics */
 "What the app has been doing, to share when something fails" = "Lo que ha ido haciendo la app, para compartirlo cuando algo falla";
+
+/* transmit control */
+"Who Can Transmit" = "Quién puede transmitir";
 
 /* media stream */
 "Whole List" = "Toda la lista";

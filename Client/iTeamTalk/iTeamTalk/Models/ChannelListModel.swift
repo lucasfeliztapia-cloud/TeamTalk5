@@ -624,6 +624,97 @@ final class ChannelListModel: ObservableObject {
         refreshChannelList()
     }
 
+    // MARK: - All users
+
+    /// "Server / Channel" of the channel a user is in
+    func channelText(for user: User) -> String {
+        guard user.nChannelID > 0, let channel = channels[user.nChannelID] else {
+            return String(localized: "Not in a channel", comment: "live activity")
+        }
+        if channel.nParentID == 0 {
+            return TeamTalkString.serverProperties(.name, from: srvprop)
+        }
+        return TeamTalkClient.shared.channelPath(id: user.nChannelID)
+            .split(separator: "/").joined(separator: " / ")
+    }
+
+    /// Shows a channel in the channel list without joining it
+    func goToChannel(id channelID: INT32) {
+        guard let channel = channels[channelID] else { return }
+        curchannel = channel
+        if isSearching {
+            searchText = ""
+        } else {
+            refreshChannelList()
+        }
+        updateTitle()
+    }
+
+    var canBanUsers: Bool {
+        (myuseraccount.uUserRights & USERRIGHT_BAN_USERS.rawValue) != 0
+    }
+
+    // MARK: - Who can transmit
+
+    /// Operators of the channel and accounts that can modify any channel
+    var canControlTransmission: Bool {
+        mychannel.nChannelID > 0 &&
+            ((myuseraccount.uUserRights & USERRIGHT_MODIFY_CHANNELS.rawValue) != 0 ||
+                TeamTalkClient.shared.isChannelOperator(channelID: mychannel.nChannelID))
+    }
+
+    var isClassroom: Bool {
+        (mychannel.uChannelType & CHANNEL_CLASSROOM.rawValue) != 0
+    }
+
+    var usersInMyChannel: [User] {
+        users.values
+            .filter { $0.nChannelID == mychannel.nChannelID && mychannel.nChannelID > 0 }
+            .sorted { getDisplayName($0).caseInsensitiveCompare(getDisplayName($1)) == .orderedAscending }
+    }
+
+    /// In a classroom channel the list holds who is allowed, in any other
+    /// channel who is blocked.
+    func mayTransmit(userID: INT32, stream: UInt32) -> Bool {
+        let own = TeamTalkTransmitUsers.streamTypes(for: userID, in: mychannel)
+        if isClassroom {
+            let everyone = TeamTalkTransmitUsers.streamTypes(for: TeamTalkTransmitUsers.freeForAll, in: mychannel)
+            return ((own | everyone) & stream) != 0
+        }
+        return (own & stream) == 0
+    }
+
+    func setMayTransmit(userID: INT32, stream: UInt32, allowed: Bool) {
+        guard var channel = channels[mychannel.nChannelID] else { return }
+
+        var own = TeamTalkTransmitUsers.streamTypes(for: userID, in: channel)
+        if !isClassroom {
+            own = allowed ? own & ~stream : own | stream
+        } else if allowed || userID == TeamTalkTransmitUsers.freeForAll {
+            own = allowed ? own | stream : own & ~stream
+        } else {
+            own &= ~stream
+            // "everyone" covers this user too: to leave only this one out it
+            // becomes a permission for each of the others
+            let everyone = TeamTalkTransmitUsers.streamTypes(for: TeamTalkTransmitUsers.freeForAll, in: channel)
+            if (everyone & stream) != 0 {
+                TeamTalkTransmitUsers.set(everyone & ~stream, for: TeamTalkTransmitUsers.freeForAll, in: &channel)
+                for other in usersInMyChannel where other.nUserID != userID {
+                    let types = TeamTalkTransmitUsers.streamTypes(for: other.nUserID, in: channel)
+                    TeamTalkTransmitUsers.set(types | stream, for: other.nUserID, in: &channel)
+                }
+            }
+        }
+        TeamTalkTransmitUsers.set(own, for: userID, in: &channel)
+
+        // the server does not send the password back and the update has to carry it
+        if TeamTalkString.channel(.password, from: channel).isEmpty, let passwd = chanpasswds[channel.nChannelID] {
+            TeamTalkString.setChannel(.password, on: &channel, to: passwd)
+        }
+        cmdid = TeamTalkClient.shared.update(channel: &channel)
+        activeCommands[cmdid] = .updateCmd
+    }
+
     // MARK: - Navigation
 
     func showUserDetail(userid: INT32) {
@@ -756,7 +847,7 @@ final class ChannelListModel: ObservableObject {
                         activeCommands[cmdid] = .joinCmd
                     }
                 }
-            case .kickCmd, .joinCmd, .banCmd, .moveCmd:
+            case .kickCmd, .joinCmd, .banCmd, .moveCmd, .updateCmd:
                 break
             }
             activeCommands.removeValue(forKey: active_cmdid)

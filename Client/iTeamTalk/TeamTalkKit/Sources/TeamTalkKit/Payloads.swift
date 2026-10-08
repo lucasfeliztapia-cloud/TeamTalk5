@@ -117,6 +117,48 @@ public enum TeamTalkFileTransferStringProperty {
     }
 }
 
+public enum TeamTalkBannedUserStringProperty {
+    case ipAddress
+    case channelPath
+    case banTime
+    case nickname
+    case username
+    case owner
+
+    var cValue: TTKitBannedUserStringProperty {
+        switch self {
+        case .ipAddress:
+            return TTKitBannedUserStringIPAddress
+        case .channelPath:
+            return TTKitBannedUserStringChannelPath
+        case .banTime:
+            return TTKitBannedUserStringBanTime
+        case .nickname:
+            return TTKitBannedUserStringNickname
+        case .username:
+            return TTKitBannedUserStringUsername
+        case .owner:
+            return TTKitBannedUserStringOwner
+        }
+    }
+}
+
+/// The transmitUsers of a channel: in a classroom channel the users allowed
+/// to transmit, in any other channel the users blocked from transmitting.
+public enum TeamTalkTransmitUsers {
+    /// Stands for every user of a classroom channel
+    public static let freeForAll = Int32(TT_TRANSMITUSERS_FREEFORALL)
+
+    public static func streamTypes(for userID: Int32, in channel: Channel) -> UInt32 {
+        var channel = channel
+        return TTKitGetTransmitTypes(&channel, userID)
+    }
+
+    public static func set(_ streamTypes: UInt32, for userID: Int32, in channel: inout Channel) {
+        TTKitSetTransmitTypes(&channel, userID, streamTypes)
+    }
+}
+
 public enum TeamTalkMessagePayload {
     public static func channel(from message: TTMessage) -> Channel {
         var message = message
@@ -156,6 +198,11 @@ public enum TeamTalkMessagePayload {
     public static func fileTransfer(from message: TTMessage) -> FileTransfer {
         var message = message
         return TTKitMessageFileTransfer(&message)
+    }
+
+    public static func bannedUser(from message: TTMessage) -> BannedUser {
+        var message = message
+        return TTKitMessageBannedUser(&message)
     }
 
     public static func mediaFileInfo(from message: TTMessage) -> MediaFileInfo {
@@ -202,6 +249,11 @@ public enum TeamTalkString {
     public static func userAccount(_ property: TeamTalkUserAccountStringProperty, from userAccount: UserAccount) -> String {
         var userAccount = userAccount
         return String(cString: TTKitGetUserAccountString(property.cValue, &userAccount))
+    }
+
+    public static func bannedUser(_ property: TeamTalkBannedUserStringProperty, from bannedUser: BannedUser) -> String {
+        var bannedUser = bannedUser
+        return String(cString: TTKitGetBannedUserString(property.cValue, &bannedUser))
     }
 
     public static func remoteFile(_ property: TeamTalkRemoteFileStringProperty, from remoteFile: RemoteFile) -> String {
