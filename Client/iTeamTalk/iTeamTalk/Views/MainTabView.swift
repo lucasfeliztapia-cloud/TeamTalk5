@@ -160,6 +160,7 @@ private enum ChannelSheet: Int, Identifiable {
     case allUsers
     case transmission
     case bans
+    case accounts
 
     var id: Int {
         rawValue
@@ -244,6 +245,8 @@ private struct ChannelsTabView: View {
                         TransmitControlView(model: model)
                     case .bans:
                         BanListView()
+                    case .accounts:
+                        UserAccountsView()
                     }
                 }
                 .sheet(item: $model.channelDetailModel) { detailModel in
@@ -297,6 +300,9 @@ private struct MoreMenuView: View {
                 }
                 if model.canBanUsers {
                     row("Banned Users", systemImage: "nosign", sheet: .bans)
+                }
+                if model.isAdministrator {
+                    row("User Accounts", systemImage: "person.badge.key", sheet: .accounts)
                 }
                 Button {
                     dismiss()

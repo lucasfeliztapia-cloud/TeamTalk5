@@ -60,11 +60,17 @@ public enum TeamTalkServerStringProperty {
 
 public enum TeamTalkUserAccountStringProperty {
     case initialChannel
+    case username
+    case note
 
     var cValue: TTKitUserAccountStringProperty {
         switch self {
         case .initialChannel:
             return TTKitUserAccountStringInitialChannel
+        case .username:
+            return TTKitUserAccountStringUsername
+        case .note:
+            return TTKitUserAccountStringNote
         }
     }
 }

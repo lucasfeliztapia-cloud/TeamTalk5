@@ -21,7 +21,9 @@ typedef enum {
 } TTKitServerStringProperty;
 
 typedef enum {
-    TTKitUserAccountStringInitialChannel
+    TTKitUserAccountStringInitialChannel,
+    TTKitUserAccountStringUsername,
+    TTKitUserAccountStringNote
 } TTKitUserAccountStringProperty;
 
 typedef enum {

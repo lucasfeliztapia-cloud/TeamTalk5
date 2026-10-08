@@ -34,6 +34,15 @@
 /* preferences */
 "%d %% - Default" = "%d %% - predeterminado";
 
+/* user accounts */
+"%d accounts" = "%d cuentas";
+
+/* user accounts */
+"%d accounts changed and %d could not be changed." = "%d cuentas cambiadas y %d que no se han podido cambiar.";
+
+/* user accounts */
+"%d accounts changed. It applies to each user the next time they log in." = "%d cuentas cambiadas. Se aplica a cada usuario la próxima vez que inicie sesión.";
+
 /* diagnostics */
 "%d entries" = "%d entradas";
 
@@ -42,6 +51,15 @@
 
 /* connection quality */
 "%d ms" = "%d ms";
+
+/* user accounts */
+"%d permissions chosen" = "%d permisos elegidos";
+
+/* user accounts */
+"%d permissions will be given to the %d accounts of the server that are not administrators." = "Se darán %d permisos a las %d cuentas del servidor que no son de administrador.";
+
+/* user accounts */
+"%d permissions will be removed from the %d accounts of the server that are not administrators." = "Se quitarán %d permisos a las %d cuentas del servidor que no son de administrador.";
 
 /* channel picker */
 "%d users" = "%d usuarios";
@@ -81,6 +99,9 @@
 /* codec detail
    create channel */
 "8 KHz" = "8 KHz";
+
+/* user accounts */
+"A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "Un cambio de permisos se aplica la próxima vez que el usuario inicia sesión. Quien está conectado conserva los antiguos hasta entonces.";
 
 /* appearance */
 "A theme changes the colors above. You can adjust them afterwards." = "Un tema cambia los colores de arriba. Después puedes ajustarlos.";
@@ -134,6 +155,9 @@
 /* media stream */
 "Address of a web radio or of an audio or video file" = "Dirección de una radio web o de un archivo de audio o vídeo";
 
+/* user accounts */
+"Administrator" = "Administrador";
+
 /* channel list */
 "All" = "Todos";
 
@@ -148,6 +172,9 @@
 
 /* appearance */
 "Always Light" = "Siempre claro";
+
+/* user accounts */
+"An administrator has every permission, whatever is set here." = "Un administrador tiene todos los permisos, se marque lo que se marque aquí.";
 
 /* preferences */
 "Announce content of text message" = "Anunciar mensaje de texto";
@@ -169,6 +196,9 @@
 
 /* text to speech */
 "Announcements" = "Anunciar";
+
+/* user accounts */
+"Anonymous users" = "Usuarios anónimos";
 
 /* preferences */
 "App Version" = "Versión de la aplicación";
@@ -236,6 +266,9 @@
 /* channel list */
 "Ban user" = "Banear usuario";
 
+/* user accounts */
+"Ban users" = "Banear usuarios";
+
 /* ban list */
 "Banned by %@" = "Baneado por %@";
 
@@ -288,6 +321,15 @@
 /* file list */
 "Cancels the upload" = "Cancela la subida";
 
+/* user accounts */
+"Change the Permissions of Every Account" = "Cambiar los permisos de todas las cuentas";
+
+/* user accounts */
+"Change the properties of the server" = "Cambiar las propiedades del servidor";
+
+/* user accounts */
+"Changing accounts, %d of %d" = "Cambiando cuentas, %d de %d";
+
 /* channel list
    server entry */
 "Channel" = "Canal";
@@ -334,6 +376,9 @@
 
 /* file list */
 "Choose Files" = "Elegir archivos";
+
+/* user accounts */
+"Choose one or more permissions and then what to do with them. Administrator accounts are not changed." = "Elige uno o varios permisos y después qué hacer con ellos. Las cuentas de administrador no se cambian.";
 
 /* all users */
 "Choosing a user shows the channel they are in. If the server does not let your account see all users, only those of your channel are listed." = "Al elegir un usuario se muestra el canal donde está. Si el servidor no deja a tu cuenta ver a todos los usuarios, solo salen los de tu canal.";
@@ -412,6 +457,9 @@
 /* keyboard shortcuts */
 "Control" = "Control";
 
+/* user accounts */
+"Control a shared desktop" = "Controlar un escritorio compartido";
+
 /* media stream */
 "Controls" = "Controles";
 
@@ -430,11 +478,17 @@
 /* server entry */
 "Country" = "Country";
 
+/* user accounts */
+"Create and change permanent channels" = "Crear y modificar canales permanentes";
+
 /* View Title */
 "Create Channel" = "Crear canal";
 
 /* main-tab */
 "Create new channel" = "Crear nuevo canal";
+
+/* user accounts */
+"Create temporary channels" = "Crear canales temporales";
 
 /* media stream */
 "Current File" = "El archivo actual";
@@ -447,6 +501,9 @@
 
 /* preferences */
 "Default Subscriptions" = "Suscripciones predeterminadas";
+
+/* user accounts */
+"Default user" = "Usuario normal";
 
 /* file list
    serverlist */
@@ -483,6 +540,9 @@
 /* preferences */
 "Double tap to lock TX button" = "Pulsa dos veces para bloquear el botón TX";
 
+/* user accounts */
+"Download files" = "Descargar archivos";
+
 /* file list */
 "Downloaded" = "Descargado";
 
@@ -497,6 +557,9 @@
 
 /* media stream */
 "Duration" = "Duración";
+
+/* user accounts */
+"Each change is saved at once and applies the next time this user logs in." = "Cada cambio se guarda al momento y se aplica la próxima vez que este usuario inicie sesión.";
 
 /* channel list */
 "Earpiece or Headset" = "Auricular o cascos";
@@ -524,6 +587,12 @@
 
 /* media stream */
 "Error while streaming media file" = "Error durante la emisión del archivo";
+
+/* user accounts */
+"Every Account" = "Todas las cuentas";
+
+/* user accounts */
+"Every account was already like that. Nothing has been changed." = "Todas las cuentas estaban ya así. No se ha cambiado nada.";
 
 /* transmit control */
 "Everyone" = "Todos";
@@ -619,6 +688,9 @@
    user detail */
 "General" = "General";
 
+/* user accounts */
+"Give to Every Account" = "Dar a todas las cuentas";
+
 /* channel list */
 "Go to Their Channel" = "Ir a su canal";
 
@@ -666,6 +738,9 @@
 
 /* ban list */
 "IP address: %@" = "Dirección IP: %@";
+
+/* user accounts */
+"It applies to each user the next time they log in." = "Se aplica a cada usuario la próxima vez que inicie sesión.";
 
 /* text message */
 "It is sent to every user of the server" = "Se envía a todos los usuarios del servidor";
@@ -724,6 +799,9 @@
 /* channel list */
 "Kick user" = "Expulsar usuario";
 
+/* user accounts */
+"Kick users off the server" = "Expulsar usuarios del servidor";
+
 /* appearance */
 "Large" = "Grande";
 
@@ -754,11 +832,17 @@
 /* serverlist */
 "Local server" = "Local server";
 
+/* user accounts */
+"Log in from several devices at once" = "Iniciar sesión desde varios dispositivos a la vez";
+
 /* text message type */
 "Log message" = "Mensaje de log";
 
 /* log entry */
 "Logged on to server" = "Conectado al servidor";
+
+/* user accounts */
+"Make other users channel operator" = "Hacer operador de canal a otros usuarios";
 
 /* preferences */
 "Male" = "Male";
@@ -813,6 +897,9 @@
 /* Sound Devices */
 "Microphone Test" = "Prueba de micrófono";
 
+/* user accounts */
+"Moderation" = "Moderación";
+
 /* keyboard shortcuts */
 "Modifier" = "Modificador";
 
@@ -834,6 +921,9 @@
 
 /* channel list */
 "Move user" = "Mover usuario";
+
+/* user accounts */
+"Move users between channels" = "Mover usuarios entre canales";
 
 /* channel list */
 "Move users here" = "Mover usuarios aquí";
@@ -878,6 +968,9 @@
 /* server entry */
 "Nickname (optional)" = "Nickname (optional)";
 
+/* user accounts */
+"Nickname locked, cannot be changed" = "Apodo bloqueado, no puede cambiarlo";
+
 /* Dialog message */
 "No" = "No";
 
@@ -911,6 +1004,9 @@
 
 /* serverlist */
 "No server found" = "No server found";
+
+/* user accounts */
+"No user accounts" = "No hay cuentas de usuario";
 
 /* channel list */
 "No users selected" = "Ningún usuario seleccionado";
@@ -980,6 +1076,9 @@
 
 /* preferences */
 "Order of channels in Channel List" = "Órden de los canales";
+
+/* user accounts */
+"Other" = "Otros";
 
 /* connection quality */
 "Packet Loss" = "Pérdida de paquetes";
@@ -1136,8 +1235,14 @@
 /* appearance */
 "Received Messages" = "Mensajes recibidos";
 
+/* user accounts */
+"Record voice in every channel" = "Grabar la voz en todos los canales";
+
 /* ban list */
 "Remove Ban" = "Quitar el baneo";
+
+/* user accounts */
+"Remove from Every Account" = "Quitar a todas las cuentas";
 
 /* serverlist */
 "Remove from Favorites" = "Quitar de favoritos";
@@ -1184,6 +1289,9 @@
 /* Dialog message */
 "Save server to server list?" = "¿Guardar servidor?";
 
+/* user accounts */
+"Search accounts" = "Buscar cuentas";
+
 /* channel picker */
 "Search channels" = "Buscar canales";
 
@@ -1196,17 +1304,32 @@
 /* all users */
 "Search users" = "Buscar usuarios";
 
+/* user accounts */
+"See hidden channels" = "Ver los canales ocultos";
+
+/* user accounts */
+"See the users of every channel" = "Ver a los usuarios de todos los canales";
+
 /* channel list */
 "Select users" = "Seleccionar usuarios";
 
 /* text message */
 "Send broadcast message" = "Enviar mensaje de difusión";
 
+/* user accounts */
+"Send broadcast messages" = "Enviar mensajes de difusión";
+
+/* user accounts */
+"Send channel messages" = "Enviar mensajes al canal";
+
 /* text message */
 "Send empty message to close keyboard" = "Envía un mensaje en blanco para cerrar el teclado";
 
 /* channel list */
 "Send private message" = "Enviar mensaje privado";
+
+/* user accounts */
+"Send private messages" = "Enviar mensajes privados";
 
 /* incoming file */
 "Send to TeamTalk" = "Enviar a TeamTalk";
@@ -1249,6 +1372,9 @@
 
 /* serverlist */
 "Share Server" = "Compartir servidor";
+
+/* user accounts */
+"Share the desktop" = "Compartir el escritorio";
 
 /* file list */
 "Shares or opens the file" = "Comparte o abre el archivo";
@@ -1347,6 +1473,9 @@
 /* Text message view */
 "Status Event" = "Status Event";
 
+/* user accounts */
+"Status locked, cannot be changed" = "Estado bloqueado, no puede cambiarlo";
+
 /* preferences */
 "Status Message" = "Mensaje de estado";
 
@@ -1363,11 +1492,17 @@
 /* media stream */
 "Stop Streaming" = "Detener la emisión";
 
+/* user accounts */
+"Stream audio files" = "Emitir archivos de audio";
+
 /* media stream */
 "Stream Media File" = "Emitir archivo multimedia";
 
 /* media stream */
 "Stream media file" = "Emitir archivo multimedia";
+
+/* user accounts */
+"Stream video files" = "Emitir archivos de vídeo";
 
 /* media stream */
 "Streaming" = "Emitiendo";
@@ -1428,6 +1563,9 @@
 
 /* preferences */
 "Text To Speech Events" = "Eventos de texto a voz";
+
+/* user accounts */
+"The account could not be saved" = "No se ha podido guardar la cuenta";
 
 /* backup */
 "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "La copia contiene todos los ajustes y la lista de servidores, con sus contraseñas. Guarda el archivo en un lugar seguro.";
@@ -1501,6 +1639,12 @@
 /* codec detail */
 "Transmit Interval" = "Intervalo de transmisión";
 
+/* user accounts */
+"Transmit video" = "Transmitir vídeo";
+
+/* user accounts */
+"Transmit voice" = "Transmitir voz";
+
 /* channel list */
 "Transmitting" = "Transmitiendo";
 
@@ -1526,6 +1670,9 @@
 /* file list */
 "Upload file" = "Subir archivo";
 
+/* user accounts */
+"Upload files" = "Subir archivos";
+
 /* incoming file */
 "Upload to Channel" = "Subir al canal";
 
@@ -1546,6 +1693,9 @@
 
 /* channel list */
 "User" = "Usuario";
+
+/* user accounts */
+"User Accounts" = "Cuentas de usuario";
 
 /* channel list */
 "User Details" = "Detalles del usuario";

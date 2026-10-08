@@ -288,6 +288,10 @@ const TTCHAR* TTKitGetUserAccountString(TTKitUserAccountStringProperty property,
     switch (property) {
     case TTKitUserAccountStringInitialChannel:
         return userAccount->szInitChannel;
+    case TTKitUserAccountStringUsername:
+        return userAccount->szUsername;
+    case TTKitUserAccountStringNote:
+        return userAccount->szNote;
     }
     return "";
 }

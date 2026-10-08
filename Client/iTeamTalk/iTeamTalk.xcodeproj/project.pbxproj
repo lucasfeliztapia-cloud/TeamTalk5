@@ -82,6 +82,7 @@
 		CC000500000000000000000B /* SpeechListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC000400000000000000000B /* SpeechListView.swift */; };
 		CC000500000000000000000D /* TextMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC000400000000000000000D /* TextMessageView.swift */; };
 		CC000500000000000000000E /* TextToSpeechEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC000400000000000000000E /* TextToSpeechEventsView.swift */; };
+		CC0005000000000000000019 /* UserAccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000019 /* UserAccountsView.swift */; };
 		CC000500000000000000000F /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC000400000000000000000F /* UserDetailView.swift */; };
 		CC0005000000000000000010 /* WebLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000010 /* WebLoginView.swift */; };
 		DD0000000000000000000020 /* TeamTalkLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0000000000000000000002 /* TeamTalkLiveActivity.swift */; };
@@ -229,6 +230,7 @@
 		CC000400000000000000000B /* SpeechListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechListView.swift; sourceTree = "<group>"; };
 		CC000400000000000000000D /* TextMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMessageView.swift; sourceTree = "<group>"; };
 		CC000400000000000000000E /* TextToSpeechEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeechEventsView.swift; sourceTree = "<group>"; };
+		CC0004000000000000000019 /* UserAccountsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountsView.swift; sourceTree = "<group>"; };
 		CC000400000000000000000F /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
 		CC0004000000000000000010 /* WebLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebLoginView.swift; sourceTree = "<group>"; };
 		DD0000000000000000000001 /* iTeamTalkLiveActivity.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iTeamTalkLiveActivity.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -425,6 +427,7 @@
 				CC000400000000000000000B /* SpeechListView.swift */,
 				CC000400000000000000000D /* TextMessageView.swift */,
 				CC000400000000000000000E /* TextToSpeechEventsView.swift */,
+				CC0004000000000000000019 /* UserAccountsView.swift */,
 				CC000400000000000000000F /* UserDetailView.swift */,
 				CC0004000000000000000010 /* WebLoginView.swift */,
 			);
@@ -674,6 +677,7 @@
 				CC000500000000000000000B /* SpeechListView.swift in Sources */,
 				CC000500000000000000000D /* TextMessageView.swift in Sources */,
 				CC000500000000000000000E /* TextToSpeechEventsView.swift in Sources */,
+				CC0005000000000000000019 /* UserAccountsView.swift in Sources */,
 				CC000500000000000000000F /* UserDetailView.swift in Sources */,
 				CC0005000000000000000010 /* WebLoginView.swift in Sources */,
 			);

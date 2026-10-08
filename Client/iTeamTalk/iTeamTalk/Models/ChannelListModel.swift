@@ -716,6 +716,11 @@ final class ChannelListModel: ObservableObject {
         (myuseraccount.uUserRights & USERRIGHT_BAN_USERS.rawValue) != 0
     }
 
+    /// Only an administrator can list and change the user accounts
+    var isAdministrator: Bool {
+        (myuseraccount.uUserType & USERTYPE_ADMIN.rawValue) != 0
+    }
+
     // MARK: - Who can transmit
 
     /// Operators of the channel and accounts that can modify any channel

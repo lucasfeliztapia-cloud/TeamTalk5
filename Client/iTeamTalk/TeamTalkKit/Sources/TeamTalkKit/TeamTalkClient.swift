@@ -247,6 +247,19 @@ public final class TeamTalkClient {
         return TT_DoUnBanUserEx(instance, &bannedUser)
     }
 
+    /// Every user account of the server arrives as a
+    /// CLIENTEVENT_CMD_USERACCOUNT. For administrators only.
+    public func listUserAccounts(index: Int32 = 0, count: Int32 = 100_000) -> Int32 {
+        TT_DoListUserAccounts(instance, index, count)
+    }
+
+    /// Creates the account, or replaces the one with the same user name. For
+    /// administrators only.
+    public func saveUserAccount(_ account: UserAccount) -> Int32 {
+        var account = account
+        return TT_DoNewUserAccount(instance, &account)
+    }
+
     @discardableResult
     public func moveUser(id userID: Int32, toChannelID channelID: Int32) -> Int32 {
         TT_DoMoveUser(instance, userID, channelID)
