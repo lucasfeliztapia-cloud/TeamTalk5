@@ -149,14 +149,11 @@ private struct ChannelsTabView: View {
                         Button {
                             model.toggleSelecting()
                         } label: {
-                            if model.isSelecting {
-                                Image(systemName: "checkmark.circle.fill")
-                                    .accessibilityLabel("Done selecting")
-                            } else {
-                                Image(systemName: "checkmark.circle")
-                                    .accessibilityLabel("Select users")
-                            }
+                            Image(systemName: model.isSelecting ? "checklist.checked" : "checklist")
                         }
+                        // on the button, not on the image: VoiceOver was reading the
+                        // name of the symbol, "selected", in front of the label
+                        .accessibilityLabel(model.isSelecting ? Text("Done selecting") : Text("Select users"))
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {

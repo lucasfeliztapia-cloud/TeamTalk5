@@ -222,6 +222,12 @@
 "Color of buttons, switches and the selected tab." = "Color de los botones, los interruptores y la pestaña seleccionada.";
 
 /* appearance */
+"Color of the Speakers button in each state. Its icon is shown in black or white, whichever is easier to read." = "Color del botón de altavoces en cada estado. Su icono se muestra en negro o en blanco, según cuál se lea mejor.";
+
+/* appearance */
+"Color of the Talk button in each state. Its text is shown in black or white, whichever is easier to read." = "Color del botón de hablar en cada estado. Su texto se muestra en negro o en blanco, según cuál se lea mejor.";
+
+/* appearance */
 "Colors and Text" = "Colores y texto";
 
 /* log entry */
@@ -465,6 +471,9 @@
 
 /* preferences */
 "Limit length of names in channel list to %d characters" = "Limitar longitud máxima de nombres de usuario a %d caracteres";
+
+/* appearance */
+"Listening" = "Escuchando";
 
 /* serverlist */
 "Local server" = "Local server";
@@ -843,6 +852,9 @@
 /* channel list */
 "Speakers" = "Altavoces";
 
+/* appearance */
+"Speakers Button" = "Botón de altavoces";
+
 /* preferences */
 "Speech Rate" = "Velocidad de voz";
 
@@ -890,7 +902,16 @@
 "Subscriptions" = "Subscripciones";
 
 /* appearance */
+"Swap Speakers Button Colors" = "Intercambiar los colores del botón de altavoces";
+
+/* appearance */
+"Swap Talk Button Colors" = "Intercambiar los colores del botón de hablar";
+
+/* appearance */
 "System Size" = "El del sistema";
+
+/* appearance */
+"Talk Button" = "Botón de hablar";
 
 /* channel list */
 "Talking" = "Hablando";

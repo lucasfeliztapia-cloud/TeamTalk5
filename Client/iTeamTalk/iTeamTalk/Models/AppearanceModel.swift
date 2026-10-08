@@ -27,6 +27,10 @@ import UIKit
 let PREF_APPEARANCE_RECEIVEDCOLOR = "appearance_receivedcolor_preference"
 let PREF_APPEARANCE_SENTCOLOR = "appearance_sentcolor_preference"
 let PREF_APPEARANCE_INTERFACECOLOR = "appearance_interfacecolor_preference"
+let PREF_APPEARANCE_TALKIDLECOLOR = "appearance_talkidlecolor_preference"
+let PREF_APPEARANCE_TALKACTIVECOLOR = "appearance_talkactivecolor_preference"
+let PREF_APPEARANCE_SPEAKERSONCOLOR = "appearance_speakersoncolor_preference"
+let PREF_APPEARANCE_SPEAKERSMUTEDCOLOR = "appearance_speakersmutedcolor_preference"
 let PREF_APPEARANCE_TEXTSIZE = "appearance_textsize_preference"
 let PREF_APPEARANCE_FONTDESIGN = "appearance_fontdesign_preference"
 
@@ -87,6 +91,10 @@ final class AppearanceModel: ObservableObject {
     static let defaultReceivedColor = Color(red: 1.0, green: 0.627, blue: 0.882)
     static let defaultSentColor = Color(red: 0.54, green: 0.82, blue: 0.94)
     static let defaultInterfaceColor = Color(uiColor: .systemBlue)
+    static let defaultTalkIdleColor = Color.green
+    static let defaultTalkActiveColor = Color.red
+    static let defaultSpeakersOnColor = Color.white
+    static let defaultSpeakersMutedColor = Color.black
     static let broadcastColor = Color(red: 0.831, green: 0.376, blue: 1.0)
     static let logColor = Color(red: 0.86, green: 0.86, blue: 0.86)
 
@@ -116,6 +124,26 @@ final class AppearanceModel: ObservableObject {
         }
     }
 
+    /// Talk button while not transmitting
+    @Published var talkIdleColor: Color {
+        didSet { Self.save(talkIdleColor, forKey: PREF_APPEARANCE_TALKIDLECOLOR) }
+    }
+
+    /// Talk button while transmitting
+    @Published var talkActiveColor: Color {
+        didSet { Self.save(talkActiveColor, forKey: PREF_APPEARANCE_TALKACTIVECOLOR) }
+    }
+
+    /// Speakers button while listening
+    @Published var speakersOnColor: Color {
+        didSet { Self.save(speakersOnColor, forKey: PREF_APPEARANCE_SPEAKERSONCOLOR) }
+    }
+
+    /// Speakers button while everything is muted
+    @Published var speakersMutedColor: Color {
+        didSet { Self.save(speakersMutedColor, forKey: PREF_APPEARANCE_SPEAKERSMUTEDCOLOR) }
+    }
+
     /// 0 follows the text size of the system, otherwise the position of the
     /// size in DynamicTypeSize counting from 1
     @Published var textSizeIndex: Int {
@@ -131,6 +159,10 @@ final class AppearanceModel: ObservableObject {
         receivedColor = Self.load(forKey: PREF_APPEARANCE_RECEIVEDCOLOR) ?? Self.defaultReceivedColor
         sentColor = Self.load(forKey: PREF_APPEARANCE_SENTCOLOR) ?? Self.defaultSentColor
         interfaceColor = Self.load(forKey: PREF_APPEARANCE_INTERFACECOLOR)
+        talkIdleColor = Self.load(forKey: PREF_APPEARANCE_TALKIDLECOLOR) ?? Self.defaultTalkIdleColor
+        talkActiveColor = Self.load(forKey: PREF_APPEARANCE_TALKACTIVECOLOR) ?? Self.defaultTalkActiveColor
+        speakersOnColor = Self.load(forKey: PREF_APPEARANCE_SPEAKERSONCOLOR) ?? Self.defaultSpeakersOnColor
+        speakersMutedColor = Self.load(forKey: PREF_APPEARANCE_SPEAKERSMUTEDCOLOR) ?? Self.defaultSpeakersMutedColor
         textSizeIndex = defaults.integer(forKey: PREF_APPEARANCE_TEXTSIZE)
         fontDesign = AppearanceFontDesign(rawValue: defaults.integer(forKey: PREF_APPEARANCE_FONTDESIGN)) ?? .standard
     }
@@ -139,8 +171,32 @@ final class AppearanceModel: ObservableObject {
         receivedColor = Self.defaultReceivedColor
         sentColor = Self.defaultSentColor
         interfaceColor = nil
+        talkIdleColor = Self.defaultTalkIdleColor
+        talkActiveColor = Self.defaultTalkActiveColor
+        speakersOnColor = Self.defaultSpeakersOnColor
+        speakersMutedColor = Self.defaultSpeakersMutedColor
         textSizeIndex = 0
         fontDesign = .standard
+
+        // the defaults follow the light and dark theme, a stored color would not
+        let defaults = UserDefaults.standard
+        for key in [PREF_APPEARANCE_RECEIVEDCOLOR, PREF_APPEARANCE_SENTCOLOR,
+                    PREF_APPEARANCE_TALKIDLECOLOR, PREF_APPEARANCE_TALKACTIVECOLOR,
+                    PREF_APPEARANCE_SPEAKERSONCOLOR, PREF_APPEARANCE_SPEAKERSMUTEDCOLOR] {
+            defaults.removeObject(forKey: key)
+        }
+    }
+
+    func swapTalkColors() {
+        let idle = talkIdleColor
+        talkIdleColor = talkActiveColor
+        talkActiveColor = idle
+    }
+
+    func swapSpeakersColors() {
+        let listening = speakersOnColor
+        speakersOnColor = speakersMutedColor
+        speakersMutedColor = listening
     }
 
     /// A range and not a single size, so the same modifier serves "follow the
@@ -188,13 +244,17 @@ final class AppearanceModel: ObservableObject {
         return 0.2126 * linear(rgb.red) + 0.7152 * linear(rgb.green) + 0.0722 * linear(rgb.blue)
     }
 
-    private static func save(_ color: Color, forKey key: String) {
+    /// "RRGGBB", the form in which colors are stored and handed to the Live Activity
+    static func hex(of color: Color) -> String {
         let rgb = components(of: color)
-        let hex = String(format: "%02X%02X%02X",
-                         Int((rgb.red * 255).rounded()),
-                         Int((rgb.green * 255).rounded()),
-                         Int((rgb.blue * 255).rounded()))
-        UserDefaults.standard.set(hex, forKey: key)
+        return String(format: "%02X%02X%02X",
+                      Int((rgb.red * 255).rounded()),
+                      Int((rgb.green * 255).rounded()),
+                      Int((rgb.blue * 255).rounded()))
+    }
+
+    private static func save(_ color: Color, forKey key: String) {
+        UserDefaults.standard.set(hex(of: color), forKey: key)
     }
 
     private static func load(forKey key: String) -> Color? {

@@ -90,24 +90,27 @@ private struct ActivityControls: View {
     let state: TeamTalkActivityAttributes.ContentState
 
     var body: some View {
+        let talk = ActivityColor(hex: state.talkColor, fallback: state.isTransmitting ? .red : .green)
+        let speakers = ActivityColor(hex: state.speakersColor, fallback: state.isDeafened ? .black : .white)
+
         HStack(spacing: 12) {
             Button(intent: ToggleTransmissionIntent()) {
                 Label(attributes.transmitLabel, systemImage: state.isTransmitting ? "mic.fill" : "mic.slash.fill")
                     .lineLimit(1)
+                    .foregroundStyle(talk.text)
                     .frame(maxWidth: .infinity)
             }
             .buttonStyle(.borderedProminent)
-            .tint(state.isTransmitting ? .red : .green)
+            .tint(talk.color)
             .accessibilityLabel(attributes.transmitLabel)
             .accessibilityValue(state.isTransmitting ? attributes.transmitOnText : attributes.transmitOffText)
 
-            // White with a black speaker while listening, black with a white
-            // speaker while muted, like the button in the app.
+            // the same colors as the button in the app
             Button(intent: ToggleDeafenIntent()) {
                 Image(systemName: state.isDeafened ? "speaker.slash.fill" : "speaker.wave.2.fill")
-                    .foregroundStyle(state.isDeafened ? Color.white : Color.black)
+                    .foregroundStyle(speakers.text)
                     .frame(width: 64, height: 34)
-                    .background(state.isDeafened ? Color.black : Color.white, in: Capsule())
+                    .background(speakers.color, in: Capsule())
                     .overlay(Capsule().stroke(Color.gray, lineWidth: 1))
             }
             .buttonStyle(.plain)
@@ -124,7 +127,7 @@ private struct TransmissionIcon: View {
 
     var body: some View {
         Image(systemName: state.isTransmitting ? "mic.fill" : "mic.slash.fill")
-            .foregroundStyle(state.isTransmitting ? Color.red : Color.green)
+            .foregroundStyle(ActivityColor(hex: state.talkColor, fallback: state.isTransmitting ? .red : .green).color)
             .accessibilityLabel(attributes.transmitLabel)
             .accessibilityValue(state.isTransmitting ? attributes.transmitOnText : attributes.transmitOffText)
     }

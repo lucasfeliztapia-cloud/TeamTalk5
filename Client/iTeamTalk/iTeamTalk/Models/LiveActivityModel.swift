@@ -30,6 +30,8 @@ struct LiveActivityStatus: Equatable {
     var isConnected: Bool
     var isTransmitting: Bool
     var isDeafened: Bool
+    var talkColor: String
+    var speakersColor: String
 }
 
 /// The Live Activity of the current connection. Needs iOS 17 for its buttons;
@@ -127,7 +129,9 @@ private final class LiveActivityManager {
             statusText: status.statusText,
             isConnected: status.isConnected,
             isTransmitting: status.isTransmitting,
-            isDeafened: status.isDeafened
+            isDeafened: status.isDeafened,
+            talkColor: status.talkColor,
+            speakersColor: status.speakersColor
         )
     }
 }

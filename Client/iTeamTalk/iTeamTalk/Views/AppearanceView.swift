@@ -61,6 +61,28 @@ struct AppearanceView: View {
             }
 
             Section {
+                ColorPicker("Not transmitting", selection: $appearance.talkIdleColor, supportsOpacity: false)
+                ColorPicker("Transmitting", selection: $appearance.talkActiveColor, supportsOpacity: false)
+                Button("Swap Talk Button Colors", action: appearance.swapTalkColors)
+                buttonPreview
+            } header: {
+                Text("Talk Button")
+            } footer: {
+                Text("Color of the Talk button in each state. Its text is shown in black or white, whichever is easier to read.")
+            }
+
+            Section {
+                ColorPicker("Listening", selection: $appearance.speakersOnColor, supportsOpacity: false)
+                ColorPicker("Muted", selection: $appearance.speakersMutedColor, supportsOpacity: false)
+                Button("Swap Speakers Button Colors", action: appearance.swapSpeakersColors)
+                speakersPreview
+            } header: {
+                Text("Speakers Button")
+            } footer: {
+                Text("Color of the Speakers button in each state. Its icon is shown in black or white, whichever is easier to read.")
+            }
+
+            Section {
                 ColorPicker("Interface Color", selection: Binding(
                     get: { appearance.interfaceColor ?? AppearanceModel.defaultInterfaceColor },
                     set: { appearance.interfaceColor = $0 }
@@ -79,6 +101,37 @@ struct AppearanceView: View {
             }
         }
         .navigationTitle("Appearance")
+    }
+
+    /// The Talk button in its two states, side by side
+    private var buttonPreview: some View {
+        HStack(spacing: 8) {
+            statePreview(Text("Not transmitting"), color: appearance.talkIdleColor)
+            statePreview(Text("Transmitting"), color: appearance.talkActiveColor)
+        }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("Preview")
+    }
+
+    /// The Speakers button in its two states, side by side
+    private var speakersPreview: some View {
+        HStack(spacing: 8) {
+            statePreview(Image(systemName: "speaker.wave.2.fill"), color: appearance.speakersOnColor)
+            statePreview(Image(systemName: "speaker.slash.fill"), color: appearance.speakersMutedColor)
+        }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("Preview")
+    }
+
+    private func statePreview<Content: View>(_ content: Content, color: Color) -> some View {
+        content
+            .font(.footnote.weight(.semibold))
+            .lineLimit(1)
+            .foregroundStyle(AppearanceModel.textColor(on: color))
+            .frame(maxWidth: .infinity)
+            .frame(height: 36)
+            .background(color)
+            .overlay(Rectangle().stroke(Color.gray, lineWidth: 1))
     }
 
     private func previewRow(_ text: LocalizedStringKey, color: Color) -> some View {

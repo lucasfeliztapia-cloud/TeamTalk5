@@ -28,6 +28,7 @@ import TeamTalkKit
 
 struct ChannelListContainerView: View {
     @ObservedObject var model: ChannelListModel
+    @ObservedObject private var appearance = AppearanceModel.shared
     @State private var isPressingTalkButton = false
 
     var body: some View {
@@ -40,8 +41,8 @@ struct ChannelListContainerView: View {
             Text("Talk")
                 .frame(maxWidth: .infinity)
                 .frame(height: 50)
-                .background(model.isTransmitting ? Color.red : Color.green)
-                .foregroundStyle(.white)
+                .background(talkColor)
+                .foregroundStyle(AppearanceModel.textColor(on: talkColor))
                 .fontWeight(.semibold)
                 .contentShape(Rectangle())
             .simultaneousGesture(
@@ -115,15 +116,21 @@ struct ChannelListContainerView: View {
 
 private extension ChannelListContainerView {
 
-    /// White with a black speaker while listening, black with a white speaker
-    /// while all incoming audio is muted.
+    var talkColor: Color {
+        model.isTransmitting ? appearance.talkActiveColor : appearance.talkIdleColor
+    }
+
+    /// By default white with a black speaker while listening and black with a
+    /// white speaker while all incoming audio is muted.
     var deafenButton: some View {
-        Button(action: model.toggleDeafen) {
+        let background = model.isDeafened ? appearance.speakersMutedColor : appearance.speakersOnColor
+
+        return Button(action: model.toggleDeafen) {
             Image(systemName: model.isDeafened ? "speaker.slash.fill" : "speaker.wave.2.fill")
                 .font(.title3)
-                .foregroundStyle(model.isDeafened ? Color.white : Color.black)
+                .foregroundStyle(AppearanceModel.textColor(on: background))
                 .frame(width: 64, height: 50)
-                .background(model.isDeafened ? Color.black : Color.white)
+                .background(background)
                 .overlay(Rectangle().stroke(Color.gray, lineWidth: 1))
         }
         .buttonStyle(.plain)
@@ -258,18 +265,29 @@ struct ChannelListView: View {
                             .foregroundStyle(.green)
                     }
 
-                    Button {
-                        model.showTextMessages(userid: user.nUserID)
-                    } label: {
-                        Image(details.messageIconName)
-                            .resizable()
-                            .frame(width: 24, height: 24)
+                    if !model.isSelecting {
+                        Button {
+                            model.showTextMessages(userid: user.nUserID)
+                        } label: {
+                            Image(details.messageIconName)
+                                .resizable()
+                                .frame(width: 24, height: 24)
+                        }
+                        .buttonStyle(.borderless)
+                        .accessibilityLabel("Text Messaging")
                     }
-                    .buttonStyle(.borderless)
-                    .accessibilityLabel("Text Messaging")
                 }
                 .accessibilityElement(children: .combine)
                 .accessibilityAddTraits(isMoveSelected ? .isSelected : [])
+                // Activating a combined row presses the button inside it, which
+                // opens the private messages. Stated here so that selecting wins.
+                .accessibilityAction {
+                    if model.isSelecting {
+                        model.selectRow(.user(user))
+                    } else {
+                        model.showTextMessages(userid: user.nUserID)
+                    }
+                }
                 .contentShape(Rectangle())
                 .onTapGesture {
                     model.selectRow(.user(user))

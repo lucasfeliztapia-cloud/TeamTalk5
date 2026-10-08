@@ -92,6 +92,11 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
                 self?.scheduleLiveActivityUpdate()
             }
             .store(in: &cancellables)
+        AppearanceModel.shared.objectWillChange
+            .sink { [weak self] _ in
+                self?.scheduleLiveActivityUpdate()
+            }
+            .store(in: &cancellables)
         addToTTMessages(preferencesModel)
 
         setupSoundDevices()
@@ -297,12 +302,18 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
             statusText = String(localized: "Not in a channel", comment: "live activity")
         }
 
+        let appearance = AppearanceModel.shared
+        let transmitting = TeamTalkClient.shared.isVoiceTransmitting
+        let deafened = TeamTalkClient.shared.isSoundOutputMuted
+
         LiveActivityController.update(LiveActivityStatus(
             serverName: serverName,
             statusText: statusText,
             isConnected: connected,
-            isTransmitting: TeamTalkClient.shared.isVoiceTransmitting,
-            isDeafened: TeamTalkClient.shared.isSoundOutputMuted
+            isTransmitting: transmitting,
+            isDeafened: deafened,
+            talkColor: AppearanceModel.hex(of: transmitting ? appearance.talkActiveColor : appearance.talkIdleColor),
+            speakersColor: AppearanceModel.hex(of: deafened ? appearance.speakersMutedColor : appearance.speakersOnColor)
         ))
     }
 
