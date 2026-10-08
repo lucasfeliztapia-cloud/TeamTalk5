@@ -343,6 +343,24 @@ assert(status == noErr);
 #define kOutputBus 0
 #define kInputBus 1
 
+        // Voice processing turns down every other sound while it runs, the
+        // speech and the event sounds of the application included. Ask for
+        // as little of that as there is. Needs iOS 17.
+        static void KeepOtherAudioLoud(AudioUnit audioUnit)
+        {
+            if (@available(iOS 17.0, *))
+            {
+                AUVoiceIOOtherAudioDuckingConfiguration ducking = {};
+                ducking.mEnableAdvancedDucking = false;
+                ducking.mDuckingLevel = kAUVoiceIOOtherAudioDuckingLevelMin;
+                OSStatus const ducked = AudioUnitSetProperty(audioUnit,
+                                                             kAUVoiceIOProperty_OtherAudioDuckingConfiguration,
+                                                             kAudioUnitScope_Global, 0,
+                                                             &ducking, sizeof(ducking));
+                MYTRACE_COND(ducked != noErr, ACE_TEXT("Failed to set ducking of other audio, status %d\n"), (int)ducked);
+            }
+        }
+
         AudioUnit NewInput(int inputdeviceid, int samplerate, int channels)
         {
             AudioStreamBasicDescription format = {};
@@ -383,6 +401,9 @@ assert(status == noErr);
             assert(status == noErr);
             if(status != noErr)
                 return nil;
+
+            if(inputdeviceid == VOICEPROCESSINGIO_DEVICE_ID)
+                KeepOtherAudioLoud(audioUnit);
 
             status = AudioUnitSetProperty(audioUnit, 
                                           kAudioOutputUnitProperty_EnableIO,
@@ -452,6 +473,9 @@ assert(status == noErr);
             assert(status == noErr);
             if(status != noErr)
                 goto fail;
+
+            if(outputdeviceid == VOICEPROCESSINGIO_DEVICE_ID)
+                KeepOtherAudioLoud(audioUnit);
     
             status = AudioUnitSetProperty(audioUnit,
                                           kAudioOutputUnitProperty_EnableIO, 

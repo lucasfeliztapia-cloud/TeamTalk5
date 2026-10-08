@@ -49,41 +49,19 @@ struct ChannelListContainerView: View {
             if model.isSelecting {
                 selectionBar
             }
-            HStack(spacing: 0) {
-            Text("Talk")
-                .frame(maxWidth: .infinity)
-                .frame(height: 50)
-                // only the button: a color fills the safe area unless told otherwise,
-                // and it showed under the tab bar
-                .background(talkColor, ignoresSafeAreaEdges: [])
-                .foregroundStyle(AppearanceModel.textColor(on: talkColor))
-                .fontWeight(.semibold)
-                .contentShape(Rectangle())
-            .simultaneousGesture(
-                DragGesture(minimumDistance: 0)
-                    .onChanged { _ in
-                        guard !isPressingTalkButton else { return }
-                        isPressingTalkButton = true
-                        model.txBtnDown()
-                    }
-                    .onEnded { _ in
-                        guard isPressingTalkButton else { return }
-                        isPressingTalkButton = false
-                        model.txBtnUp()
-                    }
-            )
-            .accessibilityLabel("Push to Talk")
-            .accessibilityHint(model.pttHint)
-            .accessibilityValue(model.isTransmitting
-                ? Text("Active")
-                : Text("Inactive"))
-            .accessibilityAddTraits(.isButton)
-            .accessibilityAction(.magicTap) {
-                model.txBtnAccessibilityAction()
+            // Talk in the middle, between the two sound buttons. VoiceOver
+            // still meets Talk first, as before.
+            HStack(spacing: 10) {
+                outputMenu
+                    .accessibilitySortPriority(2)
+                talkButton
+                    .accessibilitySortPriority(3)
+                deafenButton
+                    .accessibilitySortPriority(1)
             }
-            outputMenu
-            deafenButton
-            }
+            .padding(.horizontal, 12)
+            .padding(.vertical, 8)
+            .accessibilityElement(children: .contain)
             .background(Color(uiColor: .systemBackground))
         }
         .navigationTitle(model.navigationTitle)
@@ -148,11 +126,49 @@ private extension ChannelListContainerView {
             Image(systemName: "airplayaudio")
                 .font(.title3)
                 .frame(width: 56, height: 50)
-                .background(.bar, ignoresSafeAreaEdges: [])
-                .overlay(Rectangle().stroke(Color.gray, lineWidth: 1))
+                .background(.bar, in: barShape)
+                .overlay(barShape.stroke(Color.gray, lineWidth: 1))
         }
         .accessibilityLabel("Audio Output")
         .accessibilityValue(model.speakerOutput ? Text("Speaker") : Text("Earpiece or Headset"))
+    }
+
+    /// The rounded shape of the three buttons of the bar
+    var barShape: RoundedRectangle {
+        RoundedRectangle(cornerRadius: 16, style: .continuous)
+    }
+
+    var talkButton: some View {
+        Text("Talk")
+            .frame(maxWidth: .infinity)
+            .frame(height: 50)
+            // in a shape, so the color stays in the button
+            .background(talkColor, in: barShape)
+            .foregroundStyle(AppearanceModel.textColor(on: talkColor))
+            .fontWeight(.semibold)
+            .contentShape(barShape)
+            .simultaneousGesture(
+                DragGesture(minimumDistance: 0)
+                    .onChanged { _ in
+                        guard !isPressingTalkButton else { return }
+                        isPressingTalkButton = true
+                        model.txBtnDown()
+                    }
+                    .onEnded { _ in
+                        guard isPressingTalkButton else { return }
+                        isPressingTalkButton = false
+                        model.txBtnUp()
+                    }
+            )
+            .accessibilityLabel("Push to Talk")
+            .accessibilityHint(model.pttHint)
+            .accessibilityValue(model.isTransmitting
+                ? Text("Active")
+                : Text("Inactive"))
+            .accessibilityAddTraits(.isButton)
+            .accessibilityAction(.magicTap) {
+                model.txBtnAccessibilityAction()
+            }
     }
 
     var talkColor: Color {
@@ -168,9 +184,9 @@ private extension ChannelListContainerView {
             Image(systemName: model.isDeafened ? "speaker.slash.fill" : "speaker.wave.2.fill")
                 .font(.title3)
                 .foregroundStyle(AppearanceModel.textColor(on: background))
-                .frame(width: 64, height: 50)
-                .background(background, ignoresSafeAreaEdges: [])
-                .overlay(Rectangle().stroke(Color.gray, lineWidth: 1))
+                .frame(width: 56, height: 50)
+                .background(background, in: barShape)
+                .overlay(barShape.stroke(Color.gray, lineWidth: 1))
         }
         .buttonStyle(.plain)
         .accessibilityLabel("Speakers")

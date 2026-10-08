@@ -30,7 +30,8 @@ import UIKit
 let synth = AVSpeechSynthesizer()
 var myUtterance = AVSpeechUtterance(string: "")
 
-let DEFAULT_TTS_VOL : Float = 0.5
+// what an utterance has until the slider is moved, so the slider shows it
+let DEFAULT_TTS_VOL : Float = 1.0
 
 /// Added to the preference of an event: true makes the app's own voice speak
 /// it even while VoiceOver is on.
