@@ -2,19 +2,19 @@
 "Connect to %@" = "Sambung ke %@";
 
 /* favorite servers widget */
-"Connect to one of your favorite servers with a tap." = "Sambung ke salah satu pelayan kegemaran anda dengan satu ketikan.";
+"Connect to one of your favorite servers with a tap." = "Sambung ke salah satu server kegemaran anda dengan satu ketikan.";
 
 /* favorite servers widget */
-"Favorite Servers" = "Pelayan Kegemaran";
+"Favorite Servers" = "Server Kegemaran";
 
 /* favorite servers widget */
-"Mark a server as favorite in TeamTalk" = "Tandakan pelayan sebagai kegemaran dalam TeamTalk";
+"Mark a server as favorite in TeamTalk" = "Tandakan server sebagai kegemaran dalam TeamTalk";
 
 /* channel list */
 "Muted" = "Dibisukan";
 
 /* speakers control */
-"Mutes everyone and brings them back while connected to a server." = "Membisukan semua orang dan menyahbisukannya semula semasa bersambung ke pelayan.";
+"Mutes everyone and brings them back while connected to a server." = "Membisukan semua orang dan menyahbisukannya semula semasa bersambung ke server.";
 
 /* live activity */
 "Not transmitting" = "Tidak menghantar";
@@ -23,7 +23,7 @@
 "On" = "Hidup";
 
 /* favorite servers widget */
-"Open TeamTalk to see your favorite servers" = "Buka TeamTalk untuk melihat pelayan kegemaran anda";
+"Open TeamTalk to see your favorite servers" = "Buka TeamTalk untuk melihat server kegemaran anda";
 
 /* keyboard shortcuts */
 "Pause or Resume Streaming" = "Jeda atau Sambung Semula Strim";
@@ -56,4 +56,4 @@
 "Transmitting" = "Mikrofon aktif";
 
 /* transmit control */
-"Turns your transmission on and off while connected to a server." = "Menghidupkan dan mematikan penghantaran anda semasa bersambung ke pelayan.";
+"Turns your transmission on and off while connected to a server." = "Menghidupkan dan mematikan penghantaran anda semasa bersambung ke server.";

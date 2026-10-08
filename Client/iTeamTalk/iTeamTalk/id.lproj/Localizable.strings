@@ -38,7 +38,7 @@
 "%@, your username \"%@\" has been validated" = "%@, nama pengguna Anda \"%@\" telah divalidasi";
 
 /* preferences */
-"%d %% - Default" = "%d %% - Default";
+"%d %% - Default" = "%d %% - Bawaan";
 
 /* user accounts */
 "%d accounts" = "%d akun";
@@ -98,25 +98,25 @@
 "100 % leaves the file as it is. The preview plays on this device only, with this volume and from the chosen position." = "100 % membiarkan file apa adanya. Pratinjau hanya diputar di perangkat ini, dengan volume ini dan dari posisi yang dipilih.";
 
 /* codec detail */
-"12 KHz" = "12 KHz";
+"12 KHz" = "12 kHz";
 
 /* codec detail
    create channel */
-"16 KHz" = "16 KHz";
+"16 KHz" = "16 kHz";
 
 /* codec detail */
-"24 KHz" = "24 KHz";
+"24 KHz" = "24 kHz";
 
 /* codec detail
    create channel */
-"32 KHz" = "32 KHz";
+"32 KHz" = "32 kHz";
 
 /* codec detail */
-"48 KHz" = "48 KHz";
+"48 KHz" = "48 kHz";
 
 /* codec detail
    create channel */
-"8 KHz" = "8 KHz";
+"8 KHz" = "8 kHz";
 
 /* user accounts */
 "A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "Perubahan izin berlaku saat pengguna masuk berikutnya. Yang sedang terhubung tetap memakai izin lama sampai saat itu.";
@@ -172,6 +172,9 @@
 
 /* media stream */
 "Address of a web radio or of an audio or video file" = "Alamat radio web atau file audio atau video";
+
+/* accessibility hint */
+"Adds a server to the list" = "Menambahkan server ke daftar";
 
 /* user accounts */
 "Administrator" = "Administrator";
@@ -240,7 +243,7 @@
 "Audio Channels" = "Saluran Audio";
 
 /* create channel */
-"Audio Codec" = "Audio Codec";
+"Audio Codec" = "Codec Audio";
 
 /* channel list */
 "Audio Output" = "Keluaran Audio";
@@ -310,10 +313,10 @@
 "Bjoern D. Rasmussen, contact@bearware.dk" = "Bjoern D. Rasmussen, contact@bearware.dk";
 
 /* Sound Devices */
-"Bluetooth A2DP Playback" = "Bluetooth A2DP Playback";
+"Bluetooth A2DP Playback" = "Pemutaran Bluetooth A2DP";
 
 /* Sound Devices */
-"Bluetooth playback should use Advanced Audio Distribution Profile" = "Bluetooth playback should use Advanced Audio Distribution Profile";
+"Bluetooth playback should use Advanced Audio Distribution Profile" = "Pemutaran Bluetooth sebaiknya menggunakan Advanced Audio Distribution Profile";
 
 /* all users */
 "Bring to My Channel" = "Bawa ke Saluran Saya";
@@ -366,6 +369,12 @@
    user detail */
 "Channel Messages" = "Pesan Saluran";
 
+/* server entry */
+"Channel name" = "Nama saluran";
+
+/* server entry */
+"Channel password" = "Kata sandi saluran";
+
 /* create channel */
 "Channel Properties" = "Properti Saluran";
 
@@ -411,6 +420,9 @@
 /* preferences */
 "Choose sounds events to play" = "Pilih suara peristiwa yang diputar";
 
+/* accessibility hint */
+"Chooses where the sound comes out" = "Memilih dari mana suara keluar";
+
 /* all users */
 "Choosing a user shows the channel they are in. If the server does not let your account see all users, only those of your channel are listed." = "Memilih pengguna menampilkan saluran tempat ia berada. Jika server tidak mengizinkan akun Anda melihat semua pengguna, hanya pengguna di saluran Anda yang ditampilkan.";
 
@@ -445,7 +457,7 @@
 "Command" = "Command";
 
 /* log entry */
-"Command failed: %@" = "Command failed: %@";
+"Command failed: %@" = "Perintah gagal: %@";
 
 /* connection quality */
 "Command Latency (TCP)" = "Latensi Perintah (TCP)";
@@ -472,7 +484,7 @@
 "Connect to server" = "Hubungkan ke server";
 
 /* connect to a server */
-"Connect to Server" = "Connect to Server";
+"Connect to Server" = "Hubungkan ke Server";
 
 /* preferences */
 "Connect to the last server and channel when the app opens" = "Hubungkan ke server dan saluran terakhir saat app dibuka";
@@ -488,6 +500,9 @@
 /* connection quality */
 "Connection Quality" = "Kualitas Koneksi";
 
+/* accessibility hint */
+"Connects to this server" = "Menghubungkan ke server ini";
+
 /* keyboard shortcuts */
 "Control" = "Control";
 
@@ -501,7 +516,7 @@
 "Copied" = "Disalin";
 
 /* server entry */
-"Copy" = "Copy";
+"Copy" = "Salin";
 
 /* server entry */
 "Copy Join Code" = "Salin Kode Gabung";
@@ -537,7 +552,7 @@
 "Data" = "Data";
 
 /* Sound Input */
-"Default" = "Default";
+"Default" = "Bawaan";
 
 /* preferences */
 "Default Subscriptions" = "Langganan Default";
@@ -585,6 +600,9 @@
 /* channel list */
 "Disconnect" = "Putuskan";
 
+/* accessibility hint */
+"Disconnects from the server and goes back to the server list" = "Memutuskan dari server dan kembali ke daftar server";
+
 /* preferences */
 "Display" = "Tampilan";
 
@@ -630,14 +648,20 @@
 /* server entry */
 "Encrypted" = "Dienkripsi";
 
+/* accessibility hint */
+"Ends the selection of users" = "Mengakhiri pemilihan pengguna";
+
 /* media stream */
 "Enter a web address that starts with http or https" = "Masukkan alamat web yang diawali http atau https";
 
 /* serverlist */
-"Enter Join Code" = "Enter Join Code";
+"Enter Join Code" = "Masukkan Kode Gabung";
 
 /* Dialog message */
 "Enter Password" = "Masukkan Kata Sandi";
+
+/* accessibility hint */
+"Enters the channel" = "Masuk ke saluran";
 
 /* Dialog
    Dialog message
@@ -697,7 +721,7 @@
 "Failed to play the file" = "Gagal memutar file";
 
 /* connect to a server */
-"Failed to setup encryption" = "Failed to setup encryption";
+"Failed to setup encryption" = "Gagal menyiapkan enkripsi";
 
 /* media stream */
 "Failed to stream media file" = "Gagal menyiarkan file media";
@@ -745,7 +769,7 @@
 "Forward 10 Seconds" = "Maju 10 Detik";
 
 /* codec detail */
-"Frame Size" = "Frame Size";
+"Frame Size" = "Ukuran Frame";
 
 /* preferences */
 "Gender" = "Jenis kelamin";
@@ -760,6 +784,9 @@
 /* channel list */
 "Go to Their Channel" = "Buka Salurannya";
 
+/* accessibility hint */
+"Goes to the channel this user is in" = "Membuka saluran tempat pengguna ini berada";
+
 /* TTS EVENT */
 "has joined the channel" = "telah bergabung dengan saluran";
 
@@ -773,7 +800,7 @@
 "has logged out" = "telah keluar dari server";
 
 /* preferences */
-"Headset TX Toggle" = "Headset TX Toggle";
+"Headset TX Toggle" = "Alihkan TX dengan Headset";
 
 /* hidden channel */
 "Hidden Channel" = "Saluran Tersembunyi";
@@ -830,7 +857,10 @@
 "Join channel" = "Bergabung Dengan Saluran";
 
 /* server entry */
-"Join Code: %@" = "Join Code: %@";
+"Join Code" = "Kode Gabung";
+
+/* server entry */
+"Join Code: %@" = "Kode Gabung: %@";
 
 /* preferences */
 "Join Root Channel" = "Bergabung Dengan Saluran Utama";
@@ -846,6 +876,9 @@
 
 /* log entry */
 "Joined %@" = "Bergabung %@";
+
+/* accessibility hint */
+"Joins the channel that is shown" = "Bergabung ke saluran yang ditampilkan";
 
 /* keyboard shortcuts */
 "Key" = "Tombol";
@@ -885,6 +918,9 @@
 
 /* connection quality */
 "Latency and packet loss" = "Latensi dan kehilangan paket";
+
+/* accessibility hint */
+"Lets you choose several users to move, kick or ban them" = "Memungkinkan memilih beberapa pengguna untuk dipindahkan, dikeluarkan, atau dicekal";
 
 /* appearance */
 "Light or Dark" = "Terang atau Gelap";
@@ -1093,7 +1129,7 @@
 "No results" = "Tidak ada hasil";
 
 /* serverlist */
-"No server found" = "No server found";
+"No server found" = "Server tidak ditemukan";
 
 /* user accounts */
 "No user accounts" = "Tidak ada akun pengguna";
@@ -1140,6 +1176,9 @@
 /* serverlist */
 "Official server" = "Server resmi";
 
+/* server list */
+"Official Servers" = "Server Resmi";
+
 /* Dialog
    Dialog message
    message dialog
@@ -1159,14 +1198,23 @@
 /* diagnostics */
 "Open Settings" = "Buka Pengaturan";
 
+/* accessibility hint */
+"Opens a menu with more options" = "Membuka menu dengan opsi lainnya";
+
 /* file list */
 "Opens the file" = "Membuka file";
+
+/* accessibility hint */
+"Opens the private messages with this user" = "Membuka pesan pribadi dengan pengguna ini";
+
+/* accessibility hint */
+"Opens the screen to stream audio or video to the channel" = "Membuka layar untuk menyiarkan audio atau video ke saluran";
 
 /* keyboard shortcuts */
 "Option" = "Option";
 
 /* codec detail */
-"OPUS Codec" = "OPUS Codec";
+"OPUS Codec" = "Codec OPUS";
 
 /* preferences */
 "Order of channels in Channel List" = "Urutan saluran dalam daftar saluran";
@@ -1259,7 +1307,7 @@
 "Preferences" = "Pengaturan";
 
 /* Sound Input */
-"Preferred" = "Preferred";
+"Preferred" = "Diutamakan";
 
 /* media stream */
 "Preparing file" = "Menyiapkan file";
@@ -1286,7 +1334,7 @@
 "Private text message from %@. %@" = "Pesan teks pribadi dari %@. %@";
 
 /* preferences */
-"Proximity Sensor" = "Proximity Sensor";
+"Proximity Sensor" = "Sensor Jarak";
 
 /* serverlist */
 "Public server" = "Server publik";
@@ -1382,7 +1430,7 @@
 "Same as the System" = "Sama dengan Sistem";
 
 /* codec detail */
-"Sample Rate" = "Sample Rate";
+"Sample Rate" = "Laju Sampel";
 
 /* channel detail */
 "Save" = "Simpan";
@@ -1426,6 +1474,9 @@
 /* speech */
 "Selected" = "Dipilih";
 
+/* accessibility hint */
+"Selects or deselects this user" = "Memilih atau batal memilih pengguna ini";
+
 /* text messages */
 "Send" = "Kirim";
 
@@ -1452,6 +1503,9 @@
 
 /* media stream */
 "Send Video" = "Kirim Video";
+
+/* accessibility hint */
+"Sends the message" = "Mengirim pesan";
 
 /* connection quality */
 "Sent" = "Terkirim";
@@ -1481,7 +1535,7 @@
 "Server List Entry" = "Entri Daftar Server";
 
 /* server entry */
-"Server Status" = "Server Status";
+"Server Status" = "Status Server";
 
 /* preferences */
 "Setup Announcements" = "Atur Pemberitahuan Suara";
@@ -1518,6 +1572,9 @@
 
 /* preferences */
 "Show male or female icon" = "Tampilkan Ikon pria atau wanita";
+
+/* preferences */
+"Show male, female or neutral icon" = "Tampilkan ikon pria, wanita, atau netral";
 
 /* server entry */
 "Show password" = "Tampilkan kata sandi";
@@ -1569,7 +1626,7 @@
 "Speaker" = "Speaker";
 
 /* preferences */
-"Speaker Output" = "Speaker Output";
+"Speaker Output" = "Keluaran Speaker";
 
 /* channel list */
 "Speakers" = "Speaker";
@@ -1590,10 +1647,10 @@
 "Speech Volume" = "Volume Ucapan";
 
 /* codec detail */
-"Speex Codec" = "Speex Codec";
+"Speex Codec" = "Codec Speex";
 
 /* codec detail */
-"Speex Variable Bitrate Codec" = "Speex Variable Bitrate Codec";
+"Speex Variable Bitrate Codec" = "Codec Speex Bitrate Variabel";
 
 /* text to speech events */
 "Spoken By" = "Diucapkan Oleh";
@@ -1678,7 +1735,7 @@
 "Talking" = "Sedang berbicara";
 
 /* server entry */
-"TCP Port" = "TCP Port";
+"TCP Port" = "Port TCP";
 
 /* channel list */
 "TeamTalk has no access to the microphone. Turn it on in Settings, under TeamTalk, and try again." = "TeamTalk tidak memiliki akses ke mikrofon. Nyalakan di Pengaturan, di bawah TeamTalk, lalu coba lagi.";
@@ -1807,17 +1864,20 @@
 "Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Dimatikan. Nyalakan Aktivitas Langsung di Pengaturan, di bawah TeamTalk.";
 
 /* serverlist */
-"Type Join Code" = "Type Join Code";
+"Type Join Code" = "Ketik Kode Gabung";
 
 /* text field hint
    text message */
 "Type text here" = "Tulis teks di sini";
 
 /* server entry */
-"UDP Port" = "UDP Port";
+"UDP Port" = "Port UDP";
 
 /* serverlist */
 "Unofficial server" = "Server tidak resmi";
+
+/* server list */
+"Unofficial Servers" = "Server Tidak Resmi";
 
 /* file list */
 "Upload file" = "Unggah file";
@@ -1833,6 +1893,9 @@
 
 /* file list */
 "Uploading, %d %%" = "Mengunggah, %d %%";
+
+/* accessibility hint */
+"Uploads files or photos to the channel" = "Mengunggah file atau foto ke saluran";
 
 /* preferences */
 "Use echo cancellation and automatic gain control" = "Gunakan echo cancellation dan  gain control otomatis";
@@ -1919,7 +1982,7 @@
 "Users: %d, Country: %@" = "Pengguna: %1$d, Negara: %2$@";
 
 /* codec detail */
-"Variable Bitrate" = "Variable Bitrate";
+"Variable Bitrate" = "Bitrate Variabel";
 
 /* preferences */
 "Version Information" = "Informasi Versi";
@@ -1989,11 +2052,11 @@
 "Web address, live" = "Alamat web, langsung";
 
 /* Web Login controller */
-"Web Login ID" = "Web Login ID";
+"Web Login ID" = "ID Web Login";
 
 /* preferences
    user detail */
-"WebCam" = "WebCam";
+"WebCam" = "Webcam";
 
 /* Sound Devices */
 "WebRTC" = "WebRTC";
@@ -2012,6 +2075,9 @@
 
 /* diagnostics */
 "Widget and Controls" = "Widget dan Kontrol";
+
+/* accessibility hint */
+"Write your message here" = "Tulis pesan Anda di sini";
 
 /* Dialog message */
 "Yes" = "Ya";

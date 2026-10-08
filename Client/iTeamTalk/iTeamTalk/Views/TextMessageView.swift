@@ -69,6 +69,7 @@ struct TextMessageView: View {
                         .frame(minHeight: 40, maxHeight: 96)
                         .textInputAutocapitalization(.sentences)
                         .accessibilityLabel("Message")
+                        .accessibilityHint("Write your message here")
                         .onChange(of: model.composedText) { text in
                             sendOnReturnIfNeeded(text)
                         }
@@ -90,6 +91,7 @@ struct TextMessageView: View {
                     }
                 }
                 .buttonStyle(.borderedProminent)
+                .accessibilityHint("Sends the message")
             }
             .padding(.horizontal, 8)
             .padding(.vertical, 6)

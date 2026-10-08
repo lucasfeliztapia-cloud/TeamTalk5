@@ -173,6 +173,9 @@
 /* media stream */
 "Address of a web radio or of an audio or video file" = "عنوان إذاعة ويب أو ملف صوت أو فيديو";
 
+/* accessibility hint */
+"Adds a server to the list" = "يضيف خادمًا إلى القائمة";
+
 /* user accounts */
 "Administrator" = "مدير";
 
@@ -309,7 +312,7 @@
 "Bjoern D. Rasmussen, contact@bearware.dk" = "مؤمل الجناحي (Muamal Aljanahi), muamal.aljanahi@gmail.com";
 
 /* Sound Devices */
-"Bluetooth A2DP Playback" = "Bluetooth A2DP Playback";
+"Bluetooth A2DP Playback" = "تشغيل Bluetooth A2DP";
 
 /* Sound Devices */
 "Bluetooth playback should use Advanced Audio Distribution Profile" = "يجب أن يستخدم تشغيل Bluetooth ملف تعريف توزيع الصوت المتقدم";
@@ -365,6 +368,12 @@
    user detail */
 "Channel Messages" = "رسائل القناة";
 
+/* server entry */
+"Channel name" = "اسم القناة";
+
+/* server entry */
+"Channel password" = "كلمة مرور القناة";
+
 /* create channel */
 "Channel Properties" = "خصائص القناة";
 
@@ -409,6 +418,9 @@
 
 /* preferences */
 "Choose sounds events to play" = "اختر أصوات الأحداث التي تُشغَّل";
+
+/* accessibility hint */
+"Chooses where the sound comes out" = "يختار من أين يخرج الصوت";
 
 /* all users */
 "Choosing a user shows the channel they are in. If the server does not let your account see all users, only those of your channel are listed." = "اختيار مستخدم يعرض القناة التي هو فيها. إذا لم يسمح الخادم لحسابك برؤية كل المستخدمين، يُعرض مستخدمو قناتك فقط.";
@@ -487,6 +499,9 @@
 /* connection quality */
 "Connection Quality" = "جودة الاتصال";
 
+/* accessibility hint */
+"Connects to this server" = "يتصل بهذا الخادم";
+
 /* keyboard shortcuts */
 "Control" = "Control";
 
@@ -500,7 +515,7 @@
 "Copied" = "تم النسخ";
 
 /* server entry */
-"Copy" = "Copy";
+"Copy" = "نسخ";
 
 /* server entry */
 "Copy Join Code" = "نسخ رمز الانضمام";
@@ -584,6 +599,9 @@
 /* channel list */
 "Disconnect" = "قطع الاتصال";
 
+/* accessibility hint */
+"Disconnects from the server and goes back to the server list" = "يقطع الاتصال بالخادم ويعود إلى قائمة الخوادم";
+
 /* preferences */
 "Display" = "عرض";
 
@@ -629,14 +647,20 @@
 /* server entry */
 "Encrypted" = "مشفر";
 
+/* accessibility hint */
+"Ends the selection of users" = "ينهي تحديد المستخدمين";
+
 /* media stream */
 "Enter a web address that starts with http or https" = "أدخل عنوان ويب يبدأ بـ http أو https";
 
 /* serverlist */
-"Enter Join Code" = "Enter Join Code";
+"Enter Join Code" = "أدخل رمز الانضمام";
 
 /* Dialog message */
 "Enter Password" = "أدخل كلمة المرور";
+
+/* accessibility hint */
+"Enters the channel" = "يدخل القناة";
 
 /* Dialog
    Dialog message
@@ -744,7 +768,7 @@
 "Forward 10 Seconds" = "تقديم 10 ثوانٍ";
 
 /* codec detail */
-"Frame Size" = "Frame Size";
+"Frame Size" = "حجم الإطار";
 
 /* preferences */
 "Gender" = "الجنس";
@@ -758,6 +782,9 @@
 
 /* channel list */
 "Go to Their Channel" = "الذهاب إلى قناته";
+
+/* accessibility hint */
+"Goes to the channel this user is in" = "يذهب إلى القناة التي فيها هذا المستخدم";
 
 /* TTS EVENT */
 "has joined the channel" = "إنضم للقناة";
@@ -829,7 +856,10 @@
 "Join channel" = "الانضمام إلى القناة";
 
 /* server entry */
-"Join Code: %@" = "Join Code: %@";
+"Join Code" = "رمز الانضمام";
+
+/* server entry */
+"Join Code: %@" = "رمز الانضمام: %@";
 
 /* preferences */
 "Join Root Channel" = "الانضمام إلى القناة الرئيسية";
@@ -845,6 +875,9 @@
 
 /* log entry */
 "Joined %@" = "انضم %@";
+
+/* accessibility hint */
+"Joins the channel that is shown" = "ينضم إلى القناة المعروضة";
 
 /* keyboard shortcuts */
 "Key" = "المفتاح";
@@ -884,6 +917,9 @@
 
 /* connection quality */
 "Latency and packet loss" = "التأخر وفقدان الحزم";
+
+/* accessibility hint */
+"Lets you choose several users to move, kick or ban them" = "يتيح اختيار عدة مستخدمين لنقلهم أو طردهم أو حظرهم";
 
 /* appearance */
 "Light or Dark" = "فاتح أو داكن";
@@ -1092,7 +1128,7 @@
 "No results" = "لا توجد نتائج";
 
 /* serverlist */
-"No server found" = "No server found";
+"No server found" = "لم يتم العثور على أي خادم";
 
 /* user accounts */
 "No user accounts" = "لا توجد حسابات مستخدمين";
@@ -1139,6 +1175,9 @@
 /* serverlist */
 "Official server" = "خادم رسمي";
 
+/* server list */
+"Official Servers" = "الخوادم الرسمية";
+
 /* Dialog
    Dialog message
    message dialog
@@ -1157,8 +1196,17 @@
 /* diagnostics */
 "Open Settings" = "فتح الإعدادات";
 
+/* accessibility hint */
+"Opens a menu with more options" = "يفتح قائمة فيها خيارات أكثر";
+
 /* file list */
 "Opens the file" = "يفتح الملف";
+
+/* accessibility hint */
+"Opens the private messages with this user" = "يفتح الرسائل الخاصة مع هذا المستخدم";
+
+/* accessibility hint */
+"Opens the screen to stream audio or video to the channel" = "يفتح شاشة بث الصوت أو الفيديو إلى القناة";
 
 /* keyboard shortcuts */
 "Option" = "Option";
@@ -1379,7 +1427,7 @@
 "Same as the System" = "مثل النظام";
 
 /* codec detail */
-"Sample Rate" = "Sample Rate";
+"Sample Rate" = "معدل العينة";
 
 /* channel detail */
 "Save" = "حفظ";
@@ -1423,6 +1471,9 @@
 /* speech */
 "Selected" = "محدد";
 
+/* accessibility hint */
+"Selects or deselects this user" = "يحدد هذا المستخدم أو يلغي تحديده";
+
 /* text messages */
 "Send" = "إرسال";
 
@@ -1449,6 +1500,9 @@
 
 /* media stream */
 "Send Video" = "إرسال الفيديو";
+
+/* accessibility hint */
+"Sends the message" = "يرسل الرسالة";
 
 /* connection quality */
 "Sent" = "مرسل";
@@ -1515,6 +1569,9 @@
 
 /* preferences */
 "Show male or female icon" = "إظهار رمز ذكر أو أنثى";
+
+/* preferences */
+"Show male, female or neutral icon" = "إظهار أيقونة ذكر أو أنثى أو محايد";
 
 /* server entry */
 "Show password" = "إظهار كلمة المرور";
@@ -1587,10 +1644,10 @@
 "Speech Volume" = "مستوى الصوت";
 
 /* codec detail */
-"Speex Codec" = "Speex Codec";
+"Speex Codec" = "ترميز Speex";
 
 /* codec detail */
-"Speex Variable Bitrate Codec" = "Speex Variable Bitrate Codec";
+"Speex Variable Bitrate Codec" = "ترميز Speex بمعدل بت متغير";
 
 /* text to speech events */
 "Spoken By" = "ينطقه";
@@ -1804,7 +1861,7 @@
 "Turned off. Turn on Live Activities in Settings, under TeamTalk." = "معطلة. فعّل الأنشطة المباشرة في الإعدادات، ضمن TeamTalk.";
 
 /* serverlist */
-"Type Join Code" = "Type Join Code";
+"Type Join Code" = "اكتب رمز الانضمام";
 
 /* text field hint
    text message */
@@ -1815,6 +1872,9 @@
 
 /* serverlist */
 "Unofficial server" = "خادم غير رسمي";
+
+/* server list */
+"Unofficial Servers" = "الخوادم غير الرسمية";
 
 /* file list */
 "Upload file" = "رفع ملف";
@@ -1830,6 +1890,9 @@
 
 /* file list */
 "Uploading, %d %%" = "جارٍ الرفع، %d %%";
+
+/* accessibility hint */
+"Uploads files or photos to the channel" = "يرفع ملفات أو صورًا إلى القناة";
 
 /* preferences */
 "Use echo cancellation and automatic gain control" = "استخدام إلغاء الصدى والتحكم بالميكروفون بشكل تلقائي";
@@ -1915,7 +1978,7 @@
 "Users: %d, Country: %@" = "المستخدمون: %1$d, الدولة: %2$@";
 
 /* codec detail */
-"Variable Bitrate" = "Variable Bitrate";
+"Variable Bitrate" = "معدل بت متغير";
 
 /* preferences */
 "Version Information" = "معلومات الإصدار";
@@ -2009,6 +2072,9 @@
 /* diagnostics */
 "Widget and Controls" = "الأداة وعناصر التحكم";
 
+/* accessibility hint */
+"Write your message here" = "اكتب رسالتك هنا";
+
 /* Dialog message */
 "Yes" = "نعم";
 
@@ -2022,7 +2088,7 @@
 "You have been kicked from channel by %@" = "لقد تم طردك من القناة من قبل %@";
 
 /* Dialog */
-"You have been kicked from server" = "You have been kicked from server";
+"You have been kicked from server" = "تم طردك من الخادم";
 
 /* Dialog */
 "You have been kicked from server by %@" = "لقد تم طردك من الخادم من قبل %@";

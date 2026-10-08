@@ -98,25 +98,25 @@
 "100 % leaves the file as it is. The preview plays on this device only, with this volume and from the chosen position." = "100 % deixa o arquivo como está. A prévia toca apenas neste dispositivo, com este volume e a partir da posição escolhida.";
 
 /* codec detail */
-"12 KHz" = "12 KHz";
+"12 KHz" = "12 kHz";
 
 /* codec detail
    create channel */
-"16 KHz" = "16 KHz";
+"16 KHz" = "16 kHz";
 
 /* codec detail */
-"24 KHz" = "24 KHz";
+"24 KHz" = "24 kHz";
 
 /* codec detail
    create channel */
-"32 KHz" = "32 KHz";
+"32 KHz" = "32 kHz";
 
 /* codec detail */
-"48 KHz" = "48 KHz";
+"48 KHz" = "48 kHz";
 
 /* codec detail
    create channel */
-"8 KHz" = "8 KHz";
+"8 KHz" = "8 kHz";
 
 /* user accounts */
 "A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "Uma mudança de permissões vale no próximo login do usuário. Quem está conectado mantém as antigas até lá.";
@@ -172,6 +172,9 @@
 
 /* media stream */
 "Address of a web radio or of an audio or video file" = "Endereço de uma rádio web ou de um arquivo de áudio ou vídeo";
+
+/* accessibility hint */
+"Adds a server to the list" = "Adiciona um servidor à lista";
 
 /* user accounts */
 "Administrator" = "Administrador";
@@ -304,7 +307,7 @@
 "BearWare.dk Web Login failed to authenticate. Check BearWare.dk Web Login in Preferences" = "Erro ao autenticar usando o login bearware.dk. Por favor, verificar em preferências.";
 
 /* codec detail */
-"Bitrate" = "Bitrate";
+"Bitrate" = "Taxa de bits";
 
 /* preferences */
 "Bjoern D. Rasmussen, contact@bearware.dk" = "Bjoern D. Rasmussen, contact@bearware.dk";
@@ -366,6 +369,12 @@
    user detail */
 "Channel Messages" = "Mensagens do canal";
 
+/* server entry */
+"Channel name" = "Nome do canal";
+
+/* server entry */
+"Channel password" = "Senha do canal";
+
 /* create channel */
 "Channel Properties" = "Propriedades do canal";
 
@@ -410,6 +419,9 @@
 
 /* preferences */
 "Choose sounds events to play" = "Escolha os eventos de som a tocar";
+
+/* accessibility hint */
+"Chooses where the sound comes out" = "Escolhe por onde o som sai";
 
 /* all users */
 "Choosing a user shows the channel they are in. If the server does not let your account see all users, only those of your channel are listed." = "Escolher um usuário mostra o canal em que ele está. Se o servidor não permitir que sua conta veja todos os usuários, só os do seu canal são listados.";
@@ -488,6 +500,9 @@
 /* connection quality */
 "Connection Quality" = "Qualidade da conexão";
 
+/* accessibility hint */
+"Connects to this server" = "Conecta a este servidor";
+
 /* keyboard shortcuts */
 "Control" = "Control";
 
@@ -501,7 +516,7 @@
 "Copied" = "Copiado";
 
 /* server entry */
-"Copy" = "Copy";
+"Copy" = "Copiar";
 
 /* server entry */
 "Copy Join Code" = "Copiar código de acesso";
@@ -585,6 +600,9 @@
 /* channel list */
 "Disconnect" = "Desconectar";
 
+/* accessibility hint */
+"Disconnects from the server and goes back to the server list" = "Desconecta do servidor e volta à lista de servidores";
+
 /* preferences */
 "Display" = "Tela";
 
@@ -630,14 +648,20 @@
 /* server entry */
 "Encrypted" = "Encriptado";
 
+/* accessibility hint */
+"Ends the selection of users" = "Encerra a seleção de usuários";
+
 /* media stream */
 "Enter a web address that starts with http or https" = "Digite um endereço web que comece com http ou https";
 
 /* serverlist */
-"Enter Join Code" = "Enter Join Code";
+"Enter Join Code" = "Inserir código de acesso";
 
 /* Dialog message */
 "Enter Password" = "Digite a senha";
+
+/* accessibility hint */
+"Enters the channel" = "Entra no canal";
 
 /* Dialog
    Dialog message
@@ -760,6 +784,9 @@
 /* channel list */
 "Go to Their Channel" = "Ir para o canal dele";
 
+/* accessibility hint */
+"Goes to the channel this user is in" = "Vai ao canal em que este usuário está";
+
 /* TTS EVENT */
 "has joined the channel" = "Entrou no canal";
 
@@ -830,7 +857,10 @@
 "Join channel" = "Entrar no canal";
 
 /* server entry */
-"Join Code: %@" = "Join Code: %@";
+"Join Code" = "Código de acesso";
+
+/* server entry */
+"Join Code: %@" = "Código de acesso: %@";
 
 /* preferences */
 "Join Root Channel" = "Entrar no canal inicial";
@@ -846,6 +876,9 @@
 
 /* log entry */
 "Joined %@" = "Entrou no canal %@";
+
+/* accessibility hint */
+"Joins the channel that is shown" = "Entra no canal mostrado";
 
 /* keyboard shortcuts */
 "Key" = "Tecla";
@@ -885,6 +918,9 @@
 
 /* connection quality */
 "Latency and packet loss" = "Latência e perda de pacotes";
+
+/* accessibility hint */
+"Lets you choose several users to move, kick or ban them" = "Permite escolher vários usuários para movê-los, expulsá-los ou bani-los";
 
 /* appearance */
 "Light or Dark" = "Claro ou escuro";
@@ -1093,7 +1129,7 @@
 "No results" = "Nenhum resultado";
 
 /* serverlist */
-"No server found" = "No server found";
+"No server found" = "Nenhum servidor encontrado";
 
 /* user accounts */
 "No user accounts" = "Nenhuma conta de usuário";
@@ -1140,6 +1176,9 @@
 /* serverlist */
 "Official server" = "Servidor oficial";
 
+/* server list */
+"Official Servers" = "Servidores oficiais";
+
 /* Dialog
    Dialog message
    message dialog
@@ -1159,8 +1198,17 @@
 /* diagnostics */
 "Open Settings" = "Abrir Ajustes";
 
+/* accessibility hint */
+"Opens a menu with more options" = "Abre um menu com mais opções";
+
 /* file list */
 "Opens the file" = "Abre o arquivo";
+
+/* accessibility hint */
+"Opens the private messages with this user" = "Abre as mensagens privadas com este usuário";
+
+/* accessibility hint */
+"Opens the screen to stream audio or video to the channel" = "Abre a tela para transmitir áudio ou vídeo ao canal";
 
 /* keyboard shortcuts */
 "Option" = "Option";
@@ -1426,6 +1474,9 @@
 /* speech */
 "Selected" = "Selecionada";
 
+/* accessibility hint */
+"Selects or deselects this user" = "Seleciona ou desmarca este usuário";
+
 /* text messages */
 "Send" = "Enviar";
 
@@ -1452,6 +1503,9 @@
 
 /* media stream */
 "Send Video" = "Enviar vídeo";
+
+/* accessibility hint */
+"Sends the message" = "Envia a mensagem";
 
 /* connection quality */
 "Sent" = "Enviado";
@@ -1518,6 +1572,9 @@
 
 /* preferences */
 "Show male or female icon" = "Mostrar ícones de gêneros";
+
+/* preferences */
+"Show male, female or neutral icon" = "Mostrar ícone masculino, feminino ou neutro";
 
 /* server entry */
 "Show password" = "Mostrar senha";
@@ -1807,7 +1864,7 @@
 "Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Desativadas. Ative as Atividades ao Vivo em Ajustes, em TeamTalk.";
 
 /* serverlist */
-"Type Join Code" = "Type Join Code";
+"Type Join Code" = "Digite o código de acesso";
 
 /* text field hint
    text message */
@@ -1818,6 +1875,9 @@
 
 /* serverlist */
 "Unofficial server" = "Servidor não oficial";
+
+/* server list */
+"Unofficial Servers" = "Servidores não oficiais";
 
 /* file list */
 "Upload file" = "Enviar arquivo";
@@ -1833,6 +1893,9 @@
 
 /* file list */
 "Uploading, %d %%" = "Enviando, %d %%";
+
+/* accessibility hint */
+"Uploads files or photos to the channel" = "Envia arquivos ou fotos ao canal";
 
 /* preferences */
 "Use echo cancellation and automatic gain control" = "Usar cancelamento de eco e controle de volume automático";
@@ -1993,7 +2056,7 @@
 
 /* preferences
    user detail */
-"WebCam" = "WebCam";
+"WebCam" = "Webcam";
 
 /* Sound Devices */
 "WebRTC" = "WebRTC";
@@ -2012,6 +2075,9 @@
 
 /* diagnostics */
 "Widget and Controls" = "Widget e controles";
+
+/* accessibility hint */
+"Write your message here" = "Escreva sua mensagem aqui";
 
 /* Dialog message */
 "Yes" = "Sim";

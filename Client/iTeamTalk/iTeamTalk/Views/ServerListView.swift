@@ -82,6 +82,7 @@ struct ServerListView: View {
                         .buttonStyle(.bordered)
                     }
                     .accessibilityElement(children: .combine)
+                    .accessibilityHint("Connects to this server")
                     .contentShape(Rectangle())
                     .onTapGesture {
                         model.showServerDetail(for: server)
@@ -132,6 +133,7 @@ struct ServerListView: View {
                     } label: {
                         Image(systemName: "plus")
                             .accessibilityLabel("Add new server entry")
+                            .accessibilityHint("Adds a server to the list")
                     }
                 }
             }

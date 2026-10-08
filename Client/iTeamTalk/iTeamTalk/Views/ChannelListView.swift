@@ -131,6 +131,7 @@ private extension ChannelListContainerView {
         }
         .accessibilityLabel("Audio Output")
         .accessibilityValue(model.speakerOutput ? Text("Speaker") : Text("Earpiece or Headset"))
+        .accessibilityHint("Chooses where the sound comes out")
     }
 
     /// The rounded shape of the three buttons of the bar
@@ -139,7 +140,7 @@ private extension ChannelListContainerView {
     }
 
     var talkButton: some View {
-        Text("Talk")
+        Text("Microphone")
             .frame(maxWidth: .infinity)
             .frame(height: 50)
             // in a shape, so the color stays in the button
@@ -160,7 +161,7 @@ private extension ChannelListContainerView {
                         model.txBtnUp()
                     }
             )
-            .accessibilityLabel("Push to Talk")
+            .accessibilityLabel("Microphone")
             .accessibilityHint(model.pttHint)
             .accessibilityValue(model.isTransmitting
                 ? Text("Active")
@@ -235,6 +236,7 @@ struct ChannelListView: View {
                     Text("Join this channel")
                         .frame(maxWidth: .infinity, alignment: .center)
                 }
+                .accessibilityHint("Joins the channel that is shown")
 
             case .header(let title):
                 Text(title)
@@ -291,6 +293,7 @@ struct ChannelListView: View {
                 }
                 .accessibilityElement(children: .combine)
                 .accessibilityAddTraits(isMoveSelected ? .isSelected : [])
+                .accessibilityHint(model.userAccessibilityHint())
                 // Activating a combined row presses the button inside it, which
                 // opens the private messages. Stated here so that selecting wins.
                 .accessibilityAction {
@@ -361,7 +364,7 @@ struct ChannelListView: View {
                     }
                 }
                 .accessibilityElement(children: .combine)
-                .accessibilityHint(model.moveDestinationAccessibilityHint())
+                .accessibilityHint(model.channelAccessibilityHint())
                 // Activating a combined row presses the button inside it, which
                 // opens the properties of the channel. With VoiceOver a channel
                 // is entered like with a tap, and its properties are an action.

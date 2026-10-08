@@ -31,6 +31,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var backgroundRunning: Bool = false
     var backgroundTask: UIBackgroundTaskIdentifier = UIBackgroundTaskIdentifier.invalid
     
+    /// What the scrub of VoiceOver does when no view answered it. Set by the
+    /// screen of the connected server while it is shown.
+    static var escapeHandler: (() -> Bool)?
+
+    override func accessibilityPerformEscape() -> Bool {
+        guard let handler = AppDelegate.escapeHandler else { return false }
+        // an alert or a sheet on top closes by itself: never act behind it
+        let windows = UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .flatMap { $0.windows }
+        if windows.contains(where: { $0.rootViewController?.presentedViewController != nil }) {
+            return false
+        }
+        return handler()
+    }
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         

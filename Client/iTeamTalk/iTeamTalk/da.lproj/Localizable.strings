@@ -98,25 +98,25 @@
 "100 % leaves the file as it is. The preview plays on this device only, with this volume and from the chosen position." = "100 % lader filen være, som den er. Forhåndsvisningen afspilles kun på denne enhed, med denne lydstyrke og fra den valgte position.";
 
 /* codec detail */
-"12 KHz" = "12 KHz";
+"12 KHz" = "12 kHz";
 
 /* codec detail
    create channel */
-"16 KHz" = "16 KHz";
+"16 KHz" = "16 kHz";
 
 /* codec detail */
-"24 KHz" = "24 KHz";
+"24 KHz" = "24 kHz";
 
 /* codec detail
    create channel */
-"32 KHz" = "32 KHz";
+"32 KHz" = "32 kHz";
 
 /* codec detail */
-"48 KHz" = "48 KHz";
+"48 KHz" = "48 kHz";
 
 /* codec detail
    create channel */
-"8 KHz" = "8 KHz";
+"8 KHz" = "8 kHz";
 
 /* user accounts */
 "A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "En ændring af rettigheder gælder, næste gang brugeren logger ind. Den, der er forbundet, beholder de gamle indtil da.";
@@ -173,6 +173,9 @@
 /* media stream */
 "Address of a web radio or of an audio or video file" = "Adresse på en webradio eller på en lyd- eller videofil";
 
+/* accessibility hint */
+"Adds a server to the list" = "Føjer en server til listen";
+
 /* user accounts */
 "Administrator" = "Administrator";
 
@@ -219,7 +222,7 @@
 "Anonymous users" = "Anonyme brugere";
 
 /* preferences */
-"App Version" = "App Version";
+"App Version" = "App-version";
 
 /* appearance */
 "Appearance" = "Udseende";
@@ -300,7 +303,7 @@
 "BearWare.dk Web Login" = "BearWare.dk Web Login";
 
 /* weblogin event */
-"BearWare.dk Web Login failed to authenticate. Check BearWare.dk Web Login in Preferences" = "BearWare.dk Web Login failed to authenticate. Check BearWare.dk Web Login in Preferences";
+"BearWare.dk Web Login failed to authenticate. Check BearWare.dk Web Login in Preferences" = "BearWare.dk Web Login kunne ikke godkendes. Tjek BearWare.dk Web Login i Indstillinger";
 
 /* codec detail */
 "Bitrate" = "Overførselshastighed";
@@ -309,10 +312,10 @@
 "Bjoern D. Rasmussen, contact@bearware.dk" = "Bjoern D. Rasmussen, contact@bearware.dk";
 
 /* Sound Devices */
-"Bluetooth A2DP Playback" = "Bluetooth A2DP Playback";
+"Bluetooth A2DP Playback" = "Bluetooth A2DP-afspilning";
 
 /* Sound Devices */
-"Bluetooth playback should use Advanced Audio Distribution Profile" = "Bluetooth playback should use Advanced Audio Distribution Profile";
+"Bluetooth playback should use Advanced Audio Distribution Profile" = "Bluetooth-afspilning skal bruge Advanced Audio Distribution Profile";
 
 /* all users */
 "Bring to My Channel" = "Hent til min kanal";
@@ -365,6 +368,12 @@
    user detail */
 "Channel Messages" = "Kanalbeskeder";
 
+/* server entry */
+"Channel name" = "Kanalnavn";
+
+/* server entry */
+"Channel password" = "Kanalkodeord";
+
 /* create channel */
 "Channel Properties" = "Kanalegenskaber";
 
@@ -410,6 +419,9 @@
 /* preferences */
 "Choose sounds events to play" = "Vælg lydhændelser, der skal afspilles";
 
+/* accessibility hint */
+"Chooses where the sound comes out" = "Vælger, hvor lyden kommer ud";
+
 /* all users */
 "Choosing a user shows the channel they are in. If the server does not let your account see all users, only those of your channel are listed." = "Når du vælger en bruger, vises den kanal, vedkommende er i. Hvis serveren ikke lader din konto se alle brugere, vises kun dem i din kanal.";
 
@@ -444,7 +456,7 @@
 "Command" = "Kommando";
 
 /* log entry */
-"Command failed: %@" = "Command failed: %@";
+"Command failed: %@" = "Kommandoen mislykkedes: %@";
 
 /* connection quality */
 "Command Latency (TCP)" = "Kommandoforsinkelse (TCP)";
@@ -471,7 +483,7 @@
 "Connect to server" = "Forbind til server";
 
 /* connect to a server */
-"Connect to Server" = "Connect to Server";
+"Connect to Server" = "Forbind til server";
 
 /* preferences */
 "Connect to the last server and channel when the app opens" = "Forbind til den seneste server og kanal, når appen åbner";
@@ -487,6 +499,9 @@
 /* connection quality */
 "Connection Quality" = "Forbindelseskvalitet";
 
+/* accessibility hint */
+"Connects to this server" = "Forbinder til denne server";
+
 /* keyboard shortcuts */
 "Control" = "Ctrl";
 
@@ -500,7 +515,7 @@
 "Copied" = "Kopieret";
 
 /* server entry */
-"Copy" = "Copy";
+"Copy" = "Kopier";
 
 /* server entry */
 "Copy Join Code" = "Kopier adgangskode til server";
@@ -584,6 +599,9 @@
 /* channel list */
 "Disconnect" = "Afbryd";
 
+/* accessibility hint */
+"Disconnects from the server and goes back to the server list" = "Afbryder forbindelsen til serveren og går tilbage til serverlisten";
+
 /* preferences */
 "Display" = "Visning";
 
@@ -629,14 +647,20 @@
 /* server entry */
 "Encrypted" = "Krypteret";
 
+/* accessibility hint */
+"Ends the selection of users" = "Afslutter valget af brugere";
+
 /* media stream */
 "Enter a web address that starts with http or https" = "Indtast en webadresse, der begynder med http eller https";
 
 /* serverlist */
-"Enter Join Code" = "Enter Join Code";
+"Enter Join Code" = "Indtast adgangskode til server";
 
 /* Dialog message */
 "Enter Password" = "Skriv Kodeord";
+
+/* accessibility hint */
+"Enters the channel" = "Går ind i kanalen";
 
 /* Dialog
    Dialog message
@@ -696,7 +720,7 @@
 "Failed to play the file" = "Filen kunne ikke afspilles";
 
 /* connect to a server */
-"Failed to setup encryption" = "Failed to setup encryption";
+"Failed to setup encryption" = "Kunne ikke opsætte kryptering";
 
 /* media stream */
 "Failed to stream media file" = "Mediefilen kunne ikke streames";
@@ -744,7 +768,7 @@
 "Forward 10 Seconds" = "10 sekunder frem";
 
 /* codec detail */
-"Frame Size" = "Frame Size";
+"Frame Size" = "Rammestørrelse";
 
 /* preferences */
 "Gender" = "Køn";
@@ -758,6 +782,9 @@
 
 /* channel list */
 "Go to Their Channel" = "Gå til vedkommendes kanal";
+
+/* accessibility hint */
+"Goes to the channel this user is in" = "Går til den kanal, denne bruger er i";
 
 /* TTS EVENT */
 "has joined the channel" = "er nu i kanalen";
@@ -829,7 +856,10 @@
 "Join channel" = "Skift til kanal";
 
 /* server entry */
-"Join Code: %@" = "Join Code: %@";
+"Join Code" = "Adgangskode til server";
+
+/* server entry */
+"Join Code: %@" = "Adgangskode til server: %@";
 
 /* preferences */
 "Join Root Channel" = "Skift til Rodkanalen";
@@ -845,6 +875,9 @@
 
 /* log entry */
 "Joined %@" = "Indgår nu i %@";
+
+/* accessibility hint */
+"Joins the channel that is shown" = "Deltager i den viste kanal";
 
 /* keyboard shortcuts */
 "Key" = "Tast";
@@ -884,6 +917,9 @@
 
 /* connection quality */
 "Latency and packet loss" = "Forsinkelse og pakketab";
+
+/* accessibility hint */
+"Lets you choose several users to move, kick or ban them" = "Lader dig vælge flere brugere for at flytte dem, sparke dem ud eller blokere dem";
 
 /* appearance */
 "Light or Dark" = "Lys eller mørk";
@@ -1092,7 +1128,7 @@
 "No results" = "Ingen resultater";
 
 /* serverlist */
-"No server found" = "No server found";
+"No server found" = "Ingen server fundet";
 
 /* user accounts */
 "No user accounts" = "Ingen brugerkonti";
@@ -1139,6 +1175,9 @@
 /* serverlist */
 "Official server" = "Officiel server";
 
+/* server list */
+"Official Servers" = "Officielle servere";
+
 /* Dialog
    Dialog message
    message dialog
@@ -1157,14 +1196,23 @@
 /* diagnostics */
 "Open Settings" = "Åbn Indstillinger";
 
+/* accessibility hint */
+"Opens a menu with more options" = "Åbner en menu med flere muligheder";
+
 /* file list */
 "Opens the file" = "Åbner filen";
+
+/* accessibility hint */
+"Opens the private messages with this user" = "Åbner de private beskeder med denne bruger";
+
+/* accessibility hint */
+"Opens the screen to stream audio or video to the channel" = "Åbner skærmen til at streame lyd eller video til kanalen";
 
 /* keyboard shortcuts */
 "Option" = "Alternativ";
 
 /* codec detail */
-"OPUS Codec" = "OPUS Codec";
+"OPUS Codec" = "OPUS-codec";
 
 /* preferences */
 "Order of channels in Channel List" = "Rækkefølge af kanaler i kanallisten";
@@ -1256,7 +1304,7 @@
 "Preferences" = "Indstillinger";
 
 /* Sound Input */
-"Preferred" = "Preferred";
+"Preferred" = "Foretrukken";
 
 /* media stream */
 "Preparing file" = "Forbereder fil";
@@ -1423,6 +1471,9 @@
 /* speech */
 "Selected" = "Valgt";
 
+/* accessibility hint */
+"Selects or deselects this user" = "Vælger eller fravælger denne bruger";
+
 /* text messages */
 "Send" = "Send";
 
@@ -1449,6 +1500,9 @@
 
 /* media stream */
 "Send Video" = "Send video";
+
+/* accessibility hint */
+"Sends the message" = "Sender beskeden";
 
 /* connection quality */
 "Sent" = "Sendt";
@@ -1478,7 +1532,7 @@
 "Server List Entry" = "Serverlisteelement";
 
 /* server entry */
-"Server Status" = "Server Status";
+"Server Status" = "Serverstatus";
 
 /* preferences */
 "Setup Announcements" = "Indstil annonceringer";
@@ -1511,10 +1565,13 @@
 "Shortcuts work with an external keyboard while connected to a server. A key without a modifier does nothing while you are typing a message." = "Genveje virker med et eksternt tastatur, mens du er forbundet til en server. En tast uden kombitast gør ingenting, mens du skriver en besked.";
 
 /* preferences */
-"Show in Server List" = "Show in Server List";
+"Show in Server List" = "Vis i serverliste";
 
 /* preferences */
 "Show male or female icon" = "Vis mand eller kvinde ikon";
+
+/* preferences */
+"Show male, female or neutral icon" = "Vis mandligt, kvindeligt eller neutralt symbol";
 
 /* server entry */
 "Show password" = "Vis kodeord";
@@ -1587,7 +1644,7 @@
 "Speech Volume" = "Talevolumen";
 
 /* codec detail */
-"Speex Codec" = "Speex Codec";
+"Speex Codec" = "Speex-codec";
 
 /* codec detail */
 "Speex Variable Bitrate Codec" = "Speex Variabel Bithastighed Codec";
@@ -1608,7 +1665,7 @@
 "Status" = "Status";
 
 /* Text message view */
-"Status Event" = "Status Event";
+"Status Event" = "Statushændelse";
 
 /* user accounts */
 "Status locked, cannot be changed" = "Status låst, kan ikke ændres";
@@ -1675,7 +1732,7 @@
 "Talking" = "Taler";
 
 /* server entry */
-"TCP Port" = "TCP Port";
+"TCP Port" = "TCP-port";
 
 /* channel list */
 "TeamTalk has no access to the microphone. Turn it on in Settings, under TeamTalk, and try again." = "TeamTalk har ikke adgang til mikrofonen. Slå den til i Indstillinger under TeamTalk, og prøv igen.";
@@ -1804,17 +1861,20 @@
 "Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Slået fra. Slå liveaktiviteter til i Indstillinger under TeamTalk.";
 
 /* serverlist */
-"Type Join Code" = "Type Join Code";
+"Type Join Code" = "Skriv adgangskode til server";
 
 /* text field hint
    text message */
 "Type text here" = "Skriv tekst her";
 
 /* server entry */
-"UDP Port" = "UDP Port";
+"UDP Port" = "UDP-port";
 
 /* serverlist */
-"Unofficial server" = "Unofficial server";
+"Unofficial server" = "Uofficiel server";
+
+/* server list */
+"Unofficial Servers" = "Uofficielle servere";
 
 /* file list */
 "Upload file" = "Upload fil";
@@ -1830,6 +1890,9 @@
 
 /* file list */
 "Uploading, %d %%" = "Uploader, %d %%";
+
+/* accessibility hint */
+"Uploads files or photos to the channel" = "Uploader filer eller fotos til kanalen";
 
 /* preferences */
 "Use echo cancellation and automatic gain control" = "Brug ekkoundertrykkelse og automatisk lydstyrkeregulering";
@@ -1862,7 +1925,7 @@
 "User Details" = "Brugerdetaljer";
 
 /* channel list */
-"User female" = "User female";
+"User female" = "Kvindelig bruger";
 
 /* user detail */
 "User ID" = "Bruger-id";
@@ -1915,10 +1978,10 @@
 "Users: %d, Country: %@" = "Brugere: %1$d, Land: %2$@";
 
 /* codec detail */
-"Variable Bitrate" = "Variable Bitrate";
+"Variable Bitrate" = "Variabel bithastighed";
 
 /* preferences */
-"Version Information" = "Version Information";
+"Version Information" = "Versionsoplysninger";
 
 /* channel list */
 "View" = "Vis";
@@ -1989,7 +2052,7 @@
 
 /* preferences
    user detail */
-"WebCam" = "WebCam";
+"WebCam" = "Webcam";
 
 /* Sound Devices */
 "WebRTC" = "WebRTC";
@@ -2008,6 +2071,9 @@
 
 /* diagnostics */
 "Widget and Controls" = "Widget og betjeningsknapper";
+
+/* accessibility hint */
+"Write your message here" = "Skriv din besked her";
 
 /* Dialog message */
 "Yes" = "Ja";

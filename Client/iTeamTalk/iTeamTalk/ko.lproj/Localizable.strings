@@ -98,25 +98,25 @@
 "100 % leaves the file as it is. The preview plays on this device only, with this volume and from the chosen position." = "100 %는 파일을 그대로 둡니다. 미리 듣기는 이 기기에서만, 이 음량으로, 선택한 위치부터 재생됩니다.";
 
 /* codec detail */
-"12 KHz" = "12 KHz";
+"12 KHz" = "12kHz";
 
 /* codec detail
    create channel */
-"16 KHz" = "16 KHz";
+"16 KHz" = "16kHz";
 
 /* codec detail */
-"24 KHz" = "24 KHz";
+"24 KHz" = "24kHz";
 
 /* codec detail
    create channel */
-"32 KHz" = "32 KHz";
+"32 KHz" = "32kHz";
 
 /* codec detail */
-"48 KHz" = "48 KHz";
+"48 KHz" = "48kHz";
 
 /* codec detail
    create channel */
-"8 KHz" = "8 KHz";
+"8 KHz" = "8kHz";
 
 /* user accounts */
 "A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "권한 변경은 사용자가 다음에 로그인할 때 적용됩니다. 연결되어 있는 사용자는 그때까지 이전 권한을 유지합니다.";
@@ -172,6 +172,9 @@
 
 /* media stream */
 "Address of a web radio or of an audio or video file" = "웹 라디오 또는 오디오나 비디오 파일의 주소";
+
+/* accessibility hint */
+"Adds a server to the list" = "목록에 서버를 추가합니다";
 
 /* user accounts */
 "Administrator" = "관리자";
@@ -366,6 +369,12 @@
    user detail */
 "Channel Messages" = "채널 메시지";
 
+/* server entry */
+"Channel name" = "채널 이름";
+
+/* server entry */
+"Channel password" = "채널 암호";
+
 /* create channel */
 "Channel Properties" = "채널 속성";
 
@@ -410,6 +419,9 @@
 
 /* preferences */
 "Choose sounds events to play" = "재생할 소리 이벤트 선택";
+
+/* accessibility hint */
+"Chooses where the sound comes out" = "소리가 나올 곳을 선택합니다";
 
 /* all users */
 "Choosing a user shows the channel they are in. If the server does not let your account see all users, only those of your channel are listed." = "사용자를 선택하면 그 사용자가 있는 채널이 표시됩니다. 서버가 내 계정에 모든 사용자 보기를 허용하지 않으면 내 채널의 사용자만 표시됩니다.";
@@ -488,6 +500,9 @@
 /* connection quality */
 "Connection Quality" = "연결 품질";
 
+/* accessibility hint */
+"Connects to this server" = "이 서버에 연결합니다";
+
 /* keyboard shortcuts */
 "Control" = "Control";
 
@@ -501,7 +516,7 @@
 "Copied" = "복사됨";
 
 /* server entry */
-"Copy" = "Copy";
+"Copy" = "복사";
 
 /* server entry */
 "Copy Join Code" = "입장 코드 복사";
@@ -585,6 +600,9 @@
 /* channel list */
 "Disconnect" = "연결 끊기";
 
+/* accessibility hint */
+"Disconnects from the server and goes back to the server list" = "서버 연결을 끊고 서버 목록으로 돌아갑니다";
+
 /* preferences */
 "Display" = "출력";
 
@@ -630,6 +648,9 @@
 /* server entry */
 "Encrypted" = "암호화됨";
 
+/* accessibility hint */
+"Ends the selection of users" = "사용자 선택을 끝냅니다";
+
 /* media stream */
 "Enter a web address that starts with http or https" = "http 또는 https로 시작하는 웹 주소를 입력하십시오";
 
@@ -638,6 +659,9 @@
 
 /* Dialog message */
 "Enter Password" = "암호를 입력하세요";
+
+/* accessibility hint */
+"Enters the channel" = "채널로 들어갑니다";
 
 /* Dialog
    Dialog message
@@ -760,6 +784,9 @@
 /* channel list */
 "Go to Their Channel" = "해당 사용자의 채널로 이동";
 
+/* accessibility hint */
+"Goes to the channel this user is in" = "이 사용자가 있는 채널로 이동합니다";
+
 /* TTS EVENT */
 "has joined the channel" = "채널에 입장함";
 
@@ -830,7 +857,10 @@
 "Join channel" = "채널 입장";
 
 /* server entry */
-"Join Code: %@" = "Join Code: %@";
+"Join Code" = "참여 코드";
+
+/* server entry */
+"Join Code: %@" = "참여 코드: %@";
 
 /* preferences */
 "Join Root Channel" = "최상위 채널 입장";
@@ -846,6 +876,9 @@
 
 /* log entry */
 "Joined %@" = "%@에 입장함";
+
+/* accessibility hint */
+"Joins the channel that is shown" = "표시된 채널에 입장합니다";
 
 /* keyboard shortcuts */
 "Key" = "키";
@@ -885,6 +918,9 @@
 
 /* connection quality */
 "Latency and packet loss" = "지연 시간 및 패킷 손실";
+
+/* accessibility hint */
+"Lets you choose several users to move, kick or ban them" = "여러 사용자를 선택해 이동, 추방 또는 차단할 수 있습니다";
 
 /* appearance */
 "Light or Dark" = "밝게 또는 어둡게";
@@ -1016,7 +1052,7 @@
 "Move users here" = "여기로 이동";
 
 /* codec detail */
-"Music" = "Music";
+"Music" = "음악";
 
 /* channel list */
 "Mute" = "음소거";
@@ -1140,6 +1176,9 @@
 /* serverlist */
 "Official server" = "공식 서버";
 
+/* server list */
+"Official Servers" = "공식 서버";
+
 /* Dialog
    Dialog message
    message dialog
@@ -1159,8 +1198,17 @@
 /* diagnostics */
 "Open Settings" = "설정 열기";
 
+/* accessibility hint */
+"Opens a menu with more options" = "더 많은 옵션이 있는 메뉴를 엽니다";
+
 /* file list */
 "Opens the file" = "파일을 엽니다";
+
+/* accessibility hint */
+"Opens the private messages with this user" = "이 사용자와의 개인 메시지를 엽니다";
+
+/* accessibility hint */
+"Opens the screen to stream audio or video to the channel" = "채널에 오디오나 비디오를 스트리밍하는 화면을 엽니다";
 
 /* keyboard shortcuts */
 "Option" = "Option";
@@ -1426,6 +1474,9 @@
 /* speech */
 "Selected" = "선택됨";
 
+/* accessibility hint */
+"Selects or deselects this user" = "이 사용자를 선택하거나 선택 해제합니다";
+
 /* text messages */
 "Send" = "보내기";
 
@@ -1452,6 +1503,9 @@
 
 /* media stream */
 "Send Video" = "비디오 보내기";
+
+/* accessibility hint */
+"Sends the message" = "메시지를 보냅니다";
 
 /* connection quality */
 "Sent" = "보냄";
@@ -1518,6 +1572,9 @@
 
 /* preferences */
 "Show male or female icon" = "성별 아이콘 보기";
+
+/* preferences */
+"Show male, female or neutral icon" = "남성, 여성 또는 중성 아이콘 표시";
 
 /* server entry */
 "Show password" = "암호 보기";
@@ -1807,7 +1864,7 @@
 "Turned off. Turn on Live Activities in Settings, under TeamTalk." = "꺼짐. 설정의 TeamTalk에서 실시간 현황을 켜십시오.";
 
 /* serverlist */
-"Type Join Code" = "Type Join Code";
+"Type Join Code" = "참여 코드를 입력하십시오";
 
 /* text field hint
    text message */
@@ -1818,6 +1875,9 @@
 
 /* serverlist */
 "Unofficial server" = "비공식 서버";
+
+/* server list */
+"Unofficial Servers" = "비공식 서버";
 
 /* file list */
 "Upload file" = "파일 업로드";
@@ -1833,6 +1893,9 @@
 
 /* file list */
 "Uploading, %d %%" = "업로드 중, %d %%";
+
+/* accessibility hint */
+"Uploads files or photos to the channel" = "채널에 파일이나 사진을 업로드합니다";
 
 /* preferences */
 "Use echo cancellation and automatic gain control" = "에코 제거와 자동 음량 조절 사용";
@@ -2012,6 +2075,9 @@
 
 /* diagnostics */
 "Widget and Controls" = "위젯 및 제어 항목";
+
+/* accessibility hint */
+"Write your message here" = "여기에 메시지를 입력하십시오";
 
 /* Dialog message */
 "Yes" = "예";

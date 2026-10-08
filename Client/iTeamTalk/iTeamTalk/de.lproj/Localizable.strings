@@ -174,6 +174,9 @@
 /* media stream */
 "Address of a web radio or of an audio or video file" = "Adresse eines Webradios oder einer Audio- oder Videodatei";
 
+/* accessibility hint */
+"Adds a server to the list" = "Fügt der Liste einen Server hinzu";
+
 /* user accounts */
 "Administrator" = "Administrator";
 
@@ -367,6 +370,12 @@
    user detail */
 "Channel Messages" = "Raumnachrichten";
 
+/* server entry */
+"Channel name" = "Raumname";
+
+/* server entry */
+"Channel password" = "Raumpasswort";
+
 /* create channel */
 "Channel Properties" = "Raumeigenschaften";
 
@@ -411,6 +420,9 @@
 
 /* preferences */
 "Choose sounds events to play" = "Klangereignisse für die Wiedergabe auswählen";
+
+/* accessibility hint */
+"Chooses where the sound comes out" = "Wählt, wo der Ton herauskommt";
 
 /* all users */
 "Choosing a user shows the channel they are in. If the server does not let your account see all users, only those of your channel are listed." = "Die Auswahl eines Benutzers zeigt den Raum, in dem er sich befindet. Wenn der Server deinem Konto nicht erlaubt, alle Benutzer zu sehen, werden nur die deines Raums aufgeführt.";
@@ -489,6 +501,9 @@
 /* connection quality */
 "Connection Quality" = "Verbindungsqualität";
 
+/* accessibility hint */
+"Connects to this server" = "Verbindet mit diesem Server";
+
 /* keyboard shortcuts */
 "Control" = "Control";
 
@@ -502,7 +517,7 @@
 "Copied" = "Kopiert";
 
 /* server entry */
-"Copy" = "Copy";
+"Copy" = "Kopieren";
 
 /* server entry */
 "Copy Join Code" = "Beitrittscode kopieren";
@@ -586,6 +601,9 @@
 /* channel list */
 "Disconnect" = "Trennen";
 
+/* accessibility hint */
+"Disconnects from the server and goes back to the server list" = "Trennt die Verbindung zum Server und kehrt zur Serverliste zurück";
+
 /* preferences */
 "Display" = "Anzeige";
 
@@ -631,6 +649,9 @@
 /* server entry */
 "Encrypted" = "Verschlüsselt";
 
+/* accessibility hint */
+"Ends the selection of users" = "Beendet die Auswahl von Benutzern";
+
 /* media stream */
 "Enter a web address that starts with http or https" = "Gib eine Webadresse ein, die mit http oder https beginnt";
 
@@ -639,6 +660,9 @@
 
 /* Dialog message */
 "Enter Password" = "Passwort eingeben";
+
+/* accessibility hint */
+"Enters the channel" = "Betritt den Raum";
 
 /* Dialog
    Dialog message
@@ -762,6 +786,9 @@
 /* channel list */
 "Go to Their Channel" = "Zu seinem Raum gehen";
 
+/* accessibility hint */
+"Goes to the channel this user is in" = "Geht zu dem Raum, in dem dieser Benutzer ist";
+
 /* TTS EVENT */
 "has joined the channel" = "hat den Raum betreten";
 
@@ -832,7 +859,10 @@
 "Join channel" = "Raum betreten";
 
 /* server entry */
-"Join Code: %@" = "Join Code: %@";
+"Join Code" = "Beitrittscode";
+
+/* server entry */
+"Join Code: %@" = "Beitrittscode: %@";
 
 /* preferences */
 "Join Root Channel" = "Hauptraum betreten";
@@ -848,6 +878,9 @@
 
 /* log entry */
 "Joined %@" = "%@ betreten";
+
+/* accessibility hint */
+"Joins the channel that is shown" = "Betritt den angezeigten Raum";
 
 /* keyboard shortcuts */
 "Key" = "Taste";
@@ -887,6 +920,9 @@
 
 /* connection quality */
 "Latency and packet loss" = "Latenz und Paketverlust";
+
+/* accessibility hint */
+"Lets you choose several users to move, kick or ban them" = "Lässt dich mehrere Benutzer auswählen, um sie zu verschieben, zu kicken oder zu sperren";
 
 /* appearance */
 "Light or Dark" = "Hell oder dunkel";
@@ -1142,6 +1178,9 @@
 /* serverlist */
 "Official server" = "Offizieller Server";
 
+/* server list */
+"Official Servers" = "Offizielle Server";
+
 /* Dialog
    Dialog message
    message dialog
@@ -1161,8 +1200,17 @@
 /* diagnostics */
 "Open Settings" = "Einstellungen öffnen";
 
+/* accessibility hint */
+"Opens a menu with more options" = "Öffnet ein Menü mit weiteren Optionen";
+
 /* file list */
 "Opens the file" = "Öffnet die Datei";
+
+/* accessibility hint */
+"Opens the private messages with this user" = "Öffnet die privaten Nachrichten mit diesem Benutzer";
+
+/* accessibility hint */
+"Opens the screen to stream audio or video to the channel" = "Öffnet den Bildschirm zum Streamen von Audio oder Video in den Raum";
 
 /* keyboard shortcuts */
 "Option" = "Wahltaste";
@@ -1428,6 +1476,9 @@
 /* speech */
 "Selected" = "Ausgewählt";
 
+/* accessibility hint */
+"Selects or deselects this user" = "Wählt diesen Benutzer aus oder ab";
+
 /* text messages */
 "Send" = "Senden";
 
@@ -1454,6 +1505,9 @@
 
 /* media stream */
 "Send Video" = "Video senden";
+
+/* accessibility hint */
+"Sends the message" = "Sendet die Nachricht";
 
 /* connection quality */
 "Sent" = "Gesendet";
@@ -1520,6 +1574,9 @@
 
 /* preferences */
 "Show male or female icon" = "Männliches oder weibliches Symbol anzeigen";
+
+/* preferences */
+"Show male, female or neutral icon" = "Männliches, weibliches oder neutrales Symbol anzeigen";
 
 /* server entry */
 "Show password" = "Passwort anzeigen";
@@ -1810,7 +1867,7 @@
 "Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Ausgeschaltet. Schalte Live-Aktivitäten in den Einstellungen unter TeamTalk ein.";
 
 /* serverlist */
-"Type Join Code" = "Type Join Code";
+"Type Join Code" = "Beitrittscode eingeben";
 
 /* text field hint
    text message */
@@ -1821,6 +1878,9 @@
 
 /* serverlist */
 "Unofficial server" = "Inoffizieller Server";
+
+/* server list */
+"Unofficial Servers" = "Inoffizielle Server";
 
 /* file list */
 "Upload file" = "Datei hochladen";
@@ -1836,6 +1896,9 @@
 
 /* file list */
 "Uploading, %d %%" = "Wird hochgeladen, %d %%";
+
+/* accessibility hint */
+"Uploads files or photos to the channel" = "Lädt Dateien oder Fotos in den Raum hoch";
 
 /* preferences */
 "Use echo cancellation and automatic gain control" = "Echounterdrückung und automatische Pegelkontrolle verwenden";
@@ -1996,7 +2059,7 @@
 
 /* preferences
    user detail */
-"WebCam" = "WebCam";
+"WebCam" = "Webcam";
 
 /* Sound Devices */
 "WebRTC" = "WebRTC";
@@ -2015,6 +2078,9 @@
 
 /* diagnostics */
 "Widget and Controls" = "Widget und Steuerelemente";
+
+/* accessibility hint */
+"Write your message here" = "Schreibe hier deine Nachricht";
 
 /* Dialog message */
 "Yes" = "Ja";

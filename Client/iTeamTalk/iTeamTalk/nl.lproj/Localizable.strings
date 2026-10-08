@@ -98,25 +98,25 @@
 "100 % leaves the file as it is. The preview plays on this device only, with this volume and from the chosen position." = "100 % laat het bestand zoals het is. De voorvertoning speelt alleen op dit apparaat, met dit volume en vanaf de gekozen positie.";
 
 /* codec detail */
-"12 KHz" = "12 KHz";
+"12 KHz" = "12 kHz";
 
 /* codec detail
    create channel */
-"16 KHz" = "16 KHz";
+"16 KHz" = "16 kHz";
 
 /* codec detail */
-"24 KHz" = "24 KHz";
+"24 KHz" = "24 kHz";
 
 /* codec detail
    create channel */
-"32 KHz" = "32 KHz";
+"32 KHz" = "32 kHz";
 
 /* codec detail */
-"48 KHz" = "48 KHz";
+"48 KHz" = "48 kHz";
 
 /* codec detail
    create channel */
-"8 KHz" = "8 KHz";
+"8 KHz" = "8 kHz";
 
 /* user accounts */
 "A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "Een wijziging van rechten geldt bij de volgende aanmelding van de gebruiker. Wie verbonden is, houdt tot dan de oude.";
@@ -147,7 +147,7 @@
 "Actions" = "Taken";
 
 /* channel list */
-"Active" = "Active";
+"Active" = "Actief";
 
 /* media stream */
 "Add" = "Voeg toe";
@@ -172,6 +172,9 @@
 
 /* media stream */
 "Address of a web radio or of an audio or video file" = "Adres van een webradio of van een audio- of videobestand";
+
+/* accessibility hint */
+"Adds a server to the list" = "Voegt een server toe aan de lijst";
 
 /* user accounts */
 "Administrator" = "Beheerder";
@@ -207,19 +210,19 @@
 "Announce user leaving channel" = "Gebruiker die kanaal verlaat melden";
 
 /* preferences */
-"Announce user logged onto server" = "Announce user logged onto server";
+"Announce user logged onto server" = "Aankondigen dat gebruiker op server is ingelogd";
 
 /* preferences */
-"Announce user logged out of server" = "Announce user logged out of server";
+"Announce user logged out of server" = "Aankondigen dat gebruiker van server is uitgelogd";
 
 /* text to speech */
-"Announcements" = "Announcements";
+"Announcements" = "Aankondigingen";
 
 /* user accounts */
 "Anonymous users" = "Anonieme gebruikers";
 
 /* preferences */
-"App Version" = "App Version";
+"App Version" = "Appversie";
 
 /* appearance */
 "Appearance" = "Weergave";
@@ -234,7 +237,7 @@
 "Apply Pure Dark Theme" = "Thema Puur zwart toepassen";
 
 /* preferences */
-"Ascending" = "Ascending";
+"Ascending" = "Oplopend";
 
 /* codec detail */
 "Audio Channels" = "Audiokanalen";
@@ -246,7 +249,7 @@
 "Audio Output" = "Audio-uitvoer";
 
 /* Web Login Controller */
-"Authenticate" = "Authenticate";
+"Authenticate" = "Authenticeer";
 
 /* server entry */
 "Authentication" = "Authenticatie";
@@ -282,7 +285,7 @@
 "Ban removed" = "Verbanning opgeheven";
 
 /* channel list */
-"Ban user" = "Ban user";
+"Ban user" = "Gebruiker verbannen";
 
 /* user accounts */
 "Ban users" = "Gebruikers verbannen";
@@ -300,7 +303,7 @@
 "BearWare.dk Web Login" = "BearWare.dk Web Login";
 
 /* weblogin event */
-"BearWare.dk Web Login failed to authenticate. Check BearWare.dk Web Login in Preferences" = "BearWare.dk Web Login failed to authenticate. Check BearWare.dk Web Login in Preferences";
+"BearWare.dk Web Login failed to authenticate. Check BearWare.dk Web Login in Preferences" = "Authenticatie met BearWare.dk Web Login is mislukt. Controleer BearWare.dk Web Login in Instellingen";
 
 /* codec detail */
 "Bitrate" = "Bitsnelheid";
@@ -309,16 +312,16 @@
 "Bjoern D. Rasmussen, contact@bearware.dk" = "Bjoern D. Rasmussen, contact@bearware.dk";
 
 /* Sound Devices */
-"Bluetooth A2DP Playback" = "Bluetooth A2DP Playback";
+"Bluetooth A2DP Playback" = "Bluetooth A2DP-weergave";
 
 /* Sound Devices */
-"Bluetooth playback should use Advanced Audio Distribution Profile" = "Bluetooth playback should use Advanced Audio Distribution Profile";
+"Bluetooth playback should use Advanced Audio Distribution Profile" = "Bluetooth-weergave moet Advanced Audio Distribution Profile gebruiken";
 
 /* all users */
 "Bring to My Channel" = "Naar mijn kanaal halen";
 
 /* text message type */
-"Broadcast message" = "Broadcast message";
+"Broadcast message" = "Omroepbericht";
 
 /* text message */
 "Broadcast Message" = "Omroepbericht";
@@ -328,10 +331,10 @@
 "Broadcast Messages" = "Uitzendberichten";
 
 /* preferences */
-"Broadcast Text Message" = "Broadcast Text Message";
+"Broadcast Text Message" = "Omroeptekstbericht";
 
 /* Dialog message */
-"Cancel" = "Cancel";
+"Cancel" = "Annuleer";
 
 /* file list */
 "Cancels the download" = "Annuleert de download";
@@ -356,7 +359,7 @@
 "Channel Detail" = "Kanaaldetails";
 
 /* text message type */
-"Channel message" = "Channel message";
+"Channel message" = "Kanaalbericht";
 
 /* TTS EVENT */
 "Channel message from %@. %@" = "Kanaalbericht van %@. %@";
@@ -365,8 +368,14 @@
    user detail */
 "Channel Messages" = "Kanaalberichten";
 
+/* server entry */
+"Channel name" = "Kanaalnaam";
+
+/* server entry */
+"Channel password" = "Kanaalwachtwoord";
+
 /* create channel */
-"Channel Properties" = "Channel Properties";
+"Channel Properties" = "Kanaaleigenschappen";
 
 /* preferences */
 "Channel Text Message" = "Kanaaltekstbericht";
@@ -381,7 +390,7 @@
 "Channels" = "Kanalen";
 
 /* server entry */
-"Check only if this server has enabled BearWare.dk Web Login" = "Check only if this server has enabled BearWare.dk Web Login";
+"Check only if this server has enabled BearWare.dk Web Login" = "Vink alleen aan als deze server BearWare.dk Web Login heeft ingeschakeld";
 
 /* diagnostics */
 "Checks" = "Controles";
@@ -409,6 +418,9 @@
 
 /* preferences */
 "Choose sounds events to play" = "Kies welke geluidsgebeurtenissen worden afgespeeld";
+
+/* accessibility hint */
+"Chooses where the sound comes out" = "Kiest waar het geluid uitkomt";
 
 /* all users */
 "Choosing a user shows the channel they are in. If the server does not let your account see all users, only those of your channel are listed." = "Een gebruiker kiezen toont het kanaal waarin die zit. Als de server jouw account niet alle gebruikers laat zien, staan alleen die van jouw kanaal in de lijst.";
@@ -444,13 +456,13 @@
 "Command" = "Command";
 
 /* log entry */
-"Command failed: %@" = "Command failed: %@";
+"Command failed: %@" = "Opdracht mislukt: %@";
 
 /* connection quality */
 "Command Latency (TCP)" = "Vertraging van opdrachten (TCP)";
 
 /* create channel */
-"Commands" = "Commands";
+"Commands" = "Opdrachten";
 
 /* channel list */
 "Confirm" = "Bevestig";
@@ -471,7 +483,7 @@
 "Connect to server" = "Verbinden met server";
 
 /* connect to a server */
-"Connect to Server" = "Connect to Server";
+"Connect to Server" = "Verbind met server";
 
 /* preferences */
 "Connect to the last server and channel when the app opens" = "Verbinden met de laatste server en het laatste kanaal wanneer de app opent";
@@ -487,6 +499,9 @@
 /* connection quality */
 "Connection Quality" = "Verbindingskwaliteit";
 
+/* accessibility hint */
+"Connects to this server" = "Verbindt met deze server";
+
 /* keyboard shortcuts */
 "Control" = "Control";
 
@@ -500,7 +515,7 @@
 "Copied" = "Gekopieerd";
 
 /* server entry */
-"Copy" = "Copy";
+"Copy" = "Kopieer";
 
 /* server entry */
 "Copy Join Code" = "Toegangscode kopiëren";
@@ -512,7 +527,7 @@
 "Counted over the voice received from the users of your channel since you joined it. Above 2 % voices start to break up." = "Geteld over de spraak die je van de gebruikers van je kanaal hebt ontvangen sinds je binnenkwam. Boven 2 % beginnen stemmen te haperen.";
 
 /* server entry */
-"Country" = "Country";
+"Country" = "Land";
 
 /* user accounts */
 "Create and change permanent channels" = "Permanente kanalen aanmaken en wijzigen";
@@ -536,7 +551,7 @@
 "Data" = "Gegevens";
 
 /* Sound Input */
-"Default" = "Default";
+"Default" = "Standaard";
 
 /* preferences */
 "Default Subscriptions" = "Standaardontvangst";
@@ -584,6 +599,9 @@
 /* channel list */
 "Disconnect" = "Verbreek verbinding";
 
+/* accessibility hint */
+"Disconnects from the server and goes back to the server list" = "Verbreekt de verbinding met de server en gaat terug naar de serverlijst";
+
 /* preferences */
 "Display" = "Weergave";
 
@@ -591,7 +609,7 @@
 "Done selecting" = "Klaar met selecteren";
 
 /* channel list */
-"Double tap and hold to transmit. Triple tap fast to lock transmission." = "Double tap and hold to transmit. Triple tap fast to lock transmission.";
+"Double tap and hold to transmit. Triple tap fast to lock transmission." = "Tik dubbel en houd vast om uit te zenden. Tik snel drie keer om het uitzenden te vergrendelen.";
 
 /* preferences */
 "Double tap to lock TX button" = "Tik dubbel om uitzendknop te blokkeren";
@@ -627,16 +645,22 @@
 "Edit properties" = "Eigenschappen bewerken";
 
 /* server entry */
-"Encrypted" = "Encrypted";
+"Encrypted" = "Versleuteld";
+
+/* accessibility hint */
+"Ends the selection of users" = "Beëindigt het selecteren van gebruikers";
 
 /* media stream */
 "Enter a web address that starts with http or https" = "Voer een webadres in dat begint met http of https";
 
 /* serverlist */
-"Enter Join Code" = "Enter Join Code";
+"Enter Join Code" = "Voer toegangscode in";
 
 /* Dialog message */
 "Enter Password" = "Wachtwoord Invoeren";
+
+/* accessibility hint */
+"Enters the channel" = "Gaat het kanaal binnen";
 
 /* Dialog
    Dialog message
@@ -660,7 +684,7 @@
 "Everyone can transmit in this channel except what is turned off here." = "Iedereen mag in dit kanaal uitzenden, behalve wat hier is uitgeschakeld.";
 
 /* preferences */
-"Exclusive Mode Toggled" = "Exclusive Mode Toggled";
+"Exclusive Mode Toggled" = "Exclusieve modus geschakeld";
 
 /* channel list */
 "Expand" = "Uitklappen";
@@ -696,7 +720,7 @@
 "Failed to play the file" = "Bestand afspelen mislukt";
 
 /* connect to a server */
-"Failed to setup encryption" = "Failed to setup encryption";
+"Failed to setup encryption" = "Versleuteling instellen is mislukt";
 
 /* media stream */
 "Failed to stream media file" = "Mediabestand streamen mislukt";
@@ -711,7 +735,7 @@
 "Favorite" = "Favoriet";
 
 /* preferences */
-"Female" = "Female";
+"Female" = "Vrouw";
 
 /* media stream */
 "File" = "Bestand";
@@ -744,10 +768,10 @@
 "Forward 10 Seconds" = "10 seconden vooruit";
 
 /* codec detail */
-"Frame Size" = "Frame Size";
+"Frame Size" = "Framegrootte";
 
 /* preferences */
-"Gender" = "Gender";
+"Gender" = "Geslacht";
 
 /* preferences
    user detail */
@@ -759,6 +783,9 @@
 /* channel list */
 "Go to Their Channel" = "Ga naar diens kanaal";
 
+/* accessibility hint */
+"Goes to the channel this user is in" = "Gaat naar het kanaal waarin deze gebruiker zit";
+
 /* TTS EVENT */
 "has joined the channel" = "is het kanaal binnengekomen";
 
@@ -766,16 +793,16 @@
 "has left the channel" = "heeft het kanaal verlaten";
 
 /* TTS EVENT */
-"has logged on" = "has logged on";
+"has logged on" = "is ingelogd";
 
 /* TTS EVENT */
-"has logged out" = "has logged out";
+"has logged out" = "is uitgelogd";
 
 /* preferences */
-"Headset TX Toggle" = "Headset TX Toggle";
+"Headset TX Toggle" = "Uitzenden schakelen met headset";
 
 /* hidden channel */
-"Hidden Channel" = "Hidden Channel";
+"Hidden Channel" = "Verborgen kanaal";
 
 /* server entry */
 "Host address" = "Hostadres";
@@ -787,7 +814,7 @@
 "Import Backup" = "Reservekopie importeren";
 
 /* channel list */
-"Inactive" = "Inactive";
+"Inactive" = "Inactief";
 
 /* appearance */
 "Interface" = "Interface";
@@ -829,7 +856,10 @@
 "Join channel" = "Kanaal binnengaan";
 
 /* server entry */
-"Join Code: %@" = "Join Code: %@";
+"Join Code" = "Toegangscode";
+
+/* server entry */
+"Join Code: %@" = "Toegangscode: %@";
 
 /* preferences */
 "Join Root Channel" = "Hoofdkanaal binnengaan";
@@ -845,6 +875,9 @@
 
 /* log entry */
 "Joined %@" = "%@ binnengegaan";
+
+/* accessibility hint */
+"Joins the channel that is shown" = "Gaat het getoonde kanaal binnen";
 
 /* keyboard shortcuts */
 "Key" = "Toets";
@@ -885,6 +918,9 @@
 /* connection quality */
 "Latency and packet loss" = "Vertraging en pakketverlies";
 
+/* accessibility hint */
+"Lets you choose several users to move, kick or ban them" = "Laat je meerdere gebruikers kiezen om ze te verplaatsen, te kicken of te verbannen";
+
 /* appearance */
 "Light or Dark" = "Licht of donker";
 
@@ -907,13 +943,13 @@
 "Live Activities" = "Live-activiteiten";
 
 /* serverlist */
-"Local server" = "Local server";
+"Local server" = "Lokale server";
 
 /* user accounts */
 "Log in from several devices at once" = "Vanaf meerdere apparaten tegelijk aanmelden";
 
 /* text message type */
-"Log message" = "Log message";
+"Log message" = "Logbericht";
 
 /* log entry */
 "Logged on to server" = "Ingelogd op server";
@@ -925,7 +961,7 @@
 "Make other users channel operator" = "Andere gebruikers kanaaloperator maken";
 
 /* preferences */
-"Male" = "Male";
+"Male" = "Man";
 
 /* preferences */
 "Master Volume" = "Hoofdvolume";
@@ -963,7 +999,7 @@
 "Message" = "Bericht";
 
 /* server entry */
-"Message of the Day" = "Message of the Day";
+"Message of the Day" = "Bericht van de dag";
 
 /* appearance */
 "Message Text Size" = "Tekstgrootte van berichten";
@@ -1006,13 +1042,13 @@
 "Move to Channel" = "Verplaats naar kanaal";
 
 /* channel list */
-"Move user" = "Move user";
+"Move user" = "Gebruiker verplaatsen";
 
 /* user accounts */
 "Move users between channels" = "Gebruikers tussen kanalen verplaatsen";
 
 /* channel list */
-"Move users here" = "Move users here";
+"Move users here" = "Verplaats gebruikers hierheen";
 
 /* codec detail */
 "Music" = "Muziek";
@@ -1046,7 +1082,7 @@
 "Neutral" = "Neutraal";
 
 /* Dialog message */
-"New Server" = "New Server";
+"New Server" = "Nieuwe server";
 
 /* media stream */
 "Next File" = "Volgend bestand";
@@ -1055,13 +1091,13 @@
 "Nickname" = "Bijnaam";
 
 /* server entry */
-"Nickname (optional)" = "Nickname (optional)";
+"Nickname (optional)" = "Bijnaam (optioneel)";
 
 /* user accounts */
 "Nickname locked, cannot be changed" = "Bijnaam vergrendeld, kan niet worden gewijzigd";
 
 /* Dialog message */
-"No" = "No";
+"No" = "Nee";
 
 /* codec detail
    create channel */
@@ -1092,7 +1128,7 @@
 "No results" = "Geen resultaten";
 
 /* serverlist */
-"No server found" = "No server found";
+"No server found" = "Geen server gevonden";
 
 /* user accounts */
 "No user accounts" = "Geen gebruikersaccounts";
@@ -1137,7 +1173,10 @@
 "Off" = "Uit";
 
 /* serverlist */
-"Official server" = "Official server";
+"Official server" = "Officiële server";
+
+/* server list */
+"Official Servers" = "Officiële servers";
 
 /* Dialog
    Dialog message
@@ -1157,8 +1196,17 @@
 /* diagnostics */
 "Open Settings" = "Instellingen openen";
 
+/* accessibility hint */
+"Opens a menu with more options" = "Opent een menu met meer opties";
+
 /* file list */
 "Opens the file" = "Opent het bestand";
+
+/* accessibility hint */
+"Opens the private messages with this user" = "Opent de privéberichten met deze gebruiker";
+
+/* accessibility hint */
+"Opens the screen to stream audio or video to the channel" = "Opent het scherm om audio of video naar het kanaal te streamen";
 
 /* keyboard shortcuts */
 "Option" = "Option";
@@ -1167,7 +1215,7 @@
 "OPUS Codec" = "OPUS-codec";
 
 /* preferences */
-"Order of channels in Channel List" = "Order of channels in Channel List";
+"Order of channels in Channel List" = "Volgorde van kanalen in de kanaallijst";
 
 /* user accounts */
 "Other" = "Overig";
@@ -1214,7 +1262,7 @@
 "Play sound when a user leaves the channel" = "Geluid afspelen wanneer een gebruiker het kanaal verlaat";
 
 /* preferences */
-"Play sound when broadcast text message is received" = "Play sound when broadcast text message is received";
+"Play sound when broadcast text message is received" = "Geluid afspelen wanneer omroeptekstbericht ontvangen wordt";
 
 /* preferences */
 "Play sound when channel text message is received" = "Geluid afspelen wanneer kanaaltekstbericht ontvangen wordt";
@@ -1226,16 +1274,16 @@
 "Play sound when private text message is received" = "Geluid afspelen wanneer privétekstbericht ontvangen wordt";
 
 /* preferences */
-"Play sound when transmit ready in \"No Interruptions\" channel" = "Play sound when transmit ready in \"No Interruptions\" channel";
+"Play sound when transmit ready in \"No Interruptions\" channel" = "Geluid afspelen wanneer je kunt uitzenden in een kanaal ‘Geen onderbrekingen’";
 
 /* preferences */
-"Play sound when user logs off to the server" = "Play sound when user logs off to the server";
+"Play sound when user logs off to the server" = "Geluid afspelen wanneer gebruiker uitlogt van de server";
 
 /* preferences */
-"Play sound when user logs on to the server" = "Play sound when user logs on to the server";
+"Play sound when user logs on to the server" = "Geluid afspelen wanneer gebruiker inlogt op de server";
 
 /* preferences */
-"Play sound when voice activation is triggered" = "Play sound when voice activation is triggered";
+"Play sound when voice activation is triggered" = "Geluid afspelen wanneer stemactivatie geactiveerd wordt";
 
 /* preferences */
 "Play sound when voice transmission is toggled" = "Geluid afspelen wanneer stemuitzending geschakeld wordt";
@@ -1247,7 +1295,7 @@
 "Pop up text message when new messages are received" = "Tekstbericht laten zien wanneer nieuwe berichten ontvangen worden";
 
 /* preferences */
-"Popularity" = "Popularity";
+"Popularity" = "Populariteit";
 
 /* media stream */
 "Position" = "Positie";
@@ -1256,13 +1304,13 @@
 "Preferences" = "Instellingen";
 
 /* Sound Input */
-"Preferred" = "Preferred";
+"Preferred" = "Voorkeur";
 
 /* media stream */
 "Preparing file" = "Bestand voorbereiden";
 
 /* preferences */
-"Pressing Return-key sends text message" = "Pressing Return-key sends text message";
+"Pressing Return-key sends text message" = "Op de Return-toets drukken verstuurt tekstbericht";
 
 /* appearance */
 "Preview" = "Voorvertoning";
@@ -1271,7 +1319,7 @@
 "Previous File" = "Vorig bestand";
 
 /* text message type */
-"Private message" = "Private message";
+"Private message" = "Privébericht";
 
 /* channel list */
 "Private Message" = "Privébericht";
@@ -1361,7 +1409,7 @@
 "Return" = "Return";
 
 /* preferences */
-"Return Sends Message" = "Return Sends Message";
+"Return Sends Message" = "Return verstuurt bericht";
 
 /* channel list */
 "Return to previous channel" = "Terug naar vorig kanaal";
@@ -1385,13 +1433,13 @@
 "Save" = "Bewaar";
 
 /* Dialog message */
-"Save Server" = "Save Server";
+"Save Server" = "Bewaar server";
 
 /* server entry */
 "Save server" = "Server bewaren";
 
 /* Dialog message */
-"Save server to server list?" = "Save server to server list?";
+"Save server to server list?" = "Server in serverlijst bewaren?";
 
 /* user accounts */
 "Search accounts" = "Accounts zoeken";
@@ -1423,6 +1471,9 @@
 /* speech */
 "Selected" = "Geselecteerd";
 
+/* accessibility hint */
+"Selects or deselects this user" = "Selecteert of deselecteert deze gebruiker";
+
 /* text messages */
 "Send" = "Verstuur";
 
@@ -1436,7 +1487,7 @@
 "Send channel messages" = "Kanaalberichten versturen";
 
 /* text message */
-"Send empty message to close keyboard" = "Send empty message to close keyboard";
+"Send empty message to close keyboard" = "Verstuur een leeg bericht om het toetsenbord te sluiten";
 
 /* channel list */
 "Send private message" = "Privébericht versturen";
@@ -1449,6 +1500,9 @@
 
 /* media stream */
 "Send Video" = "Video versturen";
+
+/* accessibility hint */
+"Sends the message" = "Verstuurt het bericht";
 
 /* connection quality */
 "Sent" = "Verzonden";
@@ -1478,7 +1532,7 @@
 "Server List Entry" = "Serverlijstitem";
 
 /* server entry */
-"Server Status" = "Server Status";
+"Server Status" = "Serverstatus";
 
 /* preferences */
 "Setup Announcements" = "Aankondigingen instellen";
@@ -1511,10 +1565,13 @@
 "Shortcuts work with an external keyboard while connected to a server. A key without a modifier does nothing while you are typing a message." = "Toetscombinaties werken met een extern toetsenbord terwijl je met een server bent verbonden. Een toets zonder speciale toets doet niets terwijl je een bericht typt.";
 
 /* preferences */
-"Show in Server List" = "Show in Server List";
+"Show in Server List" = "Toon in serverlijst";
 
 /* preferences */
-"Show male or female icon" = "Show male or female icon";
+"Show male or female icon" = "Toon mannelijk of vrouwelijk symbool";
+
+/* preferences */
+"Show male, female or neutral icon" = "Toon mannelijk, vrouwelijk of neutraal symbool";
 
 /* server entry */
 "Show password" = "Wachtwoord tonen";
@@ -1547,7 +1604,7 @@
 "Small" = "Klein";
 
 /* preferences */
-"Sort Channels" = "Sort Channels";
+"Sort Channels" = "Sorteer kanalen";
 
 /* media stream */
 "Sound" = "Geluid";
@@ -1608,7 +1665,7 @@
 "Status" = "Status";
 
 /* Text message view */
-"Status Event" = "Status Event";
+"Status Event" = "Statusgebeurtenis";
 
 /* user accounts */
 "Status locked, cannot be changed" = "Status vergrendeld, kan niet worden gewijzigd";
@@ -1765,25 +1822,25 @@
 "Time a packet takes to reach the server and come back. Below 100 ms a conversation feels immediate." = "Tijd die een pakket nodig heeft om de server te bereiken en terug te komen. Onder 100 ms voelt een gesprek direct aan.";
 
 /* channel list */
-"Toggle to enable/disable transmission" = "Toggle to enable/disable transmission";
+"Toggle to enable/disable transmission" = "Schakel om uitzenden in of uit te schakelen";
 
 /* keyboard shortcuts */
 "Toggle Transmission" = "Uitzenden in- of uitschakelen";
 
 /* preferences */
-"Toggle voice transmission using headset" = "Toggle voice transmission using headset";
+"Toggle voice transmission using headset" = "Stemuitzending schakelen met headset";
 
 /* create channel */
 "Topic" = "Onderwerp";
 
 /* preferences */
-"Translator" = "Translator";
+"Translator" = "Vertaler";
 
 /* live activity */
 "Transmission" = "Uitzending";
 
 /* channel list */
-"Transmit inactive" = "Transmit inactive";
+"Transmit inactive" = "Uitzenden inactief";
 
 /* codec detail */
 "Transmit Interval" = "Uitzendinterval";
@@ -1795,7 +1852,7 @@
 "Transmit voice" = "Spraak uitzenden";
 
 /* channel list */
-"Transmitting" = "Transmitting";
+"Transmitting" = "Bezig met uitzenden";
 
 /* preferences */
 "Turn off screen when holding phone near ear" = "Scherm uitschakelen wanneer telefoon dichtbij oor gehouden wordt";
@@ -1804,7 +1861,7 @@
 "Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Uitgeschakeld. Schakel live-activiteiten in via Instellingen, onder TeamTalk.";
 
 /* serverlist */
-"Type Join Code" = "Type Join Code";
+"Type Join Code" = "Typ toegangscode";
 
 /* text field hint
    text message */
@@ -1814,7 +1871,10 @@
 "UDP Port" = "UDP-poort";
 
 /* serverlist */
-"Unofficial server" = "Unofficial server";
+"Unofficial server" = "Niet-officiële server";
+
+/* server list */
+"Unofficial Servers" = "Niet-officiële servers";
 
 /* file list */
 "Upload file" = "Bestand uploaden";
@@ -1831,8 +1891,11 @@
 /* file list */
 "Uploading, %d %%" = "Uploaden, %d %%";
 
+/* accessibility hint */
+"Uploads files or photos to the channel" = "Uploadt bestanden of foto's naar het kanaal";
+
 /* preferences */
-"Use echo cancellation and automatic gain control" = "Use echo cancellation and automatic gain control";
+"Use echo cancellation and automatic gain control" = "Gebruik echo-onderdrukking en automatische versterkingsregeling";
 
 /* preferences */
 "Use iPhone's speaker instead of earpiece" = "Gebruik de iPhone-luidspreker in plaats van het telefoongedeelte";
@@ -1862,7 +1925,7 @@
 "User Details" = "Gebruikersdetails";
 
 /* channel list */
-"User female" = "User female";
+"User female" = "Vrouwelijke gebruiker";
 
 /* user detail */
 "User ID" = "Gebruikers-ID";
@@ -1880,16 +1943,16 @@
 "User Leaves Channel" = "Gebruiker verlaat kanaal";
 
 /* preferences */
-"User logged in" = "User logged in";
+"User logged in" = "Gebruiker ingelogd";
 
 /* preferences */
-"User Logged In" = "User Logged In";
+"User Logged In" = "Gebruiker ingelogd";
 
 /* preferences */
-"User logged out" = "User logged out";
+"User logged out" = "Gebruiker uitgelogd";
 
 /* preferences */
-"User Logged Out" = "User Logged Out";
+"User Logged Out" = "Gebruiker uitgelogd";
 
 /* preferences
    user detail */
@@ -1903,22 +1966,22 @@
 "Username" = "Gebruikersnaam";
 
 /* Web Login Controller */
-"Username or password incorrect" = "Username or password incorrect";
+"Username or password incorrect" = "Gebruikersnaam of wachtwoord onjuist";
 
 /* channel list */
 "Users" = "Gebruikers";
 
 /* server entry */
-"Users Online" = "Users Online";
+"Users Online" = "Gebruikers online";
 
 /* serverlist */
 "Users: %d, Country: %@" = "Users: %1$d, Country: %2$@";
 
 /* codec detail */
-"Variable Bitrate" = "Variable Bitrate";
+"Variable Bitrate" = "Variabele bitsnelheid";
 
 /* preferences */
-"Version Information" = "Version Information";
+"Version Information" = "Versie-informatie";
 
 /* channel list */
 "View" = "Weergeven";
@@ -1940,7 +2003,7 @@
 "Voice Activation Level: Disabled" = "Stemactivatieniveau: Uitgeschakeld";
 
 /* preferences */
-"Voice Activation Triggered" = "Voice Activation Triggered";
+"Voice Activation Triggered" = "Stemactivatie geactiveerd";
 
 /* Sound Devices */
 "Voice Cleanup" = "Spraakopschoning";
@@ -1952,7 +2015,7 @@
 "Voice Packets Lost" = "Verloren spraakpakketten";
 
 /* preferences */
-"Voice Preprocessing" = "Voice Preprocessing";
+"Voice Preprocessing" = "Stemvoorbewerking";
 
 /* preferences */
 "Voice Transmission Toggled" = "Spraakuitzending geschakeld";
@@ -1985,11 +2048,11 @@
 "Web address, live" = "Webadres, live";
 
 /* Web Login controller */
-"Web Login ID" = "Web Login ID";
+"Web Login ID" = "Web Login-ID";
 
 /* preferences
    user detail */
-"WebCam" = "WebCam";
+"WebCam" = "Webcam";
 
 /* Sound Devices */
 "WebRTC" = "WebRTC";
@@ -2009,23 +2072,26 @@
 /* diagnostics */
 "Widget and Controls" = "Widget en regelaars";
 
+/* accessibility hint */
+"Write your message here" = "Schrijf hier je bericht";
+
 /* Dialog message */
-"Yes" = "Yes";
+"Yes" = "Ja";
 
 /* media stream */
 "You are not allowed to stream media files on this server" = "Je mag op deze server geen mediabestanden streamen";
 
 /* Dialog */
-"You have been kicked from channel" = "You have been kicked from channel";
+"You have been kicked from channel" = "Je bent uit het kanaal gekickt";
 
 /* Dialog */
-"You have been kicked from channel by %@" = "You have been kicked from channel by %@";
+"You have been kicked from channel by %@" = "Je bent uit het kanaal gekickt door %@";
 
 /* Dialog */
-"You have been kicked from server" = "You have been kicked from server";
+"You have been kicked from server" = "Je bent van de server gekickt";
 
 /* Dialog */
-"You have been kicked from server by %@" = "You have been kicked from server by %@";
+"You have been kicked from server by %@" = "Je bent van de server gekickt door %@";
 
 /* speech */
 "You have selected %@" = "U hebt %@ geselecteerd";

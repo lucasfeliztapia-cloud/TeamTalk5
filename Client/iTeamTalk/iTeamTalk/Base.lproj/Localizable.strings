@@ -174,6 +174,9 @@
 /* media stream */
 "Address of a web radio or of an audio or video file" = "Address of a web radio or of an audio or video file";
 
+/* accessibility hint */
+"Adds a server to the list" = "Adds a server to the list";
+
 /* user accounts */
 "Administrator" = "Administrator";
 
@@ -367,6 +370,12 @@
    user detail */
 "Channel Messages" = "Channel Messages";
 
+/* server entry */
+"Channel name" = "Channel name";
+
+/* server entry */
+"Channel password" = "Channel password";
+
 /* create channel */
 "Channel Properties" = "Channel Properties";
 
@@ -411,6 +420,9 @@
 
 /* preferences */
 "Choose sounds events to play" = "Choose sounds events to play";
+
+/* accessibility hint */
+"Chooses where the sound comes out" = "Chooses where the sound comes out";
 
 /* all users */
 "Choosing a user shows the channel they are in. If the server does not let your account see all users, only those of your channel are listed." = "Choosing a user shows the channel they are in. If the server does not let your account see all users, only those of your channel are listed.";
@@ -488,6 +500,9 @@
 
 /* connection quality */
 "Connection Quality" = "Connection Quality";
+
+/* accessibility hint */
+"Connects to this server" = "Connects to this server";
 
 /* keyboard shortcuts */
 "Control" = "Control";
@@ -583,6 +598,9 @@
 /* channel list */
 "Disconnect" = "Disconnect";
 
+/* accessibility hint */
+"Disconnects from the server and goes back to the server list" = "Disconnects from the server and goes back to the server list";
+
 /* preferences */
 "Display" = "Display";
 
@@ -628,11 +646,17 @@
 /* server entry */
 "Encrypted" = "Encrypted";
 
+/* accessibility hint */
+"Ends the selection of users" = "Ends the selection of users";
+
 /* media stream */
 "Enter a web address that starts with http or https" = "Enter a web address that starts with http or https";
 
 /* Dialog message */
 "Enter Password" = "Enter Password";
+
+/* accessibility hint */
+"Enters the channel" = "Enters the channel";
 
 /* Dialog
    Dialog message
@@ -756,6 +780,9 @@
 /* channel list */
 "Go to Their Channel" = "Go to Their Channel";
 
+/* accessibility hint */
+"Goes to the channel this user is in" = "Goes to the channel this user is in";
+
 /* TTS EVENT */
 "has joined the channel" = "has joined the channel";
 
@@ -825,6 +852,9 @@
 /* server entry */
 "Join Channel" = "Join Channel";
 
+/* server entry */
+"Join Code" = "Join Code";
+
 /* preferences */
 "Join Root Channel" = "Join Root Channel";
 
@@ -839,6 +869,9 @@
 
 /* log entry */
 "Joined %@" = "Joined %@";
+
+/* accessibility hint */
+"Joins the channel that is shown" = "Joins the channel that is shown";
 
 /* keyboard shortcuts */
 "Key" = "Key";
@@ -878,6 +911,9 @@
 
 /* connection quality */
 "Latency and packet loss" = "Latency and packet loss";
+
+/* accessibility hint */
+"Lets you choose several users to move, kick or ban them" = "Lets you choose several users to move, kick or ban them";
 
 /* appearance */
 "Light or Dark" = "Light or Dark";
@@ -1130,6 +1166,9 @@
 /* serverlist */
 "Official server" = "Official server";
 
+/* server list */
+"Official Servers" = "Official Servers";
+
 /* Dialog
    Dialog message
    message dialog
@@ -1149,8 +1188,17 @@
 /* diagnostics */
 "Open Settings" = "Open Settings";
 
+/* accessibility hint */
+"Opens a menu with more options" = "Opens a menu with more options";
+
 /* file list */
 "Opens the file" = "Opens the file";
+
+/* accessibility hint */
+"Opens the private messages with this user" = "Opens the private messages with this user";
+
+/* accessibility hint */
+"Opens the screen to stream audio or video to the channel" = "Opens the screen to stream audio or video to the channel";
 
 /* keyboard shortcuts */
 "Option" = "Option";
@@ -1416,6 +1464,9 @@
 /* speech */
 "Selected" = "Selected";
 
+/* accessibility hint */
+"Selects or deselects this user" = "Selects or deselects this user";
+
 /* text messages */
 "Send" = "Send";
 
@@ -1442,6 +1493,9 @@
 
 /* media stream */
 "Send Video" = "Send Video";
+
+/* accessibility hint */
+"Sends the message" = "Sends the message";
 
 /* connection quality */
 "Sent" = "Sent";
@@ -1508,6 +1562,9 @@
 
 /* preferences */
 "Show male or female icon" = "Show male or female icon";
+
+/* preferences */
+"Show male, female or neutral icon" = "Show male, female or neutral icon";
 
 /* server entry */
 "Show password" = "Show password";
@@ -1807,6 +1864,9 @@
 /* serverlist */
 "Unofficial server" = "Unofficial server";
 
+/* server list */
+"Unofficial Servers" = "Unofficial Servers";
+
 /* file list */
 "Upload file" = "Upload file";
 
@@ -1821,6 +1881,9 @@
 
 /* file list */
 "Uploading, %d %%" = "Uploading, %d %%";
+
+/* accessibility hint */
+"Uploads files or photos to the channel" = "Uploads files or photos to the channel";
 
 /* Sound Devices */
 "Use echo cancellation and automatic gain control" = "Use echo cancellation and automatic gain control";
@@ -2000,6 +2063,9 @@
 
 /* diagnostics */
 "Widget and Controls" = "Widget and Controls";
+
+/* accessibility hint */
+"Write your message here" = "Write your message here";
 
 /* Dialog message */
 "Yes" = "Yes";

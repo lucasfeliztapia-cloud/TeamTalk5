@@ -103,6 +103,7 @@ struct FileListView: View {
                     Image(systemName: "arrow.up.doc")
                 }
                 .accessibilityLabel("Upload file")
+                .accessibilityHint("Uploads files or photos to the channel")
                 .disabled(!model.canUpload)
             }
         }

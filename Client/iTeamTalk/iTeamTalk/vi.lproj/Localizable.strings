@@ -98,25 +98,25 @@
 "100 % leaves the file as it is. The preview plays on this device only, with this volume and from the chosen position." = "100 % giữ nguyên tệp. Bản nghe thử chỉ phát trên thiết bị này, với âm lượng này và từ vị trí đã chọn.";
 
 /* codec detail */
-"12 KHz" = "12 KHz";
+"12 KHz" = "12 kHz";
 
 /* codec detail
    create channel */
-"16 KHz" = "16 KHz";
+"16 KHz" = "16 kHz";
 
 /* codec detail */
-"24 KHz" = "24 KHz";
+"24 KHz" = "24 kHz";
 
 /* codec detail
    create channel */
-"32 KHz" = "32 KHz";
+"32 KHz" = "32 kHz";
 
 /* codec detail */
-"48 KHz" = "48 KHz";
+"48 KHz" = "48 kHz";
 
 /* codec detail
    create channel */
-"8 KHz" = "8 KHz";
+"8 KHz" = "8 kHz";
 
 /* user accounts */
 "A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "Thay đổi quyền có hiệu lực từ lần đăng nhập tiếp theo của người dùng. Ai đang kết nối vẫn giữ quyền cũ cho đến lúc đó.";
@@ -174,6 +174,9 @@
 /* media stream */
 "Address of a web radio or of an audio or video file" = "Địa chỉ của đài phát thanh web hoặc của tệp âm thanh hay video";
 
+/* accessibility hint */
+"Adds a server to the list" = "Thêm một máy chủ vào danh sách";
+
 /* user accounts */
 "Administrator" = "Quản trị viên";
 
@@ -226,7 +229,7 @@
 "Appearance" = "Giao diện";
 
 /* codec detail */
-"Application" = "Application";
+"Application" = "Ứng dụng";
 
 /* appearance */
 "Apply High Contrast Theme" = "Áp dụng chủ đề tương phản cao";
@@ -241,7 +244,7 @@
 "Audio Channels" = "Kênh âm thanh";
 
 /* create channel */
-"Audio Codec" = "Audio Codec";
+"Audio Codec" = "Codec âm thanh";
 
 /* channel list */
 "Audio Output" = "Đầu ra âm thanh";
@@ -305,13 +308,13 @@
 "BearWare.dk Web Login failed to authenticate. Check BearWare.dk Web Login in Preferences" = "Đăng nhập web BearWare.dk không thành công. Hãy kiểm tra lại Đăng nhập web BearWare.dk trong Tùy chọn";
 
 /* codec detail */
-"Bitrate" = "Bitrate";
+"Bitrate" = "Tốc độ bit";
 
 /* preferences */
 "Bjoern D. Rasmussen, contact@bearware.dk" = "Bjoern D. Rasmussen, contact@bearware.dk";
 
 /* Sound Devices */
-"Bluetooth A2DP Playback" = "Bluetooth A2DP Playback";
+"Bluetooth A2DP Playback" = "Phát Bluetooth A2DP";
 
 /* Sound Devices */
 "Bluetooth playback should use Advanced Audio Distribution Profile" = "Chế độ Bluetooth nên sử dụng Cấu hình Phân phối Âm thanh Nâng cao";
@@ -367,6 +370,12 @@
    user detail */
 "Channel Messages" = "Tin nhắn kênh";
 
+/* server entry */
+"Channel name" = "Tên kênh";
+
+/* server entry */
+"Channel password" = "Mật khẩu kênh";
+
 /* create channel */
 "Channel Properties" = "Thông tin kênh";
 
@@ -411,6 +420,9 @@
 
 /* preferences */
 "Choose sounds events to play" = "Chọn âm thanh sự kiện sẽ được phát";
+
+/* accessibility hint */
+"Chooses where the sound comes out" = "Chọn nơi âm thanh phát ra";
 
 /* all users */
 "Choosing a user shows the channel they are in. If the server does not let your account see all users, only those of your channel are listed." = "Chọn một người dùng sẽ hiển thị kênh mà họ đang ở. Nếu máy chủ không cho tài khoản của bạn thấy mọi người dùng, chỉ những người trong kênh của bạn được liệt kê.";
@@ -489,6 +501,9 @@
 /* connection quality */
 "Connection Quality" = "Chất lượng kết nối";
 
+/* accessibility hint */
+"Connects to this server" = "Kết nối với máy chủ này";
+
 /* keyboard shortcuts */
 "Control" = "Control";
 
@@ -502,7 +517,7 @@
 "Copied" = "Đã sao chép";
 
 /* server entry */
-"Copy" = "Copy";
+"Copy" = "Sao chép";
 
 /* server entry */
 "Copy Join Code" = "Sao chép mã tham gia";
@@ -586,6 +601,9 @@
 /* channel list */
 "Disconnect" = "Ngắt kết nối";
 
+/* accessibility hint */
+"Disconnects from the server and goes back to the server list" = "Ngắt kết nối khỏi máy chủ và quay lại danh sách máy chủ";
+
 /* preferences */
 "Display" = "Hiển thị";
 
@@ -631,14 +649,20 @@
 /* server entry */
 "Encrypted" = "Mã hóa";
 
+/* accessibility hint */
+"Ends the selection of users" = "Kết thúc việc chọn người dùng";
+
 /* media stream */
 "Enter a web address that starts with http or https" = "Nhập một địa chỉ web bắt đầu bằng http hoặc https";
 
 /* serverlist */
-"Enter Join Code" = "Enter Join Code";
+"Enter Join Code" = "Nhập mã tham gia";
 
 /* Dialog message */
 "Enter Password" = "Nhập mật khẩu";
+
+/* accessibility hint */
+"Enters the channel" = "Vào kênh";
 
 /* Dialog
    Dialog message
@@ -762,6 +786,9 @@
 /* channel list */
 "Go to Their Channel" = "Đến kênh của họ";
 
+/* accessibility hint */
+"Goes to the channel this user is in" = "Đến kênh mà người dùng này đang ở";
+
 /* TTS EVENT */
 "has joined the channel" = "đã tham gia kênh";
 
@@ -832,7 +859,10 @@
 "Join Channel" = "Tham gia kênh";
 
 /* server entry */
-"Join Code: %@" = "Join Code: %@";
+"Join Code" = "Mã tham gia";
+
+/* server entry */
+"Join Code: %@" = "Mã tham gia: %@";
 
 /* preferences */
 "Join Root Channel" = "Tham gia kênh gốc";
@@ -848,6 +878,9 @@
 
 /* log entry */
 "Joined %@" = "Đã tham gia %@";
+
+/* accessibility hint */
+"Joins the channel that is shown" = "Tham gia kênh đang hiển thị";
 
 /* keyboard shortcuts */
 "Key" = "Phím";
@@ -888,6 +921,9 @@
 /* connection quality */
 "Latency and packet loss" = "Độ trễ và mất gói";
 
+/* accessibility hint */
+"Lets you choose several users to move, kick or ban them" = "Cho phép chọn nhiều người dùng để di chuyển, kick hoặc chặn";
+
 /* appearance */
 "Light or Dark" = "Sáng hoặc tối";
 
@@ -916,7 +952,7 @@
 "Log in from several devices at once" = "Đăng nhập từ nhiều thiết bị cùng lúc";
 
 /* text message type */
-"Log message" = "Log message";
+"Log message" = "Tin nhắn nhật ký";
 
 /* log entry */
 "Logged on to server" = "Đã đăng nhập vào máy chủ";
@@ -1018,7 +1054,7 @@
 "Move users here" = "Di chuyển người dùng đến đây";
 
 /* codec detail */
-"Music" = "Music";
+"Music" = "Âm nhạc";
 
 /* channel list */
 "Mute" = "Tắt tiếng";
@@ -1095,7 +1131,7 @@
 "No results" = "Không có kết quả";
 
 /* serverlist */
-"No server found" = "No server found";
+"No server found" = "Không tìm thấy máy chủ nào";
 
 /* user accounts */
 "No user accounts" = "Không có tài khoản người dùng";
@@ -1142,6 +1178,9 @@
 /* serverlist */
 "Official server" = "Máy chủ chính thức";
 
+/* server list */
+"Official Servers" = "Máy chủ chính thức";
+
 /* Dialog
    Dialog message
    message dialog
@@ -1161,14 +1200,23 @@
 /* diagnostics */
 "Open Settings" = "Mở Cài đặt";
 
+/* accessibility hint */
+"Opens a menu with more options" = "Mở menu có thêm tùy chọn";
+
 /* file list */
 "Opens the file" = "Mở tệp";
+
+/* accessibility hint */
+"Opens the private messages with this user" = "Mở tin nhắn riêng với người dùng này";
+
+/* accessibility hint */
+"Opens the screen to stream audio or video to the channel" = "Mở màn hình để phát trực tuyến âm thanh hoặc video lên kênh";
 
 /* keyboard shortcuts */
 "Option" = "Option";
 
 /* codec detail */
-"OPUS Codec" = "OPUS Codec";
+"OPUS Codec" = "Codec OPUS";
 
 /* preferences */
 "Order of channels in Channel List" = "Thứ tự các kênh trong Danh sách kênh";
@@ -1252,7 +1300,7 @@
 "Pop up text message when new messages are received" = "Thông báo bật lên khi nhận được tin nhắn mới";
 
 /* preferences */
-"Popularity" = "Popularity";
+"Popularity" = "Độ phổ biến";
 
 /* media stream */
 "Position" = "Vị trí";
@@ -1261,7 +1309,7 @@
 "Preferences" = "Tùy chọn";
 
 /* Sound Devices */
-"Preferred" = "Preferred";
+"Preferred" = "Ưu tiên";
 
 /* media stream */
 "Preparing file" = "Đang chuẩn bị tệp";
@@ -1384,7 +1432,7 @@
 "Same as the System" = "Giống hệ thống";
 
 /* codec detail */
-"Sample Rate" = "Sample Rate";
+"Sample Rate" = "Tần số lấy mẫu";
 
 /* channel detail */
 "Save" = "Lưu";
@@ -1428,6 +1476,9 @@
 /* speech */
 "Selected" = "Đã chọn";
 
+/* accessibility hint */
+"Selects or deselects this user" = "Chọn hoặc bỏ chọn người dùng này";
+
 /* text messages */
 "Send" = "Gửi";
 
@@ -1454,6 +1505,9 @@
 
 /* media stream */
 "Send Video" = "Gửi video";
+
+/* accessibility hint */
+"Sends the message" = "Gửi tin nhắn";
 
 /* connection quality */
 "Sent" = "Đã gửi";
@@ -1520,6 +1574,9 @@
 
 /* preferences */
 "Show male or female icon" = "Hiển thị biểu tượng nam hoặc nữ";
+
+/* preferences */
+"Show male, female or neutral icon" = "Hiển thị biểu tượng nam, nữ hoặc trung tính";
 
 /* server entry */
 "Show password" = "Hiện mật khẩu";
@@ -1592,10 +1649,10 @@
 "Speech Volume" = "Âm lượng giọng nói";
 
 /* codec detail */
-"Speex Codec" = "Speex Codec";
+"Speex Codec" = "Codec Speex";
 
 /* codec detail */
-"Speex Variable Bitrate Codec" = "Speex Variable Bitrate Codec";
+"Speex Variable Bitrate Codec" = "Codec Speex tốc độ bit thay đổi";
 
 /* text to speech events */
 "Spoken By" = "Đọc bởi";
@@ -1810,7 +1867,7 @@
 "Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Đã tắt. Hãy bật Hoạt động trực tiếp trong Cài đặt, mục TeamTalk.";
 
 /* serverlist */
-"Type Join Code" = "Type Join Code";
+"Type Join Code" = "Gõ mã tham gia";
 
 /* text field hint
    text message */
@@ -1821,6 +1878,9 @@
 
 /* serverlist */
 "Unofficial server" = "máy chủ không chính thức";
+
+/* server list */
+"Unofficial Servers" = "Máy chủ không chính thức";
 
 /* file list */
 "Upload file" = "Tải tệp lên";
@@ -1836,6 +1896,9 @@
 
 /* file list */
 "Uploading, %d %%" = "Đang tải lên, %d %%";
+
+/* accessibility hint */
+"Uploads files or photos to the channel" = "Tải tệp hoặc ảnh lên kênh";
 
 /* Sound Devices */
 "Use echo cancellation and automatic gain control" = "Sử dụng loại bỏ tiếng vang và điều khiển khuếch đại tự động";
@@ -1922,7 +1985,7 @@
 "Users: %d, Country: %@" = "Người dùng: %d, Quốc gia: %@";
 
 /* codec detail */
-"Variable Bitrate" = "Variable Bitrate";
+"Variable Bitrate" = "Tốc độ bit thay đổi";
 
 /* preferences */
 "Version Information" = "Thông tin phiên bản";
@@ -1996,7 +2059,7 @@
 
 /* preferences
    user detail */
-"WebCam" = "WebCam";
+"WebCam" = "Webcam";
 
 /* Sound Devices */
 "WebRTC" = "WebRTC";
@@ -2015,6 +2078,9 @@
 
 /* diagnostics */
 "Widget and Controls" = "Tiện ích và điều khiển";
+
+/* accessibility hint */
+"Write your message here" = "Viết tin nhắn của bạn ở đây";
 
 /* Dialog message */
 "Yes" = "Có";

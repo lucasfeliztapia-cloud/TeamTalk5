@@ -28,9 +28,22 @@ struct MainTabView: View {
     @ObservedObject var model: MainTabModel
     let close: () -> Void
     @State private var saveAlertName = String(localized: "New Server", comment: "Dialog message")
+    @State private var selectedTab = 0
+
+    /// The scrub of VoiceOver with the focus where no view answers it, the
+    /// navigation bar or the tab bar: back to the Channels tab and, from
+    /// there, what the Channels tab does with it.
+    private func goBack() -> Bool {
+        if selectedTab != 0 {
+            selectedTab = 0
+        } else if !model.channelListModel.goBack() {
+            model.disconnectTapped(dismiss: close)
+        }
+        return true
+    }
 
     var body: some View {
-        TabView {
+        TabView(selection: $selectedTab) {
             ChannelsTabView(mainModel: model, model: model.channelListModel, close: close)
                 /*.accessibilityAction(.magicTap) {
                     model.channelListModel.txBtnAccessibilityAction()
@@ -43,6 +56,9 @@ struct MainTabView: View {
             // Messages tab
             NavigationStack {
                 TextMessageView(model: model.channelChatModel)
+                    .accessibilityAction(.escape) {
+                        selectedTab = 0
+                    }
                     /*.accessibilityAction(.magicTap) {
                         model.channelListModel.txBtnAccessibilityAction()
                     }*/
@@ -55,6 +71,9 @@ struct MainTabView: View {
             // Files tab
             NavigationStack {
                 FileListView(model: model.fileListModel)
+                    .accessibilityAction(.escape) {
+                        selectedTab = 0
+                    }
             }
             .tabItem {
                 Label("Files", systemImage: "doc")
@@ -64,6 +83,9 @@ struct MainTabView: View {
             // Preferences tab
             NavigationStack {
                 PreferencesView(model: model.preferencesModel)
+                    .accessibilityAction(.escape) {
+                        selectedTab = 0
+                    }
                     /*.accessibilityAction(.magicTap) {
                         model.channelListModel.txBtnAccessibilityAction()
                     }*/
@@ -75,6 +97,12 @@ struct MainTabView: View {
         }
         .accessibilityAction(.magicTap) {
             model.channelListModel.txBtnAccessibilityAction()
+        }
+        .onAppear {
+            AppDelegate.escapeHandler = goBack
+        }
+        .onDisappear {
+            AppDelegate.escapeHandler = nil
         }
         .background {
             KeyboardShortcutButtons { action in
@@ -174,9 +202,19 @@ private struct ChannelsTabView: View {
     @State private var showingMediaStream = false
     @State private var channelSheet: ChannelSheet?
 
+    /// The scrub of VoiceOver: one step back in the channel list and, at the
+    /// top of the server, out of it, like Disconnect. The buttons of the
+    /// navigation bar carry it too, they are not inside the list.
+    private func escape() {
+        if !model.goBack() {
+            mainModel.disconnectTapped(dismiss: close)
+        }
+    }
+
     var body: some View {
         NavigationStack(path: $model.navigationPath) {
             ChannelListContainerView(model: model)
+                .accessibilityAction(.escape, escape)
                 .navigationDestination(for: ChannelListDestination.self) { destination in
                     channelDestinationView(destination)
                 }
@@ -185,6 +223,8 @@ private struct ChannelsTabView: View {
                         Button("Disconnect") {
                             mainModel.disconnectTapped(dismiss: close)
                         }
+                        .accessibilityHint("Disconnects from the server and goes back to the server list")
+                        .accessibilityAction(.escape, escape)
                     }
                     // Three items and no more. With four the last one stopped
                     // answering on the device, a plain button where there had
@@ -200,6 +240,10 @@ private struct ChannelsTabView: View {
                                 .labelStyle(.iconOnly)
                                 .foregroundStyle(.tint)
                         }
+                        .accessibilityHint(model.isSelecting
+                            ? Text("Ends the selection of users")
+                            : Text("Lets you choose several users to move, kick or ban them"))
+                        .accessibilityAction(.escape, escape)
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
@@ -209,6 +253,8 @@ private struct ChannelsTabView: View {
                                 .labelStyle(.iconOnly)
                                 .foregroundStyle(.tint)
                         }
+                        .accessibilityHint("Opens the screen to stream audio or video to the channel")
+                        .accessibilityAction(.escape, escape)
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
                         // a menu of the system: it follows light and dark by itself
@@ -249,6 +295,8 @@ private struct ChannelsTabView: View {
                                 .labelStyle(.iconOnly)
                                 .foregroundStyle(.tint)
                         }
+                        .accessibilityHint("Opens a menu with more options")
+                        .accessibilityAction(.escape, escape)
                     }
                 }
                 .sheet(item: $channelSheet) { sheet in

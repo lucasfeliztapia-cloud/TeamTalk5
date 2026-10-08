@@ -544,6 +544,42 @@ final class ChannelListModel: ObservableObject {
         }
     }
 
+    /// What activating a channel does, or how many users would be moved into it
+    func channelAccessibilityHint() -> String {
+        moveusers.isEmpty
+            ? String(localized: "Enters the channel", comment: "channel list")
+            : moveDestinationAccessibilityHint()
+    }
+
+    /// What activating a user does, which depends on what the list is showing
+    func userAccessibilityHint() -> String {
+        if isSelecting {
+            return String(localized: "Selects or deselects this user", comment: "channel list")
+        }
+        if isSearching {
+            return String(localized: "Goes to the channel this user is in", comment: "channel list")
+        }
+        return String(localized: "Opens the private messages with this user", comment: "channel list")
+    }
+
+    /// One step back in the channel list: out of the search, out of the
+    /// selection, or up to the channel above. False at the top of the server.
+    func goBack() -> Bool {
+        if isSearching {
+            searchText = ""
+            return true
+        }
+        if isSelecting {
+            toggleSelecting()
+            return true
+        }
+        if curchannel.nParentID != 0, let parent = channels[curchannel.nParentID] {
+            selectRow(.channel(parent))
+            return true
+        }
+        return false
+    }
+
     // MARK: - Deafen
 
     func toggleDeafen() {
