@@ -37,6 +37,22 @@ func genderStatusMode(_ index: Int) -> StatusMode {
     default: return .STATUSMODE_AVAILABLE
     }
 }
+let PREF_GENERAL_STATUSMODE = "general_statusmode_preference"
+let PREF_GENERAL_STATUSMSG = "general_statusmsg_preference"
+let PREF_CONNECT_LASTSERVER = "connect_lastserver_preference"
+
+/// Status sent to the server: the gender flag plus available (0), away (1) or question (2)
+func currentStatusMode() -> INT32 {
+    let settings = UserDefaults.standard
+    let gender = genderStatusMode(settings.integer(forKey: PREF_GENERAL_GENDER)).rawValue
+    let status = UInt(max(0, min(2, settings.integer(forKey: PREF_GENERAL_STATUSMODE))))
+    return INT32(gender | status)
+}
+
+func currentStatusMessage() -> String {
+    UserDefaults.standard.string(forKey: PREF_GENERAL_STATUSMSG) ?? ""
+}
+
 let PREF_GENERAL_BEARWARE_ID = "general_bearwareid_preference"
 let PREF_GENERAL_BEARWARE_TOKEN = "general_bearwaretoken_preference"
 let PREF_GENERAL_PTTLOCK = "general_pttlock_preference"
@@ -119,6 +135,9 @@ final class PreferencesModel: ObservableObject {
 
     @Published var nicknameText: String
     @Published var genderIndex: Int
+    @Published var statusIndex: Int
+    @Published var statusMessage: String
+    @Published var connectLastServer: Bool
     @Published var pushToTalkLock: Bool
     @Published var headsetTXToggle: Bool
     @Published var sendOnReturn: Bool
@@ -146,6 +165,9 @@ final class PreferencesModel: ObservableObject {
 
         nicknameText = settings.string(forKey: PREF_GENERAL_NICKNAME) ?? ""
         genderIndex = settings.integer(forKey: PREF_GENERAL_GENDER)
+        statusIndex = max(0, min(2, settings.integer(forKey: PREF_GENERAL_STATUSMODE)))
+        statusMessage = settings.string(forKey: PREF_GENERAL_STATUSMSG) ?? ""
+        connectLastServer = settings.bool(forKey: PREF_CONNECT_LASTSERVER)
         pushToTalkLock = settings.object(forKey: PREF_GENERAL_PTTLOCK) != nil && settings.bool(forKey: PREF_GENERAL_PTTLOCK)
         headsetTXToggle = settings.object(forKey: PREF_HEADSET_TXTOGGLE) != nil && settings.bool(forKey: PREF_HEADSET_TXTOGGLE)
         sendOnReturn = settings.object(forKey: PREF_GENERAL_SENDONRETURN) == nil || settings.bool(forKey: PREF_GENERAL_SENDONRETURN)
@@ -218,7 +240,28 @@ final class PreferencesModel: ObservableObject {
         genderIndex = index
         UserDefaults.standard.set(index, forKey: PREF_GENERAL_GENDER)
 
-        TeamTalkClient.shared.changeStatus(mode: INT32(genderStatusMode(index).rawValue))
+        applyStatus()
+    }
+
+    func statusChanged(_ index: Int) {
+        statusIndex = index
+        UserDefaults.standard.set(index, forKey: PREF_GENERAL_STATUSMODE)
+        applyStatus()
+    }
+
+    func statusMessageChanged(_ message: String) {
+        statusMessage = message
+        UserDefaults.standard.set(message, forKey: PREF_GENERAL_STATUSMSG)
+        applyStatus()
+    }
+
+    private func applyStatus() {
+        TeamTalkClient.shared.changeStatus(mode: currentStatusMode(), message: currentStatusMessage())
+    }
+
+    func connectLastServerChanged(_ enabled: Bool) {
+        connectLastServer = enabled
+        UserDefaults.standard.set(enabled, forKey: PREF_CONNECT_LASTSERVER)
     }
 
     func pttlockChanged(_ enabled: Bool) {

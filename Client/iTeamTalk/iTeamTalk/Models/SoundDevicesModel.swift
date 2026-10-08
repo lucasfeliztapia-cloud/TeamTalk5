@@ -41,6 +41,9 @@ final class SoundDevicesModel: ObservableObject {
     }
 
     @Published private var revision = 0
+    @Published var isTestingMicrophone = false
+
+    private var loopbackTest: UnsafeMutableRawPointer?
 
     let toggleRows = [
         ToggleRow(
@@ -99,6 +102,52 @@ final class SoundDevicesModel: ObservableObject {
         if let routeObserver {
             NotificationCenter.default.removeObserver(routeObserver)
         }
+        if loopbackTest != nil {
+            TeamTalkClient.closeSoundLoopbackTest(loopbackTest)
+            setupSoundDevices()
+        }
+    }
+
+    // MARK: - Microphone test
+
+    /// In a channel the sound devices are busy with the conversation.
+    var canTestMicrophone: Bool {
+        TeamTalkClient.shared.myChannelID <= 0
+    }
+
+    func toggleMicrophoneTest() {
+        if isTestingMicrophone {
+            stopMicrophoneTest()
+        } else {
+            startMicrophoneTest()
+        }
+    }
+
+    private func startMicrophoneTest() {
+        guard loopbackTest == nil, canTestMicrophone else { return }
+
+        // leaves the audio session set up, then frees the devices for the test
+        setupSoundDevices()
+        closeSoundDevices()
+
+        let device = preferenceValue(forKey: PREF_VOICEPROCESSINGIO)
+            ? TeamTalkSoundDeviceID.voiceProcessingIO
+            : TeamTalkSoundDeviceID.remoteIO
+        loopbackTest = TeamTalkClient.startSoundLoopbackTest(deviceID: device, sampleRate: 48000, channels: 1)
+        isTestingMicrophone = loopbackTest != nil
+        logDiagnostic("Microphone test \(isTestingMicrophone ? "started" : "FAILED to start") on device \(device)")
+        if loopbackTest == nil {
+            setupSoundDevices()
+        }
+    }
+
+    func stopMicrophoneTest() {
+        guard loopbackTest != nil else { return }
+        TeamTalkClient.closeSoundLoopbackTest(loopbackTest)
+        loopbackTest = nil
+        isTestingMicrophone = false
+        logDiagnostic("Microphone test stopped")
+        setupSoundDevices()
     }
 
     func preferenceValue(forKey key: String) -> Bool {

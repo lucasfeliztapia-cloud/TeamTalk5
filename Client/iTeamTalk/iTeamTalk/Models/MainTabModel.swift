@@ -226,6 +226,7 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
     }
 
     @objc func connectToServer() {
+        logDiagnostic("Connecting to \(server.ipaddr) tcp=\(server.tcpport) udp=\(server.udpport) encrypted=\(server.encrypted)")
         if !setupEncryption(server: server) {
             fatalAlertMessage = String(localized: "Failed to setup encryption", comment: "connect to a server")
         } else if !TeamTalkClient.shared.connect(
@@ -248,6 +249,7 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
     @objc private func audioRouteChange(_ notification: Notification) {
         guard let reasonValue = notification.userInfo?[AVAudioSessionRouteChangeReasonKey] as? UInt,
               let reason = AVAudioSession.RouteChangeReason(rawValue: reasonValue) else { return }
+        logDiagnostic("Audio route change, reason \(reasonValue): \(describeAudioRoute(AVAudioSession.sharedInstance()))")
         switch reason {
         case .oldDeviceUnavailable:
             setupSoundDevices()
@@ -260,8 +262,33 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
     @objc private func audioInterruption(_ notification: Notification) {
         guard let optionValue = notification.userInfo?[AVAudioSessionInterruptionOptionKey] as? UInt else { return }
         let options = AVAudioSession.InterruptionOptions(rawValue: optionValue)
+        logDiagnostic("Audio interruption ended, shouldResume=\(options.contains(.shouldResume))")
         if options.contains(.shouldResume) {
             setupSoundDevices()
+        }
+    }
+
+    // MARK: - Diagnostics
+
+    private func logEvent(_ m: TTMessage) {
+        switch m.nClientEvent {
+        case CLIENTEVENT_USER_STATECHANGE, CLIENTEVENT_FILETRANSFER, CLIENTEVENT_STREAM_MEDIAFILE,
+             CLIENTEVENT_CMD_USER_UPDATE, CLIENTEVENT_CMD_CHANNEL_NEW, CLIENTEVENT_CMD_USER_LOGGEDIN,
+             CLIENTEVENT_CMD_FILE_NEW:
+            // too many of them, and their own models log what matters
+            break
+        case CLIENTEVENT_CMD_ERROR:
+            let error = TeamTalkString.clientError(TeamTalkMessagePayload.clientError(from: m))
+            logDiagnostic("CMD_ERROR cmd=\(m.nSource): \(error)")
+        case CLIENTEVENT_INTERNAL_ERROR:
+            let error = TeamTalkString.clientError(TeamTalkMessagePayload.clientError(from: m))
+            logDiagnostic("INTERNAL_ERROR: \(error)")
+        case CLIENTEVENT_CMD_USER_JOINED, CLIENTEVENT_CMD_USER_LEFT:
+            let user = TeamTalkMessagePayload.user(from: m)
+            let me = user.nUserID == TeamTalkClient.shared.myUserID ? " (me)" : ""
+            logDiagnostic("\(clientEventName(m.nClientEvent)) user=\(user.nUserID)\(me) channel=\(user.nChannelID) flags=\(String(TeamTalkClient.shared.flags.rawValue, radix: 16))")
+        default:
+            logDiagnostic("\(clientEventName(m.nClientEvent)) source=\(m.nSource) flags=\(String(TeamTalkClient.shared.flags.rawValue, radix: 16))")
         }
     }
 
@@ -319,6 +346,7 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
 
     func handleTTMessage(_ m: TTMessage) {
         scheduleLiveActivityUpdate()
+        logEvent(m)
 
         switch m.nClientEvent {
 
@@ -378,6 +406,7 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
             if !initchan.isEmpty {
                 server.channel = initchan
             }
+            saveLastServer(server)
 
         case CLIENTEVENT_CMD_MYSELF_KICKED:
             let msg: String
@@ -470,10 +499,10 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
                 server.channel.removeAll()
                 server.chanpasswd.removeAll()
             }
-            let settings = UserDefaults.standard
-            let gender = genderStatusMode(settings.integer(forKey: PREF_GENERAL_GENDER))
-            if gender != .STATUSMODE_AVAILABLE {
-                TeamTalkClient.shared.changeStatus(mode: INT32(gender.rawValue))
+            let statusMode = currentStatusMode()
+            let statusMessage = currentStatusMessage()
+            if statusMode != 0 || !statusMessage.isEmpty {
+                TeamTalkClient.shared.changeStatus(mode: statusMode, message: statusMessage)
             }
         default:
             break

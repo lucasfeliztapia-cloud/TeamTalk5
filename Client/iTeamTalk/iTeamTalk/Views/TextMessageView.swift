@@ -114,6 +114,8 @@ private struct MessageRow: View {
     let message: MyTextMessage
     let background: Color
 
+    @Environment(\.openURL) private var openURL
+
     var body: some View {
         // not the theme's text color: the background stays the same in dark mode
         let textColor = AppearanceModel.textColor(on: background)
@@ -122,9 +124,11 @@ private struct MessageRow: View {
             Text(headerText)
                 .font(.footnote.weight(.semibold))
                 .foregroundStyle(textColor.opacity(0.75))
-            Text(message.message)
+            Text(linkedMessage)
                 .font(.body)
                 .foregroundStyle(textColor)
+                // links take the tint: keep them readable on the bubble
+                .tint(textColor)
                 .textSelection(.enabled)
                 .fixedSize(horizontal: false, vertical: true)
         }
@@ -133,6 +137,54 @@ private struct MessageRow: View {
         .background(background)
         .accessibilityElement(children: .combine)
         .accessibilityHint(accessibilityHint)
+        .contextMenu {
+            Button(action: copyMessage) {
+                Label("Copy", systemImage: "doc.on.doc")
+            }
+            if let link = links.first {
+                Button {
+                    openURL(link.url)
+                } label: {
+                    Label("Open Link", systemImage: "safari")
+                }
+            }
+        }
+        .accessibilityAction(named: "Copy", copyMessage)
+        .accessibilityActions {
+            if let link = links.first {
+                Button("Open Link") {
+                    openURL(link.url)
+                }
+            }
+        }
+    }
+
+    private func copyMessage() {
+        UIPasteboard.general.string = message.message
+        announceForAccessibility(String(localized: "Copied", comment: "text message"))
+    }
+
+    private var links: [(range: Range<String.Index>, url: URL)] {
+        guard let detector = try? NSDataDetector(types: NSTextCheckingResult.CheckingType.link.rawValue) else {
+            return []
+        }
+        let text = message.message
+        return detector.matches(in: text, range: NSRange(text.startIndex..., in: text)).compactMap { match in
+            guard let url = match.url, let range = Range(match.range, in: text) else { return nil }
+            return (range, url)
+        }
+    }
+
+    /// The message with its web addresses turned into links
+    private var linkedMessage: AttributedString {
+        var attributed = AttributedString(message.message)
+        for link in links {
+            guard let lower = AttributedString.Index(link.range.lowerBound, within: attributed),
+                  let upper = AttributedString.Index(link.range.upperBound, within: attributed) else { continue }
+            attributed[lower..<upper].link = link.url
+            attributed[lower..<upper].swiftUI.underlineStyle = Text.LineStyle.single
+        }
+        return attributed
     }
 
     private var headerText: String {

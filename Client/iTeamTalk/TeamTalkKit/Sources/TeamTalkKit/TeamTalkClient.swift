@@ -286,6 +286,66 @@ public final class TeamTalkClient {
         TT_CancelFileTransfer(instance, transferID) != 0
     }
 
+    public func channelPath(id channelID: Int32) -> String {
+        var path = [CChar](repeating: 0, count: Int(TT_STRLEN))
+        guard TT_GetChannelPath(instance, channelID, &path) != 0 else {
+            return ""
+        }
+        return String(cString: path)
+    }
+
+    public func channelUsers(channelID: Int32) -> [User] {
+        var count: Int32 = 0
+        guard TT_GetChannelUsers(instance, channelID, nil, &count) != 0, count > 0 else {
+            return []
+        }
+
+        var users = [User](repeating: User(), count: Int(count))
+        guard TT_GetChannelUsers(instance, channelID, &users, &count) != 0 else {
+            return []
+        }
+        return Array(users.prefix(Int(count)))
+    }
+
+    public func serverUsers() -> [User] {
+        var count: Int32 = 0
+        guard TT_GetServerUsers(instance, nil, &count) != 0, count > 0 else {
+            return []
+        }
+
+        var users = [User](repeating: User(), count: Int(count))
+        guard TT_GetServerUsers(instance, &users, &count) != 0 else {
+            return []
+        }
+        return Array(users.prefix(Int(count)))
+    }
+
+    public func clientStatistics() -> ClientStatistics? {
+        var statistics = ClientStatistics()
+        guard TT_GetClientStatistics(instance, &statistics) != 0 else {
+            return nil
+        }
+        return statistics
+    }
+
+    public func userStatistics(userID: Int32) -> UserStatistics? {
+        var statistics = UserStatistics()
+        guard TT_GetUserStatistics(instance, userID, &statistics) != 0 else {
+            return nil
+        }
+        return statistics
+    }
+
+    /// Plays the microphone back through the output device. Returns the test
+    /// to hand to `closeSoundLoopbackTest`.
+    public static func startSoundLoopbackTest(deviceID: Int32, sampleRate: Int32, channels: Int32) -> UnsafeMutableRawPointer? {
+        TT_StartSoundLoopbackTest(deviceID, deviceID, sampleRate, channels, 0, nil)
+    }
+
+    public static func closeSoundLoopbackTest(_ test: UnsafeMutableRawPointer?) {
+        TT_CloseSoundLoopbackTest(test)
+    }
+
     /// Offset that leaves the position untouched when updating a stream.
     public static let mediaPlaybackOffsetIgnore = UInt32.max
 

@@ -44,6 +44,24 @@ struct SoundDevicesView: View {
                 }
             }
 
+            Section {
+                Button(action: model.toggleMicrophoneTest) {
+                    Group {
+                        if model.isTestingMicrophone {
+                            Text("Stop Microphone Test")
+                        } else {
+                            Text("Test Microphone")
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .center)
+                }
+                .disabled(!model.canTestMicrophone && !model.isTestingMicrophone)
+            } header: {
+                Text("Microphone Test")
+            } footer: {
+                Text("You will hear your own microphone. Use headphones, or the speaker will be picked up again. Only available while you are not in a channel.")
+            }
+
             ForEach(model.audioInputSections) { section in
                 Section(section.title) {
                     ForEach(section.dataSources.indices, id: \.self) { index in
@@ -59,5 +77,6 @@ struct SoundDevicesView: View {
             }
         }
         .navigationTitle("Setup Sound Devices")
+        .onDisappear(perform: model.stopMicrophoneTest)
     }
 }

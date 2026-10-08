@@ -52,7 +52,7 @@ struct ServerListView: View {
                         .frame(maxWidth: .infinity, alignment: .center)
                 }
 
-                ForEach(model.servers, id: \.self) { server in
+                ForEach(model.visibleServers, id: \.self) { server in
                     HStack(spacing: 10) {
                         Image(iconName(for: server))
                             .resizable()
@@ -68,6 +68,12 @@ struct ServerListView: View {
                                 .foregroundStyle(.secondary)
                                 .lineLimit(2)
                         }
+                        if model.isFavorite(server) {
+                            Image(systemName: "star.fill")
+                                .foregroundStyle(.yellow)
+                                .accessibilityLabel("Favorite")
+                        }
+
                         Spacer(minLength: 12)
 
                         Button("Connect") {
@@ -88,6 +94,12 @@ struct ServerListView: View {
                         }
                         .tint(.red)
                     }
+                    .swipeActions(edge: .leading) {
+                        serverActions(server)
+                    }
+                    .contextMenu {
+                        serverActions(server)
+                    }
                     /*.accessibilityAction(named: "Connect to server") {
                         model.connect(to: server)
                     }
@@ -100,6 +112,10 @@ struct ServerListView: View {
                 }
             }
             .navigationTitle("TeamTalk Servers")
+            .searchable(text: $model.searchText, prompt: "Search servers")
+            .sheet(item: $model.sharedFile) { shared in
+                ActivityView(items: [shared.url])
+            }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
@@ -178,6 +194,34 @@ struct ServerListView: View {
         case .preferences(let m):
             PreferencesView(model: m)
         }
+    }
+
+    /// Favorite, share and copy link: offered as swipe actions, which VoiceOver
+    /// lists as actions of the row, and as a menu when the row is held.
+    @ViewBuilder
+    private func serverActions(_ server: Server) -> some View {
+        Button {
+            model.toggleFavorite(server)
+        } label: {
+            if model.isFavorite(server) {
+                Label("Remove from Favorites", systemImage: "star.slash")
+            } else {
+                Label("Add to Favorites", systemImage: "star")
+            }
+        }
+        .tint(.yellow)
+        Button {
+            model.shareServer(server)
+        } label: {
+            Label("Share Server", systemImage: "square.and.arrow.up")
+        }
+        .tint(.blue)
+        Button {
+            model.copyLink(of: server)
+        } label: {
+            Label("Copy Link", systemImage: "link")
+        }
+        .tint(.gray)
     }
 
     private func detail(for server: Server) -> String {

@@ -213,6 +213,8 @@ func setupSoundDevices() {
         let a2dp = defaults.object(forKey: PREF_BLUETOOTH_A2DP) != nil && defaults.bool(forKey: PREF_BLUETOOTH_A2DP)
         let headsettoggle = defaults.object(forKey: PREF_HEADSET_TXTOGGLE) != nil && defaults.bool(forKey: PREF_HEADSET_TXTOGGLE)
                 
+        logDiagnostic("Sound setup: speaker=\(speaker) preprocess=\(preprocess) a2dp=\(a2dp) headsettoggle=\(headsettoggle)")
+
         // In 'voiceChat' mode stereo cannot be enabled on input devices.
         try session.setMode(preprocess ? .voiceChat : .default)
 
@@ -246,17 +248,20 @@ func setupSoundDevices() {
         let sndid = preprocess ? TeamTalkSoundDeviceID.voiceProcessingIO : TeamTalkSoundDeviceID.remoteIO
         if !TeamTalkClient.shared.initSoundInputDevice(id: sndid) {
             print("Failed to initialize sound input device: \(sndid)")
+            logDiagnostic("Sound setup: FAILED to open input device \(sndid)")
         }
         else {
             print("Using sound input device: \(sndid)")
         }
         if !TeamTalkClient.shared.initSoundOutputDevice(id: sndid) {
             print("Failed to initialize sound output device: \(sndid)")
+            logDiagnostic("Sound setup: FAILED to open output device \(sndid)")
         }
         else {
             print("Using sound output device: \(sndid)")
         }
         print("postset. Mode \(session.mode.rawValue), category \(session.category.rawValue), options \(getCategory(session.categoryOptions))")
+        logDiagnostic("Sound setup done: device \(sndid), mode \(session.mode.rawValue), options \(getCategory(session.categoryOptions)), route \(describeAudioRoute(session))")
         
         // enable stereo on all data sources that support it
         for input in session.availableInputs ?? [] {
@@ -278,7 +283,15 @@ func setupSoundDevices() {
     }
     catch {
         print("Failed to set mode")
+        logDiagnostic("Sound setup: FAILED with \(error)")
     }
+}
+
+/// "inputs -> outputs" of the route in use, for the diagnostic log
+func describeAudioRoute(_ session: AVAudioSession) -> String {
+    let inputs = session.currentRoute.inputs.map { $0.portName }.joined(separator: "+")
+    let outputs = session.currentRoute.outputs.map { $0.portName }.joined(separator: "+")
+    return "\(inputs.isEmpty ? "none" : inputs) -> \(outputs.isEmpty ? "none" : outputs)"
 }
 
 func playSound(_ s: Sounds) {

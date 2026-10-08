@@ -67,12 +67,14 @@ struct ChannelListContainerView: View {
             .accessibilityAction(.magicTap) {
                 model.txBtnAccessibilityAction()
             }
+            outputMenu
             deafenButton
             }
         }
         .navigationTitle(model.navigationTitle)
+        .searchable(text: $model.searchText, prompt: "Search channels")
         .sheet(item: $model.moveRequest) { request in
-            ChannelPickerView(channels: model.channelChoices()) { channelID in
+            ChannelPickerView(channels: model.channelNodes(), confirmTitle: "Move") { channelID in
                 model.moveUsers(request.userIDs, to: channelID)
             }
         }
@@ -115,6 +117,28 @@ struct ChannelListContainerView: View {
 }
 
 private extension ChannelListContainerView {
+
+    /// Quick choice between the speaker and the earpiece or headset. The full
+    /// setup stays in Preferences.
+    var outputMenu: some View {
+        Menu {
+            Picker("Audio Output", selection: Binding(
+                get: { model.speakerOutput },
+                set: { model.setSpeakerOutput($0) }
+            )) {
+                Label("Speaker", systemImage: "speaker.wave.3.fill").tag(true)
+                Label("Earpiece or Headset", systemImage: "ear").tag(false)
+            }
+        } label: {
+            Image(systemName: model.speakerOutput ? "speaker.wave.3.fill" : "ear")
+                .font(.title3)
+                .frame(width: 56, height: 50)
+                .background(.bar)
+                .overlay(Rectangle().stroke(Color.gray, lineWidth: 1))
+        }
+        .accessibilityLabel("Audio Output")
+        .accessibilityValue(model.speakerOutput ? Text("Speaker") : Text("Earpiece or Headset"))
+    }
 
     var talkColor: Color {
         model.isTransmitting ? appearance.talkActiveColor : appearance.talkIdleColor
@@ -164,55 +188,6 @@ private extension ChannelListContainerView {
         .padding(.horizontal, 12)
         .frame(height: 44)
         .background(.bar)
-    }
-}
-
-// MARK: - Channel picker
-
-struct ChannelPickerView: View {
-    let channels: [ChannelChoice]
-    let move: (INT32) -> Void
-
-    @Environment(\.dismiss) private var dismiss
-    @State private var selection: INT32?
-
-    var body: some View {
-        NavigationStack {
-            List(channels) { channel in
-                Button {
-                    selection = channel.id
-                } label: {
-                    HStack(spacing: 10) {
-                        Text(channel.path)
-                            .foregroundStyle(.primary)
-                        Spacer(minLength: 12)
-                        if selection == channel.id {
-                            Image(systemName: "checkmark")
-                                .foregroundStyle(.tint)
-                                .accessibilityHidden(true)
-                        }
-                    }
-                }
-                .accessibilityAddTraits(selection == channel.id ? .isSelected : [])
-            }
-            .navigationTitle("Move to Channel")
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("Cancel", role: .cancel) {
-                        dismiss()
-                    }
-                }
-                ToolbarItem(placement: .confirmationAction) {
-                    Button("Move") {
-                        if let selection {
-                            move(selection)
-                        }
-                        dismiss()
-                    }
-                    .disabled(selection == nil)
-                }
-            }
-        }
     }
 }
 

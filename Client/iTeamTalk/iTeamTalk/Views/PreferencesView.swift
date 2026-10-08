@@ -38,6 +38,7 @@ struct PreferencesView: View {
             ttsSection
             connectionSection
             subscriptionsSection
+            diagnosticsSection
             versionSection
         }
         .navigationTitle("Preferences")
@@ -75,6 +76,37 @@ struct PreferencesView: View {
                     .pickerStyle(.segmented)
                 }
                 PreferenceSubtitle("Show male, female or neutral icon")
+            }
+
+            VStack(alignment: .leading, spacing: 4) {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Status")
+                    Picker("Status", selection: Binding(
+                        get: { model.statusIndex },
+                        set: { model.statusChanged($0) }
+                    )) {
+                        Text("Available").tag(0)
+                        Text("Away").tag(1)
+                        Text("Question").tag(2)
+                    }
+                    .pickerStyle(.segmented)
+                }
+                PreferenceSubtitle("Shown to the other users of the server")
+            }
+
+            VStack(alignment: .leading, spacing: 4) {
+                LabeledContent {
+                    TextField("", text: Binding(
+                        get: { model.statusMessage },
+                        set: { model.statusMessageChanged($0) }
+                    ))
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    .multilineTextAlignment(.trailing)
+                    .accessibilityLabel(Text("Status Message"))
+                } label: {
+                    Text("Status Message")
+                }
+                PreferenceSubtitle("Text shown next to your name")
             }
 
             NavigationLink {
@@ -305,6 +337,39 @@ struct PreferencesView: View {
                 VStack(alignment: .leading, spacing: 2) {
                     Text("Join Root Channel")
                     Text("Join root channel after login")
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                }
+            }
+            Toggle(isOn: Binding(get: { model.connectLastServer }, set: { model.connectLastServerChanged($0) })) {
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Connect on Startup")
+                    Text("Connect to the last server and channel when the app opens")
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                }
+            }
+            NavigationLink {
+                ConnectionQualityView()
+            } label: {
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Connection Quality")
+                    Text("Latency and packet loss")
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                }
+            }
+        }
+    }
+
+    private var diagnosticsSection: some View {
+        Section("Diagnostics") {
+            NavigationLink {
+                DiagnosticLogView()
+            } label: {
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Diagnostic Log")
+                    Text("What the app has been doing, to share when something fails")
                         .font(.footnote)
                         .foregroundStyle(.secondary)
                 }

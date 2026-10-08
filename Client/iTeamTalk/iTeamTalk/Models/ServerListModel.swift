@@ -132,6 +132,71 @@ func saveLocalServers(_ servers: [Server]) {
     defaults.synchronize()
 }
 
+// MARK: - Last server, for "Connect on Startup"
+
+let PREF_LASTSERVER = "LastServer"
+let PREF_LASTSERVER_CHANNEL = "LastServerChannel"
+let PREF_LASTSERVER_CHANPASSWD = "LastServerChannelPassword"
+
+func saveLastServer(_ server: Server) {
+    if let data = try? NSKeyedArchiver.archivedData(withRootObject: server, requiringSecureCoding: true) {
+        UserDefaults.standard.set(data, forKey: PREF_LASTSERVER)
+    }
+}
+
+/// The last server that was logged in to, set to join the last channel joined
+func loadLastServer() -> Server? {
+    let defaults = UserDefaults.standard
+    guard let data = defaults.data(forKey: PREF_LASTSERVER),
+          let server = try? NSKeyedUnarchiver.unarchivedObject(ofClass: Server.self, from: data) else {
+        return nil
+    }
+    server.channel = defaults.string(forKey: PREF_LASTSERVER_CHANNEL) ?? ""
+    server.chanpasswd = defaults.string(forKey: PREF_LASTSERVER_CHANPASSWD) ?? ""
+    return server
+}
+
+// MARK: - Sharing a server
+
+/// A .tt file with the address of the server and nothing else: the user name
+/// and password stay on this device.
+func writeServerFile(_ server: Server) -> URL? {
+    func escape(_ text: String) -> String {
+        text.replacingOccurrences(of: "&", with: "&amp;")
+            .replacingOccurrences(of: "<", with: "&lt;")
+            .replacingOccurrences(of: ">", with: "&gt;")
+    }
+
+    let xml = """
+        <?xml version="1.0" encoding="UTF-8" ?>
+        <teamtalk version="5.0">
+            <host>
+                <name>\(escape(server.name))</name>
+                <address>\(escape(server.ipaddr))</address>
+                <tcpport>\(server.tcpport)</tcpport>
+                <udpport>\(server.udpport)</udpport>
+                <encrypted>\(server.encrypted ? "true" : "false")</encrypted>
+            </host>
+        </teamtalk>
+
+        """
+
+    var fileName = server.name.isEmpty ? server.ipaddr : server.name
+    fileName = fileName.components(separatedBy: CharacterSet(charactersIn: "/\\:?%*|\"<>")).joined(separator: "-")
+    let url = FileManager.default.temporaryDirectory.appendingPathComponent(fileName + ".tt")
+    do {
+        try xml.write(to: url, atomically: true, encoding: .utf8)
+        return url
+    } catch {
+        return nil
+    }
+}
+
+/// The same address as a tt:// link
+func serverLink(_ server: Server) -> String {
+    "\(AppInfo.TTLINK_PREFIX)\(server.ipaddr)?tcpport=\(server.tcpport)&udpport=\(server.udpport)&encrypted=\(server.encrypted ? "1" : "0")"
+}
+
 // MARK: - Navigation destination
 
 enum ServerListDestination: Hashable {
@@ -166,14 +231,70 @@ final class ServerListModel: ObservableObject {
     // Error alert
     @Published var errorMessage: String?
 
+    // Search, favorites and sharing
+    @Published var searchText = ""
+    @Published var favorites = Set(UserDefaults.standard.stringArray(forKey: "FavoriteServers") ?? [])
+    @Published var sharedFile: SharedFile?
+
     var nextappupdate = Date()
 
+    // once per launch, not every time the list comes back after disconnecting
+    private static var didConnectOnStartup = false
+
     init() {}
+
+    // MARK: - Search and favorites
+
+    private func favoriteKey(_ server: Server) -> String {
+        "\(server.ipaddr):\(server.tcpport)"
+    }
+
+    func isFavorite(_ server: Server) -> Bool {
+        favorites.contains(favoriteKey(server))
+    }
+
+    func toggleFavorite(_ server: Server) {
+        let key = favoriteKey(server)
+        if favorites.contains(key) {
+            favorites.remove(key)
+        } else {
+            favorites.insert(key)
+        }
+        UserDefaults.standard.set(Array(favorites), forKey: "FavoriteServers")
+    }
+
+    /// The servers that match the search, favorites first
+    var visibleServers: [Server] {
+        let query = searchText.trimmingCharacters(in: .whitespaces)
+        let matching = query.isEmpty ? servers : servers.filter {
+            $0.name.range(of: query, options: [.caseInsensitive, .diacriticInsensitive]) != nil ||
+                $0.ipaddr.range(of: query, options: .caseInsensitive) != nil
+        }
+        return matching.filter { isFavorite($0) } + matching.filter { !isFavorite($0) }
+    }
+
+    func shareServer(_ server: Server) {
+        if let url = writeServerFile(server) {
+            sharedFile = SharedFile(url: url)
+        }
+    }
+
+    func copyLink(of server: Server) {
+        UIPasteboard.general.string = serverLink(server)
+        announceForAccessibility(String(localized: "Link copied", comment: "serverlist"))
+    }
 
     // MARK: - On-appear lifecycle
 
     func onAppear() {
         servers = loadLocalServers()
+
+        if !ServerListModel.didConnectOnStartup {
+            ServerListModel.didConnectOnStartup = true
+            if UserDefaults.standard.bool(forKey: PREF_CONNECT_LASTSERVER), let server = loadLastServer() {
+                connect(to: server)
+            }
+        }
 
         let defaults = UserDefaults.standard
         let downloadOfficial = defaults.object(forKey: PREF_DISPLAY_OFFICIALSERVERS) == nil || defaults.bool(forKey: PREF_DISPLAY_OFFICIALSERVERS)

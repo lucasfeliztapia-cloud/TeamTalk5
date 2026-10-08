@@ -81,9 +81,15 @@ struct ModerationRequest: Identifiable {
     let userIDs: [INT32]
 }
 
-struct ChannelChoice: Identifiable {
+/// A channel placed in the tree of the server
+struct ChannelNode: Identifiable {
     let id: INT32
+    let name: String
     let path: String
+    let depth: Int
+    let userCount: Int
+    let hasChildren: Bool
+    let isCurrent: Bool
 }
 
 // MARK: - Channel List Model
@@ -99,6 +105,12 @@ final class ChannelListModel: ObservableObject {
     // MARK: Published navigation state
     @Published var navigationPath: [ChannelListDestination] = []
     @Published var channelDetailModel: ChannelDetailModel?
+
+    // MARK: Published search and sound output state
+    @Published var searchText = "" {
+        didSet { refreshChannelList() }
+    }
+    @Published var speakerOutput = UserDefaults.standard.bool(forKey: PREF_SPEAKER_OUTPUT)
 
     // MARK: Published sound and selection state
     @Published var isDeafened = false
@@ -176,12 +188,37 @@ final class ChannelListModel: ObservableObject {
     }
 
     func refreshChannelList() {
+        // it can also be changed in Preferences
+        let speaker = UserDefaults.standard.bool(forKey: PREF_SPEAKER_OUTPUT)
+        if speaker != speakerOutput {
+            speakerOutput = speaker
+        }
         moveusers = Set(moveusers.filter { users[$0] != nil })
         updateDisplayItems()
         rows = displayRows()
     }
 
+    var isSearching: Bool {
+        !searchText.trimmingCharacters(in: .whitespaces).isEmpty
+    }
+
     private func displayRows() -> [ChannelListRow] {
+        if isSearching {
+            // every channel of the server whose name matches, wherever it is
+            let query = searchText.trimmingCharacters(in: .whitespaces)
+            return channels.values
+                .filter {
+                    $0.nParentID != 0 &&
+                        TeamTalkString.channel(.name, from: $0)
+                            .range(of: query, options: [.caseInsensitive, .diacriticInsensitive]) != nil
+                }
+                .sorted {
+                    TeamTalkString.channel(.name, from: $0)
+                        .caseInsensitiveCompare(TeamTalkString.channel(.name, from: $1)) == .orderedAscending
+                }
+                .map { .channel($0) }
+        }
+
         let showJoin = curchannel.nChannelID != mychannel.nChannelID && curchannel.nChannelID > 0
         var result = [ChannelListRow]()
         if showJoin { result.append(.join) }
@@ -296,9 +333,22 @@ final class ChannelListModel: ObservableObject {
             }
         case .channel(let channel):
             curchannel = channel
-            refreshChannelList()
+            if isSearching {
+                // setting it refreshes the list
+                searchText = ""
+            } else {
+                refreshChannelList()
+            }
             updateTitle()
         }
+    }
+
+    // MARK: - Sound output
+
+    func setSpeakerOutput(_ speaker: Bool) {
+        UserDefaults.standard.set(speaker, forKey: PREF_SPEAKER_OUTPUT)
+        speakerOutput = speaker
+        setupSoundDevices()
     }
 
     func joinCurrentChannel() {
@@ -486,28 +536,50 @@ final class ChannelListModel: ObservableObject {
         moveRequest = MoveRequest(userIDs: userIDs)
     }
 
-    /// Every channel of the server, the root first, for choosing where to move users.
-    func channelChoices() -> [ChannelChoice] {
-        let root = channels.values.filter { $0.nParentID == 0 }
-        let others = channels.values.filter { $0.nParentID != 0 }
-        let choices = others
-            .map { ChannelChoice(id: $0.nChannelID, path: channelPath($0)) }
-            .sorted { $0.path.caseInsensitiveCompare($1.path) == .orderedAscending }
-        return root.map { ChannelChoice(id: $0.nChannelID, path: channelPath($0)) } + choices
-    }
-
-    private func channelPath(_ channel: Channel) -> String {
-        if channel.nParentID == 0 {
-            return TeamTalkString.serverProperties(.name, from: srvprop)
+    /// Every channel of the server in tree order: each one followed by the
+    /// channels inside it, sorted by name.
+    func channelNodes() -> [ChannelNode] {
+        var children = [INT32: [Channel]]()
+        for channel in channels.values {
+            children[channel.nParentID, default: []].append(channel)
         }
 
-        var names = [String]()
-        var current: Channel? = channel
-        while let next = current, next.nParentID != 0 {
-            names.insert(TeamTalkString.channel(.name, from: next), at: 0)
-            current = channels[next.nParentID]
+        var userCounts = [INT32: Int]()
+        for user in users.values where user.nChannelID > 0 {
+            userCounts[user.nChannelID, default: 0] += 1
         }
-        return names.joined(separator: " / ")
+
+        var nodes = [ChannelNode]()
+        func add(_ channel: Channel, depth: Int, parentPath: String) {
+            let isRoot = channel.nParentID == 0
+            let name = isRoot
+                ? TeamTalkString.serverProperties(.name, from: srvprop)
+                : TeamTalkString.channel(.name, from: channel)
+            let path = isRoot || parentPath.isEmpty ? name : parentPath + " / " + name
+            let inside = (children[channel.nChannelID] ?? []).sorted {
+                TeamTalkString.channel(.name, from: $0)
+                    .caseInsensitiveCompare(TeamTalkString.channel(.name, from: $1)) == .orderedAscending
+            }
+
+            nodes.append(ChannelNode(
+                id: channel.nChannelID,
+                name: name,
+                path: path,
+                depth: depth,
+                userCount: userCounts[channel.nChannelID] ?? 0,
+                hasChildren: !inside.isEmpty,
+                isCurrent: channel.nChannelID == mychannel.nChannelID
+            ))
+            // the name of the server is not part of the path of its channels
+            for child in inside {
+                add(child, depth: depth + 1, parentPath: isRoot ? "" : path)
+            }
+        }
+
+        for root in children[0] ?? [] {
+            add(root, depth: 0, parentPath: "")
+        }
+        return nodes
     }
 
     func moveUsers(_ userIDs: [INT32], to channelID: INT32) {
@@ -826,6 +898,9 @@ extension ChannelListModel: TeamTalkEvent {
                     chanpasswds[user.nChannelID] = TeamTalkString.channel(.password, from: rejoinchannel)
                 }
                 rejoinchannel = joinedChannel
+                // where "Connect on Startup" goes back to
+                UserDefaults.standard.set(TeamTalkClient.shared.channelPath(id: user.nChannelID), forKey: PREF_LASTSERVER_CHANNEL)
+                UserDefaults.standard.set(chanpasswds[user.nChannelID] ?? "", forKey: PREF_LASTSERVER_CHANPASSWD)
                 updateTitle()
                 updateAudioConfig()
             }
