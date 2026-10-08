@@ -53,37 +53,7 @@ struct ServerListView: View {
                 }
 
                 ForEach(model.visibleServers, id: \.self) { server in
-                    HStack(spacing: 10) {
-                        Image(iconName(for: server))
-                            .resizable()
-                            .frame(width: 36, height: 36)
-                            .accessibilityLabel(iconAccessibilityLabel(for: server))
-
-                        VStack(alignment: .leading, spacing: 2) {
-                            Text(server.name)
-                                .font(.body)
-                                .lineLimit(1)
-                            Text(detail(for: server))
-                                .font(.footnote)
-                                .foregroundStyle(.secondary)
-                                .lineLimit(2)
-                        }
-                        if model.isFavorite(server) {
-                            Image(systemName: "star.fill")
-                                .foregroundStyle(.yellow)
-                                .accessibilityLabel("Favorite")
-                        }
-
-                        Spacer(minLength: 12)
-
-                        Button("Connect") {
-                            model.connect(to: server)
-                        }
-                        .buttonStyle(.bordered)
-                    }
-                    .accessibilityElement(children: .combine)
-                    .accessibilityHint("Connects to this server")
-                    .contentShape(Rectangle())
+                    serverRow(server)
                     .onTapGesture {
                         model.showServerDetail(for: server)
                     }
@@ -206,6 +176,42 @@ struct ServerListView: View {
         case .preferences(let m):
             PreferencesView(model: m)
         }
+    }
+
+    /// One server of the list. On its own so the compiler checks it apart
+    /// from the list: all in one expression it ran out of time.
+    private func serverRow(_ server: Server) -> some View {
+        HStack(spacing: 10) {
+            Image(iconName(for: server))
+                .resizable()
+                .frame(width: 36, height: 36)
+                .accessibilityLabel(iconAccessibilityLabel(for: server))
+
+            VStack(alignment: .leading, spacing: 2) {
+                Text(server.name)
+                    .font(.body)
+                    .lineLimit(1)
+                Text(detail(for: server))
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+                    .lineLimit(2)
+            }
+            if model.isFavorite(server) {
+                Image(systemName: "star.fill")
+                    .foregroundStyle(.yellow)
+                    .accessibilityLabel("Favorite")
+            }
+
+            Spacer(minLength: 12)
+
+            Button("Connect") {
+                model.connect(to: server)
+            }
+            .buttonStyle(.bordered)
+        }
+        .accessibilityElement(children: .combine)
+        .accessibilityHint(Text("Connects to this server"))
+        .contentShape(Rectangle())
     }
 
     /// Favorite, share and copy link: offered as swipe actions, which VoiceOver
