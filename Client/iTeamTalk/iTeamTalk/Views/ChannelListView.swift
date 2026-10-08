@@ -41,7 +41,9 @@ struct ChannelListContainerView: View {
             Text("Talk")
                 .frame(maxWidth: .infinity)
                 .frame(height: 50)
-                .background(talkColor)
+                // only the button: a color fills the safe area unless told otherwise,
+                // and it showed under the tab bar
+                .background(talkColor, ignoresSafeAreaEdges: [])
                 .foregroundStyle(AppearanceModel.textColor(on: talkColor))
                 .fontWeight(.semibold)
                 .contentShape(Rectangle())
@@ -70,6 +72,7 @@ struct ChannelListContainerView: View {
             outputMenu
             deafenButton
             }
+            .background(Color(uiColor: .systemBackground))
         }
         .navigationTitle(model.navigationTitle)
         .searchable(text: $model.searchText, prompt: "Search channels")
@@ -133,7 +136,7 @@ private extension ChannelListContainerView {
             Image(systemName: model.speakerOutput ? "speaker.wave.3.fill" : "ear")
                 .font(.title3)
                 .frame(width: 56, height: 50)
-                .background(.bar)
+                .background(.bar, ignoresSafeAreaEdges: [])
                 .overlay(Rectangle().stroke(Color.gray, lineWidth: 1))
         }
         .accessibilityLabel("Audio Output")
@@ -154,7 +157,7 @@ private extension ChannelListContainerView {
                 .font(.title3)
                 .foregroundStyle(AppearanceModel.textColor(on: background))
                 .frame(width: 64, height: 50)
-                .background(background)
+                .background(background, ignoresSafeAreaEdges: [])
                 .overlay(Rectangle().stroke(Color.gray, lineWidth: 1))
         }
         .buttonStyle(.plain)
@@ -312,13 +315,25 @@ struct ChannelListView: View {
 
                     Spacer(minLength: 12)
 
-                    Button(details.actionTitle) {
-                        model.showChannelDetail(channelID: channel.nChannelID)
+                    if !model.isSelecting {
+                        Button(details.actionTitle) {
+                            model.showChannelDetail(channelID: channel.nChannelID)
+                        }
+                        .buttonStyle(.borderless)
                     }
-                    .buttonStyle(.borderless)
                 }
                 .accessibilityElement(children: .combine)
                 .accessibilityHint(model.moveDestinationAccessibilityHint())
+                // Activating a combined row presses the button inside it, which
+                // opens the properties of the channel. While selecting users the
+                // channel is entered instead, to reach the users in it.
+                .accessibilityAction {
+                    if model.isSelecting {
+                        model.selectRow(.channel(channel))
+                    } else {
+                        model.showChannelDetail(channelID: channel.nChannelID)
+                    }
+                }
                 .contentShape(Rectangle())
                 .onTapGesture {
                     model.selectRow(.channel(channel))

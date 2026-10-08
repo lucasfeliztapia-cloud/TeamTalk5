@@ -137,6 +137,9 @@
 /* all users */
 "All Users" = "Todos los usuarios";
 
+/* diagnostics */
+"Allowed" = "Permitido";
+
 /* appearance */
 "Always Dark" = "Siempre oscuro";
 
@@ -311,6 +314,9 @@
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "Check only if this server has enabled BearWare.dk Web Login";
 
+/* diagnostics */
+"Checks" = "Comprobaciones";
+
 /* media stream */
 "Choose a file" = "Elegir un archivo";
 
@@ -349,6 +355,9 @@
 
 /* appearance */
 "Colors and Text" = "Colores y texto";
+
+/* appearance */
+"Colors of the More menu of the channel list. Until you choose them it follows the theme: dark with light text in dark mode, and the other way round in light mode." = "Colores del menú Más de la lista de canales. Mientras no los elijas sigue al tema: oscuro con letras claras en modo oscuro, y al revés en modo claro.";
 
 /* keyboard shortcuts */
 "Command" = "Comando";
@@ -585,6 +594,9 @@
 /* appearance */
 "Font" = "Fuente";
 
+/* appearance */
+"Font of Server Events" = "Fuente de los eventos del servidor";
+
 /* media stream */
 "Forward 1 Minute" = "Avanzar 1 minuto";
 
@@ -727,6 +739,9 @@
 /* media stream */
 "Live" = "En directo";
 
+/* diagnostics */
+"Live Activities" = "Actividades en directo";
+
 /* serverlist */
 "Local server" = "Local server";
 
@@ -762,8 +777,23 @@
 /* appearance */
 "Medium" = "Mediano";
 
+/* appearance */
+"Menu Background" = "Fondo del menú";
+
+/* appearance */
+"Menu Text" = "Texto del menú";
+
+/* appearance */
+"Menus" = "Menús";
+
 /* server entry */
 "Message of the Day" = "Message of the Day";
+
+/* appearance */
+"Message Text Size" = "Tamaño del texto de los mensajes";
+
+/* diagnostics */
+"Microphone" = "Micrófono";
 
 /* preferences */
 "Microphone Gain" = "Ganancia del micrófono";
@@ -879,8 +909,20 @@
 /* keyboard shortcuts and voice cleanup */
 "None" = "Ninguna";
 
+/* diagnostics */
+"Not allowed. Nobody can hear you until you turn it on in Settings, under TeamTalk." = "No permitido. Nadie puede oírte hasta que lo actives en Ajustes, dentro de TeamTalk.";
+
+/* diagnostics */
+"Not asked yet. iOS asks the first time you join a channel." = "Todavía no se ha pedido. iOS lo pregunta la primera vez que entras en un canal.";
+
+/* diagnostics */
+"Not available with this installation. The widget cannot show your servers and the controls do not show their state." = "No disponible con esta instalación. El widget no puede mostrar tus servidores y los controles no muestran su estado.";
+
 /* live activity */
 "Not in a channel" = "Sin canal";
+
+/* diagnostics */
+"Not installed. The app was installed without its extension, so there are no Live Activities, widget or controls. Install it again with a tool that keeps the extensions." = "No instaladas. La app se instaló sin su extensión, así que no hay actividades en directo, widget ni controles. Vuelve a instalarla con una herramienta que conserve las extensiones.";
 
 /* media stream */
 "Not streaming" = "Sin emitir";
@@ -908,6 +950,9 @@
 
 /* text message */
 "Open Link" = "Abrir enlace";
+
+/* diagnostics */
+"Open Settings" = "Abrir Ajustes";
 
 /* file list */
 "Opens the file" = "Abre el archivo";
@@ -1110,6 +1155,9 @@
 "Rounded" = "Redondeada";
 
 /* appearance */
+"Same as the App" = "Igual que la app";
+
+/* appearance */
 "Same as the System" = "Igual que el sistema";
 
 /* codec detail */
@@ -1162,6 +1210,12 @@
 
 /* preferences */
 "Server Connection Lost" = "Conexión al servidor perdida";
+
+/* appearance */
+"Server event" = "Evento del servidor";
+
+/* appearance */
+"Server Events" = "Eventos del servidor";
 
 /* server entry */
 "Server List Entry" = "Lista de servidores";
@@ -1330,6 +1384,9 @@
 /* server entry */
 "TCP Port" = "Puerto TCP";
 
+/* channel list */
+"TeamTalk has no access to the microphone. Turn it on in Settings, under TeamTalk, and try again." = "TeamTalk no tiene acceso al micrófono. Actívalo en Ajustes, dentro de TeamTalk, y vuelve a intentarlo.";
+
 /* text to speech events */
 "TeamTalk Voice" = "La voz de TeamTalk";
 
@@ -1341,6 +1398,9 @@
 
 /* appearance */
 "Text Messages" = "Mensajes de texto";
+
+/* appearance */
+"Text of the Messages" = "Texto de los mensajes";
 
 /* preferences */
 "Text shown next to your name" = "Texto que aparece junto a tu nombre";
@@ -1360,17 +1420,26 @@
 /* diagnostics */
 "The log records what the app does: connection, sound devices, transfers and errors. It holds no passwords and nothing of what is said or written." = "El registro anota lo que hace la app: conexión, dispositivos de sonido, transferencias y errores. No guarda contraseñas ni nada de lo que se dice o se escribe.";
 
+/* appearance */
+"The messages can have a text size of their own, and the server events a font of their own." = "Los mensajes pueden tener su propio tamaño de texto, y los eventos del servidor su propia fuente.";
+
 /* preferences */
 "The rate of the speaking voice is %.1f" = "La velocidad de la voz es %.1f";
 
 /* appearance */
 "The text of a message is shown in black or white, whichever is easier to read on its color." = "El texto de cada mensaje se muestra en negro o en blanco, según cuál se lea mejor sobre su color.";
 
+/* appearance */
+"The text of a message is shown in black or white, whichever is easier to read on its color. Server events are what happens on the server, like someone joining or leaving the channel." = "El texto de un mensaje sale en negro o en blanco, lo que mejor se lea sobre su color. Los eventos del servidor son lo que pasa en el servidor, como que alguien entre o salga del canal.";
+
 /* preferences */
 "The volume of the speaking voice is %.1f" = "El volumen de la voz es  %.1f";
 
 /* appearance */
 "Themes" = "Temas";
+
+/* diagnostics */
+"They need iOS 17 or later" = "Necesitan iOS 17 o posterior";
 
 /* media stream */
 "This file cannot be streamed" = "Este archivo no se puede emitir";
@@ -1420,6 +1489,9 @@
 /* preferences */
 "Turn off screen when holding phone near ear" = "Apagar la pantalla al sostener el teléfono cerca del oído";
 
+/* diagnostics */
+"Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Desactivadas. Activa las actividades en directo en Ajustes, dentro de TeamTalk.";
+
 /* serverlist */
 "Type Join Code" = "Type Join Code";
 
@@ -1450,6 +1522,9 @@
 
 /* preferences */
 "Use iPhone's speaker instead of earpiece" = "Usar los altavoces del iPhone en lugar de los auriculares";
+
+/* appearance */
+"Use the Colors of the Theme" = "Usar los colores del tema";
 
 /* channel list */
 "User" = "Usuario";
@@ -1587,11 +1662,17 @@
 /* diagnostics */
 "What the app has been doing, to share when something fails" = "Lo que ha ido haciendo la app, para compartirlo cuando algo falla";
 
+/* diagnostics */
+"What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Lo que la app necesita del iPhone. Si algo de aquí no está bien, es lo primero que hay que arreglar.";
+
 /* transmit control */
 "Who Can Transmit" = "Quién puede transmitir";
 
 /* media stream */
 "Whole List" = "Toda la lista";
+
+/* diagnostics */
+"Widget and Controls" = "Widget y controles";
 
 /* Dialog message */
 "Yes" = "Sí";

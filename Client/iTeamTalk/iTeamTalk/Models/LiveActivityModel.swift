@@ -60,6 +60,8 @@ private final class LiveActivityManager {
 
     private var activity: Activity<TeamTalkActivityAttributes>?
     private var status: LiveActivityStatus?
+    // said once in the diagnostic log, not at every update
+    private var lastFailure = ""
     // updates are sent one after the other so an older one never lands last
     private var pending: Task<Void, Never>?
 
@@ -90,7 +92,10 @@ private final class LiveActivityManager {
     }
 
     private func start(_ status: LiveActivityStatus) {
-        guard ActivityAuthorizationInfo().areActivitiesEnabled else { return }
+        guard ActivityAuthorizationInfo().areActivitiesEnabled else {
+            noteFailure("Live Activity not started: Live Activities are turned off for the app in Settings")
+            return
+        }
 
         end()
 
@@ -115,9 +120,17 @@ private final class LiveActivityManager {
                 pushType: nil
             )
             self.status = status
+            lastFailure = ""
+            logDiagnostic("Live Activity started")
         } catch {
-            print("Failed to start Live Activity: \(error)")
+            noteFailure("Live Activity FAILED to start: \(error)")
         }
+    }
+
+    private func noteFailure(_ message: String) {
+        guard message != lastFailure else { return }
+        lastFailure = message
+        logDiagnostic(message)
     }
 
     private func send(to activity: Activity<TeamTalkActivityAttributes>,

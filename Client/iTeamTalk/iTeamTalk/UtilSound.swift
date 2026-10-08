@@ -35,6 +35,44 @@ func refVolume(_ percent: Double) -> Int {
     return Int(d)
 }
 
+/// The gain of the microphone chosen in Preferences. Nothing is stored until
+/// the slider has been moved, and that must not be read as zero: a gain of
+/// zero silences the microphone.
+func preferredMicrophoneGain() -> INT32 {
+    let defaults = UserDefaults.standard
+    guard defaults.object(forKey: PREF_MICROPHONE_GAIN) != nil else {
+        return INT32(SOUND_GAIN_DEFAULT.rawValue)
+    }
+    return INT32(refVolume(Double(defaults.integer(forKey: PREF_MICROPHONE_GAIN))))
+}
+
+enum MicrophonePermission: String {
+    case granted
+    case denied
+    case undetermined = "not asked yet"
+}
+
+func microphonePermission() -> MicrophonePermission {
+    if #available(iOS 17.0, *) {
+        switch AVAudioApplication.shared.recordPermission {
+        case .granted:
+            return .granted
+        case .denied:
+            return .denied
+        default:
+            return .undetermined
+        }
+    }
+    switch AVAudioSession.sharedInstance().recordPermission {
+    case .granted:
+        return .granted
+    case .denied:
+        return .denied
+    default:
+        return .undetermined
+    }
+}
+
 func refVolumeToPercent(_ volume: Int) -> Int {
     if(volume == 0) {
         return 0
@@ -294,7 +332,7 @@ func setupSoundDevices() {
         let a2dp = defaults.object(forKey: PREF_BLUETOOTH_A2DP) != nil && defaults.bool(forKey: PREF_BLUETOOTH_A2DP)
         let headsettoggle = defaults.object(forKey: PREF_HEADSET_TXTOGGLE) != nil && defaults.bool(forKey: PREF_HEADSET_TXTOGGLE)
                 
-        logDiagnostic("Sound setup: speaker=\(speaker) preprocess=\(preprocess) a2dp=\(a2dp) headsettoggle=\(headsettoggle)")
+        logDiagnostic("Sound setup: speaker=\(speaker) preprocess=\(preprocess) a2dp=\(a2dp) headsettoggle=\(headsettoggle) microphone=\(microphonePermission().rawValue)")
 
         // In 'voiceChat' mode stereo cannot be enabled on input devices.
         try session.setMode(preprocess ? .voiceChat : .default)

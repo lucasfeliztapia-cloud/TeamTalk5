@@ -35,10 +35,11 @@ struct AppearanceView: View {
             Section {
                 ColorPicker("Received Messages", selection: $appearance.receivedColor, supportsOpacity: false)
                 ColorPicker("Sent Messages", selection: $appearance.sentColor, supportsOpacity: false)
+                ColorPicker("Server Events", selection: $appearance.eventColor, supportsOpacity: false)
             } header: {
                 Text("Text Messages")
             } footer: {
-                Text("The text of a message is shown in black or white, whichever is easier to read on its color.")
+                Text("The text of a message is shown in black or white, whichever is easier to read on its color. Server events are what happens on the server, like someone joining or leaving the channel.")
             }
 
             Section {
@@ -59,10 +60,32 @@ struct AppearanceView: View {
                 Text("Size and font apply to the whole app.")
             }
 
+            Section {
+                Picker("Message Text Size", selection: $appearance.messageTextSizeIndex) {
+                    Text("Same as the App").tag(0)
+                    ForEach(1...AppearanceModel.textSizeTitles.count, id: \.self) { index in
+                        Text(AppearanceModel.textSizeTitles[index - 1]).tag(index)
+                    }
+                }
+                Picker("Font of Server Events", selection: $appearance.eventFontIndex) {
+                    Text("Same as the App").tag(0)
+                    ForEach(AppearanceFontDesign.allCases) { design in
+                        Text(design.title).tag(design.rawValue + 1)
+                    }
+                }
+            } header: {
+                Text("Text of the Messages")
+            } footer: {
+                Text("The messages can have a text size of their own, and the server events a font of their own.")
+            }
+
             Section("Preview") {
                 previewRow("Received message", color: appearance.receivedColor)
                 previewRow("Sent message", color: appearance.sentColor)
+                previewRow("Server event", color: appearance.eventColor)
+                    .modifier(FontDesignModifier(design: appearance.eventFontDesign))
             }
+            .dynamicTypeSize(appearance.messageDynamicTypeRange)
 
             Section {
                 ColorPicker("Not transmitting", selection: $appearance.talkIdleColor, supportsOpacity: false)
@@ -95,6 +118,29 @@ struct AppearanceView: View {
                 Text("Interface")
             } footer: {
                 Text("Color of buttons, switches and the selected tab.")
+            }
+
+            Section {
+                ColorPicker("Menu Background", selection: Binding(
+                    get: { appearance.resolvedMenuBackground },
+                    set: { appearance.menuBackgroundColor = $0 }
+                ), supportsOpacity: false)
+                ColorPicker("Menu Text", selection: Binding(
+                    get: { appearance.resolvedMenuText },
+                    set: { appearance.menuTextColor = $0 }
+                ), supportsOpacity: false)
+                Button("Use the Colors of the Theme") {
+                    appearance.menuBackgroundColor = nil
+                    appearance.menuTextColor = nil
+                }
+                Label("Preview", systemImage: "ellipsis.circle")
+                    .foregroundStyle(appearance.resolvedMenuText)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .listRowBackground(appearance.resolvedMenuBackground)
+            } header: {
+                Text("Menus")
+            } footer: {
+                Text("Colors of the More menu of the channel list. Until you choose them it follows the theme: dark with light text in dark mode, and the other way round in light mode.")
             }
 
             Section {

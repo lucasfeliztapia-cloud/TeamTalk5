@@ -784,9 +784,25 @@ final class ChannelListModel: ObservableObject {
     }
 
     func enableVoiceTx(_ enable: Bool) {
+        if enable && microphonePermission() == .denied {
+            // iOS hands over silence without saying so: nobody would hear a thing
+            logDiagnostic("TX refused: no access to the microphone")
+            errorMessage = String(localized: "TeamTalk has no access to the microphone. Turn it on in Settings, under TeamTalk, and try again.", comment: "channel list")
+            return
+        }
+
         TeamTalkClient.shared.enableVoiceTransmission(enable)
         playSound(enable ? .tx_ON : .tx_OFF)
         updateTX()
+
+        if enable {
+            // what the microphone delivers once it has had time to start
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                let client = TeamTalkClient.shared
+                guard client.isVoiceTransmitting else { return }
+                logDiagnostic("TX check: input level \(client.soundInputLevel), gain \(client.soundInputGainLevel), microphone \(microphonePermission().rawValue)")
+            }
+        }
     }
 
     func txBtnUp() {
@@ -876,16 +892,15 @@ final class ChannelListModel: ObservableObject {
                 ap.webrtc.gaincontroller2.fixeddigital.fGainDB = WEBRTC_GAINCONTROLLER2_FIXEDGAIN_MAX * gain
                 ap.webrtc.gaincontroller2.bEnable = TRUE
             } else {
-                let vol = UserDefaults.standard.integer(forKey: PREF_MICROPHONE_GAIN)
-                TeamTalkClient.shared.setSoundInputGainLevel(INT32(refVolume(Double(vol))))
+                TeamTalkClient.shared.setSoundInputGainLevel(preferredMicrophoneGain())
             }
             let applied = TeamTalkClient.shared.setSoundInputPreprocess(&ap)
             logDiagnostic("Audio config: WebRTC preprocessor, cleanup=\(cleanup) channelGain=\(channelGain) applied=\(applied)")
         } else {
             var ap = TeamTalkAudioPreprocessor.makeTeamTalkPreprocessor()
             TeamTalkClient.shared.setSoundInputPreprocess(&ap)
-            let vol = UserDefaults.standard.integer(forKey: PREF_MICROPHONE_GAIN)
-            TeamTalkClient.shared.setSoundInputGainLevel(INT32(refVolume(Double(vol))))
+            TeamTalkClient.shared.setSoundInputGainLevel(preferredMicrophoneGain())
+            logDiagnostic("Audio config: TeamTalk preprocessor, gain \(TeamTalkClient.shared.soundInputGainLevel)")
         }
     }
 }

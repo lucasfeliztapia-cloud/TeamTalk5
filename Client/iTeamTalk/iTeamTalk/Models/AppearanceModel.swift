@@ -34,6 +34,11 @@ let PREF_APPEARANCE_SPEAKERSMUTEDCOLOR = "appearance_speakersmutedcolor_preferen
 let PREF_APPEARANCE_TEXTSIZE = "appearance_textsize_preference"
 let PREF_APPEARANCE_COLORSCHEME = "appearance_colorscheme_preference"
 let PREF_APPEARANCE_FONTDESIGN = "appearance_fontdesign_preference"
+let PREF_APPEARANCE_MESSAGETEXTSIZE = "appearance_messagetextsize_preference"
+let PREF_APPEARANCE_EVENTCOLOR = "appearance_eventcolor_preference"
+let PREF_APPEARANCE_EVENTFONT = "appearance_eventfont_preference"
+let PREF_APPEARANCE_MENUBACKGROUND = "appearance_menubackground_preference"
+let PREF_APPEARANCE_MENUTEXT = "appearance_menutext_preference"
 
 enum AppearanceFontDesign: Int, CaseIterable, Identifiable {
     case standard = 0
@@ -97,7 +102,7 @@ final class AppearanceModel: ObservableObject {
     static let defaultSpeakersOnColor = Color.white
     static let defaultSpeakersMutedColor = Color.black
     static let broadcastColor = Color(red: 0.831, green: 0.376, blue: 1.0)
-    static let logColor = Color(red: 0.86, green: 0.86, blue: 0.86)
+    static let defaultEventColor = Color(red: 0.86, green: 0.86, blue: 0.86)
 
     /// One title for each case of DynamicTypeSize, in its order
     static let textSizeTitles: [LocalizedStringKey] = [
@@ -155,6 +160,50 @@ final class AppearanceModel: ObservableObject {
         didSet { UserDefaults.standard.set(fontDesign.rawValue, forKey: PREF_APPEARANCE_FONTDESIGN) }
     }
 
+    /// Text size of the messages. 0 is the size of the rest of the app,
+    /// otherwise as textSizeIndex.
+    @Published var messageTextSizeIndex: Int {
+        didSet { UserDefaults.standard.set(messageTextSizeIndex, forKey: PREF_APPEARANCE_MESSAGETEXTSIZE) }
+    }
+
+    /// What happens on the server and is listed among the messages, like
+    /// someone joining or leaving the channel
+    @Published var eventColor: Color {
+        didSet { Self.save(eventColor, forKey: PREF_APPEARANCE_EVENTCOLOR) }
+    }
+
+    /// Font of those events. 0 is the font of the app, otherwise the position
+    /// of the font in AppearanceFontDesign counting from 1.
+    @Published var eventFontIndex: Int {
+        didSet { UserDefaults.standard.set(eventFontIndex, forKey: PREF_APPEARANCE_EVENTFONT) }
+    }
+
+    /// Colors of the More menu. nil follows the light or dark theme.
+    @Published var menuBackgroundColor: Color? {
+        didSet { Self.saveOptional(menuBackgroundColor, forKey: PREF_APPEARANCE_MENUBACKGROUND) }
+    }
+
+    @Published var menuTextColor: Color? {
+        didSet { Self.saveOptional(menuTextColor, forKey: PREF_APPEARANCE_MENUTEXT) }
+    }
+
+    var resolvedMenuBackground: Color {
+        menuBackgroundColor ?? Color(uiColor: .systemBackground)
+    }
+
+    var resolvedMenuText: Color {
+        menuTextColor ?? Color(uiColor: .label)
+    }
+
+    var eventFontDesign: Font.Design? {
+        let designs = AppearanceFontDesign.allCases
+        guard eventFontIndex >= 1, eventFontIndex <= designs.count else {
+            return fontDesign.design
+        }
+        // "Standard" has to be said outright here, to undo the font of the app
+        return designs[eventFontIndex - 1].design ?? .default
+    }
+
     /// 0 follows the system, 1 is always light and 2 always dark
     @Published var colorSchemeIndex: Int {
         didSet { UserDefaults.standard.set(colorSchemeIndex, forKey: PREF_APPEARANCE_COLORSCHEME) }
@@ -183,6 +232,11 @@ final class AppearanceModel: ObservableObject {
         textSizeIndex = defaults.integer(forKey: PREF_APPEARANCE_TEXTSIZE)
         fontDesign = AppearanceFontDesign(rawValue: defaults.integer(forKey: PREF_APPEARANCE_FONTDESIGN)) ?? .standard
         colorSchemeIndex = max(0, min(2, defaults.integer(forKey: PREF_APPEARANCE_COLORSCHEME)))
+        messageTextSizeIndex = defaults.integer(forKey: PREF_APPEARANCE_MESSAGETEXTSIZE)
+        eventColor = Self.load(forKey: PREF_APPEARANCE_EVENTCOLOR) ?? Self.defaultEventColor
+        eventFontIndex = defaults.integer(forKey: PREF_APPEARANCE_EVENTFONT)
+        menuBackgroundColor = Self.load(forKey: PREF_APPEARANCE_MENUBACKGROUND)
+        menuTextColor = Self.load(forKey: PREF_APPEARANCE_MENUTEXT)
     }
 
     func restoreDefaults() {
@@ -196,10 +250,15 @@ final class AppearanceModel: ObservableObject {
         textSizeIndex = 0
         fontDesign = .standard
         colorSchemeIndex = 0
+        messageTextSizeIndex = 0
+        eventColor = Self.defaultEventColor
+        eventFontIndex = 0
+        menuBackgroundColor = nil
+        menuTextColor = nil
 
         // the defaults follow the light and dark theme, a stored color would not
         let defaults = UserDefaults.standard
-        for key in [PREF_APPEARANCE_RECEIVEDCOLOR, PREF_APPEARANCE_SENTCOLOR,
+        for key in [PREF_APPEARANCE_RECEIVEDCOLOR, PREF_APPEARANCE_SENTCOLOR, PREF_APPEARANCE_EVENTCOLOR,
                     PREF_APPEARANCE_TALKIDLECOLOR, PREF_APPEARANCE_TALKACTIVECOLOR,
                     PREF_APPEARANCE_SPEAKERSONCOLOR, PREF_APPEARANCE_SPEAKERSMUTEDCOLOR] {
             defaults.removeObject(forKey: key)
@@ -217,6 +276,9 @@ final class AppearanceModel: ObservableObject {
         talkActiveColor = Self.color(hex: "B00000")
         speakersOnColor = Self.color(hex: "FFFFFF")
         speakersMutedColor = Self.color(hex: "000000")
+        eventColor = Self.color(hex: "FFFF00")
+        menuBackgroundColor = nil
+        menuTextColor = nil
     }
 
     /// Dark whatever the system says, with dim colors that do not glare at night
@@ -229,6 +291,9 @@ final class AppearanceModel: ObservableObject {
         talkActiveColor = Self.color(hex: "7F1D1D")
         speakersOnColor = Self.color(hex: "2C2C2E")
         speakersMutedColor = Self.color(hex: "000000")
+        eventColor = Self.color(hex: "2C2C2E")
+        menuBackgroundColor = Self.color(hex: "000000")
+        menuTextColor = Self.color(hex: "FFFFFF")
     }
 
     // MARK: - Sharing the appearance
@@ -249,7 +314,12 @@ final class AppearanceModel: ObservableObject {
             "speakersMutedColor": Self.hex(of: speakersMutedColor),
             "textSize": textSizeIndex,
             "font": fontDesign.rawValue,
-            "colorScheme": colorSchemeIndex
+            "colorScheme": colorSchemeIndex,
+            "messageTextSize": messageTextSizeIndex,
+            "eventColor": Self.hex(of: eventColor),
+            "eventFont": eventFontIndex,
+            "menuBackgroundColor": menuBackgroundColor.map { Self.hex(of: $0) } ?? "",
+            "menuTextColor": menuTextColor.map { Self.hex(of: $0) } ?? ""
         ]
 
         let url = FileManager.default.temporaryDirectory.appendingPathComponent("TeamTalk appearance.json")
@@ -296,6 +366,19 @@ final class AppearanceModel: ObservableObject {
         textSizeIndex = max(0, min(DynamicTypeSize.allCases.count, settings["textSize"] as? Int ?? 0))
         fontDesign = AppearanceFontDesign(rawValue: settings["font"] as? Int ?? 0) ?? .standard
         colorSchemeIndex = max(0, min(2, settings["colorScheme"] as? Int ?? 0))
+
+        // absent from a file exported by an earlier version
+        func optionalColor(_ key: String) -> Color? {
+            guard let hex = settings[key] as? String, hex.count == 6, UInt32(hex, radix: 16) != nil else {
+                return nil
+            }
+            return Self.color(hex: hex)
+        }
+        messageTextSizeIndex = max(0, min(DynamicTypeSize.allCases.count, settings["messageTextSize"] as? Int ?? 0))
+        eventColor = color("eventColor", default: Self.defaultEventColor)
+        eventFontIndex = max(0, min(AppearanceFontDesign.allCases.count, settings["eventFont"] as? Int ?? 0))
+        menuBackgroundColor = optionalColor("menuBackgroundColor")
+        menuTextColor = optionalColor("menuTextColor")
         return true
     }
 
@@ -322,6 +405,16 @@ final class AppearanceModel: ObservableObject {
         return size...size
     }
 
+    /// The same for the messages, applied inside the range of the app
+    var messageDynamicTypeRange: ClosedRange<DynamicTypeSize> {
+        let sizes = DynamicTypeSize.allCases
+        guard messageTextSizeIndex >= 1, messageTextSizeIndex <= sizes.count else {
+            return DynamicTypeSize.xSmall...DynamicTypeSize.accessibility5
+        }
+        let size = sizes[messageTextSizeIndex - 1]
+        return size...size
+    }
+
     func backgroundColor(for msgtype: MsgType) -> Color {
         switch msgtype {
         case .PRIV_IM, .CHAN_IM:
@@ -331,7 +424,7 @@ final class AppearanceModel: ObservableObject {
         case .BCAST:
             return Self.broadcastColor
         case .LOGMSG:
-            return Self.logColor
+            return eventColor
         }
     }
 
@@ -367,6 +460,14 @@ final class AppearanceModel: ObservableObject {
 
     private static func save(_ color: Color, forKey key: String) {
         UserDefaults.standard.set(hex(of: color), forKey: key)
+    }
+
+    private static func saveOptional(_ color: Color?, forKey key: String) {
+        if let color {
+            save(color, forKey: key)
+        } else {
+            UserDefaults.standard.removeObject(forKey: key)
+        }
     }
 
     private static func load(forKey key: String) -> Color? {

@@ -39,7 +39,10 @@ struct TextMessageView: View {
                             ForEach(section.messages.indices, id: \.self) { index in
                                 let message = section.messages[index]
                                 let background = appearance.backgroundColor(for: message.msgtype)
-                                MessageRow(message: message, background: background)
+                                MessageRow(message: message, background: background,
+                                           design: message.msgtype == .LOGMSG
+                                               ? appearance.eventFontDesign
+                                               : appearance.fontDesign.design)
                                     .listRowInsets(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
                                     .listRowBackground(background)
                             }
@@ -47,6 +50,8 @@ struct TextMessageView: View {
                     }
                 }
                 .listStyle(.plain)
+                // the messages can have a text size of their own
+                .dynamicTypeSize(appearance.messageDynamicTypeRange)
                 .onChange(of: model.sections.count) { _ in
                     scrollToBottom(proxy)
                 }
@@ -139,6 +144,8 @@ struct TextMessageView: View {
 private struct MessageRow: View {
     let message: MyTextMessage
     let background: Color
+    // the server events can have a font of their own
+    let design: Font.Design?
 
     @Environment(\.openURL) private var openURL
 
@@ -158,6 +165,7 @@ private struct MessageRow: View {
                 .textSelection(.enabled)
                 .fixedSize(horizontal: false, vertical: true)
         }
+        .modifier(FontDesignModifier(design: design))
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.vertical, 6)
         .background(background)

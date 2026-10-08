@@ -127,6 +127,11 @@ public final class TeamTalkClient {
         TT_GetSoundInputGainLevel(instance)
     }
 
+    /// How loud the microphone is right now, from 0 to 100
+    public var soundInputLevel: Int32 {
+        TT_GetSoundInputLevel(instance)
+    }
+
     public var version: String {
         String(cString: TT_GetVersion())
     }

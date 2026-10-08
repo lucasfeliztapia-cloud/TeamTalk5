@@ -57,7 +57,7 @@ struct MainTabView: View {
                 FileListView(model: model.fileListModel)
             }
             .tabItem {
-                Label("Files", systemImage: "folder")
+                Label("Files", image: "files")
             }
             .tag(3)
 
@@ -171,7 +171,9 @@ private struct ChannelsTabView: View {
     @ObservedObject var model: ChannelListModel
     let close: () -> Void
     @State private var showingMediaStream = false
+    @State private var showingMoreMenu = false
     @State private var channelSheet: ChannelSheet?
+    @State private var pendingSheet: ChannelSheet?
 
     var body: some View {
         NavigationStack(path: $model.navigationPath) {
@@ -212,30 +214,22 @@ private struct ChannelsTabView: View {
                         }
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        Menu {
-                            Button {
-                                channelSheet = .allUsers
-                            } label: {
-                                Label("All Users", systemImage: "person.3")
-                            }
-                            if model.canControlTransmission {
-                                Button {
-                                    channelSheet = .transmission
-                                } label: {
-                                    Label("Who Can Transmit", systemImage: "mic.badge.plus")
-                                }
-                            }
-                            if model.canBanUsers {
-                                Button {
-                                    channelSheet = .bans
-                                } label: {
-                                    Label("Banned Users", systemImage: "nosign")
-                                }
-                            }
+                        Button {
+                            showingMoreMenu = true
                         } label: {
                             Image(systemName: "ellipsis.circle")
                         }
                         .accessibilityLabel("More")
+                    }
+                }
+                .sheet(isPresented: $showingMoreMenu, onDismiss: {
+                    // one sheet at a time: the chosen screen opens once the menu is gone
+                    channelSheet = pendingSheet
+                    pendingSheet = nil
+                }) {
+                    MoreMenuView(model: model) { sheet in
+                        pendingSheet = sheet
+                        showingMoreMenu = false
                     }
                 }
                 .sheet(item: $channelSheet) { sheet in
@@ -270,6 +264,62 @@ private struct ChannelsTabView: View {
         case .textMessage(let m):
             TextMessageView(model: m)
         }
+    }
+}
+
+// MARK: - More menu
+
+/// The More menu of the channel list. A screen of the app and not a menu of
+/// the system, whose colors cannot be chosen: these come from Appearance.
+private struct MoreMenuView: View {
+    @ObservedObject var model: ChannelListModel
+    @ObservedObject private var appearance = AppearanceModel.shared
+    let choose: (ChannelSheet) -> Void
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        VStack(spacing: 0) {
+            Text("More")
+                .font(.headline)
+                .foregroundStyle(appearance.resolvedMenuText)
+                .padding(.top, 22)
+                .padding(.bottom, 10)
+                .accessibilityAddTraits(.isHeader)
+
+            List {
+                row("All Users", systemImage: "person.3", sheet: .allUsers)
+                if model.canControlTransmission {
+                    row("Who Can Transmit", systemImage: "mic.badge.plus", sheet: .transmission)
+                }
+                if model.canBanUsers {
+                    row("Banned Users", systemImage: "nosign", sheet: .bans)
+                }
+                Button {
+                    dismiss()
+                } label: {
+                    Label("Close", systemImage: "xmark")
+                        .foregroundStyle(appearance.resolvedMenuText)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                .listRowBackground(appearance.resolvedMenuBackground)
+            }
+            .listStyle(.plain)
+            .scrollContentBackground(.hidden)
+        }
+        .background(appearance.resolvedMenuBackground)
+        .presentationDetents([.medium])
+        .presentationDragIndicator(.visible)
+    }
+
+    private func row(_ title: LocalizedStringKey, systemImage: String, sheet: ChannelSheet) -> some View {
+        Button {
+            choose(sheet)
+        } label: {
+            Label(title, systemImage: systemImage)
+                .foregroundStyle(appearance.resolvedMenuText)
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .listRowBackground(appearance.resolvedMenuBackground)
     }
 }
 
