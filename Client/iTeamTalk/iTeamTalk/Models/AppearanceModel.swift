@@ -37,8 +37,6 @@ let PREF_APPEARANCE_FONTDESIGN = "appearance_fontdesign_preference"
 let PREF_APPEARANCE_MESSAGETEXTSIZE = "appearance_messagetextsize_preference"
 let PREF_APPEARANCE_EVENTCOLOR = "appearance_eventcolor_preference"
 let PREF_APPEARANCE_EVENTFONT = "appearance_eventfont_preference"
-let PREF_APPEARANCE_MENUBACKGROUND = "appearance_menubackground_preference"
-let PREF_APPEARANCE_MENUTEXT = "appearance_menutext_preference"
 
 enum AppearanceFontDesign: Int, CaseIterable, Identifiable {
     case standard = 0
@@ -178,23 +176,6 @@ final class AppearanceModel: ObservableObject {
         didSet { UserDefaults.standard.set(eventFontIndex, forKey: PREF_APPEARANCE_EVENTFONT) }
     }
 
-    /// Colors of the More menu. nil follows the light or dark theme.
-    @Published var menuBackgroundColor: Color? {
-        didSet { Self.saveOptional(menuBackgroundColor, forKey: PREF_APPEARANCE_MENUBACKGROUND) }
-    }
-
-    @Published var menuTextColor: Color? {
-        didSet { Self.saveOptional(menuTextColor, forKey: PREF_APPEARANCE_MENUTEXT) }
-    }
-
-    var resolvedMenuBackground: Color {
-        menuBackgroundColor ?? Color(uiColor: .systemBackground)
-    }
-
-    var resolvedMenuText: Color {
-        menuTextColor ?? Color(uiColor: .label)
-    }
-
     var eventFontDesign: Font.Design? {
         let designs = AppearanceFontDesign.allCases
         guard eventFontIndex >= 1, eventFontIndex <= designs.count else {
@@ -235,8 +216,6 @@ final class AppearanceModel: ObservableObject {
         messageTextSizeIndex = defaults.integer(forKey: PREF_APPEARANCE_MESSAGETEXTSIZE)
         eventColor = Self.load(forKey: PREF_APPEARANCE_EVENTCOLOR) ?? Self.defaultEventColor
         eventFontIndex = defaults.integer(forKey: PREF_APPEARANCE_EVENTFONT)
-        menuBackgroundColor = Self.load(forKey: PREF_APPEARANCE_MENUBACKGROUND)
-        menuTextColor = Self.load(forKey: PREF_APPEARANCE_MENUTEXT)
     }
 
     func restoreDefaults() {
@@ -253,8 +232,6 @@ final class AppearanceModel: ObservableObject {
         messageTextSizeIndex = 0
         eventColor = Self.defaultEventColor
         eventFontIndex = 0
-        menuBackgroundColor = nil
-        menuTextColor = nil
 
         // the defaults follow the light and dark theme, a stored color would not
         let defaults = UserDefaults.standard
@@ -277,8 +254,6 @@ final class AppearanceModel: ObservableObject {
         speakersOnColor = Self.color(hex: "FFFFFF")
         speakersMutedColor = Self.color(hex: "000000")
         eventColor = Self.color(hex: "FFFF00")
-        menuBackgroundColor = nil
-        menuTextColor = nil
     }
 
     /// Dark whatever the system says, with dim colors that do not glare at night
@@ -292,8 +267,6 @@ final class AppearanceModel: ObservableObject {
         speakersOnColor = Self.color(hex: "2C2C2E")
         speakersMutedColor = Self.color(hex: "000000")
         eventColor = Self.color(hex: "2C2C2E")
-        menuBackgroundColor = Self.color(hex: "000000")
-        menuTextColor = Self.color(hex: "FFFFFF")
     }
 
     // MARK: - Sharing the appearance
@@ -317,9 +290,7 @@ final class AppearanceModel: ObservableObject {
             "colorScheme": colorSchemeIndex,
             "messageTextSize": messageTextSizeIndex,
             "eventColor": Self.hex(of: eventColor),
-            "eventFont": eventFontIndex,
-            "menuBackgroundColor": menuBackgroundColor.map { Self.hex(of: $0) } ?? "",
-            "menuTextColor": menuTextColor.map { Self.hex(of: $0) } ?? ""
+            "eventFont": eventFontIndex
         ]
 
         let url = FileManager.default.temporaryDirectory.appendingPathComponent("TeamTalk appearance.json")
@@ -368,17 +339,9 @@ final class AppearanceModel: ObservableObject {
         colorSchemeIndex = max(0, min(2, settings["colorScheme"] as? Int ?? 0))
 
         // absent from a file exported by an earlier version
-        func optionalColor(_ key: String) -> Color? {
-            guard let hex = settings[key] as? String, hex.count == 6, UInt32(hex, radix: 16) != nil else {
-                return nil
-            }
-            return Self.color(hex: hex)
-        }
         messageTextSizeIndex = max(0, min(DynamicTypeSize.allCases.count, settings["messageTextSize"] as? Int ?? 0))
         eventColor = color("eventColor", default: Self.defaultEventColor)
         eventFontIndex = max(0, min(AppearanceFontDesign.allCases.count, settings["eventFont"] as? Int ?? 0))
-        menuBackgroundColor = optionalColor("menuBackgroundColor")
-        menuTextColor = optionalColor("menuTextColor")
         return true
     }
 
@@ -460,14 +423,6 @@ final class AppearanceModel: ObservableObject {
 
     private static func save(_ color: Color, forKey key: String) {
         UserDefaults.standard.set(hex(of: color), forKey: key)
-    }
-
-    private static func saveOptional(_ color: Color?, forKey key: String) {
-        if let color {
-            save(color, forKey: key)
-        } else {
-            UserDefaults.standard.removeObject(forKey: key)
-        }
     }
 
     private static func load(forKey key: String) -> Color? {

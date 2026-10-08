@@ -33,6 +33,18 @@ struct ChannelListContainerView: View {
 
     var body: some View {
         VStack(spacing: 0) {
+            if model.isSearching {
+                // Ours and not the scopes of the search field: those only came
+                // up after clearing the text, when there is nothing to filter.
+                Picker("Search channels and users", selection: $model.searchScope) {
+                    Text("All").tag(ChannelSearchScope.all)
+                    Text("Channels").tag(ChannelSearchScope.channels)
+                    Text("Users").tag(ChannelSearchScope.users)
+                }
+                .pickerStyle(.segmented)
+                .padding(.horizontal, 12)
+                .padding(.vertical, 6)
+            }
             ChannelListView(model: model)
             if model.isSelecting {
                 selectionBar
@@ -76,11 +88,6 @@ struct ChannelListContainerView: View {
         }
         .navigationTitle(model.navigationTitle)
         .searchable(text: $model.searchText, prompt: "Search channels and users")
-        .searchScopes($model.searchScope) {
-            Text("All").tag(ChannelSearchScope.all)
-            Text("Channels").tag(ChannelSearchScope.channels)
-            Text("Users").tag(ChannelSearchScope.users)
-        }
         .sheet(item: $model.moveRequest) { request in
             ChannelPickerView(channels: model.channelNodes(), confirmTitle: "Move") { channelID in
                 model.moveUsers(request.userIDs, to: channelID)
@@ -340,14 +347,13 @@ struct ChannelListView: View {
                 .accessibilityElement(children: .combine)
                 .accessibilityHint(model.moveDestinationAccessibilityHint())
                 // Activating a combined row presses the button inside it, which
-                // opens the properties of the channel. While selecting users the
-                // channel is entered instead, to reach the users in it.
+                // opens the properties of the channel. With VoiceOver a channel
+                // is entered like with a tap, and its properties are an action.
                 .accessibilityAction {
-                    if model.isSelecting || model.isSearching {
-                        model.selectRow(.channel(channel))
-                    } else {
-                        model.showChannelDetail(channelID: channel.nChannelID)
-                    }
+                    model.selectRow(.channel(channel))
+                }
+                .accessibilityAction(named: details.actionTitle) {
+                    model.showChannelDetail(channelID: channel.nChannelID)
                 }
                 .contentShape(Rectangle())
                 .onTapGesture {

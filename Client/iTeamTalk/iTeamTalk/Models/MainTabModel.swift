@@ -349,6 +349,7 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
     private func logEvent(_ m: TTMessage) {
         switch m.nClientEvent {
         case CLIENTEVENT_USER_STATECHANGE, CLIENTEVENT_FILETRANSFER, CLIENTEVENT_STREAM_MEDIAFILE,
+             CLIENTEVENT_LOCAL_MEDIAFILE, CLIENTEVENT_USER_FIRSTVOICESTREAMPACKET,
              CLIENTEVENT_CMD_USER_UPDATE, CLIENTEVENT_CMD_CHANNEL_NEW, CLIENTEVENT_CMD_USER_LOGGEDIN,
              CLIENTEVENT_CMD_FILE_NEW:
             // too many of them, and their own models log what matters

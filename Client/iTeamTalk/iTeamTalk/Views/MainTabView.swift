@@ -155,10 +155,8 @@ struct MainTabView: View {
 
 // MARK: - Channels tab
 
-/// The More menu of the channel list and the screens opened from it. They
-/// share one sheet: choosing a screen in the menu replaces the menu with it.
+/// The screens opened from the More menu of the channel list
 private enum ChannelSheet: Int, Identifiable {
-    case menu
     case allUsers
     case transmission
     case bans
@@ -188,54 +186,73 @@ private struct ChannelsTabView: View {
                             mainModel.disconnectTapped(dismiss: close)
                         }
                     }
+                    // Three items and no more. With four the last one stopped
+                    // answering on the device, a plain button where there had
+                    // been a menu. Each has a title besides its symbol: it is
+                    // what VoiceOver reads, and what the system shows if it
+                    // ever moves an item into a menu of its own.
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
                             model.toggleSelecting()
                         } label: {
-                            Image(systemName: model.isSelecting ? "checklist.checked" : "checklist")
+                            Label(model.isSelecting ? LocalizedStringKey("Done selecting") : LocalizedStringKey("Select users"),
+                                  systemImage: model.isSelecting ? "checklist.checked" : "checklist")
+                                .labelStyle(.iconOnly)
                                 .foregroundStyle(.tint)
                         }
-                        // on the button, not on the image: VoiceOver was reading the
-                        // name of the symbol, "selected", in front of the label
-                        .accessibilityLabel(model.isSelecting ? Text("Done selecting") : Text("Select users"))
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
                             showingMediaStream = true
                         } label: {
-                            Image(systemName: "play.rectangle")
+                            Label("Stream media file", systemImage: "play.rectangle")
+                                .labelStyle(.iconOnly)
                                 .foregroundStyle(.tint)
-                                .accessibilityLabel("Stream media file")
                         }
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        Button {
-                            model.showNewChannel()
+                        // a menu of the system: it follows light and dark by itself
+                        Menu {
+                            Button {
+                                model.showNewChannel()
+                            } label: {
+                                Label("Create new channel", systemImage: "plus")
+                            }
+                            Button {
+                                channelSheet = .allUsers
+                            } label: {
+                                Label("All Users", systemImage: "person.3")
+                            }
+                            if model.canControlTransmission {
+                                Button {
+                                    channelSheet = .transmission
+                                } label: {
+                                    Label("Who Can Transmit", systemImage: "mic.badge.plus")
+                                }
+                            }
+                            if model.canBanUsers {
+                                Button {
+                                    channelSheet = .bans
+                                } label: {
+                                    Label("Banned Users", systemImage: "nosign")
+                                }
+                            }
+                            if model.isAdministrator {
+                                Button {
+                                    channelSheet = .accounts
+                                } label: {
+                                    Label("User Accounts", systemImage: "person.badge.key")
+                                }
+                            }
                         } label: {
-                            Image(systemName: "plus")
-                                .foregroundStyle(.tint)
-                                .accessibilityLabel("Create new channel")
-                        }
-                    }
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button {
-                            logDiagnostic("More menu: opened")
-                            channelSheet = .menu
-                        } label: {
-                            Image(systemName: "ellipsis.circle")
+                            Label("More", systemImage: "ellipsis.circle")
+                                .labelStyle(.iconOnly)
                                 .foregroundStyle(.tint)
                         }
-                        .accessibilityLabel("More")
                     }
                 }
                 .sheet(item: $channelSheet) { sheet in
                     switch sheet {
-                    case .menu:
-                        // a new item makes the system close this sheet and open the next
-                        MoreMenuView(model: model) { chosen in
-                            logDiagnostic("More menu: chose screen \(chosen.rawValue)")
-                            channelSheet = chosen
-                        }
                     case .allUsers:
                         AllUsersView(model: model)
                     case .transmission:
@@ -268,75 +285,6 @@ private struct ChannelsTabView: View {
         case .textMessage(let m):
             TextMessageView(model: m)
         }
-    }
-}
-
-// MARK: - More menu
-
-/// The More menu of the channel list. A screen of the app and not a menu of
-/// the system, whose colors cannot be chosen: these come from Appearance.
-private struct MoreMenuView: View {
-    @ObservedObject var model: ChannelListModel
-    @ObservedObject private var appearance = AppearanceModel.shared
-    let choose: (ChannelSheet) -> Void
-    @Environment(\.dismiss) private var dismiss
-    // VoiceOver lands on the first option. The title says "More", the same as
-    // the button just pressed, and hearing it again sounds as if nothing opened.
-    @AccessibilityFocusState private var isFirstOptionFocused: Bool
-
-    var body: some View {
-        VStack(spacing: 0) {
-            Text("More")
-                .font(.headline)
-                .foregroundStyle(appearance.resolvedMenuText)
-                .padding(.top, 22)
-                .padding(.bottom, 10)
-                .accessibilityAddTraits(.isHeader)
-
-            List {
-                row("All Users", systemImage: "person.3", sheet: .allUsers)
-                    .accessibilityFocused($isFirstOptionFocused)
-                if model.canControlTransmission {
-                    row("Who Can Transmit", systemImage: "mic.badge.plus", sheet: .transmission)
-                }
-                if model.canBanUsers {
-                    row("Banned Users", systemImage: "nosign", sheet: .bans)
-                }
-                if model.isAdministrator {
-                    row("User Accounts", systemImage: "person.badge.key", sheet: .accounts)
-                }
-                Button {
-                    dismiss()
-                } label: {
-                    Label("Close", systemImage: "xmark")
-                        .foregroundStyle(appearance.resolvedMenuText)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                }
-                .listRowBackground(appearance.resolvedMenuBackground)
-            }
-            .listStyle(.plain)
-            .scrollContentBackground(.hidden)
-        }
-        .background(appearance.resolvedMenuBackground)
-        .presentationDetents([.medium, .large])
-        .presentationDragIndicator(.visible)
-        .onAppear {
-            logDiagnostic("More menu: on screen")
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
-                isFirstOptionFocused = true
-            }
-        }
-    }
-
-    private func row(_ title: LocalizedStringKey, systemImage: String, sheet: ChannelSheet) -> some View {
-        Button {
-            choose(sheet)
-        } label: {
-            Label(title, systemImage: systemImage)
-                .foregroundStyle(appearance.resolvedMenuText)
-                .frame(maxWidth: .infinity, alignment: .leading)
-        }
-        .listRowBackground(appearance.resolvedMenuBackground)
     }
 }
 

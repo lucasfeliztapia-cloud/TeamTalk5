@@ -121,29 +121,6 @@ struct AppearanceView: View {
             }
 
             Section {
-                ColorPicker("Menu Background", selection: Binding(
-                    get: { appearance.resolvedMenuBackground },
-                    set: { appearance.menuBackgroundColor = $0 }
-                ), supportsOpacity: false)
-                ColorPicker("Menu Text", selection: Binding(
-                    get: { appearance.resolvedMenuText },
-                    set: { appearance.menuTextColor = $0 }
-                ), supportsOpacity: false)
-                Button("Use the Colors of the Theme") {
-                    appearance.menuBackgroundColor = nil
-                    appearance.menuTextColor = nil
-                }
-                Label("Preview", systemImage: "ellipsis.circle")
-                    .foregroundStyle(appearance.resolvedMenuText)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .listRowBackground(appearance.resolvedMenuBackground)
-            } header: {
-                Text("Menus")
-            } footer: {
-                Text("Colors of the More menu of the channel list. Until you choose them it follows the theme: dark with light text in dark mode, and the other way round in light mode.")
-            }
-
-            Section {
                 Picker("Light or Dark", selection: $appearance.colorSchemeIndex) {
                     Text("Same as the System").tag(0)
                     Text("Always Light").tag(1)

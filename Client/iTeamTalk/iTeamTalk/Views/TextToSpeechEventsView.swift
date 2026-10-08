@@ -75,7 +75,6 @@ private struct TextToSpeechEventToggle: View {
                 Text("VoiceOver").tag(false)
                 Text("TeamTalk Voice").tag(true)
             }
-            .accessibilityLabel(Text("Spoken by, \(Text(row.title))"))
         }
     }
 }
