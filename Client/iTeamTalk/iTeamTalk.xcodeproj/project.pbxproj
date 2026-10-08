@@ -46,6 +46,7 @@
 		CC0003000000000000000002 /* ChannelDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000002 /* ChannelDetailModel.swift */; };
 		CC0003000000000000000003 /* ChannelListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000003 /* ChannelListModel.swift */; };
 		CC000300000000000000000C /* FileListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC000200000000000000000C /* FileListModel.swift */; };
+		CC000300000000000000000F /* LiveActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC000200000000000000000F /* LiveActivityModel.swift */; };
 		CC0003000000000000000004 /* MainTabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000004 /* MainTabModel.swift */; };
 		CC000300000000000000000D /* MediaStreamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC000200000000000000000D /* MediaStreamModel.swift */; };
 		CC0003000000000000000005 /* PreferencesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000005 /* PreferencesModel.swift */; };
@@ -73,6 +74,10 @@
 		CC000500000000000000000E /* TextToSpeechEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC000400000000000000000E /* TextToSpeechEventsView.swift */; };
 		CC000500000000000000000F /* UserDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC000400000000000000000F /* UserDetailView.swift */; };
 		CC0005000000000000000010 /* WebLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000010 /* WebLoginView.swift */; };
+		DD0000000000000000000020 /* TeamTalkLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0000000000000000000002 /* TeamTalkLiveActivity.swift */; };
+		DD0000000000000000000021 /* TeamTalkActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0000000000000000000003 /* TeamTalkActivity.swift */; };
+		DD0000000000000000000022 /* TeamTalkActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0000000000000000000003 /* TeamTalkActivity.swift */; };
+		DD0000000000000000000024 /* iTeamTalkLiveActivity.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DD0000000000000000000001 /* iTeamTalkLiveActivity.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +88,28 @@
 			remoteGlobalIDString = 254B7A461B98BAA300BE0DEF;
 			remoteInfo = iTeamTalk;
 		};
+		DD0000000000000000000041 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 254B7A3F1B98BAA300BE0DEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD0000000000000000000040;
+			remoteInfo = iTeamTalkLiveActivity;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DD0000000000000000000033 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DD0000000000000000000024 /* iTeamTalkLiveActivity.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2501A9BA1C52A35A00C729B3 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -155,6 +181,7 @@
 		CC0002000000000000000002 /* ChannelDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelDetailModel.swift; sourceTree = "<group>"; };
 		CC0002000000000000000003 /* ChannelListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListModel.swift; sourceTree = "<group>"; };
 		CC000200000000000000000C /* FileListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileListModel.swift; sourceTree = "<group>"; };
+		CC000200000000000000000F /* LiveActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityModel.swift; sourceTree = "<group>"; };
 		CC0002000000000000000004 /* MainTabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabModel.swift; sourceTree = "<group>"; };
 		CC000200000000000000000D /* MediaStreamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaStreamModel.swift; sourceTree = "<group>"; };
 		CC0002000000000000000005 /* PreferencesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesModel.swift; sourceTree = "<group>"; };
@@ -182,6 +209,10 @@
 		CC000400000000000000000E /* TextToSpeechEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeechEventsView.swift; sourceTree = "<group>"; };
 		CC000400000000000000000F /* UserDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailView.swift; sourceTree = "<group>"; };
 		CC0004000000000000000010 /* WebLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebLoginView.swift; sourceTree = "<group>"; };
+		DD0000000000000000000001 /* iTeamTalkLiveActivity.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iTeamTalkLiveActivity.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD0000000000000000000002 /* TeamTalkLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTalkLiveActivity.swift; sourceTree = "<group>"; };
+		DD0000000000000000000003 /* TeamTalkActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTalkActivity.swift; sourceTree = "<group>"; };
+		DD0000000000000000000004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +236,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DD0000000000000000000031 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -218,6 +256,7 @@
 				254B7A711B99E67400BE0DEF /* AVFoundation.framework */,
 				254B7A491B98BAA300BE0DEF /* iTeamTalk */,
 				254B7A5F1B98BAA400BE0DEF /* iTeamTalkTests */,
+				DD0000000000000000000010 /* iTeamTalkLiveActivity */,
 				254B7A481B98BAA300BE0DEF /* Products */,
 				25DE1FBD1FADAAC700EA77D6 /* Frameworks */,
 			);
@@ -228,6 +267,7 @@
 			children = (
 				254B7A471B98BAA300BE0DEF /* iTeamTalk.app */,
 				254B7A5C1B98BAA400BE0DEF /* iTeamTalkTests.xctest */,
+				DD0000000000000000000001 /* iTeamTalkLiveActivity.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -317,6 +357,7 @@
 				CC0002000000000000000002 /* ChannelDetailModel.swift */,
 				CC0002000000000000000003 /* ChannelListModel.swift */,
 				CC000200000000000000000C /* FileListModel.swift */,
+				CC000200000000000000000F /* LiveActivityModel.swift */,
 				CC0002000000000000000004 /* MainTabModel.swift */,
 				CC000200000000000000000D /* MediaStreamModel.swift */,
 				CC0002000000000000000005 /* PreferencesModel.swift */,
@@ -355,6 +396,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		DD0000000000000000000010 /* iTeamTalkLiveActivity */ = {
+			isa = PBXGroup;
+			children = (
+				DD0000000000000000000002 /* TeamTalkLiveActivity.swift */,
+				DD0000000000000000000003 /* TeamTalkActivity.swift */,
+				DD0000000000000000000004 /* Info.plist */,
+			);
+			path = iTeamTalkLiveActivity;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -365,10 +416,12 @@
 				254B7A431B98BAA300BE0DEF /* Sources */,
 				254B7A441B98BAA300BE0DEF /* Frameworks */,
 				254B7A451B98BAA300BE0DEF /* Resources */,
+				DD0000000000000000000033 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DD0000000000000000000042 /* PBXTargetDependency */,
 			);
 			name = iTeamTalk;
 			packageProductDependencies = (
@@ -396,6 +449,23 @@
 			productReference = 254B7A5C1B98BAA400BE0DEF /* iTeamTalkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		DD0000000000000000000040 /* iTeamTalkLiveActivity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD0000000000000000000052 /* Build configuration list for PBXNativeTarget "iTeamTalkLiveActivity" */;
+			buildPhases = (
+				DD0000000000000000000030 /* Sources */,
+				DD0000000000000000000031 /* Frameworks */,
+				DD0000000000000000000032 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iTeamTalkLiveActivity;
+			productName = iTeamTalkLiveActivity;
+			productReference = DD0000000000000000000001 /* iTeamTalkLiveActivity.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -421,6 +491,9 @@
 						CreatedOnToolsVersion = 6.4;
 						LastSwiftMigration = 1020;
 						TestTargetID = 254B7A461B98BAA300BE0DEF;
+					};
+					DD0000000000000000000040 = {
+						CreatedOnToolsVersion = 26.0;
 					};
 				};
 			};
@@ -460,6 +533,7 @@
 			targets = (
 				254B7A461B98BAA300BE0DEF /* iTeamTalk */,
 				254B7A5B1B98BAA400BE0DEF /* iTeamTalkTests */,
+				DD0000000000000000000040 /* iTeamTalkLiveActivity */,
 			);
 		};
 /* End PBXProject section */
@@ -497,6 +571,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DD0000000000000000000032 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -504,6 +585,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD0000000000000000000022 /* TeamTalkActivity.swift in Sources */,
 				254B7A6F1B98C89600BE0DEF /* AppInfo.swift in Sources */,
 				25DD929F1BB2FA0E00779988 /* Common.swift in Sources */,
 				25DF9A021C5E00E100469BA8 /* License.swift in Sources */,
@@ -518,6 +600,7 @@
 				CC0003000000000000000002 /* ChannelDetailModel.swift in Sources */,
 				CC0003000000000000000003 /* ChannelListModel.swift in Sources */,
 				CC000300000000000000000C /* FileListModel.swift in Sources */,
+				CC000300000000000000000F /* LiveActivityModel.swift in Sources */,
 				CC0003000000000000000004 /* MainTabModel.swift in Sources */,
 				CC000300000000000000000D /* MediaStreamModel.swift in Sources */,
 				CC0003000000000000000005 /* PreferencesModel.swift in Sources */,
@@ -556,6 +639,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DD0000000000000000000030 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD0000000000000000000020 /* TeamTalkLiveActivity.swift in Sources */,
+				DD0000000000000000000021 /* TeamTalkActivity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -563,6 +655,11 @@
 			isa = PBXTargetDependency;
 			target = 254B7A461B98BAA300BE0DEF /* iTeamTalk */;
 			targetProxy = 254B7A5D1B98BAA400BE0DEF /* PBXContainerItemProxy */;
+		};
+		DD0000000000000000000042 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD0000000000000000000040 /* iTeamTalkLiveActivity */;
+			targetProxy = DD0000000000000000000041 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -836,6 +933,57 @@
 			};
 			name = Release;
 		};
+		DD0000000000000000000050 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = QF4DLGWC27;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iTeamTalkLiveActivity/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TeamTalk;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 5.23;
+				PRODUCT_BUNDLE_IDENTIFIER = BearWare.dk.iTeamTalk5.LiveActivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DD0000000000000000000051 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = QF4DLGWC27;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iTeamTalkLiveActivity/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TeamTalk;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 5.23;
+				PRODUCT_BUNDLE_IDENTIFIER = BearWare.dk.iTeamTalk5.LiveActivity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -862,6 +1010,15 @@
 			buildConfigurations = (
 				254B7A6A1B98BAA400BE0DEF /* Debug */,
 				254B7A6B1B98BAA400BE0DEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD0000000000000000000052 /* Build configuration list for PBXNativeTarget "iTeamTalkLiveActivity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD0000000000000000000050 /* Debug */,
+				DD0000000000000000000051 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

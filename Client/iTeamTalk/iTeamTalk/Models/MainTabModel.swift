@@ -22,6 +22,7 @@
  */
 
 import AVFoundation
+import Combine
 import OSLog
 import SwiftUI
 import TeamTalkKit
@@ -46,6 +47,8 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
     private var polltimer: Timer?
     private var reconnecttimer: Timer?
     private var didSetup = false
+    private var liveActivityUpdatePending = false
+    private var cancellables = Set<AnyCancellable>()
 
     init(server: Server) {
         self.server = server
@@ -76,6 +79,19 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
         addToTTMessages(channelChatModel)
         addToTTMessages(fileListModel)
         addToTTMessages(mediaStreamModel)
+
+        LiveActivityActions.toggleTransmission = { [weak self] in
+            self?.channelListModel.txBtnAccessibilityAction()
+        }
+        LiveActivityActions.toggleDeafen = { [weak self] in
+            self?.channelListModel.toggleDeafen()
+        }
+        channelListModel.$isTransmitting
+            .merge(with: channelListModel.$isDeafened)
+            .sink { [weak self] _ in
+                self?.scheduleLiveActivityUpdate()
+            }
+            .store(in: &cancellables)
         addToTTMessages(preferencesModel)
 
         setupSoundDevices()
@@ -127,6 +143,10 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
     }
 
     func teardown() {
+        cancellables.removeAll()
+        LiveActivityActions.toggleTransmission = nil
+        LiveActivityActions.toggleDeafen = nil
+        LiveActivityController.end()
         polltimer?.invalidate()
         reconnecttimer?.invalidate()
         removeAllTTMessageHandlers()
@@ -240,7 +260,55 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
         }
     }
 
+    // MARK: - Live Activity
+
+    /// The other models handle each event after this one and @Published tells
+    /// before it changes, so the state is read once they have all settled.
+    private func scheduleLiveActivityUpdate() {
+        guard !liveActivityUpdatePending else { return }
+        liveActivityUpdatePending = true
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            self.liveActivityUpdatePending = false
+            self.updateLiveActivity()
+        }
+    }
+
+    private func updateLiveActivity() {
+        guard didSetup, polltimer?.isValid == true else { return }
+
+        let channels = channelListModel
+        var serverName = TeamTalkString.serverProperties(.name, from: channels.srvprop)
+        if serverName.isEmpty {
+            serverName = server.name.isEmpty ? server.ipaddr : server.name
+        }
+
+        let connected = TeamTalkClient.shared.isAuthorized
+        let statusText: String
+        if !connected {
+            statusText = String(localized: "Connection lost", comment: "tts event")
+        } else if channels.mychannel.nChannelID > 0 {
+            let name = channels.mychannel.nParentID == 0
+                ? serverName
+                : TeamTalkString.channel(.name, from: channels.mychannel)
+            let count = channels.users.values.filter { $0.nChannelID == channels.mychannel.nChannelID }.count
+            statusText = String(format: String(localized: "%@, %d users", comment: "live activity"), name, count)
+        } else {
+            statusText = String(localized: "Not in a channel", comment: "live activity")
+        }
+
+        LiveActivityController.update(LiveActivityStatus(
+            serverName: serverName,
+            statusText: statusText,
+            isConnected: connected,
+            isTransmitting: TeamTalkClient.shared.isVoiceTransmitting,
+            isDeafened: TeamTalkClient.shared.isSoundOutputMuted
+        ))
+    }
+
     func handleTTMessage(_ m: TTMessage) {
+        scheduleLiveActivityUpdate()
+
         switch m.nClientEvent {
 
         case CLIENTEVENT_CON_SUCCESS:

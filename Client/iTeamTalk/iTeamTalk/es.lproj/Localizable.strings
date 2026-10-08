@@ -16,6 +16,9 @@
 /* file list */
 "%@ uploaded" = "%@ subido";
 
+/* live activity */
+"%@, %d users" = "%@, %d usuarios";
+
 /* Web Login Controller */
 "%@, your username \"%@\" has been validated" = "%1$@, Tu nombre de usuario \"%2$@\" ha ha sido validado";
 
@@ -585,8 +588,14 @@
 /* default nickname */
 "Noname" = "Sinnombre";
 
+/* live activity */
+"Not in a channel" = "Sin canal";
+
 /* media stream */
 "Not streaming" = "Sin emitir";
+
+/* live activity */
+"Not transmitting" = "Sin transmitir";
 
 /* serverlist */
 "Official server" = "Official server";
@@ -924,6 +933,9 @@
 
 /* preferences */
 "Translator" = "Traductor";
+
+/* live activity */
+"Transmission" = "Transmisión";
 
 /* channel list */
 "Transmit inactive" = "Transmisión desactivada";

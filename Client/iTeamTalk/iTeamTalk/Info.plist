@@ -80,6 +80,8 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSSupportsLiveActivities</key>
+	<true/>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Microphone access is required to transmit your voice during conversations.</string>
 	<key>UIBackgroundModes</key>
