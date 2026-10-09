@@ -179,8 +179,14 @@
 /* user accounts */
 "Administrator" = "Administrator";
 
+/* preferences */
+"After the Message" = "Setelah Pesan";
+
 /* channel list */
 "All" = "Semua";
+
+/* text to speech events */
+"All Announcements" = "Semua Pemberitahuan";
 
 /* all users */
 "All Users" = "Semua Pengguna";
@@ -238,6 +244,12 @@
 
 /* preferences */
 "Ascending" = "Urutkan dari a ke z";
+
+/* preferences */
+"Ascending goes from A to Z and from fewer users to more" = "Dari a ke z juga berarti dari pengguna paling sedikit ke paling banyak";
+
+/* preferences */
+"Ask before leaving the server" = "Tanyakan sebelum meninggalkan server";
 
 /* codec detail */
 "Audio Channels" = "Saluran Audio";
@@ -305,6 +317,9 @@
 
 /* weblogin event */
 "BearWare.dk Web Login failed to authenticate. Check BearWare.dk Web Login in Preferences" = "BearWare.dk Web Login Gagal diautentikasi. Periksa BearWare.dk Web Login pada pengaturan TeamTalk anda";
+
+/* preferences */
+"Before the Message" = "Sebelum Pesan";
 
 /* codec detail */
 "Bitrate" = "Bitrate";
@@ -432,6 +447,9 @@
 /* diagnostics */
 "Clear Log" = "Bersihkan Log";
 
+/* server list */
+"Clear text" = "Hapus teks";
+
 /* media stream */
 "Close" = "Tutup";
 
@@ -440,6 +458,9 @@
 
 /* appearance */
 "Color of buttons, switches and the selected tab." = "Warna tombol, sakelar, dan tab yang dipilih.";
+
+/* appearance */
+"Color of the Microphone button in each state. Its text is shown in black or white, whichever is easier to read." = "Warna tombol Mikrofon di tiap keadaan. Teksnya ditampilkan hitam atau putih, mana yang lebih mudah dibaca.";
 
 /* appearance */
 "Color of the Speakers button in each state. Its icon is shown in black or white, whichever is easier to read." = "Warna tombol Speaker di tiap keadaan. Ikonnya ditampilkan hitam atau putih, mana yang lebih mudah dibaca.";
@@ -467,6 +488,9 @@
 
 /* channel list */
 "Confirm" = "Konfirmasi";
+
+/* preferences */
+"Confirm Before Disconnecting" = "Konfirmasi Sebelum Memutuskan";
 
 /* server list */
 "Connect" = "Hubungkan";
@@ -551,6 +575,9 @@
 /* connection quality */
 "Data" = "Data";
 
+/* preferences */
+"Decrement" = "Kurangi";
+
 /* Sound Input */
 "Default" = "Bawaan";
 
@@ -581,12 +608,18 @@
 /* serverlist */
 "Delete server from list" = "Hapus server dari daftar";
 
+/* preferences */
+"Descending" = "Urutkan dari z ke a";
+
 /* channel list */
 "Deselect user" = "Batalkan pilihan pengguna";
 
 /* preferences
    user detail */
 "Desktop" = "Desktop";
+
+/* preferences */
+"Details Position" = "Posisi Detail";
 
 /* diagnostics */
 "Diagnostic Log" = "Log Diagnostik";
@@ -599,6 +632,9 @@
 
 /* channel list */
 "Disconnect" = "Putuskan";
+
+/* confirmation */
+"Disconnect from the server?" = "Putuskan dari server?";
 
 /* accessibility hint */
 "Disconnects from the server and goes back to the server list" = "Memutuskan dari server dan kembali ke daftar server";
@@ -636,6 +672,9 @@
 /* user accounts */
 "Each change is saved at once and applies the next time this user logs in." = "Tiap perubahan langsung disimpan dan berlaku saat pengguna ini masuk berikutnya.";
 
+/* text to speech events */
+"Each One Its Own" = "Masing-Masing Berbeda";
+
 /* channel list */
 "Earpiece or Headset" = "Earpiece atau Headset";
 
@@ -644,6 +683,9 @@
 
 /* channel list */
 "Edit properties" = "Edit properti";
+
+/* text to speech events */
+"Enable All Announcements" = "Aktifkan Semua Pemberitahuan";
 
 /* server entry */
 "Encrypted" = "Dienkripsi";
@@ -816,6 +858,9 @@
 
 /* channel list */
 "Inactive" = "Tidak aktif";
+
+/* preferences */
+"Increment" = "Tambah";
 
 /* appearance */
 "Interface" = "Antarmuka";
@@ -999,8 +1044,14 @@
 /* text messages */
 "Message" = "Pesan";
 
+/* preferences */
+"Message Details" = "Detail Pesan";
+
 /* server entry */
 "Message of the Day" = "Pesan saat Ini";
+
+/* preferences */
+"Message Only" = "Hanya Pesan";
 
 /* appearance */
 "Message Text Size" = "Ukuran Teks Pesan";
@@ -1013,6 +1064,9 @@
 
 /* diagnostics */
 "Microphone" = "Mikrofon";
+
+/* appearance */
+"Microphone Button" = "Tombol Mikrofon";
 
 /* preferences */
 "Microphone Gain" = "Volume Mikrofon";
@@ -1077,7 +1131,13 @@
 "Name" = "Nama";
 
 /* preferences */
+"Name and Time" = "Nama dan Waktu";
+
+/* preferences */
 "Name displayed in channel list" = "Nama ditampilkan dalam daftar saluran";
+
+/* preferences */
+"Name Only" = "Hanya Nama";
 
 /* preferences */
 "Neutral" = "Netral";
@@ -1169,6 +1229,9 @@
 
 /* live activity */
 "Not transmitting" = "Tidak mengirim";
+
+/* preferences */
+"Number of Users" = "Jumlah Pengguna";
 
 /* media stream */
 "Off" = "Mati";
@@ -1609,6 +1672,9 @@
 /* preferences */
 "Sort Channels" = "Urutkan Saluran";
 
+/* preferences */
+"Sort Direction" = "Arah Urutan";
+
 /* media stream */
 "Sound" = "Suara";
 
@@ -1717,6 +1783,9 @@
 "Subscriptions" = "Langganan";
 
 /* appearance */
+"Swap Microphone Button Colors" = "Tukar Warna Tombol Mikrofon";
+
+/* appearance */
 "Swap Speakers Button Colors" = "Tukar Warna Tombol Speaker";
 
 /* appearance */
@@ -1803,6 +1872,9 @@
 /* appearance */
 "Themes" = "Tema";
 
+/* text to speech events */
+"These two settings change every announcement at once. Each one can still be set on its own below." = "Dua pengaturan ini mengubah semua pemberitahuan sekaligus. Tiap pemberitahuan tetap dapat diatur sendiri di bawah.";
+
 /* diagnostics */
 "They need iOS 17 or later" = "Memerlukan iOS 17 atau lebih baru";
 
@@ -1823,6 +1895,9 @@
 
 /* connection quality */
 "Time a packet takes to reach the server and come back. Below 100 ms a conversation feels immediate." = "Waktu yang diperlukan paket untuk mencapai server dan kembali. Di bawah 100 ms percakapan terasa langsung.";
+
+/* preferences */
+"Time Only" = "Hanya Waktu";
 
 /* channel list */
 "Toggle to enable/disable transmission" = "Beralih untuk mengaktifkan / menonaktifkan transmisi";
@@ -1860,8 +1935,14 @@
 /* preferences */
 "Turn off screen when holding phone near ear" = "Matikan layar saat ponsel di dekat telinga";
 
+/* state of the microphone button */
+"Turned off" = "Nonaktif";
+
 /* diagnostics */
 "Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Dimatikan. Nyalakan Aktivitas Langsung di Pengaturan, di bawah TeamTalk.";
+
+/* state of the microphone button */
+"Turned on" = "Aktif";
 
 /* serverlist */
 "Type Join Code" = "Ketik Kode Gabung";
@@ -2061,11 +2142,17 @@
 /* Sound Devices */
 "WebRTC" = "WebRTC";
 
+/* preferences */
+"What each text message shows besides its text" = "Yang ditampilkan tiap pesan teks selain teksnya";
+
 /* diagnostics */
 "What the app has been doing, to share when something fails" = "Apa yang telah dilakukan app, untuk dibagikan saat ada yang gagal";
 
 /* diagnostics */
 "What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Apa yang app perlukan dari iPhone. Jika ada yang tidak beres di sini, itulah yang pertama harus diperbaiki.";
+
+/* preferences */
+"Where the name and the time are shown and read" = "Tempat nama dan waktu ditampilkan dan dibacakan";
 
 /* transmit control */
 "Who Can Transmit" = "Siapa yang Dapat Mengirim";

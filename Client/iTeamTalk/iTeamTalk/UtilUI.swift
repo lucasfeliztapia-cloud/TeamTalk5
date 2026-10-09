@@ -25,10 +25,37 @@ import TeamTalkKit
 import UIKit
 import SwiftUI
 
+/// What the channels are sorted by: ASCENDING is the name, POPULARITY the
+/// number of users. The direction is a preference of its own.
 enum ChanSort : Int {
     case ASCENDING = 0
     case POPULARITY
     case COUNT
+}
+
+/// The direction of the channel order. Until the user chooses one, names go
+/// up and users go down, which is what the two orders always did.
+func channelSortIsDescending(_ settings: UserDefaults = .standard) -> Bool {
+    if settings.object(forKey: PREF_DISPLAY_SORTCHANNELS_DESC) != nil {
+        return settings.bool(forKey: PREF_DISPLAY_SORTCHANNELS_DESC)
+    }
+    return settings.integer(forKey: PREF_DISPLAY_SORTCHANNELS) == ChanSort.POPULARITY.rawValue
+}
+
+/// What a text message shows besides its text
+enum MessageDetails: Int {
+    case nameAndTime = 0
+    case nameOnly
+    case timeOnly
+    case messageOnly
+
+    var showsName: Bool {
+        self == .nameAndTime || self == .nameOnly
+    }
+
+    var showsTime: Bool {
+        self == .nameAndTime || self == .timeOnly
+    }
 }
 
 enum MsgType {

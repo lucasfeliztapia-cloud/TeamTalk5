@@ -179,8 +179,14 @@
 /* user accounts */
 "Administrator" = "管理员";
 
+/* preferences */
+"After the Message" = "消息之后";
+
 /* channel list */
 "All" = "全部";
+
+/* text to speech events */
+"All Announcements" = "所有播报";
 
 /* all users */
 "All Users" = "所有用户";
@@ -238,6 +244,12 @@
 
 /* preferences */
 "Ascending" = "升序";
+
+/* preferences */
+"Ascending goes from A to Z and from fewer users to more" = "升序即从 A 到 Z、用户数从少到多";
+
+/* preferences */
+"Ask before leaving the server" = "离开服务器前先询问";
 
 /* codec detail */
 "Audio Channels" = "声道";
@@ -305,6 +317,9 @@
 
 /* weblogin event */
 "BearWare.dk Web Login failed to authenticate. Check BearWare.dk Web Login in Preferences" = "BearWare.dk Web 登录验证失败。请检查首选项中的 BearWare.dk Web 登录设置";
+
+/* preferences */
+"Before the Message" = "消息之前";
 
 /* codec detail */
 "Bitrate" = "比特率";
@@ -432,6 +447,9 @@
 /* diagnostics */
 "Clear Log" = "清除日志";
 
+/* server list */
+"Clear text" = "清除文本";
+
 /* media stream */
 "Close" = "关闭";
 
@@ -440,6 +458,9 @@
 
 /* appearance */
 "Color of buttons, switches and the selected tab." = "按钮、开关和所选标签页的颜色。";
+
+/* appearance */
+"Color of the Microphone button in each state. Its text is shown in black or white, whichever is easier to read." = "麦克风按钮在各状态下的颜色。文字以黑色或白色显示，以更易辨认者为准。";
 
 /* appearance */
 "Color of the Speakers button in each state. Its icon is shown in black or white, whichever is easier to read." = "扬声器按钮在各状态下的颜色。图标以黑色或白色显示，以更易辨认者为准。";
@@ -467,6 +488,9 @@
 
 /* channel list */
 "Confirm" = "确认";
+
+/* preferences */
+"Confirm Before Disconnecting" = "断开连接前确认";
 
 /* server list */
 "Connect" = "连接";
@@ -551,6 +575,9 @@
 /* connection quality */
 "Data" = "数据";
 
+/* preferences */
+"Decrement" = "减少";
+
 /* Sound Input */
 "Default" = "默认";
 
@@ -581,12 +608,18 @@
 /* serverlist */
 "Delete server from list" = "从列表中删除服务器";
 
+/* preferences */
+"Descending" = "降序";
+
 /* channel list */
 "Deselect user" = "取消选择用户";
 
 /* preferences
    user detail */
 "Desktop" = "桌面";
+
+/* preferences */
+"Details Position" = "详情位置";
 
 /* diagnostics */
 "Diagnostic Log" = "诊断日志";
@@ -599,6 +632,9 @@
 
 /* channel list */
 "Disconnect" = "断开连接";
+
+/* confirmation */
+"Disconnect from the server?" = "要断开与服务器的连接吗？";
 
 /* accessibility hint */
 "Disconnects from the server and goes back to the server list" = "断开与服务器的连接并返回服务器列表";
@@ -636,6 +672,9 @@
 /* user accounts */
 "Each change is saved at once and applies the next time this user logs in." = "每项更改会立即保存，并在该用户下次登录时生效。";
 
+/* text to speech events */
+"Each One Its Own" = "各自不同";
+
 /* channel list */
 "Earpiece or Headset" = "听筒或耳机";
 
@@ -644,6 +683,9 @@
 
 /* channel list */
 "Edit properties" = "编辑属性";
+
+/* text to speech events */
+"Enable All Announcements" = "启用所有播报";
 
 /* server entry */
 "Encrypted" = "加密";
@@ -816,6 +858,9 @@
 
 /* channel list */
 "Inactive" = "未激活";
+
+/* preferences */
+"Increment" = "增加";
 
 /* appearance */
 "Interface" = "界面";
@@ -999,8 +1044,14 @@
 /* text messages */
 "Message" = "消息";
 
+/* preferences */
+"Message Details" = "消息详情";
+
 /* server entry */
 "Message of the Day" = "每日公告";
+
+/* preferences */
+"Message Only" = "仅消息";
 
 /* appearance */
 "Message Text Size" = "消息文字大小";
@@ -1013,6 +1064,9 @@
 
 /* diagnostics */
 "Microphone" = "麦克风";
+
+/* appearance */
+"Microphone Button" = "麦克风按钮";
 
 /* preferences */
 "Microphone Gain" = "麦克风增益";
@@ -1077,7 +1131,13 @@
 "Name" = "名称";
 
 /* preferences */
+"Name and Time" = "名称和时间";
+
+/* preferences */
 "Name displayed in channel list" = "显示在频道列表中的名称";
+
+/* preferences */
+"Name Only" = "仅名称";
 
 /* preferences */
 "Neutral" = "中性";
@@ -1169,6 +1229,9 @@
 
 /* live activity */
 "Not transmitting" = "未在发送";
+
+/* preferences */
+"Number of Users" = "用户数";
 
 /* media stream */
 "Off" = "关";
@@ -1609,6 +1672,9 @@
 /* preferences */
 "Sort Channels" = "频道排序";
 
+/* preferences */
+"Sort Direction" = "排序方向";
+
 /* media stream */
 "Sound" = "声音";
 
@@ -1717,6 +1783,9 @@
 "Subscriptions" = "订阅";
 
 /* appearance */
+"Swap Microphone Button Colors" = "交换麦克风按钮的颜色";
+
+/* appearance */
 "Swap Speakers Button Colors" = "交换扬声器按钮的颜色";
 
 /* appearance */
@@ -1803,6 +1872,9 @@
 /* appearance */
 "Themes" = "主题";
 
+/* text to speech events */
+"These two settings change every announcement at once. Each one can still be set on its own below." = "这两项设置会同时更改所有播报。每项播报仍可在下方单独设置。";
+
 /* diagnostics */
 "They need iOS 17 or later" = "需要 iOS 17 或更高版本";
 
@@ -1823,6 +1895,9 @@
 
 /* connection quality */
 "Time a packet takes to reach the server and come back. Below 100 ms a conversation feels immediate." = "数据包到达服务器并返回所需的时间。低于 100 毫秒时对话感觉是即时的。";
+
+/* preferences */
+"Time Only" = "仅时间";
 
 /* channel list */
 "Toggle to enable/disable transmission" = "切换以启用/禁用传输";
@@ -1860,8 +1935,14 @@
 /* preferences */
 "Turn off screen when holding phone near ear" = "将手机靠近耳朵时关闭屏幕";
 
+/* state of the microphone button */
+"Turned off" = "已关闭";
+
 /* diagnostics */
 "Turned off. Turn on Live Activities in Settings, under TeamTalk." = "已关闭。请在“设置”的 TeamTalk 下打开实时活动。";
+
+/* state of the microphone button */
+"Turned on" = "已开启";
 
 /* serverlist */
 "Type Join Code" = "输入加入码";
@@ -2061,11 +2142,17 @@
 /* Sound Devices */
 "WebRTC" = "WebRTC";
 
+/* preferences */
+"What each text message shows besides its text" = "每条文字消息除正文外显示的内容";
+
 /* diagnostics */
 "What the app has been doing, to share when something fails" = "App 的运行记录，出问题时可以共享";
 
 /* diagnostics */
 "What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "App 需要 iPhone 提供的条件。如果这里有不正常的地方，应首先解决。";
+
+/* preferences */
+"Where the name and the time are shown and read" = "名称和时间显示及朗读的位置";
 
 /* transmit control */
 "Who Can Transmit" = "谁可以发送";

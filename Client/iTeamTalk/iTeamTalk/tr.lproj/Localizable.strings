@@ -179,8 +179,14 @@
 /* user accounts */
 "Administrator" = "Yönetici";
 
+/* preferences */
+"After the Message" = "İletiden Sonra";
+
 /* channel list */
 "All" = "Tümü";
+
+/* text to speech events */
+"All Announcements" = "Tüm Duyurular";
 
 /* all users */
 "All Users" = "Tüm Kullanıcılar";
@@ -238,6 +244,12 @@
 
 /* preferences */
 "Ascending" = "Artan";
+
+/* preferences */
+"Ascending goes from A to Z and from fewer users to more" = "Artan, A'dan Z'ye ve az kullanıcıdan çok kullanıcıya doğru sıralar";
+
+/* preferences */
+"Ask before leaving the server" = "Sunucudan ayrılmadan önce sor";
 
 /* codec detail */
 "Audio Channels" = "Ses Kanalları";
@@ -305,6 +317,9 @@
 
 /* weblogin event */
 "BearWare.dk Web Login failed to authenticate. Check BearWare.dk Web Login in Preferences" = "BearWare.dk Web Oturumu kimliğini doğrulama başarısız. Tercihler'den BearWare.dk Web Oturumu'nu denetleyin";
+
+/* preferences */
+"Before the Message" = "İletiden Önce";
 
 /* codec detail */
 "Bitrate" = "Bit Hızı";
@@ -432,6 +447,9 @@
 /* diagnostics */
 "Clear Log" = "Günlüğü Temizle";
 
+/* server list */
+"Clear text" = "Metni sil";
+
 /* media stream */
 "Close" = "Kapat";
 
@@ -440,6 +458,9 @@
 
 /* appearance */
 "Color of buttons, switches and the selected tab." = "Düğmelerin, anahtarların ve seçili sekmenin rengi.";
+
+/* appearance */
+"Color of the Microphone button in each state. Its text is shown in black or white, whichever is easier to read." = "Mikrofon düğmesinin her durumdaki rengi. Metni, hangisi daha kolay okunuyorsa siyah veya beyaz gösterilir.";
 
 /* appearance */
 "Color of the Speakers button in each state. Its icon is shown in black or white, whichever is easier to read." = "Hoparlör düğmesinin her durumdaki rengi. Simgesi, hangisi daha kolay okunuyorsa siyah veya beyaz gösterilir.";
@@ -467,6 +488,9 @@
 
 /* channel list */
 "Confirm" = "Onayla";
+
+/* preferences */
+"Confirm Before Disconnecting" = "Bağlantıyı Kesmeden Önce Onayla";
 
 /* server list */
 "Connect" = "Bağlan";
@@ -551,6 +575,9 @@
 /* connection quality */
 "Data" = "Veri";
 
+/* preferences */
+"Decrement" = "Azalt";
+
 /* Sound Input */
 "Default" = "Varsayılan";
 
@@ -581,12 +608,18 @@
 /* serverlist */
 "Delete server from list" = "Sunucuyu listeden sil";
 
+/* preferences */
+"Descending" = "Azalan";
+
 /* channel list */
 "Deselect user" = "Kullanıcının seçimini kaldır";
 
 /* preferences
    user detail */
 "Desktop" = "Masaüstü";
+
+/* preferences */
+"Details Position" = "Ayrıntıların Konumu";
 
 /* diagnostics */
 "Diagnostic Log" = "Tanılama Günlüğü";
@@ -599,6 +632,9 @@
 
 /* channel list */
 "Disconnect" = "Bağlantıyı Kes";
+
+/* confirmation */
+"Disconnect from the server?" = "Sunucuyla bağlantı kesilsin mi?";
 
 /* accessibility hint */
 "Disconnects from the server and goes back to the server list" = "Sunucuyla bağlantıyı keser ve sunucu listesine döner";
@@ -636,6 +672,9 @@
 /* user accounts */
 "Each change is saved at once and applies the next time this user logs in." = "Her değişiklik hemen kaydedilir ve bu kullanıcının bir sonraki oturum açışında geçerli olur.";
 
+/* text to speech events */
+"Each One Its Own" = "Her Biri Ayrı";
+
 /* channel list */
 "Earpiece or Headset" = "Ahize veya Kulaklık";
 
@@ -644,6 +683,9 @@
 
 /* channel list */
 "Edit properties" = "Özellikleri düzenle";
+
+/* text to speech events */
+"Enable All Announcements" = "Tüm Duyuruları Etkinleştir";
 
 /* server entry */
 "Encrypted" = "Şifreli";
@@ -816,6 +858,9 @@
 
 /* channel list */
 "Inactive" = "Etkisiz";
+
+/* preferences */
+"Increment" = "Artır";
 
 /* appearance */
 "Interface" = "Arayüz";
@@ -999,8 +1044,14 @@
 /* text messages */
 "Message" = "İleti";
 
+/* preferences */
+"Message Details" = "İleti Ayrıntıları";
+
 /* server entry */
 "Message of the Day" = "Günün İletisi";
+
+/* preferences */
+"Message Only" = "Yalnızca İleti";
 
 /* appearance */
 "Message Text Size" = "İleti Metin Boyutu";
@@ -1013,6 +1064,9 @@
 
 /* diagnostics */
 "Microphone" = "Mikrofon";
+
+/* appearance */
+"Microphone Button" = "Mikrofon Düğmesi";
 
 /* preferences */
 "Microphone Gain" = "Mikrofon Kazancı";
@@ -1077,7 +1131,13 @@
 "Name" = "Ad";
 
 /* preferences */
+"Name and Time" = "Ad ve Saat";
+
+/* preferences */
 "Name displayed in channel list" = "Kanal listesinde görüntülenen ad";
+
+/* preferences */
+"Name Only" = "Yalnızca Ad";
 
 /* preferences */
 "Neutral" = "Nötr";
@@ -1169,6 +1229,9 @@
 
 /* live activity */
 "Not transmitting" = "Yayın yapmıyor";
+
+/* preferences */
+"Number of Users" = "Kullanıcı Sayısı";
 
 /* media stream */
 "Off" = "Kapalı";
@@ -1609,6 +1672,9 @@
 /* preferences */
 "Sort Channels" = "Kanalları Sırala";
 
+/* preferences */
+"Sort Direction" = "Sıralama Yönü";
+
 /* media stream */
 "Sound" = "Ses";
 
@@ -1717,6 +1783,9 @@
 "Subscriptions" = "Abonelikler";
 
 /* appearance */
+"Swap Microphone Button Colors" = "Mikrofon Düğmesinin Renklerini Değiştir";
+
+/* appearance */
 "Swap Speakers Button Colors" = "Hoparlör Düğmesinin Renklerini Değiştir";
 
 /* appearance */
@@ -1803,6 +1872,9 @@
 /* appearance */
 "Themes" = "Temalar";
 
+/* text to speech events */
+"These two settings change every announcement at once. Each one can still be set on its own below." = "Bu iki ayar tüm duyuruları aynı anda değiştirir. Her duyuru aşağıda yine ayrı ayrı ayarlanabilir.";
+
 /* diagnostics */
 "They need iOS 17 or later" = "iOS 17 veya sonrası gerekir";
 
@@ -1823,6 +1895,9 @@
 
 /* connection quality */
 "Time a packet takes to reach the server and come back. Below 100 ms a conversation feels immediate." = "Bir paketin sunucuya ulaşıp geri gelmesi için geçen süre. 100 ms altında konuşma anlık hissedilir.";
+
+/* preferences */
+"Time Only" = "Yalnızca Saat";
 
 /* channel list */
 "Toggle to enable/disable transmission" = "İletimi etkinleştirmek/etkisizleştirmek için değiştir";
@@ -1860,8 +1935,14 @@
 /* preferences */
 "Turn off screen when holding phone near ear" = "Telefon kulağa yakın tutulduğunda ekranı kapat";
 
+/* state of the microphone button */
+"Turned off" = "Kapalı";
+
 /* diagnostics */
 "Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Kapalı. Ayarlar'da TeamTalk altında Canlı Etkinlikler'i açın.";
+
+/* state of the microphone button */
+"Turned on" = "Açık";
 
 /* serverlist */
 "Type Join Code" = "Katılma Kodunu Yazın";
@@ -2061,11 +2142,17 @@
 /* Sound Devices */
 "WebRTC" = "WebRTC";
 
+/* preferences */
+"What each text message shows besides its text" = "Her metin iletisinin metni dışında gösterdikleri";
+
 /* diagnostics */
 "What the app has been doing, to share when something fails" = "Uygulamanın yaptıkları, bir şey ters gittiğinde paylaşmak için";
 
 /* diagnostics */
 "What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Uygulamanın iPhone'dan gereksinim duydukları. Burada bir şey doğru değilse düzeltilecek ilk şey odur.";
+
+/* preferences */
+"Where the name and the time are shown and read" = "Adın ve saatin gösterildiği ve okunduğu yer";
 
 /* transmit control */
 "Who Can Transmit" = "Kimler Yayın Yapabilir";

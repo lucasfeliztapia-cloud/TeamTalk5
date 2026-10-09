@@ -31,6 +31,9 @@ struct PreferencesView: View {
     @State private var backupFile: SharedFile?
     @State private var showingBackupImporter = false
     @State private var backupMessage: String?
+    @AppStorage(PREF_DISPLAY_MSGDETAILS) private var messageDetails = MessageDetails.nameAndTime.rawValue
+    @AppStorage(PREF_DISPLAY_MSGDETAILSAFTER) private var messageDetailsAfter = false
+    @AppStorage(PREF_GENERAL_CONFIRMDISCONNECT) private var confirmDisconnect = false
 
     var body: some View {
         Form {
@@ -197,19 +200,8 @@ struct PreferencesView: View {
                         .foregroundStyle(.secondary)
                 }
             }
-            VStack(alignment: .leading, spacing: 4) {
-                Stepper(value: Binding(get: { model.limitText }, set: { model.limittextChanged($0) }),
-                        in: 1...Double(TT_STRLEN - 1), step: 1) {
-                    HStack(spacing: 12) {
-                        Text("Maximum Text Length")
-                        Spacer(minLength: 16)
-                        Text("\(Int(model.limitText.rounded()))")
-                            .font(.body.monospacedDigit())
-                            .foregroundStyle(.secondary)
-                    }
-                }
-                PreferenceSubtitle(verbatim: String(format: String(localized: "Limit length of names in channel list to %d characters", comment: "preferences"), Int(model.limitText)))
-            }
+            messageDetailRows
+            maximumTextLengthRow
             NavigationLink {
                 PublicServerView()
             } label: {
@@ -228,20 +220,103 @@ struct PreferencesView: View {
                         .foregroundStyle(.secondary)
                 }
             }
-            VStack(alignment: .leading, spacing: 4) {
-                VStack(alignment: .leading, spacing: 8) {
-                    Text("Sort Channels")
-                    Picker("Sort Channels", selection: Binding(
-                        get: { model.channelSortIndex },
-                        set: { model.channelSortChanged($0) }
-                    )) {
-                        Text("Ascending").tag(0)
-                        Text("Popularity").tag(1)
-                    }
-                    .pickerStyle(.segmented)
-                }
-                PreferenceSubtitle("Order of channels in Channel List")
+            channelSortRows
+        }
+    }
+
+    /// What a message shows besides its text, and on which side of it
+    @ViewBuilder
+    private var messageDetailRows: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Picker("Message Details", selection: $messageDetails) {
+                Text("Name and Time").tag(MessageDetails.nameAndTime.rawValue)
+                Text("Name Only").tag(MessageDetails.nameOnly.rawValue)
+                Text("Time Only").tag(MessageDetails.timeOnly.rawValue)
+                Text("Message Only").tag(MessageDetails.messageOnly.rawValue)
             }
+            PreferenceSubtitle("What each text message shows besides its text")
+        }
+        VStack(alignment: .leading, spacing: 4) {
+            Picker("Details Position", selection: $messageDetailsAfter) {
+                Text("Before the Message").tag(false)
+                Text("After the Message").tag(true)
+            }
+            PreferenceSubtitle("Where the name and the time are shown and read")
+        }
+    }
+
+    /// A slider between the two buttons: the buttons go one by one, the
+    /// slider crosses the whole range.
+    private var maximumTextLengthRow: some View {
+        let range = 1...Double(TT_STRLEN - 1)
+        let length = Int(model.limitText.rounded())
+
+        return VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: 8) {
+                HStack(spacing: 12) {
+                    Text("Maximum Text Length")
+                    Spacer(minLength: 16)
+                    Text(verbatim: "\(length)")
+                        .font(.body.monospacedDigit())
+                        .foregroundStyle(.secondary)
+                }
+                // the slider says both
+                .accessibilityHidden(true)
+                HStack(spacing: 12) {
+                    Button {
+                        model.limittextChanged(max(range.lowerBound, model.limitText - 1))
+                    } label: {
+                        Image(systemName: "minus")
+                    }
+                    .buttonStyle(.bordered)
+                    .accessibilityLabel(Text("Decrement"))
+                    Slider(value: Binding(get: { model.limitText }, set: { model.limittextChanged($0) }),
+                           in: range, step: 1)
+                        .accessibilityLabel(Text("Maximum Text Length"))
+                        .accessibilityValue(Text(verbatim: "\(length)"))
+                    Button {
+                        model.limittextChanged(min(range.upperBound, model.limitText + 1))
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                    .buttonStyle(.bordered)
+                    .accessibilityLabel(Text("Increment"))
+                }
+            }
+            PreferenceSubtitle(verbatim: String(format: String(localized: "Limit length of names in channel list to %d characters", comment: "preferences"), length))
+        }
+    }
+
+    /// What the channels are sorted by, and in which direction
+    @ViewBuilder
+    private var channelSortRows: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: 8) {
+                Text("Sort Channels")
+                Picker("Sort Channels", selection: Binding(
+                    get: { model.channelSortIndex },
+                    set: { model.channelSortChanged($0) }
+                )) {
+                    Text("Name").tag(0)
+                    Text("Number of Users").tag(1)
+                }
+                .pickerStyle(.segmented)
+            }
+            PreferenceSubtitle("Order of channels in Channel List")
+        }
+        VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: 8) {
+                Text("Sort Direction")
+                Picker("Sort Direction", selection: Binding(
+                    get: { model.channelSortDescending },
+                    set: { model.channelSortDirectionChanged($0) }
+                )) {
+                    Text("Ascending").tag(false)
+                    Text("Descending").tag(true)
+                }
+                .pickerStyle(.segmented)
+            }
+            PreferenceSubtitle("Ascending goes from A to Z and from fewer users to more")
         }
     }
 
@@ -369,6 +444,14 @@ struct PreferencesView: View {
                 VStack(alignment: .leading, spacing: 2) {
                     Text("Join Root Channel")
                     Text("Join root channel after login")
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                }
+            }
+            Toggle(isOn: $confirmDisconnect) {
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Confirm Before Disconnecting")
+                    Text("Ask before leaving the server")
                         .font(.footnote)
                         .foregroundStyle(.secondary)
                 }

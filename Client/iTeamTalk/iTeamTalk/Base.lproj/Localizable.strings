@@ -180,8 +180,14 @@
 /* user accounts */
 "Administrator" = "Administrator";
 
+/* preferences */
+"After the Message" = "After the Message";
+
 /* channel list */
 "All" = "All";
+
+/* text to speech events */
+"All Announcements" = "All Announcements";
 
 /* all users */
 "All Users" = "All Users";
@@ -239,6 +245,12 @@
 
 /* preferences */
 "Ascending" = "Ascending";
+
+/* preferences */
+"Ascending goes from A to Z and from fewer users to more" = "Ascending goes from A to Z and from fewer users to more";
+
+/* preferences */
+"Ask before leaving the server" = "Ask before leaving the server";
 
 /* codec detail */
 "Audio Channels" = "Audio Channels";
@@ -306,6 +318,9 @@
 
 /* weblogin event */
 "BearWare.dk Web Login failed to authenticate. Check BearWare.dk Web Login in Preferences" = "BearWare.dk Web Login failed to authenticate. Check BearWare.dk Web Login in Preferences";
+
+/* preferences */
+"Before the Message" = "Before the Message";
 
 /* codec detail */
 "Bitrate" = "Bitrate";
@@ -433,6 +448,9 @@
 /* diagnostics */
 "Clear Log" = "Clear Log";
 
+/* server list */
+"Clear text" = "Clear text";
+
 /* media stream */
 "Close" = "Close";
 
@@ -441,6 +459,9 @@
 
 /* appearance */
 "Color of buttons, switches and the selected tab." = "Color of buttons, switches and the selected tab.";
+
+/* appearance */
+"Color of the Microphone button in each state. Its text is shown in black or white, whichever is easier to read." = "Color of the Microphone button in each state. Its text is shown in black or white, whichever is easier to read.";
 
 /* appearance */
 "Color of the Speakers button in each state. Its icon is shown in black or white, whichever is easier to read." = "Color of the Speakers button in each state. Its icon is shown in black or white, whichever is easier to read.";
@@ -468,6 +489,9 @@
 
 /* channel list */
 "Confirm" = "Confirm";
+
+/* preferences */
+"Confirm Before Disconnecting" = "Confirm Before Disconnecting";
 
 /* server list */
 "Connect" = "Connect";
@@ -549,6 +573,9 @@
 /* connection quality */
 "Data" = "Data";
 
+/* preferences */
+"Decrement" = "Decrement";
+
 /* Sound Devices */
 "Default" = "Default";
 
@@ -579,12 +606,18 @@
 /* serverlist */
 "Delete server from list" = "Delete server from list";
 
+/* preferences */
+"Descending" = "Descending";
+
 /* channel list */
 "Deselect user" = "Deselect user";
 
 /* preferences
    user detail */
 "Desktop" = "Desktop";
+
+/* preferences */
+"Details Position" = "Details Position";
 
 /* diagnostics */
 "Diagnostic Log" = "Diagnostic Log";
@@ -597,6 +630,9 @@
 
 /* channel list */
 "Disconnect" = "Disconnect";
+
+/* confirmation */
+"Disconnect from the server?" = "Disconnect from the server?";
 
 /* accessibility hint */
 "Disconnects from the server and goes back to the server list" = "Disconnects from the server and goes back to the server list";
@@ -634,6 +670,9 @@
 /* user accounts */
 "Each change is saved at once and applies the next time this user logs in." = "Each change is saved at once and applies the next time this user logs in.";
 
+/* text to speech events */
+"Each One Its Own" = "Each One Its Own";
+
 /* channel list */
 "Earpiece or Headset" = "Earpiece or Headset";
 
@@ -642,6 +681,9 @@
 
 /* channel list */
 "Edit properties" = "Edit properties";
+
+/* text to speech events */
+"Enable All Announcements" = "Enable All Announcements";
 
 /* server entry */
 "Encrypted" = "Encrypted";
@@ -812,6 +854,9 @@
 
 /* channel list */
 "Inactive" = "Inactive";
+
+/* preferences */
+"Increment" = "Increment";
 
 /* appearance */
 "Interface" = "Interface";
@@ -992,8 +1037,14 @@
 /* text messages */
 "Message" = "Message";
 
+/* preferences */
+"Message Details" = "Message Details";
+
 /* server entry */
 "Message of the Day" = "Message of the Day";
+
+/* preferences */
+"Message Only" = "Message Only";
 
 /* appearance */
 "Message Text Size" = "Message Text Size";
@@ -1006,6 +1057,9 @@
 
 /* diagnostics */
 "Microphone" = "Microphone";
+
+/* appearance */
+"Microphone Button" = "Microphone Button";
 
 /* preferences */
 "Microphone Gain" = "Microphone Gain";
@@ -1070,7 +1124,13 @@
 "Name" = "Name";
 
 /* preferences */
+"Name and Time" = "Name and Time";
+
+/* preferences */
 "Name displayed in channel list" = "Name displayed in channel list";
+
+/* preferences */
+"Name Only" = "Name Only";
 
 /* preferences */
 "Neutral" = "Neutral";
@@ -1159,6 +1219,9 @@
 
 /* live activity */
 "Not transmitting" = "Not transmitting";
+
+/* preferences */
+"Number of Users" = "Number of Users";
 
 /* media stream */
 "Off" = "Off";
@@ -1599,6 +1662,9 @@
 /* preferences */
 "Sort Channels" = "Sort Channels";
 
+/* preferences */
+"Sort Direction" = "Sort Direction";
+
 /* media stream */
 "Sound" = "Sound";
 
@@ -1708,6 +1774,9 @@
 "Subscriptions" = "Subscriptions";
 
 /* appearance */
+"Swap Microphone Button Colors" = "Swap Microphone Button Colors";
+
+/* appearance */
 "Swap Speakers Button Colors" = "Swap Speakers Button Colors";
 
 /* appearance */
@@ -1794,6 +1863,9 @@
 /* appearance */
 "Themes" = "Themes";
 
+/* text to speech events */
+"These two settings change every announcement at once. Each one can still be set on its own below." = "These two settings change every announcement at once. Each one can still be set on its own below.";
+
 /* diagnostics */
 "They need iOS 17 or later" = "They need iOS 17 or later";
 
@@ -1814,6 +1886,9 @@
 
 /* connection quality */
 "Time a packet takes to reach the server and come back. Below 100 ms a conversation feels immediate." = "Time a packet takes to reach the server and come back. Below 100 ms a conversation feels immediate.";
+
+/* preferences */
+"Time Only" = "Time Only";
 
 /* channel list */
 "Toggle to enable/disable transmission" = "Toggle to enable/disable transmission";
@@ -1851,8 +1926,14 @@
 /* preferences */
 "Turn off screen when holding phone near ear" = "Turn off screen when holding phone near ear";
 
+/* state of the microphone button */
+"Turned off" = "Turned off";
+
 /* diagnostics */
 "Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Turned off. Turn on Live Activities in Settings, under TeamTalk.";
+
+/* state of the microphone button */
+"Turned on" = "Turned on";
 
 /* text field hint
    text message */
@@ -2049,11 +2130,17 @@
 /* Sound Devices */
 "WebRTC" = "WebRTC";
 
+/* preferences */
+"What each text message shows besides its text" = "What each text message shows besides its text";
+
 /* diagnostics */
 "What the app has been doing, to share when something fails" = "What the app has been doing, to share when something fails";
 
 /* diagnostics */
 "What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "What the app needs from the iPhone. If something here is not right, it is the first thing to fix.";
+
+/* preferences */
+"Where the name and the time are shown and read" = "Where the name and the time are shown and read";
 
 /* transmit control */
 "Who Can Transmit" = "Who Can Transmit";

@@ -2,7 +2,7 @@
 "Connect to %@" = "Conectar con %@";
 
 /* favorite servers widget */
-"Connect to one of your favorite servers with a tap." = "Conecta con uno de tus servidores favoritos de un toque.";
+"Connect to one of your favorite servers with a tap." = "Conecta con uno de tus servidores favoritos con un solo toque.";
 
 /* favorite servers widget */
 "Favorite Servers" = "Servidores favoritos";
@@ -14,7 +14,7 @@
 "Muted" = "Silenciados";
 
 /* speakers control */
-"Mutes everyone and brings them back while connected to a server." = "Silencia a todos y vuelve a oírlos mientras estás conectado a un servidor.";
+"Mutes everyone and brings them back while connected to a server." = "Silencia o reactiva el sonido de todos los usuarios mientras estás conectado a un servidor.";
 
 /* transmit control */
 "Not transmitting" = "Sin transmitir";
@@ -26,7 +26,7 @@
 "Open TeamTalk to see your favorite servers" = "Abre TeamTalk para ver tus servidores favoritos";
 
 /* intent */
-"Pause or Resume Streaming" = "Pausar o reanudar la emisión";
+"Pause or Resume Streaming" = "Pausar o reanudar la transmisión del archivo";
 
 /* intent */
 "Speakers" = "Altavoces";
@@ -35,10 +35,10 @@
 "Speakers On" = "Altavoces activados";
 
 /* intent */
-"Stop Streaming" = "Detener la emisión";
+"Stop Streaming" = "Detener la transmisión del archivo";
 
 /* transmit control */
-"Talk in TeamTalk" = "Hablar en TeamTalk";
+"Talk in TeamTalk" = "Micrófono de TeamTalk";
 
 /* speakers control */
 "TeamTalk Speakers" = "Altavoces de TeamTalk";
@@ -47,7 +47,7 @@
 "Toggle Speakers" = "Silenciar o activar los altavoces";
 
 /* intent */
-"Toggle Transmission" = "Activar o desactivar la transmisión";
+"Toggle Transmission" = "Activar o desactivar la transmisión de voz";
 
 /* intent */
 "Transmission" = "Transmisión";

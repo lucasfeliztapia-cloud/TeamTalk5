@@ -179,8 +179,14 @@
 /* user accounts */
 "Administrator" = "Администратор";
 
+/* preferences */
+"After the Message" = "После сообщения";
+
 /* channel list */
 "All" = "Все";
+
+/* text to speech events */
+"All Announcements" = "Все объявления";
 
 /* all users */
 "All Users" = "Все пользователи";
@@ -238,6 +244,12 @@
 
 /* preferences */
 "Ascending" = "По Возрастанию";
+
+/* preferences */
+"Ascending goes from A to Z and from fewer users to more" = "По возрастанию — от А до Я и от меньшего числа пользователей к большему";
+
+/* preferences */
+"Ask before leaving the server" = "Спрашивать перед выходом с сервера";
 
 /* codec detail */
 "Audio Channels" = "Аудиоканалы";
@@ -304,6 +316,9 @@
 
 /* weblogin event */
 "BearWare.dk Web Login failed to authenticate. Check BearWare.dk Web Login in Preferences" = "Не удалось пройти веб-аутентификацию BearWare.dk. Проверьте вход в систему BearWare.dk в Настройках";
+
+/* preferences */
+"Before the Message" = "Перед сообщением";
 
 /* codec detail */
 "Bitrate" = "Битрейт";
@@ -431,6 +446,9 @@
 /* diagnostics */
 "Clear Log" = "Очистить журнал";
 
+/* server list */
+"Clear text" = "Очистить текст";
+
 /* media stream */
 "Close" = "Закрыть";
 
@@ -439,6 +457,9 @@
 
 /* appearance */
 "Color of buttons, switches and the selected tab." = "Цвет кнопок, переключателей и выбранной вкладки.";
+
+/* appearance */
+"Color of the Microphone button in each state. Its text is shown in black or white, whichever is easier to read." = "Цвет кнопки «Микрофон» в каждом состоянии. Её текст показывается чёрным или белым, смотря что легче читается.";
 
 /* appearance */
 "Color of the Speakers button in each state. Its icon is shown in black or white, whichever is easier to read." = "Цвет кнопки динамиков в каждом состоянии. Её значок показывается чёрным или белым, смотря что легче читается.";
@@ -466,6 +487,9 @@
 
 /* channel list */
 "Confirm" = "Подтвердить";
+
+/* preferences */
+"Confirm Before Disconnecting" = "Подтверждать отключение";
 
 /* server list */
 "Connect" = "Подключиться";
@@ -550,6 +574,9 @@
 /* connection quality */
 "Data" = "Данные";
 
+/* preferences */
+"Decrement" = "Уменьшить";
+
 /* Sound Input */
 "Default" = "По умолчанию";
 
@@ -580,12 +607,18 @@
 /* serverlist */
 "Delete server from list" = "Удалить сервер из списка";
 
+/* preferences */
+"Descending" = "По убыванию";
+
 /* channel list */
 "Deselect user" = "Снять выделение с пользователя";
 
 /* preferences
    user detail */
 "Desktop" = "Рабочий стол";
+
+/* preferences */
+"Details Position" = "Расположение сведений";
 
 /* diagnostics */
 "Diagnostic Log" = "Журнал диагностики";
@@ -598,6 +631,9 @@
 
 /* channel list */
 "Disconnect" = "Отключиться";
+
+/* confirmation */
+"Disconnect from the server?" = "Отключиться от сервера?";
 
 /* accessibility hint */
 "Disconnects from the server and goes back to the server list" = "Отключается от сервера и возвращается к списку серверов";
@@ -635,6 +671,9 @@
 /* user accounts */
 "Each change is saved at once and applies the next time this user logs in." = "Каждое изменение сохраняется сразу и начинает действовать при следующем входе этого пользователя.";
 
+/* text to speech events */
+"Each One Its Own" = "У каждого своё";
+
 /* channel list */
 "Earpiece or Headset" = "Разговорный динамик или гарнитура";
 
@@ -643,6 +682,9 @@
 
 /* channel list */
 "Edit properties" = "Редактировать свойства";
+
+/* text to speech events */
+"Enable All Announcements" = "Включить все объявления";
 
 /* server entry */
 "Encrypted" = "С шифрованием";
@@ -815,6 +857,9 @@
 
 /* channel list */
 "Inactive" = "Неактивно";
+
+/* preferences */
+"Increment" = "Увеличить";
 
 /* appearance */
 "Interface" = "Интерфейс";
@@ -998,8 +1043,14 @@
 /* text messages */
 "Message" = "Сообщение";
 
+/* preferences */
+"Message Details" = "Сведения о сообщениях";
+
 /* server entry */
 "Message of the Day" = "Сообщение Дня";
+
+/* preferences */
+"Message Only" = "Только сообщение";
 
 /* appearance */
 "Message Text Size" = "Размер текста сообщений";
@@ -1012,6 +1063,9 @@
 
 /* diagnostics */
 "Microphone" = "Микрофон";
+
+/* appearance */
+"Microphone Button" = "Кнопка «Микрофон»";
 
 /* preferences */
 "Microphone Gain" = "Громкость Микрофона";
@@ -1076,7 +1130,13 @@
 "Name" = "Имя";
 
 /* preferences */
+"Name and Time" = "Имя и время";
+
+/* preferences */
 "Name displayed in channel list" = "Отображаемое имя в списке каналов";
+
+/* preferences */
+"Name Only" = "Только имя";
 
 /* preferences */
 "Neutral" = "Нейтральный";
@@ -1168,6 +1228,9 @@
 
 /* live activity */
 "Not transmitting" = "Не передаёт";
+
+/* preferences */
+"Number of Users" = "Число пользователей";
 
 /* media stream */
 "Off" = "Выкл.";
@@ -1606,6 +1669,9 @@
 /* preferences */
 "Sort Channels" = "Сортировка каналов";
 
+/* preferences */
+"Sort Direction" = "Направление сортировки";
+
 /* media stream */
 "Sound" = "Звук";
 
@@ -1714,6 +1780,9 @@
 "Subscriptions" = "Подписки";
 
 /* appearance */
+"Swap Microphone Button Colors" = "Поменять местами цвета кнопки «Микрофон»";
+
+/* appearance */
 "Swap Speakers Button Colors" = "Поменять местами цвета кнопки динамиков";
 
 /* appearance */
@@ -1800,6 +1869,9 @@
 /* appearance */
 "Themes" = "Темы";
 
+/* text to speech events */
+"These two settings change every announcement at once. Each one can still be set on its own below." = "Эти две настройки меняют все объявления сразу. Каждое объявление по-прежнему можно настроить отдельно ниже.";
+
 /* diagnostics */
 "They need iOS 17 or later" = "Требуется iOS 17 или новее";
 
@@ -1820,6 +1892,9 @@
 
 /* connection quality */
 "Time a packet takes to reach the server and come back. Below 100 ms a conversation feels immediate." = "Время, за которое пакет доходит до сервера и возвращается. Ниже 100 мс разговор кажется мгновенным.";
+
+/* preferences */
+"Time Only" = "Только время";
 
 /* channel list */
 "Toggle to enable/disable transmission" = "Переключатель, для включения/выключения передачи голоса";
@@ -1857,8 +1932,14 @@
 /* preferences */
 "Turn off screen when holding phone near ear" = "Выключать экран при поднесении телефона к уху";
 
+/* state of the microphone button */
+"Turned off" = "Выключен";
+
 /* diagnostics */
 "Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Выключено. Включите эфир активности в Настройках, в разделе TeamTalk.";
+
+/* state of the microphone button */
+"Turned on" = "Включён";
 
 /* serverlist */
 "Type Join Code" = "Введите код присоединения";
@@ -2057,11 +2138,17 @@
 /* Sound Devices */
 "WebRTC" = "WebRTC";
 
+/* preferences */
+"What each text message shows besides its text" = "Что показывает каждое текстовое сообщение помимо текста";
+
 /* diagnostics */
 "What the app has been doing, to share when something fails" = "Что делало приложение: чтобы поделиться, когда что-то не работает";
 
 /* diagnostics */
 "What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Что приложению нужно от iPhone. Если здесь что-то не так, это первое, что нужно исправить.";
+
+/* preferences */
+"Where the name and the time are shown and read" = "Где показываются и читаются имя и время";
 
 /* transmit control */
 "Who Can Transmit" = "Кто может передавать";

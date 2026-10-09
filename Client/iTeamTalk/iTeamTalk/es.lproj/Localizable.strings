@@ -5,7 +5,7 @@
 "%@ added to the playlist" = "%@ añadido a la lista";
 
 /* media stream */
-"%@ cannot be streamed" = "%@ no se puede emitir";
+"%@ cannot be streamed" = "%@ no se puede transmitir";
 
 /* channel list */
 "%@ deselected" = "%@ deseleccionado";
@@ -35,7 +35,7 @@
 "%@, %d users" = "%@, %d usuarios";
 
 /* Web Login Controller */
-"%@, your username \"%@\" has been validated" = "%1$@, Tu nombre de usuario \"%2$@\" ha ha sido validado";
+"%@, your username \"%@\" has been validated" = "%1$@, tu nombre de usuario \"%2$@\" ha sido validado";
 
 /* preferences */
 "%d %% - Default" = "%d %% - predeterminado";
@@ -95,7 +95,7 @@
 "1 user selected to move here" = "1 usuario seleccionado para mover aquí";
 
 /* media stream */
-"100 % leaves the file as it is. The preview plays on this device only, with this volume and from the chosen position." = "El 100 % deja el archivo como está. La preescucha suena solo en este dispositivo, con este volumen y desde la posición elegida.";
+"100 % leaves the file as it is. The preview plays on this device only, with this volume and from the chosen position." = "Con el 100 % el archivo no se modifica. La vista previa se reproduce solo en este dispositivo, con este volumen y desde la posición elegida.";
 
 /* codec detail */
 "12 KHz" = "12 kHz";
@@ -119,13 +119,13 @@
 "8 KHz" = "8 kHz";
 
 /* user accounts */
-"A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "Un cambio de permisos se aplica la próxima vez que el usuario inicia sesión. Quien está conectado conserva los antiguos hasta entonces.";
+"A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "Los cambios de permisos se aplican la próxima vez que el usuario inicie sesión. Los usuarios conectados conservan los permisos anteriores hasta entonces.";
 
 /* appearance */
-"A theme changes the colors above. You can adjust them afterwards." = "Un tema cambia los colores de arriba. Después puedes ajustarlos.";
+"A theme changes the colors above. You can adjust them afterwards." = "Un tema modifica los colores anteriores. Se pueden ajustar después.";
 
 /* serverlist */
-"Access preferences" = "Preferencias de acceso";
+"Access preferences" = "Toca dos veces para abrir las preferencias";
 
 /* appearance */
 "Accessibility 1" = "Accesibilidad 1";
@@ -162,25 +162,31 @@
 "Add to Favorites" = "Añadir a favoritos";
 
 /* incoming file */
-"Add to Streaming Playlist" = "Añadir a la lista de emisión";
+"Add to Streaming Playlist" = "Añadir a la lista de reproducción";
 
 /* media stream */
 "Add Web Address" = "Añadir dirección web";
 
 /* incoming file */
-"Added to the streaming playlist" = "Añadido a la lista de emisión";
+"Added to the streaming playlist" = "Añadido a la lista de reproducción";
 
 /* media stream */
 "Address of a web radio or of an audio or video file" = "Dirección de una radio web o de un archivo de audio o vídeo";
 
 /* accessibility hint */
-"Adds a server to the list" = "Añade un servidor a la lista";
+"Adds a server to the list" = "Toca dos veces para añadir un servidor a la lista";
 
 /* user accounts */
 "Administrator" = "Administrador";
 
+/* preferences */
+"After the Message" = "Después del mensaje";
+
 /* channel list */
 "All" = "Todos";
+
+/* text to speech events */
+"All Announcements" = "Todos los anuncios";
 
 /* all users */
 "All Users" = "Todos los usuarios";
@@ -195,7 +201,7 @@
 "Always Light" = "Siempre claro";
 
 /* user accounts */
-"An administrator has every permission, whatever is set here." = "Un administrador tiene todos los permisos, se marque lo que se marque aquí.";
+"An administrator has every permission, whatever is set here." = "Un administrador dispone de todos los permisos, con independencia de lo que se seleccione aquí.";
 
 /* preferences */
 "Announce content of text message" = "Anunciar mensaje de texto";
@@ -213,7 +219,7 @@
 "Announce user logged onto server" = "Anunciar cuando un usuario entre al servidor";
 
 /* preferences */
-"Announce user logged out of server" = "Anunciar cuando un usuario sale del servidor";
+"Announce user logged out of server" = "Anunciar cuando un usuario salga del servidor";
 
 /* text to speech */
 "Announcements" = "Anunciar";
@@ -238,6 +244,12 @@
 
 /* preferences */
 "Ascending" = "Ascendente";
+
+/* preferences */
+"Ascending goes from A to Z and from fewer users to more" = "Ascendente va de la A a la Z y de menos a más usuarios";
+
+/* preferences */
+"Ask before leaving the server" = "Solicitar confirmación antes de salir del servidor";
 
 /* codec detail */
 "Audio Channels" = "Canales de audio";
@@ -303,7 +315,10 @@
 "BearWare.dk Web Login" = "BearWare.dk Web Login";
 
 /* weblogin event */
-"BearWare.dk Web Login failed to authenticate. Check BearWare.dk Web Login in Preferences" = "No se pudo iniciar sesión con BearWare.dk Web Login. Revisa BearWare.dk Web Login en Preferencias";
+"BearWare.dk Web Login failed to authenticate. Check BearWare.dk Web Login in Preferences" = "No se pudo iniciar sesión con BearWare.dk Web Login. Comprueba BearWare.dk Web Login en Preferencias";
+
+/* preferences */
+"Before the Message" = "Antes del mensaje";
 
 /* codec detail */
 "Bitrate" = "Velocidad de bits";
@@ -337,10 +352,10 @@
 "Cancel" = "Cancelar";
 
 /* file list */
-"Cancels the download" = "Cancela la descarga";
+"Cancels the download" = "Toca dos veces para cancelar la descarga";
 
 /* file list */
-"Cancels the upload" = "Cancela la subida";
+"Cancels the upload" = "Toca dos veces para cancelar la subida";
 
 /* user accounts */
 "Change the Permissions of Every Account" = "Cambiar los permisos de todas las cuentas";
@@ -390,7 +405,7 @@
 "Channels" = "Canales";
 
 /* server entry */
-"Check only if this server has enabled BearWare.dk Web Login" = "Márcalo solo si este servidor tiene activado BearWare.dk Web Login";
+"Check only if this server has enabled BearWare.dk Web Login" = "Activar solo si el servidor tiene habilitado BearWare.dk Web Login";
 
 /* diagnostics */
 "Checks" = "Comprobaciones";
@@ -402,34 +417,37 @@
 "Choose Channel" = "Elegir canal";
 
 /* appearance */
-"Choose colors, text size and font" = "Elige los colores, el tamaño del texto y la fuente";
+"Choose colors, text size and font" = "Colores, tamaño del texto y fuente";
 
 /* preferences */
-"Choose events to playback" = "Elige qué eventos se anuncian";
+"Choose events to playback" = "Seleccionar los eventos de texto a voz que se anuncian";
 
 /* file list */
 "Choose Files" = "Elegir archivos";
 
 /* preferences */
-"Choose input and output devices" = "Elige los dispositivos de entrada y de salida";
+"Choose input and output devices" = "Seleccionar los dispositivos de entrada y de salida";
 
 /* user accounts */
-"Choose one or more permissions and then what to do with them. Administrator accounts are not changed." = "Elige uno o varios permisos y después qué hacer con ellos. Las cuentas de administrador no se cambian.";
+"Choose one or more permissions and then what to do with them. Administrator accounts are not changed." = "Selecciona uno o varios permisos y, a continuación, la acción que se aplicará. Las cuentas de administrador no se modifican.";
 
 /* preferences */
-"Choose sounds events to play" = "Elige qué sonidos de eventos se reproducen";
+"Choose sounds events to play" = "Seleccionar los eventos de sonido que se reproducen";
 
 /* accessibility hint */
-"Chooses where the sound comes out" = "Elige por dónde sale el sonido";
+"Chooses where the sound comes out" = "Toca dos veces para elegir la salida de audio";
 
 /* all users */
-"Choosing a user shows the channel they are in. If the server does not let your account see all users, only those of your channel are listed." = "Al elegir un usuario se muestra el canal donde está. Si el servidor no deja a tu cuenta ver a todos los usuarios, solo salen los de tu canal.";
+"Choosing a user shows the channel they are in. If the server does not let your account see all users, only those of your channel are listed." = "Al seleccionar un usuario se muestra el canal en el que se encuentra. Si el servidor no permite a tu cuenta ver a todos los usuarios, solo se muestran los de tu canal.";
 
 /* channel detail */
 "Classroom" = "Aula";
 
 /* diagnostics */
 "Clear Log" = "Vaciar el registro";
+
+/* server list */
+"Clear text" = "Borrar texto";
 
 /* media stream */
 "Close" = "Cerrar";
@@ -439,6 +457,9 @@
 
 /* appearance */
 "Color of buttons, switches and the selected tab." = "Color de los botones, los interruptores y la pestaña seleccionada.";
+
+/* appearance */
+"Color of the Microphone button in each state. Its text is shown in black or white, whichever is easier to read." = "Color del botón del micrófono en cada estado. Su texto se muestra en negro o en blanco, según cuál se lea mejor.";
 
 /* appearance */
 "Color of the Speakers button in each state. Its icon is shown in black or white, whichever is easier to read." = "Color del botón de altavoces en cada estado. Su icono se muestra en negro o en blanco, según cuál se lea mejor.";
@@ -459,13 +480,16 @@
 "Command failed: %@" = "El comando ha fallado: %@";
 
 /* connection quality */
-"Command Latency (TCP)" = "Latencia de las órdenes (TCP)";
+"Command Latency (TCP)" = "Latencia de los comandos (TCP)";
 
 /* create channel */
 "Commands" = "Comandos";
 
 /* channel list */
 "Confirm" = "Confirmar";
+
+/* preferences */
+"Confirm Before Disconnecting" = "Confirmar antes de desconectar";
 
 /* server list */
 "Connect" = "Conectar";
@@ -474,7 +498,7 @@
 "Connect on Startup" = "Conectar al abrir";
 
 /* incoming file */
-"Connect to a server and join a channel to send %@" = "Conéctate a un servidor y entra en un canal para enviar %@";
+"Connect to a server and join a channel to send %@" = "Para enviar %@, conéctate a un servidor y únete a un canal";
 
 /* connection quality */
 "Connect to a server to see the quality of the connection" = "Conéctate a un servidor para ver la calidad de la conexión";
@@ -486,7 +510,7 @@
 "Connect to Server" = "Conectar al servidor";
 
 /* preferences */
-"Connect to the last server and channel when the app opens" = "Conecta al último servidor y canal al abrir la app";
+"Connect to the last server and channel when the app opens" = "Conectar al último servidor y canal al abrir la app";
 
 /* preferences
    server entry */
@@ -500,7 +524,7 @@
 "Connection Quality" = "Calidad de la conexión";
 
 /* accessibility hint */
-"Connects to this server" = "Conecta con este servidor";
+"Connects to this server" = "Toca dos veces para conectar con este servidor";
 
 /* keyboard shortcuts */
 "Control" = "Control";
@@ -524,7 +548,7 @@
 "Copy Link" = "Copiar enlace";
 
 /* connection quality */
-"Counted over the voice received from the users of your channel since you joined it. Above 2 % voices start to break up." = "Se cuenta sobre la voz recibida de los usuarios de tu canal desde que entraste. Por encima del 2 % las voces empiezan a entrecortarse.";
+"Counted over the voice received from the users of your channel since you joined it. Above 2 % voices start to break up." = "Se calcula sobre la voz recibida de los usuarios de tu canal desde que te uniste. Por encima del 2 %, la voz empieza a entrecortarse.";
 
 /* server entry */
 "Country" = "País";
@@ -545,10 +569,13 @@
 "Create Web Login" = "Crear inicio de sesión web";
 
 /* media stream */
-"Current File" = "El archivo actual";
+"Current File" = "Archivo actual";
 
 /* connection quality */
 "Data" = "Datos";
+
+/* preferences */
+"Decrement" = "Reducir";
 
 /* Sound Input */
 "Default" = "Predeterminado";
@@ -557,7 +584,7 @@
 "Default Subscriptions" = "Suscripciones predeterminadas";
 
 /* user accounts */
-"Default user" = "Usuario normal";
+"Default user" = "Usuario estándar";
 
 /* file list
    serverlist */
@@ -581,12 +608,18 @@
 /* serverlist */
 "Delete server from list" = "Quitar servidor de la lista";
 
+/* preferences */
+"Descending" = "Descendente";
+
 /* channel list */
 "Deselect user" = "Deseleccionar usuario";
 
 /* preferences
    user detail */
 "Desktop" = "Escritorio";
+
+/* preferences */
+"Details Position" = "Posición de los detalles";
 
 /* diagnostics */
 "Diagnostic Log" = "Registro de diagnóstico";
@@ -600,8 +633,11 @@
 /* channel list */
 "Disconnect" = "Desconectar";
 
+/* confirmation */
+"Disconnect from the server?" = "¿Desconectar del servidor?";
+
 /* accessibility hint */
-"Disconnects from the server and goes back to the server list" = "Desconecta del servidor y vuelve a la lista de servidores";
+"Disconnects from the server and goes back to the server list" = "Toca dos veces para desconectar y volver a la lista de servidores";
 
 /* preferences */
 "Display" = "Mostrar";
@@ -625,7 +661,7 @@
 "Downloading, %d %%" = "Descargando, %d %%";
 
 /* file list */
-"Downloads the file" = "Descarga el archivo";
+"Downloads the file" = "Toca dos veces para descargar el archivo";
 
 /* codec detail */
 "DTX" = "DTX";
@@ -634,10 +670,13 @@
 "Duration" = "Duración";
 
 /* user accounts */
-"Each change is saved at once and applies the next time this user logs in." = "Cada cambio se guarda al momento y se aplica la próxima vez que este usuario inicie sesión.";
+"Each change is saved at once and applies the next time this user logs in." = "Cada cambio se guarda de inmediato y se aplica la próxima vez que el usuario inicie sesión.";
+
+/* text to speech events */
+"Each One Its Own" = "Según cada anuncio";
 
 /* channel list */
-"Earpiece or Headset" = "Auricular o cascos";
+"Earpiece or Headset" = "Auricular del teléfono o auriculares";
 
 /* channel list */
 "Edit" = "Editar";
@@ -645,11 +684,14 @@
 /* channel list */
 "Edit properties" = "Editar propiedades";
 
+/* text to speech events */
+"Enable All Announcements" = "Activar todos los anuncios";
+
 /* server entry */
 "Encrypted" = "Encriptado";
 
 /* accessibility hint */
-"Ends the selection of users" = "Termina la selección de usuarios";
+"Ends the selection of users" = "Toca dos veces para terminar la selección";
 
 /* media stream */
 "Enter a web address that starts with http or https" = "Escribe una dirección web que empiece por http o https";
@@ -661,7 +703,7 @@
 "Enter Password" = "Introducir contraseña";
 
 /* accessibility hint */
-"Enters the channel" = "Entra en el canal";
+"Enters the channel" = "Toca dos veces para abrir el canal";
 
 /* Dialog
    Dialog message
@@ -670,13 +712,13 @@
 "Error" = "Error";
 
 /* media stream */
-"Error while streaming media file" = "Error durante la emisión del archivo";
+"Error while streaming media file" = "Error durante la transmisión del archivo multimedia";
 
 /* user accounts */
 "Every Account" = "Todas las cuentas";
 
 /* user accounts */
-"Every account was already like that. Nothing has been changed." = "Todas las cuentas estaban ya así. No se ha cambiado nada.";
+"Every account was already like that. Nothing has been changed." = "Todas las cuentas tenían ya esa configuración. No se ha realizado ningún cambio.";
 
 /* transmit control */
 "Everyone" = "Todos";
@@ -721,10 +763,10 @@
 "Failed to play the file" = "No se pudo reproducir el archivo";
 
 /* connect to a server */
-"Failed to setup encryption" = "No se pudo configurar el cifrado";
+"Failed to setup encryption" = "No se pudo configurar la encriptación";
 
 /* media stream */
-"Failed to stream media file" = "No se pudo emitir el archivo";
+"Failed to stream media file" = "No se pudo transmitir el archivo multimedia";
 
 /* file list */
 "Failed to transfer %@" = "Error al transferir %@";
@@ -751,7 +793,7 @@
 "Files" = "Archivos";
 
 /* media stream */
-"Files stay in the list until you remove them. When one ends, the next one starts." = "Los archivos se quedan en la lista hasta que los quites. Cuando uno termina, empieza el siguiente.";
+"Files stay in the list until you remove them. When one ends, the next one starts." = "Los archivos permanecen en la lista hasta que se eliminan. Al terminar uno, comienza el siguiente.";
 
 /* preferences */
 "Filter Server List" = "Filtrar la lista de servidores";
@@ -785,13 +827,13 @@
 "Go to Their Channel" = "Ir a su canal";
 
 /* accessibility hint */
-"Goes to the channel this user is in" = "Va al canal en el que está este usuario";
+"Goes to the channel this user is in" = "Toca dos veces para ir al canal de este usuario";
 
 /* TTS EVENT */
 "has joined the channel" = "se ha unido al canal";
 
 /* TTS EVENT */
-"has left the channel" = "ha salido del  canal";
+"has left the channel" = "ha salido del canal";
 
 /* TTS EVENT */
 "has logged on" = "Ha entrado";
@@ -817,6 +859,9 @@
 /* channel list */
 "Inactive" = "Inactivo";
 
+/* preferences */
+"Increment" = "Aumentar";
+
 /* appearance */
 "Interface" = "Interfaz";
 
@@ -827,7 +872,7 @@
 "iOS Voice Processing" = "Procesamiento de voz de iOS";
 
 /* Sound Devices */
-"iOS voice processing cancels echo, reduces noise and levels the volume. WebRTC reduces noise and levels the volume but does not cancel echo, so use it with headphones." = "El procesamiento de voz de iOS cancela el eco, reduce el ruido y nivela el volumen. WebRTC reduce el ruido y nivela el volumen pero no cancela el eco, así que úsalo con auriculares.";
+"iOS voice processing cancels echo, reduces noise and levels the volume. WebRTC reduces noise and levels the volume but does not cancel echo, so use it with headphones." = "El procesamiento de voz de iOS cancela el eco, reduce el ruido y nivela el volumen. WebRTC reduce el ruido y nivela el volumen, pero no cancela el eco, por lo que se recomienda usarlo con auriculares.";
 
 /* ban list */
 "IP address: %@" = "Dirección IP: %@";
@@ -845,10 +890,10 @@
 "Join a channel to see its files" = "Únete a un canal para ver sus archivos";
 
 /* incoming file */
-"Join a channel to send %@" = "Entra en un canal para enviar %@";
+"Join a channel to send %@" = "Únete a un canal para enviar %@";
 
 /* media stream */
-"Join a channel to stream a media file" = "Únete a un canal para emitir un archivo";
+"Join a channel to stream a media file" = "Únete a un canal para transmitir un archivo multimedia";
 
 /* server entry */
 "Join Channel" = "Unirse";
@@ -869,7 +914,7 @@
 "Join root channel after login" = "Unirse al canal raíz después de conectarse";
 
 /* all users */
-"Join Their Channel" = "Ir a su canal";
+"Join Their Channel" = "Unirse a su canal";
 
 /* channel list */
 "Join this channel" = "Unirse a este canal";
@@ -878,7 +923,7 @@
 "Joined %@" = "Se ha unido a %@";
 
 /* accessibility hint */
-"Joins the channel that is shown" = "Se une al canal que se muestra";
+"Joins the channel that is shown" = "Toca dos veces para unirte a este canal";
 
 /* keyboard shortcuts */
 "Key" = "Tecla";
@@ -920,7 +965,7 @@
 "Latency and packet loss" = "Latencia y pérdida de paquetes";
 
 /* accessibility hint */
-"Lets you choose several users to move, kick or ban them" = "Permite elegir varios usuarios para moverlos, expulsarlos o banearlos";
+"Lets you choose several users to move, kick or ban them" = "Toca dos veces para seleccionar varios usuarios y moverlos, expulsarlos o banearlos";
 
 /* appearance */
 "Light or Dark" = "Claro u oscuro";
@@ -929,7 +974,7 @@
 "Limit length of names in channel list to %d characters" = "Limitar longitud máxima de nombres de usuario a %d caracteres";
 
 /* preferences */
-"Limit types of servers to show" = "Limita los tipos de servidores que se muestran";
+"Limit types of servers to show" = "Limitar los tipos de servidores que se muestran";
 
 /* serverlist */
 "Link copied" = "Enlace copiado";
@@ -956,7 +1001,7 @@
 "Logged on to server" = "Conectado al servidor";
 
 /* preferences */
-"Login ID from BearWare.dk" = "Identificador de acceso de BearWare.dk";
+"Login ID from BearWare.dk" = "ID de inicio de sesión de BearWare.dk";
 
 /* user accounts */
 "Make other users channel operator" = "Hacer operador de canal a otros usuarios";
@@ -999,8 +1044,14 @@
 /* text messages */
 "Message" = "Mensaje";
 
+/* preferences */
+"Message Details" = "Detalles de los mensajes";
+
 /* server entry */
 "Message of the Day" = "Mensaje del día";
+
+/* preferences */
+"Message Only" = "Solo el mensaje";
 
 /* appearance */
 "Message Text Size" = "Tamaño del texto de los mensajes";
@@ -1013,6 +1064,9 @@
 
 /* diagnostics */
 "Microphone" = "Micrófono";
+
+/* appearance */
+"Microphone Button" = "Botón del micrófono";
 
 /* preferences */
 "Microphone Gain" = "Ganancia del micrófono";
@@ -1070,14 +1124,20 @@
 "Muted" = "Silenciados";
 
 /* channel list */
-"Mutes or unmutes everything you hear from the server" = "Silencia o reactiva todo lo que oyes del servidor";
+"Mutes or unmutes everything you hear from the server" = "Toca dos veces para silenciar o reactivar el sonido del servidor";
 
 /* create channel
    server entry */
 "Name" = "Nombre";
 
 /* preferences */
+"Name and Time" = "Nombre y hora";
+
+/* preferences */
 "Name displayed in channel list" = "Nombre mostrado en la lista de canales";
+
+/* preferences */
+"Name Only" = "Solo el nombre";
 
 /* preferences */
 "Neutral" = "Neutro";
@@ -1089,7 +1149,7 @@
 "Next File" = "Archivo siguiente";
 
 /* preferences */
-"Nickname" = "nickname";
+"Nickname" = "Apodo";
 
 /* server entry */
 "Nickname (optional)" = "Apodo (opcional)";
@@ -1150,10 +1210,10 @@
 "None" = "Ninguna";
 
 /* diagnostics */
-"Not allowed. Nobody can hear you until you turn it on in Settings, under TeamTalk." = "No permitido. Nadie puede oírte hasta que lo actives en Ajustes, dentro de TeamTalk.";
+"Not allowed. Nobody can hear you until you turn it on in Settings, under TeamTalk." = "No permitido. Nadie puede oírte hasta que lo actives en Ajustes > TeamTalk.";
 
 /* diagnostics */
-"Not asked yet. iOS asks the first time you join a channel." = "Todavía no se ha pedido. iOS lo pregunta la primera vez que entras en un canal.";
+"Not asked yet. iOS asks the first time you join a channel." = "Aún no se ha solicitado. iOS lo solicita la primera vez que te unes a un canal.";
 
 /* diagnostics */
 "Not available with this installation. The widget cannot show your servers and the controls do not show their state." = "No disponible con esta instalación. El widget no puede mostrar tus servidores y los controles no muestran su estado.";
@@ -1162,13 +1222,16 @@
 "Not in a channel" = "Sin canal";
 
 /* diagnostics */
-"Not installed. The app was installed without its extension, so there are no Live Activities, widget or controls. Install it again with a tool that keeps the extensions." = "No instaladas. La app se instaló sin su extensión, así que no hay actividades en directo, widget ni controles. Vuelve a instalarla con una herramienta que conserve las extensiones.";
+"Not installed. The app was installed without its extension, so there are no Live Activities, widget or controls. Install it again with a tool that keeps the extensions." = "No instaladas. La app se instaló sin su extensión, por lo que no hay actividades en directo, widget ni controles. Instálala de nuevo con una herramienta que conserve las extensiones.";
 
 /* media stream */
-"Not streaming" = "Sin emitir";
+"Not streaming" = "Sin transmisión de archivos";
 
 /* live activity */
 "Not transmitting" = "Sin transmitir";
+
+/* preferences */
+"Number of Users" = "Número de usuarios";
 
 /* media stream */
 "Off" = "Desactivada";
@@ -1189,7 +1252,7 @@
 "On" = "Activados";
 
 /* channel detail */
-"Only the users you allow can transmit" = "Solo pueden transmitir los usuarios que tú permitas";
+"Only the users you allow can transmit" = "Solo pueden transmitir los usuarios autorizados";
 
 /* text message */
 "Open Link" = "Abrir enlace";
@@ -1198,16 +1261,16 @@
 "Open Settings" = "Abrir Ajustes";
 
 /* accessibility hint */
-"Opens a menu with more options" = "Abre un menú con más opciones";
+"Opens a menu with more options" = "Toca dos veces para ver más opciones";
 
 /* file list */
-"Opens the file" = "Abre el archivo";
+"Opens the file" = "Toca dos veces para abrir el archivo";
 
 /* accessibility hint */
-"Opens the private messages with this user" = "Abre los mensajes privados con este usuario";
+"Opens the private messages with this user" = "Toca dos veces para abrir los mensajes privados con este usuario";
 
 /* accessibility hint */
-"Opens the screen to stream audio or video to the channel" = "Abre la pantalla para emitir audio o vídeo al canal";
+"Opens the screen to stream audio or video to the channel" = "Toca dos veces para transmitir audio o vídeo al canal";
 
 /* keyboard shortcuts */
 "Option" = "Opción";
@@ -1216,7 +1279,7 @@
 "OPUS Codec" = "Códec OPUS";
 
 /* preferences */
-"Order of channels in Channel List" = "Órden de los canales";
+"Order of channels in Channel List" = "Criterio para ordenar la lista de canales";
 
 /* user accounts */
 "Other" = "Otros";
@@ -1239,7 +1302,7 @@
 "Pause" = "Pausar";
 
 /* keyboard shortcuts */
-"Pause or Resume Streaming" = "Pausar o reanudar la emisión";
+"Pause or Resume Streaming" = "Pausar o reanudar la transmisión del archivo";
 
 /* media stream */
 "Paused" = "En pausa";
@@ -1251,10 +1314,10 @@
 "Photos and Videos" = "Fotos y vídeos";
 
 /* sound events */
-"Play sound when a file is removed from the channel" = "Reproducir un sonido cuando se retira un archivo del canal";
+"Play sound when a file is removed from the channel" = "Reproducir sonido cuando se retire un archivo del canal";
 
 /* sound events */
-"Play sound when a file is uploaded to the channel" = "Reproducir un sonido cuando se sube un archivo al canal";
+"Play sound when a file is uploaded to the channel" = "Reproducir sonido cuando se suba un archivo al canal";
 
 /* preferences */
 "Play sound when a user joins the channel" = "Reproducir sonido cuando un usuario se una al canal";
@@ -1278,16 +1341,16 @@
 "Play sound when transmit ready in \"No Interruptions\" channel" = "Reproducir sonido al transmitir en canal sin interrupciones";
 
 /* preferences */
-"Play sound when user logs off to the server" = "Reproducir sonido cuando un usuario sale del servidor";
+"Play sound when user logs off to the server" = "Reproducir sonido cuando un usuario salga del servidor";
 
 /* preferences */
-"Play sound when user logs on to the server" = "Reproducir sonido cuando un usuario entra al servidor";
+"Play sound when user logs on to the server" = "Reproducir sonido cuando un usuario entre al servidor";
 
 /* preferences */
 "Play sound when voice activation is triggered" = "Reproducir sonido al conmutar la activación por voz";
 
 /* preferences */
-"Play sound when voice transmission is toggled" = "Reproducir sonido cuando se activa la transmisión de voz";
+"Play sound when voice transmission is toggled" = "Reproducir sonido cuando se active o desactive la transmisión de voz";
 
 /* media stream */
 "Playlist" = "Lista de reproducción";
@@ -1464,7 +1527,7 @@
 "See the users of every channel" = "Ver a los usuarios de todos los canales";
 
 /* preferences */
-"Select the text-to-speech voice to use" = "Selecciona la voz de síntesis que se usará";
+"Select the text-to-speech voice to use" = "Seleccionar la voz de la síntesis de voz";
 
 /* channel list */
 "Select users" = "Seleccionar usuarios";
@@ -1473,7 +1536,7 @@
 "Selected" = "Seleccionada";
 
 /* accessibility hint */
-"Selects or deselects this user" = "Selecciona o deselecciona a este usuario";
+"Selects or deselects this user" = "Toca dos veces para seleccionar o deseleccionar a este usuario";
 
 /* text messages */
 "Send" = "Enviar";
@@ -1503,7 +1566,7 @@
 "Send Video" = "Enviar vídeo";
 
 /* accessibility hint */
-"Sends the message" = "Envía el mensaje";
+"Sends the message" = "Toca dos veces para enviar el mensaje";
 
 /* connection quality */
 "Sent" = "Enviados";
@@ -1557,7 +1620,7 @@
 "Share the desktop" = "Compartir el escritorio";
 
 /* file list */
-"Shares or opens the file" = "Comparte o abre el archivo";
+"Shares or opens the file" = "Toca dos veces para compartir o abrir el archivo";
 
 /* keyboard shortcuts */
 "Shift" = "Mayúsculas";
@@ -1590,10 +1653,10 @@
 "Show Usernames" = "Mostrar nombres de usuario";
 
 /* preferences */
-"Show usernames instead of nicknames" = "Mostrar nombres de usuario en lugar de nicknames";
+"Show usernames instead of nicknames" = "Mostrar nombres de usuario en lugar de apodos";
 
 /* preferences */
-"Shown to the other users of the server" = "Lo ven los demás usuarios del servidor";
+"Shown to the other users of the server" = "Visible para los demás usuarios del servidor";
 
 /* channel list */
 "Silent" = "Silencio";
@@ -1605,7 +1668,10 @@
 "Small" = "Pequeño";
 
 /* preferences */
-"Sort Channels" = "Órden de los canales";
+"Sort Channels" = "Ordenar canales por";
+
+/* preferences */
+"Sort Direction" = "Sentido del orden";
 
 /* media stream */
 "Sound" = "Sonido";
@@ -1648,25 +1714,25 @@
 "Speex Codec" = "Códec Speex";
 
 /* codec detail */
-"Speex Variable Bitrate Codec" = "Codec Speex, calidad variable";
+"Speex Variable Bitrate Codec" = "Códec Speex, calidad variable";
 
 /* text to speech events */
-"Spoken By" = "Quién lo dice";
+"Spoken By" = "Leído por";
 
 /* text to speech events, accessibility */
-"Spoken by, %@" = "Quién lo dice, %@";
+"Spoken by, %@" = "Leído por: %@";
 
 /* appearance */
 "Standard" = "Estándar";
 
 /* media stream */
-"Start Streaming" = "Empezar a emitir";
+"Start Streaming" = "Iniciar transmisión";
 
 /* preferences */
 "Status" = "Estado";
 
 /* Text message view */
-"Status Event" = "Evento de estado";
+"Status Event" = "Evento del servidor";
 
 /* user accounts */
 "Status locked, cannot be changed" = "Estado bloqueado, no puede cambiarlo";
@@ -1682,37 +1748,40 @@
 "Stop Microphone Test" = "Detener la prueba de micrófono";
 
 /* media stream */
-"Stop Preview" = "Detener la preescucha";
+"Stop Preview" = "Detener la vista previa";
 
 /* media stream */
-"Stop Streaming" = "Detener la emisión";
+"Stop Streaming" = "Detener la transmisión del archivo";
 
 /* user accounts */
-"Stream audio files" = "Emitir archivos de audio";
+"Stream audio files" = "Transmitir archivos de audio";
 
 /* media stream */
-"Stream Media File" = "Emitir archivo multimedia";
+"Stream Media File" = "Transmitir archivo multimedia";
 
 /* media stream */
-"Stream media file" = "Emitir archivo multimedia";
+"Stream media file" = "Transmitir archivo multimedia";
 
 /* user accounts */
-"Stream video files" = "Emitir archivos de vídeo";
+"Stream video files" = "Transmitir archivos de vídeo";
 
 /* media stream */
-"Streaming" = "Emitiendo";
+"Streaming" = "Transmitiendo";
 
 /* media stream */
-"Streaming %@" = "Emitiendo %@";
+"Streaming %@" = "Transmitiendo %@";
 
 /* media stream */
-"Streaming finished" = "Emisión terminada";
+"Streaming finished" = "Transmisión finalizada";
 
 /* media stream */
-"Streaming started" = "Emisión iniciada";
+"Streaming started" = "Transmisión iniciada";
 
 /* user detail */
-"Subscriptions" = "Subscripciones";
+"Subscriptions" = "Suscripciones";
+
+/* appearance */
+"Swap Microphone Button Colors" = "Intercambiar los colores del botón del micrófono";
 
 /* appearance */
 "Swap Speakers Button Colors" = "Intercambiar los colores del botón de altavoces";
@@ -1721,7 +1790,7 @@
 "Swap Talk Button Colors" = "Intercambiar los colores del botón de hablar";
 
 /* appearance */
-"System Size" = "El del sistema";
+"System Size" = "Tamaño del sistema";
 
 /* channel list */
 "Talk" = "Hablar";
@@ -1736,13 +1805,13 @@
 "TCP Port" = "Puerto TCP";
 
 /* channel list */
-"TeamTalk has no access to the microphone. Turn it on in Settings, under TeamTalk, and try again." = "TeamTalk no tiene acceso al micrófono. Actívalo en Ajustes, dentro de TeamTalk, y vuelve a intentarlo.";
+"TeamTalk has no access to the microphone. Turn it on in Settings, under TeamTalk, and try again." = "TeamTalk no tiene acceso al micrófono. Actívalo en Ajustes > TeamTalk y vuelve a intentarlo.";
 
 /* server list */
 "TeamTalk Servers" = "Servidores de TeamTalk";
 
 /* text to speech events */
-"TeamTalk Voice" = "La voz de TeamTalk";
+"TeamTalk Voice" = "Síntesis de voz de TeamTalk";
 
 /* Sound Devices */
 "Test Microphone" = "Probar el micrófono";
@@ -1769,7 +1838,7 @@
 "Text To Speech Events" = "Eventos de texto a voz";
 
 /* speech */
-"Text-to-Speech Voice" = "Voz de síntesis";
+"Text-to-Speech Voice" = "Síntesis de voz";
 
 /* user accounts */
 "The account could not be saved" = "No se ha podido guardar la cuenta";
@@ -1781,7 +1850,7 @@
 "The log is empty" = "El registro está vacío";
 
 /* diagnostics */
-"The log records what the app does: connection, sound devices, transfers and errors. It holds no passwords and nothing of what is said or written." = "El registro anota lo que hace la app: conexión, dispositivos de sonido, transferencias y errores. No guarda contraseñas ni nada de lo que se dice o se escribe.";
+"The log records what the app does: connection, sound devices, transfers and errors. It holds no passwords and nothing of what is said or written." = "El registro recoge la actividad de la app: conexión, dispositivos de sonido, transferencias y errores. No contiene contraseñas ni el contenido de las conversaciones o los mensajes.";
 
 /* appearance */
 "The messages can have a text size of their own, and the server events a font of their own." = "Los mensajes pueden tener su propio tamaño de texto, y los eventos del servidor su propia fuente.";
@@ -1793,19 +1862,22 @@
 "The text of a message is shown in black or white, whichever is easier to read on its color." = "El texto de cada mensaje se muestra en negro o en blanco, según cuál se lea mejor sobre su color.";
 
 /* appearance */
-"The text of a message is shown in black or white, whichever is easier to read on its color. Server events are what happens on the server, like someone joining or leaving the channel." = "El texto de un mensaje sale en negro o en blanco, lo que mejor se lea sobre su color. Los eventos del servidor son lo que pasa en el servidor, como que alguien entre o salga del canal.";
+"The text of a message is shown in black or white, whichever is easier to read on its color. Server events are what happens on the server, like someone joining or leaving the channel." = "El texto de cada mensaje se muestra en negro o en blanco, según cuál se lea mejor sobre su color. Los eventos del servidor informan de lo que ocurre en él, por ejemplo, cuando un usuario se une a un canal o sale de él.";
 
 /* preferences */
-"The volume of the speaking voice is %.1f" = "El volumen de la voz es  %.1f";
+"The volume of the speaking voice is %.1f" = "El volumen de la voz es %.1f";
 
 /* appearance */
 "Themes" = "Temas";
+
+/* text to speech events */
+"These two settings change every announcement at once. Each one can still be set on its own below." = "Estos dos ajustes modifican todos los anuncios a la vez. Cada anuncio se puede seguir configurando por separado más abajo.";
 
 /* diagnostics */
 "They need iOS 17 or later" = "Necesitan iOS 17 o posterior";
 
 /* media stream */
-"This file cannot be streamed" = "Este archivo no se puede emitir";
+"This file cannot be streamed" = "Este archivo no se puede transmitir";
 
 /* backup */
 "This file is not a TeamTalk backup" = "Este archivo no es una copia de seguridad de TeamTalk";
@@ -1817,16 +1889,19 @@
 "This is a classroom channel: only what is turned on here can be transmitted." = "Este es un canal de tipo aula: solo se puede transmitir lo que esté activado aquí.";
 
 /* media stream */
-"This web address cannot be streamed" = "Esta dirección web no se puede emitir";
+"This web address cannot be streamed" = "Esta dirección web no se puede transmitir";
 
 /* connection quality */
-"Time a packet takes to reach the server and come back. Below 100 ms a conversation feels immediate." = "Tiempo que tarda un paquete en llegar al servidor y volver. Por debajo de 100 ms la conversación se siente inmediata.";
+"Time a packet takes to reach the server and come back. Below 100 ms a conversation feels immediate." = "Tiempo que tarda un paquete en llegar al servidor y volver. Por debajo de 100 ms, la conversación resulta fluida.";
+
+/* preferences */
+"Time Only" = "Solo la hora";
 
 /* channel list */
-"Toggle to enable/disable transmission" = "Pulsa para activar o desactivar transmisión";
+"Toggle to enable/disable transmission" = "Toca dos veces para activar o desactivar la transmisión";
 
 /* keyboard shortcuts */
-"Toggle Transmission" = "Activar o desactivar la transmisión";
+"Toggle Transmission" = "Activar o desactivar la transmisión de voz";
 
 /* preferences */
 "Toggle voice transmission using headset" = "Conmutar transmisión de voz usando los auriculares";
@@ -1858,8 +1933,14 @@
 /* preferences */
 "Turn off screen when holding phone near ear" = "Apagar la pantalla al sostener el teléfono cerca del oído";
 
+/* state of the microphone button */
+"Turned off" = "Desactivado";
+
 /* diagnostics */
-"Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Desactivadas. Activa las actividades en directo en Ajustes, dentro de TeamTalk.";
+"Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Desactivadas. Activa las actividades en directo en Ajustes > TeamTalk.";
+
+/* state of the microphone button */
+"Turned on" = "Activado";
 
 /* serverlist */
 "Type Join Code" = "Escribe el código para unirse";
@@ -1893,7 +1974,7 @@
 "Uploading, %d %%" = "Subiendo, %d %%";
 
 /* accessibility hint */
-"Uploads files or photos to the channel" = "Sube archivos o fotos al canal";
+"Uploads files or photos to the channel" = "Toca dos veces para subir archivos o fotos al canal";
 
 /* preferences */
 "Use echo cancellation and automatic gain control" = "Usar cancelación de ruido y ganancia automática del micrófono";
@@ -1947,13 +2028,13 @@
 "User logged in" = "El usuario ha entrado";
 
 /* preferences */
-"User Logged In" = "Usuario entra al servidor";
+"User Logged In" = "El usuario entra al servidor";
 
 /* preferences */
 "User logged out" = "El usuario ha salido";
 
 /* preferences */
-"User Logged Out" = "Usuario sale del servidor";
+"User Logged Out" = "El usuario sale del servidor";
 
 /* preferences
    user detail */
@@ -1976,7 +2057,7 @@
 "Users Online" = "Usuarios conectados";
 
 /* serverlist */
-"Users: %d, Country: %@" = "Users: %1$d, Country: %2$@";
+"Users: %d, Country: %@" = "Usuarios: %1$d, país: %2$@";
 
 /* codec detail */
 "Variable Bitrate" = "Velocidad de bits variable";
@@ -2028,7 +2109,7 @@
 "VoiceOver" = "VoiceOver";
 
 /* text to speech events */
-"VoiceOver speaks an announcement with its own voice and shows it in braille. With VoiceOver off, the voice of TeamTalk speaks them all." = "VoiceOver dice el aviso con su propia voz y lo muestra en la línea braille. Con VoiceOver apagado, todos los dice la voz de TeamTalk.";
+"VoiceOver speaks an announcement with its own voice and shows it in braille. With VoiceOver off, the voice of TeamTalk speaks them all." = "VoiceOver lee el anuncio con su propia voz y lo muestra en braille. Con VoiceOver desactivado, todos los anuncios se leen con la síntesis de voz de TeamTalk.";
 
 /* codec detail */
 "VoIP" = "Voz";
@@ -2058,11 +2139,17 @@
 /* Sound Devices */
 "WebRTC" = "WebRTC";
 
-/* diagnostics */
-"What the app has been doing, to share when something fails" = "Lo que ha ido haciendo la app, para compartirlo cuando algo falla";
+/* preferences */
+"What each text message shows besides its text" = "Información que acompaña a cada mensaje de texto";
 
 /* diagnostics */
-"What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Lo que la app necesita del iPhone. Si algo de aquí no está bien, es lo primero que hay que arreglar.";
+"What the app has been doing, to share when something fails" = "Actividad de la app, para compartirla si se produce un fallo";
+
+/* diagnostics */
+"What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Requisitos de la app en el iPhone. Si alguno no se cumple, es lo primero que conviene corregir.";
+
+/* preferences */
+"Where the name and the time are shown and read" = "Lugar donde se muestran y se leen el nombre y la hora";
 
 /* transmit control */
 "Who Can Transmit" = "Quién puede transmitir";
@@ -2080,7 +2167,7 @@
 "Yes" = "Sí";
 
 /* media stream */
-"You are not allowed to stream media files on this server" = "No tienes permiso para emitir archivos en este servidor";
+"You are not allowed to stream media files on this server" = "No tienes permiso para transmitir archivos multimedia en este servidor";
 
 /* Dialog */
 "You have been kicked from channel" = "Te han expulsado del canal";
@@ -2098,7 +2185,7 @@
 "You have selected %@" = "Has seleccionado %@";
 
 /* Sound Devices */
-"You will hear your own microphone. Use headphones, or the speaker will be picked up again. Only available while you are not in a channel." = "Oirás tu propio micrófono. Usa cascos, o el altavoz volverá a entrar por el micro. Solo está disponible mientras no estás en un canal.";
+"You will hear your own microphone. Use headphones, or the speaker will be picked up again. Only available while you are not in a channel." = "Oirás tu propio micrófono. Usa auriculares para evitar que el micrófono capte el sonido del altavoz. Solo está disponible cuando no estás en un canal.";
 
 /* channel picker */
 "Your channel" = "Tu canal";

@@ -169,6 +169,13 @@ public final class TeamTalkClient {
         TT_DoLoginEx(instance, nickname, username, password, clientName)
     }
 
+    /// Asks the server for a reply on TCP: whether it comes tells if the
+    /// connection is still there.
+    @discardableResult
+    public func ping() -> Int32 {
+        TT_DoPing(instance)
+    }
+
     public func channelID(fromPath path: String) -> Int32 {
         TT_GetChannelIDFromPath(instance, path)
     }

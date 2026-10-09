@@ -29,22 +29,35 @@ struct TextMessageView: View {
     @FocusState private var isComposing: Bool
     @State private var showingBroadcast = false
     @State private var broadcastText = ""
+    @AppStorage(PREF_DISPLAY_MSGDETAILS) private var messageDetails = MessageDetails.nameAndTime.rawValue
+    @AppStorage(PREF_DISPLAY_MSGDETAILSAFTER) private var detailsAfter = false
+
+    private var details: MessageDetails {
+        MessageDetails(rawValue: messageDetails) ?? .nameAndTime
+    }
 
     var body: some View {
         VStack(spacing: 0) {
             ScrollViewReader { proxy in
                 List {
                     ForEach(model.sections) { section in
-                        Section(section.title) {
+                        Section {
                             ForEach(section.messages.indices, id: \.self) { index in
                                 let message = section.messages[index]
                                 let background = appearance.backgroundColor(for: message.msgtype)
                                 MessageRow(message: message, background: background,
                                            design: message.msgtype == .LOGMSG
                                                ? appearance.eventFontDesign
-                                               : appearance.fontDesign.design)
+                                               : appearance.fontDesign.design,
+                                           details: details, detailsAfter: detailsAfter)
                                     .listRowInsets(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
                                     .listRowBackground(background)
+                            }
+                        } header: {
+                            // the name heads the group only when the messages
+                            // do not carry it: it was said twice
+                            if !details.showsName {
+                                Text(section.title)
                             }
                         }
                     }
@@ -69,7 +82,6 @@ struct TextMessageView: View {
                         .frame(minHeight: 40, maxHeight: 96)
                         .textInputAutocapitalization(.sentences)
                         .accessibilityLabel("Message")
-                        .accessibilityHint("Write your message here")
                         .onChange(of: model.composedText) { text in
                             sendOnReturnIfNeeded(text)
                         }
@@ -91,7 +103,6 @@ struct TextMessageView: View {
                     }
                 }
                 .buttonStyle(.borderedProminent)
-                .accessibilityHint("Sends the message")
             }
             .padding(.horizontal, 8)
             .padding(.vertical, 6)
@@ -148,17 +159,30 @@ private struct MessageRow: View {
     let background: Color
     // the server events can have a font of their own
     let design: Font.Design?
+    // who and when: how much of it, and on which side of the text
+    let details: MessageDetails
+    let detailsAfter: Bool
 
     @Environment(\.openURL) private var openURL
+
+    private static let timeFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .none
+        formatter.timeStyle = .short
+        return formatter
+    }()
 
     var body: some View {
         // not the theme's text color: the background stays the same in dark mode
         let textColor = AppearanceModel.textColor(on: background)
+        let detailsText = self.detailsText
 
+        // VoiceOver reads the row in this order, and nothing else: the hint
+        // that repeated the name and the time is gone
         VStack(alignment: .leading, spacing: 6) {
-            Text(headerText)
-                .font(.footnote.weight(.semibold))
-                .foregroundStyle(textColor.opacity(0.75))
+            if !detailsText.isEmpty && !detailsAfter {
+                detailsLine(detailsText, color: textColor)
+            }
             Text(linkedMessage)
                 .font(.body)
                 .foregroundStyle(textColor)
@@ -166,13 +190,15 @@ private struct MessageRow: View {
                 .tint(textColor)
                 .textSelection(.enabled)
                 .fixedSize(horizontal: false, vertical: true)
+            if !detailsText.isEmpty && detailsAfter {
+                detailsLine(detailsText, color: textColor)
+            }
         }
         .modifier(FontDesignModifier(design: design))
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.vertical, 6)
         .background(background)
         .accessibilityElement(children: .combine)
-        .accessibilityHint(accessibilityHint)
         .contextMenu {
             Button(action: copyMessage) {
                 Label("Copy", systemImage: "doc.on.doc")
@@ -223,36 +249,32 @@ private struct MessageRow: View {
         return attributed
     }
 
-    private var headerText: String {
-        switch message.msgtype {
-        case .PRIV_IM, .PRIV_IM_MYSELF, .CHAN_IM, .CHAN_IM_MYSELF, .BCAST:
-            return "\(limitText(message.nickname)), \(timeText)"
-        case .LOGMSG:
-            return timeText
-        }
+    private func detailsLine(_ text: String, color: Color) -> some View {
+        Text(text)
+            .font(.footnote.weight(.semibold))
+            .foregroundStyle(color.opacity(0.75))
     }
 
-    private var accessibilityHint: String {
-        "\(headerText). \(messageTypeText)"
-    }
-
-    private var messageTypeText: String {
+    /// Who and when, as much of it as the user wants. A broadcast always
+    /// says that it is one: nothing else tells it from a channel message.
+    private var detailsText: String {
+        var parts = [String]()
         switch message.msgtype {
-        case .PRIV_IM, .PRIV_IM_MYSELF:
-            return String(localized: "Private message", comment: "text message type")
-        case .CHAN_IM, .CHAN_IM_MYSELF:
-            return String(localized: "Channel message", comment: "text message type")
         case .BCAST:
-            return String(localized: "Broadcast message", comment: "text message type")
+            parts.append(String(localized: "Broadcast Message", comment: "text message type"))
+            if details.showsName {
+                parts.append(limitText(message.nickname))
+            }
+        case .PRIV_IM, .PRIV_IM_MYSELF, .CHAN_IM, .CHAN_IM_MYSELF:
+            if details.showsName {
+                parts.append(limitText(message.nickname))
+            }
         case .LOGMSG:
-            return String(localized: "Log message", comment: "text message type")
+            break
         }
-    }
-
-    private var timeText: String {
-        let formatter = DateFormatter()
-        formatter.locale = Locale.current
-        formatter.dateFormat = "HH:mm:ss"
-        return formatter.string(from: message.date)
+        if details.showsTime {
+            parts.append(MessageRow.timeFormatter.string(from: message.date))
+        }
+        return parts.joined(separator: ", ")
     }
 }

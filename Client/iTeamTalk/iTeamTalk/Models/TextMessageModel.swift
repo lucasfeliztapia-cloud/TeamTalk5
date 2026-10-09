@@ -164,7 +164,7 @@ final class TextMessageModel: ObservableObject {
         case .PRIV_IM, .PRIV_IM_MYSELF, .CHAN_IM, .CHAN_IM_MYSELF, .BCAST:
             return message.nickname
         case .LOGMSG:
-            return String(localized: "Status Event", comment: "Text message view")
+            return String(localized: "Server event", comment: "Text message view")
         }
     }
 }

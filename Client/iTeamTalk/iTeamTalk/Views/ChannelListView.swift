@@ -164,8 +164,8 @@ private extension ChannelListContainerView {
             .accessibilityLabel("Microphone")
             .accessibilityHint(model.pttHint)
             .accessibilityValue(model.isTransmitting
-                ? Text("Active")
-                : Text("Inactive"))
+                ? Text("Turned on")
+                : Text("Turned off"))
             .accessibilityAddTraits(.isButton)
             .accessibilityAction(.magicTap) {
                 model.txBtnAccessibilityAction()
@@ -236,7 +236,6 @@ struct ChannelListView: View {
                     Text("Join this channel")
                         .frame(maxWidth: .infinity, alignment: .center)
                 }
-                .accessibilityHint("Joins the channel that is shown")
 
             case .header(let title):
                 Text(title)

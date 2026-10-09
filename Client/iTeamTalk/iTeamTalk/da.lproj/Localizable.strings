@@ -179,8 +179,14 @@
 /* user accounts */
 "Administrator" = "Administrator";
 
+/* preferences */
+"After the Message" = "Efter beskeden";
+
 /* channel list */
 "All" = "Alle";
+
+/* text to speech events */
+"All Announcements" = "Alle annonceringer";
 
 /* all users */
 "All Users" = "Alle brugere";
@@ -238,6 +244,12 @@
 
 /* preferences */
 "Ascending" = "Stigende";
+
+/* preferences */
+"Ascending goes from A to Z and from fewer users to more" = "Stigende går fra A til Å og fra færre til flere brugere";
+
+/* preferences */
+"Ask before leaving the server" = "Spørg, før serveren forlades";
 
 /* codec detail */
 "Audio Channels" = "Lydkanaler";
@@ -304,6 +316,9 @@
 
 /* weblogin event */
 "BearWare.dk Web Login failed to authenticate. Check BearWare.dk Web Login in Preferences" = "BearWare.dk Web Login kunne ikke godkendes. Tjek BearWare.dk Web Login i Indstillinger";
+
+/* preferences */
+"Before the Message" = "Før beskeden";
 
 /* codec detail */
 "Bitrate" = "Overførselshastighed";
@@ -431,6 +446,9 @@
 /* diagnostics */
 "Clear Log" = "Ryd log";
 
+/* server list */
+"Clear text" = "Ryd tekst";
+
 /* media stream */
 "Close" = "Luk";
 
@@ -439,6 +457,9 @@
 
 /* appearance */
 "Color of buttons, switches and the selected tab." = "Farve på knapper, kontakter og den valgte fane.";
+
+/* appearance */
+"Color of the Microphone button in each state. Its text is shown in black or white, whichever is easier to read." = "Farve på mikrofonknappen i hver tilstand. Teksten vises i sort eller hvid, alt efter hvad der er lettest at læse.";
 
 /* appearance */
 "Color of the Speakers button in each state. Its icon is shown in black or white, whichever is easier to read." = "Farve på højttalerknappen i hver tilstand. Symbolet vises i sort eller hvid, alt efter hvad der er lettest at læse.";
@@ -466,6 +487,9 @@
 
 /* channel list */
 "Confirm" = "Bekræft";
+
+/* preferences */
+"Confirm Before Disconnecting" = "Bekræft før afbrydelse";
 
 /* server list */
 "Connect" = "Forbind";
@@ -550,6 +574,9 @@
 /* connection quality */
 "Data" = "Data";
 
+/* preferences */
+"Decrement" = "Formindsk";
+
 /* Sound Input */
 "Default" = "Standard";
 
@@ -580,12 +607,18 @@
 /* serverlist */
 "Delete server from list" = "Slet server fra liste";
 
+/* preferences */
+"Descending" = "Faldende";
+
 /* channel list */
 "Deselect user" = "Fravælg bruger";
 
 /* preferences
    user detail */
 "Desktop" = "Skrivebord";
+
+/* preferences */
+"Details Position" = "Detaljernes placering";
 
 /* diagnostics */
 "Diagnostic Log" = "Diagnoselog";
@@ -598,6 +631,9 @@
 
 /* channel list */
 "Disconnect" = "Afbryd";
+
+/* confirmation */
+"Disconnect from the server?" = "Afbryd forbindelsen til serveren?";
 
 /* accessibility hint */
 "Disconnects from the server and goes back to the server list" = "Afbryder forbindelsen til serveren og går tilbage til serverlisten";
@@ -635,6 +671,9 @@
 /* user accounts */
 "Each change is saved at once and applies the next time this user logs in." = "Hver ændring gemmes med det samme og gælder, næste gang denne bruger logger ind.";
 
+/* text to speech events */
+"Each One Its Own" = "Forskelligt for hver";
+
 /* channel list */
 "Earpiece or Headset" = "Ørestykke eller headset";
 
@@ -643,6 +682,9 @@
 
 /* channel list */
 "Edit properties" = "Rediger indstillinger";
+
+/* text to speech events */
+"Enable All Announcements" = "Slå alle annonceringer til";
 
 /* server entry */
 "Encrypted" = "Krypteret";
@@ -815,6 +857,9 @@
 
 /* channel list */
 "Inactive" = "Inaktiv";
+
+/* preferences */
+"Increment" = "Forøg";
 
 /* appearance */
 "Interface" = "Brugerflade";
@@ -998,8 +1043,14 @@
 /* text messages */
 "Message" = "Besked";
 
+/* preferences */
+"Message Details" = "Beskeddetaljer";
+
 /* server entry */
 "Message of the Day" = "Dagens Besked";
+
+/* preferences */
+"Message Only" = "Kun besked";
 
 /* appearance */
 "Message Text Size" = "Tekststørrelse for beskeder";
@@ -1012,6 +1063,9 @@
 
 /* diagnostics */
 "Microphone" = "Mikrofon";
+
+/* appearance */
+"Microphone Button" = "Mikrofonknap";
 
 /* preferences */
 "Microphone Gain" = "Mikrofonforstærkning";
@@ -1076,7 +1130,13 @@
 "Name" = "Navn";
 
 /* preferences */
+"Name and Time" = "Navn og tid";
+
+/* preferences */
 "Name displayed in channel list" = "Navn vist i kanalliste";
+
+/* preferences */
+"Name Only" = "Kun navn";
 
 /* preferences */
 "Neutral" = "Neutral";
@@ -1168,6 +1228,9 @@
 
 /* live activity */
 "Not transmitting" = "Sender ikke";
+
+/* preferences */
+"Number of Users" = "Antal brugere";
 
 /* media stream */
 "Off" = "Fra";
@@ -1606,6 +1669,9 @@
 /* preferences */
 "Sort Channels" = "Sortér kanaler";
 
+/* preferences */
+"Sort Direction" = "Sorteringsretning";
+
 /* media stream */
 "Sound" = "Lyd";
 
@@ -1714,6 +1780,9 @@
 "Subscriptions" = "Abonnementer";
 
 /* appearance */
+"Swap Microphone Button Colors" = "Byt om på mikrofonknappens farver";
+
+/* appearance */
 "Swap Speakers Button Colors" = "Byt om på højttalerknappens farver";
 
 /* appearance */
@@ -1800,6 +1869,9 @@
 /* appearance */
 "Themes" = "Temaer";
 
+/* text to speech events */
+"These two settings change every announcement at once. Each one can still be set on its own below." = "Disse to indstillinger ændrer alle annonceringer på én gang. Hver annoncering kan stadig indstilles for sig nedenfor.";
+
 /* diagnostics */
 "They need iOS 17 or later" = "De kræver iOS 17 eller nyere";
 
@@ -1820,6 +1892,9 @@
 
 /* connection quality */
 "Time a packet takes to reach the server and come back. Below 100 ms a conversation feels immediate." = "Den tid, en pakke tager om at nå serveren og komme tilbage. Under 100 ms føles en samtale øjeblikkelig.";
+
+/* preferences */
+"Time Only" = "Kun tid";
 
 /* channel list */
 "Toggle to enable/disable transmission" = "Aktiver for at tænde/slukke transmissionen";
@@ -1857,8 +1932,14 @@
 /* preferences */
 "Turn off screen when holding phone near ear" = "Sluk for skærm når telefonen holdes tæt ved øret";
 
+/* state of the microphone button */
+"Turned off" = "Slået fra";
+
 /* diagnostics */
 "Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Slået fra. Slå liveaktiviteter til i Indstillinger under TeamTalk.";
+
+/* state of the microphone button */
+"Turned on" = "Slået til";
 
 /* serverlist */
 "Type Join Code" = "Skriv adgangskode til server";
@@ -2057,11 +2138,17 @@
 /* Sound Devices */
 "WebRTC" = "WebRTC";
 
+/* preferences */
+"What each text message shows besides its text" = "Hvad hver tekstbesked viser ud over sin tekst";
+
 /* diagnostics */
 "What the app has been doing, to share when something fails" = "Hvad appen har lavet, til at dele, når noget går galt";
 
 /* diagnostics */
 "What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Det, appen har brug for fra iPhonen. Hvis noget her ikke er i orden, er det det første, der skal rettes.";
+
+/* preferences */
+"Where the name and the time are shown and read" = "Hvor navnet og tiden vises og læses op";
 
 /* transmit control */
 "Who Can Transmit" = "Hvem må sende";

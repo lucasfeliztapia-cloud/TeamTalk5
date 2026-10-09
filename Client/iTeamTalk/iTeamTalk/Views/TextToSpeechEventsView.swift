@@ -21,6 +21,7 @@
  *
  */
 
+import Combine
 import SwiftUI
 
 struct TextToSpeechEventsView: View {
@@ -34,8 +35,32 @@ struct TextToSpeechEventsView: View {
         TextToSpeechEventRow(preferenceKey: PREF_TTSEVENT_CHANTEXTMSG, defaultValue: false, title: "Channel Text Message", subtitle: "Announce content of text message")
     ]
 
+    // what the announcements have in common, read again whenever one changes
+    @State private var allEnabled = false
+    @State private var allSpokenBy = SpokenBy.eachItsOwn
+
     var body: some View {
         Form {
+            Section {
+                Toggle("Enable All Announcements", isOn: Binding(
+                    get: { allEnabled },
+                    set: { setAll(enabled: $0) }
+                ))
+                Picker("Spoken By", selection: Binding(
+                    get: { allSpokenBy },
+                    set: { setAll(spokenBy: $0) }
+                )) {
+                    Text("VoiceOver").tag(SpokenBy.voiceOver)
+                    Text("TeamTalk Voice").tag(SpokenBy.ownVoice)
+                    if allSpokenBy == .eachItsOwn {
+                        Text("Each One Its Own").tag(SpokenBy.eachItsOwn)
+                    }
+                }
+            } header: {
+                Text("All Announcements")
+            } footer: {
+                Text("These two settings change every announcement at once. Each one can still be set on its own below.")
+            }
             Section {
                 ForEach(rows) { row in
                     TextToSpeechEventToggle(row: row)
@@ -47,7 +72,50 @@ struct TextToSpeechEventsView: View {
             }
         }
         .navigationTitle("Text To Speech Events")
+        .onAppear(perform: readAll)
+        .onReceive(NotificationCenter.default.publisher(for: UserDefaults.didChangeNotification)
+            .receive(on: RunLoop.main)) { _ in
+            readAll()
+        }
     }
+
+    private func readAll() {
+        let defaults = UserDefaults.standard
+        let enabled = rows.allSatisfy {
+            defaults.object(forKey: $0.preferenceKey) == nil ? $0.defaultValue : defaults.bool(forKey: $0.preferenceKey)
+        }
+        let ownVoices = rows.filter { defaults.bool(forKey: $0.preferenceKey + PREF_TTSEVENT_OWNVOICE_SUFFIX) }.count
+        let spokenBy: SpokenBy = ownVoices == 0 ? .voiceOver : ownVoices == rows.count ? .ownVoice : .eachItsOwn
+        // only when they differ: writing them tells the view to draw again
+        if enabled != allEnabled {
+            allEnabled = enabled
+        }
+        if spokenBy != allSpokenBy {
+            allSpokenBy = spokenBy
+        }
+    }
+
+    private func setAll(enabled: Bool) {
+        for row in rows {
+            UserDefaults.standard.set(enabled, forKey: row.preferenceKey)
+        }
+        allEnabled = enabled
+    }
+
+    private func setAll(spokenBy: SpokenBy) {
+        guard spokenBy != .eachItsOwn else { return }
+        for row in rows {
+            UserDefaults.standard.set(spokenBy == .ownVoice, forKey: row.preferenceKey + PREF_TTSEVENT_OWNVOICE_SUFFIX)
+        }
+        allSpokenBy = spokenBy
+    }
+}
+
+/// Who speaks the announcements when they are set all at once
+private enum SpokenBy: Hashable {
+    case voiceOver
+    case ownVoice
+    case eachItsOwn
 }
 
 private struct TextToSpeechEventToggle: View {

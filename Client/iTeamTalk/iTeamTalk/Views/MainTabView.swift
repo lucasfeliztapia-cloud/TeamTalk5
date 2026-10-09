@@ -31,12 +31,11 @@ struct MainTabView: View {
     @State private var selectedTab = 0
 
     /// The scrub of VoiceOver with the focus where no view answers it, the
-    /// navigation bar or the tab bar: back to the Channels tab and, from
-    /// there, what the Channels tab does with it.
+    /// navigation bar or the tab bar. Only in the Channels tab: it is the one
+    /// with a way back, its Disconnect button.
     private func goBack() -> Bool {
-        if selectedTab != 0 {
-            selectedTab = 0
-        } else if !model.channelListModel.goBack() {
+        guard selectedTab == 0 else { return false }
+        if !model.channelListModel.goBack() {
             model.disconnectTapped(dismiss: close)
         }
         return true
@@ -56,9 +55,6 @@ struct MainTabView: View {
             // Messages tab
             NavigationStack {
                 TextMessageView(model: model.channelChatModel)
-                    .accessibilityAction(.escape) {
-                        selectedTab = 0
-                    }
                     /*.accessibilityAction(.magicTap) {
                         model.channelListModel.txBtnAccessibilityAction()
                     }*/
@@ -71,9 +67,6 @@ struct MainTabView: View {
             // Files tab
             NavigationStack {
                 FileListView(model: model.fileListModel)
-                    .accessibilityAction(.escape) {
-                        selectedTab = 0
-                    }
             }
             .tabItem {
                 Label("Files", systemImage: "doc")
@@ -83,9 +76,6 @@ struct MainTabView: View {
             // Preferences tab
             NavigationStack {
                 PreferencesView(model: model.preferencesModel)
-                    .accessibilityAction(.escape) {
-                        selectedTab = 0
-                    }
                     /*.accessibilityAction(.magicTap) {
                         model.channelListModel.txBtnAccessibilityAction()
                     }*/
@@ -177,6 +167,14 @@ struct MainTabView: View {
             }
         } message: {
             Text("Save server to server list?")
+        }
+        .alert("Disconnect from the server?", isPresented: $model.showDisconnectConfirm) {
+            Button("Disconnect", role: .destructive) {
+                model.confirmDisconnect()
+            }
+            Button("Cancel", role: .cancel) {
+                model.cancelDisconnect()
+            }
         }
     }
 }

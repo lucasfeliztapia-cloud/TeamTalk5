@@ -179,8 +179,14 @@
 /* user accounts */
 "Administrator" = "مدير";
 
+/* preferences */
+"After the Message" = "بعد الرسالة";
+
 /* channel list */
 "All" = "الكل";
+
+/* text to speech events */
+"All Announcements" = "كل الإعلانات";
 
 /* all users */
 "All Users" = "كل المستخدمين";
@@ -238,6 +244,12 @@
 
 /* preferences */
 "Ascending" = "زيادة";
+
+/* preferences */
+"Ascending goes from A to Z and from fewer users to more" = "الترتيب بالزيادة يبدأ من الألف إلى الياء ومن أقل عدد مستخدمين إلى أكثره";
+
+/* preferences */
+"Ask before leaving the server" = "السؤال قبل مغادرة الخادم";
 
 /* codec detail */
 "Audio Channels" = "قنوات الصوت";
@@ -304,6 +316,9 @@
 
 /* weblogin event */
 "BearWare.dk Web Login failed to authenticate. Check BearWare.dk Web Login in Preferences" = "فشل BearWare.dk في المصادقة. تحقق من BearWare.dk في التفضيلات";
+
+/* preferences */
+"Before the Message" = "قبل الرسالة";
 
 /* codec detail */
 "Bitrate" = "معدل البت";
@@ -431,6 +446,9 @@
 /* diagnostics */
 "Clear Log" = "مسح السجل";
 
+/* server list */
+"Clear text" = "مسح النص";
+
 /* media stream */
 "Close" = "إغلاق";
 
@@ -439,6 +457,9 @@
 
 /* appearance */
 "Color of buttons, switches and the selected tab." = "لون الأزرار والمفاتيح وعلامة التبويب المحددة.";
+
+/* appearance */
+"Color of the Microphone button in each state. Its text is shown in black or white, whichever is easier to read." = "لون زر الميكروفون في كل حالة. يظهر نصه بالأسود أو الأبيض، أيهما أسهل قراءة.";
 
 /* appearance */
 "Color of the Speakers button in each state. Its icon is shown in black or white, whichever is easier to read." = "لون زر السماعات في كل حالة. تظهر أيقونته بالأسود أو الأبيض، أيهما أسهل قراءة.";
@@ -466,6 +487,9 @@
 
 /* channel list */
 "Confirm" = "تأكيد";
+
+/* preferences */
+"Confirm Before Disconnecting" = "التأكيد قبل قطع الاتصال";
 
 /* server list */
 "Connect" = "اتصال";
@@ -550,6 +574,9 @@
 /* connection quality */
 "Data" = "البيانات";
 
+/* preferences */
+"Decrement" = "إنقاص";
+
 /* Sound Input */
 "Default" = "افتراضي";
 
@@ -580,12 +607,18 @@
 /* serverlist */
 "Delete server from list" = "حذف الخادم من القائمة";
 
+/* preferences */
+"Descending" = "نقصان";
+
 /* channel list */
 "Deselect user" = "إلغاء تحديد المستخدم";
 
 /* preferences
    user detail */
 "Desktop" = "سطح المكتب";
+
+/* preferences */
+"Details Position" = "موضع التفاصيل";
 
 /* diagnostics */
 "Diagnostic Log" = "سجل التشخيص";
@@ -598,6 +631,9 @@
 
 /* channel list */
 "Disconnect" = "قطع الاتصال";
+
+/* confirmation */
+"Disconnect from the server?" = "هل تريد قطع الاتصال بالخادم؟";
 
 /* accessibility hint */
 "Disconnects from the server and goes back to the server list" = "يقطع الاتصال بالخادم ويعود إلى قائمة الخوادم";
@@ -635,6 +671,9 @@
 /* user accounts */
 "Each change is saved at once and applies the next time this user logs in." = "يُحفظ كل تغيير فورًا ويسري عند تسجيل الدخول التالي لهذا المستخدم.";
 
+/* text to speech events */
+"Each One Its Own" = "لكل إعلان إعداده";
+
 /* channel list */
 "Earpiece or Headset" = "سماعة الأذن أو سماعة الرأس";
 
@@ -643,6 +682,9 @@
 
 /* channel list */
 "Edit properties" = "تحرير الخصائص";
+
+/* text to speech events */
+"Enable All Announcements" = "تفعيل كل الإعلانات";
 
 /* server entry */
 "Encrypted" = "مشفر";
@@ -815,6 +857,9 @@
 
 /* channel list */
 "Inactive" = "غير نشط";
+
+/* preferences */
+"Increment" = "زيادة";
 
 /* appearance */
 "Interface" = "الواجهة";
@@ -998,8 +1043,14 @@
 /* text messages */
 "Message" = "رسالة";
 
+/* preferences */
+"Message Details" = "تفاصيل الرسائل";
+
 /* server entry */
 "Message of the Day" = "رسالة اليوم";
+
+/* preferences */
+"Message Only" = "الرسالة فقط";
 
 /* appearance */
 "Message Text Size" = "حجم نص الرسائل";
@@ -1012,6 +1063,9 @@
 
 /* diagnostics */
 "Microphone" = "الميكروفون";
+
+/* appearance */
+"Microphone Button" = "زر الميكروفون";
 
 /* preferences */
 "Microphone Gain" = "مستوى صوت الميكروفون";
@@ -1076,7 +1130,13 @@
 "Name" = "الاسم";
 
 /* preferences */
+"Name and Time" = "الاسم والوقت";
+
+/* preferences */
 "Name displayed in channel list" = "الاسم سيكون معروضاً في قائمة القنوات";
+
+/* preferences */
+"Name Only" = "الاسم فقط";
 
 /* preferences */
 "Neutral" = "محايد";
@@ -1168,6 +1228,9 @@
 
 /* live activity */
 "Not transmitting" = "لا يرسل";
+
+/* preferences */
+"Number of Users" = "عدد المستخدمين";
 
 /* media stream */
 "Off" = "إيقاف";
@@ -1606,6 +1669,9 @@
 /* preferences */
 "Sort Channels" = "فرز القنوات";
 
+/* preferences */
+"Sort Direction" = "اتجاه الفرز";
+
 /* media stream */
 "Sound" = "الصوت";
 
@@ -1714,6 +1780,9 @@
 "Subscriptions" = "الإشتراكات";
 
 /* appearance */
+"Swap Microphone Button Colors" = "تبديل ألوان زر الميكروفون";
+
+/* appearance */
 "Swap Speakers Button Colors" = "تبديل ألوان زر السماعات";
 
 /* appearance */
@@ -1800,6 +1869,9 @@
 /* appearance */
 "Themes" = "السمات";
 
+/* text to speech events */
+"These two settings change every announcement at once. Each one can still be set on its own below." = "يغيّر هذان الإعدادان كل الإعلانات دفعة واحدة. ويمكن ضبط كل إعلان على حدة في الأسفل.";
+
 /* diagnostics */
 "They need iOS 17 or later" = "تتطلب iOS 17 أو أحدث";
 
@@ -1820,6 +1892,9 @@
 
 /* connection quality */
 "Time a packet takes to reach the server and come back. Below 100 ms a conversation feels immediate." = "الزمن الذي تستغرقه حزمة للوصول إلى الخادم والعودة. تحت 100 مللي ثانية يبدو الحوار فوريًا.";
+
+/* preferences */
+"Time Only" = "الوقت فقط";
 
 /* channel list */
 "Toggle to enable/disable transmission" = "تبديل لتمكين او  تعطيل الإرسال";
@@ -1857,8 +1932,14 @@
 /* preferences */
 "Turn off screen when holding phone near ear" = "إيقاف الشاشة عندَ  تقريب الهاتف بالقرب من الأذن ";
 
+/* state of the microphone button */
+"Turned off" = "متوقف";
+
 /* diagnostics */
 "Turned off. Turn on Live Activities in Settings, under TeamTalk." = "معطلة. فعّل الأنشطة المباشرة في الإعدادات، ضمن TeamTalk.";
+
+/* state of the microphone button */
+"Turned on" = "مُفعّل";
 
 /* serverlist */
 "Type Join Code" = "اكتب رمز الانضمام";
@@ -2057,11 +2138,17 @@
 /* Sound Devices */
 "WebRTC" = "WebRTC";
 
+/* preferences */
+"What each text message shows besides its text" = "ما تعرضه كل رسالة نصية إلى جانب نصها";
+
 /* diagnostics */
 "What the app has been doing, to share when something fails" = "ما كان يفعله التطبيق، للمشاركة عند حدوث خلل";
 
 /* diagnostics */
 "What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "ما يحتاجه التطبيق من الـ iPhone. إذا كان هنا شيء غير صحيح فهو أول ما يجب إصلاحه.";
+
+/* preferences */
+"Where the name and the time are shown and read" = "أين يُعرض ويُقرأ الاسم والوقت";
 
 /* transmit control */
 "Who Can Transmit" = "من يمكنه الإرسال";

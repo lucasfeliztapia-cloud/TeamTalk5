@@ -52,6 +52,8 @@ struct ServerListView: View {
                         .frame(maxWidth: .infinity, alignment: .center)
                 }
 
+                searchField
+
                 ForEach(model.visibleServers, id: \.self) { server in
                     serverRow(server)
                     .onTapGesture {
@@ -83,7 +85,6 @@ struct ServerListView: View {
                 }
             }
             .navigationTitle("TeamTalk Servers")
-            .searchable(text: $model.searchText, prompt: "Search servers")
             .sheet(item: $model.sharedFile) { shared in
                 ActivityView(items: [shared.url])
             }
@@ -94,7 +95,6 @@ struct ServerListView: View {
                     } label: {
                         Image("setup")
                             .accessibilityLabel("Preferences")
-                            .accessibilityHint("Access preferences")
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -103,7 +103,6 @@ struct ServerListView: View {
                     } label: {
                         Image(systemName: "plus")
                             .accessibilityLabel("Add new server entry")
-                            .accessibilityHint("Adds a server to the list")
                     }
                 }
             }
@@ -175,6 +174,31 @@ struct ServerListView: View {
         switch destination {
         case .preferences(let m):
             PreferencesView(model: m)
+        }
+    }
+
+    /// The search field as a row of the list, right below "Enter Join Code".
+    /// The one of the system sits under the list since iOS 26, after every
+    /// server.
+    private var searchField: some View {
+        HStack(spacing: 8) {
+            Image(systemName: "magnifyingglass")
+                .foregroundStyle(.secondary)
+                .accessibilityHidden(true)
+            TextField("Search servers", text: $model.searchText)
+                .textInputAutocapitalization(.never)
+                .autocorrectionDisabled()
+                .submitLabel(.search)
+            if !model.searchText.isEmpty {
+                Button {
+                    model.searchText = ""
+                } label: {
+                    Image(systemName: "xmark.circle.fill")
+                        .foregroundStyle(.secondary)
+                }
+                .buttonStyle(.borderless)
+                .accessibilityLabel(Text("Clear text"))
+            }
         }
     }
 

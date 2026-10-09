@@ -180,8 +180,14 @@
 /* user accounts */
 "Administrator" = "Quản trị viên";
 
+/* preferences */
+"After the Message" = "Sau tin nhắn";
+
 /* channel list */
 "All" = "Tất cả";
+
+/* text to speech events */
+"All Announcements" = "Tất cả thông báo";
 
 /* all users */
 "All Users" = "Tất cả người dùng";
@@ -239,6 +245,12 @@
 
 /* preferences */
 "Ascending" = "Tăng dần";
+
+/* preferences */
+"Ascending goes from A to Z and from fewer users to more" = "Tăng dần là từ A đến Z và từ ít người dùng đến nhiều người dùng";
+
+/* preferences */
+"Ask before leaving the server" = "Hỏi trước khi rời máy chủ";
 
 /* codec detail */
 "Audio Channels" = "Kênh âm thanh";
@@ -306,6 +318,9 @@
 
 /* weblogin event */
 "BearWare.dk Web Login failed to authenticate. Check BearWare.dk Web Login in Preferences" = "Đăng nhập web BearWare.dk không thành công. Hãy kiểm tra lại Đăng nhập web BearWare.dk trong Tùy chọn";
+
+/* preferences */
+"Before the Message" = "Trước tin nhắn";
 
 /* codec detail */
 "Bitrate" = "Tốc độ bit";
@@ -433,6 +448,9 @@
 /* diagnostics */
 "Clear Log" = "Xóa nhật ký";
 
+/* server list */
+"Clear text" = "Xóa văn bản";
+
 /* media stream */
 "Close" = "Đóng";
 
@@ -441,6 +459,9 @@
 
 /* appearance */
 "Color of buttons, switches and the selected tab." = "Màu của nút, công tắc và tab được chọn.";
+
+/* appearance */
+"Color of the Microphone button in each state. Its text is shown in black or white, whichever is easier to read." = "Màu của nút Micrô ở mỗi trạng thái. Chữ hiển thị màu đen hoặc trắng, tùy màu nào dễ đọc hơn.";
 
 /* appearance */
 "Color of the Speakers button in each state. Its icon is shown in black or white, whichever is easier to read." = "Màu của nút Loa ở mỗi trạng thái. Biểu tượng hiển thị màu đen hoặc trắng, tùy màu nào dễ đọc hơn.";
@@ -468,6 +489,9 @@
 
 /* channel list */
 "Confirm" = "Xác nhận";
+
+/* preferences */
+"Confirm Before Disconnecting" = "Xác nhận trước khi ngắt kết nối";
 
 /* server list */
 "Connect" = "Kết nối";
@@ -552,6 +576,9 @@
 /* connection quality */
 "Data" = "Dữ liệu";
 
+/* preferences */
+"Decrement" = "Giảm";
+
 /* Sound Devices */
 "Default" = "Mặc định";
 
@@ -582,12 +609,18 @@
 /* serverlist */
 "Delete server from list" = "Xóa máy chủ khỏi danh sách";
 
+/* preferences */
+"Descending" = "Giảm dần";
+
 /* channel list */
 "Deselect user" = "Bỏ chọn người dùng";
 
 /* preferences
    user detail */
 "Desktop" = "Màn hình";
+
+/* preferences */
+"Details Position" = "Vị trí chi tiết";
 
 /* diagnostics */
 "Diagnostic Log" = "Nhật ký chẩn đoán";
@@ -600,6 +633,9 @@
 
 /* channel list */
 "Disconnect" = "Ngắt kết nối";
+
+/* confirmation */
+"Disconnect from the server?" = "Ngắt kết nối khỏi máy chủ?";
 
 /* accessibility hint */
 "Disconnects from the server and goes back to the server list" = "Ngắt kết nối khỏi máy chủ và quay lại danh sách máy chủ";
@@ -637,6 +673,9 @@
 /* user accounts */
 "Each change is saved at once and applies the next time this user logs in." = "Mỗi thay đổi được lưu ngay và có hiệu lực từ lần đăng nhập tiếp theo của người dùng này.";
 
+/* text to speech events */
+"Each One Its Own" = "Mỗi thông báo một kiểu";
+
 /* channel list */
 "Earpiece or Headset" = "Loa trong hoặc tai nghe";
 
@@ -645,6 +684,9 @@
 
 /* channel list */
 "Edit properties" = "Chỉnh sửa thông tin";
+
+/* text to speech events */
+"Enable All Announcements" = "Bật tất cả thông báo";
 
 /* server entry */
 "Encrypted" = "Mã hóa";
@@ -818,6 +860,9 @@
 
 /* channel list */
 "Inactive" = "Không hoạt động";
+
+/* preferences */
+"Increment" = "Tăng";
 
 /* appearance */
 "Interface" = "Giao diện người dùng";
@@ -1001,8 +1046,14 @@
 /* text messages */
 "Message" = "Tin nhắn";
 
+/* preferences */
+"Message Details" = "Chi tiết tin nhắn";
+
 /* server entry */
 "Message of the Day" = "Tin nhắn trong ngày";
+
+/* preferences */
+"Message Only" = "Chỉ tin nhắn";
 
 /* appearance */
 "Message Text Size" = "Cỡ chữ tin nhắn";
@@ -1015,6 +1066,9 @@
 
 /* diagnostics */
 "Microphone" = "Micrô";
+
+/* appearance */
+"Microphone Button" = "Nút Micrô";
 
 /* preferences */
 "Microphone Gain" = "Âm lượng Microphone";
@@ -1079,7 +1133,13 @@
 "Name" = "Tên";
 
 /* preferences */
+"Name and Time" = "Tên và giờ";
+
+/* preferences */
 "Name displayed in channel list" = "Tên hiển thị trong danh sách kênh";
+
+/* preferences */
+"Name Only" = "Chỉ tên";
 
 /* preferences */
 "Neutral" = "Trung tính";
@@ -1171,6 +1231,9 @@
 
 /* live activity */
 "Not transmitting" = "Không truyền";
+
+/* preferences */
+"Number of Users" = "Số người dùng";
 
 /* media stream */
 "Off" = "Tắt";
@@ -1611,6 +1674,9 @@
 /* preferences */
 "Sort Channels" = "Sắp xếp kênh";
 
+/* preferences */
+"Sort Direction" = "Hướng sắp xếp";
+
 /* media stream */
 "Sound" = "Âm thanh";
 
@@ -1720,6 +1786,9 @@
 "Subscriptions" = "đăng ký";
 
 /* appearance */
+"Swap Microphone Button Colors" = "Đổi màu của nút Micrô";
+
+/* appearance */
 "Swap Speakers Button Colors" = "Đổi màu của nút Loa";
 
 /* appearance */
@@ -1806,6 +1875,9 @@
 /* appearance */
 "Themes" = "Chủ đề";
 
+/* text to speech events */
+"These two settings change every announcement at once. Each one can still be set on its own below." = "Hai cài đặt này thay đổi tất cả thông báo cùng lúc. Vẫn có thể đặt riêng từng thông báo ở bên dưới.";
+
 /* diagnostics */
 "They need iOS 17 or later" = "Cần iOS 17 trở lên";
 
@@ -1826,6 +1898,9 @@
 
 /* connection quality */
 "Time a packet takes to reach the server and come back. Below 100 ms a conversation feels immediate." = "Thời gian một gói tin đến máy chủ và quay lại. Dưới 100 ms cuộc trò chuyện có cảm giác tức thì.";
+
+/* preferences */
+"Time Only" = "Chỉ giờ";
 
 /* channel list */
 "Toggle to enable/disable transmission" = "Chuyển đổi bật/tắt truyền";
@@ -1863,8 +1938,14 @@
 /* preferences */
 "Turn off screen when holding phone near ear" = "Tắt màn hình khi để điện thoại gần tai";
 
+/* state of the microphone button */
+"Turned off" = "Đang tắt";
+
 /* diagnostics */
 "Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Đã tắt. Hãy bật Hoạt động trực tiếp trong Cài đặt, mục TeamTalk.";
+
+/* state of the microphone button */
+"Turned on" = "Đang bật";
 
 /* serverlist */
 "Type Join Code" = "Gõ mã tham gia";
@@ -2064,11 +2145,17 @@
 /* Sound Devices */
 "WebRTC" = "WebRTC";
 
+/* preferences */
+"What each text message shows besides its text" = "Những gì mỗi tin nhắn văn bản hiển thị ngoài nội dung";
+
 /* diagnostics */
 "What the app has been doing, to share when something fails" = "Những gì ứng dụng đã làm, để chia sẻ khi có sự cố";
 
 /* diagnostics */
 "What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Những gì ứng dụng cần từ iPhone. Nếu có gì ở đây không ổn, đó là điều đầu tiên cần sửa.";
+
+/* preferences */
+"Where the name and the time are shown and read" = "Nơi tên và giờ được hiển thị và đọc";
 
 /* transmit control */
 "Who Can Transmit" = "Ai được truyền";

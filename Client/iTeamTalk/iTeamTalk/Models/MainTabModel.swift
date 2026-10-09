@@ -23,11 +23,19 @@
 
 import AVFoundation
 import Combine
+import Network
 import OSLog
 import SwiftUI
 import TeamTalkKit
 import UIKit
 import WidgetKit
+
+/// The interface the system prefers and its routers: another Wi-Fi keeps the
+/// interface and changes the router.
+private struct NetworkPath: Equatable {
+    let interface: String
+    let gateways: String
+}
 
 final class MainTabModel: ObservableObject, TeamTalkEvent {
 
@@ -51,8 +59,18 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
     private var lastSoundRecovery = Date.distantPast
     @Published var fatalAlertMessage: String?   // dismisses the view when OK tapped
     @Published var showSaveAlert = false
+    @Published var showDisconnectConfirm = false
 
     private var pendingDismiss: (() -> Void)?
+    private var pendingDisconnect: (() -> Void)?
+
+    // the network under the connection, see watchNetwork()
+    private var pathMonitor: NWPathMonitor?
+    private var network: NetworkPath?
+    private var connectedNetwork: NetworkPath?
+    private var networkCheck: DispatchWorkItem?
+    private var quietReconnect = false
+    private var pingCmdId: INT32 = 0
     private var polltimer: Timer?
     private var reconnecttimer: Timer?
     private var didSetup = false
@@ -192,11 +210,15 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
             object: nil
         )
 
+        watchNetwork()
         connectToServer()
     }
 
     func teardown() {
         logDiagnostic("Session closed")
+        pathMonitor?.cancel()
+        pathMonitor = nil
+        networkCheck?.cancel()
         cancellables.removeAll()
         LiveActivityActions.toggleTransmission = nil
         LiveActivityActions.toggleDeafen = nil
@@ -239,7 +261,31 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
         }
     }
 
+    /// The Disconnect button and the scrub of VoiceOver. It asks first when
+    /// the user wants that, so a gesture too many does not end a conversation.
     func disconnectTapped(dismiss: @escaping () -> Void) {
+        if UserDefaults.standard.bool(forKey: PREF_GENERAL_CONFIRMDISCONNECT) {
+            pendingDisconnect = dismiss
+            showDisconnectConfirm = true
+        } else {
+            disconnect(dismiss: dismiss)
+        }
+    }
+
+    func confirmDisconnect() {
+        guard let dismiss = pendingDisconnect else { return }
+        pendingDisconnect = nil
+        // once the question is gone: the next one can be another alert
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+            self?.disconnect(dismiss: dismiss)
+        }
+    }
+
+    func cancelDisconnect() {
+        pendingDisconnect = nil
+    }
+
+    private func disconnect(dismiss: @escaping () -> Void) {
         let servers = loadLocalServers()
         let found = servers.filter {
             $0.ipaddr == server.ipaddr &&
@@ -389,6 +435,109 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
         }
     }
 
+    // MARK: - Network changes
+
+    /// After a change of network, from Wi-Fi to mobile data or to another
+    /// Wi-Fi, the connection to the server is dead, but the library only gives
+    /// it up after twice the user timeout of the server. For a couple of
+    /// minutes the app looked connected and nobody heard the user, who had to
+    /// leave and come back by hand. The system tells of the change at once.
+    private func watchNetwork() {
+        let monitor = NWPathMonitor()
+        monitor.pathUpdateHandler = { [weak self] path in
+            let up = path.status == .satisfied
+            let found = NetworkPath(
+                interface: up ? (path.availableInterfaces.first?.name ?? "") : "",
+                gateways: up ? path.gateways.map { "\($0)" }.sorted().joined(separator: " ") : ""
+            )
+            DispatchQueue.main.async {
+                self?.networkChanged(to: found)
+            }
+        }
+        monitor.start(queue: DispatchQueue.global(qos: .utility))
+        pathMonitor = monitor
+    }
+
+    private func networkChanged(to found: NetworkPath) {
+        guard found != network else { return }
+        logDiagnostic("Network: \(found.interface.isEmpty ? "none" : found.interface + " " + found.gateways)")
+
+        let first = network == nil
+        network = found
+        // a change arrives as several updates: act on the last one
+        networkCheck?.cancel()
+        if first {
+            // where the app starts from, nothing has changed yet
+            if TeamTalkClient.shared.isConnected {
+                connectedNetwork = found
+            }
+            return
+        }
+        guard !found.interface.isEmpty else { return }
+
+        let check = DispatchWorkItem { [weak self] in
+            self?.checkConnectionAfterNetworkChange()
+        }
+        networkCheck = check
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: check)
+    }
+
+    private func checkConnectionAfterNetworkChange() {
+        guard didSetup, polltimer?.isValid == true, fatalAlertMessage == nil,
+              let network, !network.interface.isEmpty else { return }
+        let client = TeamTalkClient.shared
+
+        guard client.isConnected else {
+            // already known to be lost, or still trying over the old network
+            logDiagnostic("Network is back, connecting now")
+            reconnecttimer?.invalidate()
+            client.disconnect()
+            connectToServer()
+            return
+        }
+        guard let connectedNetwork, connectedNetwork != network else { return }
+
+        if connectedNetwork.interface != network.interface {
+            // from Wi-Fi to mobile data or back: the old connection is gone
+            reconnectQuietly()
+            return
+        }
+
+        // Same interface with another router, or the same one after a gap:
+        // the connection may have survived. Ask the server and see whether
+        // it answers.
+        let ping = client.ping()
+        guard ping > 0 else {
+            reconnectQuietly()
+            return
+        }
+        pingCmdId = ping
+        let check = DispatchWorkItem { [weak self] in
+            // an answer clears it, see CLIENTEVENT_CMD_PROCESSING
+            guard let self, self.pingCmdId == ping else { return }
+            self.pingCmdId = 0
+            if TeamTalkClient.shared.isConnected {
+                self.reconnectQuietly()
+            }
+        }
+        networkCheck = check
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4, execute: check)
+    }
+
+    /// The same as a lost connection, without waiting for the library to
+    /// notice and without the alarm: every model forgets the old session and
+    /// the app connects again at once. The channel comes back by itself, and
+    /// the transmission with it, which the library keeps across connections.
+    private func reconnectQuietly() {
+        logDiagnostic("Network changed under the connection, connecting again")
+        quietReconnect = true
+        var lost = TTMessage()
+        lost.nClientEvent = CLIENTEVENT_CON_LOST
+        for handler in ttMessageHandlers {
+            handler.value?.handleTTMessage(lost)
+        }
+    }
+
     // MARK: - Sound devices after a reconnect
 
     /// When the connection is lost and found again with the app in the
@@ -526,6 +675,8 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
 
         case CLIENTEVENT_CON_SUCCESS:
             os_log("Connected to \(self.server.ipaddr)")
+            connectedNetwork = network
+            quietReconnect = false
 
             if AppInfo.isBearWareWebLogin(self.server.username) {
                 let settings = UserDefaults.standard
@@ -553,24 +704,38 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
 
         case CLIENTEVENT_CON_FAILED:
             TeamTalkClient.shared.disconnect()
+            if quietReconnect {
+                // it did not come straight back: say so, as with any lost connection
+                quietReconnect = false
+                announceConnectionLost()
+            }
             startReconnectTimer()
             os_log("Connect to \(self.server.ipaddr) failed")
 
         case CLIENTEVENT_CON_LOST:
             os_log("Connection to \(self.server.ipaddr) lost")
             TeamTalkClient.shared.disconnect()
-            playSound(.srv_LOST)
-            if UserDefaults.standard.object(forKey: PREF_TTSEVENT_CONLOST) == nil ||
-                UserDefaults.standard.bool(forKey: PREF_TTSEVENT_CONLOST) {
-                newUtterance(String(localized: "Connection lost", comment: "tts event"), event: PREF_TTSEVENT_CONLOST)
+            pingCmdId = 0
+            if quietReconnect {
+                // the network changed under the connection: straight back
+                reconnecttimer?.invalidate()
+                connectToServer()
+            } else {
+                announceConnectionLost()
+                startReconnectTimer()
             }
-            startReconnectTimer()
 
         case CLIENTEVENT_VOICE_ACTIVATION:
             playSound(TeamTalkMessagePayload.isActive(m) ? .voxtriggered_ON : .voxtriggered_OFF)
 
         case CLIENTEVENT_CMD_PROCESSING:
             if !TeamTalkMessagePayload.isActive(m) {
+                if pingCmdId > 0 && m.nSource == pingCmdId {
+                    // the server answered: the connection outlived the change
+                    pingCmdId = 0
+                    connectedNetwork = network
+                    logDiagnostic("The connection survived the change of network")
+                }
                 commandComplete(m.nSource)
             }
 
@@ -680,6 +845,14 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
             }
         default:
             break
+        }
+    }
+
+    private func announceConnectionLost() {
+        playSound(.srv_LOST)
+        if UserDefaults.standard.object(forKey: PREF_TTSEVENT_CONLOST) == nil ||
+            UserDefaults.standard.bool(forKey: PREF_TTSEVENT_CONLOST) {
+            newUtterance(String(localized: "Connection lost", comment: "tts event"), event: PREF_TTSEVENT_CONLOST)
         }
     }
 

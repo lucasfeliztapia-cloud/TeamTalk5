@@ -181,22 +181,29 @@ final class ChannelListModel: ObservableObject {
             ? ChanSort.ASCENDING.rawValue
             : settings.integer(forKey: PREF_DISPLAY_SORTCHANNELS)
 
+        let descending = channelSortIsDescending(settings)
+
         switch chansort {
         case ChanSort.POPULARITY.rawValue:
+            var counts = [INT32: Int]()
+            for user in users.values {
+                counts[user.nChannelID, default: 0] += 1
+            }
             displayChans = subchans.sorted { lhs, rhs in
-                let au = users.values.filter { $0.nChannelID == lhs.nChannelID }
-                let bu = users.values.filter { $0.nChannelID == rhs.nChannelID }
-                let aname = TeamTalkString.channel(.name, from: lhs)
-                let bname = TeamTalkString.channel(.name, from: rhs)
-                return au.count == bu.count
-                    ? aname.caseInsensitiveCompare(bname) == .orderedAscending
-                    : au.count > bu.count
+                let acount = counts[lhs.nChannelID] ?? 0
+                let bcount = counts[rhs.nChannelID] ?? 0
+                if acount == bcount {
+                    let aname = TeamTalkString.channel(.name, from: lhs)
+                    let bname = TeamTalkString.channel(.name, from: rhs)
+                    return aname.caseInsensitiveCompare(bname) == .orderedAscending
+                }
+                return descending ? acount > bcount : acount < bcount
             }
         default:
             displayChans = subchans.sorted {
                 let aname = TeamTalkString.channel(.name, from: $0)
                 let bname = TeamTalkString.channel(.name, from: $1)
-                return aname.caseInsensitiveCompare(bname) == .orderedAscending
+                return aname.caseInsensitiveCompare(bname) == (descending ? .orderedDescending : .orderedAscending)
             }
         }
         displayUsers = chanusers.sorted {

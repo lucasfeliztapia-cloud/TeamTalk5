@@ -58,12 +58,16 @@ let PREF_GENERAL_BEARWARE_TOKEN = "general_bearwaretoken_preference"
 let PREF_GENERAL_PTTLOCK = "general_pttlock_preference"
 let PREF_GENERAL_SENDONRETURN = "general_sendonreturn_preference"
 let PREF_JOINROOTCHANNEL = "joinroot_preference"
+let PREF_GENERAL_CONFIRMDISCONNECT = "general_confirmdisconnect_preference"
 
 let PREF_DISPLAY_SHOWUSERNAME = "display_showusername_preference"
 let PREF_DISPLAY_PROXIMITY = "display_proximity_sensor"
 let PREF_DISPLAY_POPUPTXTMSG = "display_popuptxtmsg_preference"
 let PREF_DISPLAY_LIMITTEXT = "display_limittext_preference"
 let PREF_DISPLAY_SORTCHANNELS = "display_sortchannels_preference"
+let PREF_DISPLAY_SORTCHANNELS_DESC = "display_sortchannelsdescending_preference"
+let PREF_DISPLAY_MSGDETAILS = "display_messagedetails_preference"
+let PREF_DISPLAY_MSGDETAILSAFTER = "display_messagedetailsafter_preference"
 let PREF_DISPLAY_OFFICIALSERVERS = "display_officialservers_preference"
 let PREF_DISPLAY_PUBLICSERVERS = "display_publicservers_preference"
 let PREF_DISPLAY_UNOFFICIALSERVERS = "display_unofficialservers_preference"
@@ -149,6 +153,7 @@ final class PreferencesModel: ObservableObject {
     @Published var limitText: Double
     @Published var showUsername: Bool
     @Published var channelSortIndex: Int
+    @Published var channelSortDescending: Bool
     @Published var joinRoot: Bool
     @Published var defaultSubscriptions: Subscriptions
     @Published var masterVolumePercent: Double
@@ -179,6 +184,7 @@ final class PreferencesModel: ObservableObject {
         limitText = Double(settings.object(forKey: PREF_DISPLAY_LIMITTEXT) == nil ? DEFAULT_LIMIT_TEXT : settings.integer(forKey: PREF_DISPLAY_LIMITTEXT))
         showUsername = settings.object(forKey: PREF_DISPLAY_SHOWUSERNAME) != nil && settings.bool(forKey: PREF_DISPLAY_SHOWUSERNAME)
         channelSortIndex = settings.object(forKey: PREF_DISPLAY_SORTCHANNELS) == nil ? ChanSort.ASCENDING.rawValue : settings.integer(forKey: PREF_DISPLAY_SORTCHANNELS)
+        channelSortDescending = channelSortIsDescending(settings)
         joinRoot = settings.object(forKey: PREF_JOINROOTCHANNEL) == nil || settings.bool(forKey: PREF_JOINROOTCHANNEL)
         defaultSubscriptions = getDefaultSubscriptions()
 
@@ -314,6 +320,13 @@ final class PreferencesModel: ObservableObject {
     func channelSortChanged(_ index: Int) {
         channelSortIndex = index
         UserDefaults.standard.set(index == 0 ? ChanSort.ASCENDING.rawValue : ChanSort.POPULARITY.rawValue, forKey: PREF_DISPLAY_SORTCHANNELS)
+        // until a direction is chosen, it follows what is sorted
+        channelSortDescending = channelSortIsDescending()
+    }
+
+    func channelSortDirectionChanged(_ descending: Bool) {
+        channelSortDescending = descending
+        UserDefaults.standard.set(descending, forKey: PREF_DISPLAY_SORTCHANNELS_DESC)
     }
 
     func joinrootChanged(_ enabled: Bool) {

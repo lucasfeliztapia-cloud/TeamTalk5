@@ -179,8 +179,14 @@
 /* user accounts */
 "Administrator" = "관리자";
 
+/* preferences */
+"After the Message" = "메시지 뒤";
+
 /* channel list */
 "All" = "전체";
+
+/* text to speech events */
+"All Announcements" = "모든 알림";
 
 /* all users */
 "All Users" = "모든 사용자";
@@ -238,6 +244,12 @@
 
 /* preferences */
 "Ascending" = "오름차순";
+
+/* preferences */
+"Ascending goes from A to Z and from fewer users to more" = "오름차순은 가나다순, 그리고 사용자가 적은 순입니다";
+
+/* preferences */
+"Ask before leaving the server" = "서버를 떠나기 전에 묻기";
 
 /* codec detail */
 "Audio Channels" = "오디오 채널";
@@ -305,6 +317,9 @@
 
 /* weblogin event */
 "BearWare.dk Web Login failed to authenticate. Check BearWare.dk Web Login in Preferences" = "BearWare.dk 웹 로그인 인증에 실패했습니다. BearWare.dk 웹 로그인 설정을 확인해주세요.";
+
+/* preferences */
+"Before the Message" = "메시지 앞";
 
 /* codec detail */
 "Bitrate" = "비트레이트";
@@ -432,6 +447,9 @@
 /* diagnostics */
 "Clear Log" = "로그 지우기";
 
+/* server list */
+"Clear text" = "텍스트 지우기";
+
 /* media stream */
 "Close" = "닫기";
 
@@ -440,6 +458,9 @@
 
 /* appearance */
 "Color of buttons, switches and the selected tab." = "버튼, 스위치, 선택한 탭의 색상입니다.";
+
+/* appearance */
+"Color of the Microphone button in each state. Its text is shown in black or white, whichever is easier to read." = "각 상태에서의 마이크 버튼 색상입니다. 텍스트는 더 읽기 쉬운 검정이나 흰색으로 표시됩니다.";
 
 /* appearance */
 "Color of the Speakers button in each state. Its icon is shown in black or white, whichever is easier to read." = "각 상태에서의 스피커 버튼 색상입니다. 아이콘은 더 읽기 쉬운 검정이나 흰색으로 표시됩니다.";
@@ -467,6 +488,9 @@
 
 /* channel list */
 "Confirm" = "확인";
+
+/* preferences */
+"Confirm Before Disconnecting" = "연결을 끊기 전에 확인";
 
 /* server list */
 "Connect" = "연결";
@@ -551,6 +575,9 @@
 /* connection quality */
 "Data" = "데이터";
 
+/* preferences */
+"Decrement" = "줄이기";
+
 /* Sound Input */
 "Default" = "기본값";
 
@@ -581,12 +608,18 @@
 /* serverlist */
 "Delete server from list" = "서버 목록에서 삭제";
 
+/* preferences */
+"Descending" = "내림차순";
+
 /* channel list */
 "Deselect user" = "사용자 선택 해제";
 
 /* preferences
    user detail */
 "Desktop" = "화면 공유";
+
+/* preferences */
+"Details Position" = "세부사항 위치";
 
 /* diagnostics */
 "Diagnostic Log" = "진단 로그";
@@ -599,6 +632,9 @@
 
 /* channel list */
 "Disconnect" = "연결 끊기";
+
+/* confirmation */
+"Disconnect from the server?" = "서버 연결을 끊겠습니까?";
 
 /* accessibility hint */
 "Disconnects from the server and goes back to the server list" = "서버 연결을 끊고 서버 목록으로 돌아갑니다";
@@ -636,6 +672,9 @@
 /* user accounts */
 "Each change is saved at once and applies the next time this user logs in." = "변경 사항은 바로 저장되며 이 사용자가 다음에 로그인할 때 적용됩니다.";
 
+/* text to speech events */
+"Each One Its Own" = "알림마다 다름";
+
 /* channel list */
 "Earpiece or Headset" = "수화기 또는 헤드셋";
 
@@ -644,6 +683,9 @@
 
 /* channel list */
 "Edit properties" = "속성 수정";
+
+/* text to speech events */
+"Enable All Announcements" = "모든 알림 켜기";
 
 /* server entry */
 "Encrypted" = "암호화됨";
@@ -816,6 +858,9 @@
 
 /* channel list */
 "Inactive" = "비활성화됨";
+
+/* preferences */
+"Increment" = "늘리기";
 
 /* appearance */
 "Interface" = "인터페이스";
@@ -999,8 +1044,14 @@
 /* text messages */
 "Message" = "메시지";
 
+/* preferences */
+"Message Details" = "메시지 세부사항";
+
 /* server entry */
 "Message of the Day" = "환영사";
+
+/* preferences */
+"Message Only" = "메시지만";
 
 /* appearance */
 "Message Text Size" = "메시지 텍스트 크기";
@@ -1013,6 +1064,9 @@
 
 /* diagnostics */
 "Microphone" = "마이크";
+
+/* appearance */
+"Microphone Button" = "마이크 버튼";
 
 /* preferences */
 "Microphone Gain" = "마이크 음량";
@@ -1077,7 +1131,13 @@
 "Name" = "이름";
 
 /* preferences */
+"Name and Time" = "이름과 시간";
+
+/* preferences */
 "Name displayed in channel list" = "채널 목록에 표시될 이름";
+
+/* preferences */
+"Name Only" = "이름만";
 
 /* preferences */
 "Neutral" = "중립";
@@ -1169,6 +1229,9 @@
 
 /* live activity */
 "Not transmitting" = "전송 안 함";
+
+/* preferences */
+"Number of Users" = "사용자 수";
 
 /* media stream */
 "Off" = "끔";
@@ -1609,6 +1672,9 @@
 /* preferences */
 "Sort Channels" = "채널 정렬";
 
+/* preferences */
+"Sort Direction" = "정렬 방향";
+
 /* media stream */
 "Sound" = "소리";
 
@@ -1717,6 +1783,9 @@
 "Subscriptions" = "수신";
 
 /* appearance */
+"Swap Microphone Button Colors" = "마이크 버튼 색상 맞바꾸기";
+
+/* appearance */
 "Swap Speakers Button Colors" = "스피커 버튼 색상 맞바꾸기";
 
 /* appearance */
@@ -1803,6 +1872,9 @@
 /* appearance */
 "Themes" = "테마";
 
+/* text to speech events */
+"These two settings change every announcement at once. Each one can still be set on its own below." = "이 두 설정은 모든 알림을 한꺼번에 바꿉니다. 각 알림은 아래에서 계속 따로 설정할 수 있습니다.";
+
 /* diagnostics */
 "They need iOS 17 or later" = "iOS 17 이상이 필요합니다";
 
@@ -1823,6 +1895,9 @@
 
 /* connection quality */
 "Time a packet takes to reach the server and come back. Below 100 ms a conversation feels immediate." = "패킷이 서버에 도달했다가 돌아오는 데 걸리는 시간입니다. 100 ms 미만이면 대화가 즉각적으로 느껴집니다.";
+
+/* preferences */
+"Time Only" = "시간만";
 
 /* channel list */
 "Toggle to enable/disable transmission" = "말하기 상태 전환";
@@ -1860,8 +1935,14 @@
 /* preferences */
 "Turn off screen when holding phone near ear" = "iPhone을 귀 근처로 가져가면 자동으로 화면 꺼짐";
 
+/* state of the microphone button */
+"Turned off" = "꺼짐";
+
 /* diagnostics */
 "Turned off. Turn on Live Activities in Settings, under TeamTalk." = "꺼짐. 설정의 TeamTalk에서 실시간 현황을 켜십시오.";
+
+/* state of the microphone button */
+"Turned on" = "켜짐";
 
 /* serverlist */
 "Type Join Code" = "참여 코드를 입력하십시오";
@@ -2061,11 +2142,17 @@
 /* Sound Devices */
 "WebRTC" = "WebRTC";
 
+/* preferences */
+"What each text message shows besides its text" = "각 텍스트 메시지가 본문 외에 표시하는 내용";
+
 /* diagnostics */
 "What the app has been doing, to share when something fails" = "앱이 해 온 일, 문제가 생겼을 때 공유할 수 있습니다";
 
 /* diagnostics */
 "What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "앱이 iPhone에서 필요로 하는 것입니다. 여기에 문제가 있으면 가장 먼저 해결해야 합니다.";
+
+/* preferences */
+"Where the name and the time are shown and read" = "이름과 시간을 표시하고 읽어 주는 위치";
 
 /* transmit control */
 "Who Can Transmit" = "전송할 수 있는 사람";

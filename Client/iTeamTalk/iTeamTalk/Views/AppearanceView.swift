@@ -90,12 +90,12 @@ struct AppearanceView: View {
             Section {
                 ColorPicker("Not transmitting", selection: $appearance.talkIdleColor, supportsOpacity: false)
                 ColorPicker("Transmitting", selection: $appearance.talkActiveColor, supportsOpacity: false)
-                Button("Swap Talk Button Colors", action: appearance.swapTalkColors)
+                Button("Swap Microphone Button Colors", action: appearance.swapTalkColors)
                 buttonPreview
             } header: {
-                Text("Talk Button")
+                Text("Microphone Button")
             } footer: {
-                Text("Color of the Talk button in each state. Its text is shown in black or white, whichever is easier to read.")
+                Text("Color of the Microphone button in each state. Its text is shown in black or white, whichever is easier to read.")
             }
 
             Section {

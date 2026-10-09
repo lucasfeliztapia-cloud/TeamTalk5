@@ -179,8 +179,14 @@
 /* user accounts */
 "Administrator" = "Administrador";
 
+/* preferences */
+"After the Message" = "Depois da mensagem";
+
 /* channel list */
 "All" = "Tudo";
+
+/* text to speech events */
+"All Announcements" = "Todos os anúncios";
 
 /* all users */
 "All Users" = "Todos os usuários";
@@ -238,6 +244,12 @@
 
 /* preferences */
 "Ascending" = "Crescente";
+
+/* preferences */
+"Ascending goes from A to Z and from fewer users to more" = "Crescente vai de A a Z e de menos para mais usuários";
+
+/* preferences */
+"Ask before leaving the server" = "Perguntar antes de sair do servidor";
 
 /* codec detail */
 "Audio Channels" = "Canais de áudio";
@@ -305,6 +317,9 @@
 
 /* weblogin event */
 "BearWare.dk Web Login failed to authenticate. Check BearWare.dk Web Login in Preferences" = "Erro ao autenticar usando o login bearware.dk. Por favor, verificar em preferências.";
+
+/* preferences */
+"Before the Message" = "Antes da mensagem";
 
 /* codec detail */
 "Bitrate" = "Taxa de bits";
@@ -432,6 +447,9 @@
 /* diagnostics */
 "Clear Log" = "Limpar registro";
 
+/* server list */
+"Clear text" = "Limpar texto";
+
 /* media stream */
 "Close" = "Fechar";
 
@@ -440,6 +458,9 @@
 
 /* appearance */
 "Color of buttons, switches and the selected tab." = "Cor dos botões, das chaves e da aba selecionada.";
+
+/* appearance */
+"Color of the Microphone button in each state. Its text is shown in black or white, whichever is easier to read." = "Cor do botão Microfone em cada estado. O texto aparece em preto ou branco, o que for mais fácil de ler.";
 
 /* appearance */
 "Color of the Speakers button in each state. Its icon is shown in black or white, whichever is easier to read." = "Cor do botão Alto-falantes em cada estado. O ícone aparece em preto ou branco, o que for mais fácil de ler.";
@@ -467,6 +488,9 @@
 
 /* channel list */
 "Confirm" = "Confirmar";
+
+/* preferences */
+"Confirm Before Disconnecting" = "Confirmar antes de desconectar";
 
 /* server list */
 "Connect" = "Conectar";
@@ -551,6 +575,9 @@
 /* connection quality */
 "Data" = "Dados";
 
+/* preferences */
+"Decrement" = "Diminuir";
+
 /* Sound Input */
 "Default" = "Padrão";
 
@@ -581,12 +608,18 @@
 /* serverlist */
 "Delete server from list" = "Excluir servidor da lista";
 
+/* preferences */
+"Descending" = "Decrescente";
+
 /* channel list */
 "Deselect user" = "Desmarcar usuário";
 
 /* preferences
    user detail */
 "Desktop" = "Tela";
+
+/* preferences */
+"Details Position" = "Posição dos detalhes";
 
 /* diagnostics */
 "Diagnostic Log" = "Registro de diagnóstico";
@@ -599,6 +632,9 @@
 
 /* channel list */
 "Disconnect" = "Desconectar";
+
+/* confirmation */
+"Disconnect from the server?" = "Desconectar do servidor?";
 
 /* accessibility hint */
 "Disconnects from the server and goes back to the server list" = "Desconecta do servidor e volta à lista de servidores";
@@ -636,6 +672,9 @@
 /* user accounts */
 "Each change is saved at once and applies the next time this user logs in." = "Cada mudança é salva na hora e vale no próximo login deste usuário.";
 
+/* text to speech events */
+"Each One Its Own" = "Conforme cada anúncio";
+
 /* channel list */
 "Earpiece or Headset" = "Fone do aparelho ou fone de ouvido";
 
@@ -644,6 +683,9 @@
 
 /* channel list */
 "Edit properties" = "Editar propriedades";
+
+/* text to speech events */
+"Enable All Announcements" = "Ativar todos os anúncios";
 
 /* server entry */
 "Encrypted" = "Encriptado";
@@ -816,6 +858,9 @@
 
 /* channel list */
 "Inactive" = "Ausente";
+
+/* preferences */
+"Increment" = "Aumentar";
 
 /* appearance */
 "Interface" = "Interface";
@@ -999,8 +1044,14 @@
 /* text messages */
 "Message" = "Mensagem";
 
+/* preferences */
+"Message Details" = "Detalhes das mensagens";
+
 /* server entry */
 "Message of the Day" = "Mensagem do dia";
+
+/* preferences */
+"Message Only" = "Só a mensagem";
 
 /* appearance */
 "Message Text Size" = "Tamanho do texto das mensagens";
@@ -1013,6 +1064,9 @@
 
 /* diagnostics */
 "Microphone" = "Microfone";
+
+/* appearance */
+"Microphone Button" = "Botão Microfone";
 
 /* preferences */
 "Microphone Gain" = "Volume do microfone";
@@ -1077,7 +1131,13 @@
 "Name" = "Nome";
 
 /* preferences */
+"Name and Time" = "Nome e hora";
+
+/* preferences */
 "Name displayed in channel list" = "Nome mostrado na lista de canais";
+
+/* preferences */
+"Name Only" = "Só o nome";
 
 /* preferences */
 "Neutral" = "Neutro";
@@ -1169,6 +1229,9 @@
 
 /* live activity */
 "Not transmitting" = "Sem transmitir";
+
+/* preferences */
+"Number of Users" = "Número de usuários";
 
 /* media stream */
 "Off" = "Desativado";
@@ -1609,6 +1672,9 @@
 /* preferences */
 "Sort Channels" = "Ordem de canais";
 
+/* preferences */
+"Sort Direction" = "Sentido da ordem";
+
 /* media stream */
 "Sound" = "Som";
 
@@ -1717,6 +1783,9 @@
 "Subscriptions" = "Subscrições";
 
 /* appearance */
+"Swap Microphone Button Colors" = "Trocar as cores do botão Microfone";
+
+/* appearance */
 "Swap Speakers Button Colors" = "Trocar as cores do botão Alto-falantes";
 
 /* appearance */
@@ -1803,6 +1872,9 @@
 /* appearance */
 "Themes" = "Temas";
 
+/* text to speech events */
+"These two settings change every announcement at once. Each one can still be set on its own below." = "Estes dois ajustes alteram todos os anúncios de uma vez. Cada anúncio ainda pode ser ajustado separadamente abaixo.";
+
 /* diagnostics */
 "They need iOS 17 or later" = "Exigem iOS 17 ou posterior";
 
@@ -1823,6 +1895,9 @@
 
 /* connection quality */
 "Time a packet takes to reach the server and come back. Below 100 ms a conversation feels immediate." = "Tempo que um pacote leva para chegar ao servidor e voltar. Abaixo de 100 ms a conversa parece imediata.";
+
+/* preferences */
+"Time Only" = "Só a hora";
 
 /* channel list */
 "Toggle to enable/disable transmission" = "Alternar para ativar / desativar a transmissão";
@@ -1860,8 +1935,14 @@
 /* preferences */
 "Turn off screen when holding phone near ear" = "Desligar a tela ao aproximar o telefone do ouvido";
 
+/* state of the microphone button */
+"Turned off" = "Desativado";
+
 /* diagnostics */
 "Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Desativadas. Ative as Atividades ao Vivo em Ajustes, em TeamTalk.";
+
+/* state of the microphone button */
+"Turned on" = "Ativado";
 
 /* serverlist */
 "Type Join Code" = "Digite o código de acesso";
@@ -2061,11 +2142,17 @@
 /* Sound Devices */
 "WebRTC" = "WebRTC";
 
+/* preferences */
+"What each text message shows besides its text" = "O que cada mensagem de texto mostra além do texto";
+
 /* diagnostics */
 "What the app has been doing, to share when something fails" = "O que o app tem feito, para compartilhar quando algo falhar";
 
 /* diagnostics */
 "What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "O que o app precisa do iPhone. Se algo aqui não estiver certo, é a primeira coisa a corrigir.";
+
+/* preferences */
+"Where the name and the time are shown and read" = "Onde o nome e a hora são mostrados e lidos";
 
 /* transmit control */
 "Who Can Transmit" = "Quem pode transmitir";
