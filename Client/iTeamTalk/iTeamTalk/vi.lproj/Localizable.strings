@@ -268,6 +268,9 @@
    Web Login controller */
 "Authentication" = "Xác thực";
 
+/* microphone mode */
+"Automatic" = "Tự động";
+
 /* preferences */
 "Available" = "Sẵn sàng";
 
@@ -429,6 +432,9 @@
 
 /* preferences */
 "Choose input and output devices" = "Chọn thiết bị đầu vào và đầu ra";
+
+/* sound devices */
+"Choose Microphone Mode" = "Chọn chế độ micrô";
 
 /* user accounts */
 "Choose one or more permissions and then what to do with them. Administrator accounts are not changed." = "Chọn một hoặc nhiều quyền rồi chọn việc cần làm với chúng. Tài khoản quản trị viên không bị thay đổi.";
@@ -1072,6 +1078,9 @@
 
 /* preferences */
 "Microphone Gain" = "Âm lượng Microphone";
+
+/* sound devices */
+"Microphone Mode" = "Chế độ micrô";
 
 /* Sound Devices */
 "Microphone Test" = "Kiểm tra micrô";
@@ -2096,6 +2105,12 @@
 /* Sound Devices */
 "Voice Cleanup" = "Làm sạch giọng nói";
 
+/* microphone mode */
+"Voice Isolation" = "Cô lập giọng nói";
+
+/* sound devices */
+"Voice Isolation removes most of the sound around your voice. iOS lets you choose the mode while the microphone is in use, so join a channel first." = "Cô lập giọng nói loại bỏ phần lớn âm thanh xung quanh giọng của bạn. iOS cho phép chọn chế độ khi micrô đang được sử dụng, vì vậy hãy tham gia một kênh trước.";
+
 /* connection quality */
 "Voice Latency (UDP)" = "Độ trễ giọng nói (UDP)";
 
@@ -2162,6 +2177,9 @@
 
 /* media stream */
 "Whole List" = "Cả danh sách";
+
+/* microphone mode */
+"Wide Spectrum" = "Phổ rộng";
 
 /* diagnostics */
 "Widget and Controls" = "Tiện ích và điều khiển";

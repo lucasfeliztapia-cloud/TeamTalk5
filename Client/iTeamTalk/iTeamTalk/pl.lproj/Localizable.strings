@@ -266,6 +266,9 @@
 /* server entry */
 "Authentication" = "Uwierzytelnianie";
 
+/* microphone mode */
+"Automatic" = "Automatyczny";
+
 /* preferences */
 "Available" = "Dostępny";
 
@@ -427,6 +430,9 @@
 
 /* preferences */
 "Choose input and output devices" = "Wybierz urządzenia wejścia i wyjścia";
+
+/* sound devices */
+"Choose Microphone Mode" = "Wybierz tryb mikrofonu";
 
 /* user accounts */
 "Choose one or more permissions and then what to do with them. Administrator accounts are not changed." = "Wybierz jedno lub więcej uprawnień, a potem co z nimi zrobić. Konta administratorów nie są zmieniane.";
@@ -1069,6 +1075,9 @@
 
 /* preferences */
 "Microphone Gain" = "Wzmocnienie mikrofonu";
+
+/* sound devices */
+"Microphone Mode" = "Tryb mikrofonu";
 
 /* Sound Devices */
 "Microphone Test" = "Test mikrofonu";
@@ -2089,6 +2098,12 @@
 /* Sound Devices */
 "Voice Cleanup" = "Oczyszczanie głosu";
 
+/* microphone mode */
+"Voice Isolation" = "Izolacja głosu";
+
+/* sound devices */
+"Voice Isolation removes most of the sound around your voice. iOS lets you choose the mode while the microphone is in use, so join a channel first." = "Izolacja głosu usuwa większość dźwięków wokół twojego głosu. iOS pozwala wybrać tryb, gdy mikrofon jest w użyciu, więc najpierw dołącz do kanału.";
+
 /* connection quality */
 "Voice Latency (UDP)" = "Opóźnienie głosu (UDP)";
 
@@ -2155,6 +2170,9 @@
 
 /* media stream */
 "Whole List" = "Cała lista";
+
+/* microphone mode */
+"Wide Spectrum" = "Szerokie spektrum";
 
 /* diagnostics */
 "Widget and Controls" = "Widżet i elementy sterujące";

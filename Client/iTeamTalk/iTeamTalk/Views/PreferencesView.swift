@@ -270,10 +270,9 @@ struct PreferencesView: View {
                     }
                     .buttonStyle(.bordered)
                     .accessibilityLabel(Text("Decrement"))
-                    Slider(value: Binding(get: { model.limitText }, set: { model.limittextChanged($0) }),
-                           in: range, step: 1)
-                        .accessibilityLabel(Text("Maximum Text Length"))
-                        .accessibilityValue(Text(verbatim: "\(length)"))
+                    AdjustableSlider(label: Text("Maximum Text Length"), valueText: "\(length)",
+                                     value: Binding(get: { model.limitText }, set: { model.limittextChanged($0) }),
+                                     range: range, step: 1, flick: 10)
                     Button {
                         model.limittextChanged(min(range.upperBound, model.limitText + 1))
                     } label: {
@@ -342,7 +341,8 @@ struct PreferencesView: View {
                 subtitle: Text(verbatim: model.percentSubtitle(model.masterVolumePercent)),
                 value: Binding(get: { model.masterVolumePercent }, set: { model.masterVolumeChanged($0) }),
                 range: 0...100,
-                step: 10,
+                step: 1,
+                flick: 10,
                 displayValue: { model.percentSubtitle($0) }
             )
             sliderWithSubtitle(
@@ -351,6 +351,8 @@ struct PreferencesView: View {
                 value: Binding(get: { model.mediaFileVolumePercent }, set: { model.mediafileVolumeChanged($0) }),
                 range: 0...100,
                 step: 1,
+                flick: 10,
+                hint: Text("Media file vs. voice volume"),
                 displayValue: { "\(Int($0.rounded())) %" }
             )
             sliderWithSubtitle(
@@ -358,7 +360,8 @@ struct PreferencesView: View {
                 subtitle: Text(verbatim: model.percentSubtitle(model.microphoneGainPercent)),
                 value: Binding(get: { model.microphoneGainPercent }, set: { model.microphoneGainChanged($0) }),
                 range: 0...100,
-                step: 10,
+                step: 1,
+                flick: 10,
                 displayValue: { model.percentSubtitle($0) }
             )
             sliderWithSubtitle(
@@ -367,6 +370,7 @@ struct PreferencesView: View {
                 value: Binding(get: { model.voiceActivationLevel }, set: { model.voiceactlevelChanged($0) }),
                 range: 0...Double(VOICEACT_DISABLED),
                 step: 1,
+                readsSubtitle: true,
                 displayValue: { model.voiceActivationValueText($0) }
             )
             NavigationLink {
@@ -535,11 +539,20 @@ struct PreferencesView: View {
         }
     }
 
+    /// For VoiceOver the row is the slider alone, with the title as its label
+    /// and its value said once. As one combined element the value was read
+    /// three or four times, from the text, the slider and the subtitle, and
+    /// "double tap and hold" could not take hold of the thumb.
+    /// `readsSubtitle` keeps the subtitle for VoiceOver when it says more than
+    /// the value.
     private func sliderWithSubtitle(title: LocalizedStringKey,
                                     subtitle: Text,
                                     value: Binding<Double>,
                                     range: ClosedRange<Double>,
                                     step: Double,
+                                    flick: Double? = nil,
+                                    hint: Text? = nil,
+                                    readsSubtitle: Bool = false,
                                     displayValue: @escaping (Double) -> String) -> some View {
         VStack(alignment: .leading, spacing: 4) {
             VStack(alignment: .leading, spacing: 8) {
@@ -550,11 +563,50 @@ struct PreferencesView: View {
                         .font(.body.monospacedDigit())
                         .foregroundStyle(.secondary)
                 }
-                Slider(value: value, in: range, step: step)
+                .accessibilityHidden(true)
+                AdjustableSlider(label: Text(title), valueText: displayValue(value.wrappedValue),
+                                 value: value, range: range, step: step, flick: flick, hint: hint)
             }
             PreferenceSubtitle(subtitle)
+                .accessibilityHidden(!readsSubtitle)
         }
-        .accessibilityElement(children: .combine)
+    }
+}
+
+/// A slider VoiceOver can drag as well as flick. It is an element of its own
+/// with one label and one value, and the point where VoiceOver touches it is
+/// on the thumb, so "double tap and hold" takes hold of it and the finger
+/// moves it step by step. A flick up or down moves it by `flick`.
+struct AdjustableSlider: View {
+    let label: Text
+    let valueText: String
+    @Binding var value: Double
+    let range: ClosedRange<Double>
+    var step: Double = 1
+    var flick: Double?
+    var hint: Text?
+
+    var body: some View {
+        let span = range.upperBound - range.lowerBound
+        let fraction = span > 0 ? min(1, max(0, (value - range.lowerBound) / span)) : 0
+
+        Slider(value: $value, in: range, step: step)
+            .accessibilityLabel(label)
+            .accessibilityValue(Text(verbatim: valueText))
+            .accessibilityHint(hint ?? Text(verbatim: ""))
+            .accessibilityAdjustableAction { direction in
+                let amount = flick ?? step
+                switch direction {
+                case .increment:
+                    value = min(range.upperBound, value + amount)
+                case .decrement:
+                    value = max(range.lowerBound, value - amount)
+                @unknown default:
+                    break
+                }
+            }
+            // the thumb stops half its width short of each end of the track
+            .accessibilityActivationPoint(UnitPoint(x: 0.05 + 0.9 * fraction, y: 0.5))
     }
 }
 

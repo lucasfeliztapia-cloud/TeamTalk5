@@ -266,6 +266,9 @@
 /* server entry */
 "Authentication" = "المصادقة";
 
+/* microphone mode */
+"Automatic" = "تلقائي";
+
 /* preferences */
 "Available" = "متاح";
 
@@ -427,6 +430,9 @@
 
 /* preferences */
 "Choose input and output devices" = "اختر أجهزة الإدخال والإخراج";
+
+/* sound devices */
+"Choose Microphone Mode" = "اختيار نمط الميكروفون";
 
 /* user accounts */
 "Choose one or more permissions and then what to do with them. Administrator accounts are not changed." = "اختر صلاحية واحدة أو أكثر ثم ما تريد فعله بها. حسابات المدير لا تتغير.";
@@ -1069,6 +1075,9 @@
 
 /* preferences */
 "Microphone Gain" = "مستوى صوت الميكروفون";
+
+/* sound devices */
+"Microphone Mode" = "نمط الميكروفون";
 
 /* Sound Devices */
 "Microphone Test" = "اختبار الميكروفون";
@@ -2089,6 +2098,12 @@
 /* Sound Devices */
 "Voice Cleanup" = "تنقية الصوت";
 
+/* microphone mode */
+"Voice Isolation" = "عزل الصوت";
+
+/* sound devices */
+"Voice Isolation removes most of the sound around your voice. iOS lets you choose the mode while the microphone is in use, so join a channel first." = "يزيل عزل الصوت معظم الأصوات المحيطة بصوتك. يسمح iOS باختيار النمط أثناء استخدام الميكروفون، لذا انضم إلى قناة أولًا.";
+
 /* connection quality */
 "Voice Latency (UDP)" = "تأخر الصوت (UDP)";
 
@@ -2155,6 +2170,9 @@
 
 /* media stream */
 "Whole List" = "القائمة كلها";
+
+/* microphone mode */
+"Wide Spectrum" = "النطاق العريض";
 
 /* diagnostics */
 "Widget and Controls" = "الأداة وعناصر التحكم";

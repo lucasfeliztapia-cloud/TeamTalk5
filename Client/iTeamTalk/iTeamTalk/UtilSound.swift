@@ -25,6 +25,22 @@ import Foundation
 import AVFoundation
 import TeamTalkKit
 
+/// The microphone mode of the system, in words. It belongs to the voice
+/// processing of iOS and the user chooses it, in Control Center and while the
+/// microphone is in use: an app can only show it and open that panel.
+func microphoneModeName(_ mode: AVCaptureDevice.MicrophoneMode) -> String {
+    switch mode {
+    case .standard:
+        return String(localized: "Standard", comment: "microphone mode")
+    case .wideSpectrum:
+        return String(localized: "Wide Spectrum", comment: "microphone mode")
+    case .voiceIsolation:
+        return String(localized: "Voice Isolation", comment: "microphone mode")
+    @unknown default:
+        return String(localized: "Automatic", comment: "microphone mode")
+    }
+}
+
 func refVolume(_ percent: Double) -> Int {
     //82.832*EXP(0.0508*x) - 50
     if percent == 0 {

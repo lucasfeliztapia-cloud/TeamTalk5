@@ -55,8 +55,10 @@ struct UserDetailView: View {
                             .font(.body.monospacedDigit())
                             .foregroundStyle(.secondary)
                     }
-                    Slider(value: Binding(get: { model.voiceVolume }, set: { model.voiceVolumeChanged($0) }),
-                           in: 0...100, step: 1)
+                    .accessibilityHidden(true)
+                    AdjustableSlider(label: Text("Voice Volume"), valueText: "\(Int(model.voiceVolume.rounded()))",
+                                     value: Binding(get: { model.voiceVolume }, set: { model.voiceVolumeChanged($0) }),
+                                     range: 0...100, step: 1, flick: 10)
                 }
                 Toggle("Mute Voice", isOn: Binding(
                     get: { model.isVoiceMuted },
@@ -70,8 +72,10 @@ struct UserDetailView: View {
                             .font(.body.monospacedDigit())
                             .foregroundStyle(.secondary)
                     }
-                    Slider(value: Binding(get: { model.mediaVolume }, set: { model.mediaVolumeChanged($0) }),
-                           in: 0...100, step: 1)
+                    .accessibilityHidden(true)
+                    AdjustableSlider(label: Text("Media File Volume"), valueText: "\(Int(model.mediaVolume.rounded()))",
+                                     value: Binding(get: { model.mediaVolume }, set: { model.mediaVolumeChanged($0) }),
+                                     range: 0...100, step: 1, flick: 10)
                 }
                 Toggle("Mute Media File", isOn: Binding(
                     get: { model.isMediaMuted },

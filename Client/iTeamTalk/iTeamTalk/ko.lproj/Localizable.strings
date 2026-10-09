@@ -267,6 +267,9 @@
    Web Login controller */
 "Authentication" = "인증";
 
+/* microphone mode */
+"Automatic" = "자동";
+
 /* preferences */
 "Available" = "대화 가능";
 
@@ -428,6 +431,9 @@
 
 /* preferences */
 "Choose input and output devices" = "입력 및 출력 기기 선택";
+
+/* sound devices */
+"Choose Microphone Mode" = "마이크 모드 선택";
 
 /* user accounts */
 "Choose one or more permissions and then what to do with them. Administrator accounts are not changed." = "권한을 하나 이상 선택한 다음 어떻게 할지 선택하십시오. 관리자 계정은 변경되지 않습니다.";
@@ -1070,6 +1076,9 @@
 
 /* preferences */
 "Microphone Gain" = "마이크 음량";
+
+/* sound devices */
+"Microphone Mode" = "마이크 모드";
 
 /* Sound Devices */
 "Microphone Test" = "마이크 테스트";
@@ -2093,6 +2102,12 @@
 /* Sound Devices */
 "Voice Cleanup" = "음성 정리";
 
+/* microphone mode */
+"Voice Isolation" = "음성 분리";
+
+/* sound devices */
+"Voice Isolation removes most of the sound around your voice. iOS lets you choose the mode while the microphone is in use, so join a channel first." = "음성 분리는 사용자 목소리 주변의 소리를 대부분 제거합니다. iOS는 마이크를 사용하는 동안에만 모드를 선택할 수 있게 하므로 먼저 채널에 입장하십시오.";
+
 /* connection quality */
 "Voice Latency (UDP)" = "음성 지연 시간 (UDP)";
 
@@ -2159,6 +2174,9 @@
 
 /* media stream */
 "Whole List" = "전체 목록";
+
+/* microphone mode */
+"Wide Spectrum" = "와이드 스펙트럼";
 
 /* diagnostics */
 "Widget and Controls" = "위젯 및 제어 항목";

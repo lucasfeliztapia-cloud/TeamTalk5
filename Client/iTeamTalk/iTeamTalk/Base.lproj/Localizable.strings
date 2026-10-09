@@ -268,6 +268,9 @@
    Web Login controller */
 "Authentication" = "Authentication";
 
+/* microphone mode */
+"Automatic" = "Automatic";
+
 /* preferences */
 "Available" = "Available";
 
@@ -429,6 +432,9 @@
 
 /* preferences */
 "Choose input and output devices" = "Choose input and output devices";
+
+/* sound devices */
+"Choose Microphone Mode" = "Choose Microphone Mode";
 
 /* user accounts */
 "Choose one or more permissions and then what to do with them. Administrator accounts are not changed." = "Choose one or more permissions and then what to do with them. Administrator accounts are not changed.";
@@ -1063,6 +1069,9 @@
 
 /* preferences */
 "Microphone Gain" = "Microphone Gain";
+
+/* sound devices */
+"Microphone Mode" = "Microphone Mode";
 
 /* Sound Devices */
 "Microphone Test" = "Microphone Test";
@@ -2081,6 +2090,12 @@
 /* Sound Devices */
 "Voice Cleanup" = "Voice Cleanup";
 
+/* microphone mode */
+"Voice Isolation" = "Voice Isolation";
+
+/* sound devices */
+"Voice Isolation removes most of the sound around your voice. iOS lets you choose the mode while the microphone is in use, so join a channel first." = "Voice Isolation removes most of the sound around your voice. iOS lets you choose the mode while the microphone is in use, so join a channel first.";
+
 /* connection quality */
 "Voice Latency (UDP)" = "Voice Latency (UDP)";
 
@@ -2147,6 +2162,9 @@
 
 /* media stream */
 "Whole List" = "Whole List";
+
+/* microphone mode */
+"Wide Spectrum" = "Wide Spectrum";
 
 /* diagnostics */
 "Widget and Controls" = "Widget and Controls";

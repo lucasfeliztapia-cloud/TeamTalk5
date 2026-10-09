@@ -266,6 +266,9 @@
 /* server entry */
 "Authentication" = "Godkendelse";
 
+/* microphone mode */
+"Automatic" = "Automatisk";
+
 /* preferences */
 "Available" = "Tilgængelig";
 
@@ -427,6 +430,9 @@
 
 /* preferences */
 "Choose input and output devices" = "Vælg ind- og udgangsenheder";
+
+/* sound devices */
+"Choose Microphone Mode" = "Vælg mikrofonfunktion";
 
 /* user accounts */
 "Choose one or more permissions and then what to do with them. Administrator accounts are not changed." = "Vælg en eller flere rettigheder og derefter, hvad der skal ske med dem. Administratorkonti ændres ikke.";
@@ -1069,6 +1075,9 @@
 
 /* preferences */
 "Microphone Gain" = "Mikrofonforstærkning";
+
+/* sound devices */
+"Microphone Mode" = "Mikrofonfunktion";
 
 /* Sound Devices */
 "Microphone Test" = "Mikrofontest";
@@ -2089,6 +2098,12 @@
 /* Sound Devices */
 "Voice Cleanup" = "Stemmerensning";
 
+/* microphone mode */
+"Voice Isolation" = "Stemmeisolering";
+
+/* sound devices */
+"Voice Isolation removes most of the sound around your voice. iOS lets you choose the mode while the microphone is in use, so join a channel first." = "Stemmeisolering fjerner det meste af lyden omkring din stemme. iOS lader dig vælge funktionen, mens mikrofonen er i brug, så deltag først i en kanal.";
+
 /* connection quality */
 "Voice Latency (UDP)" = "Taleforsinkelse (UDP)";
 
@@ -2155,6 +2170,9 @@
 
 /* media stream */
 "Whole List" = "Hele listen";
+
+/* microphone mode */
+"Wide Spectrum" = "Bredt spektrum";
 
 /* diagnostics */
 "Widget and Controls" = "Widget og betjeningsknapper";

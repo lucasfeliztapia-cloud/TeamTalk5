@@ -267,6 +267,9 @@
    Web Login controller */
 "Authentication" = "Kimlik Doğrulama";
 
+/* microphone mode */
+"Automatic" = "Otomatik";
+
 /* preferences */
 "Available" = "Uygun";
 
@@ -428,6 +431,9 @@
 
 /* preferences */
 "Choose input and output devices" = "Giriş ve çıkış aygıtlarını seçin";
+
+/* sound devices */
+"Choose Microphone Mode" = "Mikrofon Modunu Seç";
 
 /* user accounts */
 "Choose one or more permissions and then what to do with them. Administrator accounts are not changed." = "Bir veya daha fazla izin seçin, ardından bunlarla ne yapılacağını belirleyin. Yönetici hesapları değiştirilmez.";
@@ -1070,6 +1076,9 @@
 
 /* preferences */
 "Microphone Gain" = "Mikrofon Kazancı";
+
+/* sound devices */
+"Microphone Mode" = "Mikrofon Modu";
 
 /* Sound Devices */
 "Microphone Test" = "Mikrofon Testi";
@@ -2093,6 +2102,12 @@
 /* Sound Devices */
 "Voice Cleanup" = "Ses Temizleme";
 
+/* microphone mode */
+"Voice Isolation" = "Ses İzolasyonu";
+
+/* sound devices */
+"Voice Isolation removes most of the sound around your voice. iOS lets you choose the mode while the microphone is in use, so join a channel first." = "Ses İzolasyonu, sesinizin çevresindeki seslerin çoğunu giderir. iOS, modu mikrofon kullanılırken seçmenize izin verir; bu yüzden önce bir kanala katılın.";
+
 /* connection quality */
 "Voice Latency (UDP)" = "Ses Gecikmesi (UDP)";
 
@@ -2159,6 +2174,9 @@
 
 /* media stream */
 "Whole List" = "Tüm Liste";
+
+/* microphone mode */
+"Wide Spectrum" = "Geniş Spektrum";
 
 /* diagnostics */
 "Widget and Controls" = "Araç Takımı ve Denetimler";

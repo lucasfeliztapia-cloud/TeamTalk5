@@ -266,6 +266,9 @@
 /* server entry */
 "Authentication" = "Аутентификация";
 
+/* microphone mode */
+"Automatic" = "Автоматически";
+
 /* preferences */
 "Available" = "Доступен";
 
@@ -427,6 +430,9 @@
 
 /* preferences */
 "Choose input and output devices" = "Выберите устройства ввода и вывода";
+
+/* sound devices */
+"Choose Microphone Mode" = "Выбрать режим микрофона";
 
 /* user accounts */
 "Choose one or more permissions and then what to do with them. Administrator accounts are not changed." = "Выберите одно или несколько прав, а затем что с ними сделать. Учётные записи администраторов не изменяются.";
@@ -1069,6 +1075,9 @@
 
 /* preferences */
 "Microphone Gain" = "Громкость Микрофона";
+
+/* sound devices */
+"Microphone Mode" = "Режим микрофона";
 
 /* Sound Devices */
 "Microphone Test" = "Проверка микрофона";
@@ -2089,6 +2098,12 @@
 /* Sound Devices */
 "Voice Cleanup" = "Очистка голоса";
 
+/* microphone mode */
+"Voice Isolation" = "Изоляция голоса";
+
+/* sound devices */
+"Voice Isolation removes most of the sound around your voice. iOS lets you choose the mode while the microphone is in use, so join a channel first." = "Изоляция голоса убирает большую часть звуков вокруг вашего голоса. iOS позволяет выбрать режим, пока микрофон используется, поэтому сначала присоединитесь к каналу.";
+
 /* connection quality */
 "Voice Latency (UDP)" = "Задержка голоса (UDP)";
 
@@ -2155,6 +2170,9 @@
 
 /* media stream */
 "Whole List" = "Весь список";
+
+/* microphone mode */
+"Wide Spectrum" = "Широкий спектр";
 
 /* diagnostics */
 "Widget and Controls" = "Виджет и элементы управления";

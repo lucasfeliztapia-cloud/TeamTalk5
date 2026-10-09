@@ -164,6 +164,11 @@ struct MediaStreamView: View {
                 )
                 .accessibilityLabel("Position")
                 .accessibilityValue(model.spokenPositionText)
+                // on the thumb, so VoiceOver can drag it
+                .accessibilityActivationPoint(UnitPoint(
+                    x: 0.05 + 0.9 * min(1, max(0, model.positionMSec / max(1000, model.durationMSec))),
+                    y: 0.5
+                ))
             }
 
             Button("Back 1 Minute") {
@@ -195,9 +200,8 @@ struct MediaStreamView: View {
                 }
                 .accessibilityHidden(true)
 
-                Slider(value: $model.volumePercent, in: 0...300, step: 10)
-                    .accessibilityLabel("Volume")
-                    .accessibilityValue(model.volumeText)
+                AdjustableSlider(label: Text("Volume"), valueText: model.volumeText,
+                                 value: $model.volumePercent, range: 0...300, step: 1, flick: 10)
             }
 
             Button(action: model.togglePreview) {

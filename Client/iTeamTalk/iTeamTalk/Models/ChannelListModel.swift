@@ -911,7 +911,7 @@ final class ChannelListModel: ObservableObject {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 let client = TeamTalkClient.shared
                 guard client.isVoiceTransmitting else { return }
-                logDiagnostic("TX check: input level \(client.soundInputLevel), gain \(client.soundInputGainLevel), microphone \(microphonePermission().rawValue)")
+                logDiagnostic("TX check: input level \(client.soundInputLevel), gain \(client.soundInputGainLevel), microphone \(microphonePermission().rawValue), mode chosen \(AVCaptureDevice.preferredMicrophoneMode.rawValue) active \(AVCaptureDevice.activeMicrophoneMode.rawValue)")
             }
         }
     }

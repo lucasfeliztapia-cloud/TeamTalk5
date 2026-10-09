@@ -267,6 +267,9 @@
    Web Login controller */
 "Authentication" = "身份验证";
 
+/* microphone mode */
+"Automatic" = "自动";
+
 /* preferences */
 "Available" = "在线";
 
@@ -428,6 +431,9 @@
 
 /* preferences */
 "Choose input and output devices" = "选取输入和输出设备";
+
+/* sound devices */
+"Choose Microphone Mode" = "选取麦克风模式";
 
 /* user accounts */
 "Choose one or more permissions and then what to do with them. Administrator accounts are not changed." = "选取一项或多项权限，然后选择如何处理。管理员账户不会更改。";
@@ -1070,6 +1076,9 @@
 
 /* preferences */
 "Microphone Gain" = "麦克风增益";
+
+/* sound devices */
+"Microphone Mode" = "麦克风模式";
 
 /* Sound Devices */
 "Microphone Test" = "麦克风测试";
@@ -2093,6 +2102,12 @@
 /* Sound Devices */
 "Voice Cleanup" = "语音净化";
 
+/* microphone mode */
+"Voice Isolation" = "语音突显";
+
+/* sound devices */
+"Voice Isolation removes most of the sound around your voice. iOS lets you choose the mode while the microphone is in use, so join a channel first." = "“语音突显”会去除您声音周围的大部分声音。iOS 仅在麦克风使用期间允许选取模式，因此请先加入一个频道。";
+
 /* connection quality */
 "Voice Latency (UDP)" = "语音延迟 (UDP)";
 
@@ -2159,6 +2174,9 @@
 
 /* media stream */
 "Whole List" = "整个列表";
+
+/* microphone mode */
+"Wide Spectrum" = "宽谱";
 
 /* diagnostics */
 "Widget and Controls" = "小组件和控制项";

@@ -21,10 +21,12 @@
  *
  */
 
+import AVFoundation
 import SwiftUI
 
 struct SoundDevicesView: View {
     @StateObject private var model = SoundDevicesModel()
+    @State private var microphoneMode = microphoneModeName(AVCaptureDevice.preferredMicrophoneMode)
 
     var body: some View {
         Form {
@@ -57,6 +59,19 @@ struct SoundDevicesView: View {
                 Text("Voice Cleanup")
             } footer: {
                 Text("iOS voice processing cancels echo, reduces noise and levels the volume. WebRTC reduces noise and levels the volume but does not cancel echo, so use it with headphones.")
+            }
+
+            if model.voiceCleanup == 1 {
+                Section {
+                    LabeledContent("Microphone Mode", value: microphoneMode)
+                    Button("Choose Microphone Mode") {
+                        AVCaptureDevice.showSystemUserInterface(.microphoneModes)
+                    }
+                } header: {
+                    Text("Microphone Mode")
+                } footer: {
+                    Text("Voice Isolation removes most of the sound around your voice. iOS lets you choose the mode while the microphone is in use, so join a channel first.")
+                }
             }
 
             Section {
@@ -92,6 +107,10 @@ struct SoundDevicesView: View {
             }
         }
         .navigationTitle("Setup Sound Devices")
+        // the mode is chosen in Control Center: read it again on the way back
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
+            microphoneMode = microphoneModeName(AVCaptureDevice.preferredMicrophoneMode)
+        }
         .onDisappear(perform: model.stopMicrophoneTest)
     }
 }

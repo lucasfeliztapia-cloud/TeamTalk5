@@ -25,34 +25,31 @@ import AVFoundation
 import SwiftUI
 
 struct SpeechListView: View {
-    private let sections: [String]
+    // Read once and away from the main thread. Asking the system for its
+    // voices is slow, and it was asked once per language every time the list
+    // was drawn: with VoiceOver on, entering the screen or choosing a voice
+    // held everything for seconds.
+    @State private var sections = [SpeechVoiceSection]()
+    @State private var isLoading = true
     @State private var selectedVoiceIdentifier = UserDefaults.standard.string(forKey: PREF_TTSEVENT_VOICEID)
-
-    init() {
-        var languages = [AVSpeechSynthesisVoice.currentLanguageCode()]
-        for voice in AVSpeechSynthesisVoice.speechVoices() where !languages.contains(voice.language) {
-            languages.append(voice.language)
-        }
-        sections = languages
-    }
 
     var body: some View {
         List {
-            ForEach(sections, id: \.self) { language in
-                Section(language) {
-                    ForEach(voices(for: language), id: \.identifier) { voice in
+            ForEach(sections) { section in
+                Section(section.language) {
+                    ForEach(section.voices) { voice in
                         Button {
                             select(voice)
                         } label: {
                             LabeledContent {
-                                if selectedVoiceIdentifier == voice.identifier {
+                                if selectedVoiceIdentifier == voice.id {
                                     Text("Selected")
                                         .foregroundStyle(.secondary)
                                 }
                             } label: {
                                 VStack(alignment: .leading, spacing: 2) {
                                     Text(voice.name)
-                                    if let name = localName(for: language) {
+                                    if let name = section.localName {
                                         Text(name)
                                             .font(.footnote)
                                             .foregroundStyle(.secondary)
@@ -65,22 +62,62 @@ struct SpeechListView: View {
                 }
             }
         }
+        .overlay {
+            if isLoading {
+                ProgressView()
+            }
+        }
         .navigationTitle("Text-to-Speech Voice")
+        .task {
+            guard sections.isEmpty else { return }
+            sections = await Task.detached(priority: .userInitiated) {
+                SpeechVoiceSection.all()
+            }.value
+            isLoading = false
+        }
     }
 
-    private func voices(for language: String) -> [AVSpeechSynthesisVoice] {
-        AVSpeechSynthesisVoice.speechVoices().filter { $0.language == language }
-    }
-
-    private func localName(for language: String) -> String? {
-        (Locale.current as NSLocale).displayName(forKey: NSLocale.Key.identifier, value: language)
-    }
-
-    private func select(_ voice: AVSpeechSynthesisVoice) {
-        selectedVoiceIdentifier = voice.identifier
-        UserDefaults.standard.setValue(voice.identifier, forKey: PREF_TTSEVENT_VOICEID)
+    private func select(_ voice: SpeechVoice) {
+        selectedVoiceIdentifier = voice.id
+        UserDefaults.standard.setValue(voice.id, forKey: PREF_TTSEVENT_VOICEID)
 
         let utterance = String(format: String(localized: "You have selected %@", comment: "speech"), voice.name)
         newUtterance(utterance)
+    }
+}
+
+private struct SpeechVoice: Identifiable, Sendable {
+    let id: String
+    let name: String
+}
+
+private struct SpeechVoiceSection: Identifiable, Sendable {
+    let language: String
+    let localName: String?
+    let voices: [SpeechVoice]
+
+    var id: String {
+        language
+    }
+
+    /// Every voice of the system by language, the language of the device first
+    static func all() -> [SpeechVoiceSection] {
+        let current = AVSpeechSynthesisVoice.currentLanguageCode()
+        var languages = [current]
+        var voices = [String: [SpeechVoice]]()
+        for voice in AVSpeechSynthesisVoice.speechVoices() {
+            if voices[voice.language] == nil && voice.language != current {
+                languages.append(voice.language)
+            }
+            voices[voice.language, default: []].append(SpeechVoice(id: voice.identifier, name: voice.name))
+        }
+        let locale = Locale.current as NSLocale
+        return languages.map { language in
+            SpeechVoiceSection(
+                language: language,
+                localName: locale.displayName(forKey: NSLocale.Key.identifier, value: language),
+                voices: voices[language] ?? []
+            )
+        }
     }
 }

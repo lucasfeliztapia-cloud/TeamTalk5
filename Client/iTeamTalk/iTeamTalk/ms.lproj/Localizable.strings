@@ -267,6 +267,9 @@
    Web Login controller */
 "Authentication" = "Pengesahan";
 
+/* microphone mode */
+"Automatic" = "Automatik";
+
 /* preferences */
 "Available" = "Tersedia";
 
@@ -428,6 +431,9 @@
 
 /* preferences */
 "Choose input and output devices" = "Pilih peranti input dan output";
+
+/* sound devices */
+"Choose Microphone Mode" = "Pilih Mod Mikrofon";
 
 /* user accounts */
 "Choose one or more permissions and then what to do with them. Administrator accounts are not changed." = "Pilih satu atau lebih kebenaran, kemudian apa yang perlu dibuat dengannya. Akaun pentadbir tidak diubah.";
@@ -1070,6 +1076,9 @@
 
 /* preferences */
 "Microphone Gain" = "Gain Mikrofon";
+
+/* sound devices */
+"Microphone Mode" = "Mod Mikrofon";
 
 /* Sound Devices */
 "Microphone Test" = "Ujian Mikrofon";
@@ -2093,6 +2102,12 @@
 /* Sound Devices */
 "Voice Cleanup" = "Pembersihan Suara";
 
+/* microphone mode */
+"Voice Isolation" = "Pengasingan Suara";
+
+/* sound devices */
+"Voice Isolation removes most of the sound around your voice. iOS lets you choose the mode while the microphone is in use, so join a channel first." = "Pengasingan Suara membuang kebanyakan bunyi di sekeliling suara anda. iOS membenarkan anda memilih mod semasa mikrofon sedang digunakan, jadi masuk ke saluran dahulu.";
+
 /* connection quality */
 "Voice Latency (UDP)" = "Kependaman Suara (UDP)";
 
@@ -2159,6 +2174,9 @@
 
 /* media stream */
 "Whole List" = "Seluruh Senarai";
+
+/* microphone mode */
+"Wide Spectrum" = "Spektrum Luas";
 
 /* diagnostics */
 "Widget and Controls" = "Widget dan Kawalan";

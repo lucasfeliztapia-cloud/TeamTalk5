@@ -266,6 +266,9 @@
 /* server entry */
 "Authentication" = "Authenticatie";
 
+/* microphone mode */
+"Automatic" = "Automatisch";
+
 /* preferences */
 "Available" = "Beschikbaar";
 
@@ -427,6 +430,9 @@
 
 /* preferences */
 "Choose input and output devices" = "Kies invoer- en uitvoerapparaten";
+
+/* sound devices */
+"Choose Microphone Mode" = "Kies microfoonmodus";
 
 /* user accounts */
 "Choose one or more permissions and then what to do with them. Administrator accounts are not changed." = "Kies een of meer rechten en daarna wat ermee moet gebeuren. Beheerdersaccounts worden niet gewijzigd.";
@@ -1069,6 +1075,9 @@
 
 /* preferences */
 "Microphone Gain" = "Microfoonniveau";
+
+/* sound devices */
+"Microphone Mode" = "Microfoonmodus";
 
 /* Sound Devices */
 "Microphone Test" = "Microfoontest";
@@ -2089,6 +2098,12 @@
 /* Sound Devices */
 "Voice Cleanup" = "Spraakopschoning";
 
+/* microphone mode */
+"Voice Isolation" = "Stemisolatie";
+
+/* sound devices */
+"Voice Isolation removes most of the sound around your voice. iOS lets you choose the mode while the microphone is in use, so join a channel first." = "Stemisolatie verwijdert het meeste geluid rond je stem. iOS laat je de modus kiezen terwijl de microfoon in gebruik is: ga dus eerst een kanaal binnen.";
+
 /* connection quality */
 "Voice Latency (UDP)" = "Vertraging van spraak (UDP)";
 
@@ -2155,6 +2170,9 @@
 
 /* media stream */
 "Whole List" = "Hele lijst";
+
+/* microphone mode */
+"Wide Spectrum" = "Breed spectrum";
 
 /* diagnostics */
 "Widget and Controls" = "Widget en regelaars";

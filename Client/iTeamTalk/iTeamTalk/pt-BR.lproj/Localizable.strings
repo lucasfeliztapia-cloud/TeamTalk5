@@ -267,6 +267,9 @@
    Web Login controller */
 "Authentication" = "Autenticação";
 
+/* microphone mode */
+"Automatic" = "Automático";
+
 /* preferences */
 "Available" = "Disponível";
 
@@ -428,6 +431,9 @@
 
 /* preferences */
 "Choose input and output devices" = "Escolha os dispositivos de entrada e saída";
+
+/* sound devices */
+"Choose Microphone Mode" = "Escolher modo do microfone";
 
 /* user accounts */
 "Choose one or more permissions and then what to do with them. Administrator accounts are not changed." = "Escolha uma ou mais permissões e depois o que fazer com elas. As contas de administrador não são alteradas.";
@@ -1070,6 +1076,9 @@
 
 /* preferences */
 "Microphone Gain" = "Volume do microfone";
+
+/* sound devices */
+"Microphone Mode" = "Modo do Microfone";
 
 /* Sound Devices */
 "Microphone Test" = "Teste de microfone";
@@ -2093,6 +2102,12 @@
 /* Sound Devices */
 "Voice Cleanup" = "Limpeza de voz";
 
+/* microphone mode */
+"Voice Isolation" = "Isolamento de Voz";
+
+/* sound devices */
+"Voice Isolation removes most of the sound around your voice. iOS lets you choose the mode while the microphone is in use, so join a channel first." = "O Isolamento de Voz remove a maior parte do som ao redor da sua voz. O iOS permite escolher o modo enquanto o microfone está em uso; por isso, entre primeiro em um canal.";
+
 /* connection quality */
 "Voice Latency (UDP)" = "Latência de voz (UDP)";
 
@@ -2159,6 +2174,9 @@
 
 /* media stream */
 "Whole List" = "Lista inteira";
+
+/* microphone mode */
+"Wide Spectrum" = "Espectro Amplo";
 
 /* diagnostics */
 "Widget and Controls" = "Widget e controles";
