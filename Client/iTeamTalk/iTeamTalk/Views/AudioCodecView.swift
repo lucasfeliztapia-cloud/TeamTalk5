@@ -102,7 +102,7 @@ struct AudioCodecView: View {
                                  valueText: String(localized: "\(Int(model.opusBitrate.rounded())) KB/s"),
                                  value: $model.opusBitrate,
                                  range: Double(OPUS_MIN_BITRATE) / 1000.0...Double(OPUS_MAX_BITRATE) / 1000.0,
-                                 step: 1, flick: 8)
+                                 step: 1)
             }
             Toggle("Variable Bitrate", isOn: $model.opusVBR)
             Toggle("DTX", isOn: $model.opusDTX)
@@ -200,7 +200,7 @@ struct AudioCodecView: View {
                                  valueText: String(localized: "\(Int(model.speexVBRBitrate.rounded())) KB/s"),
                                  value: $model.speexVBRBitrate,
                                  range: 0...Double(SPEEX_UWB_MAX_BITRATE) / 1000.0,
-                                 step: 1, flick: 2)
+                                 step: 1)
             }
             Toggle("DTX", isOn: $model.speexVBRDTX)
             Stepper(value: $model.speexVBRTransmitInterval, in: 20...500, step: 20) {

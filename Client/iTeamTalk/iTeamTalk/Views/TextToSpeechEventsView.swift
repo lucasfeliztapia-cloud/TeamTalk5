@@ -32,7 +32,8 @@ struct TextToSpeechEventsView: View {
         TextToSpeechEventRow(preferenceKey: PREF_TTSEVENT_LEFTCHAN, defaultValue: true, title: "User leaves channel", subtitle: "Announce user leaving channel"),
         TextToSpeechEventRow(preferenceKey: PREF_TTSEVENT_CONLOST, defaultValue: true, title: "Connection lost", subtitle: "Announce lost server connection"),
         TextToSpeechEventRow(preferenceKey: PREF_TTSEVENT_TEXTMSG, defaultValue: false, title: "Private Text Message", subtitle: "Announce content of text message"),
-        TextToSpeechEventRow(preferenceKey: PREF_TTSEVENT_CHANTEXTMSG, defaultValue: false, title: "Channel Text Message", subtitle: "Announce content of text message")
+        TextToSpeechEventRow(preferenceKey: PREF_TTSEVENT_CHANTEXTMSG, defaultValue: false, title: "Channel Text Message", subtitle: "Announce content of text message"),
+        TextToSpeechEventRow(preferenceKey: PREF_TTSEVENT_TYPING, defaultValue: true, title: "User Is Typing", subtitle: "Announce when a user is typing a private message to you")
     ]
 
     // what the announcements have in common, read again whenever one changes

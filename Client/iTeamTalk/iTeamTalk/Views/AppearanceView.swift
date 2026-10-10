@@ -25,6 +25,17 @@ import SwiftUI
 import UniformTypeIdentifiers
 
 struct AppearanceView: View {
+    private var colorSchemeExplanation: LocalizedStringKey {
+        switch appearance.colorSchemeIndex {
+        case 1:
+            return "The app is always light"
+        case 2:
+            return "The app is always dark"
+        default:
+            return "The app follows the light or dark mode of the system"
+        }
+    }
+
     @ObservedObject private var appearance = AppearanceModel.shared
     @State private var sharedFile: SharedFile?
     @State private var showingImporter = false
@@ -121,10 +132,13 @@ struct AppearanceView: View {
             }
 
             Section {
-                Picker("Light or Dark", selection: $appearance.colorSchemeIndex) {
-                    Text("Same as the System").tag(0)
-                    Text("Always Light").tag(1)
-                    Text("Always Dark").tag(2)
+                VStack(alignment: .leading, spacing: 4) {
+                    Picker("Light or Dark", selection: $appearance.colorSchemeIndex) {
+                        Text("Same as the System").tag(0)
+                        Text("Always Light").tag(1)
+                        Text("Always Dark").tag(2)
+                    }
+                    PreferenceSubtitle(colorSchemeExplanation)
                 }
                 Button("Apply High Contrast Theme", action: appearance.applyHighContrastTheme)
                 Button("Apply Pure Dark Theme", action: appearance.applyPureDarkTheme)

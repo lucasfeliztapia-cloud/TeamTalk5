@@ -28,6 +28,17 @@ struct SoundDevicesView: View {
     @StateObject private var model = SoundDevicesModel()
     @State private var microphoneMode = microphoneModeName(AVCaptureDevice.preferredMicrophoneMode)
 
+    private var voiceCleanupExplanation: LocalizedStringKey {
+        switch model.voiceCleanup {
+        case 1:
+            return "iOS cancels echo, reduces noise and levels the volume"
+        case 2:
+            return "WebRTC reduces noise and levels the volume but does not cancel echo, so use it with headphones"
+        default:
+            return "The microphone is sent as it is, with no noise reduction and no echo cancellation"
+        }
+    }
+
     var body: some View {
         Form {
             Section("General") {
@@ -58,7 +69,7 @@ struct SoundDevicesView: View {
             } header: {
                 Text("Voice Cleanup")
             } footer: {
-                Text("iOS voice processing cancels echo, reduces noise and levels the volume. WebRTC reduces noise and levels the volume but does not cancel echo, so use it with headphones.")
+                Text(voiceCleanupExplanation)
             }
 
             if model.voiceCleanup == 1 {

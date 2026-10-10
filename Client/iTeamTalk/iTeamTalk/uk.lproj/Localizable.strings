@@ -13,6 +13,15 @@
 /* file list */
 "%@ downloaded" = "%@ завантажено";
 
+/* interception */
+"%@ has stopped intercepting you: %@" = "%@ більше не перехоплює вас: %@";
+
+/* interception */
+"%@ is now intercepting you: %@" = "%@ тепер перехоплює вас: %@";
+
+/* TTS EVENT */
+"%@ is typing" = "%@ пише";
+
 /* log entry */
 "%@ joined channel" = "%@ тепер у каналі";
 
@@ -221,6 +230,9 @@
 /* preferences */
 "Announce user logged out of server" = "Оголошувати вихід користувача з сервера";
 
+/* text to speech events */
+"Announce when a user is typing a private message to you" = "Оголошувати, коли користувач пише вам приватне повідомлення";
+
 /* text to speech */
 "Announcements" = "Оголошення";
 
@@ -406,6 +418,12 @@
 
 /* channel list */
 "Channels" = "Канали";
+
+/* preferences */
+"Channels are sorted by name" = "Канали сортуються за назвою";
+
+/* preferences */
+"Channels are sorted by the number of users in them" = "Канали сортуються за кількістю користувачів";
 
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "Вибирайте, лише якщо на сервері увімкнено вебавтентифікацію BearWare.dk";
@@ -677,6 +695,18 @@
 /* user accounts */
 "Each change is saved at once and applies the next time this user logs in." = "Кожна зміна зберігається одразу і починає діяти з наступного входу цього користувача.";
 
+/* preferences */
+"Each message shows its text alone, and the name heads each group of messages" = "Кожне повідомлення показує лише текст, а ім'я стоїть над кожною групою повідомлень";
+
+/* preferences */
+"Each message shows when it was sent, and the name heads each group of messages" = "Кожне повідомлення показує час надсилання, а ім'я стоїть над кожною групою повідомлень";
+
+/* preferences */
+"Each message shows who sent it" = "Кожне повідомлення показує відправника";
+
+/* preferences */
+"Each message shows who sent it and when" = "Кожне повідомлення показує відправника й час";
+
 /* text to speech events */
 "Each One Its Own" = "У кожного своє";
 
@@ -819,6 +849,18 @@
 "Frame Size" = "Розмір кадру";
 
 /* preferences */
+"From A to Z" = "Від А до Я";
+
+/* preferences */
+"From fewer users to more" = "Від меншої кількості користувачів до більшої";
+
+/* preferences */
+"From more users to fewer" = "Від більшої кількості користувачів до меншої";
+
+/* preferences */
+"From Z to A" = "Від Я до А";
+
+/* preferences */
 "Gender" = "Стать";
 
 /* preferences
@@ -827,6 +869,9 @@
 
 /* user accounts */
 "Give to Every Account" = "Надати всім обліковим записам";
+
+/* preferences */
+"Go to the Newest Message" = "Переходити до найновішого повідомлення";
 
 /* channel list */
 "Go to Their Channel" = "Перейти до його каналу";
@@ -867,11 +912,17 @@
 /* preferences */
 "Increment" = "Збільшити";
 
+/* sound events */
+"Interception" = "Перехоплення";
+
 /* appearance */
 "Interface" = "Інтерфейс";
 
 /* appearance */
 "Interface Color" = "Колір інтерфейсу";
+
+/* sound devices */
+"iOS cancels echo, reduces noise and levels the volume" = "iOS пригнічує відлуння, зменшує шум і вирівнює гучність";
 
 /* Sound Devices */
 "iOS Voice Processing" = "Обробка голосу iOS";
@@ -929,6 +980,9 @@
 
 /* accessibility hint */
 "Joins the channel that is shown" = "Приєднується до показаного каналу";
+
+/* preferences */
+"Keep the Position" = "Залишатися на місці";
 
 /* keyboard shortcuts */
 "Key" = "Клавіша";
@@ -1239,6 +1293,12 @@
 "Not transmitting" = "Не передає";
 
 /* preferences */
+"Notifications" = "Сповіщення";
+
+/* preferences */
+"Notifications in the Background" = "Сповіщення у фоновому режимі";
+
+/* preferences */
 "Number of Users" = "Кількість користувачів";
 
 /* media stream */
@@ -1292,6 +1352,24 @@
 /* user accounts */
 "Other" = "Інше";
 
+/* preferences */
+"Other users see that you have a question" = "Інші користувачі бачать, що у вас є запитання";
+
+/* preferences */
+"Other users see you as available" = "Інші користувачі бачать, що ви доступні";
+
+/* preferences */
+"Other users see you as away" = "Інші користувачі бачать, що ви відійшли";
+
+/* preferences */
+"Other users see you with the female icon" = "Інші користувачі бачать вас із жіночим значком";
+
+/* preferences */
+"Other users see you with the male icon" = "Інші користувачі бачать вас із чоловічим значком";
+
+/* preferences */
+"Other users see you with the neutral icon" = "Інші користувачі бачать вас із нейтральним значком";
+
 /* connection quality */
 "Packet Loss" = "Втрата пакетів";
 
@@ -1327,11 +1405,17 @@
 /* sound events */
 "Play sound when a file is uploaded to the channel" = "Відтворювати звук, коли файл надсилають до каналу";
 
+/* sound events */
+"Play sound when a user is typing a private message to you" = "Звук, коли користувач пише вам приватне повідомлення";
+
 /* preferences */
 "Play sound when a user joins the channel" = "Звук при вході користувача до каналу";
 
 /* preferences */
 "Play sound when a user leaves the channel" = "Звук при виході користувача з каналу";
+
+/* sound events */
+"Play sound when a user starts or stops intercepting you" = "Звук, коли користувач починає або припиняє перехоплювати вас";
 
 /* preferences */
 "Play sound when broadcast text message is received" = "Звук при отриманні загального повідомлення";
@@ -1637,6 +1721,9 @@
 "Shortcuts work with an external keyboard while connected to a server. A key without a modifier does nothing while you are typing a message." = "Сполучення клавіш працюють із зовнішньою клавіатурою, поки ви під'єднані до сервера. Клавіша без модифікатора нічого не робить, поки ви набираєте повідомлення.";
 
 /* preferences */
+"Show a notification when a text message arrives while the app is not in front" = "Показувати сповіщення, коли надходить текстове повідомлення, а програма не на передньому плані";
+
+/* preferences */
 "Show in Server List" = "Показувати у списку серверів";
 
 /* preferences */
@@ -1815,6 +1902,9 @@
 /* channel list */
 "TeamTalk has no access to the microphone. Turn it on in Settings, under TeamTalk, and try again." = "TeamTalk не має доступу до мікрофона. Увімкніть його в Параметрах, у розділі TeamTalk, і спробуйте знову.";
 
+/* preferences */
+"TeamTalk is not allowed to show notifications. Turn them on in Settings, under TeamTalk." = "TeamTalk не має дозволу показувати сповіщення. Увімкніть їх у Параметрах, у розділі TeamTalk.";
+
 /* server list */
 "TeamTalk Servers" = "Сервери TeamTalk";
 
@@ -1851,8 +1941,20 @@
 /* user accounts */
 "The account could not be saved" = "Не вдалося зберегти обліковий запис";
 
+/* appearance */
+"The app follows the light or dark mode of the system" = "Програма дотримується світлого або темного режиму системи";
+
+/* appearance */
+"The app is always dark" = "Програма завжди темна";
+
+/* appearance */
+"The app is always light" = "Програма завжди світла";
+
 /* backup */
 "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "Резервна копія містить усі налаштування і список серверів разом із паролями. Зберігайте файл у надійному місці.";
+
+/* media stream */
+"The current file starts again every time it ends" = "Поточний файл починається знову щоразу, коли закінчується";
 
 /* diagnostics */
 "The log is empty" = "Журнал порожній";
@@ -1862,6 +1964,15 @@
 
 /* appearance */
 "The messages can have a text size of their own, and the server events a font of their own." = "Повідомлення можуть мати власний розмір тексту, а події сервера власний шрифт.";
+
+/* sound devices */
+"The microphone is sent as it is, with no noise reduction and no echo cancellation" = "Мікрофон передається як є, без зменшення шуму та без пригнічення відлуння";
+
+/* preferences */
+"The name and the time go after the text of the message" = "Ім'я та час ідуть після тексту повідомлення";
+
+/* preferences */
+"The name and the time go before the text of the message" = "Ім'я та час ідуть перед текстом повідомлення";
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "Швидкість мовлення %.1f";
@@ -2020,6 +2131,9 @@
 /* user detail */
 "User ID" = "ID користувача";
 
+/* sound and speech events */
+"User Is Typing" = "Користувач пише";
+
 /* preferences */
 "User Joins Channel" = "Користувач приєднується до каналу";
 
@@ -2122,8 +2236,14 @@
 /* text to speech events */
 "VoiceOver" = "VoiceOver";
 
+/* preferences */
+"VoiceOver moves to each message as it arrives or as you send it" = "VoiceOver переходить до кожного повідомлення, коли воно надходить або коли ви його надсилаєте";
+
 /* text to speech events */
 "VoiceOver speaks an announcement with its own voice and shows it in braille. With VoiceOver off, the voice of TeamTalk speaks them all." = "VoiceOver вимовляє оголошення власним голосом і показує його шрифтом Брайля. Коли VoiceOver вимкнено, усі оголошення вимовляє голос TeamTalk.";
+
+/* preferences */
+"VoiceOver stays on the message you are reading when another one arrives" = "VoiceOver залишається на повідомленні, яке ви читаєте, коли надходить інше";
 
 /* codec detail */
 "VoIP" = "VoIP";
@@ -2153,6 +2273,9 @@
 /* Sound Devices */
 "WebRTC" = "WebRTC";
 
+/* sound devices */
+"WebRTC reduces noise and levels the volume but does not cancel echo, so use it with headphones" = "WebRTC зменшує шум і вирівнює гучність, але не пригнічує відлуння, тож використовуйте його з навушниками";
+
 /* preferences */
 "What each text message shows besides its text" = "Що показує кожне текстове повідомлення, крім тексту";
 
@@ -2161,6 +2284,15 @@
 
 /* diagnostics */
 "What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Що застосунку потрібно від iPhone. Якщо тут щось не так, це перше, що слід виправити.";
+
+/* media stream */
+"When a file ends the next one starts, and after the last one the list starts again" = "Коли файл закінчується, починається наступний, а після останнього список починається знову";
+
+/* media stream */
+"When a file ends the next one starts, and streaming stops after the last one" = "Коли файл закінчується, починається наступний, а після останнього трансляція зупиняється";
+
+/* preferences */
+"When a Message Arrives" = "Коли надходить повідомлення";
 
 /* preferences */
 "Where the name and the time are shown and read" = "Де показуються й читаються ім'я та час";

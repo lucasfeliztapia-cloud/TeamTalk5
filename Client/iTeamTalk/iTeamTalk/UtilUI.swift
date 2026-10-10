@@ -68,6 +68,9 @@ enum MsgType {
 }
 
 struct MyTextMessage {
+    // the same from the moment it arrives: the list and VoiceOver follow a
+    // message by it
+    let id = UUID()
     var nickname = ""
     var message : String
     var date = Date()

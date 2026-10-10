@@ -13,6 +13,15 @@
 /* file list */
 "%@ downloaded" = "Đã tải xuống %@";
 
+/* interception */
+"%@ has stopped intercepting you: %@" = "%@ đã ngừng theo dõi bạn: %@";
+
+/* interception */
+"%@ is now intercepting you: %@" = "%@ hiện đang theo dõi bạn: %@";
+
+/* TTS EVENT */
+"%@ is typing" = "%@ đang nhập";
+
 /* log entry */
 "%@ joined channel" = "%@ đã tham gia kênh";
 
@@ -222,6 +231,9 @@
 /* preferences */
 "Announce user logged out of server" = "Thông báo người dùng đăng xuất khỏi máy chủ";
 
+/* text to speech events */
+"Announce when a user is typing a private message to you" = "Thông báo khi một người dùng đang nhập tin nhắn riêng cho bạn";
+
 /* text to speech */
 "Announcements" = "thông báo";
 
@@ -408,6 +420,12 @@
 
 /* channel list */
 "Channels" = "Kênh";
+
+/* preferences */
+"Channels are sorted by name" = "Kênh được sắp xếp theo tên";
+
+/* preferences */
+"Channels are sorted by the number of users in them" = "Kênh được sắp xếp theo số người dùng trong kênh";
 
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "Chỉ kiểm tra nếu máy chủ này đã bật Đăng nhập web BearWare.dk";
@@ -679,6 +697,18 @@
 /* user accounts */
 "Each change is saved at once and applies the next time this user logs in." = "Mỗi thay đổi được lưu ngay và có hiệu lực từ lần đăng nhập tiếp theo của người dùng này.";
 
+/* preferences */
+"Each message shows its text alone, and the name heads each group of messages" = "Mỗi tin nhắn chỉ hiển thị nội dung, và tên đứng đầu mỗi nhóm tin nhắn";
+
+/* preferences */
+"Each message shows when it was sent, and the name heads each group of messages" = "Mỗi tin nhắn hiển thị thời điểm gửi, và tên đứng đầu mỗi nhóm tin nhắn";
+
+/* preferences */
+"Each message shows who sent it" = "Mỗi tin nhắn hiển thị người gửi";
+
+/* preferences */
+"Each message shows who sent it and when" = "Mỗi tin nhắn hiển thị người gửi và thời điểm gửi";
+
 /* text to speech events */
 "Each One Its Own" = "Mỗi thông báo một kiểu";
 
@@ -821,6 +851,18 @@
 "Frame Size" = "Kích thước khung hình";
 
 /* preferences */
+"From A to Z" = "Từ A đến Z";
+
+/* preferences */
+"From fewer users to more" = "Từ ít người dùng đến nhiều người dùng";
+
+/* preferences */
+"From more users to fewer" = "Từ nhiều người dùng đến ít người dùng";
+
+/* preferences */
+"From Z to A" = "Từ Z đến A";
+
+/* preferences */
 "Gender" = "Giới tính";
 
 /* preferences
@@ -830,6 +872,9 @@
 
 /* user accounts */
 "Give to Every Account" = "Cấp cho mọi tài khoản";
+
+/* preferences */
+"Go to the Newest Message" = "Đến tin nhắn mới nhất";
 
 /* channel list */
 "Go to Their Channel" = "Đến kênh của họ";
@@ -870,11 +915,17 @@
 /* preferences */
 "Increment" = "Tăng";
 
+/* sound events */
+"Interception" = "Theo dõi";
+
 /* appearance */
 "Interface" = "Giao diện người dùng";
 
 /* appearance */
 "Interface Color" = "Màu giao diện";
+
+/* sound devices */
+"iOS cancels echo, reduces noise and levels the volume" = "iOS khử tiếng vọng, giảm tiếng ồn và cân bằng âm lượng";
 
 /* Sound Devices */
 "iOS Voice Processing" = "Xử lý giọng nói của iOS";
@@ -932,6 +983,9 @@
 
 /* accessibility hint */
 "Joins the channel that is shown" = "Tham gia kênh đang hiển thị";
+
+/* preferences */
+"Keep the Position" = "Giữ nguyên vị trí";
 
 /* keyboard shortcuts */
 "Key" = "Phím";
@@ -1242,6 +1296,12 @@
 "Not transmitting" = "Không truyền";
 
 /* preferences */
+"Notifications" = "Thông báo hệ thống";
+
+/* preferences */
+"Notifications in the Background" = "Thông báo hệ thống khi chạy nền";
+
+/* preferences */
 "Number of Users" = "Số người dùng";
 
 /* media stream */
@@ -1296,6 +1356,24 @@
 /* user accounts */
 "Other" = "Khác";
 
+/* preferences */
+"Other users see that you have a question" = "Người dùng khác thấy rằng bạn có câu hỏi";
+
+/* preferences */
+"Other users see you as available" = "Người dùng khác thấy bạn đang sẵn sàng";
+
+/* preferences */
+"Other users see you as away" = "Người dùng khác thấy bạn đang vắng mặt";
+
+/* preferences */
+"Other users see you with the female icon" = "Người dùng khác thấy bạn với biểu tượng nữ";
+
+/* preferences */
+"Other users see you with the male icon" = "Người dùng khác thấy bạn với biểu tượng nam";
+
+/* preferences */
+"Other users see you with the neutral icon" = "Người dùng khác thấy bạn với biểu tượng trung tính";
+
 /* connection quality */
 "Packet Loss" = "Mất gói";
 
@@ -1332,11 +1410,17 @@
 /* sound events */
 "Play sound when a file is uploaded to the channel" = "Phát âm thanh khi một tệp được tải lên kênh";
 
+/* sound events */
+"Play sound when a user is typing a private message to you" = "Phát âm thanh khi một người dùng đang nhập tin nhắn riêng cho bạn";
+
 /* preferences */
 "Play sound when a user joins the channel" = "Phát âm thanh khi người dùng tham gia kênh";
 
 /* preferences */
 "Play sound when a user leaves the channel" = "Phát âm thanh khi người dùng rời khỏi kênh";
+
+/* sound events */
+"Play sound when a user starts or stops intercepting you" = "Phát âm thanh khi một người dùng bắt đầu hoặc ngừng theo dõi bạn";
 
 /* preferences */
 "Play sound when broadcast text message is received" = "Phát âm thanh khi nhận được tin nhắn thông báo";
@@ -1642,6 +1726,9 @@
 "Shortcuts work with an external keyboard while connected to a server. A key without a modifier does nothing while you are typing a message." = "Phím tắt hoạt động với bàn phím ngoài khi đang kết nối với máy chủ. Phím không có phím bổ trợ sẽ không làm gì khi bạn đang gõ tin nhắn.";
 
 /* preferences */
+"Show a notification when a text message arrives while the app is not in front" = "Hiển thị thông báo khi có tin nhắn văn bản đến trong lúc ứng dụng không ở phía trước";
+
+/* preferences */
 "Show in Server List" = "Hiển thị trong Danh sách máy chủ";
 
 /* preferences */
@@ -1821,6 +1908,9 @@
 /* channel list */
 "TeamTalk has no access to the microphone. Turn it on in Settings, under TeamTalk, and try again." = "TeamTalk không có quyền truy cập micrô. Hãy bật trong Cài đặt, mục TeamTalk, rồi thử lại.";
 
+/* preferences */
+"TeamTalk is not allowed to show notifications. Turn them on in Settings, under TeamTalk." = "TeamTalk không được phép hiển thị thông báo. Hãy bật trong Cài đặt, mục TeamTalk.";
+
 /* server list */
 "TeamTalk Servers" = "Máy chủ TeamTalk";
 
@@ -1857,8 +1947,20 @@
 /* user accounts */
 "The account could not be saved" = "Không thể lưu tài khoản";
 
+/* appearance */
+"The app follows the light or dark mode of the system" = "Ứng dụng theo chế độ sáng hoặc tối của hệ thống";
+
+/* appearance */
+"The app is always dark" = "Ứng dụng luôn ở chế độ tối";
+
+/* appearance */
+"The app is always light" = "Ứng dụng luôn ở chế độ sáng";
+
 /* backup */
 "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "Bản sao lưu chứa mọi cài đặt và danh sách máy chủ, kèm mật khẩu. Hãy giữ tệp ở nơi an toàn.";
+
+/* media stream */
+"The current file starts again every time it ends" = "Tệp hiện tại phát lại từ đầu mỗi khi kết thúc";
 
 /* diagnostics */
 "The log is empty" = "Nhật ký trống";
@@ -1868,6 +1970,15 @@
 
 /* appearance */
 "The messages can have a text size of their own, and the server events a font of their own." = "Tin nhắn có thể có cỡ chữ riêng, và sự kiện máy chủ có phông chữ riêng.";
+
+/* sound devices */
+"The microphone is sent as it is, with no noise reduction and no echo cancellation" = "Micrô được gửi nguyên trạng, không giảm tiếng ồn và không khử tiếng vọng";
+
+/* preferences */
+"The name and the time go after the text of the message" = "Tên và giờ nằm sau nội dung tin nhắn";
+
+/* preferences */
+"The name and the time go before the text of the message" = "Tên và giờ nằm trước nội dung tin nhắn";
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "Tốc độ của giọng nói là %.1f";
@@ -2026,6 +2137,9 @@
 /* user detail */
 "User ID" = "ID người dùng";
 
+/* sound and speech events */
+"User Is Typing" = "Người dùng đang nhập";
+
 /* preferences */
 "User Joins Channel" = "Người dùng tham gia kênh";
 
@@ -2129,8 +2243,14 @@
 /* text to speech events */
 "VoiceOver" = "VoiceOver";
 
+/* preferences */
+"VoiceOver moves to each message as it arrives or as you send it" = "VoiceOver chuyển đến từng tin nhắn khi tin đến hoặc khi bạn gửi";
+
 /* text to speech events */
 "VoiceOver speaks an announcement with its own voice and shows it in braille. With VoiceOver off, the voice of TeamTalk speaks them all." = "VoiceOver đọc thông báo bằng giọng của chính nó và hiển thị trên chữ nổi. Khi VoiceOver tắt, giọng của TeamTalk đọc tất cả.";
+
+/* preferences */
+"VoiceOver stays on the message you are reading when another one arrives" = "VoiceOver ở lại tin nhắn bạn đang đọc khi có tin khác đến";
 
 /* codec detail */
 "VoIP" = "VoIP";
@@ -2160,6 +2280,9 @@
 /* Sound Devices */
 "WebRTC" = "WebRTC";
 
+/* sound devices */
+"WebRTC reduces noise and levels the volume but does not cancel echo, so use it with headphones" = "WebRTC giảm tiếng ồn và cân bằng âm lượng nhưng không khử tiếng vọng, vì vậy hãy dùng với tai nghe";
+
 /* preferences */
 "What each text message shows besides its text" = "Những gì mỗi tin nhắn văn bản hiển thị ngoài nội dung";
 
@@ -2168,6 +2291,15 @@
 
 /* diagnostics */
 "What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Những gì ứng dụng cần từ iPhone. Nếu có gì ở đây không ổn, đó là điều đầu tiên cần sửa.";
+
+/* media stream */
+"When a file ends the next one starts, and after the last one the list starts again" = "Khi một tệp kết thúc, tệp tiếp theo bắt đầu, và sau tệp cuối cùng danh sách bắt đầu lại";
+
+/* media stream */
+"When a file ends the next one starts, and streaming stops after the last one" = "Khi một tệp kết thúc, tệp tiếp theo bắt đầu, và việc phát trực tuyến dừng sau tệp cuối cùng";
+
+/* preferences */
+"When a Message Arrives" = "Khi có tin nhắn đến";
 
 /* preferences */
 "Where the name and the time are shown and read" = "Nơi tên và giờ được hiển thị và đọc";

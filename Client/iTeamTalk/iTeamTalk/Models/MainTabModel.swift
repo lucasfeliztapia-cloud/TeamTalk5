@@ -70,6 +70,8 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
     private var connectedNetwork: NetworkPath?
     private var networkCheck: DispatchWorkItem?
     private var quietReconnect = false
+    // the user has asked to leave: nothing may connect again
+    private var isClosing = false
     private var pingCmdId: INT32 = 0
     private var polltimer: Timer?
     private var reconnecttimer: Timer?
@@ -209,6 +211,14 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
             name: UIApplication.didBecomeActiveNotification,
             object: nil
         )
+        if #available(iOS 17.0, *) {
+            center.addObserver(
+                self, selector: #selector(inputMuteChanged(_:)),
+                name: AVAudioApplication.inputMuteStateChangeNotification,
+                object: nil
+            )
+        }
+        syncInputMute()
 
         watchNetwork()
         connectToServer()
@@ -229,6 +239,7 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
         LiveActivityController.end()
         publishSharedState(connected: false, transmitting: false, deafened: false)
         MicrophoneKeepAlive.shared.stop()
+        unmuteInput()
         polltimer?.invalidate()
         reconnecttimer?.invalidate()
         removeAllTTMessageHandlers()
@@ -251,14 +262,35 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
 
     func remoteControl(_ event: UIEvent?) {
         guard let rc = event?.subtype else { return }
+        // The one button most headsets have sends "toggle": it only turned
+        // the transmission off, and turning it on needed a double press.
         switch rc {
-        case .remoteControlPause, .remoteControlTogglePlayPause:
+        case .remoteControlTogglePlayPause:
+            channelListModel.txBtnAccessibilityAction()
+        case .remoteControlPause, .remoteControlStop:
             channelListModel.enableVoiceTx(false)
-        case .remoteControlPreviousTrack, .remoteControlNextTrack:
+        case .remoteControlPlay, .remoteControlPreviousTrack, .remoteControlNextTrack:
             channelListModel.enableVoiceTx(true)
         default:
             break
         }
+    }
+
+    /// The mute gesture of AirPods and of other headsets that have one. iOS
+    /// mutes the input by itself and tells afterwards; with "Headset TX
+    /// Toggle" the transmission follows it.
+    @objc private func inputMuteChanged(_ notification: Notification) {
+        guard #available(iOS 17.0, *) else { return }
+        let defaults = UserDefaults.standard
+        guard defaults.bool(forKey: PREF_HEADSET_TXTOGGLE),
+              let muted = notification.userInfo?[AVAudioApplication.muteStateKey] as? Bool else { return }
+        // with voice activation the mute of the system is all it takes
+        let voiceActivated = defaults.object(forKey: PREF_VOICEACTIVATION) != nil &&
+            defaults.integer(forKey: PREF_VOICEACTIVATION) != VOICEACT_DISABLED
+        guard !voiceActivated, channelListModel.mychannel.nChannelID > 0,
+              TeamTalkClient.shared.isVoiceTransmitting == muted else { return }
+        logDiagnostic("Input \(muted ? "muted" : "unmuted") from the headset")
+        channelListModel.enableVoiceTx(!muted)
     }
 
     /// The Disconnect button and the scrub of VoiceOver. It asks first when
@@ -268,24 +300,32 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
             pendingDisconnect = dismiss
             showDisconnectConfirm = true
         } else {
-            disconnect(dismiss: dismiss)
+            disconnect(dismiss: dismiss, afterQuestion: false)
         }
     }
 
     func confirmDisconnect() {
         guard let dismiss = pendingDisconnect else { return }
         pendingDisconnect = nil
-        // once the question is gone: the next one can be another alert
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
-            self?.disconnect(dismiss: dismiss)
-        }
+        disconnect(dismiss: dismiss, afterQuestion: true)
     }
 
     func cancelDisconnect() {
         pendingDisconnect = nil
     }
 
-    private func disconnect(dismiss: @escaping () -> Void) {
+    /// Leaves the server now. The connection is closed here and not when the
+    /// screen is finally taken down: until then the others kept seeing, and
+    /// hearing, someone who had already pressed Disconnect.
+    private func disconnect(dismiss: @escaping () -> Void, afterQuestion: Bool) {
+        isClosing = true
+        reconnecttimer?.invalidate()
+        networkCheck?.cancel()
+        logDiagnostic("Disconnected by the user")
+        TeamTalkClient.shared.disconnect()
+        closeSoundDevices()
+        unmuteInput()
+
         let servers = loadLocalServers()
         let found = servers.filter {
             $0.ipaddr == server.ipaddr &&
@@ -295,7 +335,10 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
         }
         if found.isEmpty && server.servertype == .LOCAL {
             pendingDismiss = { dismiss() }
-            showSaveAlert = true
+            // one alert has to be gone before the next one shows
+            DispatchQueue.main.asyncAfter(deadline: .now() + (afterQuestion ? 0.5 : 0)) { [weak self] in
+                self?.showSaveAlert = true
+            }
         } else {
             dismiss()
         }
@@ -483,7 +526,7 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
     }
 
     private func checkConnectionAfterNetworkChange() {
-        guard didSetup, polltimer?.isValid == true, fatalAlertMessage == nil,
+        guard didSetup, !isClosing, polltimer?.isValid == true, fatalAlertMessage == nil,
               let network, !network.interface.isEmpty else { return }
         let client = TeamTalkClient.shared
 

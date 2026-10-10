@@ -13,6 +13,15 @@
 /* file list */
 "%@ downloaded" = "%@ hentet";
 
+/* interception */
+"%@ has stopped intercepting you: %@" = "%@ opsnapper dig ikke længere: %@";
+
+/* interception */
+"%@ is now intercepting you: %@" = "%@ opsnapper dig nu: %@";
+
+/* TTS EVENT */
+"%@ is typing" = "%@ skriver";
+
 /* log entry */
 "%@ joined channel" = "%@ er nu i kanalen";
 
@@ -221,6 +230,9 @@
 /* preferences */
 "Announce user logged out of server" = "Annoncer bruger loggede af serveren";
 
+/* text to speech events */
+"Announce when a user is typing a private message to you" = "Annoncér, når en bruger skriver en privat besked til dig";
+
 /* text to speech */
 "Announcements" = "Annonceringer";
 
@@ -406,6 +418,12 @@
 
 /* channel list */
 "Channels" = "Kanaler";
+
+/* preferences */
+"Channels are sorted by name" = "Kanaler sorteres efter navn";
+
+/* preferences */
+"Channels are sorted by the number of users in them" = "Kanaler sorteres efter antallet af brugere i dem";
 
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "Vælg kun hvis server har BearWare.dk Web Login slået til";
@@ -677,6 +695,18 @@
 /* user accounts */
 "Each change is saved at once and applies the next time this user logs in." = "Hver ændring gemmes med det samme og gælder, næste gang denne bruger logger ind.";
 
+/* preferences */
+"Each message shows its text alone, and the name heads each group of messages" = "Hver besked viser kun sin tekst, og navnet står over hver gruppe af beskeder";
+
+/* preferences */
+"Each message shows when it was sent, and the name heads each group of messages" = "Hver besked viser, hvornår den blev sendt, og navnet står over hver gruppe af beskeder";
+
+/* preferences */
+"Each message shows who sent it" = "Hver besked viser, hvem der sendte den";
+
+/* preferences */
+"Each message shows who sent it and when" = "Hver besked viser, hvem der sendte den og hvornår";
+
 /* text to speech events */
 "Each One Its Own" = "Forskelligt for hver";
 
@@ -819,6 +849,18 @@
 "Frame Size" = "Rammestørrelse";
 
 /* preferences */
+"From A to Z" = "Fra A til Å";
+
+/* preferences */
+"From fewer users to more" = "Fra færre til flere brugere";
+
+/* preferences */
+"From more users to fewer" = "Fra flere til færre brugere";
+
+/* preferences */
+"From Z to A" = "Fra Å til A";
+
+/* preferences */
 "Gender" = "Køn";
 
 /* preferences
@@ -827,6 +869,9 @@
 
 /* user accounts */
 "Give to Every Account" = "Giv til alle konti";
+
+/* preferences */
+"Go to the Newest Message" = "Gå til den nyeste besked";
 
 /* channel list */
 "Go to Their Channel" = "Gå til vedkommendes kanal";
@@ -867,11 +912,17 @@
 /* preferences */
 "Increment" = "Forøg";
 
+/* sound events */
+"Interception" = "Opsnapning";
+
 /* appearance */
 "Interface" = "Brugerflade";
 
 /* appearance */
 "Interface Color" = "Brugerfladens farve";
+
+/* sound devices */
+"iOS cancels echo, reduces noise and levels the volume" = "iOS fjerner ekko, dæmper støj og udjævner lydstyrken";
 
 /* Sound Devices */
 "iOS Voice Processing" = "iOS-stemmebehandling";
@@ -929,6 +980,9 @@
 
 /* accessibility hint */
 "Joins the channel that is shown" = "Deltager i den viste kanal";
+
+/* preferences */
+"Keep the Position" = "Behold positionen";
 
 /* keyboard shortcuts */
 "Key" = "Tast";
@@ -1239,6 +1293,12 @@
 "Not transmitting" = "Sender ikke";
 
 /* preferences */
+"Notifications" = "Notifikationer";
+
+/* preferences */
+"Notifications in the Background" = "Notifikationer i baggrunden";
+
+/* preferences */
 "Number of Users" = "Antal brugere";
 
 /* media stream */
@@ -1292,6 +1352,24 @@
 /* user accounts */
 "Other" = "Andet";
 
+/* preferences */
+"Other users see that you have a question" = "Andre brugere ser, at du har et spørgsmål";
+
+/* preferences */
+"Other users see you as available" = "Andre brugere ser dig som tilgængelig";
+
+/* preferences */
+"Other users see you as away" = "Andre brugere ser dig som fraværende";
+
+/* preferences */
+"Other users see you with the female icon" = "Andre brugere ser dig med det kvindelige symbol";
+
+/* preferences */
+"Other users see you with the male icon" = "Andre brugere ser dig med det mandlige symbol";
+
+/* preferences */
+"Other users see you with the neutral icon" = "Andre brugere ser dig med det neutrale symbol";
+
 /* connection quality */
 "Packet Loss" = "Pakketab";
 
@@ -1327,11 +1405,17 @@
 /* sound events */
 "Play sound when a file is uploaded to the channel" = "Afspil lyd, når en fil uploades til kanalen";
 
+/* sound events */
+"Play sound when a user is typing a private message to you" = "Afspil lyd når en bruger skriver en privat besked til dig";
+
 /* preferences */
 "Play sound when a user joins the channel" = "Afspil lyd når en ny bruger er i kanalen";
 
 /* preferences */
 "Play sound when a user leaves the channel" = "Afspil lyd når en bruger forlader kanalen";
+
+/* sound events */
+"Play sound when a user starts or stops intercepting you" = "Afspil lyd når en bruger begynder eller holder op med at opsnappe dig";
 
 /* preferences */
 "Play sound when broadcast text message is received" = "Afspil en lyd når massebesked modtages";
@@ -1637,6 +1721,9 @@
 "Shortcuts work with an external keyboard while connected to a server. A key without a modifier does nothing while you are typing a message." = "Genveje virker med et eksternt tastatur, mens du er forbundet til en server. En tast uden kombitast gør ingenting, mens du skriver en besked.";
 
 /* preferences */
+"Show a notification when a text message arrives while the app is not in front" = "Vis en notifikation, når en tekstbesked ankommer, mens appen ikke er i forgrunden";
+
+/* preferences */
 "Show in Server List" = "Vis i serverliste";
 
 /* preferences */
@@ -1815,6 +1902,9 @@
 /* channel list */
 "TeamTalk has no access to the microphone. Turn it on in Settings, under TeamTalk, and try again." = "TeamTalk har ikke adgang til mikrofonen. Slå den til i Indstillinger under TeamTalk, og prøv igen.";
 
+/* preferences */
+"TeamTalk is not allowed to show notifications. Turn them on in Settings, under TeamTalk." = "TeamTalk har ikke tilladelse til at vise notifikationer. Slå dem til i Indstillinger under TeamTalk.";
+
 /* server list */
 "TeamTalk Servers" = "TeamTalk-servere";
 
@@ -1851,8 +1941,20 @@
 /* user accounts */
 "The account could not be saved" = "Kontoen kunne ikke gemmes";
 
+/* appearance */
+"The app follows the light or dark mode of the system" = "Appen følger systemets lyse eller mørke udseende";
+
+/* appearance */
+"The app is always dark" = "Appen er altid mørk";
+
+/* appearance */
+"The app is always light" = "Appen er altid lys";
+
 /* backup */
 "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "Sikkerhedskopien indeholder alle indstillinger og serverlisten med deres kodeord. Opbevar filen et sikkert sted.";
+
+/* media stream */
+"The current file starts again every time it ends" = "Den aktuelle fil starter forfra, hver gang den slutter";
 
 /* diagnostics */
 "The log is empty" = "Loggen er tom";
@@ -1862,6 +1964,15 @@
 
 /* appearance */
 "The messages can have a text size of their own, and the server events a font of their own." = "Beskederne kan have deres egen tekststørrelse, og serverhændelserne deres egen skrift.";
+
+/* sound devices */
+"The microphone is sent as it is, with no noise reduction and no echo cancellation" = "Mikrofonen sendes, som den er, uden støjdæmpning og uden ekkofjernelse";
+
+/* preferences */
+"The name and the time go after the text of the message" = "Navnet og tiden står efter beskedens tekst";
+
+/* preferences */
+"The name and the time go before the text of the message" = "Navnet og tiden står før beskedens tekst";
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "Tekst til tale vil ske ved hastigheden %.1f";
@@ -2020,6 +2131,9 @@
 /* user detail */
 "User ID" = "Bruger-id";
 
+/* sound and speech events */
+"User Is Typing" = "Bruger skriver";
+
 /* preferences */
 "User Joins Channel" = "Ny bruger er i kanalen";
 
@@ -2122,8 +2236,14 @@
 /* text to speech events */
 "VoiceOver" = "VoiceOver";
 
+/* preferences */
+"VoiceOver moves to each message as it arrives or as you send it" = "VoiceOver går til hver besked, når den ankommer, eller når du sender den";
+
 /* text to speech events */
 "VoiceOver speaks an announcement with its own voice and shows it in braille. With VoiceOver off, the voice of TeamTalk speaks them all." = "VoiceOver læser en annoncering op med sin egen stemme og viser den i punktskrift. Når VoiceOver er slået fra, læser TeamTalks stemme dem alle op.";
+
+/* preferences */
+"VoiceOver stays on the message you are reading when another one arrives" = "VoiceOver bliver på den besked, du læser, når der kommer en ny";
 
 /* codec detail */
 "VoIP" = "VoIP";
@@ -2153,6 +2273,9 @@
 /* Sound Devices */
 "WebRTC" = "WebRTC";
 
+/* sound devices */
+"WebRTC reduces noise and levels the volume but does not cancel echo, so use it with headphones" = "WebRTC dæmper støj og udjævner lydstyrken, men fjerner ikke ekko, så brug det med hovedtelefoner";
+
 /* preferences */
 "What each text message shows besides its text" = "Hvad hver tekstbesked viser ud over sin tekst";
 
@@ -2161,6 +2284,15 @@
 
 /* diagnostics */
 "What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Det, appen har brug for fra iPhonen. Hvis noget her ikke er i orden, er det det første, der skal rettes.";
+
+/* media stream */
+"When a file ends the next one starts, and after the last one the list starts again" = "Når en fil slutter, starter den næste, og efter den sidste starter listen forfra";
+
+/* media stream */
+"When a file ends the next one starts, and streaming stops after the last one" = "Når en fil slutter, starter den næste, og streamingen stopper efter den sidste";
+
+/* preferences */
+"When a Message Arrives" = "Når en besked ankommer";
 
 /* preferences */
 "Where the name and the time are shown and read" = "Hvor navnet og tiden vises og læses op";

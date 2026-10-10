@@ -31,6 +31,8 @@ struct TextMessageView: View {
     @State private var broadcastText = ""
     @AppStorage(PREF_DISPLAY_MSGDETAILS) private var messageDetails = MessageDetails.nameAndTime.rawValue
     @AppStorage(PREF_DISPLAY_MSGDETAILSAFTER) private var detailsAfter = false
+    @AppStorage(PREF_DISPLAY_MSGFOCUS) private var followsNewMessages = false
+    @AccessibilityFocusState private var focusedMessage: UUID?
 
     private var details: MessageDetails {
         MessageDetails(rawValue: messageDetails) ?? .nameAndTime
@@ -42,8 +44,7 @@ struct TextMessageView: View {
                 List {
                     ForEach(model.sections) { section in
                         Section {
-                            ForEach(section.messages.indices, id: \.self) { index in
-                                let message = section.messages[index]
+                            ForEach(section.messages, id: \.id) { message in
                                 let background = appearance.backgroundColor(for: message.msgtype)
                                 MessageRow(message: message, background: background,
                                            design: message.msgtype == .LOGMSG
@@ -52,6 +53,7 @@ struct TextMessageView: View {
                                            details: details, detailsAfter: detailsAfter)
                                     .listRowInsets(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
                                     .listRowBackground(background)
+                                    .accessibilityFocused($focusedMessage, equals: message.id)
                             }
                         } header: {
                             // the name heads the group only when the messages
@@ -65,11 +67,8 @@ struct TextMessageView: View {
                 .listStyle(.plain)
                 // the messages can have a text size of their own
                 .dynamicTypeSize(appearance.messageDynamicTypeRange)
-                .onChange(of: model.sections.count) { _ in
-                    scrollToBottom(proxy)
-                }
-                .onChange(of: model.sections.last?.messages.count ?? 0) { _ in
-                    scrollToBottom(proxy)
+                .onChange(of: model.sections.last?.messages.last?.id) { newest in
+                    messageAdded(newest, proxy: proxy)
                 }
             }
 
@@ -146,10 +145,29 @@ struct TextMessageView: View {
         model.sendMessage()
     }
 
-    private func scrollToBottom(_ proxy: ScrollViewProxy) {
-        guard let section = model.sections.last, !section.messages.isEmpty else { return }
+    /// A message was added at the end. Without VoiceOver the list follows it,
+    /// as a chat does. With VoiceOver the list moves only when the user wants
+    /// the cursor on the newest message: scrolling takes the row under the
+    /// cursor off the screen, and VoiceOver then went to the top.
+    private func messageAdded(_ newest: UUID?, proxy: ScrollViewProxy) {
+        guard let newest, let message = model.sections.last?.messages.last else { return }
+        guard UIAccessibility.isVoiceOverRunning else {
+            scrollToBottom(newest, proxy: proxy)
+            return
+        }
+        guard followsNewMessages else { return }
+        // not while a message is being written, unless it is the one just sent
+        let mine = message.msgtype == .CHAN_IM_MYSELF || message.msgtype == .PRIV_IM_MYSELF
+        guard mine || !isComposing else { return }
+        scrollToBottom(newest, proxy: proxy)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            focusedMessage = newest
+        }
+    }
+
+    private func scrollToBottom(_ newest: UUID, proxy: ScrollViewProxy) {
         DispatchQueue.main.async {
-            proxy.scrollTo(section.id, anchor: .bottom)
+            proxy.scrollTo(newest, anchor: .bottom)
         }
     }
 }

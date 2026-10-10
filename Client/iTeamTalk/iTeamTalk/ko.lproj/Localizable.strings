@@ -13,6 +13,15 @@
 /* file list */
 "%@ downloaded" = "%@ 다운로드됨";
 
+/* interception */
+"%@ has stopped intercepting you: %@" = "%@ 님이 가로채기를 멈췄습니다: %@";
+
+/* interception */
+"%@ is now intercepting you: %@" = "%@ 님이 지금 가로채고 있습니다: %@";
+
+/* TTS EVENT */
+"%@ is typing" = "%@ 님이 입력 중입니다";
+
 /* log entry */
 "%@ joined channel" = "%@ 채널에 입장함";
 
@@ -221,6 +230,9 @@
 /* preferences */
 "Announce user logged out of server" = "사용자가 로그아웃하면 알림";
 
+/* text to speech events */
+"Announce when a user is typing a private message to you" = "사용자가 나에게 개인 메시지를 입력 중일 때 알림";
+
 /* text to speech */
 "Announcements" = "알림";
 
@@ -407,6 +419,12 @@
 
 /* channel list */
 "Channels" = "채널";
+
+/* preferences */
+"Channels are sorted by name" = "채널을 이름순으로 정렬합니다";
+
+/* preferences */
+"Channels are sorted by the number of users in them" = "채널을 채널 안의 사용자 수로 정렬합니다";
 
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "이 서버에서 BearWare.dk 웹 로그인을 활성화한 경우에만 선택하세요";
@@ -678,6 +696,18 @@
 /* user accounts */
 "Each change is saved at once and applies the next time this user logs in." = "변경 사항은 바로 저장되며 이 사용자가 다음에 로그인할 때 적용됩니다.";
 
+/* preferences */
+"Each message shows its text alone, and the name heads each group of messages" = "각 메시지는 본문만 표시하고, 이름은 메시지 묶음 위에 표시됩니다";
+
+/* preferences */
+"Each message shows when it was sent, and the name heads each group of messages" = "각 메시지는 보낸 시간을 표시하고, 이름은 메시지 묶음 위에 표시됩니다";
+
+/* preferences */
+"Each message shows who sent it" = "각 메시지에 보낸 사람이 표시됩니다";
+
+/* preferences */
+"Each message shows who sent it and when" = "각 메시지에 보낸 사람과 시간이 표시됩니다";
+
 /* text to speech events */
 "Each One Its Own" = "알림마다 다름";
 
@@ -820,6 +850,18 @@
 "Frame Size" = "프레임 크기";
 
 /* preferences */
+"From A to Z" = "가나다순";
+
+/* preferences */
+"From fewer users to more" = "사용자가 적은 순";
+
+/* preferences */
+"From more users to fewer" = "사용자가 많은 순";
+
+/* preferences */
+"From Z to A" = "가나다 역순";
+
+/* preferences */
 "Gender" = "성별";
 
 /* preferences
@@ -828,6 +870,9 @@
 
 /* user accounts */
 "Give to Every Account" = "모든 계정에 부여";
+
+/* preferences */
+"Go to the Newest Message" = "최신 메시지로 이동";
 
 /* channel list */
 "Go to Their Channel" = "해당 사용자의 채널로 이동";
@@ -868,11 +913,17 @@
 /* preferences */
 "Increment" = "늘리기";
 
+/* sound events */
+"Interception" = "가로채기";
+
 /* appearance */
 "Interface" = "인터페이스";
 
 /* appearance */
 "Interface Color" = "인터페이스 색상";
+
+/* sound devices */
+"iOS cancels echo, reduces noise and levels the volume" = "iOS가 에코를 제거하고 소음을 줄이며 음량을 고르게 합니다";
 
 /* Sound Devices */
 "iOS Voice Processing" = "iOS 음성 처리";
@@ -930,6 +981,9 @@
 
 /* accessibility hint */
 "Joins the channel that is shown" = "표시된 채널에 입장합니다";
+
+/* preferences */
+"Keep the Position" = "위치 유지";
 
 /* keyboard shortcuts */
 "Key" = "키";
@@ -1240,6 +1294,12 @@
 "Not transmitting" = "전송 안 함";
 
 /* preferences */
+"Notifications" = "시스템 알림";
+
+/* preferences */
+"Notifications in the Background" = "백그라운드 알림";
+
+/* preferences */
 "Number of Users" = "사용자 수";
 
 /* media stream */
@@ -1294,6 +1354,24 @@
 /* user accounts */
 "Other" = "기타";
 
+/* preferences */
+"Other users see that you have a question" = "다른 사용자에게 질문이 있는 것으로 표시됩니다";
+
+/* preferences */
+"Other users see you as available" = "다른 사용자에게 대화 가능으로 표시됩니다";
+
+/* preferences */
+"Other users see you as away" = "다른 사용자에게 자리 비움으로 표시됩니다";
+
+/* preferences */
+"Other users see you with the female icon" = "다른 사용자에게 여성 아이콘으로 표시됩니다";
+
+/* preferences */
+"Other users see you with the male icon" = "다른 사용자에게 남성 아이콘으로 표시됩니다";
+
+/* preferences */
+"Other users see you with the neutral icon" = "다른 사용자에게 중성 아이콘으로 표시됩니다";
+
 /* connection quality */
 "Packet Loss" = "패킷 손실";
 
@@ -1330,11 +1408,17 @@
 /* sound events */
 "Play sound when a file is uploaded to the channel" = "채널에 파일이 업로드되면 소리 재생";
 
+/* sound events */
+"Play sound when a user is typing a private message to you" = "사용자가 나에게 개인 메시지를 입력 중이면 효과음 재생";
+
 /* preferences */
 "Play sound when a user joins the channel" = "사용자가 채널에 입장하면 효과음 재생";
 
 /* preferences */
 "Play sound when a user leaves the channel" = "사용자가 채널에서 퇴장하면 효과음 재생";
+
+/* sound events */
+"Play sound when a user starts or stops intercepting you" = "사용자가 가로채기를 시작하거나 멈추면 효과음 재생";
 
 /* preferences */
 "Play sound when broadcast text message is received" = "방송 메시지가 수신되면 효과음 재생";
@@ -1640,6 +1724,9 @@
 "Shortcuts work with an external keyboard while connected to a server. A key without a modifier does nothing while you are typing a message." = "단축키는 서버에 연결되어 있는 동안 외장 키보드에서 동작합니다. 보조 키가 없는 키는 메시지를 입력하는 동안 아무 동작도 하지 않습니다.";
 
 /* preferences */
+"Show a notification when a text message arrives while the app is not in front" = "앱이 앞에 있지 않을 때 텍스트 메시지가 오면 알림을 표시합니다";
+
+/* preferences */
 "Show in Server List" = "서버 목록에 표시";
 
 /* preferences */
@@ -1818,6 +1905,9 @@
 /* channel list */
 "TeamTalk has no access to the microphone. Turn it on in Settings, under TeamTalk, and try again." = "TeamTalk가 마이크에 접근할 수 없습니다. 설정의 TeamTalk에서 켠 다음 다시 시도하십시오.";
 
+/* preferences */
+"TeamTalk is not allowed to show notifications. Turn them on in Settings, under TeamTalk." = "TeamTalk에서 알림을 표시할 수 없습니다. 설정의 TeamTalk에서 알림을 켜십시오.";
+
 /* server list */
 "TeamTalk Servers" = "TeamTalk 서버";
 
@@ -1854,8 +1944,20 @@
 /* user accounts */
 "The account could not be saved" = "계정을 저장하지 못했습니다";
 
+/* appearance */
+"The app follows the light or dark mode of the system" = "앱이 시스템의 라이트 또는 다크 모드를 따릅니다";
+
+/* appearance */
+"The app is always dark" = "앱이 항상 다크 모드로 표시됩니다";
+
+/* appearance */
+"The app is always light" = "앱이 항상 라이트 모드로 표시됩니다";
+
 /* backup */
 "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "백업에는 모든 설정과 서버 목록이 암호와 함께 들어 있습니다. 파일을 안전한 곳에 보관하십시오.";
+
+/* media stream */
+"The current file starts again every time it ends" = "현재 파일이 끝날 때마다 처음부터 다시 시작합니다";
 
 /* diagnostics */
 "The log is empty" = "로그가 비어 있습니다";
@@ -1865,6 +1967,15 @@
 
 /* appearance */
 "The messages can have a text size of their own, and the server events a font of their own." = "메시지는 고유한 텍스트 크기를, 서버 이벤트는 고유한 서체를 가질 수 있습니다.";
+
+/* sound devices */
+"The microphone is sent as it is, with no noise reduction and no echo cancellation" = "마이크 소리를 소음 감소나 에코 제거 없이 그대로 보냅니다";
+
+/* preferences */
+"The name and the time go after the text of the message" = "이름과 시간이 메시지 본문 뒤에 옵니다";
+
+/* preferences */
+"The name and the time go before the text of the message" = "이름과 시간이 메시지 본문 앞에 옵니다";
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "현재 말하기 속도: %.1f";
@@ -2023,6 +2134,9 @@
 /* user detail */
 "User ID" = "사용자 ID";
 
+/* sound and speech events */
+"User Is Typing" = "사용자 입력 중";
+
 /* preferences */
 "User Joins Channel" = "채널 입장";
 
@@ -2126,8 +2240,14 @@
 /* text to speech events */
 "VoiceOver" = "VoiceOver";
 
+/* preferences */
+"VoiceOver moves to each message as it arrives or as you send it" = "메시지가 도착하거나 메시지를 보낼 때마다 VoiceOver가 해당 메시지로 이동합니다";
+
 /* text to speech events */
 "VoiceOver speaks an announcement with its own voice and shows it in braille. With VoiceOver off, the voice of TeamTalk speaks them all." = "VoiceOver는 알림을 자체 음성으로 읽고 점자로 표시합니다. VoiceOver가 꺼져 있으면 TeamTalk 음성이 모두 읽습니다.";
+
+/* preferences */
+"VoiceOver stays on the message you are reading when another one arrives" = "다른 메시지가 도착해도 VoiceOver가 읽고 있던 메시지에 머무릅니다";
 
 /* codec detail */
 "VoIP" = "VoIP";
@@ -2157,6 +2277,9 @@
 /* Sound Devices */
 "WebRTC" = "WebRTC";
 
+/* sound devices */
+"WebRTC reduces noise and levels the volume but does not cancel echo, so use it with headphones" = "WebRTC는 소음을 줄이고 음량을 고르게 하지만 에코는 제거하지 않으므로 헤드폰과 함께 사용하십시오";
+
 /* preferences */
 "What each text message shows besides its text" = "각 텍스트 메시지가 본문 외에 표시하는 내용";
 
@@ -2165,6 +2288,15 @@
 
 /* diagnostics */
 "What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "앱이 iPhone에서 필요로 하는 것입니다. 여기에 문제가 있으면 가장 먼저 해결해야 합니다.";
+
+/* media stream */
+"When a file ends the next one starts, and after the last one the list starts again" = "파일이 끝나면 다음 파일이 시작되고, 마지막 파일이 끝나면 목록이 처음부터 다시 시작됩니다";
+
+/* media stream */
+"When a file ends the next one starts, and streaming stops after the last one" = "파일이 끝나면 다음 파일이 시작되고, 마지막 파일이 끝나면 스트리밍이 멈춥니다";
+
+/* preferences */
+"When a Message Arrives" = "메시지가 도착할 때";
 
 /* preferences */
 "Where the name and the time are shown and read" = "이름과 시간을 표시하고 읽어 주는 위치";

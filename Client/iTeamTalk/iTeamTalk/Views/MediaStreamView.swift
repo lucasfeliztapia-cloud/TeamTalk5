@@ -164,6 +164,17 @@ struct MediaStreamView: View {
                 )
                 .accessibilityLabel("Position")
                 .accessibilityValue(model.spokenPositionText)
+                // one second at a time: the buttons below make the long jumps
+                .accessibilityAdjustableAction { direction in
+                    switch direction {
+                    case .increment:
+                        model.setPosition(min(max(1000, model.durationMSec), model.positionMSec + 1000))
+                    case .decrement:
+                        model.setPosition(max(0, model.positionMSec - 1000))
+                    @unknown default:
+                        break
+                    }
+                }
                 // on the thumb, so VoiceOver can drag it
                 .accessibilityActivationPoint(UnitPoint(
                     x: 0.05 + 0.9 * min(1, max(0, model.positionMSec / max(1000, model.durationMSec))),
@@ -201,7 +212,7 @@ struct MediaStreamView: View {
                 .accessibilityHidden(true)
 
                 AdjustableSlider(label: Text("Volume"), valueText: model.volumeText,
-                                 value: $model.volumePercent, range: 0...300, step: 1, flick: 10)
+                                 value: $model.volumePercent, range: 0...300, step: 1)
             }
 
             Button(action: model.togglePreview) {
@@ -263,7 +274,18 @@ struct MediaStreamView: View {
         } header: {
             Text("Playlist")
         } footer: {
-            Text("Files stay in the list until you remove them. When one ends, the next one starts.")
+            Text(repeatExplanation)
+        }
+    }
+
+    private var repeatExplanation: LocalizedStringKey {
+        switch model.repeatMode {
+        case .off:
+            return "When a file ends the next one starts, and streaming stops after the last one"
+        case .all:
+            return "When a file ends the next one starts, and after the last one the list starts again"
+        case .one:
+            return "The current file starts again every time it ends"
         }
     }
 

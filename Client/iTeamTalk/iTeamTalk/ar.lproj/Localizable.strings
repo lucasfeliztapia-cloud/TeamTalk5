@@ -13,6 +13,15 @@
 /* file list */
 "%@ downloaded" = "تم تنزيل %@";
 
+/* interception */
+"%@ has stopped intercepting you: %@" = "%@ توقف عن الاعتراض: %@";
+
+/* interception */
+"%@ is now intercepting you: %@" = "%@ يعترض الآن: %@";
+
+/* TTS EVENT */
+"%@ is typing" = "%@ يكتب الآن";
+
 /* log entry */
 "%@ joined channel" = "%@ إنضم للقناة";
 
@@ -221,6 +230,9 @@
 /* preferences */
 "Announce user logged out of server" = "الإعلان بأن المستخدم قد سجل خروجه من الخادم";
 
+/* text to speech events */
+"Announce when a user is typing a private message to you" = "الإعلان عندما يكتب لك مستخدم رسالة خاصة";
+
 /* text to speech */
 "Announcements" = "الإعلانات";
 
@@ -406,6 +418,12 @@
 
 /* channel list */
 "Channels" = "القنوات";
+
+/* preferences */
+"Channels are sorted by name" = "تُرتَّب القنوات حسب الاسم";
+
+/* preferences */
+"Channels are sorted by the number of users in them" = "تُرتَّب القنوات حسب عدد المستخدمين فيها";
 
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "حدد فقط إذا قام هذا الخادم بتمكين تسجيل الدخول إلى BearWare.dk";
@@ -677,6 +695,18 @@
 /* user accounts */
 "Each change is saved at once and applies the next time this user logs in." = "يُحفظ كل تغيير فورًا ويسري عند تسجيل الدخول التالي لهذا المستخدم.";
 
+/* preferences */
+"Each message shows its text alone, and the name heads each group of messages" = "تعرض كل رسالة نصها فقط، ويظهر الاسم فوق كل مجموعة رسائل";
+
+/* preferences */
+"Each message shows when it was sent, and the name heads each group of messages" = "تعرض كل رسالة وقت إرسالها، ويظهر الاسم فوق كل مجموعة رسائل";
+
+/* preferences */
+"Each message shows who sent it" = "تعرض كل رسالة اسم مرسلها";
+
+/* preferences */
+"Each message shows who sent it and when" = "تعرض كل رسالة اسم مرسلها ووقت إرسالها";
+
 /* text to speech events */
 "Each One Its Own" = "لكل إعلان إعداده";
 
@@ -819,6 +849,18 @@
 "Frame Size" = "حجم الإطار";
 
 /* preferences */
+"From A to Z" = "من الألف إلى الياء";
+
+/* preferences */
+"From fewer users to more" = "من أقل عدد مستخدمين إلى أكثره";
+
+/* preferences */
+"From more users to fewer" = "من أكثر عدد مستخدمين إلى أقله";
+
+/* preferences */
+"From Z to A" = "من الياء إلى الألف";
+
+/* preferences */
 "Gender" = "الجنس";
 
 /* preferences
@@ -827,6 +869,9 @@
 
 /* user accounts */
 "Give to Every Account" = "منح لكل الحسابات";
+
+/* preferences */
+"Go to the Newest Message" = "الانتقال إلى أحدث رسالة";
 
 /* channel list */
 "Go to Their Channel" = "الذهاب إلى قناته";
@@ -867,11 +912,17 @@
 /* preferences */
 "Increment" = "زيادة";
 
+/* sound events */
+"Interception" = "الاعتراض";
+
 /* appearance */
 "Interface" = "الواجهة";
 
 /* appearance */
 "Interface Color" = "لون الواجهة";
+
+/* sound devices */
+"iOS cancels echo, reduces noise and levels the volume" = "يلغي iOS الصدى ويخفّض الضجيج ويوازن مستوى الصوت";
 
 /* Sound Devices */
 "iOS Voice Processing" = "معالجة الصوت في iOS";
@@ -929,6 +980,9 @@
 
 /* accessibility hint */
 "Joins the channel that is shown" = "ينضم إلى القناة المعروضة";
+
+/* preferences */
+"Keep the Position" = "البقاء في الموضع";
 
 /* keyboard shortcuts */
 "Key" = "المفتاح";
@@ -1239,6 +1293,12 @@
 "Not transmitting" = "لا يرسل";
 
 /* preferences */
+"Notifications" = "الإشعارات";
+
+/* preferences */
+"Notifications in the Background" = "الإشعارات في الخلفية";
+
+/* preferences */
 "Number of Users" = "عدد المستخدمين";
 
 /* media stream */
@@ -1292,6 +1352,24 @@
 /* user accounts */
 "Other" = "أخرى";
 
+/* preferences */
+"Other users see that you have a question" = "يرى المستخدمون الآخرون أن لديك سؤالًا";
+
+/* preferences */
+"Other users see you as available" = "يراك المستخدمون الآخرون متاحًا";
+
+/* preferences */
+"Other users see you as away" = "يراك المستخدمون الآخرون بعيدًا";
+
+/* preferences */
+"Other users see you with the female icon" = "يراك المستخدمون الآخرون بأيقونة الأنثى";
+
+/* preferences */
+"Other users see you with the male icon" = "يراك المستخدمون الآخرون بأيقونة الذكر";
+
+/* preferences */
+"Other users see you with the neutral icon" = "يراك المستخدمون الآخرون بالأيقونة المحايدة";
+
 /* connection quality */
 "Packet Loss" = "فقدان الحزم";
 
@@ -1327,11 +1405,17 @@
 /* sound events */
 "Play sound when a file is uploaded to the channel" = "تشغيل صوت عند رفع ملف إلى القناة";
 
+/* sound events */
+"Play sound when a user is typing a private message to you" = "تشغيل صوت عندما يكتب لك مستخدم رسالة خاصة";
+
 /* preferences */
 "Play sound when a user joins the channel" = "تشغيل صوت  عندما ينضم مستخدم إلى القناة";
 
 /* preferences */
 "Play sound when a user leaves the channel" = "تشغيل صوت  عندما يغادر  مستخدم القناة";
+
+/* sound events */
+"Play sound when a user starts or stops intercepting you" = "تشغيل صوت عندما يبدأ مستخدم اعتراضك أو يتوقف عنه";
 
 /* preferences */
 "Play sound when broadcast text message is received" = "تشغيل الصوت عند استقبال رسالة نصية عامة";
@@ -1637,6 +1721,9 @@
 "Shortcuts work with an external keyboard while connected to a server. A key without a modifier does nothing while you are typing a message." = "تعمل الاختصارات مع لوحة مفاتيح خارجية أثناء الاتصال بخادم. المفتاح بلا مفتاح تعديل لا يفعل شيئًا أثناء كتابة رسالة.";
 
 /* preferences */
+"Show a notification when a text message arrives while the app is not in front" = "إظهار إشعار عند وصول رسالة نصية والتطبيق ليس في الواجهة";
+
+/* preferences */
 "Show in Server List" = "إظهار في قائمة الخوادم";
 
 /* preferences */
@@ -1815,6 +1902,9 @@
 /* channel list */
 "TeamTalk has no access to the microphone. Turn it on in Settings, under TeamTalk, and try again." = "لا يملك TeamTalk صلاحية الوصول إلى الميكروفون. فعّلها في الإعدادات، ضمن TeamTalk، ثم حاول من جديد.";
 
+/* preferences */
+"TeamTalk is not allowed to show notifications. Turn them on in Settings, under TeamTalk." = "غير مسموح لـ TeamTalk بإظهار الإشعارات. فعّلها من الإعدادات، ضمن TeamTalk.";
+
 /* server list */
 "TeamTalk Servers" = "خوادم TeamTalk";
 
@@ -1851,8 +1941,20 @@
 /* user accounts */
 "The account could not be saved" = "تعذر حفظ الحساب";
 
+/* appearance */
+"The app follows the light or dark mode of the system" = "يتبع التطبيق النمط الفاتح أو الداكن للنظام";
+
+/* appearance */
+"The app is always dark" = "التطبيق داكن دائمًا";
+
+/* appearance */
+"The app is always light" = "التطبيق فاتح دائمًا";
+
 /* backup */
 "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "تحتوي النسخة الاحتياطية على كل الإعدادات وقائمة الخوادم مع كلمات مرورها. احتفظ بالملف في مكان آمن.";
+
+/* media stream */
+"The current file starts again every time it ends" = "يبدأ الملف الحالي من جديد كلما انتهى";
 
 /* diagnostics */
 "The log is empty" = "السجل فارغ";
@@ -1862,6 +1964,15 @@
 
 /* appearance */
 "The messages can have a text size of their own, and the server events a font of their own." = "يمكن أن يكون للرسائل حجم نص خاص بها، ولأحداث الخادم خط خاص بها.";
+
+/* sound devices */
+"The microphone is sent as it is, with no noise reduction and no echo cancellation" = "يُرسَل صوت الميكروفون كما هو، بلا تخفيض للضجيج ولا إلغاء للصدى";
+
+/* preferences */
+"The name and the time go after the text of the message" = "الاسم والوقت بعد نص الرسالة";
+
+/* preferences */
+"The name and the time go before the text of the message" = "الاسم والوقت قبل نص الرسالة";
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "سرعة الكلام للصوت المتحدث هي %.1f";
@@ -2020,6 +2131,9 @@
 /* user detail */
 "User ID" = "معرّف المستخدم";
 
+/* sound and speech events */
+"User Is Typing" = "المستخدم يكتب";
+
 /* preferences */
 "User Joins Channel" = "ينضم المستخدم إلى القناة";
 
@@ -2122,8 +2236,14 @@
 /* text to speech events */
 "VoiceOver" = "VoiceOver";
 
+/* preferences */
+"VoiceOver moves to each message as it arrives or as you send it" = "ينتقل VoiceOver إلى كل رسالة عند وصولها أو عند إرسالك لها";
+
 /* text to speech events */
 "VoiceOver speaks an announcement with its own voice and shows it in braille. With VoiceOver off, the voice of TeamTalk speaks them all." = "ينطق VoiceOver الإعلان بصوته ويعرضه بطريقة برايل. عند إيقاف VoiceOver ينطقها كلها صوت TeamTalk.";
+
+/* preferences */
+"VoiceOver stays on the message you are reading when another one arrives" = "يبقى VoiceOver على الرسالة التي تقرؤها عند وصول رسالة أخرى";
 
 /* codec detail */
 "VoIP" = "VoIP (الصوت عبر بروتوكول الإنترنت)";
@@ -2153,6 +2273,9 @@
 /* Sound Devices */
 "WebRTC" = "WebRTC";
 
+/* sound devices */
+"WebRTC reduces noise and levels the volume but does not cancel echo, so use it with headphones" = "يخفّض WebRTC الضجيج ويوازن مستوى الصوت لكنه لا يلغي الصدى، فاستخدمه مع سماعات الرأس";
+
 /* preferences */
 "What each text message shows besides its text" = "ما تعرضه كل رسالة نصية إلى جانب نصها";
 
@@ -2161,6 +2284,15 @@
 
 /* diagnostics */
 "What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "ما يحتاجه التطبيق من الـ iPhone. إذا كان هنا شيء غير صحيح فهو أول ما يجب إصلاحه.";
+
+/* media stream */
+"When a file ends the next one starts, and after the last one the list starts again" = "عند انتهاء ملف يبدأ التالي، وبعد الأخير تبدأ القائمة من جديد";
+
+/* media stream */
+"When a file ends the next one starts, and streaming stops after the last one" = "عند انتهاء ملف يبدأ التالي، ويتوقف البث بعد الأخير";
+
+/* preferences */
+"When a Message Arrives" = "عند وصول رسالة";
 
 /* preferences */
 "Where the name and the time are shown and read" = "أين يُعرض ويُقرأ الاسم والوقت";

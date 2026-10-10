@@ -13,6 +13,15 @@
 /* file list */
 "%@ downloaded" = "%@ 已下载";
 
+/* interception */
+"%@ has stopped intercepting you: %@" = "%@ 已停止监听您：%@";
+
+/* interception */
+"%@ is now intercepting you: %@" = "%@ 正在监听您：%@";
+
+/* TTS EVENT */
+"%@ is typing" = "%@ 正在输入";
+
 /* log entry */
 "%@ joined channel" = "%@ 加入频道";
 
@@ -221,6 +230,9 @@
 /* preferences */
 "Announce user logged out of server" = "播报登出服务器的用户";
 
+/* text to speech events */
+"Announce when a user is typing a private message to you" = "有用户正在给您输入私信时播报";
+
 /* text to speech */
 "Announcements" = "播报";
 
@@ -407,6 +419,12 @@
 
 /* channel list */
 "Channels" = "频道";
+
+/* preferences */
+"Channels are sorted by name" = "频道按名称排序";
+
+/* preferences */
+"Channels are sorted by the number of users in them" = "频道按其中的用户数排序";
 
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "仅当此服务器启用了 BearWare.dk Web 登录时勾选";
@@ -678,6 +696,18 @@
 /* user accounts */
 "Each change is saved at once and applies the next time this user logs in." = "每项更改会立即保存，并在该用户下次登录时生效。";
 
+/* preferences */
+"Each message shows its text alone, and the name heads each group of messages" = "每条消息只显示正文，名称显示在每组消息上方";
+
+/* preferences */
+"Each message shows when it was sent, and the name heads each group of messages" = "每条消息显示发送时间，名称显示在每组消息上方";
+
+/* preferences */
+"Each message shows who sent it" = "每条消息显示发送者";
+
+/* preferences */
+"Each message shows who sent it and when" = "每条消息显示发送者和发送时间";
+
 /* text to speech events */
 "Each One Its Own" = "各自不同";
 
@@ -820,6 +850,18 @@
 "Frame Size" = "帧大小";
 
 /* preferences */
+"From A to Z" = "从 A 到 Z";
+
+/* preferences */
+"From fewer users to more" = "用户数从少到多";
+
+/* preferences */
+"From more users to fewer" = "用户数从多到少";
+
+/* preferences */
+"From Z to A" = "从 Z 到 A";
+
+/* preferences */
 "Gender" = "性别";
 
 /* preferences
@@ -828,6 +870,9 @@
 
 /* user accounts */
 "Give to Every Account" = "授予所有账户";
+
+/* preferences */
+"Go to the Newest Message" = "前往最新消息";
 
 /* channel list */
 "Go to Their Channel" = "前往其频道";
@@ -868,11 +913,17 @@
 /* preferences */
 "Increment" = "增加";
 
+/* sound events */
+"Interception" = "监听";
+
 /* appearance */
 "Interface" = "界面";
 
 /* appearance */
 "Interface Color" = "界面颜色";
+
+/* sound devices */
+"iOS cancels echo, reduces noise and levels the volume" = "iOS 会消除回声、降低噪声并均衡音量";
 
 /* Sound Devices */
 "iOS Voice Processing" = "iOS 语音处理";
@@ -930,6 +981,9 @@
 
 /* accessibility hint */
 "Joins the channel that is shown" = "加入所显示的频道";
+
+/* preferences */
+"Keep the Position" = "保持位置";
 
 /* keyboard shortcuts */
 "Key" = "按键";
@@ -1240,6 +1294,12 @@
 "Not transmitting" = "未在发送";
 
 /* preferences */
+"Notifications" = "通知";
+
+/* preferences */
+"Notifications in the Background" = "后台通知";
+
+/* preferences */
 "Number of Users" = "用户数";
 
 /* media stream */
@@ -1294,6 +1354,24 @@
 /* user accounts */
 "Other" = "其他";
 
+/* preferences */
+"Other users see that you have a question" = "其他用户会看到您有疑问";
+
+/* preferences */
+"Other users see you as available" = "其他用户会看到您在线";
+
+/* preferences */
+"Other users see you as away" = "其他用户会看到您已离开";
+
+/* preferences */
+"Other users see you with the female icon" = "其他用户会看到您的女性图标";
+
+/* preferences */
+"Other users see you with the male icon" = "其他用户会看到您的男性图标";
+
+/* preferences */
+"Other users see you with the neutral icon" = "其他用户会看到您的中性图标";
+
 /* connection quality */
 "Packet Loss" = "丢包";
 
@@ -1330,11 +1408,17 @@
 /* sound events */
 "Play sound when a file is uploaded to the channel" = "文件上传到频道时播放声音";
 
+/* sound events */
+"Play sound when a user is typing a private message to you" = "有用户正在给您输入私信时播放声音";
+
 /* preferences */
 "Play sound when a user joins the channel" = "用户加入频道时播放声音";
 
 /* preferences */
 "Play sound when a user leaves the channel" = "用户离开频道时播放声音";
+
+/* sound events */
+"Play sound when a user starts or stops intercepting you" = "有用户开始或停止监听您时播放声音";
 
 /* preferences */
 "Play sound when broadcast text message is received" = "收到广播消息时播放声音";
@@ -1640,6 +1724,9 @@
 "Shortcuts work with an external keyboard while connected to a server. A key without a modifier does nothing while you are typing a message." = "连接到服务器时，快捷键可配合外接键盘使用。不带修饰键的按键在你输入消息时不起作用。";
 
 /* preferences */
+"Show a notification when a text message arrives while the app is not in front" = "App 不在前台时收到文字消息即显示通知";
+
+/* preferences */
 "Show in Server List" = "在服务器列表中显示";
 
 /* preferences */
@@ -1818,6 +1905,9 @@
 /* channel list */
 "TeamTalk has no access to the microphone. Turn it on in Settings, under TeamTalk, and try again." = "TeamTalk 无权访问麦克风。请在“设置”的 TeamTalk 下打开，然后重试。";
 
+/* preferences */
+"TeamTalk is not allowed to show notifications. Turn them on in Settings, under TeamTalk." = "TeamTalk 未获准显示通知。请在“设置”中的 TeamTalk 下开启。";
+
 /* server list */
 "TeamTalk Servers" = "TeamTalk 服务器";
 
@@ -1854,8 +1944,20 @@
 /* user accounts */
 "The account could not be saved" = "无法保存该账户";
 
+/* appearance */
+"The app follows the light or dark mode of the system" = "App 跟随系统的浅色或深色模式";
+
+/* appearance */
+"The app is always dark" = "App 始终为深色";
+
+/* appearance */
+"The app is always light" = "App 始终为浅色";
+
 /* backup */
 "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "备份包含所有设置和服务器列表及其密码。请将文件妥善保管。";
+
+/* media stream */
+"The current file starts again every time it ends" = "当前文件每次结束后重新开始";
 
 /* diagnostics */
 "The log is empty" = "日志为空";
@@ -1865,6 +1967,15 @@
 
 /* appearance */
 "The messages can have a text size of their own, and the server events a font of their own." = "消息可以有自己的文字大小，服务器事件可以有自己的字体。";
+
+/* sound devices */
+"The microphone is sent as it is, with no noise reduction and no echo cancellation" = "麦克风声音原样发送，不降噪也不消除回声";
+
+/* preferences */
+"The name and the time go after the text of the message" = "名称和时间位于消息正文之后";
+
+/* preferences */
+"The name and the time go before the text of the message" = "名称和时间位于消息正文之前";
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "朗读语速为 %.1f";
@@ -2023,6 +2134,9 @@
 /* user detail */
 "User ID" = "用户 ID";
 
+/* sound and speech events */
+"User Is Typing" = "用户正在输入";
+
 /* preferences */
 "User Joins Channel" = "用户加入频道";
 
@@ -2126,8 +2240,14 @@
 /* text to speech events */
 "VoiceOver" = "VoiceOver";
 
+/* preferences */
+"VoiceOver moves to each message as it arrives or as you send it" = "每当消息到达或您发送消息时，VoiceOver 会移到该消息";
+
 /* text to speech events */
 "VoiceOver speaks an announcement with its own voice and shows it in braille. With VoiceOver off, the voice of TeamTalk speaks them all." = "VoiceOver 用自己的声音朗读播报并以盲文显示。VoiceOver 关闭时，全部由 TeamTalk 语音朗读。";
+
+/* preferences */
+"VoiceOver stays on the message you are reading when another one arrives" = "有新消息到达时，VoiceOver 停留在您正在阅读的消息上";
 
 /* codec detail */
 "VoIP" = "语音通话";
@@ -2157,6 +2277,9 @@
 /* Sound Devices */
 "WebRTC" = "WebRTC";
 
+/* sound devices */
+"WebRTC reduces noise and levels the volume but does not cancel echo, so use it with headphones" = "WebRTC 会降低噪声并均衡音量，但不消除回声，请搭配耳机使用";
+
 /* preferences */
 "What each text message shows besides its text" = "每条文字消息除正文外显示的内容";
 
@@ -2165,6 +2288,15 @@
 
 /* diagnostics */
 "What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "App 需要 iPhone 提供的条件。如果这里有不正常的地方，应首先解决。";
+
+/* media stream */
+"When a file ends the next one starts, and after the last one the list starts again" = "一个文件结束后开始下一个，最后一个结束后列表重新开始";
+
+/* media stream */
+"When a file ends the next one starts, and streaming stops after the last one" = "一个文件结束后开始下一个，最后一个结束后停止流式传输";
+
+/* preferences */
+"When a Message Arrives" = "消息到达时";
 
 /* preferences */
 "Where the name and the time are shown and read" = "名称和时间显示及朗读的位置";

@@ -34,6 +34,12 @@ struct PreferencesView: View {
     @AppStorage(PREF_DISPLAY_MSGDETAILS) private var messageDetails = MessageDetails.nameAndTime.rawValue
     @AppStorage(PREF_DISPLAY_MSGDETAILSAFTER) private var messageDetailsAfter = false
     @AppStorage(PREF_GENERAL_CONFIRMDISCONNECT) private var confirmDisconnect = false
+    @AppStorage(PREF_DISPLAY_MSGFOCUS) private var followsNewMessages = false
+    @AppStorage(PREF_NOTIFY_BACKGROUND) private var notifyInBackground = false
+    @AppStorage(PREF_NOTIFY_USERMSG) private var notifyUserMessages = true
+    @AppStorage(PREF_NOTIFY_CHANMSG) private var notifyChannelMessages = false
+    @AppStorage(PREF_NOTIFY_BROADCAST) private var notifyBroadcastMessages = true
+    @State private var notificationsDenied = false
 
     var body: some View {
         Form {
@@ -43,6 +49,7 @@ struct PreferencesView: View {
             soundSection
             soundEventsSection
             ttsSection
+            notificationsSection
             connectionSection
             subscriptionsSection
             backupSection
@@ -66,6 +73,112 @@ struct PreferencesView: View {
             Button("OK", role: .cancel) { }
         } message: {
             Text(backupMessage ?? "")
+        }
+        .alert("Notifications", isPresented: $notificationsDenied) {
+            Button("OK", role: .cancel) { }
+        } message: {
+            Text("TeamTalk is not allowed to show notifications. Turn them on in Settings, under TeamTalk.")
+        }
+    }
+
+    // MARK: - An explanation for each choice
+
+    private var genderExplanation: LocalizedStringKey {
+        switch model.genderIndex {
+        case 1:
+            return "Other users see you with the female icon"
+        case 2:
+            return "Other users see you with the neutral icon"
+        default:
+            return "Other users see you with the male icon"
+        }
+    }
+
+    private var statusExplanation: LocalizedStringKey {
+        switch model.statusIndex {
+        case 1:
+            return "Other users see you as away"
+        case 2:
+            return "Other users see that you have a question"
+        default:
+            return "Other users see you as available"
+        }
+    }
+
+    private var messageDetailsExplanation: LocalizedStringKey {
+        switch MessageDetails(rawValue: messageDetails) ?? .nameAndTime {
+        case .nameAndTime:
+            return "Each message shows who sent it and when"
+        case .nameOnly:
+            return "Each message shows who sent it"
+        case .timeOnly:
+            return "Each message shows when it was sent, and the name heads each group of messages"
+        case .messageOnly:
+            return "Each message shows its text alone, and the name heads each group of messages"
+        }
+    }
+
+    private var detailsPositionExplanation: LocalizedStringKey {
+        messageDetailsAfter
+            ? "The name and the time go after the text of the message"
+            : "The name and the time go before the text of the message"
+    }
+
+    private var messageFocusExplanation: LocalizedStringKey {
+        followsNewMessages
+            ? "VoiceOver moves to each message as it arrives or as you send it"
+            : "VoiceOver stays on the message you are reading when another one arrives"
+    }
+
+    private var channelSortExplanation: LocalizedStringKey {
+        model.channelSortIndex == 0
+            ? "Channels are sorted by name"
+            : "Channels are sorted by the number of users in them"
+    }
+
+    private var sortDirectionExplanation: LocalizedStringKey {
+        switch (model.channelSortIndex == 0, model.channelSortDescending) {
+        case (true, false):
+            return "From A to Z"
+        case (true, true):
+            return "From Z to A"
+        case (false, false):
+            return "From fewer users to more"
+        case (false, true):
+            return "From more users to fewer"
+        }
+    }
+
+    // MARK: - Notifications
+
+    private var notificationsSection: some View {
+        Section("Notifications") {
+            Toggle(isOn: Binding(get: { notifyInBackground }, set: { setNotifications($0) })) {
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Notifications in the Background")
+                    Text("Show a notification when a text message arrives while the app is not in front")
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                }
+            }
+            if notifyInBackground {
+                Toggle("User Messages", isOn: $notifyUserMessages)
+                Toggle("Channel Messages", isOn: $notifyChannelMessages)
+                Toggle("Broadcast Messages", isOn: $notifyBroadcastMessages)
+            }
+        }
+    }
+
+    /// iOS asks for its permission the first time. Refused, the switch goes
+    /// back: on and silent would be worse than off.
+    private func setNotifications(_ enabled: Bool) {
+        guard enabled else {
+            notifyInBackground = false
+            return
+        }
+        TextMessageNotifications.requestPermission { granted in
+            notifyInBackground = granted
+            notificationsDenied = !granted
         }
     }
 
@@ -100,7 +213,7 @@ struct PreferencesView: View {
                     }
                     .pickerStyle(.segmented)
                 }
-                PreferenceSubtitle("Show male, female or neutral icon")
+                PreferenceSubtitle(genderExplanation)
             }
 
             VStack(alignment: .leading, spacing: 4) {
@@ -116,7 +229,7 @@ struct PreferencesView: View {
                     }
                     .pickerStyle(.segmented)
                 }
-                PreferenceSubtitle("Shown to the other users of the server")
+                PreferenceSubtitle(statusExplanation)
             }
 
             VStack(alignment: .leading, spacing: 4) {
@@ -234,14 +347,21 @@ struct PreferencesView: View {
                 Text("Time Only").tag(MessageDetails.timeOnly.rawValue)
                 Text("Message Only").tag(MessageDetails.messageOnly.rawValue)
             }
-            PreferenceSubtitle("What each text message shows besides its text")
+            PreferenceSubtitle(messageDetailsExplanation)
         }
         VStack(alignment: .leading, spacing: 4) {
             Picker("Details Position", selection: $messageDetailsAfter) {
                 Text("Before the Message").tag(false)
                 Text("After the Message").tag(true)
             }
-            PreferenceSubtitle("Where the name and the time are shown and read")
+            PreferenceSubtitle(detailsPositionExplanation)
+        }
+        VStack(alignment: .leading, spacing: 4) {
+            Picker("When a Message Arrives", selection: $followsNewMessages) {
+                Text("Keep the Position").tag(false)
+                Text("Go to the Newest Message").tag(true)
+            }
+            PreferenceSubtitle(messageFocusExplanation)
         }
     }
 
@@ -272,7 +392,7 @@ struct PreferencesView: View {
                     .accessibilityLabel(Text("Decrement"))
                     AdjustableSlider(label: Text("Maximum Text Length"), valueText: "\(length)",
                                      value: Binding(get: { model.limitText }, set: { model.limittextChanged($0) }),
-                                     range: range, step: 1, flick: 10)
+                                     range: range, step: 1)
                     Button {
                         model.limittextChanged(min(range.upperBound, model.limitText + 1))
                     } label: {
@@ -301,7 +421,7 @@ struct PreferencesView: View {
                 }
                 .pickerStyle(.segmented)
             }
-            PreferenceSubtitle("Order of channels in Channel List")
+            PreferenceSubtitle(channelSortExplanation)
         }
         VStack(alignment: .leading, spacing: 4) {
             VStack(alignment: .leading, spacing: 8) {
@@ -315,7 +435,7 @@ struct PreferencesView: View {
                 }
                 .pickerStyle(.segmented)
             }
-            PreferenceSubtitle("Ascending goes from A to Z and from fewer users to more")
+            PreferenceSubtitle(sortDirectionExplanation)
         }
     }
 
@@ -342,7 +462,6 @@ struct PreferencesView: View {
                 value: Binding(get: { model.masterVolumePercent }, set: { model.masterVolumeChanged($0) }),
                 range: 0...100,
                 step: 1,
-                flick: 10,
                 displayValue: { model.percentSubtitle($0) }
             )
             sliderWithSubtitle(
@@ -351,7 +470,6 @@ struct PreferencesView: View {
                 value: Binding(get: { model.mediaFileVolumePercent }, set: { model.mediafileVolumeChanged($0) }),
                 range: 0...100,
                 step: 1,
-                flick: 10,
                 hint: Text("Media file vs. voice volume"),
                 displayValue: { "\(Int($0.rounded())) %" }
             )
@@ -361,7 +479,6 @@ struct PreferencesView: View {
                 value: Binding(get: { model.microphoneGainPercent }, set: { model.microphoneGainChanged($0) }),
                 range: 0...100,
                 step: 1,
-                flick: 10,
                 displayValue: { model.percentSubtitle($0) }
             )
             sliderWithSubtitle(
@@ -550,7 +667,6 @@ struct PreferencesView: View {
                                     value: Binding<Double>,
                                     range: ClosedRange<Double>,
                                     step: Double,
-                                    flick: Double? = nil,
                                     hint: Text? = nil,
                                     readsSubtitle: Bool = false,
                                     displayValue: @escaping (Double) -> String) -> some View {
@@ -565,7 +681,7 @@ struct PreferencesView: View {
                 }
                 .accessibilityHidden(true)
                 AdjustableSlider(label: Text(title), valueText: displayValue(value.wrappedValue),
-                                 value: value, range: range, step: step, flick: flick, hint: hint)
+                                 value: value, range: range, step: step, hint: hint)
             }
             PreferenceSubtitle(subtitle)
                 .accessibilityHidden(!readsSubtitle)
@@ -576,14 +692,13 @@ struct PreferencesView: View {
 /// A slider VoiceOver can drag as well as flick. It is an element of its own
 /// with one label and one value, and the point where VoiceOver touches it is
 /// on the thumb, so "double tap and hold" takes hold of it and the finger
-/// moves it step by step. A flick up or down moves it by `flick`.
+/// moves it step by step. A flick up or down moves it one step too.
 struct AdjustableSlider: View {
     let label: Text
     let valueText: String
     @Binding var value: Double
     let range: ClosedRange<Double>
     var step: Double = 1
-    var flick: Double?
     var hint: Text?
 
     var body: some View {
@@ -595,12 +710,11 @@ struct AdjustableSlider: View {
             .accessibilityValue(Text(verbatim: valueText))
             .accessibilityHint(hint ?? Text(verbatim: ""))
             .accessibilityAdjustableAction { direction in
-                let amount = flick ?? step
                 switch direction {
                 case .increment:
-                    value = min(range.upperBound, value + amount)
+                    value = min(range.upperBound, value + step)
                 case .decrement:
-                    value = max(range.lowerBound, value - amount)
+                    value = max(range.lowerBound, value - step)
                 @unknown default:
                     break
                 }

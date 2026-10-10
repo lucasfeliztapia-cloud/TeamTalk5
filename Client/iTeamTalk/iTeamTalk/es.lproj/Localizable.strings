@@ -13,6 +13,15 @@
 /* file list */
 "%@ downloaded" = "%@ descargado";
 
+/* interception */
+"%@ has stopped intercepting you: %@" = "%@ ha dejado de interceptarte: %@";
+
+/* interception */
+"%@ is now intercepting you: %@" = "%@ te está interceptando: %@";
+
+/* TTS EVENT */
+"%@ is typing" = "%@ está escribiendo";
+
 /* log entry */
 "%@ joined channel" = "%@ se ha unido al canal";
 
@@ -221,6 +230,9 @@
 /* preferences */
 "Announce user logged out of server" = "Anunciar cuando un usuario salga del servidor";
 
+/* text to speech events */
+"Announce when a user is typing a private message to you" = "Anunciar cuando un usuario te esté escribiendo un mensaje privado";
+
 /* text to speech */
 "Announcements" = "Anunciar";
 
@@ -406,6 +418,12 @@
 
 /* channel list */
 "Channels" = "Canales";
+
+/* preferences */
+"Channels are sorted by name" = "Los canales se ordenan por nombre";
+
+/* preferences */
+"Channels are sorted by the number of users in them" = "Los canales se ordenan por el número de usuarios que tienen";
 
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "Activar solo si el servidor tiene habilitado BearWare.dk Web Login";
@@ -678,6 +696,18 @@
 /* user accounts */
 "Each change is saved at once and applies the next time this user logs in." = "Cada cambio se guarda de inmediato y se aplica la próxima vez que el usuario inicie sesión.";
 
+/* preferences */
+"Each message shows its text alone, and the name heads each group of messages" = "Cada mensaje muestra solo su texto, y el nombre encabeza cada grupo de mensajes";
+
+/* preferences */
+"Each message shows when it was sent, and the name heads each group of messages" = "Cada mensaje muestra la hora de envío, y el nombre encabeza cada grupo de mensajes";
+
+/* preferences */
+"Each message shows who sent it" = "Cada mensaje muestra quién lo envía";
+
+/* preferences */
+"Each message shows who sent it and when" = "Cada mensaje muestra quién lo envía y a qué hora";
+
 /* text to speech events */
 "Each One Its Own" = "Según cada anuncio";
 
@@ -820,6 +850,18 @@
 "Frame Size" = "Tamaño de trama";
 
 /* preferences */
+"From A to Z" = "De la A a la Z";
+
+/* preferences */
+"From fewer users to more" = "De menos a más usuarios";
+
+/* preferences */
+"From more users to fewer" = "De más a menos usuarios";
+
+/* preferences */
+"From Z to A" = "De la Z a la A";
+
+/* preferences */
 "Gender" = "Género";
 
 /* preferences
@@ -828,6 +870,9 @@
 
 /* user accounts */
 "Give to Every Account" = "Dar a todas las cuentas";
+
+/* preferences */
+"Go to the Newest Message" = "Ir al mensaje más reciente";
 
 /* channel list */
 "Go to Their Channel" = "Ir a su canal";
@@ -868,11 +913,17 @@
 /* preferences */
 "Increment" = "Aumentar";
 
+/* sound events */
+"Interception" = "Interceptación";
+
 /* appearance */
 "Interface" = "Interfaz";
 
 /* appearance */
 "Interface Color" = "Color de la interfaz";
+
+/* sound devices */
+"iOS cancels echo, reduces noise and levels the volume" = "iOS cancela el eco, reduce el ruido y nivela el volumen";
 
 /* Sound Devices */
 "iOS Voice Processing" = "Procesamiento de voz de iOS";
@@ -930,6 +981,9 @@
 
 /* accessibility hint */
 "Joins the channel that is shown" = "Toca dos veces para unirte a este canal";
+
+/* preferences */
+"Keep the Position" = "Mantener la posición";
 
 /* keyboard shortcuts */
 "Key" = "Tecla";
@@ -1240,6 +1294,12 @@
 "Not transmitting" = "Sin transmitir";
 
 /* preferences */
+"Notifications" = "Notificaciones";
+
+/* preferences */
+"Notifications in the Background" = "Notificaciones en segundo plano";
+
+/* preferences */
 "Number of Users" = "Número de usuarios";
 
 /* media stream */
@@ -1293,6 +1353,24 @@
 /* user accounts */
 "Other" = "Otros";
 
+/* preferences */
+"Other users see that you have a question" = "Los demás usuarios ven que tienes una pregunta";
+
+/* preferences */
+"Other users see you as available" = "Los demás usuarios te ven como disponible";
+
+/* preferences */
+"Other users see you as away" = "Los demás usuarios te ven como ausente";
+
+/* preferences */
+"Other users see you with the female icon" = "Los demás usuarios te ven con el icono femenino";
+
+/* preferences */
+"Other users see you with the male icon" = "Los demás usuarios te ven con el icono masculino";
+
+/* preferences */
+"Other users see you with the neutral icon" = "Los demás usuarios te ven con el icono neutro";
+
 /* connection quality */
 "Packet Loss" = "Pérdida de paquetes";
 
@@ -1328,11 +1406,17 @@
 /* sound events */
 "Play sound when a file is uploaded to the channel" = "Reproducir sonido cuando se suba un archivo al canal";
 
+/* sound events */
+"Play sound when a user is typing a private message to you" = "Reproducir sonido cuando un usuario te esté escribiendo un mensaje privado";
+
 /* preferences */
 "Play sound when a user joins the channel" = "Reproducir sonido cuando un usuario se una al canal";
 
 /* preferences */
 "Play sound when a user leaves the channel" = "Reproducir sonido cuando un usuario salga del canal";
+
+/* sound events */
+"Play sound when a user starts or stops intercepting you" = "Reproducir sonido cuando un usuario empiece o deje de interceptarte";
 
 /* preferences */
 "Play sound when broadcast text message is received" = "Reproducir sonido al recibir mensaje de difusión";
@@ -1638,6 +1722,9 @@
 "Shortcuts work with an external keyboard while connected to a server. A key without a modifier does nothing while you are typing a message." = "Los atajos funcionan con un teclado externo mientras estás conectado a un servidor. Una tecla sin modificador no hace nada mientras escribes un mensaje.";
 
 /* preferences */
+"Show a notification when a text message arrives while the app is not in front" = "Mostrar una notificación cuando llegue un mensaje de texto y la app no esté en primer plano";
+
+/* preferences */
 "Show in Server List" = "Mostrar en la lista de servidores";
 
 /* preferences */
@@ -1816,6 +1903,9 @@
 /* channel list */
 "TeamTalk has no access to the microphone. Turn it on in Settings, under TeamTalk, and try again." = "TeamTalk no tiene acceso al micrófono. Actívalo en Ajustes > TeamTalk y vuelve a intentarlo.";
 
+/* preferences */
+"TeamTalk is not allowed to show notifications. Turn them on in Settings, under TeamTalk." = "TeamTalk no tiene permiso para mostrar notificaciones. Actívalas en Ajustes > TeamTalk.";
+
 /* server list */
 "TeamTalk Servers" = "Servidores de TeamTalk";
 
@@ -1852,8 +1942,20 @@
 /* user accounts */
 "The account could not be saved" = "No se ha podido guardar la cuenta";
 
+/* appearance */
+"The app follows the light or dark mode of the system" = "La app sigue el modo claro u oscuro del sistema";
+
+/* appearance */
+"The app is always dark" = "La app se muestra siempre en modo oscuro";
+
+/* appearance */
+"The app is always light" = "La app se muestra siempre en modo claro";
+
 /* backup */
 "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "La copia contiene todos los ajustes y la lista de servidores, con sus contraseñas. Guarda el archivo en un lugar seguro.";
+
+/* media stream */
+"The current file starts again every time it ends" = "El archivo actual vuelve a empezar cada vez que termina";
 
 /* diagnostics */
 "The log is empty" = "El registro está vacío";
@@ -1863,6 +1965,15 @@
 
 /* appearance */
 "The messages can have a text size of their own, and the server events a font of their own." = "Los mensajes pueden tener su propio tamaño de texto, y los eventos del servidor su propia fuente.";
+
+/* sound devices */
+"The microphone is sent as it is, with no noise reduction and no echo cancellation" = "El micrófono se envía tal cual, sin reducción de ruido ni cancelación de eco";
+
+/* preferences */
+"The name and the time go after the text of the message" = "El nombre y la hora van después del texto del mensaje";
+
+/* preferences */
+"The name and the time go before the text of the message" = "El nombre y la hora van antes del texto del mensaje";
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "La velocidad de la voz es %.1f";
@@ -2021,6 +2132,9 @@
 /* user detail */
 "User ID" = "ID de usuario";
 
+/* sound and speech events */
+"User Is Typing" = "El usuario está escribiendo";
+
 /* preferences */
 "User Joins Channel" = "El usuario se une al canal";
 
@@ -2123,8 +2237,14 @@
 /* text to speech events */
 "VoiceOver" = "VoiceOver";
 
+/* preferences */
+"VoiceOver moves to each message as it arrives or as you send it" = "VoiceOver se desplaza a cada mensaje cuando llega o cuando lo envías";
+
 /* text to speech events */
 "VoiceOver speaks an announcement with its own voice and shows it in braille. With VoiceOver off, the voice of TeamTalk speaks them all." = "VoiceOver lee el anuncio con su propia voz y lo muestra en braille. Con VoiceOver desactivado, todos los anuncios se leen con la síntesis de voz de TeamTalk.";
+
+/* preferences */
+"VoiceOver stays on the message you are reading when another one arrives" = "VoiceOver permanece en el mensaje que estás leyendo cuando llega otro";
 
 /* codec detail */
 "VoIP" = "Voz";
@@ -2154,6 +2274,9 @@
 /* Sound Devices */
 "WebRTC" = "WebRTC";
 
+/* sound devices */
+"WebRTC reduces noise and levels the volume but does not cancel echo, so use it with headphones" = "WebRTC reduce el ruido y nivela el volumen, pero no cancela el eco, por lo que se recomienda usarlo con auriculares";
+
 /* preferences */
 "What each text message shows besides its text" = "Información que acompaña a cada mensaje de texto";
 
@@ -2162,6 +2285,15 @@
 
 /* diagnostics */
 "What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Requisitos de la app en el iPhone. Si alguno no se cumple, es lo primero que conviene corregir.";
+
+/* media stream */
+"When a file ends the next one starts, and after the last one the list starts again" = "Al terminar un archivo comienza el siguiente y, tras el último, la lista vuelve a empezar";
+
+/* media stream */
+"When a file ends the next one starts, and streaming stops after the last one" = "Al terminar un archivo comienza el siguiente, y la transmisión se detiene tras el último";
+
+/* preferences */
+"When a Message Arrives" = "Al llegar un mensaje";
 
 /* preferences */
 "Where the name and the time are shown and read" = "Lugar donde se muestran y se leen el nombre y la hora";

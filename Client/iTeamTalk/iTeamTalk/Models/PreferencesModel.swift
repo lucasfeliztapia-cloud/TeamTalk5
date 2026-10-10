@@ -68,6 +68,7 @@ let PREF_DISPLAY_SORTCHANNELS = "display_sortchannels_preference"
 let PREF_DISPLAY_SORTCHANNELS_DESC = "display_sortchannelsdescending_preference"
 let PREF_DISPLAY_MSGDETAILS = "display_messagedetails_preference"
 let PREF_DISPLAY_MSGDETAILSAFTER = "display_messagedetailsafter_preference"
+let PREF_DISPLAY_MSGFOCUS = "display_messagefocus_preference"
 let PREF_DISPLAY_OFFICIALSERVERS = "display_officialservers_preference"
 let PREF_DISPLAY_PUBLICSERVERS = "display_publicservers_preference"
 let PREF_DISPLAY_UNOFFICIALSERVERS = "display_unofficialservers_preference"
@@ -96,6 +97,8 @@ let PREF_SNDEVENT_LOGGEDIN = "snd_loggedin_preference"
 let PREF_SNDEVENT_LOGGEDOUT = "snd_loggedout_preference"
 let PREF_SNDEVENT_FILEADDED = "snd_fileadded_preference"
 let PREF_SNDEVENT_FILEREMOVED = "snd_fileremoved_preference"
+let PREF_SNDEVENT_TYPING = "snd_typing_preference"
+let PREF_SNDEVENT_INTERCEPT = "snd_intercept_preference"
 
 let PREF_SUB_USERMSG = "sub_usertextmsg_preference"
 let PREF_SUB_CHANMSG = "sub_chantextmsg_preference"
@@ -113,6 +116,7 @@ let PREF_TTSEVENT_LEFTCHAN = "tts_leftchan_preference"
 let PREF_TTSEVENT_CONLOST = "tts_conlost_preference"
 let PREF_TTSEVENT_TEXTMSG = "tts_usertxtmsg_preference"
 let PREF_TTSEVENT_CHANTEXTMSG = "tts_chantxtmsg_preference"
+let PREF_TTSEVENT_TYPING = "tts_typing_preference"
 let PREF_TTSEVENT_RATE = "tts_rate_preference"
 let PREF_TTSEVENT_VOL = "tts_volume_preference"
 let PREF_TTSEVENT_USERLOGIN = "tts_user_login"
@@ -294,6 +298,7 @@ final class PreferencesModel: ObservableObject {
         }
 
         setupSoundDevices()
+        syncInputMute()
     }
 
     func showtextmessagesChanged(_ enabled: Bool) {
@@ -382,6 +387,8 @@ final class PreferencesModel: ObservableObject {
             TeamTalkClient.shared.setVoiceActivationLevel(INT32(level))
         }
         UserDefaults.standard.set(level, forKey: PREF_VOICEACTIVATION)
+        // with voice activation the input must never stay muted
+        syncInputMute()
     }
 
     func ttsrateChanged(_ value: Double) {

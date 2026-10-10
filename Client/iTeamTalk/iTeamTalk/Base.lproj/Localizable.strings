@@ -13,6 +13,15 @@
 /* file list */
 "%@ downloaded" = "%@ downloaded";
 
+/* interception */
+"%@ has stopped intercepting you: %@" = "%@ has stopped intercepting you: %@";
+
+/* interception */
+"%@ is now intercepting you: %@" = "%@ is now intercepting you: %@";
+
+/* TTS EVENT */
+"%@ is typing" = "%@ is typing";
+
 /* log entry */
 "%@ joined channel" = "%@ joined channel";
 
@@ -222,6 +231,9 @@
 /* preferences */
 "Announce user logged out of server" = "Announce user logged out of server";
 
+/* text to speech events */
+"Announce when a user is typing a private message to you" = "Announce when a user is typing a private message to you";
+
 /* text to speech */
 "Announcements" = "Announcements";
 
@@ -408,6 +420,12 @@
 
 /* channel list */
 "Channels" = "Channels";
+
+/* preferences */
+"Channels are sorted by name" = "Channels are sorted by name";
+
+/* preferences */
+"Channels are sorted by the number of users in them" = "Channels are sorted by the number of users in them";
 
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "Check only if this server has enabled BearWare.dk Web Login";
@@ -676,6 +694,18 @@
 /* user accounts */
 "Each change is saved at once and applies the next time this user logs in." = "Each change is saved at once and applies the next time this user logs in.";
 
+/* preferences */
+"Each message shows its text alone, and the name heads each group of messages" = "Each message shows its text alone, and the name heads each group of messages";
+
+/* preferences */
+"Each message shows when it was sent, and the name heads each group of messages" = "Each message shows when it was sent, and the name heads each group of messages";
+
+/* preferences */
+"Each message shows who sent it" = "Each message shows who sent it";
+
+/* preferences */
+"Each message shows who sent it and when" = "Each message shows who sent it and when";
+
 /* text to speech events */
 "Each One Its Own" = "Each One Its Own";
 
@@ -815,6 +845,18 @@
 "Frame Size" = "Frame Size";
 
 /* preferences */
+"From A to Z" = "From A to Z";
+
+/* preferences */
+"From fewer users to more" = "From fewer users to more";
+
+/* preferences */
+"From more users to fewer" = "From more users to fewer";
+
+/* preferences */
+"From Z to A" = "From Z to A";
+
+/* preferences */
 "Gender" = "Gender";
 
 /* preferences
@@ -824,6 +866,9 @@
 
 /* user accounts */
 "Give to Every Account" = "Give to Every Account";
+
+/* preferences */
+"Go to the Newest Message" = "Go to the Newest Message";
 
 /* channel list */
 "Go to Their Channel" = "Go to Their Channel";
@@ -864,11 +909,17 @@
 /* preferences */
 "Increment" = "Increment";
 
+/* sound events */
+"Interception" = "Interception";
+
 /* appearance */
 "Interface" = "Interface";
 
 /* appearance */
 "Interface Color" = "Interface Color";
+
+/* sound devices */
+"iOS cancels echo, reduces noise and levels the volume" = "iOS cancels echo, reduces noise and levels the volume";
 
 /* Sound Devices */
 "iOS Voice Processing" = "iOS Voice Processing";
@@ -923,6 +974,9 @@
 
 /* accessibility hint */
 "Joins the channel that is shown" = "Joins the channel that is shown";
+
+/* preferences */
+"Keep the Position" = "Keep the Position";
 
 /* keyboard shortcuts */
 "Key" = "Key";
@@ -1230,6 +1284,12 @@
 "Not transmitting" = "Not transmitting";
 
 /* preferences */
+"Notifications" = "Notifications";
+
+/* preferences */
+"Notifications in the Background" = "Notifications in the Background";
+
+/* preferences */
 "Number of Users" = "Number of Users";
 
 /* media stream */
@@ -1284,6 +1344,24 @@
 /* user accounts */
 "Other" = "Other";
 
+/* preferences */
+"Other users see that you have a question" = "Other users see that you have a question";
+
+/* preferences */
+"Other users see you as available" = "Other users see you as available";
+
+/* preferences */
+"Other users see you as away" = "Other users see you as away";
+
+/* preferences */
+"Other users see you with the female icon" = "Other users see you with the female icon";
+
+/* preferences */
+"Other users see you with the male icon" = "Other users see you with the male icon";
+
+/* preferences */
+"Other users see you with the neutral icon" = "Other users see you with the neutral icon";
+
 /* connection quality */
 "Packet Loss" = "Packet Loss";
 
@@ -1320,11 +1398,17 @@
 /* sound events */
 "Play sound when a file is uploaded to the channel" = "Play sound when a file is uploaded to the channel";
 
+/* sound events */
+"Play sound when a user is typing a private message to you" = "Play sound when a user is typing a private message to you";
+
 /* preferences */
 "Play sound when a user joins the channel" = "Play sound when a user joins the channel";
 
 /* preferences */
 "Play sound when a user leaves the channel" = "Play sound when a user leaves the channel";
+
+/* sound events */
+"Play sound when a user starts or stops intercepting you" = "Play sound when a user starts or stops intercepting you";
 
 /* preferences */
 "Play sound when broadcast text message is received" = "Play sound when broadcast text message is received";
@@ -1630,6 +1714,9 @@
 "Shortcuts work with an external keyboard while connected to a server. A key without a modifier does nothing while you are typing a message." = "Shortcuts work with an external keyboard while connected to a server. A key without a modifier does nothing while you are typing a message.";
 
 /* preferences */
+"Show a notification when a text message arrives while the app is not in front" = "Show a notification when a text message arrives while the app is not in front";
+
+/* preferences */
 "Show in Server List" = "Show in Server List";
 
 /* preferences */
@@ -1809,6 +1896,9 @@
 /* channel list */
 "TeamTalk has no access to the microphone. Turn it on in Settings, under TeamTalk, and try again." = "TeamTalk has no access to the microphone. Turn it on in Settings, under TeamTalk, and try again.";
 
+/* preferences */
+"TeamTalk is not allowed to show notifications. Turn them on in Settings, under TeamTalk." = "TeamTalk is not allowed to show notifications. Turn them on in Settings, under TeamTalk.";
+
 /* server list */
 "TeamTalk Servers" = "TeamTalk Servers";
 
@@ -1845,8 +1935,20 @@
 /* user accounts */
 "The account could not be saved" = "The account could not be saved";
 
+/* appearance */
+"The app follows the light or dark mode of the system" = "The app follows the light or dark mode of the system";
+
+/* appearance */
+"The app is always dark" = "The app is always dark";
+
+/* appearance */
+"The app is always light" = "The app is always light";
+
 /* backup */
 "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe.";
+
+/* media stream */
+"The current file starts again every time it ends" = "The current file starts again every time it ends";
 
 /* diagnostics */
 "The log is empty" = "The log is empty";
@@ -1856,6 +1958,15 @@
 
 /* appearance */
 "The messages can have a text size of their own, and the server events a font of their own." = "The messages can have a text size of their own, and the server events a font of their own.";
+
+/* sound devices */
+"The microphone is sent as it is, with no noise reduction and no echo cancellation" = "The microphone is sent as it is, with no noise reduction and no echo cancellation";
+
+/* preferences */
+"The name and the time go after the text of the message" = "The name and the time go after the text of the message";
+
+/* preferences */
+"The name and the time go before the text of the message" = "The name and the time go before the text of the message";
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "The rate of the speaking voice is %.1f";
@@ -2011,6 +2122,9 @@
 /* user detail */
 "User ID" = "User ID";
 
+/* sound and speech events */
+"User Is Typing" = "User Is Typing";
+
 /* preferences */
 "User Joins Channel" = "User Joins Channel";
 
@@ -2114,8 +2228,14 @@
 /* text to speech events */
 "VoiceOver" = "VoiceOver";
 
+/* preferences */
+"VoiceOver moves to each message as it arrives or as you send it" = "VoiceOver moves to each message as it arrives or as you send it";
+
 /* text to speech events */
 "VoiceOver speaks an announcement with its own voice and shows it in braille. With VoiceOver off, the voice of TeamTalk speaks them all." = "VoiceOver speaks an announcement with its own voice and shows it in braille. With VoiceOver off, the voice of TeamTalk speaks them all.";
+
+/* preferences */
+"VoiceOver stays on the message you are reading when another one arrives" = "VoiceOver stays on the message you are reading when another one arrives";
 
 /* codec detail */
 "VoIP" = "VoIP";
@@ -2145,6 +2265,9 @@
 /* Sound Devices */
 "WebRTC" = "WebRTC";
 
+/* sound devices */
+"WebRTC reduces noise and levels the volume but does not cancel echo, so use it with headphones" = "WebRTC reduces noise and levels the volume but does not cancel echo, so use it with headphones";
+
 /* preferences */
 "What each text message shows besides its text" = "What each text message shows besides its text";
 
@@ -2153,6 +2276,15 @@
 
 /* diagnostics */
 "What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "What the app needs from the iPhone. If something here is not right, it is the first thing to fix.";
+
+/* media stream */
+"When a file ends the next one starts, and after the last one the list starts again" = "When a file ends the next one starts, and after the last one the list starts again";
+
+/* media stream */
+"When a file ends the next one starts, and streaming stops after the last one" = "When a file ends the next one starts, and streaming stops after the last one";
+
+/* preferences */
+"When a Message Arrives" = "When a Message Arrives";
 
 /* preferences */
 "Where the name and the time are shown and read" = "Where the name and the time are shown and read";

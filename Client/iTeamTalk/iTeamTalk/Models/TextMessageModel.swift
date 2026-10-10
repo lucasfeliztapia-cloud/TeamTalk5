@@ -141,7 +141,7 @@ final class TextMessageModel: ObservableObject {
     private func updateMessages() {
         let updatedSections = messages.keys.sorted().compactMap { key -> TextMessageSection? in
             guard let values = messages[key], let first = values.first else { return nil }
-            return TextMessageSection(title: sectionTitle(for: first), messages: values)
+            return TextMessageSection(id: key, title: sectionTitle(for: first), messages: values)
         }
         sections = updatedSections
     }
@@ -196,6 +196,11 @@ extension TextMessageModel: TeamTalkEvent {
                     let mymsg = MyTextMessage(fromuserid: txtmsg.nFromUserID, nickname: name, msgtype: msgtype, content: content)
                     appendEventMessage(mymsg)
                     speakTextMessage(txtmsg.nMsgType, mymsg: mymsg)
+                    if userid == 0 {
+                        // the private ones are told by the channel list, which
+                        // gets them whether their chat is open or not
+                        TextMessageNotifications.post(txtmsg.nMsgType, message: mymsg)
+                    }
                 }
             }
 
@@ -246,7 +251,10 @@ extension TextMessageModel: TeamTalkEvent {
 }
 
 struct TextMessageSection: Identifiable {
-    let id = UUID()
+    // The key of the group, not a new value on every update: with a new one
+    // each time the whole list was built again with every message, and
+    // VoiceOver lost its place and went to the top.
+    let id: Int
     let title: String
     let messages: [MyTextMessage]
 }

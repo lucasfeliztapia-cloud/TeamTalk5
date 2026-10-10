@@ -115,7 +115,41 @@ enum Sounds : Int {
          logged_IN = 13,
          logged_OUT = 14,
          file_ADDED = 15,
-         file_REMOVED = 16
+         file_REMOVED = 16,
+         typing = 17,
+         intercept_ON = 18,
+         intercept_OFF = 19
+}
+
+/// With "Headset TX Toggle" the mute state iOS keeps for the app follows the
+/// transmission, so the mute gesture of AirPods, a press on the stem, starts
+/// from the right side: muted while in a channel and not transmitting. Never
+/// with voice activation, which transmits without the button, never outside a
+/// channel, where the microphone test needs the input, and never without the
+/// preference: a muted input delivers silence.
+func syncInputMute() {
+    guard #available(iOS 17.0, *) else { return }
+    let defaults = UserDefaults.standard
+    let client = TeamTalkClient.shared
+    let voiceActivated = defaults.object(forKey: PREF_VOICEACTIVATION) != nil &&
+        defaults.integer(forKey: PREF_VOICEACTIVATION) != VOICEACT_DISABLED
+    let muted = defaults.bool(forKey: PREF_HEADSET_TXTOGGLE) && !voiceActivated &&
+        client.myChannelID > 0 && !client.isVoiceTransmitting
+
+    let application = AVAudioApplication.shared
+    guard application.isInputMuted != muted else { return }
+    do {
+        try application.setInputMuted(muted)
+        logDiagnostic("Input of the system \(muted ? "muted" : "unmuted")")
+    } catch {
+        logDiagnostic("Input mute \(muted) failed: \(error.localizedDescription)")
+    }
+}
+
+/// Leaves the input of the system unmuted, whatever the preferences say
+func unmuteInput() {
+    guard #available(iOS 17.0, *), AVAudioApplication.shared.isInputMuted else { return }
+    try? AVAudioApplication.shared.setInputMuted(false)
 }
 
 var player : AVAudioPlayer?
@@ -204,6 +238,21 @@ func getSoundFile(_ s: Sounds) -> String? {
         if settings.object(forKey: PREF_SNDEVENT_FILEREMOVED) == nil ||
             settings.bool(forKey: PREF_SNDEVENT_FILEREMOVED) {
             return "file_removed"
+        }
+    case .typing :
+        if settings.object(forKey: PREF_SNDEVENT_TYPING) == nil ||
+            settings.bool(forKey: PREF_SNDEVENT_TYPING) {
+            return "typing"
+        }
+    case .intercept_ON :
+        if settings.object(forKey: PREF_SNDEVENT_INTERCEPT) == nil ||
+            settings.bool(forKey: PREF_SNDEVENT_INTERCEPT) {
+            return "intercept"
+        }
+    case .intercept_OFF :
+        if settings.object(forKey: PREF_SNDEVENT_INTERCEPT) == nil ||
+            settings.bool(forKey: PREF_SNDEVENT_INTERCEPT) {
+            return "intercept_end"
         }
     }
 

@@ -29,6 +29,9 @@
 		254C084B1C345E3700C98566 /* newuser.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 254C08491C345E3700C98566 /* newuser.mp3 */; };
 		DD0000000000000000000202 /* file_removed.wav in Resources */ = {isa = PBXBuildFile; fileRef = DD0000000000000000000102 /* file_removed.wav */; };
 		DD0000000000000000000201 /* file_added.wav in Resources */ = {isa = PBXBuildFile; fileRef = DD0000000000000000000101 /* file_added.wav */; };
+		DD0000000000000000000203 /* typing.wav in Resources */ = {isa = PBXBuildFile; fileRef = DD0000000000000000000103 /* typing.wav */; };
+		DD0000000000000000000204 /* intercept.wav in Resources */ = {isa = PBXBuildFile; fileRef = DD0000000000000000000104 /* intercept.wav */; };
+		DD0000000000000000000205 /* intercept_end.wav in Resources */ = {isa = PBXBuildFile; fileRef = DD0000000000000000000105 /* intercept_end.wav */; };
 		254C084C1C345E3700C98566 /* removeuser.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 254C084A1C345E3700C98566 /* removeuser.mp3 */; };
 		2597EF84275EA20300FCEE28 /* UtilSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2597EF83275EA20300FCEE28 /* UtilSound.swift */; };
 		2597EF86275EA29D00FCEE28 /* UtilTTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2597EF85275EA29D00FCEE28 /* UtilTTS.swift */; };
@@ -55,6 +58,7 @@
 		CC000300000000000000000F /* LiveActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC000200000000000000000F /* LiveActivityModel.swift */; };
 		CC0003000000000000000004 /* MainTabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000004 /* MainTabModel.swift */; };
 		CC000300000000000000000D /* MediaStreamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC000200000000000000000D /* MediaStreamModel.swift */; };
+		CC0003000000000000000013 /* NotificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000013 /* NotificationModel.swift */; };
 		CC0003000000000000000005 /* PreferencesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000005 /* PreferencesModel.swift */; };
 		CC0003000000000000000006 /* ServerDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000006 /* ServerDetailModel.swift */; };
 		CC0003000000000000000007 /* ServerListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0002000000000000000007 /* ServerListModel.swift */; };
@@ -164,6 +168,9 @@
 		254C08491C345E3700C98566 /* newuser.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = newuser.mp3; sourceTree = "<group>"; };
 		DD0000000000000000000102 /* file_removed.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = file_removed.wav; sourceTree = "<group>"; };
 		DD0000000000000000000101 /* file_added.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = file_added.wav; sourceTree = "<group>"; };
+		DD0000000000000000000103 /* typing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = typing.wav; sourceTree = "<group>"; };
+		DD0000000000000000000104 /* intercept.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = intercept.wav; sourceTree = "<group>"; };
+		DD0000000000000000000105 /* intercept_end.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = intercept_end.wav; sourceTree = "<group>"; };
 		254C084A1C345E3700C98566 /* removeuser.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = removeuser.mp3; sourceTree = "<group>"; };
 		256328191C41A9F20055373F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2597EF83275EA20300FCEE28 /* UtilSound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilSound.swift; sourceTree = "<group>"; };
@@ -222,6 +229,7 @@
 		CC000200000000000000000F /* LiveActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivityModel.swift; sourceTree = "<group>"; };
 		CC0002000000000000000004 /* MainTabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabModel.swift; sourceTree = "<group>"; };
 		CC000200000000000000000D /* MediaStreamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaStreamModel.swift; sourceTree = "<group>"; };
+		CC0002000000000000000013 /* NotificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationModel.swift; sourceTree = "<group>"; };
 		CC0002000000000000000005 /* PreferencesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesModel.swift; sourceTree = "<group>"; };
 		CC0002000000000000000006 /* ServerDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerDetailModel.swift; sourceTree = "<group>"; };
 		CC0002000000000000000007 /* ServerListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerListModel.swift; sourceTree = "<group>"; };
@@ -403,6 +411,9 @@
 				254C08491C345E3700C98566 /* newuser.mp3 */,
 				DD0000000000000000000102 /* file_removed.wav */,
 				DD0000000000000000000101 /* file_added.wav */,
+				DD0000000000000000000103 /* typing.wav */,
+				DD0000000000000000000104 /* intercept.wav */,
+				DD0000000000000000000105 /* intercept_end.wav */,
 				25AA206D1BEBCA0A0089AD54 /* off.mp3 */,
 				25E4DC2D1BF7347200EC5A8C /* on.mp3 */,
 				254C084A1C345E3700C98566 /* removeuser.mp3 */,
@@ -430,6 +441,7 @@
 				CC000200000000000000000F /* LiveActivityModel.swift */,
 				CC0002000000000000000004 /* MainTabModel.swift */,
 				CC000200000000000000000D /* MediaStreamModel.swift */,
+				CC0002000000000000000013 /* NotificationModel.swift */,
 				CC0002000000000000000005 /* PreferencesModel.swift */,
 				CC0002000000000000000006 /* ServerDetailModel.swift */,
 				CC0002000000000000000007 /* ServerListModel.swift */,
@@ -631,6 +643,9 @@
 				254C084B1C345E3700C98566 /* newuser.mp3 in Resources */,
 				DD0000000000000000000202 /* file_removed.wav in Resources */,
 				DD0000000000000000000201 /* file_added.wav in Resources */,
+				DD0000000000000000000203 /* typing.wav in Resources */,
+				DD0000000000000000000204 /* intercept.wav in Resources */,
+				DD0000000000000000000205 /* intercept_end.wav in Resources */,
 				251997F61EBA5FDE003C94B1 /* txqueue_stop.mp3 in Resources */,
 				254C084C1C345E3700C98566 /* removeuser.mp3 in Resources */,
 				25D205E522ACCD260009F286 /* broadcast_message.mp3 in Resources */,
@@ -688,6 +703,7 @@
 				CC000300000000000000000F /* LiveActivityModel.swift in Sources */,
 				CC0003000000000000000004 /* MainTabModel.swift in Sources */,
 				CC000300000000000000000D /* MediaStreamModel.swift in Sources */,
+				CC0003000000000000000013 /* NotificationModel.swift in Sources */,
 				CC0003000000000000000005 /* PreferencesModel.swift in Sources */,
 				CC0003000000000000000006 /* ServerDetailModel.swift in Sources */,
 				CC0003000000000000000007 /* ServerListModel.swift in Sources */,

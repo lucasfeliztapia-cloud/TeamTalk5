@@ -13,6 +13,15 @@
 /* file list */
 "%@ downloaded" = "%@ indirildi";
 
+/* interception */
+"%@ has stopped intercepting you: %@" = "%@ artık sizi izlemiyor: %@";
+
+/* interception */
+"%@ is now intercepting you: %@" = "%@ şu anda sizi izliyor: %@";
+
+/* TTS EVENT */
+"%@ is typing" = "%@ yazıyor";
+
 /* log entry */
 "%@ joined channel" = "%@ kanala katıldı";
 
@@ -221,6 +230,9 @@
 /* preferences */
 "Announce user logged out of server" = "Kullanıcının sunucu oturumunu kapatmasını duyur";
 
+/* text to speech events */
+"Announce when a user is typing a private message to you" = "Bir kullanıcı size özel ileti yazarken duyur";
+
 /* text to speech */
 "Announcements" = "Duyurular";
 
@@ -407,6 +419,12 @@
 
 /* channel list */
 "Channels" = "Kanallar";
+
+/* preferences */
+"Channels are sorted by name" = "Kanallar ada göre sıralanır";
+
+/* preferences */
+"Channels are sorted by the number of users in them" = "Kanallar içlerindeki kullanıcı sayısına göre sıralanır";
 
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "Yalnızca bu sunucu BearWare.dk Web Oturumu'nu etkinleştirdiyse işaretleyin";
@@ -678,6 +696,18 @@
 /* user accounts */
 "Each change is saved at once and applies the next time this user logs in." = "Her değişiklik hemen kaydedilir ve bu kullanıcının bir sonraki oturum açışında geçerli olur.";
 
+/* preferences */
+"Each message shows its text alone, and the name heads each group of messages" = "Her ileti yalnızca metnini gösterir ve ad her ileti grubunun başında yer alır";
+
+/* preferences */
+"Each message shows when it was sent, and the name heads each group of messages" = "Her ileti gönderilme saatini gösterir ve ad her ileti grubunun başında yer alır";
+
+/* preferences */
+"Each message shows who sent it" = "Her ileti kimin gönderdiğini gösterir";
+
+/* preferences */
+"Each message shows who sent it and when" = "Her ileti kimin ne zaman gönderdiğini gösterir";
+
 /* text to speech events */
 "Each One Its Own" = "Her Biri Ayrı";
 
@@ -820,6 +850,18 @@
 "Frame Size" = "Çerçeve Boyutu";
 
 /* preferences */
+"From A to Z" = "A'dan Z'ye";
+
+/* preferences */
+"From fewer users to more" = "Az kullanıcıdan çok kullanıcıya";
+
+/* preferences */
+"From more users to fewer" = "Çok kullanıcıdan az kullanıcıya";
+
+/* preferences */
+"From Z to A" = "Z'den A'ya";
+
+/* preferences */
 "Gender" = "Cinsiyet";
 
 /* preferences
@@ -828,6 +870,9 @@
 
 /* user accounts */
 "Give to Every Account" = "Tüm Hesaplara Ver";
+
+/* preferences */
+"Go to the Newest Message" = "En Yeni İletiye Git";
 
 /* channel list */
 "Go to Their Channel" = "Kanalına Git";
@@ -868,11 +913,17 @@
 /* preferences */
 "Increment" = "Artır";
 
+/* sound events */
+"Interception" = "İzleme";
+
 /* appearance */
 "Interface" = "Arayüz";
 
 /* appearance */
 "Interface Color" = "Arayüz Rengi";
+
+/* sound devices */
+"iOS cancels echo, reduces noise and levels the volume" = "iOS yankıyı giderir, gürültüyü azaltır ve ses düzeyini dengeler";
 
 /* Sound Devices */
 "iOS Voice Processing" = "iOS Ses İşleme";
@@ -930,6 +981,9 @@
 
 /* accessibility hint */
 "Joins the channel that is shown" = "Gösterilen kanala katılır";
+
+/* preferences */
+"Keep the Position" = "Konumu Koru";
 
 /* keyboard shortcuts */
 "Key" = "Tuş";
@@ -1240,6 +1294,12 @@
 "Not transmitting" = "Yayın yapmıyor";
 
 /* preferences */
+"Notifications" = "Bildirimler";
+
+/* preferences */
+"Notifications in the Background" = "Arka Planda Bildirimler";
+
+/* preferences */
 "Number of Users" = "Kullanıcı Sayısı";
 
 /* media stream */
@@ -1294,6 +1354,24 @@
 /* user accounts */
 "Other" = "Diğer";
 
+/* preferences */
+"Other users see that you have a question" = "Diğer kullanıcılar bir sorunuz olduğunu görür";
+
+/* preferences */
+"Other users see you as available" = "Diğer kullanıcılar sizi uygun olarak görür";
+
+/* preferences */
+"Other users see you as away" = "Diğer kullanıcılar sizi uzakta olarak görür";
+
+/* preferences */
+"Other users see you with the female icon" = "Diğer kullanıcılar sizi kadın simgesiyle görür";
+
+/* preferences */
+"Other users see you with the male icon" = "Diğer kullanıcılar sizi erkek simgesiyle görür";
+
+/* preferences */
+"Other users see you with the neutral icon" = "Diğer kullanıcılar sizi nötr simgeyle görür";
+
 /* connection quality */
 "Packet Loss" = "Paket Kaybı";
 
@@ -1330,11 +1408,17 @@
 /* sound events */
 "Play sound when a file is uploaded to the channel" = "Kanala bir dosya yüklendiğinde ses çal";
 
+/* sound events */
+"Play sound when a user is typing a private message to you" = "Bir kullanıcı size özel ileti yazarken ses oynat";
+
 /* preferences */
 "Play sound when a user joins the channel" = "Bir kullanıcı kanala katıldığında ses oynat";
 
 /* preferences */
 "Play sound when a user leaves the channel" = "Bir kullanıcı kanaldan ayrıldığında ses oynat";
+
+/* sound events */
+"Play sound when a user starts or stops intercepting you" = "Bir kullanıcı sizi izlemeye başladığında veya bıraktığında ses oynat";
 
 /* preferences */
 "Play sound when broadcast text message is received" = "Yayınlanan metin iletisi alındığında ses oynat";
@@ -1640,6 +1724,9 @@
 "Shortcuts work with an external keyboard while connected to a server. A key without a modifier does nothing while you are typing a message." = "Kestirmeler, bir sunucuya bağlıyken harici klavyeyle çalışır. Niteleyicisiz bir tuş, ileti yazarken hiçbir şey yapmaz.";
 
 /* preferences */
+"Show a notification when a text message arrives while the app is not in front" = "Uygulama ön planda değilken bir metin iletisi geldiğinde bildirim göster";
+
+/* preferences */
 "Show in Server List" = "Sunucu Listesinde Göster";
 
 /* preferences */
@@ -1818,6 +1905,9 @@
 /* channel list */
 "TeamTalk has no access to the microphone. Turn it on in Settings, under TeamTalk, and try again." = "TeamTalk'ın mikrofona erişimi yok. Ayarlar'da TeamTalk altında açın ve yeniden deneyin.";
 
+/* preferences */
+"TeamTalk is not allowed to show notifications. Turn them on in Settings, under TeamTalk." = "TeamTalk'un bildirim göstermesine izin verilmiyor. Ayarlar'da, TeamTalk altında bildirimleri açın.";
+
 /* server list */
 "TeamTalk Servers" = "TeamTalk Sunucuları";
 
@@ -1854,8 +1944,20 @@
 /* user accounts */
 "The account could not be saved" = "Hesap kaydedilemedi";
 
+/* appearance */
+"The app follows the light or dark mode of the system" = "Uygulama sistemin açık veya koyu modunu izler";
+
+/* appearance */
+"The app is always dark" = "Uygulama her zaman koyudur";
+
+/* appearance */
+"The app is always light" = "Uygulama her zaman açıktır";
+
 /* backup */
 "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "Yedek, tüm ayarları ve parolalarıyla birlikte sunucu listesini içerir. Dosyayı güvenli bir yerde saklayın.";
+
+/* media stream */
+"The current file starts again every time it ends" = "Geçerli dosya her bittiğinde yeniden başlar";
 
 /* diagnostics */
 "The log is empty" = "Günlük boş";
@@ -1865,6 +1967,15 @@
 
 /* appearance */
 "The messages can have a text size of their own, and the server events a font of their own." = "İletilerin kendi metin boyutu, sunucu olaylarının da kendi yazı tipi olabilir.";
+
+/* sound devices */
+"The microphone is sent as it is, with no noise reduction and no echo cancellation" = "Mikrofon olduğu gibi gönderilir; gürültü azaltma ve yankı giderme yoktur";
+
+/* preferences */
+"The name and the time go after the text of the message" = "Ad ve saat ileti metninden sonra gelir";
+
+/* preferences */
+"The name and the time go before the text of the message" = "Ad ve saat ileti metninden önce gelir";
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "Konuşma sesinin hızı %.1f";
@@ -2023,6 +2134,9 @@
 /* user detail */
 "User ID" = "Kullanıcı Kimliği";
 
+/* sound and speech events */
+"User Is Typing" = "Kullanıcı Yazıyor";
+
 /* preferences */
 "User Joins Channel" = "Kullanıcının Kanala Katılması";
 
@@ -2126,8 +2240,14 @@
 /* text to speech events */
 "VoiceOver" = "VoiceOver";
 
+/* preferences */
+"VoiceOver moves to each message as it arrives or as you send it" = "VoiceOver, her ileti geldiğinde veya siz gönderdiğinizde o iletiye gider";
+
 /* text to speech events */
 "VoiceOver speaks an announcement with its own voice and shows it in braille. With VoiceOver off, the voice of TeamTalk speaks them all." = "VoiceOver bir duyuruyu kendi sesiyle okur ve Braille olarak gösterir. VoiceOver kapalıyken hepsini TeamTalk sesi okur.";
+
+/* preferences */
+"VoiceOver stays on the message you are reading when another one arrives" = "VoiceOver, başka bir ileti geldiğinde okuduğunuz iletide kalır";
 
 /* codec detail */
 "VoIP" = "VoIP";
@@ -2157,6 +2277,9 @@
 /* Sound Devices */
 "WebRTC" = "WebRTC";
 
+/* sound devices */
+"WebRTC reduces noise and levels the volume but does not cancel echo, so use it with headphones" = "WebRTC gürültüyü azaltır ve ses düzeyini dengeler ama yankıyı gidermez; bu yüzden kulaklıkla kullanın";
+
 /* preferences */
 "What each text message shows besides its text" = "Her metin iletisinin metni dışında gösterdikleri";
 
@@ -2165,6 +2288,15 @@
 
 /* diagnostics */
 "What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Uygulamanın iPhone'dan gereksinim duydukları. Burada bir şey doğru değilse düzeltilecek ilk şey odur.";
+
+/* media stream */
+"When a file ends the next one starts, and after the last one the list starts again" = "Bir dosya bittiğinde sıradaki başlar ve sonuncusundan sonra liste yeniden başlar";
+
+/* media stream */
+"When a file ends the next one starts, and streaming stops after the last one" = "Bir dosya bittiğinde sıradaki başlar ve sonuncusundan sonra yayın durur";
+
+/* preferences */
+"When a Message Arrives" = "Bir İleti Geldiğinde";
 
 /* preferences */
 "Where the name and the time are shown and read" = "Adın ve saatin gösterildiği ve okunduğu yer";

@@ -13,6 +13,15 @@
 /* file list */
 "%@ downloaded" = "%@ letöltve";
 
+/* interception */
+"%@ has stopped intercepting you: %@" = "%@ már nem hallgat le téged: %@";
+
+/* interception */
+"%@ is now intercepting you: %@" = "%@ most lehallgat téged: %@";
+
+/* TTS EVENT */
+"%@ is typing" = "%@ éppen ír";
+
 /* log entry */
 "%@ joined channel" = "%@ Csatlakozott a csatornához";
 
@@ -221,6 +230,9 @@
 /* preferences */
 "Announce user logged out of server" = "Felhasználó szerverről való kijelentkezésének bemondása";
 
+/* text to speech events */
+"Announce when a user is typing a private message to you" = "Bemondás, amikor egy felhasználó privát üzenetet ír neked";
+
 /* text to speech */
 "Announcements" = "Bemondások";
 
@@ -406,6 +418,12 @@
 
 /* channel list */
 "Channels" = "Csatornák";
+
+/* preferences */
+"Channels are sorted by name" = "A csatornák név szerint vannak rendezve";
+
+/* preferences */
+"Channels are sorted by the number of users in them" = "A csatornák a bennük lévő felhasználók száma szerint vannak rendezve";
 
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "Csak akkor jelöld be, ha ezen a szerveren engedélyezve van a BearWare.dk Web Login";
@@ -677,6 +695,18 @@
 /* user accounts */
 "Each change is saved at once and applies the next time this user logs in." = "Minden módosítás azonnal mentésre kerül, és a felhasználó következő bejelentkezésekor lép életbe.";
 
+/* preferences */
+"Each message shows its text alone, and the name heads each group of messages" = "Minden üzenet csak a szövegét mutatja, a név pedig az üzenetcsoportok élén áll";
+
+/* preferences */
+"Each message shows when it was sent, and the name heads each group of messages" = "Minden üzenet a küldés idejét mutatja, a név pedig az üzenetcsoportok élén áll";
+
+/* preferences */
+"Each message shows who sent it" = "Minden üzenet megmutatja, ki küldte";
+
+/* preferences */
+"Each message shows who sent it and when" = "Minden üzenet megmutatja, ki küldte és mikor";
+
 /* text to speech events */
 "Each One Its Own" = "Bemondásonként eltérő";
 
@@ -819,6 +849,18 @@
 "Frame Size" = "Keretméret";
 
 /* preferences */
+"From A to Z" = "A-tól Z-ig";
+
+/* preferences */
+"From fewer users to more" = "A kevesebb felhasználótól a több felé";
+
+/* preferences */
+"From more users to fewer" = "A több felhasználótól a kevesebb felé";
+
+/* preferences */
+"From Z to A" = "Z-től A-ig";
+
+/* preferences */
 "Gender" = "Nem";
 
 /* preferences
@@ -827,6 +869,9 @@
 
 /* user accounts */
 "Give to Every Account" = "Megadás minden fióknak";
+
+/* preferences */
+"Go to the Newest Message" = "Ugrás a legújabb üzenetre";
 
 /* channel list */
 "Go to Their Channel" = "Ugrás a csatornájára";
@@ -867,11 +912,17 @@
 /* preferences */
 "Increment" = "Növelés";
 
+/* sound events */
+"Interception" = "Lehallgatás";
+
 /* appearance */
 "Interface" = "Felület";
 
 /* appearance */
 "Interface Color" = "A felület színe";
+
+/* sound devices */
+"iOS cancels echo, reduces noise and levels the volume" = "Az iOS megszünteti a visszhangot, csökkenti a zajt és kiegyenlíti a hangerőt";
 
 /* Sound Devices */
 "iOS Voice Processing" = "iOS hangfeldolgozás";
@@ -929,6 +980,9 @@
 
 /* accessibility hint */
 "Joins the channel that is shown" = "Belép a megjelenített csatornára";
+
+/* preferences */
+"Keep the Position" = "Pozíció megtartása";
 
 /* keyboard shortcuts */
 "Key" = "Billentyű";
@@ -1239,6 +1293,12 @@
 "Not transmitting" = "Nem ad";
 
 /* preferences */
+"Notifications" = "Értesítések";
+
+/* preferences */
+"Notifications in the Background" = "Értesítések a háttérben";
+
+/* preferences */
 "Number of Users" = "Felhasználók száma";
 
 /* media stream */
@@ -1292,6 +1352,24 @@
 /* user accounts */
 "Other" = "Egyéb";
 
+/* preferences */
+"Other users see that you have a question" = "A többi felhasználó látja, hogy kérdésed van";
+
+/* preferences */
+"Other users see you as available" = "A többi felhasználó elérhetőnek lát";
+
+/* preferences */
+"Other users see you as away" = "A többi felhasználó távollévőnek lát";
+
+/* preferences */
+"Other users see you with the female icon" = "A többi felhasználó a női ikonnal lát";
+
+/* preferences */
+"Other users see you with the male icon" = "A többi felhasználó a férfi ikonnal lát";
+
+/* preferences */
+"Other users see you with the neutral icon" = "A többi felhasználó a semleges ikonnal lát";
+
 /* connection quality */
 "Packet Loss" = "Csomagvesztés";
 
@@ -1327,11 +1405,17 @@
 /* sound events */
 "Play sound when a file is uploaded to the channel" = "Hang lejátszása, amikor egy fájlt feltöltenek a csatornára";
 
+/* sound events */
+"Play sound when a user is typing a private message to you" = "Hang lejátszása mikor egy felhasználó privát üzenetet ír neked";
+
 /* preferences */
 "Play sound when a user joins the channel" = "Hang lejátszás csatorna kapcsolásokkor";
 
 /* preferences */
 "Play sound when a user leaves the channel" = "Hang lejátszás csatorna elhagyáskor";
+
+/* sound events */
+"Play sound when a user starts or stops intercepting you" = "Hang lejátszása mikor egy felhasználó elkezd vagy befejez lehallgatni téged";
 
 /* preferences */
 "Play sound when broadcast text message is received" = "Hang lejátszása mikor körüzenet érkezik";
@@ -1637,6 +1721,9 @@
 "Shortcuts work with an external keyboard while connected to a server. A key without a modifier does nothing while you are typing a message." = "A billentyűparancsok külső billentyűzettel működnek, amíg csatlakozva vagy egy szerverhez. Módosító nélküli billentyű nem csinál semmit, amíg üzenetet írsz.";
 
 /* preferences */
+"Show a notification when a text message arrives while the app is not in front" = "Értesítés megjelenítése, ha szöveges üzenet érkezik, miközben az app nincs előtérben";
+
+/* preferences */
 "Show in Server List" = "Megjelenítés a szerverlistán";
 
 /* preferences */
@@ -1815,6 +1902,9 @@
 /* channel list */
 "TeamTalk has no access to the microphone. Turn it on in Settings, under TeamTalk, and try again." = "A TeamTalk nem fér hozzá a mikrofonhoz. Kapcsold be a Beállításokban, a TeamTalk alatt, és próbáld újra.";
 
+/* preferences */
+"TeamTalk is not allowed to show notifications. Turn them on in Settings, under TeamTalk." = "A TeamTalk nem jeleníthet meg értesítéseket. Kapcsold be őket a Beállításokban, a TeamTalk alatt.";
+
 /* server list */
 "TeamTalk Servers" = "TeamTalk-szerverek";
 
@@ -1851,8 +1941,20 @@
 /* user accounts */
 "The account could not be saved" = "A fiókot nem sikerült menteni";
 
+/* appearance */
+"The app follows the light or dark mode of the system" = "Az app a rendszer világos vagy sötét módját követi";
+
+/* appearance */
+"The app is always dark" = "Az app mindig sötét";
+
+/* appearance */
+"The app is always light" = "Az app mindig világos";
+
 /* backup */
 "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "A biztonsági mentés minden beállítást és a szerverlistát tartalmazza, a jelszavakkal együtt. Tartsd a fájlt biztonságos helyen.";
+
+/* media stream */
+"The current file starts again every time it ends" = "Az aktuális fájl minden alkalommal újrakezdődik, amikor véget ér";
 
 /* diagnostics */
 "The log is empty" = "A napló üres";
@@ -1862,6 +1964,15 @@
 
 /* appearance */
 "The messages can have a text size of their own, and the server events a font of their own." = "Az üzeneteknek saját szövegmérete, a szervereseményeknek saját betűtípusa lehet.";
+
+/* sound devices */
+"The microphone is sent as it is, with no noise reduction and no echo cancellation" = "A mikrofon hangja változatlanul megy ki, zajcsökkentés és visszhangszűrés nélkül";
+
+/* preferences */
+"The name and the time go after the text of the message" = "A név és az idő az üzenet szövege után áll";
+
+/* preferences */
+"The name and the time go before the text of the message" = "A név és az idő az üzenet szövege előtt áll";
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "A kívánt hang sebessége %.1f";
@@ -2020,6 +2131,9 @@
 /* user detail */
 "User ID" = "Felhasználóazonosító";
 
+/* sound and speech events */
+"User Is Typing" = "A felhasználó ír";
+
 /* preferences */
 "User Joins Channel" = "tag Kapcsolódott a Csatornához";
 
@@ -2122,8 +2236,14 @@
 /* text to speech events */
 "VoiceOver" = "VoiceOver";
 
+/* preferences */
+"VoiceOver moves to each message as it arrives or as you send it" = "A VoiceOver minden üzenetre rálép, amikor megérkezik, vagy amikor elküldöd";
+
 /* text to speech events */
 "VoiceOver speaks an announcement with its own voice and shows it in braille. With VoiceOver off, the voice of TeamTalk speaks them all." = "A VoiceOver a saját hangján mondja be a bemondást, és Braille-írással is megjeleníti. Ha a VoiceOver ki van kapcsolva, mindet a TeamTalk hangja mondja be.";
+
+/* preferences */
+"VoiceOver stays on the message you are reading when another one arrives" = "A VoiceOver azon az üzeneten marad, amelyet olvasol, amikor újabb érkezik";
 
 /* codec detail */
 "VoIP" = "VoIP";
@@ -2153,6 +2273,9 @@
 /* Sound Devices */
 "WebRTC" = "WebRTC";
 
+/* sound devices */
+"WebRTC reduces noise and levels the volume but does not cancel echo, so use it with headphones" = "A WebRTC csökkenti a zajt és kiegyenlíti a hangerőt, de nem szünteti meg a visszhangot, ezért fejhallgatóval használd";
+
 /* preferences */
 "What each text message shows besides its text" = "Amit az egyes szöveges üzenetek a szövegükön kívül megjelenítenek";
 
@@ -2161,6 +2284,15 @@
 
 /* diagnostics */
 "What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Amire az alkalmazásnak szüksége van az iPhone-tól. Ha itt valami nincs rendben, azt kell először megoldani.";
+
+/* media stream */
+"When a file ends the next one starts, and after the last one the list starts again" = "Amikor egy fájl véget ér, a következő indul, az utolsó után pedig a lista elölről kezdődik";
+
+/* media stream */
+"When a file ends the next one starts, and streaming stops after the last one" = "Amikor egy fájl véget ér, a következő indul, az utolsó után pedig a közvetítés leáll";
+
+/* preferences */
+"When a Message Arrives" = "Üzenet érkezésekor";
 
 /* preferences */
 "Where the name and the time are shown and read" = "Hol jelenjen meg és hol hangozzon el a név és az idő";

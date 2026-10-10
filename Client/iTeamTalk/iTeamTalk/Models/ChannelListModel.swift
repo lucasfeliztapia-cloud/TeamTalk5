@@ -146,6 +146,13 @@ final class ChannelListModel: ObservableObject {
     var curchannel = Channel()
     var mychannel = Channel()
     var rejoinchannel = Channel()
+
+    // the channel chat, where the events of the server are written
+    private weak var eventLog: TextMessageModel?
+    // the parts of a long private message that is still arriving
+    private var privateParts = [INT32: String]()
+    // when each user was last announced as typing
+    private var typingNotices = [INT32: Date]()
     var users = [INT32: User]()
     var moveusers = Set<INT32>()
     var cmdid: INT32 = 0
@@ -551,6 +558,69 @@ final class ChannelListModel: ObservableObject {
         }
     }
 
+    // MARK: - Typing and interception
+
+    /// The Windows client tells the other side that the user is writing with a
+    /// custom message: "typing" and, on the next line, 1 or 0.
+    private func customMessage(_ txtmsg: TextMessage) {
+        let parts = TeamTalkString.textMessage(txtmsg).components(separatedBy: "\r\n")
+        guard parts.count >= 2, parts[0] == "typing", parts[1] == "1",
+              txtmsg.nFromUserID != TeamTalkClient.shared.myUserID,
+              UIApplication.shared.applicationState == .active,
+              let user = users[txtmsg.nFromUserID] else { return }
+
+        // it comes again every few seconds while the user keeps writing
+        let now = Date()
+        if let last = typingNotices[txtmsg.nFromUserID], now.timeIntervalSince(last) < 10 {
+            return
+        }
+        typingNotices[txtmsg.nFromUserID] = now
+
+        playSound(.typing)
+        let defaults = UserDefaults.standard
+        if defaults.object(forKey: PREF_TTSEVENT_TYPING) == nil || defaults.bool(forKey: PREF_TTSEVENT_TYPING) {
+            newUtterance(String(format: String(localized: "%@ is typing", comment: "TTS EVENT"), getDisplayName(user)),
+                         event: PREF_TTSEVENT_TYPING)
+        }
+    }
+
+    /// Tells the user when someone starts or stops intercepting them, as the
+    /// Windows client does: it is their voice and their messages that someone
+    /// else is receiving. With a sound, spoken and written in the channel chat.
+    private func reportInterception(by user: User, before: Subscriptions) {
+        guard user.nUserID != TeamTalkClient.shared.myUserID, user.uPeerSubscriptions != before else { return }
+
+        let kinds: [(Subscriptions, String)] = [
+            (SUBSCRIBE_INTERCEPT_USER_MSG.rawValue, String(localized: "User Messages", comment: "preferences")),
+            (SUBSCRIBE_INTERCEPT_CHANNEL_MSG.rawValue, String(localized: "Channel Messages", comment: "preferences")),
+            (SUBSCRIBE_INTERCEPT_VOICE.rawValue, String(localized: "Voice", comment: "preferences")),
+            (SUBSCRIBE_INTERCEPT_VIDEOCAPTURE.rawValue, String(localized: "WebCam", comment: "preferences")),
+            (SUBSCRIBE_INTERCEPT_DESKTOP.rawValue, String(localized: "Desktop", comment: "preferences")),
+            (SUBSCRIBE_INTERCEPT_MEDIAFILE.rawValue, String(localized: "Media File", comment: "preferences"))
+        ]
+        let now = user.uPeerSubscriptions
+        let started = kinds.filter { now & $0.0 != 0 && before & $0.0 == 0 }.map { $0.1 }
+        let stopped = kinds.filter { now & $0.0 == 0 && before & $0.0 != 0 }.map { $0.1 }
+        let name = getDisplayName(user)
+
+        if !started.isEmpty {
+            let text = String(format: String(localized: "%@ is now intercepting you: %@", comment: "interception"),
+                              name, started.joined(separator: ", "))
+            logDiagnostic("Interception started by user \(user.nUserID): \(String(now, radix: 16))")
+            playSound(.intercept_ON)
+            newUtterance(text)
+            eventLog?.appendEventMessage(MyTextMessage(logmsg: text))
+        }
+        if !stopped.isEmpty {
+            let text = String(format: String(localized: "%@ has stopped intercepting you: %@", comment: "interception"),
+                              name, stopped.joined(separator: ", "))
+            logDiagnostic("Interception stopped by user \(user.nUserID): \(String(now, radix: 16))")
+            playSound(.intercept_OFF)
+            newUtterance(text)
+            eventLog?.appendEventMessage(MyTextMessage(logmsg: text))
+        }
+    }
+
     /// What activating a channel does, or how many users would be moved into it
     func channelAccessibilityHint() -> String {
         moveusers.isEmpty
@@ -878,6 +948,9 @@ final class ChannelListModel: ObservableObject {
     func openTextMessages(_ model: TextMessageModel) {
         model.delegate = self
         addToTTMessages(model)
+        if model.userid == 0 {
+            eventLog = model
+        }
         if let msgs = textmessages[model.userid] {
             for m in msgs { model.appendEventMessage(m) }
         }
@@ -902,6 +975,7 @@ final class ChannelListModel: ObservableObject {
         }
 
         TeamTalkClient.shared.enableVoiceTransmission(enable)
+        syncInputMute()
         logDiagnostic(enable ? "TX on" : "TX off")
         playSound(enable ? .tx_ON : .tx_OFF)
         updateTX()
@@ -1131,6 +1205,7 @@ extension ChannelListModel: TeamTalkEvent {
                     chanpasswds[user.nChannelID] = TeamTalkString.channel(.password, from: rejoinchannel)
                 }
                 rejoinchannel = joinedChannel
+                syncInputMute()
                 // where "Connect on Startup" goes back to
                 UserDefaults.standard.set(TeamTalkClient.shared.channelPath(id: user.nChannelID), forKey: PREF_LASTSERVER_CHANNEL)
                 UserDefaults.standard.set(chanpasswds[user.nChannelID] ?? "", forKey: PREF_LASTSERVER_CHANPASSWD)
@@ -1148,6 +1223,7 @@ extension ChannelListModel: TeamTalkEvent {
 
         case CLIENTEVENT_CMD_USER_UPDATE:
             let user = TeamTalkMessagePayload.user(from: m)
+            reportInterception(by: user, before: users[user.nUserID]?.uPeerSubscriptions ?? 0)
             users[user.nUserID] = user
             if currentCmdId == 0 { refreshChannelList() }
 
@@ -1173,16 +1249,31 @@ extension ChannelListModel: TeamTalkEvent {
 
         case CLIENTEVENT_CMD_USER_TEXTMSG:
             let txtmsg = TeamTalkMessagePayload.textMessage(from: m)
-            if txtmsg.nMsgType == MSGTYPE_USER {
+            if txtmsg.nMsgType == MSGTYPE_CUSTOM {
+                customMessage(txtmsg)
+            } else if txtmsg.nMsgType == MSGTYPE_USER {
+                // A long message comes in several parts. They were kept one by
+                // one, so it showed up cut in pieces: wait for the last one.
+                let part = TeamTalkString.textMessage(txtmsg)
+                if txtmsg.bMore == TRUE {
+                    if (privateParts[txtmsg.nFromUserID]?.count ?? 0) < 1_000_000 {
+                        privateParts[txtmsg.nFromUserID, default: ""] += part
+                    }
+                    break
+                }
+                let content = (privateParts.removeValue(forKey: txtmsg.nFromUserID) ?? "") + part
+
                 let settings = UserDefaults.standard
                 if let user = users[txtmsg.nFromUserID] {
                     let name = getDisplayName(user)
                     let newmsg = MyTextMessage(
-                        m: txtmsg,
+                        fromuserid: txtmsg.nFromUserID,
                         nickname: name,
-                        msgtype: TeamTalkClient.shared.myUserID == txtmsg.nFromUserID ? .PRIV_IM_MYSELF : .PRIV_IM
+                        msgtype: TeamTalkClient.shared.myUserID == txtmsg.nFromUserID ? .PRIV_IM_MYSELF : .PRIV_IM,
+                        content: content
                     )
                     appendTextMessage(txtmsg.nFromUserID, txtmsg: newmsg)
+                    TextMessageNotifications.post(MSGTYPE_USER, message: newmsg)
                     if unreadmessages.isEmpty {
                         unreadTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
                             self?.timerUnreadBlinker()

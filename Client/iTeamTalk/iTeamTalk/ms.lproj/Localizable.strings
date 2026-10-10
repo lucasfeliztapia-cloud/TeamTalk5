@@ -13,6 +13,15 @@
 /* file list */
 "%@ downloaded" = "%@ dimuat turun";
 
+/* interception */
+"%@ has stopped intercepting you: %@" = "%@ berhenti memintas anda: %@";
+
+/* interception */
+"%@ is now intercepting you: %@" = "%@ kini memintas anda: %@";
+
+/* TTS EVENT */
+"%@ is typing" = "%@ sedang menaip";
+
 /* log entry */
 "%@ joined channel" = "%@ masuk ke saluran";
 
@@ -221,6 +230,9 @@
 /* preferences */
 "Announce user logged out of server" = "Umumkan pengguna yang keluar dari server";
 
+/* text to speech events */
+"Announce when a user is typing a private message to you" = "Umumkan apabila pengguna sedang menaip mesej peribadi kepada anda";
+
 /* text to speech */
 "Announcements" = "Pemberitahuan";
 
@@ -407,6 +419,12 @@
 
 /* channel list */
 "Channels" = "Saluran";
+
+/* preferences */
+"Channels are sorted by name" = "Saluran disusun mengikut nama";
+
+/* preferences */
+"Channels are sorted by the number of users in them" = "Saluran disusun mengikut bilangan pengguna di dalamnya";
 
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "tanda hanya jika server ini telah mengaktifkan Log Masuk Web BearWare.dk";
@@ -678,6 +696,18 @@
 /* user accounts */
 "Each change is saved at once and applies the next time this user logs in." = "Setiap perubahan disimpan serta-merta dan berkuat kuasa pada log masuk seterusnya pengguna ini.";
 
+/* preferences */
+"Each message shows its text alone, and the name heads each group of messages" = "Setiap mesej hanya menunjukkan teksnya, dan nama berada di atas setiap kumpulan mesej";
+
+/* preferences */
+"Each message shows when it was sent, and the name heads each group of messages" = "Setiap mesej menunjukkan masa ia dihantar, dan nama berada di atas setiap kumpulan mesej";
+
+/* preferences */
+"Each message shows who sent it" = "Setiap mesej menunjukkan penghantarnya";
+
+/* preferences */
+"Each message shows who sent it and when" = "Setiap mesej menunjukkan penghantar dan masanya";
+
 /* text to speech events */
 "Each One Its Own" = "Setiap Satu Berbeza";
 
@@ -820,6 +850,18 @@
 "Frame Size" = "Saiz Bingkai";
 
 /* preferences */
+"From A to Z" = "Dari A ke Z";
+
+/* preferences */
+"From fewer users to more" = "Daripada pengguna paling sedikit kepada paling ramai";
+
+/* preferences */
+"From more users to fewer" = "Daripada pengguna paling ramai kepada paling sedikit";
+
+/* preferences */
+"From Z to A" = "Dari Z ke A";
+
+/* preferences */
 "Gender" = "Jantina";
 
 /* preferences
@@ -828,6 +870,9 @@
 
 /* user accounts */
 "Give to Every Account" = "Beri kepada Semua Akaun";
+
+/* preferences */
+"Go to the Newest Message" = "Pergi ke Mesej Terbaharu";
 
 /* channel list */
 "Go to Their Channel" = "Pergi ke Salurannya";
@@ -868,11 +913,17 @@
 /* preferences */
 "Increment" = "Tambah";
 
+/* sound events */
+"Interception" = "Pemintasan";
+
 /* appearance */
 "Interface" = "Antara Muka";
 
 /* appearance */
 "Interface Color" = "Warna Antara Muka";
+
+/* sound devices */
+"iOS cancels echo, reduces noise and levels the volume" = "iOS membatalkan gema, mengurangkan hingar dan meratakan kelantangan";
 
 /* Sound Devices */
 "iOS Voice Processing" = "Pemprosesan Suara iOS";
@@ -930,6 +981,9 @@
 
 /* accessibility hint */
 "Joins the channel that is shown" = "Masuk ke saluran yang ditunjukkan";
+
+/* preferences */
+"Keep the Position" = "Kekalkan Kedudukan";
 
 /* keyboard shortcuts */
 "Key" = "Kekunci";
@@ -1240,6 +1294,12 @@
 "Not transmitting" = "Tidak menghantar";
 
 /* preferences */
+"Notifications" = "Notifikasi";
+
+/* preferences */
+"Notifications in the Background" = "Notifikasi di Latar Belakang";
+
+/* preferences */
 "Number of Users" = "Bilangan Pengguna";
 
 /* media stream */
@@ -1294,6 +1354,24 @@
 /* user accounts */
 "Other" = "Lain-lain";
 
+/* preferences */
+"Other users see that you have a question" = "Pengguna lain melihat bahawa anda mempunyai soalan";
+
+/* preferences */
+"Other users see you as available" = "Pengguna lain melihat anda sebagai tersedia";
+
+/* preferences */
+"Other users see you as away" = "Pengguna lain melihat anda sebagai tiada";
+
+/* preferences */
+"Other users see you with the female icon" = "Pengguna lain melihat anda dengan ikon perempuan";
+
+/* preferences */
+"Other users see you with the male icon" = "Pengguna lain melihat anda dengan ikon lelaki";
+
+/* preferences */
+"Other users see you with the neutral icon" = "Pengguna lain melihat anda dengan ikon neutral";
+
 /* connection quality */
 "Packet Loss" = "Kehilangan Paket";
 
@@ -1330,11 +1408,17 @@
 /* sound events */
 "Play sound when a file is uploaded to the channel" = "Mainkan bunyi apabila fail dimuat naik ke saluran";
 
+/* sound events */
+"Play sound when a user is typing a private message to you" = "Mainkan bunyi apabila pengguna sedang menaip mesej peribadi kepada anda";
+
 /* preferences */
 "Play sound when a user joins the channel" = "Mainkan bunyi apabila Pengguna masuk ke saluran";
 
 /* preferences */
 "Play sound when a user leaves the channel" = "Mainkan bunyi apabila pengguna meninggalkan saluran";
+
+/* sound events */
+"Play sound when a user starts or stops intercepting you" = "Mainkan bunyi apabila pengguna mula atau berhenti memintas anda";
 
 /* preferences */
 "Play sound when broadcast text message is received" = "Mainkan bunyi apabila menerima mesej teks broadcast";
@@ -1640,6 +1724,9 @@
 "Shortcuts work with an external keyboard while connected to a server. A key without a modifier does nothing while you are typing a message." = "Pintasan berfungsi dengan papan kekunci luaran semasa bersambung ke server. Kekunci tanpa pengubah suai tidak melakukan apa-apa semasa anda menaip mesej.";
 
 /* preferences */
+"Show a notification when a text message arrives while the app is not in front" = "Tunjukkan notifikasi apabila mesej teks tiba semasa app tidak berada di hadapan";
+
+/* preferences */
 "Show in Server List" = "Tampilkan Dalam Senarai Server";
 
 /* preferences */
@@ -1818,6 +1905,9 @@
 /* channel list */
 "TeamTalk has no access to the microphone. Turn it on in Settings, under TeamTalk, and try again." = "TeamTalk tiada akses kepada mikrofon. Hidupkannya dalam Tetapan, di bawah TeamTalk, dan cuba lagi.";
 
+/* preferences */
+"TeamTalk is not allowed to show notifications. Turn them on in Settings, under TeamTalk." = "TeamTalk tidak dibenarkan menunjukkan notifikasi. Hidupkannya dalam Tetapan, di bawah TeamTalk.";
+
 /* server list */
 "TeamTalk Servers" = "Server TeamTalk";
 
@@ -1854,8 +1944,20 @@
 /* user accounts */
 "The account could not be saved" = "Akaun tidak dapat disimpan";
 
+/* appearance */
+"The app follows the light or dark mode of the system" = "App mengikut mod cerah atau gelap sistem";
+
+/* appearance */
+"The app is always dark" = "App sentiasa gelap";
+
+/* appearance */
+"The app is always light" = "App sentiasa cerah";
+
 /* backup */
 "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "Sandaran mengandungi semua tetapan dan senarai server, bersama kata laluannya. Simpan fail di tempat yang selamat.";
+
+/* media stream */
+"The current file starts again every time it ends" = "Fail semasa bermula semula setiap kali ia tamat";
 
 /* diagnostics */
 "The log is empty" = "Log kosong";
@@ -1865,6 +1967,15 @@
 
 /* appearance */
 "The messages can have a text size of their own, and the server events a font of their own." = "Mesej boleh mempunyai saiz teks sendiri, dan peristiwa server fon sendiri.";
+
+/* sound devices */
+"The microphone is sent as it is, with no noise reduction and no echo cancellation" = "Mikrofon dihantar seadanya, tanpa pengurangan hingar dan tanpa pembatalan gema";
+
+/* preferences */
+"The name and the time go after the text of the message" = "Nama dan masa berada selepas teks mesej";
+
+/* preferences */
+"The name and the time go before the text of the message" = "Nama dan masa berada sebelum teks mesej";
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "tingkat kadar suara yang bercakap adalah %.1f";
@@ -2023,6 +2134,9 @@
 /* user detail */
 "User ID" = "ID Pengguna";
 
+/* sound and speech events */
+"User Is Typing" = "Pengguna Sedang Menaip";
+
 /* preferences */
 "User Joins Channel" = "Pengguna Masuk ke Saluran";
 
@@ -2126,8 +2240,14 @@
 /* text to speech events */
 "VoiceOver" = "VoiceOver";
 
+/* preferences */
+"VoiceOver moves to each message as it arrives or as you send it" = "VoiceOver beralih ke setiap mesej apabila ia tiba atau apabila anda menghantarnya";
+
 /* text to speech events */
 "VoiceOver speaks an announcement with its own voice and shows it in braille. With VoiceOver off, the voice of TeamTalk speaks them all." = "VoiceOver menyebut pemberitahuan dengan suaranya sendiri dan menunjukkannya dalam braille. Apabila VoiceOver dimatikan, suara TeamTalk menyebut kesemuanya.";
+
+/* preferences */
+"VoiceOver stays on the message you are reading when another one arrives" = "VoiceOver kekal pada mesej yang sedang anda baca apabila mesej lain tiba";
 
 /* codec detail */
 "VoIP" = "VoIP";
@@ -2157,6 +2277,9 @@
 /* Sound Devices */
 "WebRTC" = "WebRTC";
 
+/* sound devices */
+"WebRTC reduces noise and levels the volume but does not cancel echo, so use it with headphones" = "WebRTC mengurangkan hingar dan meratakan kelantangan tetapi tidak membatalkan gema, jadi gunakannya dengan fon kepala";
+
 /* preferences */
 "What each text message shows besides its text" = "Apa yang ditunjukkan oleh setiap mesej teks selain teksnya";
 
@@ -2165,6 +2288,15 @@
 
 /* diagnostics */
 "What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Apa yang app perlukan daripada iPhone. Jika ada yang tidak betul di sini, itulah perkara pertama untuk dibaiki.";
+
+/* media stream */
+"When a file ends the next one starts, and after the last one the list starts again" = "Apabila satu fail tamat, fail seterusnya bermula, dan selepas yang terakhir senarai bermula semula";
+
+/* media stream */
+"When a file ends the next one starts, and streaming stops after the last one" = "Apabila satu fail tamat, fail seterusnya bermula, dan strim berhenti selepas yang terakhir";
+
+/* preferences */
+"When a Message Arrives" = "Apabila Mesej Tiba";
 
 /* preferences */
 "Where the name and the time are shown and read" = "Tempat nama dan masa ditunjukkan dan dibacakan";
