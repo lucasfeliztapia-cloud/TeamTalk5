@@ -357,6 +357,9 @@
 /* text message */
 "Broadcast Message" = "방송 메시지";
 
+/* TTS EVENT */
+"Broadcast message from %@. %@" = "%@ 님의 방송 메시지. %@";
+
 /* preferences
    user detail */
 "Broadcast Messages" = "방송 메시지";
@@ -964,6 +967,9 @@
 /* server entry */
 "Join Code: %@" = "참여 코드: %@";
 
+/* Sound Devices */
+"Join every server with the microphone chosen the last time" = "지난번에 선택한 마이크로 모든 서버에 입장합니다";
+
 /* preferences */
 "Join Root Channel" = "최상위 채널 입장";
 
@@ -1247,6 +1253,9 @@
 
 /* channel list */
 "No password" = "암호 없음";
+
+/* Sound Devices */
+"No Processing" = "처리 안 함";
 
 /* channel list */
 "No results" = "결과 없음";
@@ -1540,6 +1549,9 @@
 /* user accounts */
 "Record voice in every channel" = "모든 채널에서 음성 녹음";
 
+/* Sound Devices */
+"Remember the Last Microphone" = "마지막 마이크 기억";
+
 /* ban list */
 "Remove Ban" = "차단 해제";
 
@@ -1790,6 +1802,9 @@
 /* preferences */
 "Speaker Output" = "스피커로 출력";
 
+/* Sound Devices */
+"Speaker Output plays the sound through the loudspeaker instead of the earpiece. Bluetooth A2DP gives better sound in Bluetooth headphones, but then the microphone of the iPhone is used and not theirs." = "스피커로 출력은 수화기 대신 스피커로 소리를 재생합니다. Bluetooth A2DP는 Bluetooth 헤드폰의 음질을 높이지만, 이때는 헤드폰이 아닌 iPhone의 마이크가 사용됩니다.";
+
 /* channel list */
 "Speakers" = "스피커";
 
@@ -1971,6 +1986,9 @@
 /* sound devices */
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "마이크 소리를 소음 감소나 에코 제거 없이 그대로 보냅니다";
 
+/* Sound Devices */
+"The microphones of this device. Choose the one to use: Preferred marks your choice and Active the one in use right now." = "이 기기의 마이크입니다. 사용할 마이크를 선택하십시오. ‘선호’는 선택한 마이크, ‘활성’은 지금 사용 중인 마이크를 나타냅니다.";
+
 /* preferences */
 "The name and the time go after the text of the message" = "이름과 시간이 메시지 본문 뒤에 옵니다";
 
@@ -2009,6 +2027,9 @@
 
 /* transmit control */
 "This is a classroom channel: only what is turned on here can be transmitted." = "교실 채널입니다. 여기서 켠 항목만 전송할 수 있습니다.";
+
+/* preferences */
+"This is how announcements sound" = "알림은 이렇게 들립니다";
 
 /* media stream */
 "This web address cannot be streamed" = "이 웹 주소는 스트리밍할 수 없습니다";
@@ -2282,6 +2303,9 @@
 
 /* preferences */
 "What each text message shows besides its text" = "각 텍스트 메시지가 본문 외에 표시하는 내용";
+
+/* Sound Devices */
+"What is done to your microphone before it is sent: removing echo, reducing noise and levelling the volume." = "마이크 소리를 보내기 전에 하는 처리입니다: 에코 제거, 소음 감소, 음량 고르기.";
 
 /* diagnostics */
 "What the app has been doing, to share when something fails" = "앱이 해 온 일, 문제가 생겼을 때 공유할 수 있습니다";

@@ -21,127 +21,14 @@
  *
  */
 
-import ActivityKit
 import Foundation
 import TeamTalkKit
-import UIKit
 
-/// What the app depends on outside itself, read on the spot. It answers the
-/// first questions when something works on one iPhone and not on another.
-struct SystemCheck {
-
-    enum LiveActivities: String {
-        case available
-        case disabled = "turned off in Settings"
-        case notInstalled = "extension NOT installed with the app"
-        case unsupported = "needs iOS 17"
-    }
-
-    let microphone: MicrophonePermission
-    let liveActivities: LiveActivities
-    let hasAppGroup: Bool
-
-    static func current() -> SystemCheck {
-        SystemCheck(microphone: microphonePermission(),
-                    liveActivities: liveActivities(),
-                    hasAppGroup: SharedStore.defaults != nil)
-    }
-
-    private static func liveActivities() -> LiveActivities {
-        guard #available(iOS 17.0, *) else { return .unsupported }
-
-        // some ways of installing an app leave its extensions out
-        let fileManager = FileManager.default
-        let plugIns = Bundle.main.builtInPlugInsURL.flatMap {
-            try? fileManager.contentsOfDirectory(at: $0, includingPropertiesForKeys: nil)
-        } ?? []
-        guard plugIns.contains(where: { $0.pathExtension == "appex" }) else { return .notInstalled }
-
-        return ActivityAuthorizationInfo().areActivitiesEnabled ? .available : .disabled
-    }
-}
-
-/// What the app has been doing, kept in memory so it can be read and shared
-/// from the device when something goes wrong.
-final class DiagnosticLog: ObservableObject {
-
-    static let shared = DiagnosticLog()
-
-    @Published private(set) var lines = [String]()
-
-    private let maxLines = 2000
-    private let formatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "en_US_POSIX")
-        formatter.dateFormat = "HH:mm:ss.SSS"
-        return formatter
-    }()
-
-    private init() {}
-
-    func add(_ message: String) {
-        let line = formatter.string(from: Date()) + " " + message
-        print(line)
-        if Thread.isMainThread {
-            append(line)
-        } else {
-            DispatchQueue.main.async {
-                self.append(line)
-            }
-        }
-    }
-
-    func clear() {
-        lines.removeAll()
-    }
-
-    private func append(_ line: String) {
-        lines.append(line)
-        if lines.count > maxLines {
-            lines.removeFirst(lines.count - maxLines)
-        }
-    }
-
-    /// App, system and device, which is the first thing asked about a failure.
-    var header: String {
-        let check = SystemCheck.current()
-        var system = utsname()
-        uname(&system)
-        let machine = withUnsafeBytes(of: &system.machine) { buffer in
-            String(decoding: buffer.prefix { $0 != 0 }, as: UTF8.self)
-        }
-
-        return [
-            "\(AppInfo.getAppName()) \(AppInfo.getAppVersionLong())",
-            "Library \(TeamTalkClient.shared.version)",
-            "\(UIDevice.current.systemName) \(UIDevice.current.systemVersion), \(machine)",
-            "Locale \(Locale.current.identifier), VoiceOver \(UIAccessibility.isVoiceOverRunning ? "on" : "off")",
-            "Microphone access: \(check.microphone.rawValue), gain \(TeamTalkClient.shared.soundInputGainLevel)",
-            "Live Activities: \(check.liveActivities.rawValue)",
-            "App group for the widget and the controls: \(check.hasAppGroup ? "available" : "NOT available")"
-        ].joined(separator: "\n")
-    }
-
-    /// The log written to a text file, for the share sheet.
-    func exportFile() -> URL? {
-        let stamp = DateFormatter()
-        stamp.locale = Locale(identifier: "en_US_POSIX")
-        stamp.dateFormat = "yyyy-MM-dd HH.mm.ss"
-
-        let url = FileManager.default.temporaryDirectory
-            .appendingPathComponent("TeamTalk diagnostics \(stamp.string(from: Date())).txt")
-        let text = header + "\n\n" + lines.joined(separator: "\n") + "\n"
-        do {
-            try text.write(to: url, atomically: true, encoding: .utf8)
-            return url
-        } catch {
-            return nil
-        }
-    }
-}
-
+/// Notes of what the app is doing, for the console of the system. They were
+/// also kept in a log the user could read and share from Preferences; that
+/// screen is gone and nothing is stored.
 func logDiagnostic(_ message: String) {
-    DiagnosticLog.shared.add(message)
+    print("[TeamTalk] \(message)")
 }
 
 /// Name of the events worth reading in the log.

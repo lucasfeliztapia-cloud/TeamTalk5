@@ -47,20 +47,44 @@ func newUtterance(_ utterance: String, event: String? = nil) {
         UIAccessibility.post(notification: UIAccessibility.Notification.announcement, argument: utterance)
         return
     }
+    applySpeechPreferences(to: myUtterance)
+
+    synth.speak(myUtterance)
+}
+
+/// The voice, the rate and the volume chosen for the speech of the app
+private func applySpeechPreferences(to utterance: AVSpeechUtterance) {
+    let settings = UserDefaults.standard
     if let rate = settings.value(forKey: PREF_TTSEVENT_RATE) {
-        myUtterance.rate = (rate as AnyObject).floatValue!
+        utterance.rate = (rate as AnyObject).floatValue!
     }
     if let vol = settings.value(forKey: PREF_TTSEVENT_VOL) {
-        myUtterance.volume = (vol as AnyObject).floatValue!
+        utterance.volume = (vol as AnyObject).floatValue!
     }
     if let voice = settings.string(forKey: PREF_TTSEVENT_VOICEID) {
-        myUtterance.voice = AVSpeechSynthesisVoice(identifier: voice)
+        utterance.voice = AVSpeechSynthesisVoice(identifier: voice)
     }
     else if let lang = settings.string(forKey: PREF_TTSEVENT_VOICELANG) {
-        myUtterance.voice = AVSpeechSynthesisVoice(language: lang)
+        utterance.voice = AVSpeechSynthesisVoice(language: lang)
     }
-    
-    synth.speak(myUtterance)
+}
+
+private var pendingSample: DispatchWorkItem?
+
+/// Lets the user hear the speech of the app as it is set right now: always
+/// with that voice, VoiceOver or not, because it is the one being chosen.
+/// A new call replaces the one before, so dragging a slider speaks once, at
+/// the end.
+func speakSample(_ text: String, after delay: TimeInterval = 0) {
+    pendingSample?.cancel()
+    let sample = DispatchWorkItem {
+        let utterance = AVSpeechUtterance(string: text)
+        applySpeechPreferences(to: utterance)
+        synth.stopSpeaking(at: .immediate)
+        synth.speak(utterance)
+    }
+    pendingSample = sample
+    DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: sample)
 }
 
 func speakTextMessage(_ msgtype: TextMsgType, mymsg: MyTextMessage) {
@@ -78,5 +102,10 @@ func speakTextMessage(_ msgtype: TextMsgType, mymsg: MyTextMessage) {
         let ttsmsg = String(format: String(localized: "Channel message from %@. %@", comment: "TTS EVENT"),
             limitText(mymsg.nickname), mymsg.message)
         newUtterance(ttsmsg, event: PREF_TTSEVENT_CHANTEXTMSG)
+    }
+    if msgtype == MSGTYPE_BROADCAST && settings.bool(forKey: PREF_TTSEVENT_BCASTMSG) {
+        let ttsmsg = String(format: String(localized: "Broadcast message from %@. %@", comment: "TTS EVENT"),
+            limitText(mymsg.nickname), mymsg.message)
+        newUtterance(ttsmsg, event: PREF_TTSEVENT_BCASTMSG)
     }
 }

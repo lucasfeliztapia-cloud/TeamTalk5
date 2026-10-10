@@ -73,7 +73,6 @@
 		CC0005000000000000000003 /* ChannelListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000003 /* ChannelListView.swift */; };
 		CC0005000000000000000015 /* ChannelPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000015 /* ChannelPickerView.swift */; };
 		CC0005000000000000000016 /* ConnectionQualityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000016 /* ConnectionQualityView.swift */; };
-		CC0005000000000000000014 /* DiagnosticLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000014 /* DiagnosticLogView.swift */; };
 		CC0005000000000000000011 /* FileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000011 /* FileListView.swift */; };
 		CC0005000000000000000018 /* KeyboardShortcutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000018 /* KeyboardShortcutsView.swift */; };
 		CC0005000000000000000004 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0004000000000000000004 /* MainTabView.swift */; };
@@ -244,7 +243,6 @@
 		CC0004000000000000000003 /* ChannelListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListView.swift; sourceTree = "<group>"; };
 		CC0004000000000000000015 /* ChannelPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelPickerView.swift; sourceTree = "<group>"; };
 		CC0004000000000000000016 /* ConnectionQualityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionQualityView.swift; sourceTree = "<group>"; };
-		CC0004000000000000000014 /* DiagnosticLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticLogView.swift; sourceTree = "<group>"; };
 		CC0004000000000000000011 /* FileListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileListView.swift; sourceTree = "<group>"; };
 		CC0004000000000000000018 /* KeyboardShortcutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardShortcutsView.swift; sourceTree = "<group>"; };
 		CC0004000000000000000004 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -463,7 +461,6 @@
 				CC0004000000000000000003 /* ChannelListView.swift */,
 				CC0004000000000000000015 /* ChannelPickerView.swift */,
 				CC0004000000000000000016 /* ConnectionQualityView.swift */,
-				CC0004000000000000000014 /* DiagnosticLogView.swift */,
 				CC0004000000000000000011 /* FileListView.swift */,
 				CC0004000000000000000018 /* KeyboardShortcutsView.swift */,
 				CC0004000000000000000004 /* MainTabView.swift */,
@@ -718,7 +715,6 @@
 				CC0005000000000000000003 /* ChannelListView.swift in Sources */,
 				CC0005000000000000000015 /* ChannelPickerView.swift in Sources */,
 				CC0005000000000000000016 /* ConnectionQualityView.swift in Sources */,
-				CC0005000000000000000014 /* DiagnosticLogView.swift in Sources */,
 				CC0005000000000000000011 /* FileListView.swift in Sources */,
 				CC0005000000000000000018 /* KeyboardShortcutsView.swift in Sources */,
 				CC0005000000000000000004 /* MainTabView.swift in Sources */,

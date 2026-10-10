@@ -53,6 +53,7 @@ struct PickedMediaFile: Transferable {
 
 struct FileListView: View {
     @ObservedObject var model: FileListModel
+    @Environment(\.accessibilityVoiceOverEnabled) private var voiceOverEnabled
     @State private var showingFileImporter = false
     @State private var showingPhotoPicker = false
     @State private var pickedPhotos = [PhotosPickerItem]()
@@ -224,16 +225,30 @@ struct FileListView: View {
                 model.selectFile(file)
             }
         }
-        .swipeActions(edge: .trailing) {
-            Button {
-                model.filePendingDeletion = file
-            } label: {
-                Label("Delete", systemImage: "trash")
+        // VoiceOver gets them once and by name. With the two swipe actions
+        // left in while it runs, each showed up twice in the rotor.
+        .accessibilityActions {
+            if isDownloaded {
+                Button("Share") {
+                    model.shareFile(file)
+                }
             }
-            .tint(.red)
+            Button("Delete") {
+                model.filePendingDeletion = file
+            }
+        }
+        .swipeActions(edge: .trailing) {
+            if !voiceOverEnabled {
+                Button {
+                    model.filePendingDeletion = file
+                } label: {
+                    Label("Delete", systemImage: "trash")
+                }
+                .tint(.red)
+            }
         }
         .swipeActions(edge: .leading) {
-            if isDownloaded {
+            if isDownloaded && !voiceOverEnabled {
                 Button {
                     model.shareFile(file)
                 } label: {

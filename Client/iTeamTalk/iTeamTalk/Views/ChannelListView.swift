@@ -288,10 +288,12 @@ struct ChannelListView: View {
                         }
                         .buttonStyle(.borderless)
                         .accessibilityLabel("Text Messaging")
+                        // "Message this user" is among the actions already
+                        .accessibilityHidden(true)
                     }
                 }
                 .accessibilityElement(children: .combine)
-                .accessibilityAddTraits(isMoveSelected ? .isSelected : [])
+                .accessibilityAddTraits(isMoveSelected ? [.isButton, .isSelected] : .isButton)
                 .accessibilityHint(model.userAccessibilityHint())
                 // Activating a combined row presses the button inside it, which
                 // opens the private messages. Stated here so that selecting wins.
@@ -360,9 +362,12 @@ struct ChannelListView: View {
                             model.showChannelDetail(channelID: channel.nChannelID)
                         }
                         .buttonStyle(.borderless)
+                        // the same action is offered by name below
+                        .accessibilityHidden(true)
                     }
                 }
                 .accessibilityElement(children: .combine)
+                .accessibilityAddTraits(.isButton)
                 .accessibilityHint(model.channelAccessibilityHint())
                 // Activating a combined row presses the button inside it, which
                 // opens the properties of the channel. With VoiceOver a channel
@@ -375,9 +380,6 @@ struct ChannelListView: View {
                 }
                 .contentShape(Rectangle())
                 .onTapGesture {
-                    model.selectRow(.channel(channel))
-                }
-                .accessibilityAction(named: "Expand") {
                     model.selectRow(.channel(channel))
                 }
                 .accessibilityAction(named: "Move users here") {

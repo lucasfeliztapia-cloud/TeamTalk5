@@ -356,6 +356,9 @@
 /* text message */
 "Broadcast Message" = "Загальне повідомлення";
 
+/* TTS EVENT */
+"Broadcast message from %@. %@" = "Загальне повідомлення від %@. %@";
+
 /* preferences
    user detail */
 "Broadcast Messages" = "Загальні повідомлення";
@@ -963,6 +966,9 @@
 /* server entry */
 "Join Code: %@" = "Код приєднання: %@";
 
+/* Sound Devices */
+"Join every server with the microphone chosen the last time" = "Входити на кожен сервер із мікрофоном, вибраним минулого разу";
+
 /* preferences */
 "Join Root Channel" = "Приєднатися до кореневого каналу";
 
@@ -1246,6 +1252,9 @@
 
 /* channel list */
 "No password" = "Без пароля";
+
+/* Sound Devices */
+"No Processing" = "Без обробки";
 
 /* channel list */
 "No results" = "Нічого не знайдено";
@@ -1537,6 +1546,9 @@
 /* user accounts */
 "Record voice in every channel" = "Записувати голос у всіх каналах";
 
+/* Sound Devices */
+"Remember the Last Microphone" = "Запам'ятовувати останній мікрофон";
+
 /* ban list */
 "Remove Ban" = "Зняти блокування";
 
@@ -1787,6 +1799,9 @@
 /* preferences */
 "Speaker Output" = "Вихід на динамік";
 
+/* Sound Devices */
+"Speaker Output plays the sound through the loudspeaker instead of the earpiece. Bluetooth A2DP gives better sound in Bluetooth headphones, but then the microphone of the iPhone is used and not theirs." = "«Вихід на динамік» відтворює звук через гучний динамік замість розмовного. Bluetooth A2DP покращує звук у навушниках Bluetooth, але тоді використовується мікрофон iPhone, а не навушників.";
+
 /* channel list */
 "Speakers" = "Динаміки";
 
@@ -1968,6 +1983,9 @@
 /* sound devices */
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "Мікрофон передається як є, без зменшення шуму та без пригнічення відлуння";
 
+/* Sound Devices */
+"The microphones of this device. Choose the one to use: Preferred marks your choice and Active the one in use right now." = "Мікрофони цього пристрою. Виберіть потрібний: «Бажаний» позначає ваш вибір, а «Активний» — той, що використовується зараз.";
+
 /* preferences */
 "The name and the time go after the text of the message" = "Ім'я та час ідуть після тексту повідомлення";
 
@@ -2006,6 +2024,9 @@
 
 /* transmit control */
 "This is a classroom channel: only what is turned on here can be transmitted." = "Це канал-клас: передавати можна лише те, що тут увімкнено.";
+
+/* preferences */
+"This is how announcements sound" = "Так звучать оголошення";
 
 /* media stream */
 "This web address cannot be streamed" = "Цю вебадресу не можна транслювати";
@@ -2278,6 +2299,9 @@
 
 /* preferences */
 "What each text message shows besides its text" = "Що показує кожне текстове повідомлення, крім тексту";
+
+/* Sound Devices */
+"What is done to your microphone before it is sent: removing echo, reducing noise and levelling the volume." = "Те, що робиться з мікрофоном перед надсиланням: пригнічення відлуння, зменшення шуму та вирівнювання гучності.";
 
 /* diagnostics */
 "What the app has been doing, to share when something fails" = "Що робив застосунок: щоб поділитися, коли щось не працює";

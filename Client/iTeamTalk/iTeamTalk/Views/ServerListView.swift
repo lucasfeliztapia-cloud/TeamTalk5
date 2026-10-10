@@ -25,6 +25,7 @@ import SwiftUI
 
 struct ServerListView: View {
     @ObservedObject var model: ServerListModel
+    @Environment(\.accessibilityVoiceOverEnabled) private var voiceOverEnabled
 
     var body: some View {
         Group {
@@ -59,28 +60,26 @@ struct ServerListView: View {
                     .onTapGesture {
                         model.showServerDetail(for: server)
                     }
+                    // VoiceOver gets every action once and by name, in
+                    // serverRow. With the swipe actions left in while it runs,
+                    // each of them showed up twice in the rotor.
                     .swipeActions(edge: .trailing) {
-                        Button {
-                            model.serverPendingDeletion = server
-                        } label: {
-                            Label("Delete", systemImage: "trash")
+                        if !voiceOverEnabled {
+                            Button {
+                                model.serverPendingDeletion = server
+                            } label: {
+                                Label("Delete", systemImage: "trash")
+                            }
+                            .tint(.red)
                         }
-                        .tint(.red)
                     }
                     .swipeActions(edge: .leading) {
-                        serverActions(server)
+                        if !voiceOverEnabled {
+                            serverActions(server)
+                        }
                     }
                     .contextMenu {
                         serverActions(server)
-                    }
-                    /*.accessibilityAction(named: "Connect to server") {
-                        model.connect(to: server)
-                    }
-                    .accessibilityAction(named: "Delete server from list") {
-                        model.deleteServer(server)
-                    }*/
-                    .accessibilityAction(named: "Show server details") {
-                        model.showServerDetail(for: server)
                     }
                 }
             }
@@ -232,9 +231,32 @@ struct ServerListView: View {
                 model.connect(to: server)
             }
             .buttonStyle(.bordered)
+            // activating the row connects; as a child it was one more action
+            .accessibilityHidden(true)
         }
         .accessibilityElement(children: .combine)
+        .accessibilityAddTraits(.isButton)
         .accessibilityHint(Text("Connects to this server"))
+        .accessibilityAction {
+            model.connect(to: server)
+        }
+        .accessibilityAction(named: Text("Show server details")) {
+            model.showServerDetail(for: server)
+        }
+        .accessibilityAction(named: Text(model.isFavorite(server)
+            ? LocalizedStringKey("Remove from Favorites")
+            : LocalizedStringKey("Add to Favorites"))) {
+            model.toggleFavorite(server)
+        }
+        .accessibilityAction(named: Text("Share Server")) {
+            model.shareServer(server)
+        }
+        .accessibilityAction(named: Text("Copy Link")) {
+            model.copyLink(of: server)
+        }
+        .accessibilityAction(named: Text("Delete")) {
+            model.serverPendingDeletion = server
+        }
         .contentShape(Rectangle())
     }
 

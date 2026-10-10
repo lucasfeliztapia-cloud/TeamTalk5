@@ -357,6 +357,9 @@
 /* text message */
 "Broadcast Message" = "Yayınlanan İleti";
 
+/* TTS EVENT */
+"Broadcast message from %@. %@" = "%@ kullanıcısından yayınlanan ileti. %@";
+
 /* preferences
    user detail */
 "Broadcast Messages" = "Yayınlanan İletiler";
@@ -964,6 +967,9 @@
 /* server entry */
 "Join Code: %@" = "Katılma Kodu: %@";
 
+/* Sound Devices */
+"Join every server with the microphone chosen the last time" = "Her sunucuya son seçilen mikrofonla katıl";
+
 /* preferences */
 "Join Root Channel" = "Kök Kanala Katıl";
 
@@ -1247,6 +1253,9 @@
 
 /* channel list */
 "No password" = "Parola yok";
+
+/* Sound Devices */
+"No Processing" = "İşlem Yok";
 
 /* channel list */
 "No results" = "Sonuç yok";
@@ -1540,6 +1549,9 @@
 /* user accounts */
 "Record voice in every channel" = "Tüm kanallarda ses kaydetme";
 
+/* Sound Devices */
+"Remember the Last Microphone" = "Son Mikrofonu Hatırla";
+
 /* ban list */
 "Remove Ban" = "Yasağı Kaldır";
 
@@ -1790,6 +1802,9 @@
 /* preferences */
 "Speaker Output" = "Hoparlör Çıkışı";
 
+/* Sound Devices */
+"Speaker Output plays the sound through the loudspeaker instead of the earpiece. Bluetooth A2DP gives better sound in Bluetooth headphones, but then the microphone of the iPhone is used and not theirs." = "Hoparlör Çıkışı, sesi kulaklık yerine hoparlörden verir. Bluetooth A2DP, Bluetooth kulaklıklarda daha iyi ses sağlar, ancak o zaman kulaklığın değil iPhone'un mikrofonu kullanılır.";
+
 /* channel list */
 "Speakers" = "Hoparlörler";
 
@@ -1971,6 +1986,9 @@
 /* sound devices */
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "Mikrofon olduğu gibi gönderilir; gürültü azaltma ve yankı giderme yoktur";
 
+/* Sound Devices */
+"The microphones of this device. Choose the one to use: Preferred marks your choice and Active the one in use right now." = "Bu aygıtın mikrofonları. Kullanmak istediğinizi seçin: “Tercih edilen” seçiminizi, “Etkin” ise şu anda kullanılanı gösterir.";
+
 /* preferences */
 "The name and the time go after the text of the message" = "Ad ve saat ileti metninden sonra gelir";
 
@@ -2009,6 +2027,9 @@
 
 /* transmit control */
 "This is a classroom channel: only what is turned on here can be transmitted." = "Bu bir sınıf kanalı: yalnızca burada açılanlar yayınlanabilir.";
+
+/* preferences */
+"This is how announcements sound" = "Duyurular böyle duyulur";
 
 /* media stream */
 "This web address cannot be streamed" = "Bu web adresi yayınlanamıyor";
@@ -2282,6 +2303,9 @@
 
 /* preferences */
 "What each text message shows besides its text" = "Her metin iletisinin metni dışında gösterdikleri";
+
+/* Sound Devices */
+"What is done to your microphone before it is sent: removing echo, reducing noise and levelling the volume." = "Mikrofonunuza gönderilmeden önce yapılanlar: yankıyı giderme, gürültüyü azaltma ve ses düzeyini dengeleme.";
 
 /* diagnostics */
 "What the app has been doing, to share when something fails" = "Uygulamanın yaptıkları, bir şey ters gittiğinde paylaşmak için";

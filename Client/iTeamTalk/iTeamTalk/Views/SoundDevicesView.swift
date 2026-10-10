@@ -41,7 +41,7 @@ struct SoundDevicesView: View {
 
     var body: some View {
         Form {
-            Section("General") {
+            Section {
                 ForEach(model.toggleRows) { row in
                     Toggle(isOn: Binding(
                         get: { model.preferenceValue(forKey: row.preferenceKey) },
@@ -55,6 +55,10 @@ struct SoundDevicesView: View {
                         }
                     }
                 }
+            } header: {
+                Text("General")
+            } footer: {
+                Text("Speaker Output plays the sound through the loudspeaker instead of the earpiece. Bluetooth A2DP gives better sound in Bluetooth headphones, but then the microphone of the iPhone is used and not theirs.")
             }
 
             Section {
@@ -62,14 +66,17 @@ struct SoundDevicesView: View {
                     get: { model.voiceCleanup },
                     set: { model.setVoiceCleanup($0) }
                 )) {
-                    Text("None").tag(0)
+                    Text("No Processing").tag(0)
                     Text("iOS Voice Processing").tag(1)
                     Text("WebRTC").tag(2)
                 }
             } header: {
                 Text("Voice Cleanup")
             } footer: {
-                Text(voiceCleanupExplanation)
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("What is done to your microphone before it is sent: removing echo, reducing noise and levelling the volume.")
+                    Text(voiceCleanupExplanation)
+                }
             }
 
             if model.voiceCleanup == 1 {
@@ -104,7 +111,7 @@ struct SoundDevicesView: View {
             }
 
             ForEach(model.audioInputSections) { section in
-                Section(section.title) {
+                Section {
                     ForEach(section.dataSources.indices, id: \.self) { index in
                         Button {
                             model.selectDataSource(at: index, for: section.input)
@@ -113,6 +120,12 @@ struct SoundDevicesView: View {
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
                         .buttonStyle(.plain)
+                    }
+                } header: {
+                    Text(section.title)
+                } footer: {
+                    if section.dataSources.count > 1 {
+                        Text("The microphones of this device. Choose the one to use: Preferred marks your choice and Active the one in use right now.")
                     }
                 }
             }

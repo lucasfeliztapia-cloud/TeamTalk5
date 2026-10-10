@@ -62,6 +62,12 @@ final class SoundDevicesModel: ObservableObject {
             title: String(localized: "Bluetooth A2DP Playback", comment: "Sound Devices"),
             subtitle: String(localized: "Bluetooth playback should use Advanced Audio Distribution Profile", comment: "Sound Devices"),
             preferenceKey: PREF_BLUETOOTH_A2DP
+        ),
+        ToggleRow(
+            id: PREF_REMEMBER_MICROPHONE,
+            title: String(localized: "Remember the Last Microphone", comment: "Sound Devices"),
+            subtitle: String(localized: "Join every server with the microphone chosen the last time", comment: "Sound Devices"),
+            preferenceKey: PREF_REMEMBER_MICROPHONE
         )
     ]
 
@@ -220,6 +226,8 @@ final class SoundDevicesModel: ObservableObject {
                 try session.setPreferredInput(input)
                 removeAudioPortDataSource(descr: input)
             }
+            // the one "Remember the Last Microphone" goes back to
+            UserDefaults.standard.set(input.uid, forKey: PREF_LASTMIC_PORT)
 
             print(session.currentRoute)
         } catch {

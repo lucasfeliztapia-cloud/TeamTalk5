@@ -357,6 +357,9 @@
 /* text message */
 "Broadcast Message" = "Mensagem global";
 
+/* TTS EVENT */
+"Broadcast message from %@. %@" = "Mensagem global de %@. %@";
+
 /* preferences
    user detail */
 "Broadcast Messages" = "Mensagens globais";
@@ -964,6 +967,9 @@
 /* server entry */
 "Join Code: %@" = "Código de acesso: %@";
 
+/* Sound Devices */
+"Join every server with the microphone chosen the last time" = "Entrar em cada servidor com o microfone escolhido da última vez";
+
 /* preferences */
 "Join Root Channel" = "Entrar no canal inicial";
 
@@ -1247,6 +1253,9 @@
 
 /* channel list */
 "No password" = "Sem senha";
+
+/* Sound Devices */
+"No Processing" = "Sem processamento";
 
 /* channel list */
 "No results" = "Nenhum resultado";
@@ -1540,6 +1549,9 @@
 /* user accounts */
 "Record voice in every channel" = "Gravar voz em todos os canais";
 
+/* Sound Devices */
+"Remember the Last Microphone" = "Lembrar o último microfone";
+
 /* ban list */
 "Remove Ban" = "Remover banimento";
 
@@ -1790,6 +1802,9 @@
 /* preferences */
 "Speaker Output" = "Alto-falantes de saída";
 
+/* Sound Devices */
+"Speaker Output plays the sound through the loudspeaker instead of the earpiece. Bluetooth A2DP gives better sound in Bluetooth headphones, but then the microphone of the iPhone is used and not theirs." = "Alto-falantes de saída reproduz o som pelo alto-falante em vez do receptor. O Bluetooth A2DP melhora o som em fones Bluetooth, mas então é usado o microfone do iPhone, e não o dos fones.";
+
 /* channel list */
 "Speakers" = "Alto-falantes";
 
@@ -1971,6 +1986,9 @@
 /* sound devices */
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "O microfone é enviado como está, sem redução de ruído nem cancelamento de eco";
 
+/* Sound Devices */
+"The microphones of this device. Choose the one to use: Preferred marks your choice and Active the one in use right now." = "Os microfones deste dispositivo. Escolha o que deseja usar: “Preferido” marca a sua escolha e “Ativo”, o que está em uso agora.";
+
 /* preferences */
 "The name and the time go after the text of the message" = "O nome e a hora vão depois do texto da mensagem";
 
@@ -2009,6 +2027,9 @@
 
 /* transmit control */
 "This is a classroom channel: only what is turned on here can be transmitted." = "Este é um canal sala de aula: só o que estiver ativado aqui pode ser transmitido.";
+
+/* preferences */
+"This is how announcements sound" = "É assim que os anúncios soam";
 
 /* media stream */
 "This web address cannot be streamed" = "Este endereço web não pode ser transmitido";
@@ -2282,6 +2303,9 @@
 
 /* preferences */
 "What each text message shows besides its text" = "O que cada mensagem de texto mostra além do texto";
+
+/* Sound Devices */
+"What is done to your microphone before it is sent: removing echo, reducing noise and levelling the volume." = "O que é feito com o seu microfone antes do envio: remover o eco, reduzir o ruído e nivelar o volume.";
 
 /* diagnostics */
 "What the app has been doing, to share when something fails" = "O que o app tem feito, para compartilhar quando algo falhar";

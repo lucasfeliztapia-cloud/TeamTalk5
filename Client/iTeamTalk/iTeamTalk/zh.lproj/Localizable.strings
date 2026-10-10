@@ -357,6 +357,9 @@
 /* text message */
 "Broadcast Message" = "广播消息";
 
+/* TTS EVENT */
+"Broadcast message from %@. %@" = "来自 %@ 的广播消息。%@";
+
 /* preferences
    user detail */
 "Broadcast Messages" = "广播消息";
@@ -964,6 +967,9 @@
 /* server entry */
 "Join Code: %@" = "加入码：%@";
 
+/* Sound Devices */
+"Join every server with the microphone chosen the last time" = "使用上次选取的麦克风加入每个服务器";
+
 /* preferences */
 "Join Root Channel" = "加入根频道";
 
@@ -1247,6 +1253,9 @@
 
 /* channel list */
 "No password" = "无密码";
+
+/* Sound Devices */
+"No Processing" = "不处理";
 
 /* channel list */
 "No results" = "无结果";
@@ -1540,6 +1549,9 @@
 /* user accounts */
 "Record voice in every channel" = "在所有频道录制语音";
 
+/* Sound Devices */
+"Remember the Last Microphone" = "记住上次的麦克风";
+
 /* ban list */
 "Remove Ban" = "解除封禁";
 
@@ -1790,6 +1802,9 @@
 /* preferences */
 "Speaker Output" = "扬声器输出";
 
+/* Sound Devices */
+"Speaker Output plays the sound through the loudspeaker instead of the earpiece. Bluetooth A2DP gives better sound in Bluetooth headphones, but then the microphone of the iPhone is used and not theirs." = "“扬声器输出”通过扬声器而非听筒播放声音。蓝牙 A2DP 可让蓝牙耳机音质更好，但此时使用的是 iPhone 的麦克风，而非耳机的麦克风。";
+
 /* channel list */
 "Speakers" = "扬声器";
 
@@ -1971,6 +1986,9 @@
 /* sound devices */
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "麦克风声音原样发送，不降噪也不消除回声";
 
+/* Sound Devices */
+"The microphones of this device. Choose the one to use: Preferred marks your choice and Active the one in use right now." = "此设备的麦克风。请选取要使用的麦克风：“首选”表示您的选择，“已激活”表示当前正在使用的麦克风。";
+
 /* preferences */
 "The name and the time go after the text of the message" = "名称和时间位于消息正文之后";
 
@@ -2009,6 +2027,9 @@
 
 /* transmit control */
 "This is a classroom channel: only what is turned on here can be transmitted." = "这是课堂频道：只有此处打开的内容可以发送。";
+
+/* preferences */
+"This is how announcements sound" = "播报听起来是这样的";
 
 /* media stream */
 "This web address cannot be streamed" = "无法流式传输此网址";
@@ -2282,6 +2303,9 @@
 
 /* preferences */
 "What each text message shows besides its text" = "每条文字消息除正文外显示的内容";
+
+/* Sound Devices */
+"What is done to your microphone before it is sent: removing echo, reducing noise and levelling the volume." = "发送前对麦克风声音所做的处理：消除回声、降低噪声并均衡音量。";
 
 /* diagnostics */
 "What the app has been doing, to share when something fails" = "App 的运行记录，出问题时可以共享";

@@ -357,6 +357,9 @@
 /* text message */
 "Broadcast Message" = "Pesan Broadcast";
 
+/* TTS EVENT */
+"Broadcast message from %@. %@" = "Pesan broadcast dari %@. %@";
+
 /* preferences
    user detail */
 "Broadcast Messages" = "Pesan Broadcast";
@@ -964,6 +967,9 @@
 /* server entry */
 "Join Code: %@" = "Kode Gabung: %@";
 
+/* Sound Devices */
+"Join every server with the microphone chosen the last time" = "Bergabung ke tiap server dengan mikrofon yang terakhir dipilih";
+
 /* preferences */
 "Join Root Channel" = "Bergabung Dengan Saluran Utama";
 
@@ -1247,6 +1253,9 @@
 
 /* channel list */
 "No password" = "Tanpa kata sandi";
+
+/* Sound Devices */
+"No Processing" = "Tanpa Pemrosesan";
 
 /* channel list */
 "No results" = "Tidak ada hasil";
@@ -1540,6 +1549,9 @@
 /* user accounts */
 "Record voice in every channel" = "Merekam suara di semua saluran";
 
+/* Sound Devices */
+"Remember the Last Microphone" = "Ingat Mikrofon Terakhir";
+
 /* ban list */
 "Remove Ban" = "Cabut Cekal";
 
@@ -1790,6 +1802,9 @@
 /* preferences */
 "Speaker Output" = "Keluaran Speaker";
 
+/* Sound Devices */
+"Speaker Output plays the sound through the loudspeaker instead of the earpiece. Bluetooth A2DP gives better sound in Bluetooth headphones, but then the microphone of the iPhone is used and not theirs." = "Keluaran Speaker memutar suara melalui pengeras suara, bukan lubang suara telepon. Bluetooth A2DP memberi suara lebih baik di headphone Bluetooth, tetapi mikrofon yang dipakai adalah milik iPhone, bukan milik headphone.";
+
 /* channel list */
 "Speakers" = "Speaker";
 
@@ -1971,6 +1986,9 @@
 /* sound devices */
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "Mikrofon dikirim apa adanya, tanpa pengurangan bising dan tanpa penghilang gema";
 
+/* Sound Devices */
+"The microphones of this device. Choose the one to use: Preferred marks your choice and Active the one in use right now." = "Mikrofon perangkat ini. Pilih yang ingin dipakai: “Diutamakan” menandai pilihan Anda dan “Aktif” yang sedang dipakai sekarang.";
+
 /* preferences */
 "The name and the time go after the text of the message" = "Nama dan waktu berada setelah teks pesan";
 
@@ -2009,6 +2027,9 @@
 
 /* transmit control */
 "This is a classroom channel: only what is turned on here can be transmitted." = "Ini saluran ruang kelas: hanya yang dinyalakan di sini yang dapat dikirim.";
+
+/* preferences */
+"This is how announcements sound" = "Beginilah bunyi pemberitahuan";
 
 /* media stream */
 "This web address cannot be streamed" = "Alamat web ini tidak dapat disiarkan";
@@ -2282,6 +2303,9 @@
 
 /* preferences */
 "What each text message shows besides its text" = "Yang ditampilkan tiap pesan teks selain teksnya";
+
+/* Sound Devices */
+"What is done to your microphone before it is sent: removing echo, reducing noise and levelling the volume." = "Yang dilakukan pada mikrofon Anda sebelum dikirim: menghilangkan gema, mengurangi bising, dan meratakan volume.";
 
 /* diagnostics */
 "What the app has been doing, to share when something fails" = "Apa yang telah dilakukan app, untuk dibagikan saat ada yang gagal";

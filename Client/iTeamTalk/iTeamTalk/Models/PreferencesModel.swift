@@ -83,6 +83,8 @@ let PREF_HEADSET_TXTOGGLE = "headset_tx_preference"
 let PREF_VOICEPROCESSINGIO = "voiceprocessing_preference"
 let PREF_WEBRTC_VOICECLEANUP = "webrtc_voicecleanup_preference"
 let PREF_SNDINPUT_PORT = "sndinput_port_preference"
+let PREF_REMEMBER_MICROPHONE = "sndinput_remember_preference"
+let PREF_LASTMIC_PORT = "sndinput_lastport_preference"
 
 let PREF_SNDEVENT_SERVERLOST = "snd_srvlost_preference"
 let PREF_SNDEVENT_VOICETX = "snd_voicetx_preference"
@@ -117,6 +119,7 @@ let PREF_TTSEVENT_CONLOST = "tts_conlost_preference"
 let PREF_TTSEVENT_TEXTMSG = "tts_usertxtmsg_preference"
 let PREF_TTSEVENT_CHANTEXTMSG = "tts_chantxtmsg_preference"
 let PREF_TTSEVENT_TYPING = "tts_typing_preference"
+let PREF_TTSEVENT_BCASTMSG = "tts_bcasttxtmsg_preference"
 let PREF_TTSEVENT_RATE = "tts_rate_preference"
 let PREF_TTSEVENT_VOL = "tts_volume_preference"
 let PREF_TTSEVENT_USERLOGIN = "tts_user_login"
@@ -394,11 +397,19 @@ final class PreferencesModel: ObservableObject {
     func ttsrateChanged(_ value: Double) {
         ttsRate = value
         UserDefaults.standard.set(Float(value), forKey: PREF_TTSEVENT_RATE)
+        speakSpeechSample()
     }
 
     func ttsvolChanged(_ value: Double) {
         ttsVolume = value
         UserDefaults.standard.set(Float(value), forKey: PREF_TTSEVENT_VOL)
+        speakSpeechSample()
+    }
+
+    /// A few words with the new rate or volume, once the slider stops and
+    /// VoiceOver has said its value
+    private func speakSpeechSample() {
+        speakSample(String(localized: "This is how announcements sound", comment: "preferences"), after: 0.9)
     }
 
     func isSubscribed(to row: SubscriptionRow) -> Bool {

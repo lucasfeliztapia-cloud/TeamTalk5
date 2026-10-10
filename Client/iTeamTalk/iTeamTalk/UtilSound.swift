@@ -447,22 +447,31 @@ func setupSoundDevices() {
         print("postset. Mode \(session.mode.rawValue), category \(session.category.rawValue), options \(getCategory(session.categoryOptions))")
         logDiagnostic("Sound setup done: device \(sndid), mode \(session.mode.rawValue), options \(getCategory(session.categoryOptions)), route \(describeAudioRoute(session))")
         
-        // enable stereo on all data sources that support it
+        // The microphone chosen in Sound Devices. Its stereo pattern, where
+        // it has one, and the microphone itself when the user wants the last
+        // one back: iOS starts every session with its own choice, the bottom
+        // microphone of the iPhone. The old loop set each data source of the
+        // port as preferred in turn and never the input, so nothing stayed.
+        let remember = defaults.bool(forKey: PREF_REMEMBER_MICROPHONE)
+        let lastPort = defaults.string(forKey: PREF_LASTMIC_PORT)
         for input in session.availableInputs ?? [] {
-            guard let dataSourceID = getAudioPortDataSource(descr: input) else { continue }
-            for datasrc in input.dataSources ?? [] {
-                if datasrc.dataSourceID == dataSourceID {
-                    if datasrc.supportedPolarPatterns?.contains(.stereo) == true {
-                        try datasrc.setPreferredPolarPattern(.stereo)
-                        print("Setting \(datasrc.dataSourceName) to stereo")
-                    } else {
-                        print("No stereo on \(datasrc.dataSourceName)")
-                    }
-                }
-                if session.inputDataSource?.dataSourceID != dataSourceID {
-                    try input.setPreferredDataSource(datasrc)
-                }
+            let wanted = remember && input.uid == lastPort
+            let dataSourceID = getAudioPortDataSource(descr: input)
+            let datasrc = input.dataSources?.first { $0.dataSourceID == dataSourceID }
+
+            if let datasrc, datasrc.supportedPolarPatterns?.contains(.stereo) == true {
+                try datasrc.setPreferredPolarPattern(.stereo)
             }
+            guard wanted else { continue }
+
+            if let datasrc {
+                try input.setPreferredDataSource(datasrc)
+            }
+            try session.setPreferredInput(input)
+            if let datasrc, session.currentRoute.inputs.contains(where: { $0.uid == input.uid }) {
+                try session.setInputDataSource(datasrc)
+            }
+            logDiagnostic("Microphone restored: \(input.portName) \(datasrc?.dataSourceName ?? "")")
         }
     }
     catch {

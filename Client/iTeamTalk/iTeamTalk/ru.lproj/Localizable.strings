@@ -356,6 +356,9 @@
 /* text message */
 "Broadcast Message" = "Сетевое сообщение";
 
+/* TTS EVENT */
+"Broadcast message from %@. %@" = "Сетевое сообщение от %@. %@";
+
 /* preferences
    user detail */
 "Broadcast Messages" = "Сетевые Сообщения";
@@ -963,6 +966,9 @@
 /* server entry */
 "Join Code: %@" = "Код присоединения: %@";
 
+/* Sound Devices */
+"Join every server with the microphone chosen the last time" = "Входить на каждый сервер с микрофоном, выбранным в прошлый раз";
+
 /* preferences */
 "Join Root Channel" = "Присоединиться К Главному Каналу";
 
@@ -1246,6 +1252,9 @@
 
 /* channel list */
 "No password" = "Нет пароля";
+
+/* Sound Devices */
+"No Processing" = "Без обработки";
 
 /* channel list */
 "No results" = "Ничего не найдено";
@@ -1537,6 +1546,9 @@
 /* user accounts */
 "Record voice in every channel" = "Записывать голос во всех каналах";
 
+/* Sound Devices */
+"Remember the Last Microphone" = "Запоминать последний микрофон";
+
 /* ban list */
 "Remove Ban" = "Снять блокировку";
 
@@ -1787,6 +1799,9 @@
 /* preferences */
 "Speaker Output" = "Выход На Динамик";
 
+/* Sound Devices */
+"Speaker Output plays the sound through the loudspeaker instead of the earpiece. Bluetooth A2DP gives better sound in Bluetooth headphones, but then the microphone of the iPhone is used and not theirs." = "«Выход На Динамик» воспроизводит звук через громкий динамик вместо разговорного. Bluetooth A2DP улучшает звук в наушниках Bluetooth, но тогда используется микрофон iPhone, а не наушников.";
+
 /* channel list */
 "Speakers" = "Динамики";
 
@@ -1968,6 +1983,9 @@
 /* sound devices */
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "Микрофон передаётся как есть, без шумоподавления и без подавления эха";
 
+/* Sound Devices */
+"The microphones of this device. Choose the one to use: Preferred marks your choice and Active the one in use right now." = "Микрофоны этого устройства. Выберите нужный: «Предпочитаемый» отмечает ваш выбор, а «Активный» — тот, что используется сейчас.";
+
 /* preferences */
 "The name and the time go after the text of the message" = "Имя и время идут после текста сообщения";
 
@@ -2006,6 +2024,9 @@
 
 /* transmit control */
 "This is a classroom channel: only what is turned on here can be transmitted." = "Это канал-класс: передавать можно только то, что здесь включено.";
+
+/* preferences */
+"This is how announcements sound" = "Так звучат объявления";
 
 /* media stream */
 "This web address cannot be streamed" = "Этот веб-адрес нельзя транслировать";
@@ -2278,6 +2299,9 @@
 
 /* preferences */
 "What each text message shows besides its text" = "Что показывает каждое текстовое сообщение помимо текста";
+
+/* Sound Devices */
+"What is done to your microphone before it is sent: removing echo, reducing noise and levelling the volume." = "То, что делается с микрофоном перед отправкой: подавление эха, снижение шума и выравнивание громкости.";
 
 /* diagnostics */
 "What the app has been doing, to share when something fails" = "Что делало приложение: чтобы поделиться, когда что-то не работает";

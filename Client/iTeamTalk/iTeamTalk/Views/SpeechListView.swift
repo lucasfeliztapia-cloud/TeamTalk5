@@ -81,8 +81,10 @@ struct SpeechListView: View {
         selectedVoiceIdentifier = voice.id
         UserDefaults.standard.setValue(voice.id, forKey: PREF_TTSEVENT_VOICEID)
 
+        // said by the voice itself: with VoiceOver on it was VoiceOver that
+        // read it, and the chosen voice was never heard
         let utterance = String(format: String(localized: "You have selected %@", comment: "speech"), voice.name)
-        newUtterance(utterance)
+        speakSample(utterance, after: 0.6)
     }
 }
 

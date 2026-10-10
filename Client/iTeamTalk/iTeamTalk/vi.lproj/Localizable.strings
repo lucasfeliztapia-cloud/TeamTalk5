@@ -358,6 +358,9 @@
 /* text message */
 "Broadcast Message" = "Tin nhắn thông báo";
 
+/* TTS EVENT */
+"Broadcast message from %@. %@" = "Tin nhắn thông báo từ %@. %@";
+
 /* preferences
    user detail */
 "Broadcast Messages" = "Tin nhắn thông báo";
@@ -966,6 +969,9 @@
 /* server entry */
 "Join Code: %@" = "Mã tham gia: %@";
 
+/* Sound Devices */
+"Join every server with the microphone chosen the last time" = "Vào mọi máy chủ bằng micrô đã chọn lần trước";
+
 /* preferences */
 "Join Root Channel" = "Tham gia kênh gốc";
 
@@ -1249,6 +1255,9 @@
 
 /* channel list */
 "No password" = "Không mật khẩu";
+
+/* Sound Devices */
+"No Processing" = "Không xử lý";
 
 /* channel list */
 "No results" = "Không có kết quả";
@@ -1542,6 +1551,9 @@
 /* user accounts */
 "Record voice in every channel" = "Ghi âm giọng nói trong mọi kênh";
 
+/* Sound Devices */
+"Remember the Last Microphone" = "Ghi nhớ micrô gần nhất";
+
 /* ban list */
 "Remove Ban" = "Gỡ chặn";
 
@@ -1792,6 +1804,9 @@
 /* preferences */
 "Speaker Output" = "Đầu ra loa";
 
+/* Sound Devices */
+"Speaker Output plays the sound through the loudspeaker instead of the earpiece. Bluetooth A2DP gives better sound in Bluetooth headphones, but then the microphone of the iPhone is used and not theirs." = "Đầu ra loa phát âm thanh qua loa ngoài thay vì loa trong. Bluetooth A2DP cho âm thanh tốt hơn trên tai nghe Bluetooth, nhưng khi đó micrô của iPhone được dùng chứ không phải micrô của tai nghe.";
+
 /* channel list */
 "Speakers" = "Loa";
 
@@ -1974,6 +1989,9 @@
 /* sound devices */
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "Micrô được gửi nguyên trạng, không giảm tiếng ồn và không khử tiếng vọng";
 
+/* Sound Devices */
+"The microphones of this device. Choose the one to use: Preferred marks your choice and Active the one in use right now." = "Các micrô của thiết bị này. Hãy chọn micrô muốn dùng: “Ưu tiên” đánh dấu lựa chọn của bạn và “Đang hoạt động” là micrô đang được dùng.";
+
 /* preferences */
 "The name and the time go after the text of the message" = "Tên và giờ nằm sau nội dung tin nhắn";
 
@@ -2012,6 +2030,9 @@
 
 /* transmit control */
 "This is a classroom channel: only what is turned on here can be transmitted." = "Đây là kênh lớp học: chỉ những gì được bật ở đây mới có thể truyền.";
+
+/* preferences */
+"This is how announcements sound" = "Thông báo sẽ nghe như thế này";
 
 /* media stream */
 "This web address cannot be streamed" = "Không thể phát trực tuyến địa chỉ web này";
@@ -2285,6 +2306,9 @@
 
 /* preferences */
 "What each text message shows besides its text" = "Những gì mỗi tin nhắn văn bản hiển thị ngoài nội dung";
+
+/* Sound Devices */
+"What is done to your microphone before it is sent: removing echo, reducing noise and levelling the volume." = "Những gì được áp dụng cho micrô của bạn trước khi gửi: khử tiếng vọng, giảm tiếng ồn và cân bằng âm lượng.";
 
 /* diagnostics */
 "What the app has been doing, to share when something fails" = "Những gì ứng dụng đã làm, để chia sẻ khi có sự cố";

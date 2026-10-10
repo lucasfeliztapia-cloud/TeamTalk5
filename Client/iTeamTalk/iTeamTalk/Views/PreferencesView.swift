@@ -53,7 +53,6 @@ struct PreferencesView: View {
             connectionSection
             subscriptionsSection
             backupSection
-            diagnosticsSection
             versionSection
         }
         .navigationTitle("Preferences")
@@ -612,21 +611,6 @@ struct PreferencesView: View {
             Text("Backup")
         } footer: {
             Text("The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe.")
-        }
-    }
-
-    private var diagnosticsSection: some View {
-        Section("Diagnostics") {
-            NavigationLink {
-                DiagnosticLogView()
-            } label: {
-                VStack(alignment: .leading, spacing: 2) {
-                    Text("Diagnostic Log")
-                    Text("What the app has been doing, to share when something fails")
-                        .font(.footnote)
-                        .foregroundStyle(.secondary)
-                }
-            }
         }
     }
 

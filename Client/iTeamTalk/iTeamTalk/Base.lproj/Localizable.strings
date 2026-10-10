@@ -358,6 +358,9 @@
 /* text message */
 "Broadcast Message" = "Broadcast Message";
 
+/* TTS EVENT */
+"Broadcast message from %@. %@" = "Broadcast message from %@. %@";
+
 /* preferences
    user detail */
 "Broadcast Messages" = "Broadcast Messages";
@@ -957,6 +960,9 @@
 /* server entry */
 "Join Code" = "Join Code";
 
+/* Sound Devices */
+"Join every server with the microphone chosen the last time" = "Join every server with the microphone chosen the last time";
+
 /* preferences */
 "Join Root Channel" = "Join Root Channel";
 
@@ -1240,6 +1246,9 @@
 
 /* channel list */
 "No password" = "No password";
+
+/* Sound Devices */
+"No Processing" = "No Processing";
 
 /* channel list */
 "No results" = "No results";
@@ -1530,6 +1539,9 @@
 /* user accounts */
 "Record voice in every channel" = "Record voice in every channel";
 
+/* Sound Devices */
+"Remember the Last Microphone" = "Remember the Last Microphone";
+
 /* ban list */
 "Remove Ban" = "Remove Ban";
 
@@ -1780,6 +1792,9 @@
 /* preferences */
 "Speaker Output" = "Speaker Output";
 
+/* Sound Devices */
+"Speaker Output plays the sound through the loudspeaker instead of the earpiece. Bluetooth A2DP gives better sound in Bluetooth headphones, but then the microphone of the iPhone is used and not theirs." = "Speaker Output plays the sound through the loudspeaker instead of the earpiece. Bluetooth A2DP gives better sound in Bluetooth headphones, but then the microphone of the iPhone is used and not theirs.";
+
 /* channel list */
 "Speakers" = "Speakers";
 
@@ -1962,6 +1977,9 @@
 /* sound devices */
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "The microphone is sent as it is, with no noise reduction and no echo cancellation";
 
+/* Sound Devices */
+"The microphones of this device. Choose the one to use: Preferred marks your choice and Active the one in use right now." = "The microphones of this device. Choose the one to use: Preferred marks your choice and Active the one in use right now.";
+
 /* preferences */
 "The name and the time go after the text of the message" = "The name and the time go after the text of the message";
 
@@ -2000,6 +2018,9 @@
 
 /* transmit control */
 "This is a classroom channel: only what is turned on here can be transmitted." = "This is a classroom channel: only what is turned on here can be transmitted.";
+
+/* preferences */
+"This is how announcements sound" = "This is how announcements sound";
 
 /* media stream */
 "This web address cannot be streamed" = "This web address cannot be streamed";
@@ -2270,6 +2291,9 @@
 
 /* preferences */
 "What each text message shows besides its text" = "What each text message shows besides its text";
+
+/* Sound Devices */
+"What is done to your microphone before it is sent: removing echo, reducing noise and levelling the volume." = "What is done to your microphone before it is sent: removing echo, reducing noise and levelling the volume.";
 
 /* diagnostics */
 "What the app has been doing, to share when something fails" = "What the app has been doing, to share when something fails";
