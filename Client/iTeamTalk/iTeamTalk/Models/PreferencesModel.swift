@@ -172,6 +172,12 @@ final class PreferencesModel: ObservableObject {
 
     var users = Set<INT32>()
 
+    /// The nickname of the server in use, when its entry has one of its own
+    var serverNickname = ""
+    // written and not yet told to the server, see applyNickname()
+    private var nicknameIsPending = false
+    private var statusMessageIsPending = false
+
     let subscriptionRows: [SubscriptionRow]
     let versionRows: [VersionRow]
 
@@ -247,9 +253,41 @@ final class PreferencesModel: ObservableObject {
     }
 
     func nicknameChanged(_ nickname: String) {
+        guard nickname != nicknameText else { return }
         nicknameText = nickname
-        TeamTalkClient.shared.changeNickname(nickname)
+        nicknameIsPending = true
         UserDefaults.standard.set(nickname, forKey: PREF_GENERAL_NICKNAME)
+    }
+
+    /// The nickname goes to the server once it is written, not letter by
+    /// letter. Each letter was a command, and everyone saw each of them; a
+    /// server that limits the commands of an account refused the last ones
+    /// and the nickname stayed half written.
+    func applyNickname() {
+        guard nicknameIsPending else { return }
+        nicknameIsPending = false
+        // a server with a nickname of its own does not use this one
+        guard serverNickname.isEmpty else { return }
+        TeamTalkClient.shared.changeNickname(nicknameText)
+    }
+
+    /// Why the nickname written here is not the one the others see, when
+    /// that is so on the server in use
+    var nicknameNote: String? {
+        guard TeamTalkClient.shared.isAuthorized else { return nil }
+        if TeamTalkClient.shared.myUserRights & USERRIGHT_LOCKED_NICKNAME.rawValue != 0 {
+            return String(localized: "Your account on this server is not allowed to change its nickname", comment: "preferences")
+        }
+        if !serverNickname.isEmpty {
+            return String(format: String(localized: "This server uses its own nickname, %@. It is changed in the details of the server, in the server list.", comment: "preferences"), serverNickname)
+        }
+        return nil
+    }
+
+    var statusNote: String? {
+        guard TeamTalkClient.shared.isAuthorized,
+              TeamTalkClient.shared.myUserRights & USERRIGHT_LOCKED_STATUS.rawValue != 0 else { return nil }
+        return String(localized: "Your account on this server is not allowed to change its status", comment: "preferences")
     }
 
     func genderChanged(_ index: Int) {
@@ -266,8 +304,16 @@ final class PreferencesModel: ObservableObject {
     }
 
     func statusMessageChanged(_ message: String) {
+        guard message != statusMessage else { return }
         statusMessage = message
+        statusMessageIsPending = true
         UserDefaults.standard.set(message, forKey: PREF_GENERAL_STATUSMSG)
+    }
+
+    /// Like the nickname: once written, not letter by letter
+    func applyStatusMessage() {
+        guard statusMessageIsPending else { return }
+        statusMessageIsPending = false
         applyStatus()
     }
 

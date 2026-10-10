@@ -823,6 +823,9 @@
 "Font" = "Fonte";
 
 /* appearance */
+"Font of Broadcast Messages" = "Fonte das mensagens globais";
+
+/* appearance */
 "Font of Server Events" = "Fonte dos eventos do servidor";
 
 /* media stream */
@@ -1936,7 +1939,7 @@
 "The current file starts again every time it ends" = "O arquivo atual recomeça sempre que termina";
 
 /* appearance */
-"The messages can have a text size of their own, and the server events a font of their own." = "As mensagens podem ter um tamanho de texto próprio, e os eventos do servidor uma fonte própria.";
+"The messages can have a text size of their own, and the server events and the broadcast messages a font of their own." = "As mensagens podem ter um tamanho de texto próprio, e os eventos do servidor e as mensagens globais uma fonte própria.";
 
 /* sound devices */
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "O microfone é enviado como está, sem redução de ruído nem cancelamento de eco";
@@ -1982,6 +1985,9 @@
 
 /* preferences */
 "This is how announcements sound" = "É assim que os anúncios soam";
+
+/* preferences */
+"This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "Este servidor usa um apelido próprio, %@. Ele é alterado nos detalhes do servidor, na lista de servidores.";
 
 /* media stream */
 "This web address cannot be streamed" = "Este endereço web não pode ser transmitido";
@@ -2303,6 +2309,12 @@
 
 /* Sound Devices */
 "You will hear your own microphone. Use headphones, or the speaker will be picked up again. Only available while you are not in a channel." = "Você vai ouvir o seu próprio microfone. Use fones de ouvido, ou o alto-falante será captado de novo. Disponível só enquanto você não está em um canal.";
+
+/* preferences */
+"Your account on this server is not allowed to change its nickname" = "Sua conta neste servidor não tem permissão para alterar o apelido";
+
+/* preferences */
+"Your account on this server is not allowed to change its status" = "Sua conta neste servidor não tem permissão para alterar o status";
 
 /* channel picker */
 "Your channel" = "Seu canal";

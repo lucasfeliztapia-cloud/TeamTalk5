@@ -822,6 +822,9 @@
 "Font" = "Czcionka";
 
 /* appearance */
+"Font of Broadcast Messages" = "Czcionka wiadomości do wszystkich";
+
+/* appearance */
 "Font of Server Events" = "Czcionka zdarzeń serwera";
 
 /* media stream */
@@ -1933,7 +1936,7 @@
 "The current file starts again every time it ends" = "Bieżący plik zaczyna się od nowa za każdym razem, gdy się skończy";
 
 /* appearance */
-"The messages can have a text size of their own, and the server events a font of their own." = "Wiadomości mogą mieć własny rozmiar tekstu, a zdarzenia serwera własną czcionkę.";
+"The messages can have a text size of their own, and the server events and the broadcast messages a font of their own." = "Wiadomości mogą mieć własny rozmiar tekstu, a zdarzenia serwera i wiadomości do wszystkich własną czcionkę.";
 
 /* sound devices */
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "Mikrofon jest wysyłany bez zmian, bez redukcji szumu i bez usuwania echa";
@@ -1979,6 +1982,9 @@
 
 /* preferences */
 "This is how announcements sound" = "Tak brzmią komunikaty głosowe";
+
+/* preferences */
+"This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "Ten serwer używa własnego nicku: %@. Zmienia się go w szczegółach serwera na liście serwerów.";
 
 /* media stream */
 "This web address cannot be streamed" = "Tego adresu internetowego nie można strumieniować";
@@ -2299,6 +2305,12 @@
 
 /* Sound Devices */
 "You will hear your own microphone. Use headphones, or the speaker will be picked up again. Only available while you are not in a channel." = "Usłyszysz własny mikrofon. Użyj słuchawek, inaczej głośnik zostanie znowu przechwycony. Dostępne tylko wtedy, gdy nie jesteś w kanale.";
+
+/* preferences */
+"Your account on this server is not allowed to change its nickname" = "Twoje konto na tym serwerze nie może zmieniać nicku";
+
+/* preferences */
+"Your account on this server is not allowed to change its status" = "Twoje konto na tym serwerze nie może zmieniać statusu";
 
 /* channel picker */
 "Your channel" = "Twój kanał";

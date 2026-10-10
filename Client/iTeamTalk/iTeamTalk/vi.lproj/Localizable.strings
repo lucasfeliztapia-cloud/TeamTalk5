@@ -824,6 +824,9 @@
 "Font" = "Phông chữ";
 
 /* appearance */
+"Font of Broadcast Messages" = "Phông chữ của tin nhắn thông báo";
+
+/* appearance */
 "Font of Server Events" = "Phông chữ của sự kiện máy chủ";
 
 /* media stream */
@@ -1939,7 +1942,7 @@
 "The current file starts again every time it ends" = "Tệp hiện tại phát lại từ đầu mỗi khi kết thúc";
 
 /* appearance */
-"The messages can have a text size of their own, and the server events a font of their own." = "Tin nhắn có thể có cỡ chữ riêng, và sự kiện máy chủ có phông chữ riêng.";
+"The messages can have a text size of their own, and the server events and the broadcast messages a font of their own." = "Tin nhắn có thể có cỡ chữ riêng, và sự kiện máy chủ cùng tin nhắn thông báo có phông chữ riêng.";
 
 /* sound devices */
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "Micrô được gửi nguyên trạng, không giảm tiếng ồn và không khử tiếng vọng";
@@ -1985,6 +1988,9 @@
 
 /* preferences */
 "This is how announcements sound" = "Thông báo sẽ nghe như thế này";
+
+/* preferences */
+"This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "Máy chủ này dùng tên hiển thị riêng, %@. Tên này được đổi trong chi tiết máy chủ, ở danh sách máy chủ.";
 
 /* media stream */
 "This web address cannot be streamed" = "Không thể phát trực tuyến địa chỉ web này";
@@ -2306,6 +2312,12 @@
 
 /* Sound Devices */
 "You will hear your own microphone. Use headphones, or the speaker will be picked up again. Only available while you are not in a channel." = "Bạn sẽ nghe thấy micrô của chính mình. Hãy dùng tai nghe, nếu không tiếng loa sẽ bị thu lại. Chỉ khả dụng khi bạn không ở trong kênh.";
+
+/* preferences */
+"Your account on this server is not allowed to change its nickname" = "Tài khoản của bạn trên máy chủ này không được phép đổi tên hiển thị";
+
+/* preferences */
+"Your account on this server is not allowed to change its status" = "Tài khoản của bạn trên máy chủ này không được phép đổi trạng thái";
 
 /* channel picker */
 "Your channel" = "Kênh của bạn";

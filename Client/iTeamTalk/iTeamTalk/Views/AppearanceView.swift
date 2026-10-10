@@ -46,6 +46,7 @@ struct AppearanceView: View {
             Section {
                 ColorPicker("Received Messages", selection: $appearance.receivedColor, supportsOpacity: false)
                 ColorPicker("Sent Messages", selection: $appearance.sentColor, supportsOpacity: false)
+                ColorPicker("Broadcast Messages", selection: $appearance.broadcastColor, supportsOpacity: false)
                 ColorPicker("Server Events", selection: $appearance.eventColor, supportsOpacity: false)
             } header: {
                 Text("Text Messages")
@@ -84,15 +85,23 @@ struct AppearanceView: View {
                         Text(design.title).tag(design.rawValue + 1)
                     }
                 }
+                Picker("Font of Broadcast Messages", selection: $appearance.broadcastFontIndex) {
+                    Text("Same as the App").tag(0)
+                    ForEach(AppearanceFontDesign.allCases) { design in
+                        Text(design.title).tag(design.rawValue + 1)
+                    }
+                }
             } header: {
                 Text("Text of the Messages")
             } footer: {
-                Text("The messages can have a text size of their own, and the server events a font of their own.")
+                Text("The messages can have a text size of their own, and the server events and the broadcast messages a font of their own.")
             }
 
             Section("Preview") {
                 previewRow("Received message", color: appearance.receivedColor)
                 previewRow("Sent message", color: appearance.sentColor)
+                previewRow("Broadcast Message", color: appearance.broadcastColor)
+                    .modifier(FontDesignModifier(design: appearance.broadcastFontDesign))
                 previewRow("Server event", color: appearance.eventColor)
                     .modifier(FontDesignModifier(design: appearance.eventFontDesign))
             }

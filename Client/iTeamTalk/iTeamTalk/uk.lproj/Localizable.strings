@@ -822,6 +822,9 @@
 "Font" = "Шрифт";
 
 /* appearance */
+"Font of Broadcast Messages" = "Шрифт загальних повідомлень";
+
+/* appearance */
 "Font of Server Events" = "Шрифт подій сервера";
 
 /* media stream */
@@ -1933,7 +1936,7 @@
 "The current file starts again every time it ends" = "Поточний файл починається знову щоразу, коли закінчується";
 
 /* appearance */
-"The messages can have a text size of their own, and the server events a font of their own." = "Повідомлення можуть мати власний розмір тексту, а події сервера власний шрифт.";
+"The messages can have a text size of their own, and the server events and the broadcast messages a font of their own." = "Повідомлення можуть мати власний розмір тексту, а події сервера та загальні повідомлення власний шрифт.";
 
 /* sound devices */
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "Мікрофон передається як є, без зменшення шуму та без пригнічення відлуння";
@@ -1979,6 +1982,9 @@
 
 /* preferences */
 "This is how announcements sound" = "Так звучать оголошення";
+
+/* preferences */
+"This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "Цей сервер використовує власний псевдонім: %@. Він змінюється у відомостях про сервер, у списку серверів.";
 
 /* media stream */
 "This web address cannot be streamed" = "Цю вебадресу не можна транслювати";
@@ -2299,6 +2305,12 @@
 
 /* Sound Devices */
 "You will hear your own microphone. Use headphones, or the speaker will be picked up again. Only available while you are not in a channel." = "Ви почуєте власний мікрофон. Користуйтеся навушниками, інакше динамік захоплюватиметься знову. Доступно лише поки ви не в каналі.";
+
+/* preferences */
+"Your account on this server is not allowed to change its nickname" = "Вашому обліковому запису на цьому сервері не дозволено змінювати псевдонім";
+
+/* preferences */
+"Your account on this server is not allowed to change its status" = "Вашому обліковому запису на цьому сервері не дозволено змінювати статус";
 
 /* channel picker */
 "Your channel" = "Ваш канал";

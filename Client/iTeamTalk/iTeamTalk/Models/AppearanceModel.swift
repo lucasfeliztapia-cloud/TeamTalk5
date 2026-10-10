@@ -37,6 +37,8 @@ let PREF_APPEARANCE_FONTDESIGN = "appearance_fontdesign_preference"
 let PREF_APPEARANCE_MESSAGETEXTSIZE = "appearance_messagetextsize_preference"
 let PREF_APPEARANCE_EVENTCOLOR = "appearance_eventcolor_preference"
 let PREF_APPEARANCE_EVENTFONT = "appearance_eventfont_preference"
+let PREF_APPEARANCE_BROADCASTCOLOR = "appearance_broadcastcolor_preference"
+let PREF_APPEARANCE_BROADCASTFONT = "appearance_broadcastfont_preference"
 
 enum AppearanceFontDesign: Int, CaseIterable, Identifiable {
     case standard = 0
@@ -99,7 +101,7 @@ final class AppearanceModel: ObservableObject {
     static let defaultTalkActiveColor = Color.red
     static let defaultSpeakersOnColor = Color.white
     static let defaultSpeakersMutedColor = Color.black
-    static let broadcastColor = Color(red: 0.831, green: 0.376, blue: 1.0)
+    static let defaultBroadcastColor = Color(red: 0.831, green: 0.376, blue: 1.0)
     static let defaultEventColor = Color(red: 0.86, green: 0.86, blue: 0.86)
 
     /// One title for each case of DynamicTypeSize, in its order
@@ -185,6 +187,37 @@ final class AppearanceModel: ObservableObject {
         return designs[eventFontIndex - 1].design ?? .default
     }
 
+    /// The messages sent to every user of the server
+    @Published var broadcastColor: Color {
+        didSet { Self.save(broadcastColor, forKey: PREF_APPEARANCE_BROADCASTCOLOR) }
+    }
+
+    /// Font of those messages, as eventFontIndex
+    @Published var broadcastFontIndex: Int {
+        didSet { UserDefaults.standard.set(broadcastFontIndex, forKey: PREF_APPEARANCE_BROADCASTFONT) }
+    }
+
+    var broadcastFontDesign: Font.Design? {
+        let designs = AppearanceFontDesign.allCases
+        guard broadcastFontIndex >= 1, broadcastFontIndex <= designs.count else {
+            return fontDesign.design
+        }
+        return designs[broadcastFontIndex - 1].design ?? .default
+    }
+
+    /// The server events and the broadcast messages can have a font of
+    /// their own; the rest have the font of the app
+    func messageFontDesign(for msgtype: MsgType) -> Font.Design? {
+        switch msgtype {
+        case .LOGMSG:
+            return eventFontDesign
+        case .BCAST:
+            return broadcastFontDesign
+        default:
+            return fontDesign.design
+        }
+    }
+
     /// 0 follows the system, 1 is always light and 2 always dark
     @Published var colorSchemeIndex: Int {
         didSet { UserDefaults.standard.set(colorSchemeIndex, forKey: PREF_APPEARANCE_COLORSCHEME) }
@@ -216,6 +249,8 @@ final class AppearanceModel: ObservableObject {
         messageTextSizeIndex = defaults.integer(forKey: PREF_APPEARANCE_MESSAGETEXTSIZE)
         eventColor = Self.load(forKey: PREF_APPEARANCE_EVENTCOLOR) ?? Self.defaultEventColor
         eventFontIndex = defaults.integer(forKey: PREF_APPEARANCE_EVENTFONT)
+        broadcastColor = Self.load(forKey: PREF_APPEARANCE_BROADCASTCOLOR) ?? Self.defaultBroadcastColor
+        broadcastFontIndex = defaults.integer(forKey: PREF_APPEARANCE_BROADCASTFONT)
     }
 
     func restoreDefaults() {
@@ -232,10 +267,13 @@ final class AppearanceModel: ObservableObject {
         messageTextSizeIndex = 0
         eventColor = Self.defaultEventColor
         eventFontIndex = 0
+        broadcastColor = Self.defaultBroadcastColor
+        broadcastFontIndex = 0
 
         // the defaults follow the light and dark theme, a stored color would not
         let defaults = UserDefaults.standard
         for key in [PREF_APPEARANCE_RECEIVEDCOLOR, PREF_APPEARANCE_SENTCOLOR, PREF_APPEARANCE_EVENTCOLOR,
+                    PREF_APPEARANCE_BROADCASTCOLOR,
                     PREF_APPEARANCE_TALKIDLECOLOR, PREF_APPEARANCE_TALKACTIVECOLOR,
                     PREF_APPEARANCE_SPEAKERSONCOLOR, PREF_APPEARANCE_SPEAKERSMUTEDCOLOR] {
             defaults.removeObject(forKey: key)
@@ -254,6 +292,7 @@ final class AppearanceModel: ObservableObject {
         speakersOnColor = Self.color(hex: "FFFFFF")
         speakersMutedColor = Self.color(hex: "000000")
         eventColor = Self.color(hex: "FFFF00")
+        broadcastColor = Self.color(hex: "00FFFF")
     }
 
     /// Dark whatever the system says, with dim colors that do not glare at night
@@ -267,6 +306,7 @@ final class AppearanceModel: ObservableObject {
         speakersOnColor = Self.color(hex: "2C2C2E")
         speakersMutedColor = Self.color(hex: "000000")
         eventColor = Self.color(hex: "2C2C2E")
+        broadcastColor = Self.color(hex: "3B1F5C")
     }
 
     // MARK: - Sharing the appearance
@@ -290,7 +330,9 @@ final class AppearanceModel: ObservableObject {
             "colorScheme": colorSchemeIndex,
             "messageTextSize": messageTextSizeIndex,
             "eventColor": Self.hex(of: eventColor),
-            "eventFont": eventFontIndex
+            "eventFont": eventFontIndex,
+            "broadcastColor": Self.hex(of: broadcastColor),
+            "broadcastFont": broadcastFontIndex
         ]
 
         let url = FileManager.default.temporaryDirectory.appendingPathComponent("TeamTalk appearance.json")
@@ -342,6 +384,8 @@ final class AppearanceModel: ObservableObject {
         messageTextSizeIndex = max(0, min(DynamicTypeSize.allCases.count, settings["messageTextSize"] as? Int ?? 0))
         eventColor = color("eventColor", default: Self.defaultEventColor)
         eventFontIndex = max(0, min(AppearanceFontDesign.allCases.count, settings["eventFont"] as? Int ?? 0))
+        broadcastColor = color("broadcastColor", default: Self.defaultBroadcastColor)
+        broadcastFontIndex = max(0, min(AppearanceFontDesign.allCases.count, settings["broadcastFont"] as? Int ?? 0))
         return true
     }
 
@@ -385,7 +429,7 @@ final class AppearanceModel: ObservableObject {
         case .PRIV_IM_MYSELF, .CHAN_IM_MYSELF:
             return sentColor
         case .BCAST:
-            return Self.broadcastColor
+            return broadcastColor
         case .LOGMSG:
             return eventColor
         }

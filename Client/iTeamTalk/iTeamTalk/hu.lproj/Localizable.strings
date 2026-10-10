@@ -822,6 +822,9 @@
 "Font" = "Betűtípus";
 
 /* appearance */
+"Font of Broadcast Messages" = "A körüzenetek betűtípusa";
+
+/* appearance */
 "Font of Server Events" = "A szerveresemények betűtípusa";
 
 /* media stream */
@@ -1933,7 +1936,7 @@
 "The current file starts again every time it ends" = "Az aktuális fájl minden alkalommal újrakezdődik, amikor véget ér";
 
 /* appearance */
-"The messages can have a text size of their own, and the server events a font of their own." = "Az üzeneteknek saját szövegmérete, a szervereseményeknek saját betűtípusa lehet.";
+"The messages can have a text size of their own, and the server events and the broadcast messages a font of their own." = "Az üzeneteknek saját szövegmérete, a szervereseményeknek és a körüzeneteknek saját betűtípusa lehet.";
 
 /* sound devices */
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "A mikrofon hangja változatlanul megy ki, zajcsökkentés és visszhangszűrés nélkül";
@@ -1979,6 +1982,9 @@
 
 /* preferences */
 "This is how announcements sound" = "Így szólnak a bemondások";
+
+/* preferences */
+"This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "Ez a szerver saját becenevet használ: %@. A szerverlistában, a szerver részleteinél módosítható.";
 
 /* media stream */
 "This web address cannot be streamed" = "Ez a webcím nem közvetíthető";
@@ -2299,6 +2305,12 @@
 
 /* Sound Devices */
 "You will hear your own microphone. Use headphones, or the speaker will be picked up again. Only available while you are not in a channel." = "Hallani fogod a saját mikrofonodat. Használj fejhallgatót, különben a mikrofon újra felveszi a hangszórót. Csak akkor érhető el, ha nem vagy csatornán.";
+
+/* preferences */
+"Your account on this server is not allowed to change its nickname" = "A fiókod ezen a szerveren nem változtathatja meg a becenevet";
+
+/* preferences */
+"Your account on this server is not allowed to change its status" = "A fiókod ezen a szerveren nem változtathatja meg az állapotot";
 
 /* channel picker */
 "Your channel" = "A te csatornád";

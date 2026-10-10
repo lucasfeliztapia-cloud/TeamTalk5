@@ -824,6 +824,9 @@
 "Font" = "Font";
 
 /* appearance */
+"Font of Broadcast Messages" = "Font of Broadcast Messages";
+
+/* appearance */
 "Font of Server Events" = "Font of Server Events";
 
 /* media stream */
@@ -1939,7 +1942,7 @@
 "The current file starts again every time it ends" = "The current file starts again every time it ends";
 
 /* appearance */
-"The messages can have a text size of their own, and the server events a font of their own." = "The messages can have a text size of their own, and the server events a font of their own.";
+"The messages can have a text size of their own, and the server events and the broadcast messages a font of their own." = "The messages can have a text size of their own, and the server events and the broadcast messages a font of their own.";
 
 /* sound devices */
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "The microphone is sent as it is, with no noise reduction and no echo cancellation";
@@ -1985,6 +1988,9 @@
 
 /* preferences */
 "This is how announcements sound" = "This is how announcements sound";
+
+/* preferences */
+"This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "This server uses its own nickname, %@. It is changed in the details of the server, in the server list.";
 
 /* media stream */
 "This web address cannot be streamed" = "This web address cannot be streamed";
@@ -2306,6 +2312,12 @@
 
 /* Sound Devices */
 "You will hear your own microphone. Use headphones, or the speaker will be picked up again. Only available while you are not in a channel." = "You will hear your own microphone. Use headphones, or the speaker will be picked up again. Only available while you are not in a channel.";
+
+/* preferences */
+"Your account on this server is not allowed to change its nickname" = "Your account on this server is not allowed to change its nickname";
+
+/* preferences */
+"Your account on this server is not allowed to change its status" = "Your account on this server is not allowed to change its status";
 
 /* channel picker */
 "Your channel" = "Your channel";

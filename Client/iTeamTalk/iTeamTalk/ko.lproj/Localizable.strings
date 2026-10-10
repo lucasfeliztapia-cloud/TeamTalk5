@@ -823,6 +823,9 @@
 "Font" = "서체";
 
 /* appearance */
+"Font of Broadcast Messages" = "방송 메시지 서체";
+
+/* appearance */
 "Font of Server Events" = "서버 이벤트 서체";
 
 /* media stream */
@@ -1936,7 +1939,7 @@
 "The current file starts again every time it ends" = "현재 파일이 끝날 때마다 처음부터 다시 시작합니다";
 
 /* appearance */
-"The messages can have a text size of their own, and the server events a font of their own." = "메시지는 고유한 텍스트 크기를, 서버 이벤트는 고유한 서체를 가질 수 있습니다.";
+"The messages can have a text size of their own, and the server events and the broadcast messages a font of their own." = "메시지는 고유한 텍스트 크기를, 서버 이벤트와 방송 메시지는 고유한 서체를 가질 수 있습니다.";
 
 /* sound devices */
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "마이크 소리를 소음 감소나 에코 제거 없이 그대로 보냅니다";
@@ -1982,6 +1985,9 @@
 
 /* preferences */
 "This is how announcements sound" = "알림은 이렇게 들립니다";
+
+/* preferences */
+"This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "이 서버는 자체 대화명 %@을(를) 사용합니다. 서버 목록의 서버 세부사항에서 변경합니다.";
 
 /* media stream */
 "This web address cannot be streamed" = "이 웹 주소는 스트리밍할 수 없습니다";
@@ -2303,6 +2309,12 @@
 
 /* Sound Devices */
 "You will hear your own microphone. Use headphones, or the speaker will be picked up again. Only available while you are not in a channel." = "내 마이크 소리가 들립니다. 헤드폰을 사용하십시오. 그러지 않으면 스피커 소리가 다시 들어갑니다. 채널에 있지 않을 때만 사용할 수 있습니다.";
+
+/* preferences */
+"Your account on this server is not allowed to change its nickname" = "이 서버의 계정은 대화명을 변경할 수 없습니다";
+
+/* preferences */
+"Your account on this server is not allowed to change its status" = "이 서버의 계정은 상태를 변경할 수 없습니다";
 
 /* channel picker */
 "Your channel" = "내 채널";

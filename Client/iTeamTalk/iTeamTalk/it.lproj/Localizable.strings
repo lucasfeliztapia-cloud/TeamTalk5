@@ -823,6 +823,9 @@
 "Font" = "Carattere";
 
 /* appearance */
+"Font of Broadcast Messages" = "Carattere dei messaggi di trasmissione";
+
+/* appearance */
 "Font of Server Events" = "Carattere degli eventi del server";
 
 /* media stream */
@@ -1936,7 +1939,7 @@
 "The current file starts again every time it ends" = "Il file corrente ricomincia ogni volta che termina";
 
 /* appearance */
-"The messages can have a text size of their own, and the server events a font of their own." = "I messaggi possono avere una propria dimensione del testo, e gli eventi del server un proprio carattere.";
+"The messages can have a text size of their own, and the server events and the broadcast messages a font of their own." = "I messaggi possono avere una propria dimensione del testo, e gli eventi del server e i messaggi di trasmissione un proprio carattere.";
 
 /* sound devices */
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "Il microfono viene inviato così com'è, senza riduzione del rumore né cancellazione dell'eco";
@@ -1982,6 +1985,9 @@
 
 /* preferences */
 "This is how announcements sound" = "Così suonano gli annunci";
+
+/* preferences */
+"This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "Questo server usa un proprio pseudonimo, %@. Si cambia nei dettagli del server, nell'elenco dei server.";
 
 /* media stream */
 "This web address cannot be streamed" = "Questo indirizzo web non può essere trasmesso";
@@ -2303,6 +2309,12 @@
 
 /* Sound Devices */
 "You will hear your own microphone. Use headphones, or the speaker will be picked up again. Only available while you are not in a channel." = "Sentirai il tuo microfono. Usa le cuffie, altrimenti l'altoparlante verrà captato di nuovo. Disponibile solo quando non sei in un canale.";
+
+/* preferences */
+"Your account on this server is not allowed to change its nickname" = "Il tuo account su questo server non può cambiare pseudonimo";
+
+/* preferences */
+"Your account on this server is not allowed to change its status" = "Il tuo account su questo server non può cambiare stato";
 
 /* channel picker */
 "Your channel" = "Il tuo canale";

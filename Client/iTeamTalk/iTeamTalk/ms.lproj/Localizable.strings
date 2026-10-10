@@ -823,6 +823,9 @@
 "Font" = "Fon";
 
 /* appearance */
+"Font of Broadcast Messages" = "Fon Mesej Broadcast";
+
+/* appearance */
 "Font of Server Events" = "Fon Peristiwa Server";
 
 /* media stream */
@@ -1936,7 +1939,7 @@
 "The current file starts again every time it ends" = "Fail semasa bermula semula setiap kali ia tamat";
 
 /* appearance */
-"The messages can have a text size of their own, and the server events a font of their own." = "Mesej boleh mempunyai saiz teks sendiri, dan peristiwa server fon sendiri.";
+"The messages can have a text size of their own, and the server events and the broadcast messages a font of their own." = "Mesej boleh mempunyai saiz teks sendiri, dan peristiwa server serta mesej broadcast fon sendiri.";
 
 /* sound devices */
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "Mikrofon dihantar seadanya, tanpa pengurangan hingar dan tanpa pembatalan gema";
@@ -1982,6 +1985,9 @@
 
 /* preferences */
 "This is how announcements sound" = "Beginilah bunyi pemberitahuan";
+
+/* preferences */
+"This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "Server ini menggunakan nama samaran sendiri, %@. Nama itu ditukar dalam butiran server, dalam senarai server.";
 
 /* media stream */
 "This web address cannot be streamed" = "Alamat web ini tidak boleh distrim";
@@ -2303,6 +2309,12 @@
 
 /* Sound Devices */
 "You will hear your own microphone. Use headphones, or the speaker will be picked up again. Only available while you are not in a channel." = "Anda akan mendengar mikrofon anda sendiri. Gunakan fon kepala, jika tidak bunyi pembesar suara akan ditangkap semula. Hanya tersedia semasa anda tiada dalam saluran.";
+
+/* preferences */
+"Your account on this server is not allowed to change its nickname" = "Akaun anda di server ini tidak dibenarkan menukar nama samaran";
+
+/* preferences */
+"Your account on this server is not allowed to change its status" = "Akaun anda di server ini tidak dibenarkan menukar status";
 
 /* channel picker */
 "Your channel" = "Saluran anda";

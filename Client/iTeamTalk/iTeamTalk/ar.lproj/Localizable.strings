@@ -822,6 +822,9 @@
 "Font" = "الخط";
 
 /* appearance */
+"Font of Broadcast Messages" = "خط الرسائل العامة";
+
+/* appearance */
 "Font of Server Events" = "خط أحداث الخادم";
 
 /* media stream */
@@ -1933,7 +1936,7 @@
 "The current file starts again every time it ends" = "يبدأ الملف الحالي من جديد كلما انتهى";
 
 /* appearance */
-"The messages can have a text size of their own, and the server events a font of their own." = "يمكن أن يكون للرسائل حجم نص خاص بها، ولأحداث الخادم خط خاص بها.";
+"The messages can have a text size of their own, and the server events and the broadcast messages a font of their own." = "يمكن أن يكون للرسائل حجم نص خاص بها، ولأحداث الخادم والرسائل العامة خط خاص بها.";
 
 /* sound devices */
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "يُرسَل صوت الميكروفون كما هو، بلا تخفيض للضجيج ولا إلغاء للصدى";
@@ -1979,6 +1982,9 @@
 
 /* preferences */
 "This is how announcements sound" = "هكذا تبدو الإعلانات";
+
+/* preferences */
+"This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "يستخدم هذا الخادم اسمًا مستعارًا خاصًا به: %@. يُغيَّر من تفاصيل الخادم في قائمة الخوادم.";
 
 /* media stream */
 "This web address cannot be streamed" = "لا يمكن بث عنوان الويب هذا";
@@ -2299,6 +2305,12 @@
 
 /* Sound Devices */
 "You will hear your own microphone. Use headphones, or the speaker will be picked up again. Only available while you are not in a channel." = "ستسمع ميكروفونك. استخدم سماعات الرأس، وإلا التقط الميكروفون صوت السماعة من جديد. متاح فقط عندما لا تكون في قناة.";
+
+/* preferences */
+"Your account on this server is not allowed to change its nickname" = "حسابك على هذا الخادم غير مسموح له بتغيير الاسم المستعار";
+
+/* preferences */
+"Your account on this server is not allowed to change its status" = "حسابك على هذا الخادم غير مسموح له بتغيير الحالة";
 
 /* channel picker */
 "Your channel" = "قناتك";

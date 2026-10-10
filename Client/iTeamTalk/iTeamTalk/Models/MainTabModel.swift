@@ -90,6 +90,7 @@ final class MainTabModel: ObservableObject, TeamTalkEvent {
         mediaStreamModel = MediaStreamModel()
         preferencesModel = PreferencesModel()
         channelListModel.openTextMessages(channelChatModel)
+        preferencesModel.serverNickname = server.nickname
     }
 
     deinit {

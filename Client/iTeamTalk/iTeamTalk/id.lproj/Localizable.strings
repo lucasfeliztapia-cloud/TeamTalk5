@@ -823,6 +823,9 @@
 "Font" = "Font";
 
 /* appearance */
+"Font of Broadcast Messages" = "Font Pesan Broadcast";
+
+/* appearance */
 "Font of Server Events" = "Font Peristiwa Server";
 
 /* media stream */
@@ -1936,7 +1939,7 @@
 "The current file starts again every time it ends" = "File saat ini dimulai lagi setiap kali selesai";
 
 /* appearance */
-"The messages can have a text size of their own, and the server events a font of their own." = "Pesan dapat memiliki ukuran teks sendiri, dan peristiwa server font sendiri.";
+"The messages can have a text size of their own, and the server events and the broadcast messages a font of their own." = "Pesan dapat memiliki ukuran teks sendiri, dan peristiwa server serta pesan broadcast font sendiri.";
 
 /* sound devices */
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "Mikrofon dikirim apa adanya, tanpa pengurangan bising dan tanpa penghilang gema";
@@ -1982,6 +1985,9 @@
 
 /* preferences */
 "This is how announcements sound" = "Beginilah bunyi pemberitahuan";
+
+/* preferences */
+"This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "Server ini memakai nama panggilan sendiri, %@. Nama itu diubah di detail server, di daftar server.";
 
 /* media stream */
 "This web address cannot be streamed" = "Alamat web ini tidak dapat disiarkan";
@@ -2303,6 +2309,12 @@
 
 /* Sound Devices */
 "You will hear your own microphone. Use headphones, or the speaker will be picked up again. Only available while you are not in a channel." = "Anda akan mendengar mikrofon Anda sendiri. Gunakan headphone, atau suara speaker akan tertangkap lagi. Hanya tersedia saat Anda tidak berada di saluran.";
+
+/* preferences */
+"Your account on this server is not allowed to change its nickname" = "Akun Anda di server ini tidak diizinkan mengubah nama panggilan";
+
+/* preferences */
+"Your account on this server is not allowed to change its status" = "Akun Anda di server ini tidak diizinkan mengubah status";
 
 /* channel picker */
 "Your channel" = "Saluran Anda";

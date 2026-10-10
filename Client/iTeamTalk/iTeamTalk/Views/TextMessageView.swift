@@ -47,9 +47,7 @@ struct TextMessageView: View {
                             ForEach(section.messages, id: \.id) { message in
                                 let background = appearance.backgroundColor(for: message.msgtype)
                                 MessageRow(message: message, background: background,
-                                           design: message.msgtype == .LOGMSG
-                                               ? appearance.eventFontDesign
-                                               : appearance.fontDesign.design,
+                                           design: appearance.messageFontDesign(for: message.msgtype),
                                            details: details, detailsAfter: detailsAfter)
                                     .listRowInsets(EdgeInsets(top: 4, leading: 8, bottom: 4, trailing: 8))
                                     .listRowBackground(background)
@@ -69,6 +67,9 @@ struct TextMessageView: View {
                 .dynamicTypeSize(appearance.messageDynamicTypeRange)
                 .onChange(of: model.sections.last?.messages.last?.id) { newest in
                     messageAdded(newest, proxy: proxy)
+                }
+                .onAppear {
+                    openedWithVoiceOver(proxy: proxy)
                 }
             }
 
@@ -156,12 +157,30 @@ struct TextMessageView: View {
             return
         }
         guard followsNewMessages else { return }
-        // not while a message is being written, unless it is the one just sent
+        // Not while a message is half written, unless it is the one just
+        // sent. The keyboard being up does not count: it stays up after
+        // sending, and with that the cursor never followed anybody else.
         let mine = message.msgtype == .CHAN_IM_MYSELF || message.msgtype == .PRIV_IM_MYSELF
-        guard mine || !isComposing else { return }
+        guard mine || model.composedText.isEmpty else { return }
         scrollToBottom(newest, proxy: proxy)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
-            focusedMessage = newest
+        moveCursor(to: newest, after: 0.5)
+    }
+
+    /// With VoiceOver following the messages the screen opens on the newest
+    /// one: those that came while it was closed moved nothing.
+    private func openedWithVoiceOver(proxy: ScrollViewProxy) {
+        guard UIAccessibility.isVoiceOverRunning, followsNewMessages,
+              let newest = model.sections.last?.messages.last?.id else { return }
+        scrollToBottom(newest, proxy: proxy)
+        // once VoiceOver has placed its cursor on the new screen
+        moveCursor(to: newest, after: 1.0)
+    }
+
+    private func moveCursor(to message: UUID, after delay: TimeInterval) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
+            // another one may have come in the meantime, and it has its turn
+            guard model.sections.last?.messages.last?.id == message else { return }
+            focusedMessage = message
         }
     }
 

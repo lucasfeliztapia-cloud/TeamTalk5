@@ -822,6 +822,9 @@
 "Font" = "Skrift";
 
 /* appearance */
+"Font of Broadcast Messages" = "Skrift til beskeder til alle";
+
+/* appearance */
 "Font of Server Events" = "Skrift til serverhændelser";
 
 /* media stream */
@@ -1933,7 +1936,7 @@
 "The current file starts again every time it ends" = "Den aktuelle fil starter forfra, hver gang den slutter";
 
 /* appearance */
-"The messages can have a text size of their own, and the server events a font of their own." = "Beskederne kan have deres egen tekststørrelse, og serverhændelserne deres egen skrift.";
+"The messages can have a text size of their own, and the server events and the broadcast messages a font of their own." = "Beskederne kan have deres egen tekststørrelse, og serverhændelserne og beskederne til alle deres egen skrift.";
 
 /* sound devices */
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "Mikrofonen sendes, som den er, uden støjdæmpning og uden ekkofjernelse";
@@ -1979,6 +1982,9 @@
 
 /* preferences */
 "This is how announcements sound" = "Sådan lyder annonceringerne";
+
+/* preferences */
+"This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "Denne server bruger sit eget kaldenavn, %@. Det ændres i serverdetaljerne i serverlisten.";
 
 /* media stream */
 "This web address cannot be streamed" = "Denne webadresse kan ikke streames";
@@ -2299,6 +2305,12 @@
 
 /* Sound Devices */
 "You will hear your own microphone. Use headphones, or the speaker will be picked up again. Only available while you are not in a channel." = "Du vil høre din egen mikrofon. Brug hovedtelefoner, ellers bliver højttaleren opfanget igen. Kun tilgængelig, mens du ikke er i en kanal.";
+
+/* preferences */
+"Your account on this server is not allowed to change its nickname" = "Din konto på denne server må ikke ændre kaldenavn";
+
+/* preferences */
+"Your account on this server is not allowed to change its status" = "Din konto på denne server må ikke ændre status";
 
 /* channel picker */
 "Your channel" = "Din kanal";

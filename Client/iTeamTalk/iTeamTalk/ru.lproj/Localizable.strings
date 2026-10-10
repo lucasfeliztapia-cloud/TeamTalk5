@@ -822,6 +822,9 @@
 "Font" = "Шрифт";
 
 /* appearance */
+"Font of Broadcast Messages" = "Шрифт сетевых сообщений";
+
+/* appearance */
 "Font of Server Events" = "Шрифт событий сервера";
 
 /* media stream */
@@ -1933,7 +1936,7 @@
 "The current file starts again every time it ends" = "Текущий файл начинается заново каждый раз, когда заканчивается";
 
 /* appearance */
-"The messages can have a text size of their own, and the server events a font of their own." = "У сообщений может быть свой размер текста, а у событий сервера свой шрифт.";
+"The messages can have a text size of their own, and the server events and the broadcast messages a font of their own." = "У сообщений может быть свой размер текста, а у событий сервера и сетевых сообщений свой шрифт.";
 
 /* sound devices */
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "Микрофон передаётся как есть, без шумоподавления и без подавления эха";
@@ -1979,6 +1982,9 @@
 
 /* preferences */
 "This is how announcements sound" = "Так звучат объявления";
+
+/* preferences */
+"This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "Этот сервер использует собственный ник: %@. Он меняется в сведениях о сервере, в списке серверов.";
 
 /* media stream */
 "This web address cannot be streamed" = "Этот веб-адрес нельзя транслировать";
@@ -2299,6 +2305,12 @@
 
 /* Sound Devices */
 "You will hear your own microphone. Use headphones, or the speaker will be picked up again. Only available while you are not in a channel." = "Вы услышите собственный микрофон. Используйте наушники, иначе динамик будет захватываться снова. Доступно только пока вы не в канале.";
+
+/* preferences */
+"Your account on this server is not allowed to change its nickname" = "Вашей учётной записи на этом сервере не разрешено менять ник";
+
+/* preferences */
+"Your account on this server is not allowed to change its status" = "Вашей учётной записи на этом сервере не разрешено менять статус";
 
 /* channel picker */
 "Your channel" = "Ваш канал";

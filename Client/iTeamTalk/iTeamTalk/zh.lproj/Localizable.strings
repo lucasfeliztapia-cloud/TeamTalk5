@@ -823,6 +823,9 @@
 "Font" = "字体";
 
 /* appearance */
+"Font of Broadcast Messages" = "广播消息的字体";
+
+/* appearance */
 "Font of Server Events" = "服务器事件的字体";
 
 /* media stream */
@@ -1936,7 +1939,7 @@
 "The current file starts again every time it ends" = "当前文件每次结束后重新开始";
 
 /* appearance */
-"The messages can have a text size of their own, and the server events a font of their own." = "消息可以有自己的文字大小，服务器事件可以有自己的字体。";
+"The messages can have a text size of their own, and the server events and the broadcast messages a font of their own." = "消息可以有自己的文字大小，服务器事件和广播消息可以有自己的字体。";
 
 /* sound devices */
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "麦克风声音原样发送，不降噪也不消除回声";
@@ -1982,6 +1985,9 @@
 
 /* preferences */
 "This is how announcements sound" = "播报听起来是这样的";
+
+/* preferences */
+"This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "此服务器使用自己的昵称：%@。请在服务器列表的服务器详情中更改。";
 
 /* media stream */
 "This web address cannot be streamed" = "无法流式传输此网址";
@@ -2303,6 +2309,12 @@
 
 /* Sound Devices */
 "You will hear your own microphone. Use headphones, or the speaker will be picked up again. Only available while you are not in a channel." = "你会听到自己的麦克风。请使用耳机，否则扬声器的声音会被再次拾取。仅在你不在频道中时可用。";
+
+/* preferences */
+"Your account on this server is not allowed to change its nickname" = "您在此服务器上的账户不允许更改昵称";
+
+/* preferences */
+"Your account on this server is not allowed to change its status" = "您在此服务器上的账户不允许更改状态";
 
 /* channel picker */
 "Your channel" = "你的频道";

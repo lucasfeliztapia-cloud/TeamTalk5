@@ -33,18 +33,17 @@ struct ChannelListContainerView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            if model.isSearching {
-                // Ours and not the scopes of the search field: those only came
-                // up after clearing the text, when there is nothing to filter.
-                Picker("Search channels and users", selection: $model.searchScope) {
-                    Text("All").tag(ChannelSearchScope.all)
-                    Text("Channels").tag(ChannelSearchScope.channels)
-                    Text("Users").tag(ChannelSearchScope.users)
-                }
-                .pickerStyle(.segmented)
-                .padding(.horizontal, 12)
-                .padding(.vertical, 6)
+            // Ours and not the scopes of the search field: those only came
+            // up after clearing the text. Always there, with or without a
+            // text, so that what to look for can be chosen before writing it.
+            Picker("Search channels and users", selection: $model.searchScope) {
+                Text("All").tag(ChannelSearchScope.all)
+                Text("Channels").tag(ChannelSearchScope.channels)
+                Text("Users").tag(ChannelSearchScope.users)
             }
+            .pickerStyle(.segmented)
+            .padding(.horizontal, 12)
+            .padding(.vertical, 6)
             ChannelListView(model: model)
             if model.isSelecting {
                 selectionBar

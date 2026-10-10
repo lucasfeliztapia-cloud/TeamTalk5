@@ -40,6 +40,11 @@ struct PreferencesView: View {
     @AppStorage(PREF_NOTIFY_CHANMSG) private var notifyChannelMessages = false
     @AppStorage(PREF_NOTIFY_BROADCAST) private var notifyBroadcastMessages = true
     @State private var notificationsDenied = false
+    @FocusState private var writtenField: WrittenField?
+
+    private enum WrittenField: Hashable {
+        case nickname, statusMessage
+    }
 
     var body: some View {
         Form {
@@ -56,6 +61,15 @@ struct PreferencesView: View {
             versionSection
         }
         .navigationTitle("Preferences")
+        // what is written goes to the server when the field is left
+        .onChange(of: writtenField) { _ in
+            model.applyNickname()
+            model.applyStatusMessage()
+        }
+        .onDisappear {
+            model.applyNickname()
+            model.applyStatusMessage()
+        }
         .sheet(item: $backupFile) { shared in
             ActivityView(items: [shared.url])
         }
@@ -192,11 +206,19 @@ struct PreferencesView: View {
                     .frame(maxWidth: .infinity, alignment: .trailing)
                     .multilineTextAlignment(.trailing)
                     .autocorrectionDisabled()
+                    .submitLabel(.done)
+                    .focused($writtenField, equals: .nickname)
+                    .onSubmit {
+                        model.applyNickname()
+                    }
                     .accessibilityLabel(Text("Nickname"))
                 } label: {
                     Text("Nickname")
                 }
                 PreferenceSubtitle("Name displayed in channel list")
+                if let note = model.nicknameNote {
+                    PreferenceSubtitle(verbatim: note)
+                }
             }
 
             VStack(alignment: .leading, spacing: 4) {
@@ -229,6 +251,9 @@ struct PreferencesView: View {
                     .pickerStyle(.segmented)
                 }
                 PreferenceSubtitle(statusExplanation)
+                if let note = model.statusNote {
+                    PreferenceSubtitle(verbatim: note)
+                }
             }
 
             VStack(alignment: .leading, spacing: 4) {
@@ -239,6 +264,11 @@ struct PreferencesView: View {
                     ))
                     .frame(maxWidth: .infinity, alignment: .trailing)
                     .multilineTextAlignment(.trailing)
+                    .submitLabel(.done)
+                    .focused($writtenField, equals: .statusMessage)
+                    .onSubmit {
+                        model.applyStatusMessage()
+                    }
                     .accessibilityLabel(Text("Status Message"))
                 } label: {
                     Text("Status Message")

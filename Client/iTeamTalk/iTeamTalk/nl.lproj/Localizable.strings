@@ -822,6 +822,9 @@
 "Font" = "Lettertype";
 
 /* appearance */
+"Font of Broadcast Messages" = "Lettertype van omroepberichten";
+
+/* appearance */
 "Font of Server Events" = "Lettertype van servergebeurtenissen";
 
 /* media stream */
@@ -1933,7 +1936,7 @@
 "The current file starts again every time it ends" = "Het huidige bestand begint opnieuw telkens wanneer het eindigt";
 
 /* appearance */
-"The messages can have a text size of their own, and the server events a font of their own." = "De berichten kunnen een eigen tekstgrootte hebben, en de servergebeurtenissen een eigen lettertype.";
+"The messages can have a text size of their own, and the server events and the broadcast messages a font of their own." = "De berichten kunnen een eigen tekstgrootte hebben, en de servergebeurtenissen en de omroepberichten een eigen lettertype.";
 
 /* sound devices */
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "De microfoon wordt ongewijzigd verzonden, zonder ruisonderdrukking en zonder echo-onderdrukking";
@@ -1979,6 +1982,9 @@
 
 /* preferences */
 "This is how announcements sound" = "Zo klinken de aankondigingen";
+
+/* preferences */
+"This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "Deze server gebruikt een eigen bijnaam, %@. Die wijzig je in de serverdetails, in de serverlijst.";
 
 /* media stream */
 "This web address cannot be streamed" = "Dit webadres kan niet worden gestreamd";
@@ -2299,6 +2305,12 @@
 
 /* Sound Devices */
 "You will hear your own microphone. Use headphones, or the speaker will be picked up again. Only available while you are not in a channel." = "Je hoort je eigen microfoon. Gebruik een koptelefoon, anders wordt de luidspreker weer opgepikt. Alleen beschikbaar als je niet in een kanaal zit.";
+
+/* preferences */
+"Your account on this server is not allowed to change its nickname" = "Je account op deze server mag de bijnaam niet wijzigen";
+
+/* preferences */
+"Your account on this server is not allowed to change its status" = "Je account op deze server mag de status niet wijzigen";
 
 /* channel picker */
 "Your channel" = "Jouw kanaal";

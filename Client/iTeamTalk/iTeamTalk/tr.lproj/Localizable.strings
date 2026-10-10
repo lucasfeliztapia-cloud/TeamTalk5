@@ -823,6 +823,9 @@
 "Font" = "Yazı Tipi";
 
 /* appearance */
+"Font of Broadcast Messages" = "Yayınlanan İletilerin Yazı Tipi";
+
+/* appearance */
 "Font of Server Events" = "Sunucu Olaylarının Yazı Tipi";
 
 /* media stream */
@@ -1936,7 +1939,7 @@
 "The current file starts again every time it ends" = "Geçerli dosya her bittiğinde yeniden başlar";
 
 /* appearance */
-"The messages can have a text size of their own, and the server events a font of their own." = "İletilerin kendi metin boyutu, sunucu olaylarının da kendi yazı tipi olabilir.";
+"The messages can have a text size of their own, and the server events and the broadcast messages a font of their own." = "İletilerin kendi metin boyutu, sunucu olaylarının ve yayınlanan iletilerin de kendi yazı tipi olabilir.";
 
 /* sound devices */
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "Mikrofon olduğu gibi gönderilir; gürültü azaltma ve yankı giderme yoktur";
@@ -1982,6 +1985,9 @@
 
 /* preferences */
 "This is how announcements sound" = "Duyurular böyle duyulur";
+
+/* preferences */
+"This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "Bu sunucu kendi rumuzunu kullanıyor: %@. Sunucu listesinde, sunucu ayrıntılarından değiştirilir.";
 
 /* media stream */
 "This web address cannot be streamed" = "Bu web adresi yayınlanamıyor";
@@ -2303,6 +2309,12 @@
 
 /* Sound Devices */
 "You will hear your own microphone. Use headphones, or the speaker will be picked up again. Only available while you are not in a channel." = "Kendi mikrofonunuzu duyacaksınız. Kulaklık kullanın, yoksa hoparlörün sesi yeniden alınır. Yalnızca bir kanalda değilken kullanılabilir.";
+
+/* preferences */
+"Your account on this server is not allowed to change its nickname" = "Bu sunucudaki hesabınızın rumuz değiştirme izni yok";
+
+/* preferences */
+"Your account on this server is not allowed to change its status" = "Bu sunucudaki hesabınızın durum değiştirme izni yok";
 
 /* channel picker */
 "Your channel" = "Kanalınız";
