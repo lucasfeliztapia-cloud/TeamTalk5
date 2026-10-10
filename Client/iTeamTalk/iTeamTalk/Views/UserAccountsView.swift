@@ -46,6 +46,16 @@ struct AccountRightGroup: Identifiable {
 
 enum AccountRights {
 
+    /// What a new account may do: the same as on the Windows client
+    /// (USERRIGHT_DEFAULT in utiltt.h). The library has no constant for it.
+    static let defaults: UInt32 = [
+        USERRIGHT_MULTI_LOGIN, USERRIGHT_VIEW_ALL_USERS, USERRIGHT_CREATE_TEMPORARY_CHANNEL,
+        USERRIGHT_UPLOAD_FILES, USERRIGHT_DOWNLOAD_FILES, USERRIGHT_TRANSMIT_VOICE,
+        USERRIGHT_TRANSMIT_VIDEOCAPTURE, USERRIGHT_TRANSMIT_DESKTOP, USERRIGHT_TRANSMIT_DESKTOPINPUT,
+        USERRIGHT_TRANSMIT_MEDIAFILE_AUDIO, USERRIGHT_TRANSMIT_MEDIAFILE_VIDEO,
+        USERRIGHT_TEXTMESSAGE_USER, USERRIGHT_TEXTMESSAGE_CHANNEL
+    ].reduce(UInt32(0)) { $0 | $1.rawValue }
+
     static let groups: [AccountRightGroup] = [
         AccountRightGroup(title: String(localized: "Transmission", comment: "user accounts"), rights: [
             AccountRight(flag: USERRIGHT_TRANSMIT_VOICE.rawValue,
@@ -1090,7 +1100,7 @@ private struct AccountEditorView: View {
         // So does one that becomes a default user having none at all, as an
         // administrator may: it could do nothing.
         if original == nil || (accountType == .standard && account.uUserRights == 0) {
-            account.uUserRights = USERRIGHT_DEFAULT.rawValue
+            account.uUserRights = AccountRights.defaults
         }
         account.abusePrevent.nCommandsLimit = commandLimit.commands
         account.abusePrevent.nCommandsIntervalMSec = commandLimit.milliseconds
