@@ -127,6 +127,9 @@
 /* user accounts */
 "A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "A jogosultságok módosítása a felhasználó következő bejelentkezésekor lép életbe. Aki csatlakozva van, addig megtartja a régieket.";
 
+/* user accounts */
+"A new account gets the default permissions. They are changed in the Permissions tab." = "Az új fiók az alapértelmezett jogosultságokat kapja. Ezek a Jogosultságok lapon módosíthatók.";
+
 /* appearance */
 "A theme changes the colors above. You can adjust them afterwards." = "A téma megváltoztatja a fenti színeket. Utána módosíthatod őket.";
 
@@ -147,6 +150,18 @@
 
 /* appearance */
 "Accessibility 5" = "Kisegítő 5";
+
+/* user accounts */
+"Account" = "Fiók";
+
+/* user accounts */
+"Account deleted" = "Fiók törölve";
+
+/* user accounts */
+"Account saved" = "Fiók mentve";
+
+/* user accounts */
+"Account Type" = "Fióktípus";
 
 /* server entry
    user detail */
@@ -204,6 +219,9 @@
 "Always Light" = "Mindig világos";
 
 /* user accounts */
+"An account with no user name is the one anybody can log in with." = "A felhasználónév nélküli fiók az, amellyel bárki bejelentkezhet.";
+
+/* user accounts */
 "An administrator has every permission, whatever is set here." = "A rendszergazdának minden jogosultsága megvan, bármi van itt beállítva.";
 
 /* preferences */
@@ -229,6 +247,9 @@
 
 /* text to speech */
 "Announcements" = "Bemondások";
+
+/* user accounts */
+"Anonymous Account" = "Névtelen fiók";
 
 /* user accounts */
 "Anonymous users" = "Névtelen felhasználók";
@@ -428,6 +449,9 @@
 /* media stream */
 "Choose a file" = "Válassz egy fájlt";
 
+/* user accounts */
+"Choose an account to change it or to delete it." = "Válassz egy fiókot a módosításához vagy törléséhez.";
+
 /* channel picker */
 "Choose Channel" = "Csatorna választása";
 
@@ -497,8 +521,14 @@
 /* connection quality */
 "Command Latency (TCP)" = "Parancsok késleltetése (TCP)";
 
+/* user accounts */
+"Command Limit" = "Parancskorlát";
+
 /* create channel */
 "Commands" = "Parancsok";
+
+/* user accounts */
+"Commands: %d. Seconds: %d." = "Parancsok: %d. Másodpercek: %d.";
 
 /* channel list */
 "Confirm" = "Megerősítés";
@@ -610,6 +640,9 @@
 /* server list */
 "Delete \"%@\" from the server list?" = "Törlöd ezt a szerverlistáról: „%@”?";
 
+/* user accounts */
+"Delete Account" = "Fiók törlése";
+
 /* channel detail */
 "Delete Channel" = "Csatorna törlése";
 
@@ -637,6 +670,9 @@
 
 /* preferences */
 "Disabled" = "Kikapcsolva";
+
+/* user accounts */
+"Disabled Account" = "Letiltott fiók";
 
 /* channel list */
 "Disconnect" = "Kapcsolat bontása";
@@ -867,6 +903,9 @@
 /* accessibility hint */
 "Goes to the channel this user is in" = "Arra a csatornára lép, ahol ez a felhasználó van";
 
+/* user accounts */
+"Has every permission and manages the server" = "Minden jogosultsággal rendelkezik, és kezeli a szervert";
+
 /* TTS EVENT */
 "has joined the channel" = "kapcsolódott a csatornához";
 
@@ -879,6 +918,9 @@
 /* TTS EVENT */
 "has logged out" = "kijelentkezett";
 
+/* user accounts */
+"Has the permissions given to the account in the Permissions tab" = "A fióknak a Jogosultságok lapon adott jogosultságokkal rendelkezik";
+
 /* preferences */
 "Headset TX Toggle" = "Hangtovábbítás váltása fejhallgatóval";
 
@@ -887,6 +929,9 @@
 
 /* server entry */
 "Host address" = "Host címe";
+
+/* user accounts */
+"How many commands the user can send to the server in a given time. It stops floods of messages." = "Hány parancsot küldhet a felhasználó a szervernek adott idő alatt. Megakadályozza az üzenetáradatot.";
 
 /* appearance */
 "Import Appearance" = "Megjelenés importálása";
@@ -899,6 +944,9 @@
 
 /* preferences */
 "Increment" = "Növelés";
+
+/* user accounts */
+"Initial Channel" = "Kezdőcsatorna";
 
 /* sound events */
 "Interception" = "Lehallgatás";
@@ -1008,6 +1056,12 @@
 /* appearance */
 "Large" = "Nagy";
 
+/* user accounts */
+"Last Change" = "Utolsó módosítás";
+
+/* user accounts */
+"Last Login" = "Utolsó bejelentkezés";
+
 /* connection quality */
 "Latency" = "Késleltetés";
 
@@ -1055,6 +1109,9 @@
 
 /* preferences */
 "Male" = "Férfi";
+
+/* user accounts */
+"Manage" = "Kezelés";
 
 /* preferences */
 "Master Volume" = "fő hangerő";
@@ -1192,6 +1249,9 @@
 /* preferences */
 "Neutral" = "Semleges";
 
+/* user accounts */
+"New Account" = "Új fiók";
+
 /* Dialog message */
 "New Server" = "Új szerver";
 
@@ -1220,6 +1280,9 @@
 /* ban list */
 "No banned users" = "Nincs kitiltott felhasználó";
 
+/* user accounts */
+"No channel" = "Nincs csatorna";
+
 /* connection quality */
 "No data" = "Nincs adat";
 
@@ -1228,6 +1291,9 @@
 
 /* create channel */
 "No Interruptions" = "Zavarás Nélüli";
+
+/* user accounts */
+"No Limit" = "Nincs korlát";
 
 /* keyboard shortcuts */
 "No Modifier" = "Nincs módosító";
@@ -1256,6 +1322,9 @@
 /* create channel */
 "No Voice Activation" = "Hang aktiválás tiltott";
 
+/* user accounts */
+"Nobody can log in with this account until its type is changed" = "Senki sem jelentkezhet be ezzel a fiókkal, amíg a típusa meg nem változik";
+
 /* default nickname */
 "Noname" = "névtelen";
 
@@ -1270,6 +1339,9 @@
 
 /* live activity */
 "Not transmitting" = "Nem ad";
+
+/* user accounts */
+"Note" = "Megjegyzés";
 
 /* preferences */
 "Notifications" = "Értesítések";
@@ -1371,6 +1443,9 @@
 
 /* create channel */
 "Permanent Channel" = "Állandós Csatorna";
+
+/* user accounts */
+"Permissions" = "Jogosultságok";
 
 /* file list */
 "Photos and Videos" = "Fotók és videók";
@@ -1524,6 +1599,9 @@
 
 /* serverlist */
 "Remove from Favorites" = "Eltávolítás a kedvencek közül";
+
+/* user accounts */
+"Remove Initial Channel" = "Kezdőcsatorna eltávolítása";
 
 /* media stream */
 "Repeat" = "Ismétlés";
@@ -1918,6 +1996,12 @@
 "Text-to-Speech Voice" = "Beszédszintetizátor-hang";
 
 /* user accounts */
+"The account %@ will be deleted. Whoever is connected with it stays connected until they leave." = "A(z) %@ fiók törlődik. Aki ezzel csatlakozott, csatlakozva marad, amíg ki nem lép.";
+
+/* user accounts */
+"The account could not be deleted" = "A fiókot nem sikerült törölni";
+
+/* user accounts */
 "The account could not be saved" = "A fiókot nem sikerült menteni";
 
 /* appearance */
@@ -1931,6 +2015,9 @@
 
 /* backup */
 "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "A biztonsági mentés minden beállítást és a szerverlistát tartalmazza, a jelszavakkal együtt. Tartsd a fájlt biztonságos helyen.";
+
+/* user accounts */
+"The channel the user joins after logging in. Its password is not asked for." = "A csatorna, amelyhez a felhasználó bejelentkezés után csatlakozik. A jelszavát nem kéri a rendszer.";
 
 /* media stream */
 "The current file starts again every time it ends" = "Az aktuális fájl minden alkalommal újrakezdődik, amikor véget ér";
@@ -1952,6 +2039,9 @@
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "A kívánt hang sebessége %.1f";
+
+/* user accounts */
+"The server already has an account with that user name" = "A szerveren már van fiók ezzel a felhasználónévvel";
 
 /* appearance */
 "The text of a message is shown in black or white, whichever is easier to read on its color." = "Az üzenet szövege feketén vagy fehéren jelenik meg, amelyik jobban olvasható a színén.";
@@ -1982,6 +2072,9 @@
 
 /* preferences */
 "This is how announcements sound" = "Így szólnak a bemondások";
+
+/* user accounts */
+"This is the account you are logged in with." = "Ezzel a fiókkal vagy bejelentkezve.";
 
 /* preferences */
 "This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "Ez a szerver saját becenevet használ: %@. A szerverlistában, a szerver részleteinél módosítható.";

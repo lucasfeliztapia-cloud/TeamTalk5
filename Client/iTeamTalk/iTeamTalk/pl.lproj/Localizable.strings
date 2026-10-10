@@ -127,6 +127,9 @@
 /* user accounts */
 "A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "Zmiana uprawnień obowiązuje od następnego logowania użytkownika. Kto jest połączony, do tego czasu zachowuje stare.";
 
+/* user accounts */
+"A new account gets the default permissions. They are changed in the Permissions tab." = "Nowe konto otrzymuje uprawnienia domyślne. Zmienia się je na karcie Uprawnienia.";
+
 /* appearance */
 "A theme changes the colors above. You can adjust them afterwards." = "Motyw zmienia kolory powyżej. Możesz je potem dostosować.";
 
@@ -147,6 +150,18 @@
 
 /* appearance */
 "Accessibility 5" = "Dostępność 5";
+
+/* user accounts */
+"Account" = "Konto";
+
+/* user accounts */
+"Account deleted" = "Konto usunięte";
+
+/* user accounts */
+"Account saved" = "Konto zapisane";
+
+/* user accounts */
+"Account Type" = "Typ konta";
 
 /* server entry
    user detail */
@@ -204,6 +219,9 @@
 "Always Light" = "Zawsze jasny";
 
 /* user accounts */
+"An account with no user name is the one anybody can log in with." = "Konto bez nazwy użytkownika to konto, na które może zalogować się każdy.";
+
+/* user accounts */
 "An administrator has every permission, whatever is set here." = "Administrator ma wszystkie uprawnienia, niezależnie od tego, co tu ustawiono.";
 
 /* preferences */
@@ -229,6 +247,9 @@
 
 /* text to speech */
 "Announcements" = "Komunikaty głosowe";
+
+/* user accounts */
+"Anonymous Account" = "Konto anonimowe";
 
 /* user accounts */
 "Anonymous users" = "Użytkownicy anonimowi";
@@ -428,6 +449,9 @@
 /* media stream */
 "Choose a file" = "Wybierz plik";
 
+/* user accounts */
+"Choose an account to change it or to delete it." = "Wybierz konto, aby je zmienić lub usunąć.";
+
 /* channel picker */
 "Choose Channel" = "Wybierz kanał";
 
@@ -497,8 +521,14 @@
 /* connection quality */
 "Command Latency (TCP)" = "Opóźnienie poleceń (TCP)";
 
+/* user accounts */
+"Command Limit" = "Limit poleceń";
+
 /* create channel */
 "Commands" = "Polecenia";
+
+/* user accounts */
+"Commands: %d. Seconds: %d." = "Polecenia: %d. Sekundy: %d.";
 
 /* channel list */
 "Confirm" = "Potwierdź";
@@ -610,6 +640,9 @@
 /* server list */
 "Delete \"%@\" from the server list?" = "Usunąć „%@” z listy serwerów?";
 
+/* user accounts */
+"Delete Account" = "Usuń konto";
+
 /* channel detail */
 "Delete Channel" = "Usuń kanał";
 
@@ -637,6 +670,9 @@
 
 /* preferences */
 "Disabled" = "Wyłączone";
+
+/* user accounts */
+"Disabled Account" = "Konto wyłączone";
 
 /* channel list */
 "Disconnect" = "Rozłącz";
@@ -867,6 +903,9 @@
 /* accessibility hint */
 "Goes to the channel this user is in" = "Przechodzi do kanału, w którym jest ten użytkownik";
 
+/* user accounts */
+"Has every permission and manages the server" = "Ma wszystkie uprawnienia i zarządza serwerem";
+
 /* TTS EVENT */
 "has joined the channel" = "Dołącza się do kanału";
 
@@ -879,6 +918,9 @@
 /* TTS EVENT */
 "has logged out" = "wylogowuje się";
 
+/* user accounts */
+"Has the permissions given to the account in the Permissions tab" = "Ma uprawnienia nadane kontu na karcie Uprawnienia";
+
 /* preferences */
 "Headset TX Toggle" = "Przełączanie nadawania zestawem słuchawkowym";
 
@@ -887,6 +929,9 @@
 
 /* server entry */
 "Host address" = "Adres serwera";
+
+/* user accounts */
+"How many commands the user can send to the server in a given time. It stops floods of messages." = "Ile poleceń użytkownik może wysłać do serwera w określonym czasie. Zapobiega to zalewowi wiadomości.";
 
 /* appearance */
 "Import Appearance" = "Importuj wygląd";
@@ -899,6 +944,9 @@
 
 /* preferences */
 "Increment" = "Zwiększ";
+
+/* user accounts */
+"Initial Channel" = "Kanał początkowy";
 
 /* sound events */
 "Interception" = "Przechwytywanie";
@@ -1008,6 +1056,12 @@
 /* appearance */
 "Large" = "Duży";
 
+/* user accounts */
+"Last Change" = "Ostatnia zmiana";
+
+/* user accounts */
+"Last Login" = "Ostatnie logowanie";
+
 /* connection quality */
 "Latency" = "Opóźnienie";
 
@@ -1055,6 +1109,9 @@
 
 /* preferences */
 "Male" = "Mężczyzna";
+
+/* user accounts */
+"Manage" = "Zarządzanie";
 
 /* preferences */
 "Master Volume" = "Głośność ogólna";
@@ -1192,6 +1249,9 @@
 /* preferences */
 "Neutral" = "Neutralna";
 
+/* user accounts */
+"New Account" = "Nowe konto";
+
 /* Dialog message */
 "New Server" = "Nowy serwer";
 
@@ -1220,6 +1280,9 @@
 /* ban list */
 "No banned users" = "Brak zbanowanych użytkowników";
 
+/* user accounts */
+"No channel" = "Brak kanału";
+
 /* connection quality */
 "No data" = "Brak danych";
 
@@ -1228,6 +1291,9 @@
 
 /* create channel */
 "No Interruptions" = "Tylko jeden może mówić";
+
+/* user accounts */
+"No Limit" = "Bez limitu";
 
 /* keyboard shortcuts */
 "No Modifier" = "Bez modyfikatora";
@@ -1256,6 +1322,9 @@
 /* create channel */
 "No Voice Activation" = "Nie zezwalaj na aktywację głosem";
 
+/* user accounts */
+"Nobody can log in with this account until its type is changed" = "Nikt nie może zalogować się na to konto, dopóki nie zmieni się jego typ";
+
 /* default nickname */
 "Noname" = "Anonim";
 
@@ -1270,6 +1339,9 @@
 
 /* live activity */
 "Not transmitting" = "Nie nadaje";
+
+/* user accounts */
+"Note" = "Notatka";
 
 /* preferences */
 "Notifications" = "Powiadomienia";
@@ -1371,6 +1443,9 @@
 
 /* create channel */
 "Permanent Channel" = "Stały kanał";
+
+/* user accounts */
+"Permissions" = "Uprawnienia";
 
 /* file list */
 "Photos and Videos" = "Zdjęcia i wideo";
@@ -1524,6 +1599,9 @@
 
 /* serverlist */
 "Remove from Favorites" = "Usuń z ulubionych";
+
+/* user accounts */
+"Remove Initial Channel" = "Usuń kanał początkowy";
 
 /* media stream */
 "Repeat" = "Powtarzaj";
@@ -1918,6 +1996,12 @@
 "Text-to-Speech Voice" = "Głos syntezatora mowy";
 
 /* user accounts */
+"The account %@ will be deleted. Whoever is connected with it stays connected until they leave." = "Konto %@ zostanie usunięte. Kto jest z nim połączony, pozostaje połączony, dopóki nie wyjdzie.";
+
+/* user accounts */
+"The account could not be deleted" = "Nie udało się usunąć konta";
+
+/* user accounts */
 "The account could not be saved" = "Nie udało się zapisać konta";
 
 /* appearance */
@@ -1931,6 +2015,9 @@
 
 /* backup */
 "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "Kopia zapasowa zawiera wszystkie ustawienia i listę serwerów wraz z hasłami. Przechowuj plik w bezpiecznym miejscu.";
+
+/* user accounts */
+"The channel the user joins after logging in. Its password is not asked for." = "Kanał, do którego użytkownik dołącza po zalogowaniu. Jego hasło nie jest wymagane.";
 
 /* media stream */
 "The current file starts again every time it ends" = "Bieżący plik zaczyna się od nowa za każdym razem, gdy się skończy";
@@ -1952,6 +2039,9 @@
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "Prędkość syntezy to %.1f";
+
+/* user accounts */
+"The server already has an account with that user name" = "Serwer ma już konto o tej nazwie użytkownika";
 
 /* appearance */
 "The text of a message is shown in black or white, whichever is easier to read on its color." = "Tekst wiadomości jest czarny albo biały, zależnie od tego, co łatwiej odczytać na jej kolorze.";
@@ -1982,6 +2072,9 @@
 
 /* preferences */
 "This is how announcements sound" = "Tak brzmią komunikaty głosowe";
+
+/* user accounts */
+"This is the account you are logged in with." = "To konto, na które jesteś zalogowany.";
 
 /* preferences */
 "This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "Ten serwer używa własnego nicku: %@. Zmienia się go w szczegółach serwera na liście serwerów.";

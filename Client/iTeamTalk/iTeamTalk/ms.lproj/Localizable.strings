@@ -127,6 +127,9 @@
 /* user accounts */
 "A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "Perubahan kebenaran berkuat kuasa pada log masuk pengguna yang seterusnya. Sesiapa yang sedang bersambung mengekalkan yang lama sehingga itu.";
 
+/* user accounts */
+"A new account gets the default permissions. They are changed in the Permissions tab." = "Akaun baharu mendapat kebenaran lalai. Kebenaran itu ditukar dalam tab Kebenaran.";
+
 /* appearance */
 "A theme changes the colors above. You can adjust them afterwards." = "Tema mengubah warna di atas. Anda boleh melaraskannya selepas itu.";
 
@@ -147,6 +150,18 @@
 
 /* appearance */
 "Accessibility 5" = "Kebolehcapaian 5";
+
+/* user accounts */
+"Account" = "Akaun";
+
+/* user accounts */
+"Account deleted" = "Akaun dipadam";
+
+/* user accounts */
+"Account saved" = "Akaun disimpan";
+
+/* user accounts */
+"Account Type" = "Jenis Akaun";
 
 /* server entry
    user detail */
@@ -204,6 +219,9 @@
 "Always Light" = "Sentiasa Cerah";
 
 /* user accounts */
+"An account with no user name is the one anybody can log in with." = "Akaun tanpa nama pengguna ialah akaun yang boleh digunakan sesiapa sahaja untuk log masuk.";
+
+/* user accounts */
 "An administrator has every permission, whatever is set here." = "Pentadbir mempunyai semua kebenaran, tidak kira apa yang ditetapkan di sini.";
 
 /* preferences */
@@ -229,6 +247,9 @@
 
 /* text to speech */
 "Announcements" = "Pemberitahuan";
+
+/* user accounts */
+"Anonymous Account" = "Akaun Tanpa Nama";
 
 /* user accounts */
 "Anonymous users" = "Pengguna tanpa nama";
@@ -429,6 +450,9 @@
 /* media stream */
 "Choose a file" = "Pilih fail";
 
+/* user accounts */
+"Choose an account to change it or to delete it." = "Pilih akaun untuk mengubah atau memadamnya.";
+
 /* channel picker */
 "Choose Channel" = "Pilih Saluran";
 
@@ -498,8 +522,14 @@
 /* connection quality */
 "Command Latency (TCP)" = "Kependaman Perintah (TCP)";
 
+/* user accounts */
+"Command Limit" = "Had Arahan";
+
 /* create channel */
 "Commands" = "Perintah";
+
+/* user accounts */
+"Commands: %d. Seconds: %d." = "Arahan: %d. Saat: %d.";
 
 /* channel list */
 "Confirm" = "Sahkan";
@@ -611,6 +641,9 @@
 /* server list */
 "Delete \"%@\" from the server list?" = "Padam \"%@\" daripada senarai server?";
 
+/* user accounts */
+"Delete Account" = "Padam Akaun";
+
 /* channel detail */
 "Delete Channel" = "Padam Saluran";
 
@@ -638,6 +671,9 @@
 
 /* preferences */
 "Disabled" = "Dinyahaktifkan";
+
+/* user accounts */
+"Disabled Account" = "Akaun Dinyahaktifkan";
 
 /* channel list */
 "Disconnect" = "Putuskan Sambungan";
@@ -868,6 +904,9 @@
 /* accessibility hint */
 "Goes to the channel this user is in" = "Pergi ke saluran tempat pengguna ini berada";
 
+/* user accounts */
+"Has every permission and manages the server" = "Mempunyai semua kebenaran dan mengurus server";
+
 /* TTS EVENT */
 "has joined the channel" = "telah masuk ke saluran";
 
@@ -880,6 +919,9 @@
 /* TTS EVENT */
 "has logged out" = "Keluar dari server";
 
+/* user accounts */
+"Has the permissions given to the account in the Permissions tab" = "Mempunyai kebenaran yang diberikan kepada akaun dalam tab Kebenaran";
+
 /* preferences */
 "Headset TX Toggle" = "Togol TX Set Kepala";
 
@@ -888,6 +930,9 @@
 
 /* server entry */
 "Host address" = "Alamat host";
+
+/* user accounts */
+"How many commands the user can send to the server in a given time. It stops floods of messages." = "Berapa banyak arahan yang boleh dihantar pengguna kepada server dalam masa tertentu. Ini mengelakkan banjir mesej.";
 
 /* appearance */
 "Import Appearance" = "Import Penampilan";
@@ -900,6 +945,9 @@
 
 /* preferences */
 "Increment" = "Tambah";
+
+/* user accounts */
+"Initial Channel" = "Saluran Permulaan";
 
 /* sound events */
 "Interception" = "Pemintasan";
@@ -1009,6 +1057,12 @@
 /* appearance */
 "Large" = "Besar";
 
+/* user accounts */
+"Last Change" = "Perubahan Terakhir";
+
+/* user accounts */
+"Last Login" = "Log Masuk Terakhir";
+
 /* connection quality */
 "Latency" = "Kependaman";
 
@@ -1056,6 +1110,9 @@
 
 /* preferences */
 "Male" = "Lelaki";
+
+/* user accounts */
+"Manage" = "Urus";
 
 /* preferences */
 "Master Volume" = "Volume Utama";
@@ -1193,6 +1250,9 @@
 /* preferences */
 "Neutral" = "Neutral";
 
+/* user accounts */
+"New Account" = "Akaun Baharu";
+
 /* Dialog message */
 "New Server" = "Server Baharu";
 
@@ -1221,6 +1281,9 @@
 /* ban list */
 "No banned users" = "Tiada pengguna disekat";
 
+/* user accounts */
+"No channel" = "Tiada saluran";
+
 /* connection quality */
 "No data" = "Tiada data";
 
@@ -1229,6 +1292,9 @@
 
 /* create channel */
 "No Interruptions" = "Tiada Gangguan";
+
+/* user accounts */
+"No Limit" = "Tiada Had";
 
 /* keyboard shortcuts */
 "No Modifier" = "Tiada Pengubah Suai";
@@ -1257,6 +1323,9 @@
 /* create channel */
 "No Voice Activation" = "Tiada Pengaktifan Suara";
 
+/* user accounts */
+"Nobody can log in with this account until its type is changed" = "Tiada sesiapa boleh log masuk dengan akaun ini sehingga jenisnya ditukar";
+
 /* default nickname */
 "Noname" = "TanpaNama";
 
@@ -1271,6 +1340,9 @@
 
 /* live activity */
 "Not transmitting" = "Tidak menghantar";
+
+/* user accounts */
+"Note" = "Nota";
 
 /* preferences */
 "Notifications" = "Notifikasi";
@@ -1374,6 +1446,9 @@
 
 /* create channel */
 "Permanent Channel" = "Saluran Kekal";
+
+/* user accounts */
+"Permissions" = "Kebenaran";
 
 /* file list */
 "Photos and Videos" = "Foto dan Video";
@@ -1527,6 +1602,9 @@
 
 /* serverlist */
 "Remove from Favorites" = "Buang daripada Kegemaran";
+
+/* user accounts */
+"Remove Initial Channel" = "Buang Saluran Permulaan";
 
 /* media stream */
 "Repeat" = "Ulang";
@@ -1921,6 +1999,12 @@
 "Text-to-Speech Voice" = "Suara Teks ke Pertuturan";
 
 /* user accounts */
+"The account %@ will be deleted. Whoever is connected with it stays connected until they leave." = "Akaun %@ akan dipadam. Sesiapa yang bersambung dengannya kekal bersambung sehingga keluar.";
+
+/* user accounts */
+"The account could not be deleted" = "Akaun tidak dapat dipadam";
+
+/* user accounts */
 "The account could not be saved" = "Akaun tidak dapat disimpan";
 
 /* appearance */
@@ -1934,6 +2018,9 @@
 
 /* backup */
 "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "Sandaran mengandungi semua tetapan dan senarai server, bersama kata laluannya. Simpan fail di tempat yang selamat.";
+
+/* user accounts */
+"The channel the user joins after logging in. Its password is not asked for." = "Saluran yang disertai pengguna selepas log masuk. Kata laluannya tidak diminta.";
 
 /* media stream */
 "The current file starts again every time it ends" = "Fail semasa bermula semula setiap kali ia tamat";
@@ -1955,6 +2042,9 @@
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "tingkat kadar suara yang bercakap adalah %.1f";
+
+/* user accounts */
+"The server already has an account with that user name" = "Server sudah mempunyai akaun dengan nama pengguna itu";
 
 /* appearance */
 "The text of a message is shown in black or white, whichever is easier to read on its color." = "Teks mesej ditunjukkan hitam atau putih, mana yang lebih mudah dibaca di atas warnanya.";
@@ -1985,6 +2075,9 @@
 
 /* preferences */
 "This is how announcements sound" = "Beginilah bunyi pemberitahuan";
+
+/* user accounts */
+"This is the account you are logged in with." = "Ini akaun yang anda gunakan untuk log masuk.";
 
 /* preferences */
 "This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "Server ini menggunakan nama samaran sendiri, %@. Nama itu ditukar dalam butiran server, dalam senarai server.";

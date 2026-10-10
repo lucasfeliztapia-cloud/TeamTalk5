@@ -62,6 +62,10 @@ public enum TeamTalkUserAccountStringProperty {
     case initialChannel
     case username
     case note
+    case password
+    /// Written by the server, read-only
+    case lastModified
+    case lastLogin
 
     var cValue: TTKitUserAccountStringProperty {
         switch self {
@@ -71,6 +75,12 @@ public enum TeamTalkUserAccountStringProperty {
             return TTKitUserAccountStringUsername
         case .note:
             return TTKitUserAccountStringNote
+        case .password:
+            return TTKitUserAccountStringPassword
+        case .lastModified:
+            return TTKitUserAccountStringLastModified
+        case .lastLogin:
+            return TTKitUserAccountStringLastLogin
         }
     }
 }
@@ -278,6 +288,10 @@ public enum TeamTalkString {
 
     public static func setTextMessage(_ message: inout TextMessage, to string: String) {
         TTKitSetTextMessageString(&message, string)
+    }
+
+    public static func setUserAccount(_ property: TeamTalkUserAccountStringProperty, on userAccount: inout UserAccount, to string: String) {
+        TTKitSetUserAccountString(property.cValue, &userAccount, string)
     }
 
     public static func setEncryption(_ property: TeamTalkEncryptionStringProperty, on encryption: inout EncryptionContext, to string: String) {

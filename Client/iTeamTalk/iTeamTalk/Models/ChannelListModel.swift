@@ -160,6 +160,11 @@ final class ChannelListModel: ObservableObject {
     var activeCommands = [INT32: Command]()
     var srvprop = ServerProperties()
     var myuseraccount = UserAccount()
+
+    /// The user name of the account in use, empty for an anonymous login
+    var ownUsername: String {
+        TeamTalkString.userAccount(.username, from: myuseraccount)
+    }
     var textmessages = [INT32: [MyTextMessage]]()
     var unreadTimer: Timer?
     var displayUsers = [User]()

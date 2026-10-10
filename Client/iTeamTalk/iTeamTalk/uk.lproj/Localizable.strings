@@ -127,6 +127,9 @@
 /* user accounts */
 "A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "Зміна прав починає діяти з наступного входу користувача. Хто під'єднаний, до того часу зберігає старі.";
 
+/* user accounts */
+"A new account gets the default permissions. They are changed in the Permissions tab." = "Новий обліковий запис отримує типові права. Вони змінюються на вкладці «Права».";
+
 /* appearance */
 "A theme changes the colors above. You can adjust them afterwards." = "Тема змінює кольори вище. Потім їх можна налаштувати.";
 
@@ -147,6 +150,18 @@
 
 /* appearance */
 "Accessibility 5" = "Доступність 5";
+
+/* user accounts */
+"Account" = "Обліковий запис";
+
+/* user accounts */
+"Account deleted" = "Обліковий запис видалено";
+
+/* user accounts */
+"Account saved" = "Обліковий запис збережено";
+
+/* user accounts */
+"Account Type" = "Тип облікового запису";
 
 /* server entry
    user detail */
@@ -204,6 +219,9 @@
 "Always Light" = "Завжди світла";
 
 /* user accounts */
+"An account with no user name is the one anybody can log in with." = "Обліковий запис без імені користувача — той, з яким може ввійти будь-хто.";
+
+/* user accounts */
 "An administrator has every permission, whatever is set here." = "Адміністратор має всі права, хоч би що тут було задано.";
 
 /* preferences */
@@ -229,6 +247,9 @@
 
 /* text to speech */
 "Announcements" = "Оголошення";
+
+/* user accounts */
+"Anonymous Account" = "Анонімний обліковий запис";
 
 /* user accounts */
 "Anonymous users" = "Анонімні користувачі";
@@ -428,6 +449,9 @@
 /* media stream */
 "Choose a file" = "Виберіть файл";
 
+/* user accounts */
+"Choose an account to change it or to delete it." = "Виберіть обліковий запис, щоб змінити або видалити його.";
+
 /* channel picker */
 "Choose Channel" = "Вибрати канал";
 
@@ -497,8 +521,14 @@
 /* connection quality */
 "Command Latency (TCP)" = "Затримка команд (TCP)";
 
+/* user accounts */
+"Command Limit" = "Обмеження команд";
+
 /* create channel */
 "Commands" = "Команди";
+
+/* user accounts */
+"Commands: %d. Seconds: %d." = "Команди: %d. Секунди: %d.";
 
 /* channel list */
 "Confirm" = "Підтвердити";
@@ -610,6 +640,9 @@
 /* server list */
 "Delete \"%@\" from the server list?" = "Видалити «%@» зі списку серверів?";
 
+/* user accounts */
+"Delete Account" = "Видалити обліковий запис";
+
 /* channel detail */
 "Delete Channel" = "Видалити канал";
 
@@ -637,6 +670,9 @@
 
 /* preferences */
 "Disabled" = "Вимкнено";
+
+/* user accounts */
+"Disabled Account" = "Вимкнений обліковий запис";
 
 /* channel list */
 "Disconnect" = "Від'єднатися";
@@ -867,6 +903,9 @@
 /* accessibility hint */
 "Goes to the channel this user is in" = "Переходить до каналу, де перебуває цей користувач";
 
+/* user accounts */
+"Has every permission and manages the server" = "Має всі права та керує сервером";
+
 /* TTS EVENT */
 "has joined the channel" = "тепер у каналі";
 
@@ -879,6 +918,9 @@
 /* TTS EVENT */
 "has logged out" = "вийшов";
 
+/* user accounts */
+"Has the permissions given to the account in the Permissions tab" = "Має права, надані обліковому запису на вкладці «Права»";
+
 /* preferences */
 "Headset TX Toggle" = "Керування кнопкою «Говорити» на гарнітурі";
 
@@ -887,6 +929,9 @@
 
 /* server entry */
 "Host address" = "Адреса хоста";
+
+/* user accounts */
+"How many commands the user can send to the server in a given time. It stops floods of messages." = "Скільки команд користувач може надіслати серверу за заданий час. Це захищає від лавини повідомлень.";
 
 /* appearance */
 "Import Appearance" = "Імпортувати оформлення";
@@ -899,6 +944,9 @@
 
 /* preferences */
 "Increment" = "Збільшити";
+
+/* user accounts */
+"Initial Channel" = "Початковий канал";
 
 /* sound events */
 "Interception" = "Перехоплення";
@@ -1008,6 +1056,12 @@
 /* appearance */
 "Large" = "Великий";
 
+/* user accounts */
+"Last Change" = "Остання зміна";
+
+/* user accounts */
+"Last Login" = "Останній вхід";
+
 /* connection quality */
 "Latency" = "Затримка";
 
@@ -1055,6 +1109,9 @@
 
 /* preferences */
 "Male" = "Чоловіча";
+
+/* user accounts */
+"Manage" = "Керування";
 
 /* preferences */
 "Master Volume" = "Загальна гучність";
@@ -1192,6 +1249,9 @@
 /* preferences */
 "Neutral" = "Нейтральний";
 
+/* user accounts */
+"New Account" = "Новий обліковий запис";
+
 /* Dialog message */
 "New Server" = "Новий сервер";
 
@@ -1220,6 +1280,9 @@
 /* ban list */
 "No banned users" = "Немає заблокованих користувачів";
 
+/* user accounts */
+"No channel" = "Немає каналу";
+
 /* connection quality */
 "No data" = "Немає даних";
 
@@ -1228,6 +1291,9 @@
 
 /* create channel */
 "No Interruptions" = "Без переривань";
+
+/* user accounts */
+"No Limit" = "Без обмеження";
 
 /* keyboard shortcuts */
 "No Modifier" = "Без модифікатора";
@@ -1256,6 +1322,9 @@
 /* create channel */
 "No Voice Activation" = "Без активації голосом";
 
+/* user accounts */
+"Nobody can log in with this account until its type is changed" = "Ніхто не зможе ввійти з цим обліковим записом, доки не змінять його тип";
+
 /* default nickname */
 "Noname" = "Без імені";
 
@@ -1270,6 +1339,9 @@
 
 /* live activity */
 "Not transmitting" = "Не передає";
+
+/* user accounts */
+"Note" = "Примітка";
 
 /* preferences */
 "Notifications" = "Сповіщення";
@@ -1371,6 +1443,9 @@
 
 /* create channel */
 "Permanent Channel" = "Постійний канал";
+
+/* user accounts */
+"Permissions" = "Права";
 
 /* file list */
 "Photos and Videos" = "Фото і відео";
@@ -1524,6 +1599,9 @@
 
 /* serverlist */
 "Remove from Favorites" = "Вилучити з вибраного";
+
+/* user accounts */
+"Remove Initial Channel" = "Прибрати початковий канал";
 
 /* media stream */
 "Repeat" = "Повтор";
@@ -1918,6 +1996,12 @@
 "Text-to-Speech Voice" = "Голос синтезу мовлення";
 
 /* user accounts */
+"The account %@ will be deleted. Whoever is connected with it stays connected until they leave." = "Обліковий запис %@ буде видалено. Хто під'єднаний із ним, залишиться під'єднаним, доки не вийде.";
+
+/* user accounts */
+"The account could not be deleted" = "Не вдалося видалити обліковий запис";
+
+/* user accounts */
 "The account could not be saved" = "Не вдалося зберегти обліковий запис";
 
 /* appearance */
@@ -1931,6 +2015,9 @@
 
 /* backup */
 "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "Резервна копія містить усі налаштування і список серверів разом із паролями. Зберігайте файл у надійному місці.";
+
+/* user accounts */
+"The channel the user joins after logging in. Its password is not asked for." = "Канал, до якого користувач входить після входу на сервер. Його пароль не запитується.";
 
 /* media stream */
 "The current file starts again every time it ends" = "Поточний файл починається знову щоразу, коли закінчується";
@@ -1952,6 +2039,9 @@
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "Швидкість мовлення %.1f";
+
+/* user accounts */
+"The server already has an account with that user name" = "На сервері вже є обліковий запис із таким іменем користувача";
 
 /* appearance */
 "The text of a message is shown in black or white, whichever is easier to read on its color." = "Текст повідомлення показано чорним або білим, залежно від того, що легше читати на його кольорі.";
@@ -1982,6 +2072,9 @@
 
 /* preferences */
 "This is how announcements sound" = "Так звучать оголошення";
+
+/* user accounts */
+"This is the account you are logged in with." = "Це обліковий запис, з яким ви ввійшли.";
 
 /* preferences */
 "This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "Цей сервер використовує власний псевдонім: %@. Він змінюється у відомостях про сервер, у списку серверів.";

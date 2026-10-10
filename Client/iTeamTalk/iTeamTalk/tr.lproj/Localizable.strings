@@ -127,6 +127,9 @@
 /* user accounts */
 "A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "İzin değişikliği, kullanıcının bir sonraki oturum açışında geçerli olur. Bağlı olanlar o zamana kadar eskilerini korur.";
 
+/* user accounts */
+"A new account gets the default permissions. They are changed in the Permissions tab." = "Yeni hesap varsayılan izinleri alır. Bunlar İzinler sekmesinde değiştirilir.";
+
 /* appearance */
 "A theme changes the colors above. You can adjust them afterwards." = "Tema yukarıdaki renkleri değiştirir. Sonra bunları ayarlayabilirsiniz.";
 
@@ -147,6 +150,18 @@
 
 /* appearance */
 "Accessibility 5" = "Erişilebilirlik 5";
+
+/* user accounts */
+"Account" = "Hesap";
+
+/* user accounts */
+"Account deleted" = "Hesap silindi";
+
+/* user accounts */
+"Account saved" = "Hesap kaydedildi";
+
+/* user accounts */
+"Account Type" = "Hesap Türü";
 
 /* server entry
    user detail */
@@ -204,6 +219,9 @@
 "Always Light" = "Her Zaman Açık";
 
 /* user accounts */
+"An account with no user name is the one anybody can log in with." = "Kullanıcı adı olmayan hesap, herkesin oturum açabildiği hesaptır.";
+
+/* user accounts */
 "An administrator has every permission, whatever is set here." = "Burada ne ayarlanırsa ayarlansın, yöneticinin her izni vardır.";
 
 /* preferences */
@@ -229,6 +247,9 @@
 
 /* text to speech */
 "Announcements" = "Duyurular";
+
+/* user accounts */
+"Anonymous Account" = "Anonim Hesap";
 
 /* user accounts */
 "Anonymous users" = "Anonim kullanıcılar";
@@ -429,6 +450,9 @@
 /* media stream */
 "Choose a file" = "Dosya seçin";
 
+/* user accounts */
+"Choose an account to change it or to delete it." = "Değiştirmek veya silmek için bir hesap seçin.";
+
 /* channel picker */
 "Choose Channel" = "Kanal Seç";
 
@@ -498,8 +522,14 @@
 /* connection quality */
 "Command Latency (TCP)" = "Komut Gecikmesi (TCP)";
 
+/* user accounts */
+"Command Limit" = "Komut Sınırı";
+
 /* create channel */
 "Commands" = "Komutlar";
+
+/* user accounts */
+"Commands: %d. Seconds: %d." = "Komut: %d. Saniye: %d.";
 
 /* channel list */
 "Confirm" = "Onayla";
@@ -611,6 +641,9 @@
 /* server list */
 "Delete \"%@\" from the server list?" = "\"%@\" sunucu listesinden silinsin mi?";
 
+/* user accounts */
+"Delete Account" = "Hesabı Sil";
+
 /* channel detail */
 "Delete Channel" = "Kanalı Sil";
 
@@ -638,6 +671,9 @@
 
 /* preferences */
 "Disabled" = "Devre dışı";
+
+/* user accounts */
+"Disabled Account" = "Devre Dışı Hesap";
 
 /* channel list */
 "Disconnect" = "Bağlantıyı Kes";
@@ -868,6 +904,9 @@
 /* accessibility hint */
 "Goes to the channel this user is in" = "Bu kullanıcının bulunduğu kanala gider";
 
+/* user accounts */
+"Has every permission and manages the server" = "Tüm izinlere sahiptir ve sunucuyu yönetir";
+
 /* TTS EVENT */
 "has joined the channel" = "kanala katıldı";
 
@@ -880,6 +919,9 @@
 /* TTS EVENT */
 "has logged out" = "oturumu kapattı";
 
+/* user accounts */
+"Has the permissions given to the account in the Permissions tab" = "Hesaba İzinler sekmesinde verilen izinlere sahiptir";
+
 /* preferences */
 "Headset TX Toggle" = "Kulaklıktan İletim Değişikliği";
 
@@ -888,6 +930,9 @@
 
 /* server entry */
 "Host address" = "Ana bilgisayar adresi";
+
+/* user accounts */
+"How many commands the user can send to the server in a given time. It stops floods of messages." = "Kullanıcının belirli bir sürede sunucuya kaç komut gönderebileceği. İleti yağmurunu önler.";
 
 /* appearance */
 "Import Appearance" = "Görünümü İçe Aktar";
@@ -900,6 +945,9 @@
 
 /* preferences */
 "Increment" = "Artır";
+
+/* user accounts */
+"Initial Channel" = "Başlangıç Kanalı";
 
 /* sound events */
 "Interception" = "İzleme";
@@ -1009,6 +1057,12 @@
 /* appearance */
 "Large" = "Büyük";
 
+/* user accounts */
+"Last Change" = "Son Değişiklik";
+
+/* user accounts */
+"Last Login" = "Son Oturum Açma";
+
 /* connection quality */
 "Latency" = "Gecikme";
 
@@ -1056,6 +1110,9 @@
 
 /* preferences */
 "Male" = "Erkek";
+
+/* user accounts */
+"Manage" = "Yönetim";
 
 /* preferences */
 "Master Volume" = "Ana Düzey";
@@ -1193,6 +1250,9 @@
 /* preferences */
 "Neutral" = "Nötr";
 
+/* user accounts */
+"New Account" = "Yeni Hesap";
+
 /* Dialog message */
 "New Server" = "Yeni Sunucu";
 
@@ -1221,6 +1281,9 @@
 /* ban list */
 "No banned users" = "Yasaklı kullanıcı yok";
 
+/* user accounts */
+"No channel" = "Kanal yok";
+
 /* connection quality */
 "No data" = "Veri yok";
 
@@ -1229,6 +1292,9 @@
 
 /* create channel */
 "No Interruptions" = "Söz Kesintisi Yok";
+
+/* user accounts */
+"No Limit" = "Sınır Yok";
 
 /* keyboard shortcuts */
 "No Modifier" = "Niteleyici Yok";
@@ -1257,6 +1323,9 @@
 /* create channel */
 "No Voice Activation" = "Ses Etkinleştirme Yok";
 
+/* user accounts */
+"Nobody can log in with this account until its type is changed" = "Türü değiştirilene kadar bu hesapla kimse oturum açamaz";
+
 /* default nickname */
 "Noname" = "Ad Yok";
 
@@ -1271,6 +1340,9 @@
 
 /* live activity */
 "Not transmitting" = "Yayın yapmıyor";
+
+/* user accounts */
+"Note" = "Not";
 
 /* preferences */
 "Notifications" = "Bildirimler";
@@ -1374,6 +1446,9 @@
 
 /* create channel */
 "Permanent Channel" = "Kalıcı Kanal";
+
+/* user accounts */
+"Permissions" = "İzinler";
 
 /* file list */
 "Photos and Videos" = "Fotoğraflar ve Videolar";
@@ -1527,6 +1602,9 @@
 
 /* serverlist */
 "Remove from Favorites" = "Sık Kullanılanlardan Kaldır";
+
+/* user accounts */
+"Remove Initial Channel" = "Başlangıç Kanalını Kaldır";
 
 /* media stream */
 "Repeat" = "Yinele";
@@ -1921,6 +1999,12 @@
 "Text-to-Speech Voice" = "Metin Okuma Sesi";
 
 /* user accounts */
+"The account %@ will be deleted. Whoever is connected with it stays connected until they leave." = "%@ hesabı silinecek. Bu hesapla bağlı olanlar ayrılana kadar bağlı kalır.";
+
+/* user accounts */
+"The account could not be deleted" = "Hesap silinemedi";
+
+/* user accounts */
 "The account could not be saved" = "Hesap kaydedilemedi";
 
 /* appearance */
@@ -1934,6 +2018,9 @@
 
 /* backup */
 "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "Yedek, tüm ayarları ve parolalarıyla birlikte sunucu listesini içerir. Dosyayı güvenli bir yerde saklayın.";
+
+/* user accounts */
+"The channel the user joins after logging in. Its password is not asked for." = "Kullanıcının oturum açtıktan sonra katıldığı kanal. Parolası sorulmaz.";
 
 /* media stream */
 "The current file starts again every time it ends" = "Geçerli dosya her bittiğinde yeniden başlar";
@@ -1955,6 +2042,9 @@
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "Konuşma sesinin hızı %.1f";
+
+/* user accounts */
+"The server already has an account with that user name" = "Sunucuda bu kullanıcı adıyla bir hesap zaten var";
 
 /* appearance */
 "The text of a message is shown in black or white, whichever is easier to read on its color." = "Bir iletinin metni, renginin üzerinde hangisi daha kolay okunuyorsa siyah veya beyaz gösterilir.";
@@ -1985,6 +2075,9 @@
 
 /* preferences */
 "This is how announcements sound" = "Duyurular böyle duyulur";
+
+/* user accounts */
+"This is the account you are logged in with." = "Bu, oturum açtığınız hesaptır.";
 
 /* preferences */
 "This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "Bu sunucu kendi rumuzunu kullanıyor: %@. Sunucu listesinde, sunucu ayrıntılarından değiştirilir.";

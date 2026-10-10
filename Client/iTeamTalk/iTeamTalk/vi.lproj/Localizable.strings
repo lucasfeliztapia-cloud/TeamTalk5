@@ -127,6 +127,9 @@
 /* user accounts */
 "A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "Thay đổi quyền có hiệu lực từ lần đăng nhập tiếp theo của người dùng. Ai đang kết nối vẫn giữ quyền cũ cho đến lúc đó.";
 
+/* user accounts */
+"A new account gets the default permissions. They are changed in the Permissions tab." = "Tài khoản mới nhận các quyền mặc định. Các quyền này được thay đổi trong thẻ Quyền.";
+
 /* appearance */
 "A theme changes the colors above. You can adjust them afterwards." = "Chủ đề thay đổi các màu ở trên. Bạn có thể điều chỉnh chúng sau đó.";
 
@@ -147,6 +150,18 @@
 
 /* appearance */
 "Accessibility 5" = "Trợ năng 5";
+
+/* user accounts */
+"Account" = "Tài khoản";
+
+/* user accounts */
+"Account deleted" = "Đã xóa tài khoản";
+
+/* user accounts */
+"Account saved" = "Đã lưu tài khoản";
+
+/* user accounts */
+"Account Type" = "Loại tài khoản";
 
 /* server entry
    user detail */
@@ -205,6 +220,9 @@
 "Always Light" = "Luôn sáng";
 
 /* user accounts */
+"An account with no user name is the one anybody can log in with." = "Tài khoản không có tên người dùng là tài khoản mà ai cũng có thể dùng để đăng nhập.";
+
+/* user accounts */
 "An administrator has every permission, whatever is set here." = "Quản trị viên có mọi quyền, bất kể ở đây đặt gì.";
 
 /* preferences */
@@ -230,6 +248,9 @@
 
 /* text to speech */
 "Announcements" = "thông báo";
+
+/* user accounts */
+"Anonymous Account" = "Tài khoản ẩn danh";
 
 /* user accounts */
 "Anonymous users" = "Người dùng ẩn danh";
@@ -430,6 +451,9 @@
 /* media stream */
 "Choose a file" = "Chọn một tệp";
 
+/* user accounts */
+"Choose an account to change it or to delete it." = "Chọn một tài khoản để thay đổi hoặc xóa.";
+
 /* channel picker */
 "Choose Channel" = "Chọn kênh";
 
@@ -499,8 +523,14 @@
 /* connection quality */
 "Command Latency (TCP)" = "Độ trễ lệnh (TCP)";
 
+/* user accounts */
+"Command Limit" = "Giới hạn lệnh";
+
 /* create channel */
 "Commands" = "Lệnh";
+
+/* user accounts */
+"Commands: %d. Seconds: %d." = "Lệnh: %d. Giây: %d.";
 
 /* channel list */
 "Confirm" = "Xác nhận";
@@ -612,6 +642,9 @@
 /* server list */
 "Delete \"%@\" from the server list?" = "Xóa \"%@\" khỏi danh sách máy chủ?";
 
+/* user accounts */
+"Delete Account" = "Xóa tài khoản";
+
 /* channel detail */
 "Delete Channel" = "Xóa kênh";
 
@@ -639,6 +672,9 @@
 
 /* preferences */
 "Disabled" = "Đã tắt";
+
+/* user accounts */
+"Disabled Account" = "Tài khoản bị tắt";
 
 /* channel list */
 "Disconnect" = "Ngắt kết nối";
@@ -870,6 +906,9 @@
 /* accessibility hint */
 "Goes to the channel this user is in" = "Đến kênh mà người dùng này đang ở";
 
+/* user accounts */
+"Has every permission and manages the server" = "Có mọi quyền và quản trị máy chủ";
+
 /* TTS EVENT */
 "has joined the channel" = "đã tham gia kênh";
 
@@ -882,6 +921,9 @@
 /* TTS EVENT */
 "has logged out" = "đã đăng xuất";
 
+/* user accounts */
+"Has the permissions given to the account in the Permissions tab" = "Có các quyền được cấp cho tài khoản trong thẻ Quyền";
+
 /* preferences */
 "Headset TX Toggle" = "Chuyển đổi TX bằng tai nghe";
 
@@ -890,6 +932,9 @@
 
 /* server entry */
 "Host address" = "Địa chỉ máy chủ";
+
+/* user accounts */
+"How many commands the user can send to the server in a given time. It stops floods of messages." = "Số lệnh người dùng có thể gửi đến máy chủ trong một khoảng thời gian. Điều này ngăn tin nhắn tràn ngập.";
 
 /* appearance */
 "Import Appearance" = "Nhập giao diện";
@@ -902,6 +947,9 @@
 
 /* preferences */
 "Increment" = "Tăng";
+
+/* user accounts */
+"Initial Channel" = "Kênh ban đầu";
 
 /* sound events */
 "Interception" = "Theo dõi";
@@ -1011,6 +1059,12 @@
 /* appearance */
 "Large" = "Lớn";
 
+/* user accounts */
+"Last Change" = "Lần thay đổi gần nhất";
+
+/* user accounts */
+"Last Login" = "Lần đăng nhập gần nhất";
+
 /* connection quality */
 "Latency" = "Độ trễ";
 
@@ -1058,6 +1112,9 @@
 
 /* preferences */
 "Male" = "Nam";
+
+/* user accounts */
+"Manage" = "Quản lý";
 
 /* preferences */
 "Master Volume" = "Âm lượng chính";
@@ -1195,6 +1252,9 @@
 /* preferences */
 "Neutral" = "Trung tính";
 
+/* user accounts */
+"New Account" = "Tài khoản mới";
+
 /* Dialog message */
 "New Server" = "Máy chủ mới";
 
@@ -1223,6 +1283,9 @@
 /* ban list */
 "No banned users" = "Không có người dùng bị chặn";
 
+/* user accounts */
+"No channel" = "Không có kênh";
+
 /* connection quality */
 "No data" = "Không có dữ liệu";
 
@@ -1231,6 +1294,9 @@
 
 /* create channel */
 "No Interruptions" = "không bị gián đoạn";
+
+/* user accounts */
+"No Limit" = "Không giới hạn";
 
 /* keyboard shortcuts */
 "No Modifier" = "Không có phím bổ trợ";
@@ -1259,6 +1325,9 @@
 /* create channel */
 "No Voice Activation" = "Không kích hoạt bằng giọng nói";
 
+/* user accounts */
+"Nobody can log in with this account until its type is changed" = "Không ai có thể đăng nhập bằng tài khoản này cho đến khi loại tài khoản được thay đổi";
+
 /* default nickname */
 "Noname" = "Không tên";
 
@@ -1273,6 +1342,9 @@
 
 /* live activity */
 "Not transmitting" = "Không truyền";
+
+/* user accounts */
+"Note" = "Ghi chú";
 
 /* preferences */
 "Notifications" = "Thông báo hệ thống";
@@ -1376,6 +1448,9 @@
 
 /* create channel */
 "Permanent Channel" = "Kênh vĩnh viễn";
+
+/* user accounts */
+"Permissions" = "Quyền";
 
 /* file list */
 "Photos and Videos" = "Ảnh và video";
@@ -1529,6 +1604,9 @@
 
 /* serverlist */
 "Remove from Favorites" = "Xóa khỏi mục ưa thích";
+
+/* user accounts */
+"Remove Initial Channel" = "Xóa kênh ban đầu";
 
 /* media stream */
 "Repeat" = "Lặp lại";
@@ -1924,6 +2002,12 @@
 "Text-to-Speech Voice" = "Giọng đọc văn bản";
 
 /* user accounts */
+"The account %@ will be deleted. Whoever is connected with it stays connected until they leave." = "Tài khoản %@ sẽ bị xóa. Ai đang kết nối bằng tài khoản này vẫn giữ kết nối cho đến khi rời đi.";
+
+/* user accounts */
+"The account could not be deleted" = "Không thể xóa tài khoản";
+
+/* user accounts */
 "The account could not be saved" = "Không thể lưu tài khoản";
 
 /* appearance */
@@ -1937,6 +2021,9 @@
 
 /* backup */
 "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "Bản sao lưu chứa mọi cài đặt và danh sách máy chủ, kèm mật khẩu. Hãy giữ tệp ở nơi an toàn.";
+
+/* user accounts */
+"The channel the user joins after logging in. Its password is not asked for." = "Kênh mà người dùng vào sau khi đăng nhập. Không cần nhập mật khẩu của kênh.";
 
 /* media stream */
 "The current file starts again every time it ends" = "Tệp hiện tại phát lại từ đầu mỗi khi kết thúc";
@@ -1958,6 +2045,9 @@
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "Tốc độ của giọng nói là %.1f";
+
+/* user accounts */
+"The server already has an account with that user name" = "Máy chủ đã có tài khoản với tên người dùng đó";
 
 /* appearance */
 "The text of a message is shown in black or white, whichever is easier to read on its color." = "Chữ của tin nhắn hiển thị màu đen hoặc trắng, tùy màu nào dễ đọc hơn trên màu nền của nó.";
@@ -1988,6 +2078,9 @@
 
 /* preferences */
 "This is how announcements sound" = "Thông báo sẽ nghe như thế này";
+
+/* user accounts */
+"This is the account you are logged in with." = "Đây là tài khoản bạn đang đăng nhập.";
 
 /* preferences */
 "This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "Máy chủ này dùng tên hiển thị riêng, %@. Tên này được đổi trong chi tiết máy chủ, ở danh sách máy chủ.";

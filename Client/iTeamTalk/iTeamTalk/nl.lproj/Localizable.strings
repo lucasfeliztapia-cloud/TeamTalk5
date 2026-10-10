@@ -127,6 +127,9 @@
 /* user accounts */
 "A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "Een wijziging van rechten geldt bij de volgende aanmelding van de gebruiker. Wie verbonden is, houdt tot dan de oude.";
 
+/* user accounts */
+"A new account gets the default permissions. They are changed in the Permissions tab." = "Een nieuw account krijgt de standaardrechten. Je wijzigt ze in het tabblad Rechten.";
+
 /* appearance */
 "A theme changes the colors above. You can adjust them afterwards." = "Een thema verandert de kleuren hierboven. Je kunt ze daarna aanpassen.";
 
@@ -147,6 +150,18 @@
 
 /* appearance */
 "Accessibility 5" = "Toegankelijkheid 5";
+
+/* user accounts */
+"Account" = "Account";
+
+/* user accounts */
+"Account deleted" = "Account verwijderd";
+
+/* user accounts */
+"Account saved" = "Account bewaard";
+
+/* user accounts */
+"Account Type" = "Accounttype";
 
 /* server entry
    user detail */
@@ -204,6 +219,9 @@
 "Always Light" = "Altijd licht";
 
 /* user accounts */
+"An account with no user name is the one anybody can log in with." = "Een account zonder gebruikersnaam is het account waarmee iedereen zich kan aanmelden.";
+
+/* user accounts */
 "An administrator has every permission, whatever is set here." = "Een beheerder heeft alle rechten, wat hier ook is ingesteld.";
 
 /* preferences */
@@ -229,6 +247,9 @@
 
 /* text to speech */
 "Announcements" = "Aankondigingen";
+
+/* user accounts */
+"Anonymous Account" = "Anoniem account";
 
 /* user accounts */
 "Anonymous users" = "Anonieme gebruikers";
@@ -428,6 +449,9 @@
 /* media stream */
 "Choose a file" = "Kies een bestand";
 
+/* user accounts */
+"Choose an account to change it or to delete it." = "Kies een account om het te wijzigen of te verwijderen.";
+
 /* channel picker */
 "Choose Channel" = "Kies kanaal";
 
@@ -497,8 +521,14 @@
 /* connection quality */
 "Command Latency (TCP)" = "Vertraging van opdrachten (TCP)";
 
+/* user accounts */
+"Command Limit" = "Opdrachtlimiet";
+
 /* create channel */
 "Commands" = "Opdrachten";
+
+/* user accounts */
+"Commands: %d. Seconds: %d." = "Opdrachten: %d. Seconden: %d.";
 
 /* channel list */
 "Confirm" = "Bevestig";
@@ -610,6 +640,9 @@
 /* server list */
 "Delete \"%@\" from the server list?" = "\"%@\" uit de serverlijst verwijderen?";
 
+/* user accounts */
+"Delete Account" = "Verwijder account";
+
 /* channel detail */
 "Delete Channel" = "Kanaal verwijderen";
 
@@ -637,6 +670,9 @@
 
 /* preferences */
 "Disabled" = "Uitgeschakeld";
+
+/* user accounts */
+"Disabled Account" = "Uitgeschakeld account";
 
 /* channel list */
 "Disconnect" = "Verbreek verbinding";
@@ -867,6 +903,9 @@
 /* accessibility hint */
 "Goes to the channel this user is in" = "Gaat naar het kanaal waarin deze gebruiker zit";
 
+/* user accounts */
+"Has every permission and manages the server" = "Heeft alle rechten en beheert de server";
+
 /* TTS EVENT */
 "has joined the channel" = "is het kanaal binnengekomen";
 
@@ -879,6 +918,9 @@
 /* TTS EVENT */
 "has logged out" = "is uitgelogd";
 
+/* user accounts */
+"Has the permissions given to the account in the Permissions tab" = "Heeft de rechten die het account krijgt in het tabblad Rechten";
+
 /* preferences */
 "Headset TX Toggle" = "Uitzenden schakelen met headset";
 
@@ -887,6 +929,9 @@
 
 /* server entry */
 "Host address" = "Hostadres";
+
+/* user accounts */
+"How many commands the user can send to the server in a given time. It stops floods of messages." = "Hoeveel opdrachten de gebruiker in een bepaalde tijd naar de server kan sturen. Dat voorkomt een stortvloed aan berichten.";
 
 /* appearance */
 "Import Appearance" = "Weergave importeren";
@@ -899,6 +944,9 @@
 
 /* preferences */
 "Increment" = "Verhoog";
+
+/* user accounts */
+"Initial Channel" = "Beginkanaal";
 
 /* sound events */
 "Interception" = "Onderschepping";
@@ -1008,6 +1056,12 @@
 /* appearance */
 "Large" = "Groot";
 
+/* user accounts */
+"Last Change" = "Laatste wijziging";
+
+/* user accounts */
+"Last Login" = "Laatste aanmelding";
+
 /* connection quality */
 "Latency" = "Vertraging";
 
@@ -1055,6 +1109,9 @@
 
 /* preferences */
 "Male" = "Man";
+
+/* user accounts */
+"Manage" = "Beheer";
 
 /* preferences */
 "Master Volume" = "Hoofdvolume";
@@ -1192,6 +1249,9 @@
 /* preferences */
 "Neutral" = "Neutraal";
 
+/* user accounts */
+"New Account" = "Nieuw account";
+
 /* Dialog message */
 "New Server" = "Nieuwe server";
 
@@ -1220,6 +1280,9 @@
 /* ban list */
 "No banned users" = "Geen verbannen gebruikers";
 
+/* user accounts */
+"No channel" = "Geen kanaal";
+
 /* connection quality */
 "No data" = "Geen gegevens";
 
@@ -1228,6 +1291,9 @@
 
 /* create channel */
 "No Interruptions" = "Geen onderbrekingen";
+
+/* user accounts */
+"No Limit" = "Geen limiet";
 
 /* keyboard shortcuts */
 "No Modifier" = "Geen speciale toets";
@@ -1256,6 +1322,9 @@
 /* create channel */
 "No Voice Activation" = "Geen stemactivatie";
 
+/* user accounts */
+"Nobody can log in with this account until its type is changed" = "Niemand kan zich met dit account aanmelden tot het type wordt gewijzigd";
+
 /* default nickname */
 "Noname" = "Geennaam";
 
@@ -1270,6 +1339,9 @@
 
 /* live activity */
 "Not transmitting" = "Zendt niet uit";
+
+/* user accounts */
+"Note" = "Notitie";
 
 /* preferences */
 "Notifications" = "Meldingen";
@@ -1371,6 +1443,9 @@
 
 /* create channel */
 "Permanent Channel" = "Permanent kanaal";
+
+/* user accounts */
+"Permissions" = "Rechten";
 
 /* file list */
 "Photos and Videos" = "Foto's en video's";
@@ -1524,6 +1599,9 @@
 
 /* serverlist */
 "Remove from Favorites" = "Verwijderen uit favorieten";
+
+/* user accounts */
+"Remove Initial Channel" = "Verwijder beginkanaal";
 
 /* media stream */
 "Repeat" = "Herhaal";
@@ -1918,6 +1996,12 @@
 "Text-to-Speech Voice" = "Spraakstem";
 
 /* user accounts */
+"The account %@ will be deleted. Whoever is connected with it stays connected until they leave." = "Het account %@ wordt verwijderd. Wie ermee verbonden is, blijft verbonden tot die vertrekt.";
+
+/* user accounts */
+"The account could not be deleted" = "Het account kon niet worden verwijderd";
+
+/* user accounts */
 "The account could not be saved" = "Het account kon niet worden bewaard";
 
 /* appearance */
@@ -1931,6 +2015,9 @@
 
 /* backup */
 "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "De reservekopie bevat alle instellingen en de serverlijst, met de wachtwoorden. Bewaar het bestand op een veilige plek.";
+
+/* user accounts */
+"The channel the user joins after logging in. Its password is not asked for." = "Het kanaal dat de gebruiker binnengaat na het aanmelden. Het wachtwoord ervan wordt niet gevraagd.";
 
 /* media stream */
 "The current file starts again every time it ends" = "Het huidige bestand begint opnieuw telkens wanneer het eindigt";
@@ -1952,6 +2039,9 @@
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "De snelheid van de sprekende stem is %.1f";
+
+/* user accounts */
+"The server already has an account with that user name" = "De server heeft al een account met die gebruikersnaam";
 
 /* appearance */
 "The text of a message is shown in black or white, whichever is easier to read on its color." = "De tekst van een bericht wordt zwart of wit getoond, wat het best leesbaar is op de kleur ervan.";
@@ -1982,6 +2072,9 @@
 
 /* preferences */
 "This is how announcements sound" = "Zo klinken de aankondigingen";
+
+/* user accounts */
+"This is the account you are logged in with." = "Dit is het account waarmee je bent aangemeld.";
 
 /* preferences */
 "This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "Deze server gebruikt een eigen bijnaam, %@. Die wijzig je in de serverdetails, in de serverlijst.";

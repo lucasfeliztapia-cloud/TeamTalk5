@@ -127,6 +127,9 @@
 /* user accounts */
 "A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "权限更改在用户下次登录时生效。已连接的用户在此之前保留旧权限。";
 
+/* user accounts */
+"A new account gets the default permissions. They are changed in the Permissions tab." = "新账户会获得默认权限。可在“权限”标签页中更改。";
+
 /* appearance */
 "A theme changes the colors above. You can adjust them afterwards." = "主题会更改上面的颜色。之后你可以再调整。";
 
@@ -147,6 +150,18 @@
 
 /* appearance */
 "Accessibility 5" = "辅助功能 5";
+
+/* user accounts */
+"Account" = "账户";
+
+/* user accounts */
+"Account deleted" = "账户已删除";
+
+/* user accounts */
+"Account saved" = "账户已保存";
+
+/* user accounts */
+"Account Type" = "账户类型";
 
 /* server entry
    user detail */
@@ -204,6 +219,9 @@
 "Always Light" = "始终浅色";
 
 /* user accounts */
+"An account with no user name is the one anybody can log in with." = "没有用户名的账户是任何人都可以用来登录的账户。";
+
+/* user accounts */
 "An administrator has every permission, whatever is set here." = "无论此处如何设置，管理员都拥有全部权限。";
 
 /* preferences */
@@ -229,6 +247,9 @@
 
 /* text to speech */
 "Announcements" = "播报";
+
+/* user accounts */
+"Anonymous Account" = "匿名账户";
 
 /* user accounts */
 "Anonymous users" = "匿名用户";
@@ -429,6 +450,9 @@
 /* media stream */
 "Choose a file" = "选取文件";
 
+/* user accounts */
+"Choose an account to change it or to delete it." = "选取一个账户以更改或删除。";
+
 /* channel picker */
 "Choose Channel" = "选取频道";
 
@@ -498,8 +522,14 @@
 /* connection quality */
 "Command Latency (TCP)" = "命令延迟 (TCP)";
 
+/* user accounts */
+"Command Limit" = "命令限制";
+
 /* create channel */
 "Commands" = "命令";
+
+/* user accounts */
+"Commands: %d. Seconds: %d." = "命令：%d。秒：%d。";
 
 /* channel list */
 "Confirm" = "确认";
@@ -611,6 +641,9 @@
 /* server list */
 "Delete \"%@\" from the server list?" = "从服务器列表中删除“%@”？";
 
+/* user accounts */
+"Delete Account" = "删除账户";
+
 /* channel detail */
 "Delete Channel" = "删除频道";
 
@@ -638,6 +671,9 @@
 
 /* preferences */
 "Disabled" = "已停用";
+
+/* user accounts */
+"Disabled Account" = "已停用的账户";
 
 /* channel list */
 "Disconnect" = "断开连接";
@@ -868,6 +904,9 @@
 /* accessibility hint */
 "Goes to the channel this user is in" = "前往此用户所在的频道";
 
+/* user accounts */
+"Has every permission and manages the server" = "拥有所有权限并管理服务器";
+
 /* TTS EVENT */
 "has joined the channel" = "加入了频道";
 
@@ -880,6 +919,9 @@
 /* TTS EVENT */
 "has logged out" = "已登出";
 
+/* user accounts */
+"Has the permissions given to the account in the Permissions tab" = "拥有在“权限”标签页中赋予该账户的权限";
+
 /* preferences */
 "Headset TX Toggle" = "耳机按键切换传输";
 
@@ -888,6 +930,9 @@
 
 /* server entry */
 "Host address" = "主机地址";
+
+/* user accounts */
+"How many commands the user can send to the server in a given time. It stops floods of messages." = "用户在给定时间内可向服务器发送的命令数量。可防止消息刷屏。";
 
 /* appearance */
 "Import Appearance" = "导入外观";
@@ -900,6 +945,9 @@
 
 /* preferences */
 "Increment" = "增加";
+
+/* user accounts */
+"Initial Channel" = "初始频道";
 
 /* sound events */
 "Interception" = "监听";
@@ -1009,6 +1057,12 @@
 /* appearance */
 "Large" = "大";
 
+/* user accounts */
+"Last Change" = "上次更改";
+
+/* user accounts */
+"Last Login" = "上次登录";
+
 /* connection quality */
 "Latency" = "延迟";
 
@@ -1056,6 +1110,9 @@
 
 /* preferences */
 "Male" = "男";
+
+/* user accounts */
+"Manage" = "管理";
 
 /* preferences */
 "Master Volume" = "主音量";
@@ -1193,6 +1250,9 @@
 /* preferences */
 "Neutral" = "中性";
 
+/* user accounts */
+"New Account" = "新建账户";
+
 /* Dialog message */
 "New Server" = "新服务器";
 
@@ -1221,6 +1281,9 @@
 /* ban list */
 "No banned users" = "没有已封禁的用户";
 
+/* user accounts */
+"No channel" = "无频道";
+
 /* connection quality */
 "No data" = "无数据";
 
@@ -1229,6 +1292,9 @@
 
 /* create channel */
 "No Interruptions" = "禁止插话";
+
+/* user accounts */
+"No Limit" = "不限制";
 
 /* keyboard shortcuts */
 "No Modifier" = "无修饰键";
@@ -1257,6 +1323,9 @@
 /* create channel */
 "No Voice Activation" = "禁止语音激活";
 
+/* user accounts */
+"Nobody can log in with this account until its type is changed" = "在更改账户类型之前，任何人都无法使用此账户登录";
+
 /* default nickname */
 "Noname" = "无名氏";
 
@@ -1271,6 +1340,9 @@
 
 /* live activity */
 "Not transmitting" = "未在发送";
+
+/* user accounts */
+"Note" = "备注";
 
 /* preferences */
 "Notifications" = "通知";
@@ -1374,6 +1446,9 @@
 
 /* create channel */
 "Permanent Channel" = "永久频道";
+
+/* user accounts */
+"Permissions" = "权限";
 
 /* file list */
 "Photos and Videos" = "照片和视频";
@@ -1527,6 +1602,9 @@
 
 /* serverlist */
 "Remove from Favorites" = "从收藏中移除";
+
+/* user accounts */
+"Remove Initial Channel" = "移除初始频道";
 
 /* media stream */
 "Repeat" = "重复";
@@ -1921,6 +1999,12 @@
 "Text-to-Speech Voice" = "文本转语音声音";
 
 /* user accounts */
+"The account %@ will be deleted. Whoever is connected with it stays connected until they leave." = "账户 %@ 将被删除。正在使用该账户连接的用户会保持连接，直到离开。";
+
+/* user accounts */
+"The account could not be deleted" = "无法删除该账户";
+
+/* user accounts */
 "The account could not be saved" = "无法保存该账户";
 
 /* appearance */
@@ -1934,6 +2018,9 @@
 
 /* backup */
 "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "备份包含所有设置和服务器列表及其密码。请将文件妥善保管。";
+
+/* user accounts */
+"The channel the user joins after logging in. Its password is not asked for." = "用户登录后加入的频道。无需输入该频道的密码。";
 
 /* media stream */
 "The current file starts again every time it ends" = "当前文件每次结束后重新开始";
@@ -1955,6 +2042,9 @@
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "朗读语速为 %.1f";
+
+/* user accounts */
+"The server already has an account with that user name" = "服务器上已有使用该用户名的账户";
 
 /* appearance */
 "The text of a message is shown in black or white, whichever is easier to read on its color." = "消息的文字以黑色或白色显示，以在其颜色上更易辨认者为准。";
@@ -1985,6 +2075,9 @@
 
 /* preferences */
 "This is how announcements sound" = "播报听起来是这样的";
+
+/* user accounts */
+"This is the account you are logged in with." = "这是您登录所用的账户。";
 
 /* preferences */
 "This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "此服务器使用自己的昵称：%@。请在服务器列表的服务器详情中更改。";

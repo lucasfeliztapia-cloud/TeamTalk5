@@ -127,6 +127,9 @@
 /* user accounts */
 "A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "En ændring af rettigheder gælder, næste gang brugeren logger ind. Den, der er forbundet, beholder de gamle indtil da.";
 
+/* user accounts */
+"A new account gets the default permissions. They are changed in the Permissions tab." = "En ny konto får standardrettighederne. De ændres under fanen Rettigheder.";
+
 /* appearance */
 "A theme changes the colors above. You can adjust them afterwards." = "Et tema ændrer farverne ovenfor. Du kan justere dem bagefter.";
 
@@ -147,6 +150,18 @@
 
 /* appearance */
 "Accessibility 5" = "Tilgængelighed 5";
+
+/* user accounts */
+"Account" = "Konto";
+
+/* user accounts */
+"Account deleted" = "Konto slettet";
+
+/* user accounts */
+"Account saved" = "Konto gemt";
+
+/* user accounts */
+"Account Type" = "Kontotype";
 
 /* server entry
    user detail */
@@ -204,6 +219,9 @@
 "Always Light" = "Altid lys";
 
 /* user accounts */
+"An account with no user name is the one anybody can log in with." = "En konto uden brugernavn er den, alle kan logge ind med.";
+
+/* user accounts */
 "An administrator has every permission, whatever is set here." = "En administrator har alle rettigheder, uanset hvad der er indstillet her.";
 
 /* preferences */
@@ -229,6 +247,9 @@
 
 /* text to speech */
 "Announcements" = "Annonceringer";
+
+/* user accounts */
+"Anonymous Account" = "Anonym konto";
 
 /* user accounts */
 "Anonymous users" = "Anonyme brugere";
@@ -428,6 +449,9 @@
 /* media stream */
 "Choose a file" = "Vælg en fil";
 
+/* user accounts */
+"Choose an account to change it or to delete it." = "Vælg en konto for at ændre eller slette den.";
+
 /* channel picker */
 "Choose Channel" = "Vælg kanal";
 
@@ -497,8 +521,14 @@
 /* connection quality */
 "Command Latency (TCP)" = "Kommandoforsinkelse (TCP)";
 
+/* user accounts */
+"Command Limit" = "Kommandogrænse";
+
 /* create channel */
 "Commands" = "Kommandoer";
+
+/* user accounts */
+"Commands: %d. Seconds: %d." = "Kommandoer: %d. Sekunder: %d.";
 
 /* channel list */
 "Confirm" = "Bekræft";
@@ -610,6 +640,9 @@
 /* server list */
 "Delete \"%@\" from the server list?" = "Slet \"%@\" fra serverlisten?";
 
+/* user accounts */
+"Delete Account" = "Slet konto";
+
 /* channel detail */
 "Delete Channel" = "Slet kanal";
 
@@ -637,6 +670,9 @@
 
 /* preferences */
 "Disabled" = "Slået fra";
+
+/* user accounts */
+"Disabled Account" = "Deaktiveret konto";
 
 /* channel list */
 "Disconnect" = "Afbryd";
@@ -867,6 +903,9 @@
 /* accessibility hint */
 "Goes to the channel this user is in" = "Går til den kanal, denne bruger er i";
 
+/* user accounts */
+"Has every permission and manages the server" = "Har alle rettigheder og administrerer serveren";
+
 /* TTS EVENT */
 "has joined the channel" = "er nu i kanalen";
 
@@ -879,6 +918,9 @@
 /* TTS EVENT */
 "has logged out" = "er logget ud";
 
+/* user accounts */
+"Has the permissions given to the account in the Permissions tab" = "Har de rettigheder, kontoen får under fanen Rettigheder";
+
 /* preferences */
 "Headset TX Toggle" = "Headset TX Omskifter";
 
@@ -887,6 +929,9 @@
 
 /* server entry */
 "Host address" = "Serveradresse";
+
+/* user accounts */
+"How many commands the user can send to the server in a given time. It stops floods of messages." = "Hvor mange kommandoer brugeren kan sende til serveren inden for en given tid. Det forhindrer strømme af beskeder.";
 
 /* appearance */
 "Import Appearance" = "Importer udseende";
@@ -899,6 +944,9 @@
 
 /* preferences */
 "Increment" = "Forøg";
+
+/* user accounts */
+"Initial Channel" = "Startkanal";
 
 /* sound events */
 "Interception" = "Opsnapning";
@@ -1008,6 +1056,12 @@
 /* appearance */
 "Large" = "Stor";
 
+/* user accounts */
+"Last Change" = "Seneste ændring";
+
+/* user accounts */
+"Last Login" = "Seneste login";
+
 /* connection quality */
 "Latency" = "Forsinkelse";
 
@@ -1055,6 +1109,9 @@
 
 /* preferences */
 "Male" = "Mand";
+
+/* user accounts */
+"Manage" = "Administrer";
 
 /* preferences */
 "Master Volume" = "Hovedlydstyrke";
@@ -1192,6 +1249,9 @@
 /* preferences */
 "Neutral" = "Neutral";
 
+/* user accounts */
+"New Account" = "Ny konto";
+
 /* Dialog message */
 "New Server" = "Ny Server";
 
@@ -1220,6 +1280,9 @@
 /* ban list */
 "No banned users" = "Ingen blokerede brugere";
 
+/* user accounts */
+"No channel" = "Ingen kanal";
+
 /* connection quality */
 "No data" = "Ingen data";
 
@@ -1228,6 +1291,9 @@
 
 /* create channel */
 "No Interruptions" = "Ingen afbrydelser";
+
+/* user accounts */
+"No Limit" = "Ingen grænse";
 
 /* keyboard shortcuts */
 "No Modifier" = "Ingen kombitast";
@@ -1256,6 +1322,9 @@
 /* create channel */
 "No Voice Activation" = "Ingen taleaktivering";
 
+/* user accounts */
+"Nobody can log in with this account until its type is changed" = "Ingen kan logge ind med denne konto, før dens type ændres";
+
 /* default nickname */
 "Noname" = "Intet navn";
 
@@ -1270,6 +1339,9 @@
 
 /* live activity */
 "Not transmitting" = "Sender ikke";
+
+/* user accounts */
+"Note" = "Note";
 
 /* preferences */
 "Notifications" = "Notifikationer";
@@ -1371,6 +1443,9 @@
 
 /* create channel */
 "Permanent Channel" = "Permanent Kanal";
+
+/* user accounts */
+"Permissions" = "Rettigheder";
 
 /* file list */
 "Photos and Videos" = "Fotos og videoer";
@@ -1524,6 +1599,9 @@
 
 /* serverlist */
 "Remove from Favorites" = "Fjern fra favoritter";
+
+/* user accounts */
+"Remove Initial Channel" = "Fjern startkanal";
 
 /* media stream */
 "Repeat" = "Gentag";
@@ -1918,6 +1996,12 @@
 "Text-to-Speech Voice" = "Talesyntesestemme";
 
 /* user accounts */
+"The account %@ will be deleted. Whoever is connected with it stays connected until they leave." = "Kontoen %@ bliver slettet. Den, der er forbundet med den, forbliver forbundet, indtil vedkommende går.";
+
+/* user accounts */
+"The account could not be deleted" = "Kontoen kunne ikke slettes";
+
+/* user accounts */
 "The account could not be saved" = "Kontoen kunne ikke gemmes";
 
 /* appearance */
@@ -1931,6 +2015,9 @@
 
 /* backup */
 "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "Sikkerhedskopien indeholder alle indstillinger og serverlisten med deres kodeord. Opbevar filen et sikkert sted.";
+
+/* user accounts */
+"The channel the user joins after logging in. Its password is not asked for." = "Den kanal, brugeren går ind i efter login. Dens kodeord bliver ikke krævet.";
 
 /* media stream */
 "The current file starts again every time it ends" = "Den aktuelle fil starter forfra, hver gang den slutter";
@@ -1952,6 +2039,9 @@
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "Tekst til tale vil ske ved hastigheden %.1f";
+
+/* user accounts */
+"The server already has an account with that user name" = "Serveren har allerede en konto med det brugernavn";
 
 /* appearance */
 "The text of a message is shown in black or white, whichever is easier to read on its color." = "Teksten i en besked vises i sort eller hvid, alt efter hvad der er lettest at læse på dens farve.";
@@ -1982,6 +2072,9 @@
 
 /* preferences */
 "This is how announcements sound" = "Sådan lyder annonceringerne";
+
+/* user accounts */
+"This is the account you are logged in with." = "Det er den konto, du er logget ind med.";
 
 /* preferences */
 "This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "Denne server bruger sit eget kaldenavn, %@. Det ændres i serverdetaljerne i serverlisten.";

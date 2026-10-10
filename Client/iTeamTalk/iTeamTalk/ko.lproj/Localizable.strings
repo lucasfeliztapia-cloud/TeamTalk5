@@ -127,6 +127,9 @@
 /* user accounts */
 "A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "권한 변경은 사용자가 다음에 로그인할 때 적용됩니다. 연결되어 있는 사용자는 그때까지 이전 권한을 유지합니다.";
 
+/* user accounts */
+"A new account gets the default permissions. They are changed in the Permissions tab." = "새로운 계정은 기본 권한을 받습니다. 권한 탭에서 변경합니다.";
+
 /* appearance */
 "A theme changes the colors above. You can adjust them afterwards." = "테마는 위의 색상을 바꿉니다. 그 뒤에 조정할 수 있습니다.";
 
@@ -147,6 +150,18 @@
 
 /* appearance */
 "Accessibility 5" = "손쉬운 사용 5";
+
+/* user accounts */
+"Account" = "계정";
+
+/* user accounts */
+"Account deleted" = "계정 삭제됨";
+
+/* user accounts */
+"Account saved" = "계정 저장됨";
+
+/* user accounts */
+"Account Type" = "계정 유형";
 
 /* server entry
    user detail */
@@ -204,6 +219,9 @@
 "Always Light" = "항상 밝게";
 
 /* user accounts */
+"An account with no user name is the one anybody can log in with." = "사용자 이름이 없는 계정은 누구나 로그인할 수 있는 계정입니다.";
+
+/* user accounts */
 "An administrator has every permission, whatever is set here." = "관리자는 여기서 무엇을 설정하든 모든 권한을 가집니다.";
 
 /* preferences */
@@ -229,6 +247,9 @@
 
 /* text to speech */
 "Announcements" = "알림";
+
+/* user accounts */
+"Anonymous Account" = "익명 계정";
 
 /* user accounts */
 "Anonymous users" = "익명 사용자";
@@ -429,6 +450,9 @@
 /* media stream */
 "Choose a file" = "파일 선택";
 
+/* user accounts */
+"Choose an account to change it or to delete it." = "변경하거나 삭제할 계정을 선택하십시오.";
+
 /* channel picker */
 "Choose Channel" = "채널 선택";
 
@@ -498,8 +522,14 @@
 /* connection quality */
 "Command Latency (TCP)" = "명령 지연 시간 (TCP)";
 
+/* user accounts */
+"Command Limit" = "명령 제한";
+
 /* create channel */
 "Commands" = "명령";
+
+/* user accounts */
+"Commands: %d. Seconds: %d." = "명령: %d. 초: %d.";
 
 /* channel list */
 "Confirm" = "확인";
@@ -611,6 +641,9 @@
 /* server list */
 "Delete \"%@\" from the server list?" = "서버 목록에서 \"%@\" 삭제할까요?";
 
+/* user accounts */
+"Delete Account" = "계정 삭제";
+
 /* channel detail */
 "Delete Channel" = "채널 삭제";
 
@@ -638,6 +671,9 @@
 
 /* preferences */
 "Disabled" = "비활성화됨";
+
+/* user accounts */
+"Disabled Account" = "비활성화된 계정";
 
 /* channel list */
 "Disconnect" = "연결 끊기";
@@ -868,6 +904,9 @@
 /* accessibility hint */
 "Goes to the channel this user is in" = "이 사용자가 있는 채널로 이동합니다";
 
+/* user accounts */
+"Has every permission and manages the server" = "모든 권한을 가지며 서버를 관리합니다";
+
 /* TTS EVENT */
 "has joined the channel" = "채널에 입장함";
 
@@ -880,6 +919,9 @@
 /* TTS EVENT */
 "has logged out" = "로그아웃함";
 
+/* user accounts */
+"Has the permissions given to the account in the Permissions tab" = "권한 탭에서 계정에 부여한 권한을 가집니다";
+
 /* preferences */
 "Headset TX Toggle" = "헤드셋으로 말하기 상태 전환";
 
@@ -888,6 +930,9 @@
 
 /* server entry */
 "Host address" = "호스트 주소";
+
+/* user accounts */
+"How many commands the user can send to the server in a given time. It stops floods of messages." = "사용자가 주어진 시간 동안 서버에 보낼 수 있는 명령 수입니다. 메시지 도배를 막습니다.";
 
 /* appearance */
 "Import Appearance" = "모양 가져오기";
@@ -900,6 +945,9 @@
 
 /* preferences */
 "Increment" = "늘리기";
+
+/* user accounts */
+"Initial Channel" = "초기 채널";
 
 /* sound events */
 "Interception" = "가로채기";
@@ -1009,6 +1057,12 @@
 /* appearance */
 "Large" = "크게";
 
+/* user accounts */
+"Last Change" = "마지막 변경";
+
+/* user accounts */
+"Last Login" = "마지막 로그인";
+
 /* connection quality */
 "Latency" = "지연 시간";
 
@@ -1056,6 +1110,9 @@
 
 /* preferences */
 "Male" = "남성";
+
+/* user accounts */
+"Manage" = "관리";
 
 /* preferences */
 "Master Volume" = "마스터 음량";
@@ -1193,6 +1250,9 @@
 /* preferences */
 "Neutral" = "중립";
 
+/* user accounts */
+"New Account" = "새로운 계정";
+
 /* Dialog message */
 "New Server" = "새 서버";
 
@@ -1221,6 +1281,9 @@
 /* ban list */
 "No banned users" = "차단된 사용자 없음";
 
+/* user accounts */
+"No channel" = "채널 없음";
+
 /* connection quality */
 "No data" = "데이터 없음";
 
@@ -1229,6 +1292,9 @@
 
 /* create channel */
 "No Interruptions" = "끊김 없는 말하기";
+
+/* user accounts */
+"No Limit" = "제한 없음";
 
 /* keyboard shortcuts */
 "No Modifier" = "보조 키 없음";
@@ -1257,6 +1323,9 @@
 /* create channel */
 "No Voice Activation" = "말하기 활성화 금지";
 
+/* user accounts */
+"Nobody can log in with this account until its type is changed" = "유형을 변경하기 전에는 아무도 이 계정으로 로그인할 수 없습니다";
+
 /* default nickname */
 "Noname" = "이름없음";
 
@@ -1271,6 +1340,9 @@
 
 /* live activity */
 "Not transmitting" = "전송 안 함";
+
+/* user accounts */
+"Note" = "메모";
 
 /* preferences */
 "Notifications" = "시스템 알림";
@@ -1374,6 +1446,9 @@
 
 /* create channel */
 "Permanent Channel" = "영구 채널";
+
+/* user accounts */
+"Permissions" = "권한";
 
 /* file list */
 "Photos and Videos" = "사진 및 비디오";
@@ -1527,6 +1602,9 @@
 
 /* serverlist */
 "Remove from Favorites" = "즐겨찾기에서 제거";
+
+/* user accounts */
+"Remove Initial Channel" = "초기 채널 제거";
 
 /* media stream */
 "Repeat" = "반복";
@@ -1921,6 +1999,12 @@
 "Text-to-Speech Voice" = "텍스트 음성 변환 음성";
 
 /* user accounts */
+"The account %@ will be deleted. Whoever is connected with it stays connected until they leave." = "%@ 계정이 삭제됩니다. 이 계정으로 연결된 사용자는 나갈 때까지 연결이 유지됩니다.";
+
+/* user accounts */
+"The account could not be deleted" = "계정을 삭제하지 못했습니다";
+
+/* user accounts */
 "The account could not be saved" = "계정을 저장하지 못했습니다";
 
 /* appearance */
@@ -1934,6 +2018,9 @@
 
 /* backup */
 "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "백업에는 모든 설정과 서버 목록이 암호와 함께 들어 있습니다. 파일을 안전한 곳에 보관하십시오.";
+
+/* user accounts */
+"The channel the user joins after logging in. Its password is not asked for." = "사용자가 로그인한 후 입장하는 채널입니다. 채널 암호를 묻지 않습니다.";
 
 /* media stream */
 "The current file starts again every time it ends" = "현재 파일이 끝날 때마다 처음부터 다시 시작합니다";
@@ -1955,6 +2042,9 @@
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "현재 말하기 속도: %.1f";
+
+/* user accounts */
+"The server already has an account with that user name" = "서버에 해당 사용자 이름의 계정이 이미 있습니다";
 
 /* appearance */
 "The text of a message is shown in black or white, whichever is easier to read on its color." = "메시지의 텍스트는 그 색상 위에서 더 읽기 쉬운 검정이나 흰색으로 표시됩니다.";
@@ -1985,6 +2075,9 @@
 
 /* preferences */
 "This is how announcements sound" = "알림은 이렇게 들립니다";
+
+/* user accounts */
+"This is the account you are logged in with." = "현재 로그인한 계정입니다.";
 
 /* preferences */
 "This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "이 서버는 자체 대화명 %@을(를) 사용합니다. 서버 목록의 서버 세부사항에서 변경합니다.";

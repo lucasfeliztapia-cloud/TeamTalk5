@@ -292,6 +292,12 @@ const TTCHAR* TTKitGetUserAccountString(TTKitUserAccountStringProperty property,
         return userAccount->szUsername;
     case TTKitUserAccountStringNote:
         return userAccount->szNote;
+    case TTKitUserAccountStringPassword:
+        return userAccount->szPassword;
+    case TTKitUserAccountStringLastModified:
+        return userAccount->szLastModified;
+    case TTKitUserAccountStringLastLogin:
+        return userAccount->szLastLoginTime;
     }
     return "";
 }
@@ -336,6 +342,32 @@ void TTKitSetChannelString(TTKitChannelStringProperty property, Channel* channel
         strncpy(channel->szOpPassword, string, TT_STRLEN);
         channel->szOpPassword[TT_STRLEN - 1] = '\0';
         break;
+    }
+}
+
+void TTKitSetUserAccountString(TTKitUserAccountStringProperty property, UserAccount* userAccount, const TTCHAR* string) {
+    TTCHAR* field = 0;
+    switch (property) {
+    case TTKitUserAccountStringInitialChannel:
+        field = userAccount->szInitChannel;
+        break;
+    case TTKitUserAccountStringUsername:
+        field = userAccount->szUsername;
+        break;
+    case TTKitUserAccountStringNote:
+        field = userAccount->szNote;
+        break;
+    case TTKitUserAccountStringPassword:
+        field = userAccount->szPassword;
+        break;
+    case TTKitUserAccountStringLastModified:
+    case TTKitUserAccountStringLastLogin:
+        // written by the server
+        break;
+    }
+    if (field) {
+        strncpy(field, string, TT_STRLEN);
+        field[TT_STRLEN - 1] = 0;
     }
 }
 

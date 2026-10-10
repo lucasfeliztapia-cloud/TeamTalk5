@@ -23,7 +23,10 @@ typedef enum {
 typedef enum {
     TTKitUserAccountStringInitialChannel,
     TTKitUserAccountStringUsername,
-    TTKitUserAccountStringNote
+    TTKitUserAccountStringNote,
+    TTKitUserAccountStringPassword,
+    TTKitUserAccountStringLastModified,
+    TTKitUserAccountStringLastLogin
 } TTKitUserAccountStringProperty;
 
 typedef enum {
@@ -96,5 +99,6 @@ StreamTypes TTKitGetTransmitTypes(const Channel* channel, INT32 userID);
 void TTKitSetTransmitTypes(Channel* channel, INT32 userID, StreamTypes streamTypes);
 
 void TTKitSetChannelString(TTKitChannelStringProperty property, Channel* channel, const TTCHAR* string);
+void TTKitSetUserAccountString(TTKitUserAccountStringProperty property, UserAccount* userAccount, const TTCHAR* string);
 void TTKitSetTextMessageString(TextMessage* message, const TTCHAR* string);
 void TTKitSetEncryptionString(TTKitEncryptionStringProperty property, EncryptionContext* encryption, const TTCHAR* string);

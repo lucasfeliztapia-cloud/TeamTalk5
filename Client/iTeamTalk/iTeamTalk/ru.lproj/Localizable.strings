@@ -127,6 +127,9 @@
 /* user accounts */
 "A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "Изменение прав начинает действовать при следующем входе пользователя. Тот, кто подключён, до тех пор сохраняет прежние.";
 
+/* user accounts */
+"A new account gets the default permissions. They are changed in the Permissions tab." = "Новая учётная запись получает права по умолчанию. Они меняются на вкладке «Права».";
+
 /* appearance */
 "A theme changes the colors above. You can adjust them afterwards." = "Тема меняет цвета выше. Потом их можно настроить.";
 
@@ -147,6 +150,18 @@
 
 /* appearance */
 "Accessibility 5" = "Универсальный доступ 5";
+
+/* user accounts */
+"Account" = "Учётная запись";
+
+/* user accounts */
+"Account deleted" = "Учётная запись удалена";
+
+/* user accounts */
+"Account saved" = "Учётная запись сохранена";
+
+/* user accounts */
+"Account Type" = "Тип учётной записи";
 
 /* server entry
    user detail */
@@ -204,6 +219,9 @@
 "Always Light" = "Всегда светлая";
 
 /* user accounts */
+"An account with no user name is the one anybody can log in with." = "Учётная запись без имени пользователя — та, с которой может войти кто угодно.";
+
+/* user accounts */
 "An administrator has every permission, whatever is set here." = "У администратора есть все права, что бы здесь ни было задано.";
 
 /* preferences */
@@ -229,6 +247,9 @@
 
 /* text to speech */
 "Announcements" = "Произносить";
+
+/* user accounts */
+"Anonymous Account" = "Анонимная учётная запись";
 
 /* user accounts */
 "Anonymous users" = "Анонимные пользователи";
@@ -428,6 +449,9 @@
 /* media stream */
 "Choose a file" = "Выберите файл";
 
+/* user accounts */
+"Choose an account to change it or to delete it." = "Выберите учётную запись, чтобы изменить или удалить её.";
+
 /* channel picker */
 "Choose Channel" = "Выбрать канал";
 
@@ -497,8 +521,14 @@
 /* connection quality */
 "Command Latency (TCP)" = "Задержка команд (TCP)";
 
+/* user accounts */
+"Command Limit" = "Ограничение команд";
+
 /* create channel */
 "Commands" = "Команды";
+
+/* user accounts */
+"Commands: %d. Seconds: %d." = "Команды: %d. Секунды: %d.";
 
 /* channel list */
 "Confirm" = "Подтвердить";
@@ -610,6 +640,9 @@
 /* server list */
 "Delete \"%@\" from the server list?" = "Удалить «%@» из списка серверов?";
 
+/* user accounts */
+"Delete Account" = "Удалить учётную запись";
+
 /* channel detail */
 "Delete Channel" = "Удалить канал";
 
@@ -637,6 +670,9 @@
 
 /* preferences */
 "Disabled" = "Отключено";
+
+/* user accounts */
+"Disabled Account" = "Отключённая учётная запись";
 
 /* channel list */
 "Disconnect" = "Отключиться";
@@ -867,6 +903,9 @@
 /* accessibility hint */
 "Goes to the channel this user is in" = "Переходит в канал, где находится этот пользователь";
 
+/* user accounts */
+"Has every permission and manages the server" = "Имеет все права и управляет сервером";
+
 /* TTS EVENT */
 "has joined the channel" = "присоединился к каналу";
 
@@ -879,6 +918,9 @@
 /* TTS EVENT */
 "has logged out" = "ушёл";
 
+/* user accounts */
+"Has the permissions given to the account in the Permissions tab" = "Имеет права, заданные учётной записи на вкладке «Права»";
+
 /* preferences */
 "Headset TX Toggle" = "Управление Кнопкой Говорить На Гарнитуре";
 
@@ -887,6 +929,9 @@
 
 /* server entry */
 "Host address" = "Адрес хоста";
+
+/* user accounts */
+"How many commands the user can send to the server in a given time. It stops floods of messages." = "Сколько команд пользователь может отправить серверу за заданное время. Это защищает от лавины сообщений.";
 
 /* appearance */
 "Import Appearance" = "Импортировать оформление";
@@ -899,6 +944,9 @@
 
 /* preferences */
 "Increment" = "Увеличить";
+
+/* user accounts */
+"Initial Channel" = "Начальный канал";
 
 /* sound events */
 "Interception" = "Перехват";
@@ -1008,6 +1056,12 @@
 /* appearance */
 "Large" = "Крупный";
 
+/* user accounts */
+"Last Change" = "Последнее изменение";
+
+/* user accounts */
+"Last Login" = "Последний вход";
+
 /* connection quality */
 "Latency" = "Задержка";
 
@@ -1055,6 +1109,9 @@
 
 /* preferences */
 "Male" = "Мужской";
+
+/* user accounts */
+"Manage" = "Управление";
 
 /* preferences */
 "Master Volume" = "Громкость Динамиков";
@@ -1192,6 +1249,9 @@
 /* preferences */
 "Neutral" = "Нейтральный";
 
+/* user accounts */
+"New Account" = "Новая учётная запись";
+
 /* Dialog message */
 "New Server" = "Новый Сервер";
 
@@ -1220,6 +1280,9 @@
 /* ban list */
 "No banned users" = "Нет заблокированных пользователей";
 
+/* user accounts */
+"No channel" = "Нет канала";
+
 /* connection quality */
 "No data" = "Нет данных";
 
@@ -1228,6 +1291,9 @@
 
 /* create channel */
 "No Interruptions" = "Без Прерываний";
+
+/* user accounts */
+"No Limit" = "Без ограничения";
 
 /* keyboard shortcuts */
 "No Modifier" = "Без модификатора";
@@ -1256,6 +1322,9 @@
 /* create channel */
 "No Voice Activation" = "Не Разрешена Голосовая Активация";
 
+/* user accounts */
+"Nobody can log in with this account until its type is changed" = "Никто не сможет войти с этой учётной записью, пока её тип не изменят";
+
 /* default nickname */
 "Noname" = "Без Имени";
 
@@ -1270,6 +1339,9 @@
 
 /* live activity */
 "Not transmitting" = "Не передаёт";
+
+/* user accounts */
+"Note" = "Примечание";
 
 /* preferences */
 "Notifications" = "Уведомления";
@@ -1371,6 +1443,9 @@
 
 /* create channel */
 "Permanent Channel" = "Постоянный Канал";
+
+/* user accounts */
+"Permissions" = "Права";
 
 /* file list */
 "Photos and Videos" = "Фото и видео";
@@ -1524,6 +1599,9 @@
 
 /* serverlist */
 "Remove from Favorites" = "Удалить из избранного";
+
+/* user accounts */
+"Remove Initial Channel" = "Убрать начальный канал";
 
 /* media stream */
 "Repeat" = "Повтор";
@@ -1918,6 +1996,12 @@
 "Text-to-Speech Voice" = "Голос синтеза речи";
 
 /* user accounts */
+"The account %@ will be deleted. Whoever is connected with it stays connected until they leave." = "Учётная запись %@ будет удалена. Тот, кто подключён с ней, останется подключён, пока не выйдет.";
+
+/* user accounts */
+"The account could not be deleted" = "Не удалось удалить учётную запись";
+
+/* user accounts */
 "The account could not be saved" = "Не удалось сохранить учётную запись";
 
 /* appearance */
@@ -1931,6 +2015,9 @@
 
 /* backup */
 "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "Резервная копия содержит все настройки и список серверов вместе с паролями. Храните файл в надёжном месте.";
+
+/* user accounts */
+"The channel the user joins after logging in. Its password is not asked for." = "Канал, в который пользователь входит после входа на сервер. Его пароль не запрашивается.";
 
 /* media stream */
 "The current file starts again every time it ends" = "Текущий файл начинается заново каждый раз, когда заканчивается";
@@ -1952,6 +2039,9 @@
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "Скорость речи голоса %.1f";
+
+/* user accounts */
+"The server already has an account with that user name" = "На сервере уже есть учётная запись с таким именем пользователя";
 
 /* appearance */
 "The text of a message is shown in black or white, whichever is easier to read on its color." = "Текст сообщения показывается чёрным или белым, смотря что легче читается на его цвете.";
@@ -1982,6 +2072,9 @@
 
 /* preferences */
 "This is how announcements sound" = "Так звучат объявления";
+
+/* user accounts */
+"This is the account you are logged in with." = "Это учётная запись, с которой вы вошли.";
 
 /* preferences */
 "This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "Этот сервер использует собственный ник: %@. Он меняется в сведениях о сервере, в списке серверов.";

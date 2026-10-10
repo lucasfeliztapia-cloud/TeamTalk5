@@ -127,6 +127,9 @@
 /* user accounts */
 "A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "يسري تغيير الصلاحيات عند تسجيل الدخول التالي للمستخدم. من هو متصل الآن يحتفظ بالقديمة حتى ذلك الحين.";
 
+/* user accounts */
+"A new account gets the default permissions. They are changed in the Permissions tab." = "يحصل الحساب الجديد على الصلاحيات الافتراضية. تُغيَّر في تبويب الصلاحيات.";
+
 /* appearance */
 "A theme changes the colors above. You can adjust them afterwards." = "السمة تغيّر الألوان أعلاه. يمكنك تعديلها بعد ذلك.";
 
@@ -147,6 +150,18 @@
 
 /* appearance */
 "Accessibility 5" = "تسهيلات الاستخدام 5";
+
+/* user accounts */
+"Account" = "الحساب";
+
+/* user accounts */
+"Account deleted" = "تم حذف الحساب";
+
+/* user accounts */
+"Account saved" = "تم حفظ الحساب";
+
+/* user accounts */
+"Account Type" = "نوع الحساب";
 
 /* server entry
    user detail */
@@ -204,6 +219,9 @@
 "Always Light" = "فاتح دائمًا";
 
 /* user accounts */
+"An account with no user name is the one anybody can log in with." = "الحساب الذي ليس له اسم مستخدم هو الحساب الذي يمكن لأي شخص تسجيل الدخول به.";
+
+/* user accounts */
 "An administrator has every permission, whatever is set here." = "للمدير كل الصلاحيات مهما كان المضبوط هنا.";
 
 /* preferences */
@@ -229,6 +247,9 @@
 
 /* text to speech */
 "Announcements" = "الإعلانات";
+
+/* user accounts */
+"Anonymous Account" = "حساب مجهول";
 
 /* user accounts */
 "Anonymous users" = "مستخدمون مجهولون";
@@ -428,6 +449,9 @@
 /* media stream */
 "Choose a file" = "اختر ملفًا";
 
+/* user accounts */
+"Choose an account to change it or to delete it." = "اختر حسابًا لتعديله أو حذفه.";
+
 /* channel picker */
 "Choose Channel" = "اختيار قناة";
 
@@ -497,8 +521,14 @@
 /* connection quality */
 "Command Latency (TCP)" = "تأخر الأوامر (TCP)";
 
+/* user accounts */
+"Command Limit" = "حد الأوامر";
+
 /* create channel */
 "Commands" = "الأوامر";
+
+/* user accounts */
+"Commands: %d. Seconds: %d." = "الأوامر: %d. الثواني: %d.";
 
 /* channel list */
 "Confirm" = "تأكيد";
@@ -610,6 +640,9 @@
 /* server list */
 "Delete \"%@\" from the server list?" = "حذف \"%@\" من قائمة الخوادم؟";
 
+/* user accounts */
+"Delete Account" = "حذف الحساب";
+
 /* channel detail */
 "Delete Channel" = "حذف القناة";
 
@@ -637,6 +670,9 @@
 
 /* preferences */
 "Disabled" = "معطل";
+
+/* user accounts */
+"Disabled Account" = "حساب معطل";
 
 /* channel list */
 "Disconnect" = "قطع الاتصال";
@@ -867,6 +903,9 @@
 /* accessibility hint */
 "Goes to the channel this user is in" = "يذهب إلى القناة التي فيها هذا المستخدم";
 
+/* user accounts */
+"Has every permission and manages the server" = "له كل الصلاحيات ويدير الخادم";
+
 /* TTS EVENT */
 "has joined the channel" = "إنضم للقناة";
 
@@ -879,6 +918,9 @@
 /* TTS EVENT */
 "has logged out" = "سجل خروج";
 
+/* user accounts */
+"Has the permissions given to the account in the Permissions tab" = "له الصلاحيات الممنوحة للحساب في تبويب الصلاحيات";
+
 /* preferences */
 "Headset TX Toggle" = "تبديل المايكروفون عن طريق سماعة الرأس";
 
@@ -887,6 +929,9 @@
 
 /* server entry */
 "Host address" = "عنوان المضيف";
+
+/* user accounts */
+"How many commands the user can send to the server in a given time. It stops floods of messages." = "عدد الأوامر التي يمكن للمستخدم إرسالها إلى الخادم في مدة محددة. يمنع سيل الرسائل.";
 
 /* appearance */
 "Import Appearance" = "استيراد مظهر";
@@ -899,6 +944,9 @@
 
 /* preferences */
 "Increment" = "زيادة";
+
+/* user accounts */
+"Initial Channel" = "القناة الأولية";
 
 /* sound events */
 "Interception" = "الاعتراض";
@@ -1008,6 +1056,12 @@
 /* appearance */
 "Large" = "كبير";
 
+/* user accounts */
+"Last Change" = "آخر تعديل";
+
+/* user accounts */
+"Last Login" = "آخر تسجيل دخول";
+
 /* connection quality */
 "Latency" = "التأخر";
 
@@ -1055,6 +1109,9 @@
 
 /* preferences */
 "Male" = "ذكر";
+
+/* user accounts */
+"Manage" = "الإدارة";
 
 /* preferences */
 "Master Volume" = "مستوى الصوت الرئيسي";
@@ -1192,6 +1249,9 @@
 /* preferences */
 "Neutral" = "محايد";
 
+/* user accounts */
+"New Account" = "حساب جديد";
+
 /* Dialog message */
 "New Server" = "خادم جديد";
 
@@ -1220,6 +1280,9 @@
 /* ban list */
 "No banned users" = "لا يوجد مستخدمون محظورون";
 
+/* user accounts */
+"No channel" = "لا توجد قناة";
+
 /* connection quality */
 "No data" = "لا توجد بيانات";
 
@@ -1228,6 +1291,9 @@
 
 /* create channel */
 "No Interruptions" = "من دون إنقطاعات";
+
+/* user accounts */
+"No Limit" = "بلا حد";
 
 /* keyboard shortcuts */
 "No Modifier" = "بلا مفتاح تعديل";
@@ -1256,6 +1322,9 @@
 /* create channel */
 "No Voice Activation" = "تعطيل وضع التنشيط الصوتي";
 
+/* user accounts */
+"Nobody can log in with this account until its type is changed" = "لا يمكن لأحد تسجيل الدخول بهذا الحساب حتى يُغيَّر نوعه";
+
 /* default nickname */
 "Noname" = "بدون اسم";
 
@@ -1270,6 +1339,9 @@
 
 /* live activity */
 "Not transmitting" = "لا يرسل";
+
+/* user accounts */
+"Note" = "ملاحظة";
 
 /* preferences */
 "Notifications" = "الإشعارات";
@@ -1371,6 +1443,9 @@
 
 /* create channel */
 "Permanent Channel" = "قناة دائمة";
+
+/* user accounts */
+"Permissions" = "الصلاحيات";
 
 /* file list */
 "Photos and Videos" = "الصور والفيديو";
@@ -1524,6 +1599,9 @@
 
 /* serverlist */
 "Remove from Favorites" = "إزالة من المفضلة";
+
+/* user accounts */
+"Remove Initial Channel" = "إزالة القناة الأولية";
 
 /* media stream */
 "Repeat" = "تكرار";
@@ -1918,6 +1996,12 @@
 "Text-to-Speech Voice" = "صوت تحويل النص إلى كلام";
 
 /* user accounts */
+"The account %@ will be deleted. Whoever is connected with it stays connected until they leave." = "سيُحذف الحساب %@. من هو متصل به يبقى متصلًا حتى يغادر.";
+
+/* user accounts */
+"The account could not be deleted" = "تعذر حذف الحساب";
+
+/* user accounts */
 "The account could not be saved" = "تعذر حفظ الحساب";
 
 /* appearance */
@@ -1931,6 +2015,9 @@
 
 /* backup */
 "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "تحتوي النسخة الاحتياطية على كل الإعدادات وقائمة الخوادم مع كلمات مرورها. احتفظ بالملف في مكان آمن.";
+
+/* user accounts */
+"The channel the user joins after logging in. Its password is not asked for." = "القناة التي ينضم إليها المستخدم بعد تسجيل الدخول. لا تُطلب كلمة مرورها.";
 
 /* media stream */
 "The current file starts again every time it ends" = "يبدأ الملف الحالي من جديد كلما انتهى";
@@ -1952,6 +2039,9 @@
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "سرعة الكلام للصوت المتحدث هي %.1f";
+
+/* user accounts */
+"The server already has an account with that user name" = "لدى الخادم حساب بهذا الاسم بالفعل";
 
 /* appearance */
 "The text of a message is shown in black or white, whichever is easier to read on its color." = "يظهر نص الرسالة بالأسود أو الأبيض، أيهما أسهل قراءة على لونها.";
@@ -1982,6 +2072,9 @@
 
 /* preferences */
 "This is how announcements sound" = "هكذا تبدو الإعلانات";
+
+/* user accounts */
+"This is the account you are logged in with." = "هذا هو الحساب الذي سجّلت الدخول به.";
 
 /* preferences */
 "This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "يستخدم هذا الخادم اسمًا مستعارًا خاصًا به: %@. يُغيَّر من تفاصيل الخادم في قائمة الخوادم.";

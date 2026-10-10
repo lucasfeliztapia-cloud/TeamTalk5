@@ -267,6 +267,12 @@ public final class TeamTalkClient {
         return TT_DoNewUserAccount(instance, &account)
     }
 
+    /// For administrators only. Whoever is logged in with the account stays
+    /// connected: the server only forgets it.
+    public func deleteUserAccount(username: String) -> Int32 {
+        TT_DoDeleteUserAccount(instance, username)
+    }
+
     @discardableResult
     public func moveUser(id userID: Int32, toChannelID channelID: Int32) -> Int32 {
         TT_DoMoveUser(instance, userID, channelID)

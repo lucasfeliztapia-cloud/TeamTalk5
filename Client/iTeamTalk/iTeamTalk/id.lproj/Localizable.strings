@@ -127,6 +127,9 @@
 /* user accounts */
 "A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "Perubahan izin berlaku saat pengguna masuk berikutnya. Yang sedang terhubung tetap memakai izin lama sampai saat itu.";
 
+/* user accounts */
+"A new account gets the default permissions. They are changed in the Permissions tab." = "Akun baru mendapat izin bawaan. Izin itu diubah di tab Izin.";
+
 /* appearance */
 "A theme changes the colors above. You can adjust them afterwards." = "Tema mengubah warna di atas. Anda dapat menyesuaikannya setelah itu.";
 
@@ -147,6 +150,18 @@
 
 /* appearance */
 "Accessibility 5" = "Aksesibilitas 5";
+
+/* user accounts */
+"Account" = "Akun";
+
+/* user accounts */
+"Account deleted" = "Akun dihapus";
+
+/* user accounts */
+"Account saved" = "Akun disimpan";
+
+/* user accounts */
+"Account Type" = "Jenis Akun";
 
 /* server entry
    user detail */
@@ -204,6 +219,9 @@
 "Always Light" = "Selalu Terang";
 
 /* user accounts */
+"An account with no user name is the one anybody can log in with." = "Akun tanpa nama pengguna adalah akun yang dapat dipakai siapa saja untuk masuk.";
+
+/* user accounts */
 "An administrator has every permission, whatever is set here." = "Administrator memiliki semua izin, apa pun yang diatur di sini.";
 
 /* preferences */
@@ -229,6 +247,9 @@
 
 /* text to speech */
 "Announcements" = "Pemberitahuan";
+
+/* user accounts */
+"Anonymous Account" = "Akun Anonim";
 
 /* user accounts */
 "Anonymous users" = "Pengguna anonim";
@@ -429,6 +450,9 @@
 /* media stream */
 "Choose a file" = "Pilih file";
 
+/* user accounts */
+"Choose an account to change it or to delete it." = "Pilih akun untuk mengubah atau menghapusnya.";
+
 /* channel picker */
 "Choose Channel" = "Pilih Saluran";
 
@@ -498,8 +522,14 @@
 /* connection quality */
 "Command Latency (TCP)" = "Latensi Perintah (TCP)";
 
+/* user accounts */
+"Command Limit" = "Batas Perintah";
+
 /* create channel */
 "Commands" = "Perintah";
+
+/* user accounts */
+"Commands: %d. Seconds: %d." = "Perintah: %d. Detik: %d.";
 
 /* channel list */
 "Confirm" = "Konfirmasi";
@@ -611,6 +641,9 @@
 /* server list */
 "Delete \"%@\" from the server list?" = "Hapus \"%@\" dari daftar server?";
 
+/* user accounts */
+"Delete Account" = "Hapus Akun";
+
 /* channel detail */
 "Delete Channel" = "Hapus Saluran";
 
@@ -638,6 +671,9 @@
 
 /* preferences */
 "Disabled" = "Nonaktif";
+
+/* user accounts */
+"Disabled Account" = "Akun Nonaktif";
 
 /* channel list */
 "Disconnect" = "Putuskan";
@@ -868,6 +904,9 @@
 /* accessibility hint */
 "Goes to the channel this user is in" = "Membuka saluran tempat pengguna ini berada";
 
+/* user accounts */
+"Has every permission and manages the server" = "Memiliki semua izin dan mengelola server";
+
 /* TTS EVENT */
 "has joined the channel" = "telah bergabung dengan saluran";
 
@@ -880,6 +919,9 @@
 /* TTS EVENT */
 "has logged out" = "telah keluar dari server";
 
+/* user accounts */
+"Has the permissions given to the account in the Permissions tab" = "Memiliki izin yang diberikan kepada akun di tab Izin";
+
 /* preferences */
 "Headset TX Toggle" = "Alihkan TX dengan Headset";
 
@@ -888,6 +930,9 @@
 
 /* server entry */
 "Host address" = "Alamat IP atau Alamat host";
+
+/* user accounts */
+"How many commands the user can send to the server in a given time. It stops floods of messages." = "Berapa banyak perintah yang dapat dikirim pengguna ke server dalam waktu tertentu. Ini mencegah banjir pesan.";
 
 /* appearance */
 "Import Appearance" = "Impor Tampilan";
@@ -900,6 +945,9 @@
 
 /* preferences */
 "Increment" = "Tambah";
+
+/* user accounts */
+"Initial Channel" = "Saluran Awal";
 
 /* sound events */
 "Interception" = "Penyadapan";
@@ -1009,6 +1057,12 @@
 /* appearance */
 "Large" = "Besar";
 
+/* user accounts */
+"Last Change" = "Perubahan Terakhir";
+
+/* user accounts */
+"Last Login" = "Terakhir Masuk";
+
 /* connection quality */
 "Latency" = "Latensi";
 
@@ -1056,6 +1110,9 @@
 
 /* preferences */
 "Male" = "Pria";
+
+/* user accounts */
+"Manage" = "Kelola";
 
 /* preferences */
 "Master Volume" = "Volume utama";
@@ -1193,6 +1250,9 @@
 /* preferences */
 "Neutral" = "Netral";
 
+/* user accounts */
+"New Account" = "Akun Baru";
+
 /* Dialog message */
 "New Server" = "Server Baru";
 
@@ -1221,6 +1281,9 @@
 /* ban list */
 "No banned users" = "Tidak ada pengguna dicekal";
 
+/* user accounts */
+"No channel" = "Tidak ada saluran";
+
 /* connection quality */
 "No data" = "Tidak ada data";
 
@@ -1229,6 +1292,9 @@
 
 /* create channel */
 "No Interruptions" = "Tanpa Interupsi";
+
+/* user accounts */
+"No Limit" = "Tanpa Batas";
 
 /* keyboard shortcuts */
 "No Modifier" = "Tanpa Pengubah";
@@ -1257,6 +1323,9 @@
 /* create channel */
 "No Voice Activation" = "Tanpa Aktivasi Suara";
 
+/* user accounts */
+"Nobody can log in with this account until its type is changed" = "Tidak ada yang dapat masuk dengan akun ini sampai jenisnya diubah";
+
 /* default nickname */
 "Noname" = "TanpaNama";
 
@@ -1271,6 +1340,9 @@
 
 /* live activity */
 "Not transmitting" = "Tidak mengirim";
+
+/* user accounts */
+"Note" = "Catatan";
 
 /* preferences */
 "Notifications" = "Notifikasi";
@@ -1374,6 +1446,9 @@
 
 /* create channel */
 "Permanent Channel" = "Saluran Permanen";
+
+/* user accounts */
+"Permissions" = "Izin";
 
 /* file list */
 "Photos and Videos" = "Foto dan Video";
@@ -1527,6 +1602,9 @@
 
 /* serverlist */
 "Remove from Favorites" = "Hapus dari Favorit";
+
+/* user accounts */
+"Remove Initial Channel" = "Hapus Saluran Awal";
 
 /* media stream */
 "Repeat" = "Ulangi";
@@ -1921,6 +1999,12 @@
 "Text-to-Speech Voice" = "Suara Teks-ke-Ucapan";
 
 /* user accounts */
+"The account %@ will be deleted. Whoever is connected with it stays connected until they leave." = "Akun %@ akan dihapus. Yang sedang terhubung dengan akun itu tetap terhubung sampai keluar.";
+
+/* user accounts */
+"The account could not be deleted" = "Akun tidak dapat dihapus";
+
+/* user accounts */
 "The account could not be saved" = "Akun tidak dapat disimpan";
 
 /* appearance */
@@ -1934,6 +2018,9 @@
 
 /* backup */
 "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "Cadangan berisi semua pengaturan dan daftar server beserta kata sandinya. Simpan file di tempat yang aman.";
+
+/* user accounts */
+"The channel the user joins after logging in. Its password is not asked for." = "Saluran yang dimasuki pengguna setelah masuk. Kata sandinya tidak diminta.";
 
 /* media stream */
 "The current file starts again every time it ends" = "File saat ini dimulai lagi setiap kali selesai";
@@ -1955,6 +2042,9 @@
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "tingkat kecepatan suara Teks Ke Ucapan adalah %.1f";
+
+/* user accounts */
+"The server already has an account with that user name" = "Server sudah memiliki akun dengan nama pengguna itu";
 
 /* appearance */
 "The text of a message is shown in black or white, whichever is easier to read on its color." = "Teks pesan ditampilkan hitam atau putih, mana yang lebih mudah dibaca di atas warnanya.";
@@ -1985,6 +2075,9 @@
 
 /* preferences */
 "This is how announcements sound" = "Beginilah bunyi pemberitahuan";
+
+/* user accounts */
+"This is the account you are logged in with." = "Ini akun yang Anda pakai untuk masuk.";
 
 /* preferences */
 "This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "Server ini memakai nama panggilan sendiri, %@. Nama itu diubah di detail server, di daftar server.";

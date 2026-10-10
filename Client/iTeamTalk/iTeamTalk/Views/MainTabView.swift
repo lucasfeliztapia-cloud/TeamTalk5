@@ -306,7 +306,7 @@ private struct ChannelsTabView: View {
                     case .bans:
                         BanListView()
                     case .accounts:
-                        UserAccountsView()
+                        UserAccountsView(channels: model.channelNodes(), ownUsername: model.ownUsername)
                     }
                 }
                 .sheet(item: $model.channelDetailModel) { detailModel in

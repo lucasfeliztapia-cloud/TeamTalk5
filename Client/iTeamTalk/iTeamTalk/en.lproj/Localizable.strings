@@ -127,6 +127,9 @@
 /* user accounts */
 "A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then." = "A change of permissions applies the next time the user logs in. Whoever is connected keeps the old ones until then.";
 
+/* user accounts */
+"A new account gets the default permissions. They are changed in the Permissions tab." = "A new account gets the default permissions. They are changed in the Permissions tab.";
+
 /* appearance */
 "A theme changes the colors above. You can adjust them afterwards." = "A theme changes the colors above. You can adjust them afterwards.";
 
@@ -147,6 +150,18 @@
 
 /* appearance */
 "Accessibility 5" = "Accessibility 5";
+
+/* user accounts */
+"Account" = "Account";
+
+/* user accounts */
+"Account deleted" = "Account deleted";
+
+/* user accounts */
+"Account saved" = "Account saved";
+
+/* user accounts */
+"Account Type" = "Account Type";
 
 /* server entry
    user detail */
@@ -205,6 +220,9 @@
 "Always Light" = "Always Light";
 
 /* user accounts */
+"An account with no user name is the one anybody can log in with." = "An account with no user name is the one anybody can log in with.";
+
+/* user accounts */
 "An administrator has every permission, whatever is set here." = "An administrator has every permission, whatever is set here.";
 
 /* preferences */
@@ -230,6 +248,9 @@
 
 /* text to speech */
 "Announcements" = "Announcements";
+
+/* user accounts */
+"Anonymous Account" = "Anonymous Account";
 
 /* user accounts */
 "Anonymous users" = "Anonymous users";
@@ -430,6 +451,9 @@
 /* media stream */
 "Choose a file" = "Choose a file";
 
+/* user accounts */
+"Choose an account to change it or to delete it." = "Choose an account to change it or to delete it.";
+
 /* channel picker */
 "Choose Channel" = "Choose Channel";
 
@@ -499,8 +523,14 @@
 /* connection quality */
 "Command Latency (TCP)" = "Command Latency (TCP)";
 
+/* user accounts */
+"Command Limit" = "Command Limit";
+
 /* create channel */
 "Commands" = "Commands";
+
+/* user accounts */
+"Commands: %d. Seconds: %d." = "Commands: %d. Seconds: %d.";
 
 /* channel list */
 "Confirm" = "Confirm";
@@ -612,6 +642,9 @@
 /* server list */
 "Delete \"%@\" from the server list?" = "Delete \"%@\" from the server list?";
 
+/* user accounts */
+"Delete Account" = "Delete Account";
+
 /* channel detail */
 "Delete Channel" = "Delete Channel";
 
@@ -639,6 +672,9 @@
 
 /* preferences */
 "Disabled" = "Disabled";
+
+/* user accounts */
+"Disabled Account" = "Disabled Account";
 
 /* channel list */
 "Disconnect" = "Disconnect";
@@ -870,6 +906,9 @@
 /* accessibility hint */
 "Goes to the channel this user is in" = "Goes to the channel this user is in";
 
+/* user accounts */
+"Has every permission and manages the server" = "Has every permission and manages the server";
+
 /* TTS EVENT */
 "has joined the channel" = "has joined the channel";
 
@@ -882,6 +921,9 @@
 /* TTS EVENT */
 "has logged out" = "has logged out";
 
+/* user accounts */
+"Has the permissions given to the account in the Permissions tab" = "Has the permissions given to the account in the Permissions tab";
+
 /* preferences */
 "Headset TX Toggle" = "Headset TX Toggle";
 
@@ -890,6 +932,9 @@
 
 /* server entry */
 "Host address" = "Host address";
+
+/* user accounts */
+"How many commands the user can send to the server in a given time. It stops floods of messages." = "How many commands the user can send to the server in a given time. It stops floods of messages.";
 
 /* appearance */
 "Import Appearance" = "Import Appearance";
@@ -902,6 +947,9 @@
 
 /* preferences */
 "Increment" = "Increment";
+
+/* user accounts */
+"Initial Channel" = "Initial Channel";
 
 /* sound events */
 "Interception" = "Interception";
@@ -1011,6 +1059,12 @@
 /* appearance */
 "Large" = "Large";
 
+/* user accounts */
+"Last Change" = "Last Change";
+
+/* user accounts */
+"Last Login" = "Last Login";
+
 /* connection quality */
 "Latency" = "Latency";
 
@@ -1058,6 +1112,9 @@
 
 /* preferences */
 "Male" = "Male";
+
+/* user accounts */
+"Manage" = "Manage";
 
 /* preferences */
 "Master Volume" = "Master Volume";
@@ -1195,6 +1252,9 @@
 /* preferences */
 "Neutral" = "Neutral";
 
+/* user accounts */
+"New Account" = "New Account";
+
 /* Dialog message */
 "New Server" = "New Server";
 
@@ -1223,6 +1283,9 @@
 /* ban list */
 "No banned users" = "No banned users";
 
+/* user accounts */
+"No channel" = "No channel";
+
 /* connection quality */
 "No data" = "No data";
 
@@ -1231,6 +1294,9 @@
 
 /* create channel */
 "No Interruptions" = "No Interruptions";
+
+/* user accounts */
+"No Limit" = "No Limit";
 
 /* keyboard shortcuts */
 "No Modifier" = "No Modifier";
@@ -1259,6 +1325,9 @@
 /* create channel */
 "No Voice Activation" = "No Voice Activation";
 
+/* user accounts */
+"Nobody can log in with this account until its type is changed" = "Nobody can log in with this account until its type is changed";
+
 /* default nickname */
 "Noname" = "Noname";
 
@@ -1273,6 +1342,9 @@
 
 /* live activity */
 "Not transmitting" = "Not transmitting";
+
+/* user accounts */
+"Note" = "Note";
 
 /* preferences */
 "Notifications" = "Notifications";
@@ -1376,6 +1448,9 @@
 
 /* create channel */
 "Permanent Channel" = "Permanent Channel";
+
+/* user accounts */
+"Permissions" = "Permissions";
 
 /* file list */
 "Photos and Videos" = "Photos and Videos";
@@ -1529,6 +1604,9 @@
 
 /* serverlist */
 "Remove from Favorites" = "Remove from Favorites";
+
+/* user accounts */
+"Remove Initial Channel" = "Remove Initial Channel";
 
 /* media stream */
 "Repeat" = "Repeat";
@@ -1924,6 +2002,12 @@
 "Text-to-Speech Voice" = "Text-to-Speech Voice";
 
 /* user accounts */
+"The account %@ will be deleted. Whoever is connected with it stays connected until they leave." = "The account %@ will be deleted. Whoever is connected with it stays connected until they leave.";
+
+/* user accounts */
+"The account could not be deleted" = "The account could not be deleted";
+
+/* user accounts */
 "The account could not be saved" = "The account could not be saved";
 
 /* appearance */
@@ -1937,6 +2021,9 @@
 
 /* backup */
 "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe." = "The backup holds every setting and the list of servers, with their passwords. Keep the file somewhere safe.";
+
+/* user accounts */
+"The channel the user joins after logging in. Its password is not asked for." = "The channel the user joins after logging in. Its password is not asked for.";
 
 /* media stream */
 "The current file starts again every time it ends" = "The current file starts again every time it ends";
@@ -1958,6 +2045,9 @@
 
 /* preferences */
 "The rate of the speaking voice is %.1f" = "The rate of the speaking voice is %.1f";
+
+/* user accounts */
+"The server already has an account with that user name" = "The server already has an account with that user name";
 
 /* appearance */
 "The text of a message is shown in black or white, whichever is easier to read on its color." = "The text of a message is shown in black or white, whichever is easier to read on its color.";
@@ -1988,6 +2078,9 @@
 
 /* preferences */
 "This is how announcements sound" = "This is how announcements sound";
+
+/* user accounts */
+"This is the account you are logged in with." = "This is the account you are logged in with.";
 
 /* preferences */
 "This server uses its own nickname, %@. It is changed in the details of the server, in the server list." = "This server uses its own nickname, %@. It is changed in the details of the server, in the server list.";
