@@ -58,9 +58,6 @@
 /* user accounts */
 "%d accounts changed. It applies to each user the next time they log in." = "%d hesap değiştirildi. Her kullanıcı için bir sonraki oturum açışında geçerli olur.";
 
-/* diagnostics */
-"%d entries" = "%d kayıt";
-
 /* media stream */
 "%d files added to the playlist" = "%d dosya oynatma listesine eklendi";
 
@@ -199,9 +196,6 @@
 
 /* all users */
 "All Users" = "Tüm Kullanıcılar";
-
-/* diagnostics */
-"Allowed" = "İzin verildi";
 
 /* appearance */
 "Always Dark" = "Her Zaman Koyu";
@@ -432,9 +426,6 @@
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "Yalnızca bu sunucu BearWare.dk Web Oturumu'nu etkinleştirdiyse işaretleyin";
 
-/* diagnostics */
-"Checks" = "Denetimler";
-
 /* media stream */
 "Choose a file" = "Dosya seçin";
 
@@ -470,9 +461,6 @@
 
 /* channel detail */
 "Classroom" = "Sınıf";
-
-/* diagnostics */
-"Clear Log" = "Günlüğü Temizle";
 
 /* server list */
 "Clear text" = "Metni sil";
@@ -647,12 +635,6 @@
 
 /* preferences */
 "Details Position" = "Ayrıntıların Konumu";
-
-/* diagnostics */
-"Diagnostic Log" = "Tanılama Günlüğü";
-
-/* diagnostics */
-"Diagnostics" = "Tanılama";
 
 /* preferences */
 "Disabled" = "Devre dışı";
@@ -1051,9 +1033,6 @@
 /* media stream */
 "Live" = "Canlı";
 
-/* diagnostics */
-"Live Activities" = "Canlı Etkinlikler";
-
 /* serverlist */
 "Local server" = "Yerel sunucu";
 
@@ -1281,20 +1260,8 @@
 /* keyboard shortcuts and voice cleanup */
 "None" = "Yok";
 
-/* diagnostics */
-"Not allowed. Nobody can hear you until you turn it on in Settings, under TeamTalk." = "İzin verilmedi. Ayarlar'da TeamTalk altında açana kadar kimse sizi duyamaz.";
-
-/* diagnostics */
-"Not asked yet. iOS asks the first time you join a channel." = "Henüz sorulmadı. iOS, bir kanala ilk katıldığınızda sorar.";
-
-/* diagnostics */
-"Not available with this installation. The widget cannot show your servers and the controls do not show their state." = "Bu kurulumda kullanılamaz. Araç takımı sunucularınızı gösteremez ve denetimler durumlarını göstermez.";
-
 /* live activity */
 "Not in a channel" = "Bir kanalda değil";
-
-/* diagnostics */
-"Not installed. The app was installed without its extension, so there are no Live Activities, widget or controls. Install it again with a tool that keeps the extensions." = "Yüklü değil. Uygulama uzantısı olmadan yüklenmiş, bu yüzden Canlı Etkinlikler, araç takımı ve denetimler yok. Uzantıları koruyan bir araçla yeniden yükleyin.";
 
 /* media stream */
 "Not streaming" = "Yayın yok";
@@ -1335,9 +1302,6 @@
 
 /* text message */
 "Open Link" = "Bağlantıyı Aç";
-
-/* diagnostics */
-"Open Settings" = "Ayarlar'ı Aç";
 
 /* accessibility hint */
 "Opens a menu with more options" = "Daha fazla seçenek içeren bir menü açar";
@@ -1717,9 +1681,6 @@
 /* file list */
 "Share" = "Paylaş";
 
-/* diagnostics */
-"Share Log" = "Günlüğü Paylaş";
-
 /* serverlist */
 "Share Server" = "Sunucuyu Paylaş";
 
@@ -1974,12 +1935,6 @@
 /* media stream */
 "The current file starts again every time it ends" = "Geçerli dosya her bittiğinde yeniden başlar";
 
-/* diagnostics */
-"The log is empty" = "Günlük boş";
-
-/* diagnostics */
-"The log records what the app does: connection, sound devices, transfers and errors. It holds no passwords and nothing of what is said or written." = "Günlük, uygulamanın ne yaptığını kaydeder: bağlantı, ses aygıtları, aktarımlar ve hatalar. Parola ya da söylenen veya yazılan hiçbir şeyi içermez.";
-
 /* appearance */
 "The messages can have a text size of their own, and the server events a font of their own." = "İletilerin kendi metin boyutu, sunucu olaylarının da kendi yazı tipi olabilir.";
 
@@ -2012,9 +1967,6 @@
 
 /* text to speech events */
 "These two settings change every announcement at once. Each one can still be set on its own below." = "Bu iki ayar tüm duyuruları aynı anda değiştirir. Her duyuru aşağıda yine ayrı ayrı ayarlanabilir.";
-
-/* diagnostics */
-"They need iOS 17 or later" = "iOS 17 veya sonrası gerekir";
 
 /* media stream */
 "This file cannot be streamed" = "Bu dosya yayınlanamıyor";
@@ -2078,9 +2030,6 @@
 
 /* state of the microphone button */
 "Turned off" = "Kapalı";
-
-/* diagnostics */
-"Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Kapalı. Ayarlar'da TeamTalk altında Canlı Etkinlikler'i açın.";
 
 /* state of the microphone button */
 "Turned on" = "Açık";
@@ -2307,12 +2256,6 @@
 /* Sound Devices */
 "What is done to your microphone before it is sent: removing echo, reducing noise and levelling the volume." = "Mikrofonunuza gönderilmeden önce yapılanlar: yankıyı giderme, gürültüyü azaltma ve ses düzeyini dengeleme.";
 
-/* diagnostics */
-"What the app has been doing, to share when something fails" = "Uygulamanın yaptıkları, bir şey ters gittiğinde paylaşmak için";
-
-/* diagnostics */
-"What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Uygulamanın iPhone'dan gereksinim duydukları. Burada bir şey doğru değilse düzeltilecek ilk şey odur.";
-
 /* media stream */
 "When a file ends the next one starts, and after the last one the list starts again" = "Bir dosya bittiğinde sıradaki başlar ve sonuncusundan sonra liste yeniden başlar";
 
@@ -2333,9 +2276,6 @@
 
 /* microphone mode */
 "Wide Spectrum" = "Geniş Spektrum";
-
-/* diagnostics */
-"Widget and Controls" = "Araç Takımı ve Denetimler";
 
 /* accessibility hint */
 "Write your message here" = "İletinizi buraya yazın";

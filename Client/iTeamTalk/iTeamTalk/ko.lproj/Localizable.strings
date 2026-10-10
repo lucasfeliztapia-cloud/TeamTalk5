@@ -58,9 +58,6 @@
 /* user accounts */
 "%d accounts changed. It applies to each user the next time they log in." = "계정 %d개를 변경했습니다. 각 사용자가 다음에 로그인할 때 적용됩니다.";
 
-/* diagnostics */
-"%d entries" = "항목 %d개";
-
 /* media stream */
 "%d files added to the playlist" = "파일 %d개가 재생 목록에 추가됨";
 
@@ -199,9 +196,6 @@
 
 /* all users */
 "All Users" = "모든 사용자";
-
-/* diagnostics */
-"Allowed" = "허용됨";
 
 /* appearance */
 "Always Dark" = "항상 어둡게";
@@ -432,9 +426,6 @@
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "이 서버에서 BearWare.dk 웹 로그인을 활성화한 경우에만 선택하세요";
 
-/* diagnostics */
-"Checks" = "점검";
-
 /* media stream */
 "Choose a file" = "파일 선택";
 
@@ -470,9 +461,6 @@
 
 /* channel detail */
 "Classroom" = "교실";
-
-/* diagnostics */
-"Clear Log" = "로그 지우기";
 
 /* server list */
 "Clear text" = "텍스트 지우기";
@@ -647,12 +635,6 @@
 
 /* preferences */
 "Details Position" = "세부사항 위치";
-
-/* diagnostics */
-"Diagnostic Log" = "진단 로그";
-
-/* diagnostics */
-"Diagnostics" = "진단";
 
 /* preferences */
 "Disabled" = "비활성화됨";
@@ -1051,9 +1033,6 @@
 /* media stream */
 "Live" = "실시간";
 
-/* diagnostics */
-"Live Activities" = "실시간 현황";
-
 /* serverlist */
 "Local server" = "로컬 서버";
 
@@ -1281,20 +1260,8 @@
 /* keyboard shortcuts and voice cleanup */
 "None" = "없음";
 
-/* diagnostics */
-"Not allowed. Nobody can hear you until you turn it on in Settings, under TeamTalk." = "허용되지 않음. 설정의 TeamTalk에서 켜기 전에는 아무도 내 소리를 들을 수 없습니다.";
-
-/* diagnostics */
-"Not asked yet. iOS asks the first time you join a channel." = "아직 묻지 않음. 채널에 처음 입장할 때 iOS가 묻습니다.";
-
-/* diagnostics */
-"Not available with this installation. The widget cannot show your servers and the controls do not show their state." = "이 설치에서는 사용할 수 없습니다. 위젯은 서버를 표시할 수 없고 제어 항목은 상태를 표시하지 않습니다.";
-
 /* live activity */
 "Not in a channel" = "채널에 없음";
-
-/* diagnostics */
-"Not installed. The app was installed without its extension, so there are no Live Activities, widget or controls. Install it again with a tool that keeps the extensions." = "설치되지 않음. 앱이 확장 프로그램 없이 설치되어 실시간 현황, 위젯, 제어 항목이 없습니다. 확장 프로그램을 유지하는 도구로 다시 설치하십시오.";
 
 /* media stream */
 "Not streaming" = "스트리밍 안 함";
@@ -1335,9 +1302,6 @@
 
 /* text message */
 "Open Link" = "링크 열기";
-
-/* diagnostics */
-"Open Settings" = "설정 열기";
 
 /* accessibility hint */
 "Opens a menu with more options" = "더 많은 옵션이 있는 메뉴를 엽니다";
@@ -1717,9 +1681,6 @@
 /* file list */
 "Share" = "공유";
 
-/* diagnostics */
-"Share Log" = "로그 공유";
-
 /* serverlist */
 "Share Server" = "서버 공유";
 
@@ -1974,12 +1935,6 @@
 /* media stream */
 "The current file starts again every time it ends" = "현재 파일이 끝날 때마다 처음부터 다시 시작합니다";
 
-/* diagnostics */
-"The log is empty" = "로그가 비어 있습니다";
-
-/* diagnostics */
-"The log records what the app does: connection, sound devices, transfers and errors. It holds no passwords and nothing of what is said or written." = "로그는 앱이 하는 일을 기록합니다. 연결, 소리 기기, 전송, 오류입니다. 암호나 말하거나 쓴 내용은 들어 있지 않습니다.";
-
 /* appearance */
 "The messages can have a text size of their own, and the server events a font of their own." = "메시지는 고유한 텍스트 크기를, 서버 이벤트는 고유한 서체를 가질 수 있습니다.";
 
@@ -1987,7 +1942,7 @@
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "마이크 소리를 소음 감소나 에코 제거 없이 그대로 보냅니다";
 
 /* Sound Devices */
-"The microphones of this device. Choose the one to use: Preferred marks your choice and Active the one in use right now." = "이 기기의 마이크입니다. 사용할 마이크를 선택하십시오. ‘선호’는 선택한 마이크, ‘활성’은 지금 사용 중인 마이크를 나타냅니다.";
+"The microphones of this device. Choose the one to use: Preferred marks your choice and Active the one in use right now." = "이 기기의 마이크입니다. 사용할 마이크를 선택하십시오. ‘선호’는 선택한 마이크, ‘활성화됨’은 지금 사용 중인 마이크를 나타냅니다.";
 
 /* preferences */
 "The name and the time go after the text of the message" = "이름과 시간이 메시지 본문 뒤에 옵니다";
@@ -2012,9 +1967,6 @@
 
 /* text to speech events */
 "These two settings change every announcement at once. Each one can still be set on its own below." = "이 두 설정은 모든 알림을 한꺼번에 바꿉니다. 각 알림은 아래에서 계속 따로 설정할 수 있습니다.";
-
-/* diagnostics */
-"They need iOS 17 or later" = "iOS 17 이상이 필요합니다";
 
 /* media stream */
 "This file cannot be streamed" = "이 파일은 스트리밍할 수 없습니다";
@@ -2078,9 +2030,6 @@
 
 /* state of the microphone button */
 "Turned off" = "꺼짐";
-
-/* diagnostics */
-"Turned off. Turn on Live Activities in Settings, under TeamTalk." = "꺼짐. 설정의 TeamTalk에서 실시간 현황을 켜십시오.";
 
 /* state of the microphone button */
 "Turned on" = "켜짐";
@@ -2307,12 +2256,6 @@
 /* Sound Devices */
 "What is done to your microphone before it is sent: removing echo, reducing noise and levelling the volume." = "마이크 소리를 보내기 전에 하는 처리입니다: 에코 제거, 소음 감소, 음량 고르기.";
 
-/* diagnostics */
-"What the app has been doing, to share when something fails" = "앱이 해 온 일, 문제가 생겼을 때 공유할 수 있습니다";
-
-/* diagnostics */
-"What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "앱이 iPhone에서 필요로 하는 것입니다. 여기에 문제가 있으면 가장 먼저 해결해야 합니다.";
-
 /* media stream */
 "When a file ends the next one starts, and after the last one the list starts again" = "파일이 끝나면 다음 파일이 시작되고, 마지막 파일이 끝나면 목록이 처음부터 다시 시작됩니다";
 
@@ -2333,9 +2276,6 @@
 
 /* microphone mode */
 "Wide Spectrum" = "와이드 스펙트럼";
-
-/* diagnostics */
-"Widget and Controls" = "위젯 및 제어 항목";
 
 /* accessibility hint */
 "Write your message here" = "여기에 메시지를 입력하십시오";

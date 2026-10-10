@@ -58,9 +58,6 @@
 /* user accounts */
 "%d accounts changed. It applies to each user the next time they log in." = "Змінено облікових записів: %d. Для кожного користувача це почне діяти з наступного входу.";
 
-/* diagnostics */
-"%d entries" = "Записів: %d";
-
 /* media stream */
 "%d files added to the playlist" = "Додано файлів до плейлиста: %d";
 
@@ -199,9 +196,6 @@
 
 /* all users */
 "All Users" = "Усі користувачі";
-
-/* diagnostics */
-"Allowed" = "Дозволено";
 
 /* appearance */
 "Always Dark" = "Завжди темна";
@@ -431,9 +425,6 @@
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "Вибирайте, лише якщо на сервері увімкнено вебавтентифікацію BearWare.dk";
 
-/* diagnostics */
-"Checks" = "Перевірки";
-
 /* media stream */
 "Choose a file" = "Виберіть файл";
 
@@ -469,9 +460,6 @@
 
 /* channel detail */
 "Classroom" = "Клас";
-
-/* diagnostics */
-"Clear Log" = "Очистити журнал";
 
 /* server list */
 "Clear text" = "Очистити текст";
@@ -646,12 +634,6 @@
 
 /* preferences */
 "Details Position" = "Розташування відомостей";
-
-/* diagnostics */
-"Diagnostic Log" = "Журнал діагностики";
-
-/* diagnostics */
-"Diagnostics" = "Діагностика";
 
 /* preferences */
 "Disabled" = "Вимкнено";
@@ -1050,9 +1032,6 @@
 /* media stream */
 "Live" = "Наживо";
 
-/* diagnostics */
-"Live Activities" = "Активності наживо";
-
 /* serverlist */
 "Local server" = "Локальний сервер";
 
@@ -1280,20 +1259,8 @@
 /* keyboard shortcuts and voice cleanup */
 "None" = "Немає";
 
-/* diagnostics */
-"Not allowed. Nobody can hear you until you turn it on in Settings, under TeamTalk." = "Не дозволено. Вас ніхто не почує, доки ви не ввімкнете його в Параметрах, у розділі TeamTalk.";
-
-/* diagnostics */
-"Not asked yet. iOS asks the first time you join a channel." = "Ще не запитувалося. iOS запитає, коли ви вперше приєднаєтеся до каналу.";
-
-/* diagnostics */
-"Not available with this installation. The widget cannot show your servers and the controls do not show their state." = "Недоступно в цій інсталяції. Віджет не може показати ваші сервери, а елементи керування не показують свій стан.";
-
 /* live activity */
 "Not in a channel" = "Не в каналі";
-
-/* diagnostics */
-"Not installed. The app was installed without its extension, so there are no Live Activities, widget or controls. Install it again with a tool that keeps the extensions." = "Не встановлено. Застосунок встановлено без розширення, тому немає активностей наживо, віджета й елементів керування. Встановіть його знову інструментом, який зберігає розширення.";
 
 /* media stream */
 "Not streaming" = "Трансляції немає";
@@ -1333,9 +1300,6 @@
 
 /* text message */
 "Open Link" = "Відкрити посилання";
-
-/* diagnostics */
-"Open Settings" = "Відкрити Параметри";
 
 /* accessibility hint */
 "Opens a menu with more options" = "Відкриває меню з додатковими діями";
@@ -1714,9 +1678,6 @@
 /* file list */
 "Share" = "Поділитися";
 
-/* diagnostics */
-"Share Log" = "Поділитися журналом";
-
 /* serverlist */
 "Share Server" = "Поділитися сервером";
 
@@ -1971,12 +1932,6 @@
 /* media stream */
 "The current file starts again every time it ends" = "Поточний файл починається знову щоразу, коли закінчується";
 
-/* diagnostics */
-"The log is empty" = "Журнал порожній";
-
-/* diagnostics */
-"The log records what the app does: connection, sound devices, transfers and errors. It holds no passwords and nothing of what is said or written." = "Журнал записує, що робить застосунок: з'єднання, звукові пристрої, передавання і помилки. У ньому немає паролів і нічого з того, що говориться чи пишеться.";
-
 /* appearance */
 "The messages can have a text size of their own, and the server events a font of their own." = "Повідомлення можуть мати власний розмір тексту, а події сервера власний шрифт.";
 
@@ -2009,9 +1964,6 @@
 
 /* text to speech events */
 "These two settings change every announcement at once. Each one can still be set on its own below." = "Ці два параметри змінюють усі оголошення одразу. Кожне оголошення, як і раніше, можна налаштувати окремо нижче.";
-
-/* diagnostics */
-"They need iOS 17 or later" = "Потрібна iOS 17 або новіша";
 
 /* media stream */
 "This file cannot be streamed" = "Цей файл не можна транслювати";
@@ -2075,9 +2027,6 @@
 
 /* state of the microphone button */
 "Turned off" = "Вимкнено";
-
-/* diagnostics */
-"Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Вимкнено. Увімкніть активності наживо в Параметрах, у розділі TeamTalk.";
 
 /* state of the microphone button */
 "Turned on" = "Увімкнено";
@@ -2303,12 +2252,6 @@
 /* Sound Devices */
 "What is done to your microphone before it is sent: removing echo, reducing noise and levelling the volume." = "Те, що робиться з мікрофоном перед надсиланням: пригнічення відлуння, зменшення шуму та вирівнювання гучності.";
 
-/* diagnostics */
-"What the app has been doing, to share when something fails" = "Що робив застосунок: щоб поділитися, коли щось не працює";
-
-/* diagnostics */
-"What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Що застосунку потрібно від iPhone. Якщо тут щось не так, це перше, що слід виправити.";
-
 /* media stream */
 "When a file ends the next one starts, and after the last one the list starts again" = "Коли файл закінчується, починається наступний, а після останнього список починається знову";
 
@@ -2329,9 +2272,6 @@
 
 /* microphone mode */
 "Wide Spectrum" = "Широкий спектр";
-
-/* diagnostics */
-"Widget and Controls" = "Віджет і елементи керування";
 
 /* accessibility hint */
 "Write your message here" = "Напишіть повідомлення тут";

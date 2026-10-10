@@ -58,9 +58,6 @@
 /* user accounts */
 "%d accounts changed. It applies to each user the next time they log in." = "%d accounts gewijzigd. Het geldt voor elke gebruiker bij de volgende aanmelding.";
 
-/* diagnostics */
-"%d entries" = "%d regels";
-
 /* media stream */
 "%d files added to the playlist" = "%d bestanden toegevoegd aan de afspeellijst";
 
@@ -199,9 +196,6 @@
 
 /* all users */
 "All Users" = "Alle gebruikers";
-
-/* diagnostics */
-"Allowed" = "Toegestaan";
 
 /* appearance */
 "Always Dark" = "Altijd donker";
@@ -431,9 +425,6 @@
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "Vink alleen aan als deze server BearWare.dk Web Login heeft ingeschakeld";
 
-/* diagnostics */
-"Checks" = "Controles";
-
 /* media stream */
 "Choose a file" = "Kies een bestand";
 
@@ -469,9 +460,6 @@
 
 /* channel detail */
 "Classroom" = "Klaslokaal";
-
-/* diagnostics */
-"Clear Log" = "Logboek wissen";
 
 /* server list */
 "Clear text" = "Wis tekst";
@@ -646,12 +634,6 @@
 
 /* preferences */
 "Details Position" = "Positie van de details";
-
-/* diagnostics */
-"Diagnostic Log" = "Diagnoselogboek";
-
-/* diagnostics */
-"Diagnostics" = "Diagnose";
 
 /* preferences */
 "Disabled" = "Uitgeschakeld";
@@ -1050,9 +1032,6 @@
 /* media stream */
 "Live" = "Live";
 
-/* diagnostics */
-"Live Activities" = "Live-activiteiten";
-
 /* serverlist */
 "Local server" = "Lokale server";
 
@@ -1280,20 +1259,8 @@
 /* keyboard shortcuts and voice cleanup */
 "None" = "Geen";
 
-/* diagnostics */
-"Not allowed. Nobody can hear you until you turn it on in Settings, under TeamTalk." = "Niet toegestaan. Niemand kan je horen tot je het inschakelt in Instellingen, onder TeamTalk.";
-
-/* diagnostics */
-"Not asked yet. iOS asks the first time you join a channel." = "Nog niet gevraagd. iOS vraagt het de eerste keer dat je een kanaal binnengaat.";
-
-/* diagnostics */
-"Not available with this installation. The widget cannot show your servers and the controls do not show their state." = "Niet beschikbaar met deze installatie. De widget kan je servers niet tonen en de regelaars tonen hun toestand niet.";
-
 /* live activity */
 "Not in a channel" = "Niet in een kanaal";
-
-/* diagnostics */
-"Not installed. The app was installed without its extension, so there are no Live Activities, widget or controls. Install it again with a tool that keeps the extensions." = "Niet geïnstalleerd. De app is zonder de extensie geïnstalleerd, dus er zijn geen live-activiteiten, widget of regelaars. Installeer hem opnieuw met een hulpmiddel dat de extensies behoudt.";
 
 /* media stream */
 "Not streaming" = "Geen stream";
@@ -1333,9 +1300,6 @@
 
 /* text message */
 "Open Link" = "Link openen";
-
-/* diagnostics */
-"Open Settings" = "Instellingen openen";
 
 /* accessibility hint */
 "Opens a menu with more options" = "Opent een menu met meer opties";
@@ -1714,9 +1678,6 @@
 /* file list */
 "Share" = "Deel";
 
-/* diagnostics */
-"Share Log" = "Logboek delen";
-
 /* serverlist */
 "Share Server" = "Server delen";
 
@@ -1971,12 +1932,6 @@
 /* media stream */
 "The current file starts again every time it ends" = "Het huidige bestand begint opnieuw telkens wanneer het eindigt";
 
-/* diagnostics */
-"The log is empty" = "Het logboek is leeg";
-
-/* diagnostics */
-"The log records what the app does: connection, sound devices, transfers and errors. It holds no passwords and nothing of what is said or written." = "Het logboek houdt bij wat de app doet: verbinding, geluidsapparaten, overdrachten en fouten. Het bevat geen wachtwoorden en niets van wat er wordt gezegd of geschreven.";
-
 /* appearance */
 "The messages can have a text size of their own, and the server events a font of their own." = "De berichten kunnen een eigen tekstgrootte hebben, en de servergebeurtenissen een eigen lettertype.";
 
@@ -2009,9 +1964,6 @@
 
 /* text to speech events */
 "These two settings change every announcement at once. Each one can still be set on its own below." = "Deze twee instellingen wijzigen alle aankondigingen tegelijk. Elke aankondiging kan hieronder nog afzonderlijk worden ingesteld.";
-
-/* diagnostics */
-"They need iOS 17 or later" = "Ze vereisen iOS 17 of nieuwer";
 
 /* media stream */
 "This file cannot be streamed" = "Dit bestand kan niet worden gestreamd";
@@ -2075,9 +2027,6 @@
 
 /* state of the microphone button */
 "Turned off" = "Uitgeschakeld";
-
-/* diagnostics */
-"Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Uitgeschakeld. Schakel live-activiteiten in via Instellingen, onder TeamTalk.";
 
 /* state of the microphone button */
 "Turned on" = "Ingeschakeld";
@@ -2303,12 +2252,6 @@
 /* Sound Devices */
 "What is done to your microphone before it is sent: removing echo, reducing noise and levelling the volume." = "Wat er met je microfoon gebeurt voordat het geluid wordt verzonden: echo verwijderen, ruis verminderen en het volume egaliseren.";
 
-/* diagnostics */
-"What the app has been doing, to share when something fails" = "Wat de app heeft gedaan, om te delen als er iets misgaat";
-
-/* diagnostics */
-"What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Wat de app van de iPhone nodig heeft. Als hier iets niet klopt, is dat het eerste om op te lossen.";
-
 /* media stream */
 "When a file ends the next one starts, and after the last one the list starts again" = "Wanneer een bestand eindigt begint het volgende, en na het laatste begint de lijst opnieuw";
 
@@ -2329,9 +2272,6 @@
 
 /* microphone mode */
 "Wide Spectrum" = "Breed spectrum";
-
-/* diagnostics */
-"Widget and Controls" = "Widget en regelaars";
 
 /* accessibility hint */
 "Write your message here" = "Schrijf hier je bericht";

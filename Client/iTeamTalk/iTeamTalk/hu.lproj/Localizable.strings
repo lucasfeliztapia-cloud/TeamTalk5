@@ -58,9 +58,6 @@
 /* user accounts */
 "%d accounts changed. It applies to each user the next time they log in." = "%d fiók módosítva. Minden felhasználónál a következő bejelentkezéskor lép életbe.";
 
-/* diagnostics */
-"%d entries" = "%d bejegyzés";
-
 /* media stream */
 "%d files added to the playlist" = "%d fájl hozzáadva a lejátszási listához";
 
@@ -199,9 +196,6 @@
 
 /* all users */
 "All Users" = "Minden felhasználó";
-
-/* diagnostics */
-"Allowed" = "Engedélyezve";
 
 /* appearance */
 "Always Dark" = "Mindig sötét";
@@ -431,9 +425,6 @@
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "Csak akkor jelöld be, ha ezen a szerveren engedélyezve van a BearWare.dk Web Login";
 
-/* diagnostics */
-"Checks" = "Ellenőrzések";
-
 /* media stream */
 "Choose a file" = "Válassz egy fájlt";
 
@@ -469,9 +460,6 @@
 
 /* channel detail */
 "Classroom" = "Osztályterem";
-
-/* diagnostics */
-"Clear Log" = "Napló törlése";
 
 /* server list */
 "Clear text" = "Szöveg törlése";
@@ -646,12 +634,6 @@
 
 /* preferences */
 "Details Position" = "Részletek helye";
-
-/* diagnostics */
-"Diagnostic Log" = "Diagnosztikai napló";
-
-/* diagnostics */
-"Diagnostics" = "Diagnosztika";
 
 /* preferences */
 "Disabled" = "Kikapcsolva";
@@ -1050,9 +1032,6 @@
 /* media stream */
 "Live" = "Élő";
 
-/* diagnostics */
-"Live Activities" = "Élő tevékenységek";
-
 /* serverlist */
 "Local server" = "Helyi szerver";
 
@@ -1280,20 +1259,8 @@
 /* keyboard shortcuts and voice cleanup */
 "None" = "Nincs";
 
-/* diagnostics */
-"Not allowed. Nobody can hear you until you turn it on in Settings, under TeamTalk." = "Nincs engedélyezve. Senki sem hall, amíg be nem kapcsolod a Beállításokban, a TeamTalk alatt.";
-
-/* diagnostics */
-"Not asked yet. iOS asks the first time you join a channel." = "Még nem kérdezte. Az iOS akkor kérdezi meg, amikor először lépsz be egy csatornára.";
-
-/* diagnostics */
-"Not available with this installation. The widget cannot show your servers and the controls do not show their state." = "Ezzel a telepítéssel nem érhető el. A widget nem tudja megjeleníteni a szervereidet, a vezérlők pedig nem mutatják az állapotukat.";
-
 /* live activity */
 "Not in a channel" = "Nincs csatornán";
-
-/* diagnostics */
-"Not installed. The app was installed without its extension, so there are no Live Activities, widget or controls. Install it again with a tool that keeps the extensions." = "Nincs telepítve. Az alkalmazás a bővítménye nélkül lett telepítve, ezért nincsenek élő tevékenységek, widget és vezérlők. Telepítsd újra olyan eszközzel, amely megtartja a bővítményeket.";
 
 /* media stream */
 "Not streaming" = "Nincs közvetítés";
@@ -1333,9 +1300,6 @@
 
 /* text message */
 "Open Link" = "Hivatkozás megnyitása";
-
-/* diagnostics */
-"Open Settings" = "Beállítások megnyitása";
 
 /* accessibility hint */
 "Opens a menu with more options" = "Megnyit egy menüt további lehetőségekkel";
@@ -1714,9 +1678,6 @@
 /* file list */
 "Share" = "Megosztás";
 
-/* diagnostics */
-"Share Log" = "Napló megosztása";
-
 /* serverlist */
 "Share Server" = "Szerver megosztása";
 
@@ -1971,12 +1932,6 @@
 /* media stream */
 "The current file starts again every time it ends" = "Az aktuális fájl minden alkalommal újrakezdődik, amikor véget ér";
 
-/* diagnostics */
-"The log is empty" = "A napló üres";
-
-/* diagnostics */
-"The log records what the app does: connection, sound devices, transfers and errors. It holds no passwords and nothing of what is said or written." = "A napló rögzíti, mit csinál az alkalmazás: kapcsolat, hangeszközök, átvitelek és hibák. Nem tartalmaz jelszavakat, és semmit abból, ami elhangzik vagy amit leírnak.";
-
 /* appearance */
 "The messages can have a text size of their own, and the server events a font of their own." = "Az üzeneteknek saját szövegmérete, a szervereseményeknek saját betűtípusa lehet.";
 
@@ -2009,9 +1964,6 @@
 
 /* text to speech events */
 "These two settings change every announcement at once. Each one can still be set on its own below." = "Ez a két beállítás egyszerre módosítja az összes bemondást. Az egyes bemondások lejjebb továbbra is külön állíthatók.";
-
-/* diagnostics */
-"They need iOS 17 or later" = "iOS 17 vagy újabb szükséges hozzájuk";
 
 /* media stream */
 "This file cannot be streamed" = "Ez a fájl nem közvetíthető";
@@ -2075,9 +2027,6 @@
 
 /* state of the microphone button */
 "Turned off" = "Kikapcsolva";
-
-/* diagnostics */
-"Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Kikapcsolva. Kapcsold be az élő tevékenységeket a Beállításokban, a TeamTalk alatt.";
 
 /* state of the microphone button */
 "Turned on" = "Bekapcsolva";
@@ -2303,12 +2252,6 @@
 /* Sound Devices */
 "What is done to your microphone before it is sent: removing echo, reducing noise and levelling the volume." = "Ami a mikrofonod hangjával történik küldés előtt: a visszhang megszüntetése, a zaj csökkentése és a hangerő kiegyenlítése.";
 
-/* diagnostics */
-"What the app has been doing, to share when something fails" = "Amit az alkalmazás csinált, megosztáshoz, ha valami nem működik";
-
-/* diagnostics */
-"What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Amire az alkalmazásnak szüksége van az iPhone-tól. Ha itt valami nincs rendben, azt kell először megoldani.";
-
 /* media stream */
 "When a file ends the next one starts, and after the last one the list starts again" = "Amikor egy fájl véget ér, a következő indul, az utolsó után pedig a lista elölről kezdődik";
 
@@ -2329,9 +2272,6 @@
 
 /* microphone mode */
 "Wide Spectrum" = "Széles spektrum";
-
-/* diagnostics */
-"Widget and Controls" = "Widget és vezérlők";
 
 /* accessibility hint */
 "Write your message here" = "Ide írd az üzenetedet";

@@ -58,9 +58,6 @@
 /* user accounts */
 "%d accounts changed. It applies to each user the next time they log in." = "Đã thay đổi %d tài khoản. Có hiệu lực với mỗi người dùng từ lần đăng nhập tiếp theo.";
 
-/* diagnostics */
-"%d entries" = "%d mục";
-
 /* media stream */
 "%d files added to the playlist" = "Đã thêm %d tệp vào danh sách phát";
 
@@ -200,9 +197,6 @@
 
 /* all users */
 "All Users" = "Tất cả người dùng";
-
-/* diagnostics */
-"Allowed" = "Được phép";
 
 /* appearance */
 "Always Dark" = "Luôn tối";
@@ -433,9 +427,6 @@
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "Chỉ kiểm tra nếu máy chủ này đã bật Đăng nhập web BearWare.dk";
 
-/* diagnostics */
-"Checks" = "Kiểm tra";
-
 /* media stream */
 "Choose a file" = "Chọn một tệp";
 
@@ -471,9 +462,6 @@
 
 /* channel detail */
 "Classroom" = "Lớp học";
-
-/* diagnostics */
-"Clear Log" = "Xóa nhật ký";
 
 /* server list */
 "Clear text" = "Xóa văn bản";
@@ -648,12 +636,6 @@
 
 /* preferences */
 "Details Position" = "Vị trí chi tiết";
-
-/* diagnostics */
-"Diagnostic Log" = "Nhật ký chẩn đoán";
-
-/* diagnostics */
-"Diagnostics" = "Chẩn đoán";
 
 /* preferences */
 "Disabled" = "Đã tắt";
@@ -1053,9 +1035,6 @@
 /* media stream */
 "Live" = "Trực tiếp";
 
-/* diagnostics */
-"Live Activities" = "Hoạt động trực tiếp";
-
 /* serverlist */
 "Local server" = "Máy chủ cục bộ";
 
@@ -1283,20 +1262,8 @@
 /* keyboard shortcuts and voice cleanup */
 "None" = "Không";
 
-/* diagnostics */
-"Not allowed. Nobody can hear you until you turn it on in Settings, under TeamTalk." = "Không được phép. Không ai nghe được bạn cho đến khi bạn bật nó trong Cài đặt, mục TeamTalk.";
-
-/* diagnostics */
-"Not asked yet. iOS asks the first time you join a channel." = "Chưa được hỏi. iOS sẽ hỏi khi bạn tham gia kênh lần đầu.";
-
-/* diagnostics */
-"Not available with this installation. The widget cannot show your servers and the controls do not show their state." = "Không khả dụng với bản cài đặt này. Tiện ích không thể hiển thị máy chủ của bạn và các điều khiển không hiển thị trạng thái.";
-
 /* live activity */
 "Not in a channel" = "Không ở trong kênh";
-
-/* diagnostics */
-"Not installed. The app was installed without its extension, so there are no Live Activities, widget or controls. Install it again with a tool that keeps the extensions." = "Chưa được cài đặt. Ứng dụng được cài mà không có phần mở rộng, nên không có Hoạt động trực tiếp, tiện ích hay điều khiển. Hãy cài lại bằng công cụ giữ lại các phần mở rộng.";
 
 /* media stream */
 "Not streaming" = "Không phát trực tuyến";
@@ -1337,9 +1304,6 @@
 
 /* text message */
 "Open Link" = "Mở liên kết";
-
-/* diagnostics */
-"Open Settings" = "Mở Cài đặt";
 
 /* accessibility hint */
 "Opens a menu with more options" = "Mở menu có thêm tùy chọn";
@@ -1719,9 +1683,6 @@
 /* file list */
 "Share" = "Chia sẻ";
 
-/* diagnostics */
-"Share Log" = "Chia sẻ nhật ký";
-
 /* serverlist */
 "Share Server" = "Chia sẻ máy chủ";
 
@@ -1977,12 +1938,6 @@
 /* media stream */
 "The current file starts again every time it ends" = "Tệp hiện tại phát lại từ đầu mỗi khi kết thúc";
 
-/* diagnostics */
-"The log is empty" = "Nhật ký trống";
-
-/* diagnostics */
-"The log records what the app does: connection, sound devices, transfers and errors. It holds no passwords and nothing of what is said or written." = "Nhật ký ghi lại những gì ứng dụng làm: kết nối, thiết bị âm thanh, truyền tệp và lỗi. Nó không chứa mật khẩu hay bất cứ điều gì được nói hoặc viết.";
-
 /* appearance */
 "The messages can have a text size of their own, and the server events a font of their own." = "Tin nhắn có thể có cỡ chữ riêng, và sự kiện máy chủ có phông chữ riêng.";
 
@@ -1990,7 +1945,7 @@
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "Micrô được gửi nguyên trạng, không giảm tiếng ồn và không khử tiếng vọng";
 
 /* Sound Devices */
-"The microphones of this device. Choose the one to use: Preferred marks your choice and Active the one in use right now." = "Các micrô của thiết bị này. Hãy chọn micrô muốn dùng: “Ưu tiên” đánh dấu lựa chọn của bạn và “Đang hoạt động” là micrô đang được dùng.";
+"The microphones of this device. Choose the one to use: Preferred marks your choice and Active the one in use right now." = "Các micrô của thiết bị này. Hãy chọn micrô muốn dùng: “Ưu tiên” đánh dấu lựa chọn của bạn và “Kích hoạt” là micrô đang được dùng.";
 
 /* preferences */
 "The name and the time go after the text of the message" = "Tên và giờ nằm sau nội dung tin nhắn";
@@ -2015,9 +1970,6 @@
 
 /* text to speech events */
 "These two settings change every announcement at once. Each one can still be set on its own below." = "Hai cài đặt này thay đổi tất cả thông báo cùng lúc. Vẫn có thể đặt riêng từng thông báo ở bên dưới.";
-
-/* diagnostics */
-"They need iOS 17 or later" = "Cần iOS 17 trở lên";
 
 /* media stream */
 "This file cannot be streamed" = "Không thể phát trực tuyến tệp này";
@@ -2081,9 +2033,6 @@
 
 /* state of the microphone button */
 "Turned off" = "Đang tắt";
-
-/* diagnostics */
-"Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Đã tắt. Hãy bật Hoạt động trực tiếp trong Cài đặt, mục TeamTalk.";
 
 /* state of the microphone button */
 "Turned on" = "Đang bật";
@@ -2310,12 +2259,6 @@
 /* Sound Devices */
 "What is done to your microphone before it is sent: removing echo, reducing noise and levelling the volume." = "Những gì được áp dụng cho micrô của bạn trước khi gửi: khử tiếng vọng, giảm tiếng ồn và cân bằng âm lượng.";
 
-/* diagnostics */
-"What the app has been doing, to share when something fails" = "Những gì ứng dụng đã làm, để chia sẻ khi có sự cố";
-
-/* diagnostics */
-"What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Những gì ứng dụng cần từ iPhone. Nếu có gì ở đây không ổn, đó là điều đầu tiên cần sửa.";
-
 /* media stream */
 "When a file ends the next one starts, and after the last one the list starts again" = "Khi một tệp kết thúc, tệp tiếp theo bắt đầu, và sau tệp cuối cùng danh sách bắt đầu lại";
 
@@ -2336,9 +2279,6 @@
 
 /* microphone mode */
 "Wide Spectrum" = "Phổ rộng";
-
-/* diagnostics */
-"Widget and Controls" = "Tiện ích và điều khiển";
 
 /* accessibility hint */
 "Write your message here" = "Viết tin nhắn của bạn ở đây";

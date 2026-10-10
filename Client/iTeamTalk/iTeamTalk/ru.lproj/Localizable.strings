@@ -58,9 +58,6 @@
 /* user accounts */
 "%d accounts changed. It applies to each user the next time they log in." = "Изменено учётных записей: %d. Для каждого пользователя это начнёт действовать при следующем входе.";
 
-/* diagnostics */
-"%d entries" = "Записей: %d";
-
 /* media stream */
 "%d files added to the playlist" = "Добавлено файлов в плейлист: %d";
 
@@ -199,9 +196,6 @@
 
 /* all users */
 "All Users" = "Все пользователи";
-
-/* diagnostics */
-"Allowed" = "Разрешено";
 
 /* appearance */
 "Always Dark" = "Всегда тёмная";
@@ -431,9 +425,6 @@
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "Отметьте только если на этом сервере включена веб-аутентификация BearWare.dk";
 
-/* diagnostics */
-"Checks" = "Проверки";
-
 /* media stream */
 "Choose a file" = "Выберите файл";
 
@@ -469,9 +460,6 @@
 
 /* channel detail */
 "Classroom" = "Класс";
-
-/* diagnostics */
-"Clear Log" = "Очистить журнал";
 
 /* server list */
 "Clear text" = "Очистить текст";
@@ -646,12 +634,6 @@
 
 /* preferences */
 "Details Position" = "Расположение сведений";
-
-/* diagnostics */
-"Diagnostic Log" = "Журнал диагностики";
-
-/* diagnostics */
-"Diagnostics" = "Диагностика";
 
 /* preferences */
 "Disabled" = "Отключено";
@@ -1050,9 +1032,6 @@
 /* media stream */
 "Live" = "Прямой эфир";
 
-/* diagnostics */
-"Live Activities" = "Эфир активности";
-
 /* serverlist */
 "Local server" = "Локальный сервер";
 
@@ -1280,20 +1259,8 @@
 /* keyboard shortcuts and voice cleanup */
 "None" = "Нет";
 
-/* diagnostics */
-"Not allowed. Nobody can hear you until you turn it on in Settings, under TeamTalk." = "Не разрешено. Вас никто не услышит, пока вы не включите его в Настройках, в разделе TeamTalk.";
-
-/* diagnostics */
-"Not asked yet. iOS asks the first time you join a channel." = "Ещё не запрашивалось. iOS спросит, когда вы впервые присоединитесь к каналу.";
-
-/* diagnostics */
-"Not available with this installation. The widget cannot show your servers and the controls do not show their state." = "Недоступно при этой установке. Виджет не может показать ваши серверы, а элементы управления не показывают своё состояние.";
-
 /* live activity */
 "Not in a channel" = "Не в канале";
-
-/* diagnostics */
-"Not installed. The app was installed without its extension, so there are no Live Activities, widget or controls. Install it again with a tool that keeps the extensions." = "Не установлено. Приложение установлено без расширения, поэтому нет эфира активности, виджета и элементов управления. Установите его заново инструментом, который сохраняет расширения.";
 
 /* media stream */
 "Not streaming" = "Трансляции нет";
@@ -1333,9 +1300,6 @@
 
 /* text message */
 "Open Link" = "Открыть ссылку";
-
-/* diagnostics */
-"Open Settings" = "Открыть Настройки";
 
 /* accessibility hint */
 "Opens a menu with more options" = "Открывает меню с дополнительными действиями";
@@ -1714,9 +1678,6 @@
 /* file list */
 "Share" = "Поделиться";
 
-/* diagnostics */
-"Share Log" = "Поделиться журналом";
-
 /* serverlist */
 "Share Server" = "Поделиться сервером";
 
@@ -1971,12 +1932,6 @@
 /* media stream */
 "The current file starts again every time it ends" = "Текущий файл начинается заново каждый раз, когда заканчивается";
 
-/* diagnostics */
-"The log is empty" = "Журнал пуст";
-
-/* diagnostics */
-"The log records what the app does: connection, sound devices, transfers and errors. It holds no passwords and nothing of what is said or written." = "Журнал записывает, что делает приложение: соединение, звуковые устройства, передачи и ошибки. В нём нет паролей и ничего из того, что говорится или пишется.";
-
 /* appearance */
 "The messages can have a text size of their own, and the server events a font of their own." = "У сообщений может быть свой размер текста, а у событий сервера свой шрифт.";
 
@@ -1984,7 +1939,7 @@
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "Микрофон передаётся как есть, без шумоподавления и без подавления эха";
 
 /* Sound Devices */
-"The microphones of this device. Choose the one to use: Preferred marks your choice and Active the one in use right now." = "Микрофоны этого устройства. Выберите нужный: «Предпочитаемый» отмечает ваш выбор, а «Активный» — тот, что используется сейчас.";
+"The microphones of this device. Choose the one to use: Preferred marks your choice and Active the one in use right now." = "Микрофоны этого устройства. Выберите нужный: «Предпочтительный» отмечает ваш выбор, а «Активно» — тот, что используется сейчас.";
 
 /* preferences */
 "The name and the time go after the text of the message" = "Имя и время идут после текста сообщения";
@@ -2009,9 +1964,6 @@
 
 /* text to speech events */
 "These two settings change every announcement at once. Each one can still be set on its own below." = "Эти две настройки меняют все объявления сразу. Каждое объявление по-прежнему можно настроить отдельно ниже.";
-
-/* diagnostics */
-"They need iOS 17 or later" = "Требуется iOS 17 или новее";
 
 /* media stream */
 "This file cannot be streamed" = "Этот файл нельзя транслировать";
@@ -2075,9 +2027,6 @@
 
 /* state of the microphone button */
 "Turned off" = "Выключен";
-
-/* diagnostics */
-"Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Выключено. Включите эфир активности в Настройках, в разделе TeamTalk.";
 
 /* state of the microphone button */
 "Turned on" = "Включён";
@@ -2303,12 +2252,6 @@
 /* Sound Devices */
 "What is done to your microphone before it is sent: removing echo, reducing noise and levelling the volume." = "То, что делается с микрофоном перед отправкой: подавление эха, снижение шума и выравнивание громкости.";
 
-/* diagnostics */
-"What the app has been doing, to share when something fails" = "Что делало приложение: чтобы поделиться, когда что-то не работает";
-
-/* diagnostics */
-"What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Что приложению нужно от iPhone. Если здесь что-то не так, это первое, что нужно исправить.";
-
 /* media stream */
 "When a file ends the next one starts, and after the last one the list starts again" = "Когда файл заканчивается, начинается следующий, а после последнего список начинается заново";
 
@@ -2329,9 +2272,6 @@
 
 /* microphone mode */
 "Wide Spectrum" = "Широкий спектр";
-
-/* diagnostics */
-"Widget and Controls" = "Виджет и элементы управления";
 
 /* accessibility hint */
 "Write your message here" = "Напишите сообщение здесь";

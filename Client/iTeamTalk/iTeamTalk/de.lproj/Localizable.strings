@@ -58,9 +58,6 @@
 /* user accounts */
 "%d accounts changed. It applies to each user the next time they log in." = "%d Konten geändert. Es gilt für jeden Benutzer ab der nächsten Anmeldung.";
 
-/* diagnostics */
-"%d entries" = "%d Einträge";
-
 /* media stream */
 "%d files added to the playlist" = "%d Dateien zur Wiedergabeliste hinzugefügt";
 
@@ -200,9 +197,6 @@
 
 /* all users */
 "All Users" = "Alle Benutzer";
-
-/* diagnostics */
-"Allowed" = "Erlaubt";
 
 /* appearance */
 "Always Dark" = "Immer dunkel";
@@ -433,9 +427,6 @@
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "Nur aktivieren, wenn der Server BearWare.dk-Web-Login unterstützt";
 
-/* diagnostics */
-"Checks" = "Prüfungen";
-
 /* media stream */
 "Choose a file" = "Datei auswählen";
 
@@ -471,9 +462,6 @@
 
 /* channel detail */
 "Classroom" = "Klassenraum";
-
-/* diagnostics */
-"Clear Log" = "Protokoll löschen";
 
 /* server list */
 "Clear text" = "Text löschen";
@@ -648,12 +636,6 @@
 
 /* preferences */
 "Details Position" = "Position der Details";
-
-/* diagnostics */
-"Diagnostic Log" = "Diagnoseprotokoll";
-
-/* diagnostics */
-"Diagnostics" = "Diagnose";
 
 /* preferences */
 "Disabled" = "Deaktiviert";
@@ -1053,9 +1035,6 @@
 /* media stream */
 "Live" = "Live";
 
-/* diagnostics */
-"Live Activities" = "Live-Aktivitäten";
-
 /* serverlist */
 "Local server" = "Lokaler Server";
 
@@ -1283,20 +1262,8 @@
 /* keyboard shortcuts and voice cleanup */
 "None" = "Keine";
 
-/* diagnostics */
-"Not allowed. Nobody can hear you until you turn it on in Settings, under TeamTalk." = "Nicht erlaubt. Niemand kann dich hören, bis du es in den Einstellungen unter TeamTalk einschaltest.";
-
-/* diagnostics */
-"Not asked yet. iOS asks the first time you join a channel." = "Noch nicht gefragt. iOS fragt, wenn du zum ersten Mal einen Raum betrittst.";
-
-/* diagnostics */
-"Not available with this installation. The widget cannot show your servers and the controls do not show their state." = "Mit dieser Installation nicht verfügbar. Das Widget kann deine Server nicht anzeigen und die Steuerelemente zeigen ihren Zustand nicht.";
-
 /* live activity */
 "Not in a channel" = "In keinem Raum";
-
-/* diagnostics */
-"Not installed. The app was installed without its extension, so there are no Live Activities, widget or controls. Install it again with a tool that keeps the extensions." = "Nicht installiert. Die App wurde ohne ihre Erweiterung installiert, daher gibt es keine Live-Aktivitäten, kein Widget und keine Steuerelemente. Installiere sie erneut mit einem Werkzeug, das die Erweiterungen behält.";
 
 /* media stream */
 "Not streaming" = "Kein Streaming";
@@ -1337,9 +1304,6 @@
 
 /* text message */
 "Open Link" = "Link öffnen";
-
-/* diagnostics */
-"Open Settings" = "Einstellungen öffnen";
 
 /* accessibility hint */
 "Opens a menu with more options" = "Öffnet ein Menü mit weiteren Optionen";
@@ -1719,9 +1683,6 @@
 /* file list */
 "Share" = "Teilen";
 
-/* diagnostics */
-"Share Log" = "Protokoll teilen";
-
 /* serverlist */
 "Share Server" = "Server teilen";
 
@@ -1977,12 +1938,6 @@
 /* media stream */
 "The current file starts again every time it ends" = "Die aktuelle Datei beginnt jedes Mal von vorn, wenn sie endet";
 
-/* diagnostics */
-"The log is empty" = "Das Protokoll ist leer";
-
-/* diagnostics */
-"The log records what the app does: connection, sound devices, transfers and errors. It holds no passwords and nothing of what is said or written." = "Das Protokoll hält fest, was die App tut: Verbindung, Audiogeräte, Übertragungen und Fehler. Es enthält keine Passwörter und nichts von dem, was gesagt oder geschrieben wird.";
-
 /* appearance */
 "The messages can have a text size of their own, and the server events a font of their own." = "Die Nachrichten können eine eigene Textgröße haben und die Serverereignisse eine eigene Schrift.";
 
@@ -2015,9 +1970,6 @@
 
 /* text to speech events */
 "These two settings change every announcement at once. Each one can still be set on its own below." = "Diese beiden Einstellungen ändern alle Ansagen auf einmal. Jede Ansage lässt sich weiter unten weiterhin einzeln einstellen.";
-
-/* diagnostics */
-"They need iOS 17 or later" = "Sie benötigen iOS 17 oder neuer";
 
 /* media stream */
 "This file cannot be streamed" = "Diese Datei kann nicht gestreamt werden";
@@ -2081,9 +2033,6 @@
 
 /* state of the microphone button */
 "Turned off" = "Ausgeschaltet";
-
-/* diagnostics */
-"Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Ausgeschaltet. Schalte Live-Aktivitäten in den Einstellungen unter TeamTalk ein.";
 
 /* state of the microphone button */
 "Turned on" = "Eingeschaltet";
@@ -2310,12 +2259,6 @@
 /* Sound Devices */
 "What is done to your microphone before it is sent: removing echo, reducing noise and levelling the volume." = "Was mit deinem Mikrofon geschieht, bevor es gesendet wird: Echo entfernen, Geräusche reduzieren und die Lautstärke ausgleichen.";
 
-/* diagnostics */
-"What the app has been doing, to share when something fails" = "Was die App getan hat, zum Teilen, wenn etwas fehlschlägt";
-
-/* diagnostics */
-"What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Was die App vom iPhone braucht. Wenn hier etwas nicht stimmt, ist es das Erste, was zu beheben ist.";
-
 /* media stream */
 "When a file ends the next one starts, and after the last one the list starts again" = "Wenn eine Datei endet, beginnt die nächste, und nach der letzten beginnt die Liste von vorn";
 
@@ -2336,9 +2279,6 @@
 
 /* microphone mode */
 "Wide Spectrum" = "Breites Spektrum";
-
-/* diagnostics */
-"Widget and Controls" = "Widget und Steuerelemente";
 
 /* accessibility hint */
 "Write your message here" = "Schreibe hier deine Nachricht";

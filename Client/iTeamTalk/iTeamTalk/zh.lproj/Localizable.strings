@@ -58,9 +58,6 @@
 /* user accounts */
 "%d accounts changed. It applies to each user the next time they log in." = "已更改 %d 个账户。每位用户下次登录时生效。";
 
-/* diagnostics */
-"%d entries" = "%d 条记录";
-
 /* media stream */
 "%d files added to the playlist" = "已将 %d 个文件添加到播放列表";
 
@@ -199,9 +196,6 @@
 
 /* all users */
 "All Users" = "所有用户";
-
-/* diagnostics */
-"Allowed" = "已允许";
 
 /* appearance */
 "Always Dark" = "始终深色";
@@ -432,9 +426,6 @@
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "仅当此服务器启用了 BearWare.dk Web 登录时勾选";
 
-/* diagnostics */
-"Checks" = "检查";
-
 /* media stream */
 "Choose a file" = "选取文件";
 
@@ -470,9 +461,6 @@
 
 /* channel detail */
 "Classroom" = "课堂";
-
-/* diagnostics */
-"Clear Log" = "清除日志";
 
 /* server list */
 "Clear text" = "清除文本";
@@ -647,12 +635,6 @@
 
 /* preferences */
 "Details Position" = "详情位置";
-
-/* diagnostics */
-"Diagnostic Log" = "诊断日志";
-
-/* diagnostics */
-"Diagnostics" = "诊断";
 
 /* preferences */
 "Disabled" = "已停用";
@@ -1051,9 +1033,6 @@
 /* media stream */
 "Live" = "直播";
 
-/* diagnostics */
-"Live Activities" = "实时活动";
-
 /* serverlist */
 "Local server" = "本地服务器";
 
@@ -1281,20 +1260,8 @@
 /* keyboard shortcuts and voice cleanup */
 "None" = "无";
 
-/* diagnostics */
-"Not allowed. Nobody can hear you until you turn it on in Settings, under TeamTalk." = "未允许。在“设置”的 TeamTalk 下打开之前，没有人能听到你。";
-
-/* diagnostics */
-"Not asked yet. iOS asks the first time you join a channel." = "尚未询问。你首次加入频道时 iOS 会询问。";
-
-/* diagnostics */
-"Not available with this installation. The widget cannot show your servers and the controls do not show their state." = "此安装方式下不可用。小组件无法显示你的服务器，控制项也不显示其状态。";
-
 /* live activity */
 "Not in a channel" = "不在频道中";
-
-/* diagnostics */
-"Not installed. The app was installed without its extension, so there are no Live Activities, widget or controls. Install it again with a tool that keeps the extensions." = "未安装。App 安装时未包含其扩展，因此没有实时活动、小组件和控制项。请使用保留扩展的工具重新安装。";
 
 /* media stream */
 "Not streaming" = "未在流式传输";
@@ -1335,9 +1302,6 @@
 
 /* text message */
 "Open Link" = "打开链接";
-
-/* diagnostics */
-"Open Settings" = "打开设置";
 
 /* accessibility hint */
 "Opens a menu with more options" = "打开包含更多选项的菜单";
@@ -1717,9 +1681,6 @@
 /* file list */
 "Share" = "共享";
 
-/* diagnostics */
-"Share Log" = "共享日志";
-
 /* serverlist */
 "Share Server" = "共享服务器";
 
@@ -1974,12 +1935,6 @@
 /* media stream */
 "The current file starts again every time it ends" = "当前文件每次结束后重新开始";
 
-/* diagnostics */
-"The log is empty" = "日志为空";
-
-/* diagnostics */
-"The log records what the app does: connection, sound devices, transfers and errors. It holds no passwords and nothing of what is said or written." = "日志记录 App 的操作：连接、声音设备、传输和错误。它不包含密码，也不包含任何说出或写下的内容。";
-
 /* appearance */
 "The messages can have a text size of their own, and the server events a font of their own." = "消息可以有自己的文字大小，服务器事件可以有自己的字体。";
 
@@ -2012,9 +1967,6 @@
 
 /* text to speech events */
 "These two settings change every announcement at once. Each one can still be set on its own below." = "这两项设置会同时更改所有播报。每项播报仍可在下方单独设置。";
-
-/* diagnostics */
-"They need iOS 17 or later" = "需要 iOS 17 或更高版本";
 
 /* media stream */
 "This file cannot be streamed" = "无法流式传输此文件";
@@ -2078,9 +2030,6 @@
 
 /* state of the microphone button */
 "Turned off" = "已关闭";
-
-/* diagnostics */
-"Turned off. Turn on Live Activities in Settings, under TeamTalk." = "已关闭。请在“设置”的 TeamTalk 下打开实时活动。";
 
 /* state of the microphone button */
 "Turned on" = "已开启";
@@ -2307,12 +2256,6 @@
 /* Sound Devices */
 "What is done to your microphone before it is sent: removing echo, reducing noise and levelling the volume." = "发送前对麦克风声音所做的处理：消除回声、降低噪声并均衡音量。";
 
-/* diagnostics */
-"What the app has been doing, to share when something fails" = "App 的运行记录，出问题时可以共享";
-
-/* diagnostics */
-"What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "App 需要 iPhone 提供的条件。如果这里有不正常的地方，应首先解决。";
-
 /* media stream */
 "When a file ends the next one starts, and after the last one the list starts again" = "一个文件结束后开始下一个，最后一个结束后列表重新开始";
 
@@ -2333,9 +2276,6 @@
 
 /* microphone mode */
 "Wide Spectrum" = "宽谱";
-
-/* diagnostics */
-"Widget and Controls" = "小组件和控制项";
 
 /* accessibility hint */
 "Write your message here" = "在此输入消息";

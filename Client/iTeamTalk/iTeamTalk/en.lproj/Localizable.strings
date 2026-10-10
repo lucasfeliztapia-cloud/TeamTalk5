@@ -58,9 +58,6 @@
 /* user accounts */
 "%d accounts changed. It applies to each user the next time they log in." = "%d accounts changed. It applies to each user the next time they log in.";
 
-/* diagnostics */
-"%d entries" = "%d entries";
-
 /* media stream */
 "%d files added to the playlist" = "%d files added to the playlist";
 
@@ -200,9 +197,6 @@
 
 /* all users */
 "All Users" = "All Users";
-
-/* diagnostics */
-"Allowed" = "Allowed";
 
 /* appearance */
 "Always Dark" = "Always Dark";
@@ -433,9 +427,6 @@
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "Check only if this server has enabled BearWare.dk Web Login";
 
-/* diagnostics */
-"Checks" = "Checks";
-
 /* media stream */
 "Choose a file" = "Choose a file";
 
@@ -471,9 +462,6 @@
 
 /* channel detail */
 "Classroom" = "Classroom";
-
-/* diagnostics */
-"Clear Log" = "Clear Log";
 
 /* server list */
 "Clear text" = "Clear text";
@@ -648,12 +636,6 @@
 
 /* preferences */
 "Details Position" = "Details Position";
-
-/* diagnostics */
-"Diagnostic Log" = "Diagnostic Log";
-
-/* diagnostics */
-"Diagnostics" = "Diagnostics";
 
 /* preferences */
 "Disabled" = "Disabled";
@@ -1053,9 +1035,6 @@
 /* media stream */
 "Live" = "Live";
 
-/* diagnostics */
-"Live Activities" = "Live Activities";
-
 /* serverlist */
 "Local server" = "Local server";
 
@@ -1283,20 +1262,8 @@
 /* keyboard shortcuts and voice cleanup */
 "None" = "None";
 
-/* diagnostics */
-"Not allowed. Nobody can hear you until you turn it on in Settings, under TeamTalk." = "Not allowed. Nobody can hear you until you turn it on in Settings, under TeamTalk.";
-
-/* diagnostics */
-"Not asked yet. iOS asks the first time you join a channel." = "Not asked yet. iOS asks the first time you join a channel.";
-
-/* diagnostics */
-"Not available with this installation. The widget cannot show your servers and the controls do not show their state." = "Not available with this installation. The widget cannot show your servers and the controls do not show their state.";
-
 /* live activity */
 "Not in a channel" = "Not in a channel";
-
-/* diagnostics */
-"Not installed. The app was installed without its extension, so there are no Live Activities, widget or controls. Install it again with a tool that keeps the extensions." = "Not installed. The app was installed without its extension, so there are no Live Activities, widget or controls. Install it again with a tool that keeps the extensions.";
 
 /* media stream */
 "Not streaming" = "Not streaming";
@@ -1337,9 +1304,6 @@
 
 /* text message */
 "Open Link" = "Open Link";
-
-/* diagnostics */
-"Open Settings" = "Open Settings";
 
 /* accessibility hint */
 "Opens a menu with more options" = "Opens a menu with more options";
@@ -1719,9 +1683,6 @@
 /* file list */
 "Share" = "Share";
 
-/* diagnostics */
-"Share Log" = "Share Log";
-
 /* serverlist */
 "Share Server" = "Share Server";
 
@@ -1977,12 +1938,6 @@
 /* media stream */
 "The current file starts again every time it ends" = "The current file starts again every time it ends";
 
-/* diagnostics */
-"The log is empty" = "The log is empty";
-
-/* diagnostics */
-"The log records what the app does: connection, sound devices, transfers and errors. It holds no passwords and nothing of what is said or written." = "The log records what the app does: connection, sound devices, transfers and errors. It holds no passwords and nothing of what is said or written.";
-
 /* appearance */
 "The messages can have a text size of their own, and the server events a font of their own." = "The messages can have a text size of their own, and the server events a font of their own.";
 
@@ -2015,9 +1970,6 @@
 
 /* text to speech events */
 "These two settings change every announcement at once. Each one can still be set on its own below." = "These two settings change every announcement at once. Each one can still be set on its own below.";
-
-/* diagnostics */
-"They need iOS 17 or later" = "They need iOS 17 or later";
 
 /* media stream */
 "This file cannot be streamed" = "This file cannot be streamed";
@@ -2081,9 +2033,6 @@
 
 /* state of the microphone button */
 "Turned off" = "Turned off";
-
-/* diagnostics */
-"Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Turned off. Turn on Live Activities in Settings, under TeamTalk.";
 
 /* state of the microphone button */
 "Turned on" = "Turned on";
@@ -2310,12 +2259,6 @@
 /* Sound Devices */
 "What is done to your microphone before it is sent: removing echo, reducing noise and levelling the volume." = "What is done to your microphone before it is sent: removing echo, reducing noise and levelling the volume.";
 
-/* diagnostics */
-"What the app has been doing, to share when something fails" = "What the app has been doing, to share when something fails";
-
-/* diagnostics */
-"What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "What the app needs from the iPhone. If something here is not right, it is the first thing to fix.";
-
 /* media stream */
 "When a file ends the next one starts, and after the last one the list starts again" = "When a file ends the next one starts, and after the last one the list starts again";
 
@@ -2336,9 +2279,6 @@
 
 /* microphone mode */
 "Wide Spectrum" = "Wide Spectrum";
-
-/* diagnostics */
-"Widget and Controls" = "Widget and Controls";
 
 /* accessibility hint */
 "Write your message here" = "Write your message here";

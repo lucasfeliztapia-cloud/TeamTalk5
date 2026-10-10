@@ -58,9 +58,6 @@
 /* user accounts */
 "%d accounts changed. It applies to each user the next time they log in." = "تم تغيير %d حساب. يسري على كل مستخدم عند تسجيل دخوله التالي.";
 
-/* diagnostics */
-"%d entries" = "%d إدخال";
-
 /* media stream */
 "%d files added to the playlist" = "تمت إضافة %d ملف إلى قائمة التشغيل";
 
@@ -199,9 +196,6 @@
 
 /* all users */
 "All Users" = "كل المستخدمين";
-
-/* diagnostics */
-"Allowed" = "مسموح";
 
 /* appearance */
 "Always Dark" = "داكن دائمًا";
@@ -431,9 +425,6 @@
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "حدد فقط إذا قام هذا الخادم بتمكين تسجيل الدخول إلى BearWare.dk";
 
-/* diagnostics */
-"Checks" = "الفحوصات";
-
 /* media stream */
 "Choose a file" = "اختر ملفًا";
 
@@ -469,9 +460,6 @@
 
 /* channel detail */
 "Classroom" = "فصل دراسي";
-
-/* diagnostics */
-"Clear Log" = "مسح السجل";
 
 /* server list */
 "Clear text" = "مسح النص";
@@ -646,12 +634,6 @@
 
 /* preferences */
 "Details Position" = "موضع التفاصيل";
-
-/* diagnostics */
-"Diagnostic Log" = "سجل التشخيص";
-
-/* diagnostics */
-"Diagnostics" = "التشخيص";
 
 /* preferences */
 "Disabled" = "معطل";
@@ -1050,9 +1032,6 @@
 /* media stream */
 "Live" = "مباشر";
 
-/* diagnostics */
-"Live Activities" = "الأنشطة المباشرة";
-
 /* serverlist */
 "Local server" = "خادم محلي";
 
@@ -1280,20 +1259,8 @@
 /* keyboard shortcuts and voice cleanup */
 "None" = "لا شيء";
 
-/* diagnostics */
-"Not allowed. Nobody can hear you until you turn it on in Settings, under TeamTalk." = "غير مسموح. لن يسمعك أحد حتى تفعّله في الإعدادات، ضمن TeamTalk.";
-
-/* diagnostics */
-"Not asked yet. iOS asks the first time you join a channel." = "لم يُسأل بعد. يسأل iOS أول مرة تنضم فيها إلى قناة.";
-
-/* diagnostics */
-"Not available with this installation. The widget cannot show your servers and the controls do not show their state." = "غير متاح مع هذا التثبيت. لا تستطيع الأداة عرض خوادمك وعناصر التحكم لا تعرض حالتها.";
-
 /* live activity */
 "Not in a channel" = "ليس في قناة";
-
-/* diagnostics */
-"Not installed. The app was installed without its extension, so there are no Live Activities, widget or controls. Install it again with a tool that keeps the extensions." = "غير مثبتة. ثُبّت التطبيق بدون ملحقه، فلا توجد أنشطة مباشرة ولا أداة ولا عناصر تحكم. ثبّته من جديد بأداة تحتفظ بالملحقات.";
 
 /* media stream */
 "Not streaming" = "لا يوجد بث";
@@ -1333,9 +1300,6 @@
 
 /* text message */
 "Open Link" = "فتح الرابط";
-
-/* diagnostics */
-"Open Settings" = "فتح الإعدادات";
 
 /* accessibility hint */
 "Opens a menu with more options" = "يفتح قائمة فيها خيارات أكثر";
@@ -1714,9 +1678,6 @@
 /* file list */
 "Share" = "مشاركة";
 
-/* diagnostics */
-"Share Log" = "مشاركة السجل";
-
 /* serverlist */
 "Share Server" = "مشاركة الخادم";
 
@@ -1971,12 +1932,6 @@
 /* media stream */
 "The current file starts again every time it ends" = "يبدأ الملف الحالي من جديد كلما انتهى";
 
-/* diagnostics */
-"The log is empty" = "السجل فارغ";
-
-/* diagnostics */
-"The log records what the app does: connection, sound devices, transfers and errors. It holds no passwords and nothing of what is said or written." = "يسجّل السجل ما يفعله التطبيق: الاتصال وأجهزة الصوت وعمليات النقل والأخطاء. لا يحتوي على كلمات مرور ولا على شيء مما يقال أو يكتب.";
-
 /* appearance */
 "The messages can have a text size of their own, and the server events a font of their own." = "يمكن أن يكون للرسائل حجم نص خاص بها، ولأحداث الخادم خط خاص بها.";
 
@@ -1984,7 +1939,7 @@
 "The microphone is sent as it is, with no noise reduction and no echo cancellation" = "يُرسَل صوت الميكروفون كما هو، بلا تخفيض للضجيج ولا إلغاء للصدى";
 
 /* Sound Devices */
-"The microphones of this device. Choose the one to use: Preferred marks your choice and Active the one in use right now." = "ميكروفونات هذا الجهاز. اختر ما تريد استخدامه: «المفضل» يدل على اختيارك و«نشط» على المستخدم حاليًا.";
+"The microphones of this device. Choose the one to use: Preferred marks your choice and Active the one in use right now." = "ميكروفونات هذا الجهاز. اختر ما تريد استخدامه: «مُفَضَّل» يدل على اختيارك و«نشط» على المستخدم حاليًا.";
 
 /* preferences */
 "The name and the time go after the text of the message" = "الاسم والوقت بعد نص الرسالة";
@@ -2009,9 +1964,6 @@
 
 /* text to speech events */
 "These two settings change every announcement at once. Each one can still be set on its own below." = "يغيّر هذان الإعدادان كل الإعلانات دفعة واحدة. ويمكن ضبط كل إعلان على حدة في الأسفل.";
-
-/* diagnostics */
-"They need iOS 17 or later" = "تتطلب iOS 17 أو أحدث";
 
 /* media stream */
 "This file cannot be streamed" = "لا يمكن بث هذا الملف";
@@ -2075,9 +2027,6 @@
 
 /* state of the microphone button */
 "Turned off" = "متوقف";
-
-/* diagnostics */
-"Turned off. Turn on Live Activities in Settings, under TeamTalk." = "معطلة. فعّل الأنشطة المباشرة في الإعدادات، ضمن TeamTalk.";
 
 /* state of the microphone button */
 "Turned on" = "مُفعّل";
@@ -2303,12 +2252,6 @@
 /* Sound Devices */
 "What is done to your microphone before it is sent: removing echo, reducing noise and levelling the volume." = "ما يُجرى على صوت الميكروفون قبل إرساله: إزالة الصدى وتخفيض الضجيج وموازنة مستوى الصوت.";
 
-/* diagnostics */
-"What the app has been doing, to share when something fails" = "ما كان يفعله التطبيق، للمشاركة عند حدوث خلل";
-
-/* diagnostics */
-"What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "ما يحتاجه التطبيق من الـ iPhone. إذا كان هنا شيء غير صحيح فهو أول ما يجب إصلاحه.";
-
 /* media stream */
 "When a file ends the next one starts, and after the last one the list starts again" = "عند انتهاء ملف يبدأ التالي، وبعد الأخير تبدأ القائمة من جديد";
 
@@ -2329,9 +2272,6 @@
 
 /* microphone mode */
 "Wide Spectrum" = "النطاق العريض";
-
-/* diagnostics */
-"Widget and Controls" = "الأداة وعناصر التحكم";
 
 /* accessibility hint */
 "Write your message here" = "اكتب رسالتك هنا";

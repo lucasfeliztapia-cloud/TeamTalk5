@@ -58,9 +58,6 @@
 /* user accounts */
 "%d accounts changed. It applies to each user the next time they log in." = "%d akun diubah. Berlaku untuk tiap pengguna saat masuk berikutnya.";
 
-/* diagnostics */
-"%d entries" = "%d entri";
-
 /* media stream */
 "%d files added to the playlist" = "%d file ditambahkan ke daftar putar";
 
@@ -199,9 +196,6 @@
 
 /* all users */
 "All Users" = "Semua Pengguna";
-
-/* diagnostics */
-"Allowed" = "Diizinkan";
 
 /* appearance */
 "Always Dark" = "Selalu Gelap";
@@ -432,9 +426,6 @@
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "beri tanda centang hanya jika server ini telah mengaktifkan BearWare.dk Web Login";
 
-/* diagnostics */
-"Checks" = "Pemeriksaan";
-
 /* media stream */
 "Choose a file" = "Pilih file";
 
@@ -470,9 +461,6 @@
 
 /* channel detail */
 "Classroom" = "Ruang Kelas";
-
-/* diagnostics */
-"Clear Log" = "Bersihkan Log";
 
 /* server list */
 "Clear text" = "Hapus teks";
@@ -647,12 +635,6 @@
 
 /* preferences */
 "Details Position" = "Posisi Detail";
-
-/* diagnostics */
-"Diagnostic Log" = "Log Diagnostik";
-
-/* diagnostics */
-"Diagnostics" = "Diagnostik";
 
 /* preferences */
 "Disabled" = "Nonaktif";
@@ -1051,9 +1033,6 @@
 /* media stream */
 "Live" = "Langsung";
 
-/* diagnostics */
-"Live Activities" = "Aktivitas Langsung";
-
 /* serverlist */
 "Local server" = "Server lokal";
 
@@ -1281,20 +1260,8 @@
 /* keyboard shortcuts and voice cleanup */
 "None" = "Tidak Ada";
 
-/* diagnostics */
-"Not allowed. Nobody can hear you until you turn it on in Settings, under TeamTalk." = "Tidak diizinkan. Tidak ada yang dapat mendengar Anda sampai Anda menyalakannya di Pengaturan, di bawah TeamTalk.";
-
-/* diagnostics */
-"Not asked yet. iOS asks the first time you join a channel." = "Belum ditanyakan. iOS menanyakannya saat Anda pertama kali bergabung ke saluran.";
-
-/* diagnostics */
-"Not available with this installation. The widget cannot show your servers and the controls do not show their state." = "Tidak tersedia dengan instalasi ini. Widget tidak dapat menampilkan server Anda dan kontrol tidak menampilkan keadaannya.";
-
 /* live activity */
 "Not in a channel" = "Tidak di saluran";
-
-/* diagnostics */
-"Not installed. The app was installed without its extension, so there are no Live Activities, widget or controls. Install it again with a tool that keeps the extensions." = "Tidak terinstal. App diinstal tanpa ekstensinya, jadi tidak ada Aktivitas Langsung, widget, atau kontrol. Instal lagi dengan alat yang mempertahankan ekstensi.";
 
 /* media stream */
 "Not streaming" = "Tidak menyiarkan";
@@ -1335,9 +1302,6 @@
 
 /* text message */
 "Open Link" = "Buka Tautan";
-
-/* diagnostics */
-"Open Settings" = "Buka Pengaturan";
 
 /* accessibility hint */
 "Opens a menu with more options" = "Membuka menu dengan opsi lainnya";
@@ -1717,9 +1681,6 @@
 /* file list */
 "Share" = "Bagikan";
 
-/* diagnostics */
-"Share Log" = "Bagikan Log";
-
 /* serverlist */
 "Share Server" = "Bagikan Server";
 
@@ -1974,12 +1935,6 @@
 /* media stream */
 "The current file starts again every time it ends" = "File saat ini dimulai lagi setiap kali selesai";
 
-/* diagnostics */
-"The log is empty" = "Log kosong";
-
-/* diagnostics */
-"The log records what the app does: connection, sound devices, transfers and errors. It holds no passwords and nothing of what is said or written." = "Log mencatat apa yang dilakukan app: koneksi, perangkat suara, transfer, dan kesalahan. Log tidak berisi kata sandi dan apa pun yang diucapkan atau ditulis.";
-
 /* appearance */
 "The messages can have a text size of their own, and the server events a font of their own." = "Pesan dapat memiliki ukuran teks sendiri, dan peristiwa server font sendiri.";
 
@@ -2012,9 +1967,6 @@
 
 /* text to speech events */
 "These two settings change every announcement at once. Each one can still be set on its own below." = "Dua pengaturan ini mengubah semua pemberitahuan sekaligus. Tiap pemberitahuan tetap dapat diatur sendiri di bawah.";
-
-/* diagnostics */
-"They need iOS 17 or later" = "Memerlukan iOS 17 atau lebih baru";
 
 /* media stream */
 "This file cannot be streamed" = "File ini tidak dapat disiarkan";
@@ -2078,9 +2030,6 @@
 
 /* state of the microphone button */
 "Turned off" = "Nonaktif";
-
-/* diagnostics */
-"Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Dimatikan. Nyalakan Aktivitas Langsung di Pengaturan, di bawah TeamTalk.";
 
 /* state of the microphone button */
 "Turned on" = "Aktif";
@@ -2307,12 +2256,6 @@
 /* Sound Devices */
 "What is done to your microphone before it is sent: removing echo, reducing noise and levelling the volume." = "Yang dilakukan pada mikrofon Anda sebelum dikirim: menghilangkan gema, mengurangi bising, dan meratakan volume.";
 
-/* diagnostics */
-"What the app has been doing, to share when something fails" = "Apa yang telah dilakukan app, untuk dibagikan saat ada yang gagal";
-
-/* diagnostics */
-"What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Apa yang app perlukan dari iPhone. Jika ada yang tidak beres di sini, itulah yang pertama harus diperbaiki.";
-
 /* media stream */
 "When a file ends the next one starts, and after the last one the list starts again" = "Saat sebuah file selesai, file berikutnya dimulai, dan setelah yang terakhir daftar dimulai lagi";
 
@@ -2333,9 +2276,6 @@
 
 /* microphone mode */
 "Wide Spectrum" = "Spektrum Luas";
-
-/* diagnostics */
-"Widget and Controls" = "Widget dan Kontrol";
 
 /* accessibility hint */
 "Write your message here" = "Tulis pesan Anda di sini";

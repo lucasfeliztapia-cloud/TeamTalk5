@@ -58,9 +58,6 @@
 /* user accounts */
 "%d accounts changed. It applies to each user the next time they log in." = "%d konti ændret. Det gælder for hver bruger ved næste login.";
 
-/* diagnostics */
-"%d entries" = "%d linjer";
-
 /* media stream */
 "%d files added to the playlist" = "%d filer føjet til afspilningslisten";
 
@@ -199,9 +196,6 @@
 
 /* all users */
 "All Users" = "Alle brugere";
-
-/* diagnostics */
-"Allowed" = "Tilladt";
 
 /* appearance */
 "Always Dark" = "Altid mørk";
@@ -431,9 +425,6 @@
 /* server entry */
 "Check only if this server has enabled BearWare.dk Web Login" = "Vælg kun hvis server har BearWare.dk Web Login slået til";
 
-/* diagnostics */
-"Checks" = "Tjek";
-
 /* media stream */
 "Choose a file" = "Vælg en fil";
 
@@ -469,9 +460,6 @@
 
 /* channel detail */
 "Classroom" = "Klasseværelse";
-
-/* diagnostics */
-"Clear Log" = "Ryd log";
 
 /* server list */
 "Clear text" = "Ryd tekst";
@@ -646,12 +634,6 @@
 
 /* preferences */
 "Details Position" = "Detaljernes placering";
-
-/* diagnostics */
-"Diagnostic Log" = "Diagnoselog";
-
-/* diagnostics */
-"Diagnostics" = "Diagnose";
 
 /* preferences */
 "Disabled" = "Slået fra";
@@ -1050,9 +1032,6 @@
 /* media stream */
 "Live" = "Direkte";
 
-/* diagnostics */
-"Live Activities" = "Liveaktiviteter";
-
 /* serverlist */
 "Local server" = "Lokale servere";
 
@@ -1280,20 +1259,8 @@
 /* keyboard shortcuts and voice cleanup */
 "None" = "Ingen";
 
-/* diagnostics */
-"Not allowed. Nobody can hear you until you turn it on in Settings, under TeamTalk." = "Ikke tilladt. Ingen kan høre dig, før du slår det til i Indstillinger under TeamTalk.";
-
-/* diagnostics */
-"Not asked yet. iOS asks the first time you join a channel." = "Ikke spurgt endnu. iOS spørger, første gang du deltager i en kanal.";
-
-/* diagnostics */
-"Not available with this installation. The widget cannot show your servers and the controls do not show their state." = "Ikke tilgængelig med denne installation. Widgetten kan ikke vise dine servere, og betjeningsknapperne viser ikke deres tilstand.";
-
 /* live activity */
 "Not in a channel" = "Ikke i en kanal";
-
-/* diagnostics */
-"Not installed. The app was installed without its extension, so there are no Live Activities, widget or controls. Install it again with a tool that keeps the extensions." = "Ikke installeret. Appen blev installeret uden sin udvidelse, så der er ingen liveaktiviteter, widget eller betjeningsknapper. Installer den igen med et værktøj, der beholder udvidelserne.";
 
 /* media stream */
 "Not streaming" = "Streamer ikke";
@@ -1333,9 +1300,6 @@
 
 /* text message */
 "Open Link" = "Åbn link";
-
-/* diagnostics */
-"Open Settings" = "Åbn Indstillinger";
 
 /* accessibility hint */
 "Opens a menu with more options" = "Åbner en menu med flere muligheder";
@@ -1714,9 +1678,6 @@
 /* file list */
 "Share" = "Del";
 
-/* diagnostics */
-"Share Log" = "Del log";
-
 /* serverlist */
 "Share Server" = "Del server";
 
@@ -1971,12 +1932,6 @@
 /* media stream */
 "The current file starts again every time it ends" = "Den aktuelle fil starter forfra, hver gang den slutter";
 
-/* diagnostics */
-"The log is empty" = "Loggen er tom";
-
-/* diagnostics */
-"The log records what the app does: connection, sound devices, transfers and errors. It holds no passwords and nothing of what is said or written." = "Loggen registrerer, hvad appen gør: forbindelse, lydenheder, overførsler og fejl. Den indeholder ingen kodeord og intet af det, der bliver sagt eller skrevet.";
-
 /* appearance */
 "The messages can have a text size of their own, and the server events a font of their own." = "Beskederne kan have deres egen tekststørrelse, og serverhændelserne deres egen skrift.";
 
@@ -2009,9 +1964,6 @@
 
 /* text to speech events */
 "These two settings change every announcement at once. Each one can still be set on its own below." = "Disse to indstillinger ændrer alle annonceringer på én gang. Hver annoncering kan stadig indstilles for sig nedenfor.";
-
-/* diagnostics */
-"They need iOS 17 or later" = "De kræver iOS 17 eller nyere";
 
 /* media stream */
 "This file cannot be streamed" = "Denne fil kan ikke streames";
@@ -2075,9 +2027,6 @@
 
 /* state of the microphone button */
 "Turned off" = "Slået fra";
-
-/* diagnostics */
-"Turned off. Turn on Live Activities in Settings, under TeamTalk." = "Slået fra. Slå liveaktiviteter til i Indstillinger under TeamTalk.";
 
 /* state of the microphone button */
 "Turned on" = "Slået til";
@@ -2303,12 +2252,6 @@
 /* Sound Devices */
 "What is done to your microphone before it is sent: removing echo, reducing noise and levelling the volume." = "Det, der gøres ved din mikrofon, før lyden sendes: ekko fjernes, støj dæmpes, og lydstyrken udjævnes.";
 
-/* diagnostics */
-"What the app has been doing, to share when something fails" = "Hvad appen har lavet, til at dele, når noget går galt";
-
-/* diagnostics */
-"What the app needs from the iPhone. If something here is not right, it is the first thing to fix." = "Det, appen har brug for fra iPhonen. Hvis noget her ikke er i orden, er det det første, der skal rettes.";
-
 /* media stream */
 "When a file ends the next one starts, and after the last one the list starts again" = "Når en fil slutter, starter den næste, og efter den sidste starter listen forfra";
 
@@ -2329,9 +2272,6 @@
 
 /* microphone mode */
 "Wide Spectrum" = "Bredt spektrum";
-
-/* diagnostics */
-"Widget and Controls" = "Widget og betjeningsknapper";
 
 /* accessibility hint */
 "Write your message here" = "Skriv din besked her";
